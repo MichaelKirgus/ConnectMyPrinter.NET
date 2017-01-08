@@ -32,10 +32,13 @@ Partial Class AboutFrm
         Me.MetroTextBox1 = New MetroFramework.Controls.MetroTextBox()
         Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
         Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
+        Me.MetroTabPage3 = New MetroFramework.Controls.MetroTabPage()
+        Me.MetroTextBox3 = New MetroFramework.Controls.MetroTextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
         Me.MetroTabPage2.SuspendLayout()
+        Me.MetroTabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -66,8 +69,8 @@ Partial Class AboutFrm
         Me.MetroLabel2.Name = "MetroLabel2"
         Me.MetroLabel2.Size = New System.Drawing.Size(357, 38)
         Me.MetroLabel2.TabIndex = 2
-        Me.MetroLabel2.Text = "Copyright 2016 Michael Kirgus" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tool zum einfachen Verwalten von Druckern unter Wi" &
-    "ndows."
+        Me.MetroLabel2.Text = "Copyright 2016-2017 Michael Kirgus" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tool zum einfachen Verwalten von Druckern unt" &
+    "er Windows."
         '
         'MetroLabel3
         '
@@ -91,9 +94,10 @@ Partial Class AboutFrm
         '
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
+        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage3)
         Me.MetroTabControl1.Location = New System.Drawing.Point(23, 217)
         Me.MetroTabControl1.Name = "MetroTabControl1"
-        Me.MetroTabControl1.SelectedIndex = 0
+        Me.MetroTabControl1.SelectedIndex = 2
         Me.MetroTabControl1.Size = New System.Drawing.Size(511, 268)
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroTabControl1.TabIndex = 5
@@ -142,6 +146,28 @@ Partial Class AboutFrm
         Me.MetroTextBox2.TabIndex = 3
         Me.MetroTextBox2.Text = "#"
         '
+        'MetroTabPage3
+        '
+        Me.MetroTabPage3.Controls.Add(Me.MetroTextBox3)
+        Me.MetroTabPage3.HorizontalScrollbarBarColor = True
+        Me.MetroTabPage3.Location = New System.Drawing.Point(4, 35)
+        Me.MetroTabPage3.Name = "MetroTabPage3"
+        Me.MetroTabPage3.Size = New System.Drawing.Size(503, 229)
+        Me.MetroTabPage3.TabIndex = 2
+        Me.MetroTabPage3.Text = "Open Icon Library"
+        Me.MetroTabPage3.VerticalScrollbarBarColor = True
+        '
+        'MetroTextBox3
+        '
+        Me.MetroTextBox3.Location = New System.Drawing.Point(3, 3)
+        Me.MetroTextBox3.Multiline = True
+        Me.MetroTextBox3.Name = "MetroTextBox3"
+        Me.MetroTextBox3.ReadOnly = True
+        Me.MetroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.MetroTextBox3.Size = New System.Drawing.Size(497, 223)
+        Me.MetroTextBox3.TabIndex = 4
+        Me.MetroTextBox3.Text = "#"
+        '
         'AboutFrm
         '
         Me.AcceptButton = Me.MetroButton1
@@ -169,6 +195,7 @@ Partial Class AboutFrm
         Me.MetroTabControl1.ResumeLayout(False)
         Me.MetroTabPage1.ResumeLayout(False)
         Me.MetroTabPage2.ResumeLayout(False)
+        Me.MetroTabPage3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -184,4 +211,6 @@ Partial Class AboutFrm
     Friend WithEvents MetroTabPage2 As Controls.MetroTabPage
     Friend WithEvents MetroTextBox1 As Controls.MetroTextBox
     Friend WithEvents MetroTextBox2 As Controls.MetroTextBox
+    Friend WithEvents MetroTabPage3 As Controls.MetroTabPage
+    Friend WithEvents MetroTextBox3 As Controls.MetroTextBox
 End Class
