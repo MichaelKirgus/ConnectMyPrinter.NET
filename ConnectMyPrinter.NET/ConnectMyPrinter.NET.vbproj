@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationRevision>25</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -260,6 +260,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="OpenIconLibraryLicense.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReadMe.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\1483921213_Clock.png" />
