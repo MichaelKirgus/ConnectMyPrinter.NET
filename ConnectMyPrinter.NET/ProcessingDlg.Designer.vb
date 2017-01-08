@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ProcessingDlg
     Inherits MetroFramework.Forms.MetroForm
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,14 @@ Partial Class ProcessingDlg
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MetroProgressSpinner1 = New MetroFramework.Controls.MetroProgressSpinner()
         Me.SuspendLayout()
         '
         'MetroProgressSpinner1
         '
+        Me.MetroProgressSpinner1.CustomBackground = True
         Me.MetroProgressSpinner1.Location = New System.Drawing.Point(77, 70)
         Me.MetroProgressSpinner1.Maximum = 100
         Me.MetroProgressSpinner1.Name = "MetroProgressSpinner1"

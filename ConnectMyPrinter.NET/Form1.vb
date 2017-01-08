@@ -61,6 +61,9 @@ Public Class Form1
             If AppSettings.UsePrinterSavingFeature = False Then
                 MetroTabControl1.TabPages.Remove(MetroTabControl1.TabPages(1))
             End If
+            If AppSettings.ShowRestartPrinterQueueButton Then
+                Button4.Visible = True
+            End If
             'Fenstergröße und Modus setzen
             If AppSettings.StartInMinimalMode = True Then
                 OldHeight = Me.Height
@@ -898,5 +901,18 @@ Public Class Form1
         Else
             PictureBox3.Image = My.Resources.expandable
         End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Try
+            Dim tt As New ProcessingDlg
+            tt.Show(Me.Parent)
+            Application.DoEvents()
+            Dim hh As New ManagePrinter
+            hh.RestartPrinterService()
+            Application.DoEvents()
+            tt.Close()
+        Catch ex As Exception
+        End Try
     End Sub
 End Class

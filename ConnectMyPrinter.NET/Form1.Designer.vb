@@ -52,6 +52,8 @@ Partial Class Form1
         Me.LocalPrinterIdleWorker = New System.ComponentModel.BackgroundWorker()
         Me.LocalPrinterChangeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
         Me.MetroPanel1.SuspendLayout()
@@ -95,6 +97,7 @@ Partial Class Form1
         Me.MetroButton1.Size = New System.Drawing.Size(118, 29)
         Me.MetroButton1.TabIndex = 3
         Me.MetroButton1.Text = "Drucker verbinden"
+        Me.ToolTip1.SetToolTip(Me.MetroButton1, "Verbindet einen Drucker.")
         '
         'MetroTextBox1
         '
@@ -105,6 +108,8 @@ Partial Class Form1
         Me.MetroTextBox1.Size = New System.Drawing.Size(304, 29)
         Me.MetroTextBox1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroTextBox1.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.MetroTextBox1, "Geben Sie hier den Namen des Druckers an. Wenn genügend Zeichen eingegeben worden" &
+        " sind, dann werden Vorschläge angezeigt.")
         '
         'MetroLabel2
         '
@@ -134,6 +139,8 @@ Partial Class Form1
         Me.MetroCheckBox1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroCheckBox1.TabIndex = 8
         Me.MetroCheckBox1.Text = "Standarddrucker"
+        Me.ToolTip1.SetToolTip(Me.MetroCheckBox1, "Aktivieren Sie diese Option, um den neuen Drucker auch als Standarddrucker festzu" &
+        "legen.")
         Me.MetroCheckBox1.UseVisualStyleBackColor = True
         '
         'MetroLabel3
@@ -225,7 +232,7 @@ Partial Class Form1
         Me.MetroTabPage2.HorizontalScrollbarSize = 0
         Me.MetroTabPage2.Location = New System.Drawing.Point(4, 35)
         Me.MetroTabPage2.Name = "MetroTabPage2"
-        Me.MetroTabPage2.Size = New System.Drawing.Size(421, 392)
+        Me.MetroTabPage2.Size = New System.Drawing.Size(421, 399)
         Me.MetroTabPage2.TabIndex = 1
         Me.MetroTabPage2.Text = "Gespeicherte Drucker"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
@@ -242,7 +249,7 @@ Partial Class Form1
         Me.MetroPanel2.HorizontalScrollbarSize = 10
         Me.MetroPanel2.Location = New System.Drawing.Point(0, 0)
         Me.MetroPanel2.Name = "MetroPanel2"
-        Me.MetroPanel2.Size = New System.Drawing.Size(421, 392)
+        Me.MetroPanel2.Size = New System.Drawing.Size(421, 399)
         Me.MetroPanel2.TabIndex = 6
         Me.MetroPanel2.VerticalScrollbarBarColor = True
         Me.MetroPanel2.VerticalScrollbarHighlightOnWheel = False
@@ -265,7 +272,7 @@ Partial Class Form1
         Me.MetroProgressSpinner3.Margin = New System.Windows.Forms.Padding(0)
         Me.MetroProgressSpinner3.Maximum = 100
         Me.MetroProgressSpinner3.Name = "MetroProgressSpinner3"
-        Me.MetroProgressSpinner3.Size = New System.Drawing.Size(408, 331)
+        Me.MetroProgressSpinner3.Size = New System.Drawing.Size(408, 338)
         Me.MetroProgressSpinner3.Speed = 2.0!
         Me.MetroProgressSpinner3.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroProgressSpinner3.TabIndex = 3
@@ -279,7 +286,7 @@ Partial Class Form1
         Me.FlowLayoutPanel2.BackColor = System.Drawing.Color.White
         Me.FlowLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(415, 386)
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(415, 393)
         Me.FlowLayoutPanel2.TabIndex = 4
         '
         'LoadAllLocalPrinters
@@ -305,6 +312,7 @@ Partial Class Form1
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(24, 21)
         Me.Button2.TabIndex = 10
+        Me.ToolTip1.SetToolTip(Me.Button2, "Anwendungseinstellungen/Administratoreinstellungen")
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
@@ -316,6 +324,7 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(24, 21)
         Me.Button1.TabIndex = 9
+        Me.ToolTip1.SetToolTip(Me.Button1, "Anwendungsinformationen/Lizenz anzeigen")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'PictureBox1
@@ -338,6 +347,7 @@ Partial Class Form1
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(22, 21)
         Me.Button3.TabIndex = 15
+        Me.ToolTip1.SetToolTip(Me.Button3, "Ansicht aktualisieren")
         Me.Button3.UseVisualStyleBackColor = True
         '
         'LocalPrinterIdleWorker
@@ -360,6 +370,19 @@ Partial Class Form1
         Me.PictureBox3.TabStop = False
         Me.PictureBox3.Visible = False
         '
+        'Button4
+        '
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.ForeColor = System.Drawing.Color.Transparent
+        Me.Button4.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.restart_printerq
+        Me.Button4.Location = New System.Drawing.Point(346, 5)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(24, 21)
+        Me.Button4.TabIndex = 17
+        Me.ToolTip1.SetToolTip(Me.Button4, "Druckerwarteschlange neu starten")
+        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Visible = False
+        '
         'Form1
         '
         Me.AcceptButton = Me.MetroButton1
@@ -367,6 +390,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(470, 620)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.MetroTabControl1)
@@ -432,4 +456,6 @@ Partial Class Form1
     Friend WithEvents LocalPrinterIdleWorker As System.ComponentModel.BackgroundWorker
     Friend WithEvents LocalPrinterChangeTimer As Timer
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

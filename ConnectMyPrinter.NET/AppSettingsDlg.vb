@@ -86,6 +86,7 @@
             ActionLib.StartPrinterService()
         End If
         hh.Close()
+        Application.DoEvents()
     End Sub
 
     Private Sub MetroButton4_Click(sender As Object, e As EventArgs) Handles MetroButton4.Click
@@ -99,6 +100,7 @@
             ActionLib.RestartPrinterService()
         End If
         hh.Close()
+        Application.DoEvents()
     End Sub
 
     Private Sub MetroButton5_Click(sender As Object, e As EventArgs) Handles MetroButton5.Click
@@ -112,5 +114,6 @@
             ActionLib.StopPrinterService()
         End If
         hh.Close()
+        Application.DoEvents()
     End Sub
 End Class

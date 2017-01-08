@@ -257,6 +257,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\1483921213_Clock.png" />
+    <None Include="Resources\restart_printerq.png" />
     <None Include="Resources\printer_standard.png" />
     <None Include="Resources\floppy_nocustom.png" />
     <None Include="Resources\dialog_ok.png" />
