@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinter.NET", "ConnectMyPrinter.NET\ConnectMyPrinter.NET.vbproj", "{2FFB39F5-85AB-405B-8AB7-D3404312B088}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterUACHelper", "ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj", "{53B8A917-53BB-4ECF-9709-C50BA632DA9A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterEnumerationLib", "ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj", "{74098DC4-697B-4692-81B7-088F300D2610}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterPrinterManageLib", "ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj", "{BE968C84-9AE3-4F63-8466-FA21F66386B0}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterAppSettingsHandler", "ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj", "{AE01B7FF-C216-4752-B4FF-D6956A772D44}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterACLHelper", "ConnectMyPrinterACLHelper\ConnectMyPrinterACLHelper.vbproj", "{0F56BFD3-F897-4C3E-A71E-0983A4B33E82}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterACLHelperLib", "ConnectMyPrinterACLHelperLib\ConnectMyPrinterACLHelperLib.vbproj", "{95C18515-2072-4961-A0EF-8FBDB893810F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterSettingsConsole", "ConnectMyPrinterSettingsConsole\ConnectMyPrinterSettingsConsole.vbproj", "{AE1E6B2D-A9A1-4391-8BFC-C2C6FD089D2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FFB39F5-85AB-405B-8AB7-D3404312B088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FFB39F5-85AB-405B-8AB7-D3404312B088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FFB39F5-85AB-405B-8AB7-D3404312B088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FFB39F5-85AB-405B-8AB7-D3404312B088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53B8A917-53BB-4ECF-9709-C50BA632DA9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53B8A917-53BB-4ECF-9709-C50BA632DA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53B8A917-53BB-4ECF-9709-C50BA632DA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53B8A917-53BB-4ECF-9709-C50BA632DA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74098DC4-697B-4692-81B7-088F300D2610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74098DC4-697B-4692-81B7-088F300D2610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74098DC4-697B-4692-81B7-088F300D2610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74098DC4-697B-4692-81B7-088F300D2610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE968C84-9AE3-4F63-8466-FA21F66386B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE968C84-9AE3-4F63-8466-FA21F66386B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE968C84-9AE3-4F63-8466-FA21F66386B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE968C84-9AE3-4F63-8466-FA21F66386B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE01B7FF-C216-4752-B4FF-D6956A772D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE01B7FF-C216-4752-B4FF-D6956A772D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE01B7FF-C216-4752-B4FF-D6956A772D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE01B7FF-C216-4752-B4FF-D6956A772D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F56BFD3-F897-4C3E-A71E-0983A4B33E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F56BFD3-F897-4C3E-A71E-0983A4B33E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F56BFD3-F897-4C3E-A71E-0983A4B33E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F56BFD3-F897-4C3E-A71E-0983A4B33E82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C18515-2072-4961-A0EF-8FBDB893810F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C18515-2072-4961-A0EF-8FBDB893810F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C18515-2072-4961-A0EF-8FBDB893810F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C18515-2072-4961-A0EF-8FBDB893810F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1E6B2D-A9A1-4391-8BFC-C2C6FD089D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1E6B2D-A9A1-4391-8BFC-C2C6FD089D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1E6B2D-A9A1-4391-8BFC-C2C6FD089D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1E6B2D-A9A1-4391-8BFC-C2C6FD089D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

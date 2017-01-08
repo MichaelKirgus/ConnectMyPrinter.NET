@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2FFB39F5-85AB-405B-8AB7-D3404312B088}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ConnectMyPrinter.NET.My.MyApplication</StartupObject>
+    <RootNamespace>ConnectMyPrinter.NET</RootNamespace>
+    <AssemblyName>ConnectMyPrinter.NET</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ConnectMyPrinter.NET.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ConnectMyPrinter.NET.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1472877498_BT_printer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C044CC2700ECF3DA54C504BC45013BDF8BA11DAD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ConnectMyPrinter.NET_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="MetroFramework" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutFrm.Designer.vb">
+      <DependentUpon>AboutFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppSettingsDlg.Designer.vb">
+      <DependentUpon>AppSettingsDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppSettingsDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectPrinterDlg.Designer.vb">
+      <DependentUpon>ConnectPrinterDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectPrinterDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletePrinterDlg.Designer.vb">
+      <DependentUpon>DeletePrinterDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePrinterDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletePrinterDriverDlg.Designer.vb">
+      <DependentUpon>DeletePrinterDriverDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePrinterDriverDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElevationHelperClass.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PrinterCtl.Designer.vb">
+      <DependentUpon>PrinterCtl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterCtl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProcessingDlg.Designer.vb">
+      <DependentUpon>ProcessingDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessingDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SavedPrinterCtl.Designer.vb">
+      <DependentUpon>SavedPrinterCtl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SavedPrinterCtl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelectFromMultipleServersDlg.Designer.vb">
+      <DependentUpon>SelectFromMultipleServersDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SelectFromMultipleServersDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutFrm.resx">
+      <DependentUpon>AboutFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSettingsDlg.resx">
+      <DependentUpon>AppSettingsDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectPrinterDlg.resx">
+      <DependentUpon>ConnectPrinterDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePrinterDlg.resx">
+      <DependentUpon>DeletePrinterDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePrinterDriverDlg.resx">
+      <DependentUpon>DeletePrinterDriverDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterCtl.resx">
+      <DependentUpon>PrinterCtl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessingDlg.resx">
+      <DependentUpon>ProcessingDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SavedPrinterCtl.resx">
+      <DependentUpon>SavedPrinterCtl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectFromMultipleServersDlg.resx">
+      <DependentUpon>SelectFromMultipleServersDlg.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ConnectMyPrinter.NET_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1472877498_BT_printer.ico" />
+    <Content Include="AppSettings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lizenzbedingungen.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\printer_standard.png" />
+    <None Include="Resources\floppy_nocustom.png" />
+    <None Include="Resources\dialog_ok.png" />
+    <None Include="Resources\plus_bw.png" />
+    <None Include="Resources\connect.png" />
+    <None Include="Resources\printer_synced.png" />
+    <None Include="Resources\printer_saved.png" />
+    <None Include="Resources\printer_local.png" />
+    <None Include="Resources\printer_connectionl.png" />
+    <None Include="Resources\uac_shield1.png" />
+    <None Include="Resources\printer_big.png" />
+    <None Include="Resources\refresh16.png" />
+    <None Include="Resources\saveHS.png" />
+    <None Include="Resources\decollapse_2.png" />
+    <None Include="Resources\decollapse.png" />
+    <None Include="Resources\expandable_2.png" />
+    <None Include="Resources\expandable.png" />
+    <None Include="Resources\DeletePrinter2.png" />
+    <None Include="Resources\DeletePrinter.png" />
+    <None Include="Resources\printer_nonstandard.png" />
+    <None Include="packages.config" />
+    <None Include="Resources\settings_small.png" />
+    <None Include="Resources\info_small.png" />
+    <None Include="Resources\help-about-31.png" />
+    <None Include="Resources\help-about-3.png" />
+    <None Include="Resources\edit-delete-4.png" />
+    <None Include="Resources\dialog-ok-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectMyPrinterACLHelperLib\ConnectMyPrinterACLHelperLib.vbproj">
+      <Project>{95c18515-2072-4961-a0ef-8fbdb893810f}</Project>
+      <Name>ConnectMyPrinterACLHelperLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterACLHelper\ConnectMyPrinterACLHelper.vbproj">
+      <Project>{0f56bfd3-f897-4c3e-a71e-0983a4b33e82}</Project>
+      <Name>ConnectMyPrinterACLHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
+      <Project>{ae01b7ff-c216-4752-b4ff-d6956a772d44}</Project>
+      <Name>ConnectMyPrinterAppSettingsHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
+      <Project>{74098dc4-697b-4692-81b7-088f300d2610}</Project>
+      <Name>ConnectMyPrinterEnumerationLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
+      <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
+      <Name>ConnectMyPrinterPrinterManageLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterSettingsConsole\ConnectMyPrinterSettingsConsole.vbproj">
+      <Project>{ae1e6b2d-a9a1-4391-8bfc-c2c6fd089d2b}</Project>
+      <Name>ConnectMyPrinterSettingsConsole</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj">
+      <Project>{53b8a917-53bb-4ecf-9709-c50ba632da9a}</Project>
+      <Name>ConnectMyPrinterUACHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="1472877498_BT_printer.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

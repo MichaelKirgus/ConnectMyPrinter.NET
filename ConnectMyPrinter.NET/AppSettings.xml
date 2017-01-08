@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<AppSettingsClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WindowTitle>ConnectMyPrinter.NET</WindowTitle>
+  <UserInformation>Bitte geben Sie einen Druckernamen ein.</UserInformation>
+  <AdditionalUserInformation />
+  <CompanyLogoImagePath />
+  <StartWindowPosition>CenterScreen</StartWindowPosition>
+  <StartWindowHeight>650</StartWindowHeight>
+  <StartInMinimalMode>false</StartInMinimalMode>
+  <AllowExpandMode>true</AllowExpandMode>
+  <PrintServers>
+    <PrintServerItem>
+      <PrintServerName>MONITORING01</PrintServerName>
+      <Priority>2</Priority>
+    </PrintServerItem>
+    <PrintServerItem>
+      <PrintServerName>DESKTOP-NTGV10C</PrintServerName>
+      <Priority>1</Priority>
+    </PrintServerItem>
+  </PrintServers>
+  <AskUserIfMultipleResults>true</AskUserIfMultipleResults>
+  <AskUserIfConnectPrinter>true</AskUserIfConnectPrinter>
+  <AskUserIfDisconnectPrinter>true</AskUserIfDisconnectPrinter>
+  <AskUserIfRemovePrinterFromSavedPrinters>true</AskUserIfRemovePrinterFromSavedPrinters>
+  <ShowPrinterCountAfterSearch>true</ShowPrinterCountAfterSearch>
+  <AllowUserToConnectToNotCollectedPrinter>false</AllowUserToConnectToNotCollectedPrinter>
+  <AllowUserToSetPrinterToDefaultByConnecting>true</AllowUserToSetPrinterToDefaultByConnecting>
+  <DefaultPrinterOptionActivated>false</DefaultPrinterOptionActivated>
+  <UsePrinterSavingFeature>false</UsePrinterSavingFeature>
+  <FixedPrefix />
+  <AutoCompleteCount>5</AutoCompleteCount>
+  <AutoCompleteCountEnable>false</AutoCompleteCountEnable>
+  <AutoCompleteMaxVisibleItems>20</AutoCompleteMaxVisibleItems>
+  <SearchCount>5</SearchCount>
+  <IgnoreUpperLowerCase>true</IgnoreUpperLowerCase>
+  <DeletePrinterIfExists>true</DeletePrinterIfExists>
+  <AllowUserToChangeSettings>true</AllowUserToChangeSettings>
+  <AllowUserToSaveSettings>true</AllowUserToSaveSettings>
+  <LocalActionsNeedElevation>false</LocalActionsNeedElevation>
+  <PrinterSpoolerRestartNeedElevation>true</PrinterSpoolerRestartNeedElevation>
+  <EnableElevationBypass>false</EnableElevationBypass>
+  <ElevationBypassDomain>WORKGROUP</ElevationBypassDomain>
+  <ElevationBypassUsername />
+  <ElevationBypassPassword />
+  <DeletePrinterDriverLowLevel>false</DeletePrinterDriverLowLevel>
+  <PrinterAdminPath>C:\Windows\System32\Printing_Admin_Scripts\de-DE</PrinterAdminPath>
+  <CleanPrinterDriverPackagesAtPrinterRemove>false</CleanPrinterDriverPackagesAtPrinterRemove>
+  <CleanPrinterDriverPackagesAtPrinterDriverRemove>true</CleanPrinterDriverPackagesAtPrinterDriverRemove>
+  <SavedPrintersProfileFile>O:\Printer.xml</SavedPrintersProfileFile>
+  <ShowLocalPrinters>true</ShowLocalPrinters>
+  <CheckUserSpoolerPermissions>false</CheckUserSpoolerPermissions>
+  <AlwaysCheckForNewPrinters>true</AlwaysCheckForNewPrinters>
+  <AlwaysCheckForNewPrintersInterval>2000</AlwaysCheckForNewPrintersInterval>
+</AppSettingsClass>
