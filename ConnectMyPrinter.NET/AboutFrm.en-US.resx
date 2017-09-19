@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PictureBox1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>23, 61</value>
+  </data>
+  <data name="PictureBox1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>150, 150</value>
+  </data>
+  <data name="PictureBox1.SizeMode" xml:space="preserve" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="PictureBox1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MetroLabel1.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>179, 67</value>
+  </data>
+  <data name="MetroLabel1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>206, 25</value>
+  </data>
+  <data name="MetroLabel1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MetroLabel1.Text" xml:space="preserve">
+    <value>ConnectMyPrinter.NET</value>
+  </data>
+  <data name="MetroLabel2.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel2.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>182, 92</value>
+  </data>
+  <data name="MetroLabel2.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>357, 38</value>
+  </data>
+  <data name="MetroLabel2.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MetroLabel2.Text" xml:space="preserve">
+    <value>Copyright 2016-2017 Michael Kirgus
+tool to easily manage printers on Windows.</value>
+  </data>
+  <data name="MetroLabel3.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel3.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>182, 145</value>
+  </data>
+  <data name="MetroLabel3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>321, 15</value>
+  </data>
+  <data name="MetroLabel3.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="MetroLabel3.Text" xml:space="preserve">
+    <value>This software uses the MetroFramework by Jens Thiel.</value>
+  </data>
+  <data name="MetroButton1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>450, 491</value>
+  </data>
+  <data name="MetroButton1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>89, 23</value>
+  </data>
+  <data name="MetroButton1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="MetroButton1.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="MetroTextBox1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="MetroTextBox1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>497, 223</value>
+  </data>
+  <data name="MetroTextBox1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MetroTextBox1.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="MetroTabPage1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>4, 35</value>
+  </data>
+  <data name="MetroTabPage1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>503, 229</value>
+  </data>
+  <data name="MetroTabPage1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MetroTabPage1.Text" xml:space="preserve">
+    <value>Program license</value>
+  </data>
+  <data name="MetroTextBox3.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="MetroTextBox3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>497, 223</value>
+  </data>
+  <data name="MetroTextBox3.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="MetroTextBox3.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="MetroTabPage3.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>4, 35</value>
+  </data>
+  <data name="MetroTabPage3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>503, 229</value>
+  </data>
+  <data name="MetroTabPage3.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MetroTabPage3.Text" xml:space="preserve">
+    <value>Open icon library</value>
+  </data>
+  <data name="MetroTextBox2.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="MetroTextBox2.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>497, 223</value>
+  </data>
+  <data name="MetroTextBox2.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="MetroTextBox2.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="MetroTabPage2.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>4, 35</value>
+  </data>
+  <data name="MetroTabPage2.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>503, 229</value>
+  </data>
+  <data name="MetroTabPage2.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MetroTabPage2.Text" xml:space="preserve">
+    <value>MetroFramework</value>
+  </data>
+  <data name="MetroTabControl1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>23, 217</value>
+  </data>
+  <data name="MetroTabControl1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>511, 268</value>
+  </data>
+  <data name="MetroTabControl1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" xml:space="preserve" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>557, 537</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Above</value>
+  </data>
+  <metadata name="$this.Localizable" xml:space="preserve" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

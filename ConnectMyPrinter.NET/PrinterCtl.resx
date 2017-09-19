@@ -117,19 +117,958 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MetroLabel1Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 1</value>
+  </data>
+  <data name="MetroLabel1Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MetroLabel1Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MetroLabel1Lbl.Text" xml:space="preserve">
+    <value>&lt;PrinterName&gt;</value>
+  </data>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>174, 17</value>
+  </metadata>
+  <data name="MetroLabel1Lbl.ToolTip" xml:space="preserve">
+    <value>Druckername</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1Lbl.Name" xml:space="preserve">
+    <value>MetroLabel1Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1Lbl.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="MetroLabel2Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 24</value>
+  </data>
+  <data name="MetroLabel2Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 19</value>
+  </data>
+  <data name="MetroLabel2Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MetroLabel2Lbl.Text" xml:space="preserve">
+    <value>&lt;PrinterServer&gt;</value>
+  </data>
+  <data name="MetroLabel2Lbl.ToolTip" xml:space="preserve">
+    <value>Name des Printservers, auf welchem dem Drucker angelegt ist.</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel2Lbl.Name" xml:space="preserve">
+    <value>MetroLabel2Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel2Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel2Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel2Lbl.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="MetroLabel3Lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel3Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 98</value>
+  </data>
+  <data name="MetroLabel3Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 19</value>
+  </data>
+  <data name="MetroLabel3Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="MetroLabel3Lbl.Text" xml:space="preserve">
+    <value>Treibername:</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel3Lbl.Name" xml:space="preserve">
+    <value>MetroLabel3Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel3Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel3Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel3Lbl.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="MetroLabel4Lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel4Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 121</value>
+  </data>
+  <data name="MetroLabel4Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 19</value>
+  </data>
+  <data name="MetroLabel4Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="MetroLabel4Lbl.Text" xml:space="preserve">
+    <value>Treiberversion:</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel4Lbl.Name" xml:space="preserve">
+    <value>MetroLabel4Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel4Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel4Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel4Lbl.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="MetroLabel5Lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel5Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 144</value>
+  </data>
+  <data name="MetroLabel5Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 19</value>
+  </data>
+  <data name="MetroLabel5Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="MetroLabel5Lbl.Text" xml:space="preserve">
+    <value>Gerätestatus:</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel5Lbl.Name" xml:space="preserve">
+    <value>MetroLabel5Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel5Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel5Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel5Lbl.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="MetroLabel6Lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel6Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 53</value>
+  </data>
+  <data name="MetroLabel6Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 19</value>
+  </data>
+  <data name="MetroLabel6Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="MetroLabel6Lbl.Text" xml:space="preserve">
+    <value>Standort:</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel6Lbl.Name" xml:space="preserve">
+    <value>MetroLabel6Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel6Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel6Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel6Lbl.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="MetroLabel7Lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel7Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 76</value>
+  </data>
+  <data name="MetroLabel7Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 19</value>
+  </data>
+  <data name="MetroLabel7Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="MetroLabel7Lbl.Text" xml:space="preserve">
+    <value>Beschreibung:</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel7Lbl.Name" xml:space="preserve">
+    <value>MetroLabel7Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel7Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel7Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel7Lbl.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="LocationLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LocationLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 53</value>
+  </data>
+  <data name="LocationLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 19</value>
+  </data>
+  <data name="LocationLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="LocationLbl.Text" xml:space="preserve">
+    <value>&lt;LocationLbl&gt;</value>
+  </data>
+  <data name="&gt;&gt;LocationLbl.Name" xml:space="preserve">
+    <value>LocationLbl</value>
+  </data>
+  <data name="&gt;&gt;LocationLbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;LocationLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LocationLbl.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="DescriptionLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DescriptionLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 76</value>
+  </data>
+  <data name="DescriptionLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 19</value>
+  </data>
+  <data name="DescriptionLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="DescriptionLbl.Text" xml:space="preserve">
+    <value>&lt;DescriptionLbl&gt;</value>
+  </data>
+  <data name="&gt;&gt;DescriptionLbl.Name" xml:space="preserve">
+    <value>DescriptionLbl</value>
+  </data>
+  <data name="&gt;&gt;DescriptionLbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;DescriptionLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DescriptionLbl.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="DriverLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DriverLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 98</value>
+  </data>
+  <data name="DriverLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 19</value>
+  </data>
+  <data name="DriverLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="DriverLbl.Text" xml:space="preserve">
+    <value>&lt;DriverLbl&gt;</value>
+  </data>
+  <data name="&gt;&gt;DriverLbl.Name" xml:space="preserve">
+    <value>DriverLbl</value>
+  </data>
+  <data name="&gt;&gt;DriverLbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;DriverLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DriverLbl.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="DriverVersionLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DriverVersionLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 121</value>
+  </data>
+  <data name="DriverVersionLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 19</value>
+  </data>
+  <data name="DriverVersionLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="DriverVersionLbl.Text" xml:space="preserve">
+    <value>&lt;DriverVersionLbl&gt;</value>
+  </data>
+  <data name="&gt;&gt;DriverVersionLbl.Name" xml:space="preserve">
+    <value>DriverVersionLbl</value>
+  </data>
+  <data name="&gt;&gt;DriverVersionLbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;DriverVersionLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DriverVersionLbl.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="StateLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="StateLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 144</value>
+  </data>
+  <data name="StateLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 19</value>
+  </data>
+  <data name="StateLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="StateLbl.Text" xml:space="preserve">
+    <value>&lt;StateLbl&gt;</value>
+  </data>
+  <data name="&gt;&gt;StateLbl.Name" xml:space="preserve">
+    <value>StateLbl</value>
+  </data>
+  <data name="&gt;&gt;StateLbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;StateLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StateLbl.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="DataFileLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 172</value>
+  </data>
+  <data name="DataFileLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 15</value>
+  </data>
+  <data name="DataFileLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="DataFileLbl.Text" xml:space="preserve">
+    <value>&lt;DatafileLbl&gt;</value>
+  </data>
+  <data name="&gt;&gt;DataFileLbl.Name" xml:space="preserve">
+    <value>DataFileLbl</value>
+  </data>
+  <data name="&gt;&gt;DataFileLbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;DataFileLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DataFileLbl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="MetroLabel10Lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel10Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 171</value>
+  </data>
+  <data name="MetroLabel10Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 15</value>
+  </data>
+  <data name="MetroLabel10Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="MetroLabel10Lbl.Text" xml:space="preserve">
+    <value>Datendatei:</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel10Lbl.Name" xml:space="preserve">
+    <value>MetroLabel10Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel10Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel10Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel10Lbl.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="ConfigFileLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 190</value>
+  </data>
+  <data name="ConfigFileLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 15</value>
+  </data>
+  <data name="ConfigFileLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="ConfigFileLbl.Text" xml:space="preserve">
+    <value>&lt;ConfigFileLbl&gt;</value>
+  </data>
+  <data name="&gt;&gt;ConfigFileLbl.Name" xml:space="preserve">
+    <value>ConfigFileLbl</value>
+  </data>
+  <data name="&gt;&gt;ConfigFileLbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;ConfigFileLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ConfigFileLbl.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="MetroLabel12Lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel12Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 190</value>
+  </data>
+  <data name="MetroLabel12Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 15</value>
+  </data>
+  <data name="MetroLabel12Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="MetroLabel12Lbl.Text" xml:space="preserve">
+    <value>Konfigurationsfile:</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel12Lbl.Name" xml:space="preserve">
+    <value>MetroLabel12Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel12Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel12Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel12Lbl.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="DriverPathLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 208</value>
+  </data>
+  <data name="DriverPathLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 15</value>
+  </data>
+  <data name="DriverPathLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="DriverPathLbl.Text" xml:space="preserve">
+    <value>&lt;DriverPathLbl&gt;</value>
+  </data>
+  <data name="&gt;&gt;DriverPathLbl.Name" xml:space="preserve">
+    <value>DriverPathLbl</value>
+  </data>
+  <data name="&gt;&gt;DriverPathLbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;DriverPathLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DriverPathLbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="MetroLabel13Lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel13Lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 208</value>
+  </data>
+  <data name="MetroLabel13Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 15</value>
+  </data>
+  <data name="MetroLabel13Lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="MetroLabel13Lbl.Text" xml:space="preserve">
+    <value>Treiberpfad:</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel13Lbl.Name" xml:space="preserve">
+    <value>MetroLabel13Lbl</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel13Lbl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel13Lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel13Lbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="MetroButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 235</value>
+  </data>
+  <data name="MetroButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 23</value>
+  </data>
+  <data name="MetroButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="MetroButton1.Text" xml:space="preserve">
+    <value>Testseite drucken</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.Name" xml:space="preserve">
+    <value>MetroButton1</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="MetroButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 235</value>
+  </data>
+  <data name="MetroButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 23</value>
+  </data>
+  <data name="MetroButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="MetroButton2.Text" xml:space="preserve">
+    <value>Druckerwarteschlange öffnen</value>
+  </data>
+  <data name="&gt;&gt;MetroButton2.Name" xml:space="preserve">
+    <value>MetroButton2</value>
+  </data>
+  <data name="&gt;&gt;MetroButton2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroButton2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="MetroButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 261</value>
+  </data>
+  <data name="MetroButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 23</value>
+  </data>
+  <data name="MetroButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="MetroButton3.Text" xml:space="preserve">
+    <value>Druckerwarteschlange leeren</value>
+  </data>
+  <data name="&gt;&gt;MetroButton3.Name" xml:space="preserve">
+    <value>MetroButton3</value>
+  </data>
+  <data name="&gt;&gt;MetroButton3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroButton3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="MetroButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 261</value>
+  </data>
+  <data name="MetroButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 23</value>
+  </data>
+  <data name="MetroButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="MetroButton4.Text" xml:space="preserve">
+    <value>Drucker+ Treiber löschen</value>
+  </data>
+  <data name="&gt;&gt;MetroButton4.Name" xml:space="preserve">
+    <value>MetroButton4</value>
+  </data>
+  <data name="&gt;&gt;MetroButton4.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroButton4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="MetroButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 287</value>
+  </data>
+  <data name="MetroButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 23</value>
+  </data>
+  <data name="MetroButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="MetroButton5.Text" xml:space="preserve">
+    <value>Drucker neu installieren</value>
+  </data>
+  <data name="&gt;&gt;MetroButton5.Name" xml:space="preserve">
+    <value>MetroButton5</value>
+  </data>
+  <data name="&gt;&gt;MetroButton5.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroButton5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="MetroButton6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 287</value>
+  </data>
+  <data name="MetroButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 23</value>
+  </data>
+  <data name="MetroButton6.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="MetroButton6.Text" xml:space="preserve">
+    <value>Druckerinformationen neu ermitteln</value>
+  </data>
+  <data name="&gt;&gt;MetroButton6.Name" xml:space="preserve">
+    <value>MetroButton6</value>
+  </data>
+  <data name="&gt;&gt;MetroButton6.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroButton6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>174, 17</value>
-  </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>174, 17</value>
-  </metadata>
+  <data name="AlsStandarddruckerFestlegenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="AlsStandarddruckerFestlegenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Als Standarddrucker festlegen</value>
+  </data>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 6</value>
+  </data>
+  <data name="DruckerImProfilSpeichernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="DruckerImProfilSpeichernToolStripMenuItem.Text" xml:space="preserve">
+    <value>Drucker im Profil speichern</value>
+  </data>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 6</value>
+  </data>
+  <data name="DruckerEntfernenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="DruckerEntfernenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Drucker entfernen</value>
+  </data>
+  <data name="DruckerNeuInstallierenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="DruckerNeuInstallierenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Drucker neu installieren</value>
+  </data>
+  <data name="DruckerNeuInstallierenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="StandardeinstellungenLöschenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="StandardeinstellungenLöschenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Standardeinstellungen löschen</value>
+  </data>
+  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 6</value>
+  </data>
+  <data name="ToolStripSeparator3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DruckereigenschaftenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="DruckereigenschaftenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Druckereigenschaften</value>
+  </data>
+  <data name="DruckereigenschaftenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DruckereinstellungenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="DruckereinstellungenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Druckereinstellungen</value>
+  </data>
+  <data name="DruckereinstellungenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 6</value>
+  </data>
+  <data name="ToolStripSeparator4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DruckereinstellungenExportierenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="DruckereinstellungenExportierenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Druckereinstellungen exportieren...</value>
+  </data>
+  <data name="DruckereinstellungenExportierenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DruckereinstellungenImportierenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="DruckereinstellungenImportierenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Druckereinstellungen importieren...</value>
+  </data>
+  <data name="DruckereinstellungenImportierenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 312</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
+    <value>ContextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 7</value>
+  </data>
+  <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 28</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="PictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="PictureBox2.ToolTip" xml:space="preserve">
+    <value>Erweitern/Minimieren des Elements. Blendet weitere Informationen und Aktionen ein, bzw. blendet diese aus.</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Name" xml:space="preserve">
+    <value>PictureBox2</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="Button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 0</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Button1.ToolTip" xml:space="preserve">
+    <value>Drucker entfernen</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="Button2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 20</value>
+  </data>
+  <data name="Button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="Button2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Button2.ToolTip" xml:space="preserve">
+    <value>Druckereinstellungen</value>
+  </data>
+  <data name="&gt;&gt;Button2.Name" xml:space="preserve">
+    <value>Button2</value>
+  </data>
+  <data name="&gt;&gt;Button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
+    <value>PictureBox1</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
   <metadata name="SaveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>273, 17</value>
   </metadata>
+  <data name="SaveFileDialog1.Filter" xml:space="preserve">
+    <value>Druckereinstellungen (*.dat)|*.dat|Alle Dateien|*.*</value>
+  </data>
   <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>410, 17</value>
   </metadata>
+  <data name="OpenFileDialog1.Filter" xml:space="preserve">
+    <value>Druckereinstellungen (*.dat)|*.dat|Alle Dateien|*.*</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>391, 42</value>
+  </data>
+  <data name="&gt;&gt;AlsStandarddruckerFestlegenToolStripMenuItem.Name" xml:space="preserve">
+    <value>AlsStandarddruckerFestlegenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;AlsStandarddruckerFestlegenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Name" xml:space="preserve">
+    <value>ToolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckerImProfilSpeichernToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckerImProfilSpeichernToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckerImProfilSpeichernToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+    <value>ToolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StandardeinstellungenLöschenToolStripMenuItem.Name" xml:space="preserve">
+    <value>StandardeinstellungenLöschenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;StandardeinstellungenLöschenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckereinstellungenExportierenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckereinstellungenExportierenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckereinstellungenExportierenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckereinstellungenImportierenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckereinstellungenImportierenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckereinstellungenImportierenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
+    <value>ToolTip1</value>
+  </data>
+  <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog1.Name" xml:space="preserve">
+    <value>SaveFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenFileDialog1.Name" xml:space="preserve">
+    <value>OpenFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;OpenFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckerEntfernenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckerEntfernenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckerEntfernenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">
+    <value>ToolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator4.Name" xml:space="preserve">
+    <value>ToolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckereigenschaftenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckereigenschaftenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckereigenschaftenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckereinstellungenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckereinstellungenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckereinstellungenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckerNeuInstallierenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckerNeuInstallierenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckerNeuInstallierenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PrinterCtl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroUserControl, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
 </root>

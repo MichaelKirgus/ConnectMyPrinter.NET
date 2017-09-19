@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MetroLabel1.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroLabel1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>23, 60</value>
+  </data>
+  <data name="MetroLabel1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>354, 19</value>
+  </data>
+  <data name="MetroLabel1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MetroLabel1.Text" xml:space="preserve">
+    <value>Please select which actions should be executed:</value>
+  </data>
+  <data name="MetroCheckBox1.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>50, 97</value>
+  </data>
+  <data name="MetroCheckBox1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>294, 15</value>
+  </data>
+  <data name="MetroCheckBox1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MetroCheckBox1.Text" xml:space="preserve">
+    <value>Delete print queue with user rights</value>
+  </data>
+  <data name="MetroCheckBox2.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox2.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>50, 118</value>
+  </data>
+  <data name="MetroCheckBox2.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>345, 15</value>
+  </data>
+  <data name="MetroCheckBox2.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MetroCheckBox2.Text" xml:space="preserve">
+    <value>Delete print queue with elevated user rights</value>
+  </data>
+  <data name="MetroCheckBox3.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox3.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>50, 139</value>
+  </data>
+  <data name="MetroCheckBox3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>135, 15</value>
+  </data>
+  <data name="MetroCheckBox3.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="MetroCheckBox3.Text" xml:space="preserve">
+    <value>Reset printer</value>
+  </data>
+  <data name="MetroCheckBox4.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox4.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>50, 160</value>
+  </data>
+  <data name="MetroCheckBox4.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>179, 15</value>
+  </data>
+  <data name="MetroCheckBox4.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="MetroCheckBox4.Text" xml:space="preserve">
+    <value>Clear printer settings</value>
+  </data>
+  <data name="MetroCheckBox5.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox5.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>50, 181</value>
+  </data>
+  <data name="MetroCheckBox5.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>118, 15</value>
+  </data>
+  <data name="MetroCheckBox5.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="MetroCheckBox5.Text" xml:space="preserve">
+    <value>Remove Printer</value>
+  </data>
+  <data name="MetroCheckBox6.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox6.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>50, 202</value>
+  </data>
+  <data name="MetroCheckBox6.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>303, 15</value>
+  </data>
+  <data name="MetroCheckBox6.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="MetroCheckBox6.Text" xml:space="preserve">
+    <value>Delete printer driver with elevated user rights</value>
+  </data>
+  <data name="MetroCheckBox7.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox7.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>50, 223</value>
+  </data>
+  <data name="MetroCheckBox7.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>320, 15</value>
+  </data>
+  <data name="MetroCheckBox7.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="MetroCheckBox7.Text" xml:space="preserve">
+    <value>Remove drivers manually with elevated user rights</value>
+  </data>
+  <data name="PictureBox1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>28, 117</value>
+  </data>
+  <data name="PictureBox1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="PictureBox1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="PictureBox2.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>28, 201</value>
+  </data>
+  <data name="PictureBox2.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="PictureBox2.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="PictureBox3.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>28, 222</value>
+  </data>
+  <data name="PictureBox3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="PictureBox3.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="MetroButton1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>278, 271</value>
+  </data>
+  <data name="MetroButton1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="MetroButton1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="MetroButton1.Text" xml:space="preserve">
+    <value>Delete printer driver</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" xml:space="preserve" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>446, 317</value>
+  </data>
+  <data name="$this.StartPosition" xml:space="preserve" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Delete printer driver</value>
+  </data>
+  <metadata name="$this.Localizable" xml:space="preserve" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

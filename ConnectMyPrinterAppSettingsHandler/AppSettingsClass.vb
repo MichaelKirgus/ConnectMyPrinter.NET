@@ -1,6 +1,9 @@
-﻿Imports ConnectMyPrinterEnumerationLib
+﻿Imports ConnectMyPrinterDriverNotifications
+Imports ConnectMyPrinterEnumerationLib
 
 <Serializable> Public Class AppSettingsClass
+    Property EnableLogging As Boolean = False
+    Property LogFile As String = "Log.txt"
     Property WindowTitle As String = "ConnectMyPrinter.NET"
     Property UserInformation As String = "Bitte geben Sie einen Druckernamen ein."
     Property AdditionalUserInformation As String = ""
@@ -41,11 +44,15 @@
     Property CleanPrinterDriverPackagesAtPrinterDriverRemove As Boolean = True
     Property SavedPrintersProfileFile As String = ""
     Property ShowLocalPrinters As Boolean = False
+    Property HiddenPrinterList As List(Of String)
     Property CheckUserSpoolerPermissions As Boolean = False
     Property AlwaysCheckForNewPrinters As Boolean = True
     Property AlwaysCheckForNewPrintersInterval As Integer = 2000
     Property DoubleClickActionOnPrinterItem As DoubleClickActionOnPrinterItemAction = DoubleClickActionOnPrinterItemAction.ShowPrinterDriverSettingsDialog
     Property ShowRestartPrinterQueueButton As Boolean = True
+    Property AllowUserDeleteLocalPrinter As Boolean = True
+    Property ShowDriverNotifications As Boolean = True
+    Property DriverNotifications As List(Of DriverNotifications)
 
     Public Enum DoubleClickActionOnPrinterItemAction
         DoNothing = 0

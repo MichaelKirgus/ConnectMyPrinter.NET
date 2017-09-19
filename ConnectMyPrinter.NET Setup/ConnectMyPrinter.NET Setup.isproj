@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\ConnectMyPrinter.NET\ConnectMyPrinter.NET.vbproj">
+			<Name>ConnectMyPrinter.NET</Name>
+			<Project>{2FFB39F5-85AB-405B-8AB7-D3404312B088}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterACLHelper\ConnectMyPrinterACLHelper.vbproj">
+			<Name>ConnectMyPrinterACLHelper</Name>
+			<Project>{0F56BFD3-F897-4C3E-A71E-0983A4B33E82}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterACLHelperLib\ConnectMyPrinterACLHelperLib.vbproj">
+			<Name>ConnectMyPrinterACLHelperLib</Name>
+			<Project>{95C18515-2072-4961-A0EF-8FBDB893810F}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
+			<Name>ConnectMyPrinterAppSettingsHandler</Name>
+			<Project>{AE01B7FF-C216-4752-B4FF-D6956A772D44}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterClean\ConnectMyPrinterClean.vbproj">
+			<Name>ConnectMyPrinterClean</Name>
+			<Project>{850F3D68-46E3-4982-8306-1EF9B82840A5}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterDeleteAllPrinters\ConnectMyPrinterDeleteAllPrinters.vbproj">
+			<Name>ConnectMyPrinterDeleteAllPrinters</Name>
+			<Project>{8CB8056A-D5AA-42DD-8A50-B7658D69C95C}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
+			<Name>ConnectMyPrinterEnumerationLib</Name>
+			<Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
+			<Name>ConnectMyPrinterPrinterManageLib</Name>
+			<Project>{BE968C84-9AE3-4F63-8466-FA21F66386B0}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterSettingsConsole\ConnectMyPrinterSettingsConsole.vbproj">
+			<Name>ConnectMyPrinterSettingsConsole</Name>
+			<Project>{AE1E6B2D-A9A1-4391-8BFC-C2C6FD089D2B}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj">
+			<Name>ConnectMyPrinterUACHelper</Name>
+			<Project>{53B8A917-53BB-4ECF-9709-C50BA632DA9A}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

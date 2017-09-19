@@ -23,6 +23,7 @@ Partial Class PrinterCtl
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PrinterCtl))
         Me.MetroLabel1Lbl = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel2Lbl = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel3Lbl = New MetroFramework.Controls.MetroLabel()
@@ -53,15 +54,21 @@ Partial Class PrinterCtl
         Me.DruckerImProfilSpeichernToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.StandardeinstellungenLöschenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DruckereinstellungenExportierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DruckereinstellungenImportierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DruckereinstellungenExportierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DruckereinstellungenImportierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.DruckerEntfernenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DruckereigenschaftenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DruckereinstellungenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DruckerNeuInstallierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,132 +79,88 @@ Partial Class PrinterCtl
         Me.MetroLabel1Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel1Lbl.CustomBackground = True
         Me.MetroLabel1Lbl.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel1Lbl.Location = New System.Drawing.Point(44, 1)
+        resources.ApplyResources(Me.MetroLabel1Lbl, "MetroLabel1Lbl")
         Me.MetroLabel1Lbl.Name = "MetroLabel1Lbl"
-        Me.MetroLabel1Lbl.Size = New System.Drawing.Size(284, 23)
-        Me.MetroLabel1Lbl.TabIndex = 1
-        Me.MetroLabel1Lbl.Text = "<PrinterName>"
+        Me.ToolTip1.SetToolTip(Me.MetroLabel1Lbl, resources.GetString("MetroLabel1Lbl.ToolTip"))
         '
         'MetroLabel2Lbl
         '
         Me.MetroLabel2Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel2Lbl.CustomBackground = True
         Me.MetroLabel2Lbl.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel2Lbl.Location = New System.Drawing.Point(48, 24)
+        resources.ApplyResources(Me.MetroLabel2Lbl, "MetroLabel2Lbl")
         Me.MetroLabel2Lbl.Name = "MetroLabel2Lbl"
-        Me.MetroLabel2Lbl.Size = New System.Drawing.Size(280, 19)
-        Me.MetroLabel2Lbl.TabIndex = 2
-        Me.MetroLabel2Lbl.Text = "<PrinterServer>"
+        Me.ToolTip1.SetToolTip(Me.MetroLabel2Lbl, resources.GetString("MetroLabel2Lbl.ToolTip"))
         '
         'MetroLabel3Lbl
         '
-        Me.MetroLabel3Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel3Lbl, "MetroLabel3Lbl")
         Me.MetroLabel3Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel3Lbl.CustomBackground = True
-        Me.MetroLabel3Lbl.Location = New System.Drawing.Point(2, 98)
         Me.MetroLabel3Lbl.Name = "MetroLabel3Lbl"
-        Me.MetroLabel3Lbl.Size = New System.Drawing.Size(85, 19)
-        Me.MetroLabel3Lbl.TabIndex = 14
-        Me.MetroLabel3Lbl.Text = "Treibername:"
         '
         'MetroLabel4Lbl
         '
-        Me.MetroLabel4Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel4Lbl, "MetroLabel4Lbl")
         Me.MetroLabel4Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel4Lbl.CustomBackground = True
-        Me.MetroLabel4Lbl.Location = New System.Drawing.Point(2, 121)
         Me.MetroLabel4Lbl.Name = "MetroLabel4Lbl"
-        Me.MetroLabel4Lbl.Size = New System.Drawing.Size(94, 19)
-        Me.MetroLabel4Lbl.TabIndex = 15
-        Me.MetroLabel4Lbl.Text = "Treiberversion:"
         '
         'MetroLabel5Lbl
         '
-        Me.MetroLabel5Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel5Lbl, "MetroLabel5Lbl")
         Me.MetroLabel5Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel5Lbl.CustomBackground = True
-        Me.MetroLabel5Lbl.Location = New System.Drawing.Point(2, 144)
         Me.MetroLabel5Lbl.Name = "MetroLabel5Lbl"
-        Me.MetroLabel5Lbl.Size = New System.Drawing.Size(83, 19)
-        Me.MetroLabel5Lbl.TabIndex = 16
-        Me.MetroLabel5Lbl.Text = "Gerätestatus:"
         '
         'MetroLabel6Lbl
         '
-        Me.MetroLabel6Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel6Lbl, "MetroLabel6Lbl")
         Me.MetroLabel6Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel6Lbl.CustomBackground = True
-        Me.MetroLabel6Lbl.Location = New System.Drawing.Point(3, 53)
         Me.MetroLabel6Lbl.Name = "MetroLabel6Lbl"
-        Me.MetroLabel6Lbl.Size = New System.Drawing.Size(63, 19)
-        Me.MetroLabel6Lbl.TabIndex = 17
-        Me.MetroLabel6Lbl.Text = "Standort:"
         '
         'MetroLabel7Lbl
         '
-        Me.MetroLabel7Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel7Lbl, "MetroLabel7Lbl")
         Me.MetroLabel7Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel7Lbl.CustomBackground = True
-        Me.MetroLabel7Lbl.Location = New System.Drawing.Point(3, 76)
         Me.MetroLabel7Lbl.Name = "MetroLabel7Lbl"
-        Me.MetroLabel7Lbl.Size = New System.Drawing.Size(90, 19)
-        Me.MetroLabel7Lbl.TabIndex = 18
-        Me.MetroLabel7Lbl.Text = "Beschreibung:"
         '
         'LocationLbl
         '
-        Me.LocationLbl.AutoSize = True
+        resources.ApplyResources(Me.LocationLbl, "LocationLbl")
         Me.LocationLbl.BackColor = System.Drawing.Color.White
         Me.LocationLbl.CustomBackground = True
-        Me.LocationLbl.Location = New System.Drawing.Point(107, 53)
         Me.LocationLbl.Name = "LocationLbl"
-        Me.LocationLbl.Size = New System.Drawing.Size(93, 19)
-        Me.LocationLbl.TabIndex = 19
-        Me.LocationLbl.Text = "<LocationLbl>"
         '
         'DescriptionLbl
         '
-        Me.DescriptionLbl.AutoSize = True
+        resources.ApplyResources(Me.DescriptionLbl, "DescriptionLbl")
         Me.DescriptionLbl.BackColor = System.Drawing.Color.White
         Me.DescriptionLbl.CustomBackground = True
-        Me.DescriptionLbl.Location = New System.Drawing.Point(107, 76)
         Me.DescriptionLbl.Name = "DescriptionLbl"
-        Me.DescriptionLbl.Size = New System.Drawing.Size(109, 19)
-        Me.DescriptionLbl.TabIndex = 20
-        Me.DescriptionLbl.Text = "<DescriptionLbl>"
         '
         'DriverLbl
         '
-        Me.DriverLbl.AutoSize = True
+        resources.ApplyResources(Me.DriverLbl, "DriverLbl")
         Me.DriverLbl.BackColor = System.Drawing.Color.White
         Me.DriverLbl.CustomBackground = True
-        Me.DriverLbl.Location = New System.Drawing.Point(107, 98)
         Me.DriverLbl.Name = "DriverLbl"
-        Me.DriverLbl.Size = New System.Drawing.Size(79, 19)
-        Me.DriverLbl.TabIndex = 21
-        Me.DriverLbl.Text = "<DriverLbl>"
         '
         'DriverVersionLbl
         '
-        Me.DriverVersionLbl.AutoSize = True
+        resources.ApplyResources(Me.DriverVersionLbl, "DriverVersionLbl")
         Me.DriverVersionLbl.BackColor = System.Drawing.Color.White
         Me.DriverVersionLbl.CustomBackground = True
-        Me.DriverVersionLbl.Location = New System.Drawing.Point(107, 121)
         Me.DriverVersionLbl.Name = "DriverVersionLbl"
-        Me.DriverVersionLbl.Size = New System.Drawing.Size(121, 19)
-        Me.DriverVersionLbl.TabIndex = 22
-        Me.DriverVersionLbl.Text = "<DriverVersionLbl>"
         '
         'StateLbl
         '
-        Me.StateLbl.AutoSize = True
+        resources.ApplyResources(Me.StateLbl, "StateLbl")
         Me.StateLbl.BackColor = System.Drawing.Color.White
         Me.StateLbl.CustomBackground = True
-        Me.StateLbl.Location = New System.Drawing.Point(107, 144)
         Me.StateLbl.Name = "StateLbl"
-        Me.StateLbl.Size = New System.Drawing.Size(73, 19)
-        Me.StateLbl.TabIndex = 23
-        Me.StateLbl.Text = "<StateLbl>"
         '
         'DataFileLbl
         '
@@ -205,23 +168,16 @@ Partial Class PrinterCtl
         Me.DataFileLbl.CustomBackground = True
         Me.DataFileLbl.FontSize = MetroFramework.MetroLabelSize.Small
         Me.DataFileLbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Selectable
-        Me.DataFileLbl.Location = New System.Drawing.Point(108, 172)
+        resources.ApplyResources(Me.DataFileLbl, "DataFileLbl")
         Me.DataFileLbl.Name = "DataFileLbl"
-        Me.DataFileLbl.Size = New System.Drawing.Size(74, 15)
-        Me.DataFileLbl.TabIndex = 27
-        Me.DataFileLbl.Text = "<DatafileLbl>"
         '
         'MetroLabel10Lbl
         '
-        Me.MetroLabel10Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel10Lbl, "MetroLabel10Lbl")
         Me.MetroLabel10Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel10Lbl.CustomBackground = True
         Me.MetroLabel10Lbl.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel10Lbl.Location = New System.Drawing.Point(4, 171)
         Me.MetroLabel10Lbl.Name = "MetroLabel10Lbl"
-        Me.MetroLabel10Lbl.Size = New System.Drawing.Size(65, 15)
-        Me.MetroLabel10Lbl.TabIndex = 26
-        Me.MetroLabel10Lbl.Text = "Datendatei:"
         '
         'ConfigFileLbl
         '
@@ -229,23 +185,16 @@ Partial Class PrinterCtl
         Me.ConfigFileLbl.CustomBackground = True
         Me.ConfigFileLbl.FontSize = MetroFramework.MetroLabelSize.Small
         Me.ConfigFileLbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Selectable
-        Me.ConfigFileLbl.Location = New System.Drawing.Point(108, 190)
+        resources.ApplyResources(Me.ConfigFileLbl, "ConfigFileLbl")
         Me.ConfigFileLbl.Name = "ConfigFileLbl"
-        Me.ConfigFileLbl.Size = New System.Drawing.Size(85, 15)
-        Me.ConfigFileLbl.TabIndex = 29
-        Me.ConfigFileLbl.Text = "<ConfigFileLbl>"
         '
         'MetroLabel12Lbl
         '
-        Me.MetroLabel12Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel12Lbl, "MetroLabel12Lbl")
         Me.MetroLabel12Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel12Lbl.CustomBackground = True
         Me.MetroLabel12Lbl.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel12Lbl.Location = New System.Drawing.Point(4, 190)
         Me.MetroLabel12Lbl.Name = "MetroLabel12Lbl"
-        Me.MetroLabel12Lbl.Size = New System.Drawing.Size(94, 15)
-        Me.MetroLabel12Lbl.TabIndex = 28
-        Me.MetroLabel12Lbl.Text = "Konfigurationsfile:"
         '
         'DriverPathLbl
         '
@@ -253,186 +202,173 @@ Partial Class PrinterCtl
         Me.DriverPathLbl.CustomBackground = True
         Me.DriverPathLbl.FontSize = MetroFramework.MetroLabelSize.Small
         Me.DriverPathLbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Selectable
-        Me.DriverPathLbl.Location = New System.Drawing.Point(108, 208)
+        resources.ApplyResources(Me.DriverPathLbl, "DriverPathLbl")
         Me.DriverPathLbl.Name = "DriverPathLbl"
-        Me.DriverPathLbl.Size = New System.Drawing.Size(85, 15)
-        Me.DriverPathLbl.TabIndex = 31
-        Me.DriverPathLbl.Text = "<DriverPathLbl>"
         '
         'MetroLabel13Lbl
         '
-        Me.MetroLabel13Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel13Lbl, "MetroLabel13Lbl")
         Me.MetroLabel13Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel13Lbl.CustomBackground = True
         Me.MetroLabel13Lbl.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel13Lbl.Location = New System.Drawing.Point(4, 208)
         Me.MetroLabel13Lbl.Name = "MetroLabel13Lbl"
-        Me.MetroLabel13Lbl.Size = New System.Drawing.Size(66, 15)
-        Me.MetroLabel13Lbl.TabIndex = 30
-        Me.MetroLabel13Lbl.Text = "Treiberpfad:"
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(3, 235)
+        resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(183, 23)
-        Me.MetroButton1.TabIndex = 32
-        Me.MetroButton1.Text = "Testseite drucken"
         '
         'MetroButton2
         '
-        Me.MetroButton2.Location = New System.Drawing.Point(192, 235)
+        resources.ApplyResources(Me.MetroButton2, "MetroButton2")
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(196, 23)
-        Me.MetroButton2.TabIndex = 33
-        Me.MetroButton2.Text = "Druckerwarteschlange öffnen"
         '
         'MetroButton3
         '
-        Me.MetroButton3.Location = New System.Drawing.Point(3, 261)
+        resources.ApplyResources(Me.MetroButton3, "MetroButton3")
         Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(183, 23)
-        Me.MetroButton3.TabIndex = 34
-        Me.MetroButton3.Text = "Druckerwarteschlange leeren"
         '
         'MetroButton4
         '
-        Me.MetroButton4.Location = New System.Drawing.Point(192, 261)
+        resources.ApplyResources(Me.MetroButton4, "MetroButton4")
         Me.MetroButton4.Name = "MetroButton4"
-        Me.MetroButton4.Size = New System.Drawing.Size(196, 23)
-        Me.MetroButton4.TabIndex = 35
-        Me.MetroButton4.Text = "Drucker+ Treiber löschen"
         '
         'MetroButton5
         '
-        Me.MetroButton5.Location = New System.Drawing.Point(3, 287)
+        resources.ApplyResources(Me.MetroButton5, "MetroButton5")
         Me.MetroButton5.Name = "MetroButton5"
-        Me.MetroButton5.Size = New System.Drawing.Size(183, 23)
-        Me.MetroButton5.TabIndex = 36
-        Me.MetroButton5.Text = "Drucker neu installieren"
         '
         'MetroButton6
         '
-        Me.MetroButton6.Location = New System.Drawing.Point(192, 287)
+        resources.ApplyResources(Me.MetroButton6, "MetroButton6")
         Me.MetroButton6.Name = "MetroButton6"
-        Me.MetroButton6.Size = New System.Drawing.Size(196, 23)
-        Me.MetroButton6.TabIndex = 37
-        Me.MetroButton6.Text = "Druckerinformationen neu ermitteln"
         '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.BackColor = System.Drawing.Color.White
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlsStandarddruckerFestlegenToolStripMenuItem, Me.ToolStripSeparator1, Me.DruckerImProfilSpeichernToolStripMenuItem, Me.ToolStripSeparator2, Me.StandardeinstellungenLöschenToolStripMenuItem, Me.DruckereinstellungenExportierenToolStripMenuItem, Me.DruckereinstellungenImportierenToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlsStandarddruckerFestlegenToolStripMenuItem, Me.ToolStripSeparator1, Me.DruckerImProfilSpeichernToolStripMenuItem, Me.ToolStripSeparator2, Me.DruckerEntfernenToolStripMenuItem, Me.DruckerNeuInstallierenToolStripMenuItem, Me.StandardeinstellungenLöschenToolStripMenuItem, Me.ToolStripSeparator3, Me.DruckereigenschaftenToolStripMenuItem, Me.DruckereinstellungenToolStripMenuItem, Me.ToolStripSeparator4, Me.DruckereinstellungenExportierenToolStripMenuItem, Me.DruckereinstellungenImportierenToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(269, 166)
+        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
         '
         'AlsStandarddruckerFestlegenToolStripMenuItem
         '
         Me.AlsStandarddruckerFestlegenToolStripMenuItem.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.dialog_ok
         Me.AlsStandarddruckerFestlegenToolStripMenuItem.Name = "AlsStandarddruckerFestlegenToolStripMenuItem"
-        Me.AlsStandarddruckerFestlegenToolStripMenuItem.Size = New System.Drawing.Size(268, 30)
-        Me.AlsStandarddruckerFestlegenToolStripMenuItem.Text = "Als Standarddrucker festlegen"
+        resources.ApplyResources(Me.AlsStandarddruckerFestlegenToolStripMenuItem, "AlsStandarddruckerFestlegenToolStripMenuItem")
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(265, 6)
+        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         '
         'DruckerImProfilSpeichernToolStripMenuItem
         '
         Me.DruckerImProfilSpeichernToolStripMenuItem.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.floppy_nocustom
         Me.DruckerImProfilSpeichernToolStripMenuItem.Name = "DruckerImProfilSpeichernToolStripMenuItem"
-        Me.DruckerImProfilSpeichernToolStripMenuItem.Size = New System.Drawing.Size(268, 30)
-        Me.DruckerImProfilSpeichernToolStripMenuItem.Text = "Drucker im Profil speichern"
+        resources.ApplyResources(Me.DruckerImProfilSpeichernToolStripMenuItem, "DruckerImProfilSpeichernToolStripMenuItem")
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(265, 6)
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
         '
         'StandardeinstellungenLöschenToolStripMenuItem
         '
-        Me.StandardeinstellungenLöschenToolStripMenuItem.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.DeletePrinter
         Me.StandardeinstellungenLöschenToolStripMenuItem.Name = "StandardeinstellungenLöschenToolStripMenuItem"
-        Me.StandardeinstellungenLöschenToolStripMenuItem.Size = New System.Drawing.Size(268, 30)
-        Me.StandardeinstellungenLöschenToolStripMenuItem.Text = "Standardeinstellungen löschen"
+        resources.ApplyResources(Me.StandardeinstellungenLöschenToolStripMenuItem, "StandardeinstellungenLöschenToolStripMenuItem")
+        '
+        'DruckereinstellungenExportierenToolStripMenuItem
+        '
+        Me.DruckereinstellungenExportierenToolStripMenuItem.Name = "DruckereinstellungenExportierenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckereinstellungenExportierenToolStripMenuItem, "DruckereinstellungenExportierenToolStripMenuItem")
+        '
+        'DruckereinstellungenImportierenToolStripMenuItem
+        '
+        Me.DruckereinstellungenImportierenToolStripMenuItem.Name = "DruckereinstellungenImportierenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckereinstellungenImportierenToolStripMenuItem, "DruckereinstellungenImportierenToolStripMenuItem")
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.expandable
-        Me.PictureBox2.Location = New System.Drawing.Point(336, 7)
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(28, 28)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox2, resources.GetString("PictureBox2.ToolTip"))
         '
         'Button1
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.DeletePrinter2
-        Me.Button1.Location = New System.Drawing.Point(367, 0)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(22, 22)
-        Me.Button1.TabIndex = 12
-        Me.ToolTip1.SetToolTip(Me.Button1, "Drucker entfernen")
+        Me.ToolTip1.SetToolTip(Me.Button1, resources.GetString("Button1.ToolTip"))
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.Button2, "Button2")
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.settings_small
-        Me.Button2.Location = New System.Drawing.Point(367, 20)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(22, 22)
-        Me.Button2.TabIndex = 11
-        Me.ToolTip1.SetToolTip(Me.Button2, "Druckereinstellungen")
+        Me.ToolTip1.SetToolTip(Me.Button2, resources.GetString("Button2.ToolTip"))
         Me.Button2.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.printer_nonstandard
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 4)
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'DruckereinstellungenExportierenToolStripMenuItem
-        '
-        Me.DruckereinstellungenExportierenToolStripMenuItem.Name = "DruckereinstellungenExportierenToolStripMenuItem"
-        Me.DruckereinstellungenExportierenToolStripMenuItem.Size = New System.Drawing.Size(268, 30)
-        Me.DruckereinstellungenExportierenToolStripMenuItem.Text = "Druckereinstellungen exportieren..."
-        Me.DruckereinstellungenExportierenToolStripMenuItem.Visible = False
-        '
-        'DruckereinstellungenImportierenToolStripMenuItem
-        '
-        Me.DruckereinstellungenImportierenToolStripMenuItem.Name = "DruckereinstellungenImportierenToolStripMenuItem"
-        Me.DruckereinstellungenImportierenToolStripMenuItem.Size = New System.Drawing.Size(268, 30)
-        Me.DruckereinstellungenImportierenToolStripMenuItem.Text = "Druckereinstellungen importieren..."
-        Me.DruckereinstellungenImportierenToolStripMenuItem.Visible = False
         '
         'SaveFileDialog1
         '
         Me.SaveFileDialog1.DefaultExt = "dat"
-        Me.SaveFileDialog1.Filter = "Druckereinstellungen (*.dat)|*.dat|Alle Dateien|*.*"
+        resources.ApplyResources(Me.SaveFileDialog1, "SaveFileDialog1")
         Me.SaveFileDialog1.RestoreDirectory = True
         '
         'OpenFileDialog1
         '
-        Me.OpenFileDialog1.Filter = "Druckereinstellungen (*.dat)|*.dat|Alle Dateien|*.*"
+        resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
         Me.OpenFileDialog1.RestoreDirectory = True
+        '
+        'DruckerEntfernenToolStripMenuItem
+        '
+        Me.DruckerEntfernenToolStripMenuItem.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.DeletePrinter
+        Me.DruckerEntfernenToolStripMenuItem.Name = "DruckerEntfernenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckerEntfernenToolStripMenuItem, "DruckerEntfernenToolStripMenuItem")
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        resources.ApplyResources(Me.ToolStripSeparator4, "ToolStripSeparator4")
+        '
+        'DruckereigenschaftenToolStripMenuItem
+        '
+        Me.DruckereigenschaftenToolStripMenuItem.Name = "DruckereigenschaftenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckereigenschaftenToolStripMenuItem, "DruckereigenschaftenToolStripMenuItem")
+        '
+        'DruckereinstellungenToolStripMenuItem
+        '
+        Me.DruckereinstellungenToolStripMenuItem.Name = "DruckereinstellungenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckereinstellungenToolStripMenuItem, "DruckereinstellungenToolStripMenuItem")
+        '
+        'DruckerNeuInstallierenToolStripMenuItem
+        '
+        Me.DruckerNeuInstallierenToolStripMenuItem.Name = "DruckerNeuInstallierenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckerNeuInstallierenToolStripMenuItem, "DruckerNeuInstallierenToolStripMenuItem")
         '
         'PrinterCtl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ContextMenuStrip = Me.ContextMenuStrip1
@@ -466,7 +402,6 @@ Partial Class PrinterCtl
         Me.Controls.Add(Me.PictureBox1)
         Me.CustomBackground = True
         Me.Name = "PrinterCtl"
-        Me.Size = New System.Drawing.Size(391, 42)
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -514,4 +449,10 @@ Partial Class PrinterCtl
     Friend WithEvents DruckereinstellungenImportierenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents DruckerEntfernenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents DruckereigenschaftenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DruckereinstellungenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents DruckerNeuInstallierenToolStripMenuItem As ToolStripMenuItem
 End Class

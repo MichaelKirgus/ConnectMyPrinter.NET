@@ -24,15 +24,50 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PropertyGrid1 = New System.Windows.Forms.PropertyGrid()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.DateiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DateiÖffnenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DateiSpeichernToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PropertyGrid1
         '
         Me.PropertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertyGrid1.Location = New System.Drawing.Point(0, 0)
+        Me.PropertyGrid1.Location = New System.Drawing.Point(0, 24)
         Me.PropertyGrid1.Name = "PropertyGrid1"
-        Me.PropertyGrid1.Size = New System.Drawing.Size(497, 499)
+        Me.PropertyGrid1.Size = New System.Drawing.Size(497, 475)
         Me.PropertyGrid1.TabIndex = 0
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(497, 24)
+        Me.MenuStrip1.TabIndex = 1
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'DateiToolStripMenuItem
+        '
+        Me.DateiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiÖffnenToolStripMenuItem, Me.DateiSpeichernToolStripMenuItem})
+        Me.DateiToolStripMenuItem.Name = "DateiToolStripMenuItem"
+        Me.DateiToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.DateiToolStripMenuItem.Text = "&Datei"
+        '
+        'DateiÖffnenToolStripMenuItem
+        '
+        Me.DateiÖffnenToolStripMenuItem.Name = "DateiÖffnenToolStripMenuItem"
+        Me.DateiÖffnenToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DateiÖffnenToolStripMenuItem.Text = "Datei öffnen..."
+        '
+        'DateiSpeichernToolStripMenuItem
+        '
+        Me.DateiSpeichernToolStripMenuItem.Name = "DateiSpeichernToolStripMenuItem"
+        Me.DateiSpeichernToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DateiSpeichernToolStripMenuItem.Text = "Datei speichern..."
         '
         'Form1
         '
@@ -40,13 +75,24 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(497, 499)
         Me.Controls.Add(Me.PropertyGrid1)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Einstellungen"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents PropertyGrid1 As PropertyGrid
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents DateiToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DateiÖffnenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DateiSpeichernToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class

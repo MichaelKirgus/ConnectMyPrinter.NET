@@ -38,7 +38,7 @@ Public Class Form1
         End Try
     End Function
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub LoadSettings()
         Try
             AppSettings = LoadSettings(AppSettingFile)
             PropertyGrid1.SelectedObject = AppSettings
@@ -46,11 +46,31 @@ Public Class Form1
         End Try
     End Sub
 
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadSettings()
+    End Sub
+
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim jj As MsgBoxResult
         jj = MsgBox("Möchten Sie die Änderungen speichern?", MsgBoxStyle.YesNo)
         If jj = MsgBoxResult.Yes Then
             SaveSettings(AppSettings, AppSettingFile)
+        End If
+    End Sub
+
+    Private Sub DateiÖffnenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DateiÖffnenToolStripMenuItem.Click
+        OpenFileDialog1.ShowDialog()
+        If Not OpenFileDialog1.FileName = "" Then
+            AppSettingFile = OpenFileDialog1.FileName
+            LoadSettings()
+        End If
+    End Sub
+
+    Private Sub DateiSpeichernToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DateiSpeichernToolStripMenuItem.Click
+        SaveFileDialog1.ShowDialog()
+        If Not SaveFileDialog1.FileName = "" Then
+            SaveSettings(AppSettings, SaveFileDialog1.FileName)
         End If
     End Sub
 End Class

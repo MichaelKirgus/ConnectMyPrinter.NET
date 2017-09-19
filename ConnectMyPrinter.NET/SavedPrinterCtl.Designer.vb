@@ -22,6 +22,7 @@ Partial Class SavedPrinterCtl
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SavedPrinterCtl))
         Me.MetroLabel1Lbl = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel2Lbl = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel6Lbl = New MetroFramework.Controls.MetroLabel()
@@ -41,114 +42,80 @@ Partial Class SavedPrinterCtl
         Me.MetroLabel1Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel1Lbl.CustomBackground = True
         Me.MetroLabel1Lbl.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel1Lbl.Location = New System.Drawing.Point(44, 1)
+        resources.ApplyResources(Me.MetroLabel1Lbl, "MetroLabel1Lbl")
         Me.MetroLabel1Lbl.Name = "MetroLabel1Lbl"
-        Me.MetroLabel1Lbl.Size = New System.Drawing.Size(284, 23)
-        Me.MetroLabel1Lbl.TabIndex = 1
-        Me.MetroLabel1Lbl.Text = "<PrinterName>"
         '
         'MetroLabel2Lbl
         '
         Me.MetroLabel2Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel2Lbl.CustomBackground = True
         Me.MetroLabel2Lbl.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel2Lbl.Location = New System.Drawing.Point(48, 24)
+        resources.ApplyResources(Me.MetroLabel2Lbl, "MetroLabel2Lbl")
         Me.MetroLabel2Lbl.Name = "MetroLabel2Lbl"
-        Me.MetroLabel2Lbl.Size = New System.Drawing.Size(280, 19)
-        Me.MetroLabel2Lbl.TabIndex = 2
-        Me.MetroLabel2Lbl.Text = "<PrinterServer>"
         '
         'MetroLabel6Lbl
         '
-        Me.MetroLabel6Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel6Lbl, "MetroLabel6Lbl")
         Me.MetroLabel6Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel6Lbl.CustomBackground = True
-        Me.MetroLabel6Lbl.Location = New System.Drawing.Point(3, 53)
         Me.MetroLabel6Lbl.Name = "MetroLabel6Lbl"
-        Me.MetroLabel6Lbl.Size = New System.Drawing.Size(63, 19)
-        Me.MetroLabel6Lbl.TabIndex = 17
-        Me.MetroLabel6Lbl.Text = "Standort:"
         '
         'MetroLabel7Lbl
         '
-        Me.MetroLabel7Lbl.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel7Lbl, "MetroLabel7Lbl")
         Me.MetroLabel7Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel7Lbl.CustomBackground = True
-        Me.MetroLabel7Lbl.Location = New System.Drawing.Point(3, 76)
         Me.MetroLabel7Lbl.Name = "MetroLabel7Lbl"
-        Me.MetroLabel7Lbl.Size = New System.Drawing.Size(90, 19)
-        Me.MetroLabel7Lbl.TabIndex = 18
-        Me.MetroLabel7Lbl.Text = "Beschreibung:"
         '
         'LocationLbl
         '
-        Me.LocationLbl.AutoSize = True
+        resources.ApplyResources(Me.LocationLbl, "LocationLbl")
         Me.LocationLbl.BackColor = System.Drawing.Color.White
         Me.LocationLbl.CustomBackground = True
-        Me.LocationLbl.Location = New System.Drawing.Point(107, 53)
         Me.LocationLbl.Name = "LocationLbl"
-        Me.LocationLbl.Size = New System.Drawing.Size(93, 19)
-        Me.LocationLbl.TabIndex = 19
-        Me.LocationLbl.Text = "<LocationLbl>"
         '
         'DescriptionLbl
         '
-        Me.DescriptionLbl.AutoSize = True
+        resources.ApplyResources(Me.DescriptionLbl, "DescriptionLbl")
         Me.DescriptionLbl.BackColor = System.Drawing.Color.White
         Me.DescriptionLbl.CustomBackground = True
-        Me.DescriptionLbl.Location = New System.Drawing.Point(107, 76)
         Me.DescriptionLbl.Name = "DescriptionLbl"
-        Me.DescriptionLbl.Size = New System.Drawing.Size(109, 19)
-        Me.DescriptionLbl.TabIndex = 20
-        Me.DescriptionLbl.Text = "<DescriptionLbl>"
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.expandable
-        Me.PictureBox2.Location = New System.Drawing.Point(336, 7)
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(28, 28)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
         '
         'Button1
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.DeletePrinter2
-        Me.Button1.Location = New System.Drawing.Point(367, 0)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(22, 22)
-        Me.Button1.TabIndex = 12
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.Button2, "Button2")
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.plus_bw
-        Me.Button2.Location = New System.Drawing.Point(367, 20)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(22, 22)
-        Me.Button2.TabIndex = 11
         Me.Button2.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.printer_nonstandard
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 4)
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'SavedPrinterCtl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.Controls.Add(Me.DescriptionLbl)
@@ -163,7 +130,6 @@ Partial Class SavedPrinterCtl
         Me.Controls.Add(Me.PictureBox1)
         Me.CustomBackground = True
         Me.Name = "SavedPrinterCtl"
-        Me.Size = New System.Drawing.Size(391, 42)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

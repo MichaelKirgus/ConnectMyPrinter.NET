@@ -22,6 +22,7 @@ Partial Class AboutFrm
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutFrm))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
@@ -44,137 +45,97 @@ Partial Class AboutFrm
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.printer_big
-        Me.PictureBox1.Location = New System.Drawing.Point(23, 61)
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(150, 150)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'MetroLabel1
         '
-        Me.MetroLabel1.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel1, "MetroLabel1")
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold
-        Me.MetroLabel1.Location = New System.Drawing.Point(179, 67)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(206, 25)
-        Me.MetroLabel1.TabIndex = 1
-        Me.MetroLabel1.Text = "ConnectMyPrinter.NET"
         '
         'MetroLabel2
         '
-        Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(182, 92)
+        resources.ApplyResources(Me.MetroLabel2, "MetroLabel2")
         Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(357, 38)
-        Me.MetroLabel2.TabIndex = 2
-        Me.MetroLabel2.Text = "Copyright 2016-2017 Michael Kirgus" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tool zum einfachen Verwalten von Druckern unt" &
-    "er Windows."
         '
         'MetroLabel3
         '
-        Me.MetroLabel3.AutoSize = True
+        resources.ApplyResources(Me.MetroLabel3, "MetroLabel3")
         Me.MetroLabel3.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel3.Location = New System.Drawing.Point(182, 145)
         Me.MetroLabel3.Name = "MetroLabel3"
-        Me.MetroLabel3.Size = New System.Drawing.Size(321, 15)
-        Me.MetroLabel3.TabIndex = 3
-        Me.MetroLabel3.Text = "Diese Software verwendet das MetroFramework von Jens Thiel."
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(450, 491)
+        resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(89, 23)
-        Me.MetroButton1.TabIndex = 4
-        Me.MetroButton1.Text = "Schließen"
         '
         'MetroTabControl1
         '
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
-        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage3)
-        Me.MetroTabControl1.Location = New System.Drawing.Point(23, 217)
+        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
+        resources.ApplyResources(Me.MetroTabControl1, "MetroTabControl1")
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 2
-        Me.MetroTabControl1.Size = New System.Drawing.Size(511, 268)
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Black
-        Me.MetroTabControl1.TabIndex = 5
         '
         'MetroTabPage1
         '
         Me.MetroTabPage1.Controls.Add(Me.MetroTextBox1)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
-        Me.MetroTabPage1.Location = New System.Drawing.Point(4, 35)
+        resources.ApplyResources(Me.MetroTabPage1, "MetroTabPage1")
         Me.MetroTabPage1.Name = "MetroTabPage1"
-        Me.MetroTabPage1.Size = New System.Drawing.Size(503, 229)
-        Me.MetroTabPage1.TabIndex = 0
-        Me.MetroTabPage1.Text = "Programmlizenz"
         Me.MetroTabPage1.VerticalScrollbarBarColor = True
         '
         'MetroTextBox1
         '
-        Me.MetroTextBox1.Location = New System.Drawing.Point(3, 3)
+        resources.ApplyResources(Me.MetroTextBox1, "MetroTextBox1")
         Me.MetroTextBox1.Multiline = True
         Me.MetroTextBox1.Name = "MetroTextBox1"
         Me.MetroTextBox1.ReadOnly = True
         Me.MetroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.MetroTextBox1.Size = New System.Drawing.Size(497, 223)
-        Me.MetroTextBox1.TabIndex = 2
-        Me.MetroTextBox1.Text = "#"
         '
         'MetroTabPage2
         '
         Me.MetroTabPage2.Controls.Add(Me.MetroTextBox2)
         Me.MetroTabPage2.HorizontalScrollbarBarColor = True
-        Me.MetroTabPage2.Location = New System.Drawing.Point(4, 35)
+        resources.ApplyResources(Me.MetroTabPage2, "MetroTabPage2")
         Me.MetroTabPage2.Name = "MetroTabPage2"
-        Me.MetroTabPage2.Size = New System.Drawing.Size(503, 229)
-        Me.MetroTabPage2.TabIndex = 1
-        Me.MetroTabPage2.Text = "MetroFramework"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
         '
         'MetroTextBox2
         '
-        Me.MetroTextBox2.Location = New System.Drawing.Point(3, 3)
+        resources.ApplyResources(Me.MetroTextBox2, "MetroTextBox2")
         Me.MetroTextBox2.Multiline = True
         Me.MetroTextBox2.Name = "MetroTextBox2"
         Me.MetroTextBox2.ReadOnly = True
         Me.MetroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.MetroTextBox2.Size = New System.Drawing.Size(497, 223)
-        Me.MetroTextBox2.TabIndex = 3
-        Me.MetroTextBox2.Text = "#"
         '
         'MetroTabPage3
         '
         Me.MetroTabPage3.Controls.Add(Me.MetroTextBox3)
         Me.MetroTabPage3.HorizontalScrollbarBarColor = True
-        Me.MetroTabPage3.Location = New System.Drawing.Point(4, 35)
+        resources.ApplyResources(Me.MetroTabPage3, "MetroTabPage3")
         Me.MetroTabPage3.Name = "MetroTabPage3"
-        Me.MetroTabPage3.Size = New System.Drawing.Size(503, 229)
-        Me.MetroTabPage3.TabIndex = 2
-        Me.MetroTabPage3.Text = "Open Icon Library"
         Me.MetroTabPage3.VerticalScrollbarBarColor = True
         '
         'MetroTextBox3
         '
-        Me.MetroTextBox3.Location = New System.Drawing.Point(3, 3)
+        resources.ApplyResources(Me.MetroTextBox3, "MetroTextBox3")
         Me.MetroTextBox3.Multiline = True
         Me.MetroTextBox3.Name = "MetroTextBox3"
         Me.MetroTextBox3.ReadOnly = True
         Me.MetroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.MetroTextBox3.Size = New System.Drawing.Size(497, 223)
-        Me.MetroTextBox3.TabIndex = 4
-        Me.MetroTextBox3.Text = "#"
         '
         'AboutFrm
         '
         Me.AcceptButton = Me.MetroButton1
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(557, 537)
         Me.Controls.Add(Me.MetroTabControl1)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.MetroLabel3)
@@ -188,7 +149,6 @@ Partial Class AboutFrm
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.Style = MetroFramework.MetroColorStyle.Black
-        Me.Text = "Über"
         Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.TopMost = True
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

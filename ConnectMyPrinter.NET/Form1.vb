@@ -33,19 +33,39 @@ Public Class Form1
     Public CollapsedHeight As Integer = 160
     Public OldHeight As Integer = 0
 
+    Public _Log As New ConnectMyPrinterLog.Logging
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             'Evtl. Spuren löschen, um Fehlverhalten zu verhindern
             CleanOldElevationActionFiles()
 
-            'Laden der Einstellungen
+            'Laden der Einstellungen (über AppData)
+            If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
+                AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
+            End If
+
+            'Befehlszeilenparameter prüfen
+            For Each argument In My.Application.CommandLineArgs
+                If argument.StartsWith("/SETTINGS|") Then
+                    AppSettingFile = argument.Split("|")(1)
+                End If
+            Next
+
+            'Laden der Einstellungen (im Programmverzeichnis oder über Befehlszeile)
             If Not IO.File.Exists(AppSettingFile) Then
                 SaveSettings(AppSettings, AppSettingFile)
             End If
             AppSettings = LoadSettings(AppSettingFile)
             SaveSettings(AppSettings, AppSettingFile)
 
+            'Ggf. Logging aktivieren
+            _Log.Enable = AppSettings.EnableLogging
+            _Log.LogFile = AppSettings.LogFile
+            _Log.WriteLogSystemInfo()
+
             'GUI-Einstellungen setzen
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Lade GUI-Einstellungen", Err)
             Me.Text = AppSettings.WindowTitle
             MetroLabel1.Text = AppSettings.UserInformation
             MetroLabel3.Text = AppSettings.AdditionalUserInformation
@@ -102,27 +122,31 @@ Public Class Form1
             ResetPrinterSearchField()
 
             'Seq. Prüfung der Drucker aktivieren/deaktivieren
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Seq. Prüfung der Drucker aktivieren/deaktivieren", Err)
             LocalPrinterChangeTimer.Enabled = AppSettings.AlwaysCheckForNewPrinters
             LocalPrinterChangeTimer.Interval = AppSettings.AlwaysCheckForNewPrintersInterval
 
             'Asynchrone Vorgänge starten
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Asynchrone Vorgänge starten", Err)
             LoadAllPrintersAsync.RunWorkerAsync()
             LoadAllLocalPrinters.RunWorkerAsync()
 
             'Gespeicherte Drucker laden
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Gespeicherte Drucker laden", Err)
             If AppSettings.UsePrinterSavingFeature Then
                 LoadMyPrinters()
                 FillGUIWithSavedPrinters()
             End If
 
             'Prüfen, ob Benutzer die Berechtigung hat, den Spoolerdienst ohne Admin-Rechte zu steuern:
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Prüfe ACLs des Poolers", Err)
             If AppSettings.CheckUserSpoolerPermissions Then
                 UserCanControlSpooler = PrinterQueuesACLLib.CheckForSpoolerPermission
             Else
                 UserCanControlSpooler = True
             End If
         Catch ex As Exception
-
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler beim Start der Anwendung", Err)
         End Try
     End Sub
 
@@ -144,16 +168,19 @@ Public Class Form1
             Next
 
             'Hinzufügen
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Füge Drucker zu den gespeicherten Druckern hinzu", Err)
             MyPrinters.Add(Obj)
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler beim Start der Anwendung", Err)
             Return False
         End Try
     End Function
 
     Public Function DeleteSavedPrinter(ByVal Obj As PrinterQueueInfo) As Boolean
         Try
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Lösche gespeicherten Drucker", Err)
             'Drucker löschen
             For Each item As PrinterQueueInfo In MyPrinters
                 If item.ShareName.ToLower = Obj.ShareName.ToLower Then
@@ -167,34 +194,41 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
 
     Public Function LoadMyPrinters() As Boolean
         Try
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Lade verfügbare Drucker", Err)
             Dim pp As New SavedPrinterEnumerationSerializer
             MyPrinters = pp.LoadMyPrinterCollectionFile(AppSettings.SavedPrintersProfileFile)
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
 
     Public Function SaveMyPrinters() As Boolean
         Try
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Serialisiere gespeicherte Drucker", Err)
             Dim pp As New SavedPrinterEnumerationSerializer
             pp.SaveMyPrinterCollectionFile(MyPrinters, AppSettings.SavedPrintersProfileFile)
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
 
     Public Function CleanOldElevationActionFiles() As Boolean
         Try
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Lösche Dateien des UAC-Helpers", Err)
+
             Dim tmp As String
             Dim tmp2 As String = "C:\Windows\Temp"
             tmp = tmp2 & "\" & ActionFileDir
@@ -205,6 +239,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
@@ -217,12 +252,14 @@ Public Class Form1
                 LoadAllLocalPrinters.RunWorkerAsync()
             End If
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
     Public Function LoadLocalPrinters() As List(Of PrinterQueueInfo)
         'Diese Funktion lädt alle auf dem Computer (bzw. im aktuellen Benutzerprofil) vorhandenen Drucker.
 
+        _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Lade alle Drucker von aktuellem Benutzer", Err)
         Try
             Dim hh As List(Of PrintQueueCollection)
             hh = PrinterEnumerationService.InternalLocalPrinterCollector(AppSettings.ShowLocalPrinters)
@@ -281,8 +318,15 @@ Public Class Form1
                         End If
                     Next
 
+                    'Prüfen, ob der Drucker auf der Hidden-Liste steht:
+                    For index = 0 To AppSettings.HiddenPrinterList.Count - 1
+                        If zz.ShareName.Contains(AppSettings.HiddenPrinterList(index)) Then
+                            isdup = True
+                        End If
+                    Next
+
                     If isdup = True Then
-                        'Der Drucker ist bereits vorhanden und wurde durch eine andere Enumeration ermittelt.
+                        'Der Drucker ist bereits vorhanden/steht auf Hidden-Liste und wurde durch eine andere Enumeration ermittelt.
                     Else
                         duplicatefinder.Add(zz)
                         result.Add(zz)
@@ -292,6 +336,7 @@ Public Class Form1
 
             Return result
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return New List(Of PrinterQueueInfo)
         End Try
     End Function
@@ -306,6 +351,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
@@ -324,6 +370,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
@@ -340,6 +387,7 @@ Public Class Form1
 
             Return p2
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return New AppSettingsClass
         End Try
     End Function
@@ -355,6 +403,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
@@ -369,12 +418,15 @@ Public Class Form1
 
             Return result
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return New List(Of PrinterQueueInfo)
         End Try
     End Function
 
     Public Function GetPrinterQueries(ByVal PrintServer As String) As List(Of PrinterQueueInfo)
         Try
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Suche und lade alle Drucker im Netzwerk", Err)
+
             'Initialisierung des PrintServer-Objekts
             Dim myPrintServer As New PrintServer("\\" & PrintServer, PrintSystemDesiredAccess.EnumerateServer)
 
@@ -387,12 +439,17 @@ Public Class Form1
                     Dim hh As New PrinterQueueInfo
                     hh.Server = pq.HostingPrintServer.Name
                     hh.ShareName = pq.ShareName
+                    Try
+                        hh.DriverName = pq.QueueDriver.Name
+                    Catch ex As Exception
+                    End Try
                     result.Add(hh)
                 End If
             Next pq
 
             Return result
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return New List(Of PrinterQueueInfo)
         End Try
     End Function
@@ -402,6 +459,7 @@ Public Class Form1
             MetroLabel2.Text = "Drucker gefunden, bereit zum verbinden."
             MetroButton1.Enabled = True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
@@ -419,6 +477,7 @@ Public Class Form1
 
             e.Result = _result
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             e.Result = New List(Of PrinterQueueInfo)
         End Try
     End Sub
@@ -437,6 +496,7 @@ Public Class Form1
             'Anzahl gefundener Drucker anzeigen
             ResetUserStatusInfo()
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
@@ -518,12 +578,14 @@ Public Class Form1
             End If
 
         Catch ex As Exception
-
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
     Public Function ConnectPrinter(ByVal PrinterShareName As String, ByVal PrinterCollection As List(Of PrinterQueueInfo), ByVal SetDefaultPrinter As Boolean, ByVal Silent As Boolean) As Boolean
         Try
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Drucker " & PrinterShareName & " verbinden", Err)
+
             Dim matchprinters As New List(Of PrinterQueueInfo)
             For index = 0 To PrinterCollection.Count - 1
                 If PrinterCollection(index).ShareName = PrinterShareName Then
@@ -601,8 +663,25 @@ Public Class Form1
                 End If
             End If
 
+            If AppSettings.ShowDriverNotifications Then
+                If Silent = False Then
+                    'Prüfen auf Hinweise zum Drucker bzw. Druckertreiber
+                    Dim notifydrv As New ConnectMyPrinterDriverNotifications.CheckDriverNotifications
+                    Dim result1 As String
+                    result1 = notifydrv.CheckForNotifications(matchprinters(0).DriverName, AppSettings.DriverNotifications)
+
+                    If Not result1 = "" Then
+                        'Es wurde eine RTF-Datei zurückgegeben, diese wird nun angezeigt
+                        Dim uu As New DriverNotificationRtfViewerDlg
+                        uu.Show()
+                        uu.RichTextBox1.LoadFile(result1)
+                    End If
+                End If
+            End If
+
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
@@ -637,6 +716,7 @@ Public Class Form1
 
             Return result
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return New AutoCompleteStringCollection
         End Try
     End Function
@@ -658,6 +738,7 @@ Public Class Form1
         Try
             MetroTextBox1.Text = AppSettings.FixedPrefix
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
@@ -671,6 +752,7 @@ Public Class Form1
 
             PictureBox1.Image = My.Resources.dialog_ok_3
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
@@ -703,12 +785,14 @@ Public Class Form1
 
             e.Result = result
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             e.Result = New List(Of PrinterQueueInfo)
         End Try
     End Sub
 
     Public Function FillGUIWithLocalPrinters() As Boolean
         Try
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "GUI mit Druckern füllen", Err)
             FlowLayoutPanel1.Visible = False
             FlowLayoutPanel1.Controls.Clear()
 
@@ -740,6 +824,16 @@ Public Class Form1
                 ll.Tag = LocalPrinters(index)
                 ll._parent = Me
 
+                If LocalPrinters(index).Server = "Lokal" Then
+                    If Not AppSettings.AllowUserDeleteLocalPrinter Then
+                        ll.Button1.Enabled = False
+                        ll.MetroButton4.Enabled = False
+                        ll.MetroButton5.Enabled = False
+                        ll.DruckerEntfernenToolStripMenuItem.Enabled = False
+                        ll.DruckerNeuInstallierenToolStripMenuItem.Enabled = False
+                    End If
+                End If
+
                 FlowLayoutPanel1.Controls.Add(ll)
                 Application.DoEvents()
             Next
@@ -748,12 +842,15 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
 
     Public Function FillGUIWithSavedPrinters() As Boolean
         Try
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "GUI mit gespeicherten Druckern füllen", Err)
+
             FlowLayoutPanel2.Visible = False
             FlowLayoutPanel2.Controls.Clear()
 
@@ -784,6 +881,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
             Return False
         End Try
     End Function
@@ -804,6 +902,7 @@ Public Class Form1
             'Ladezustand zurücksetzen
             MetroProgressSpinner2.Visible = False
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
@@ -840,6 +939,7 @@ Public Class Form1
             Else
             End If
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
@@ -850,6 +950,7 @@ Public Class Form1
 
             e.Result = result
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
@@ -865,6 +966,7 @@ Public Class Form1
 
             LocalPrinterChangeTimer.Start()
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 
@@ -906,13 +1008,34 @@ Public Class Form1
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Try
             Dim tt As New ProcessingDlg
-            tt.Show(Me.Parent)
-            Application.DoEvents()
+            If Not RestartPrinterService.IsBusy = True Then
+                RestartPrinterService.RunWorkerAsync(tt)
+                tt.Show(Me.Parent)
+                Application.DoEvents()
+            End If
+        Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
+        End Try
+    End Sub
+
+    Private Sub RestartPrinterService_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles RestartPrinterService.DoWork
+        Try
             Dim hh As New ManagePrinter
             hh.RestartPrinterService()
+            e.Result = e.Argument
+        Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
+        End Try
+    End Sub
+
+    Private Sub RestartPrinterService_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles RestartPrinterService.RunWorkerCompleted
+        Try
+            Dim tt As ProcessingDlg
+            tt = e.Result
             Application.DoEvents()
             tt.Close()
         Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
     End Sub
 End Class

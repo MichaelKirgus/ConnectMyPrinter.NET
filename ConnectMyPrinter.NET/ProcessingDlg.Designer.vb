@@ -23,6 +23,7 @@ Partial Class ProcessingDlg
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MetroProgressSpinner1 = New MetroFramework.Controls.MetroProgressSpinner()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
         Me.SuspendLayout()
         '
         'MetroProgressSpinner1
@@ -35,12 +36,23 @@ Partial Class ProcessingDlg
         Me.MetroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroProgressSpinner1.TabIndex = 0
         '
+        'MetroLabel2
+        '
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Small
+        Me.MetroLabel2.Location = New System.Drawing.Point(29, 127)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(151, 15)
+        Me.MetroLabel2.TabIndex = 6
+        Me.MetroLabel2.Text = "Aktionen werden ausgeführt."
+        '
         'ProcessingDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(203, 151)
+        Me.Controls.Add(Me.MetroLabel2)
         Me.Controls.Add(Me.MetroProgressSpinner1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -55,8 +67,10 @@ Partial Class ProcessingDlg
         Me.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center
         Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents MetroProgressSpinner1 As Controls.MetroProgressSpinner
+    Friend WithEvents MetroLabel2 As Controls.MetroLabel
 End Class

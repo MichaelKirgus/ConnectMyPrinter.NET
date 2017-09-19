@@ -22,6 +22,7 @@ Partial Class DeletePrinterDlg
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeletePrinterDlg))
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
@@ -29,35 +30,25 @@ Partial Class DeletePrinterDlg
         '
         'MetroLabel2
         '
-        Me.MetroLabel2.Location = New System.Drawing.Point(23, 60)
+        resources.ApplyResources(Me.MetroLabel2, "MetroLabel2")
         Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(381, 64)
-        Me.MetroLabel2.TabIndex = 1
-        Me.MetroLabel2.Text = "<Message>"
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(218, 127)
+        resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(90, 23)
-        Me.MetroButton1.TabIndex = 2
-        Me.MetroButton1.Text = "Ja"
         '
         'MetroButton2
         '
-        Me.MetroButton2.Location = New System.Drawing.Point(314, 127)
+        resources.ApplyResources(Me.MetroButton2, "MetroButton2")
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(90, 23)
-        Me.MetroButton2.TabIndex = 3
-        Me.MetroButton2.Text = "Nein"
         '
         'DeletePrinterDlg
         '
         Me.AcceptButton = Me.MetroButton1
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(427, 168)
         Me.Controls.Add(Me.MetroButton2)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.MetroLabel2)
@@ -67,9 +58,7 @@ Partial Class DeletePrinterDlg
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Style = MetroFramework.MetroColorStyle.Black
-        Me.Text = "Drucker entfernen?"
         Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.ResumeLayout(False)
 

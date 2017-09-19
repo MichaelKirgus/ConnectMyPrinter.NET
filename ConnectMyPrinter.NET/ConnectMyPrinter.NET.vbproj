@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <ApplicationRevision>25</ApplicationRevision>
+    <ApplicationRevision>35</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -39,6 +39,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>ConnectMyPrinter.NET.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -66,16 +67,25 @@
     <ApplicationIcon>1472877498_BT_printer.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C044CC2700ECF3DA54C504BC45013BDF8BA11DAD</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>6DB6EB91E354D6E3162AF78D77DBF0A687566A3B</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ConnectMyPrinter.NET_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Michael_Kirgus_Anwendungsentwicklung.p12</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>de-DE</MultilingualFallbackLanguage>
+    <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
+    <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -149,6 +159,12 @@
     <Compile Include="DeletePrinterDriverDlg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DriverNotificationRtfViewerDlg.Designer.vb">
+      <DependentUpon>DriverNotificationRtfViewerDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DriverNotificationRtfViewerDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElevationHelperClass.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -198,38 +214,75 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutFrm.en-US.resx">
+      <DependentUpon>AboutFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutFrm.resx">
       <DependentUpon>AboutFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSettingsDlg.en-US.resx">
+      <DependentUpon>AppSettingsDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppSettingsDlg.resx">
       <DependentUpon>AppSettingsDlg.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConnectPrinterDlg.en-US.resx">
+      <DependentUpon>ConnectPrinterDlg.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConnectPrinterDlg.resx">
       <DependentUpon>ConnectPrinterDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePrinterDlg.en-US.resx">
+      <DependentUpon>DeletePrinterDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeletePrinterDlg.resx">
       <DependentUpon>DeletePrinterDlg.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeletePrinterDriverDlg.en-US.resx">
+      <DependentUpon>DeletePrinterDriverDlg.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeletePrinterDriverDlg.resx">
       <DependentUpon>DeletePrinterDriverDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverNotificationRtfViewerDlg.resx">
+      <DependentUpon>DriverNotificationRtfViewerDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.de-DE.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.en-US.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrinterCtl.en-US.resx">
+      <DependentUpon>PrinterCtl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrinterCtl.resx">
       <DependentUpon>PrinterCtl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessingDlg.en-US.resx">
+      <DependentUpon>ProcessingDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProcessingDlg.resx">
       <DependentUpon>ProcessingDlg.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SavedPrinterCtl.en-US.resx">
+      <DependentUpon>SavedPrinterCtl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SavedPrinterCtl.resx">
       <DependentUpon>SavedPrinterCtl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectFromMultipleServersDlg.en-US.resx">
+      <DependentUpon>SelectFromMultipleServersDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectFromMultipleServersDlg.resx">
       <DependentUpon>SelectFromMultipleServersDlg.vb</DependentUpon>
@@ -237,6 +290,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ConnectMyPrinter.NET_TemporaryKey.pfx" />
+    <None Include="Michael_Kirgus_Anwendungsentwicklung.p12" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -308,9 +362,17 @@
       <Project>{ae01b7ff-c216-4752-b4ff-d6956a772d44}</Project>
       <Name>ConnectMyPrinterAppSettingsHandler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterDriverNotifications\ConnectMyPrinterDriverNotifications.vbproj">
+      <Project>{18a8c35f-24e7-411c-b17a-954e44972e40}</Project>
+      <Name>ConnectMyPrinterDriverNotifications</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
       <Project>{74098dc4-697b-4692-81b7-088f300d2610}</Project>
       <Name>ConnectMyPrinterEnumerationLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterLog\ConnectMyPrinterLog.vbproj">
+      <Project>{28d57efe-e78a-4c8c-9d8c-45914e20d368}</Project>
+      <Name>ConnectMyPrinterLog</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
       <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
@@ -349,7 +411,14 @@
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\ConnectMyPrinter.NET.en-US.xlf" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

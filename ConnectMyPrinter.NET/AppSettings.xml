@@ -8,9 +8,10 @@
   <StartWindowHeight>650</StartWindowHeight>
   <StartInMinimalMode>false</StartInMinimalMode>
   <AllowExpandMode>true</AllowExpandMode>
+  <ShowTopMost>false</ShowTopMost>
   <PrintServers>
     <PrintServerItem>
-      <PrintServerName>MONITORING01</PrintServerName>
+      <PrintServerName>MICHAEL-PC</PrintServerName>
       <Priority>2</Priority>
     </PrintServerItem>
     <PrintServerItem>
@@ -48,7 +49,18 @@
   <CleanPrinterDriverPackagesAtPrinterDriverRemove>true</CleanPrinterDriverPackagesAtPrinterDriverRemove>
   <SavedPrintersProfileFile>O:\Printer.xml</SavedPrintersProfileFile>
   <ShowLocalPrinters>true</ShowLocalPrinters>
+  <HiddenPrinterList />
   <CheckUserSpoolerPermissions>false</CheckUserSpoolerPermissions>
   <AlwaysCheckForNewPrinters>true</AlwaysCheckForNewPrinters>
   <AlwaysCheckForNewPrintersInterval>2000</AlwaysCheckForNewPrintersInterval>
+  <DoubleClickActionOnPrinterItem>ShowPrinterDriverSettingsDialog</DoubleClickActionOnPrinterItem>
+  <ShowRestartPrinterQueueButton>true</ShowRestartPrinterQueueButton>
+  <AllowUserDeleteLocalPrinter>true</AllowUserDeleteLocalPrinter>
+  <ShowDriverNotifications>true</ShowDriverNotifications>
+  <DriverNotifications>
+    <DriverNotifications>
+      <ContainsStringInDriverName>Canon</ContainsStringInDriverName>
+      <RtfFile>Test1.rtf</RtfFile>
+    </DriverNotifications>
+  </DriverNotifications>
 </AppSettingsClass>

@@ -100,6 +100,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConnectMyPrinterDriverNotifications\ConnectMyPrinterDriverNotifications.vbproj">
+      <Project>{18a8c35f-24e7-411c-b17a-954e44972e40}</Project>
+      <Name>ConnectMyPrinterDriverNotifications</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
       <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
       <Name>ConnectMyPrinterEnumerationLib</Name>

@@ -134,7 +134,7 @@ Public Class PrinterCtl
         _parent.PrinterManageService.ShowPrinterSettings(Me.Tag)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Sub DeletePrinter()
         Try
             Dim isok As Boolean = False
 
@@ -142,6 +142,7 @@ Public Class PrinterCtl
                 Dim aa As PrinterQueueInfo
                 aa = Me.Tag
                 Dim oo As New DeletePrinterDlg
+                _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me.ParentForm, "Drucker " & aa.ShareName & " entfernen", Err)
                 oo.MetroLabel2.Text = "Möchten Sie wirklich den Drucker" & vbNewLine & aa.ShareName & " entfernen?"
                 Dim uu As MsgBoxResult
                 uu = oo.ShowDialog()
@@ -154,7 +155,7 @@ Public Class PrinterCtl
 
             If isok = True Then
                 Dim jj As New ProcessingDlg
-                jj.Show()
+                jj.Show(Me.ParentForm)
                 _parent.PrinterManageService.DeletePrinter(Me.Tag)
                 If _parent.AppSettings.CleanPrinterDriverPackagesAtPrinterRemove Then
                     If _parent.AppSettings.LocalActionsNeedElevation Then
@@ -173,9 +174,12 @@ Public Class PrinterCtl
                 jj.Close()
             End If
         Catch ex As Exception
-
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
         End Try
+    End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DeletePrinter()
     End Sub
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
@@ -188,15 +192,16 @@ Public Class PrinterCtl
 
     Private Sub MetroButton3_Click(sender As Object, e As EventArgs) Handles MetroButton3.Click
         Dim jj As New ProcessingDlg
-        jj.Show()
+        jj.Show(Me.ParentForm)
         Application.DoEvents()
         _parent.PrinterManageService.PurgePrinterQueue(Me.Tag)
         jj.Close()
     End Sub
 
     Private Sub StandardeinstellungenLöschenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StandardeinstellungenLöschenToolStripMenuItem.Click
+        _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me.ParentForm, "Lösche Standardeinstellungen", Err)
         Dim jj As New ProcessingDlg
-        jj.Show()
+        jj.Show(Me.ParentForm)
         Application.DoEvents()
         _parent.PrinterManageService.DeleteDevModeSettings(Me.Tag)
         Application.DoEvents()
@@ -206,7 +211,7 @@ Public Class PrinterCtl
 
     Private Sub MetroButton4_Click(sender As Object, e As EventArgs) Handles MetroButton4.Click
         Dim jj As New ProcessingDlg
-        jj.Show()
+        jj.Show(Me.ParentForm)
 
         DeletePrinterInt()
 
@@ -252,6 +257,7 @@ Public Class PrinterCtl
 
             Return ll
         Catch ex As Exception
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
             Return New List(Of PrinterQueueInfo)
         End Try
     End Function
@@ -341,14 +347,15 @@ Public Class PrinterCtl
 
             Return True
         Catch ex As Exception
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
             Return False
         End Try
     End Function
 
-    Private Sub MetroButton5_Click(sender As Object, e As EventArgs) Handles MetroButton5.Click
+    Sub ReinstallPrinter()
         Try
             Dim jj As New ProcessingDlg
-            jj.Show()
+            jj.Show(Me.ParentForm)
             Application.DoEvents()
 
             Dim aa As PrinterQueueInfo
@@ -368,7 +375,12 @@ Public Class PrinterCtl
 
             _parent.ReloadLocalPrinters()
         Catch ex As Exception
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
         End Try
+    End Sub
+
+    Private Sub MetroButton5_Click(sender As Object, e As EventArgs) Handles MetroButton5.Click
+        ReinstallPrinter()
     End Sub
 
     Private Sub MetroButton6_Click(sender As Object, e As EventArgs) Handles MetroButton6.Click
@@ -409,9 +421,19 @@ Public Class PrinterCtl
         If My.Computer.Keyboard.ShiftKeyDown Then
             DruckereinstellungenExportierenToolStripMenuItem.Visible = True
             DruckereinstellungenImportierenToolStripMenuItem.Visible = True
+            DruckereigenschaftenToolStripMenuItem.Visible = True
+            DruckereinstellungenToolStripMenuItem.Visible = True
+            DruckerNeuInstallierenToolStripMenuItem.Visible = True
+            ToolStripSeparator3.Visible = True
+            ToolStripSeparator4.Visible = True
         Else
             DruckereinstellungenExportierenToolStripMenuItem.Visible = False
             DruckereinstellungenImportierenToolStripMenuItem.Visible = False
+            DruckereigenschaftenToolStripMenuItem.Visible = False
+            DruckereinstellungenToolStripMenuItem.Visible = False
+            DruckerNeuInstallierenToolStripMenuItem.Visible = False
+            ToolStripSeparator3.Visible = False
+            ToolStripSeparator4.Visible = False
         End If
         SetSelectedState()
     End Sub
@@ -431,6 +453,7 @@ Public Class PrinterCtl
                 MsgBox("Druckereinstellungen erfolgreich exportiert.")
             End If
         Catch ex As Exception
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
         End Try
     End Sub
 
@@ -445,6 +468,23 @@ Public Class PrinterCtl
                 MsgBox("Druckereinstellungen erfolgreich importiert.")
             End If
         Catch ex As Exception
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
         End Try
+    End Sub
+
+    Private Sub DruckerEntfernenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DruckerEntfernenToolStripMenuItem.Click
+        DeletePrinter()
+    End Sub
+
+    Private Sub DruckereigenschaftenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DruckereigenschaftenToolStripMenuItem.Click
+        _parent.PrinterManageService.ShowPrinterSettings(Me.Tag)
+    End Sub
+
+    Private Sub DruckereinstellungenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DruckereinstellungenToolStripMenuItem.Click
+        _parent.PrinterManageService.ShowPrinterDriverSettings(Me.Tag)
+    End Sub
+
+    Private Sub DruckerNeuInstallierenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DruckerNeuInstallierenToolStripMenuItem.Click
+        ReinstallPrinter()
     End Sub
 End Class

@@ -1,4 +1,6 @@
-﻿Public Class AppSettingsDlg
+﻿Imports ConnectMyPrinterPrinterManageLib
+
+Public Class AppSettingsDlg
     Public _parent As Form1
     Dim ElevationHelper As New ElevationHelperClass
     Dim ActionLib As New ConnectMyPrinterPrinterManageLib.ManagePrinter
@@ -25,6 +27,22 @@
         End Try
 
         MetroTabControl1.SelectedTab = MetroTabControl1.TabPages(0)
+
+        CheckSpoolerServiceStatus()
+    End Sub
+
+    Sub CheckSpoolerServiceStatus()
+        Try
+            Dim hh As New SpoolerHandler
+            If hh.IsSpoolerRunning Then
+                status_ok.Visible = True
+                status_error.Visible = False
+            Else
+                status_ok.Visible = False
+                status_error.Visible = True
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub MetroButton7_Click(sender As Object, e As EventArgs) Handles MetroButton7.Click
@@ -47,37 +65,41 @@
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
         Dim hh As New ProcessingDlg
-        hh.Show()
+        hh.Show(Me.ParentForm)
         Application.DoEvents()
         ElevationHelper.GenerateActionFile("DeleteAllPrintersAndDrivers", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
         ElevationHelper.StartElevatedActions(_parent, Nothing)
         hh.Close()
         Application.DoEvents()
+        CheckSpoolerServiceStatus()
     End Sub
 
     Private Sub MetroButton2_Click(sender As Object, e As EventArgs) Handles MetroButton2.Click
         Dim hh As New ProcessingDlg
-        hh.Show()
+        hh.Show(Me.ParentForm)
         Application.DoEvents()
         ElevationHelper.GenerateActionFile("DeleteUnusedDrivers", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
+        ElevationHelper.GenerateActionFile("StartPrinterService", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
         ElevationHelper.StartElevatedActions(_parent, Nothing)
         hh.Close()
         Application.DoEvents()
+        CheckSpoolerServiceStatus()
     End Sub
 
     Private Sub MetroButton3_Click(sender As Object, e As EventArgs) Handles MetroButton3.Click
         Dim hh As New ProcessingDlg
-        hh.Show()
+        hh.Show(Me.ParentForm)
         Application.DoEvents()
         ElevationHelper.GenerateActionFile("PurgePrinterSpooler", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
         ElevationHelper.StartElevatedActions(_parent, Nothing)
         hh.Close()
         Application.DoEvents()
+        CheckSpoolerServiceStatus()
     End Sub
 
     Private Sub MetroButton6_Click(sender As Object, e As EventArgs) Handles MetroButton6.Click
         Dim hh As New ProcessingDlg
-        hh.Show()
+        hh.Show(Me.ParentForm)
         Application.DoEvents()
         If _parent.AppSettings.PrinterSpoolerRestartNeedElevation Or (_parent.UserCanControlSpooler = False) Then
             ElevationHelper.GenerateActionFile("StartPrinterService", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
@@ -87,11 +109,12 @@
         End If
         hh.Close()
         Application.DoEvents()
+        CheckSpoolerServiceStatus()
     End Sub
 
     Private Sub MetroButton4_Click(sender As Object, e As EventArgs) Handles MetroButton4.Click
         Dim hh As New ProcessingDlg
-        hh.Show()
+        hh.Show(Me.ParentForm)
         Application.DoEvents()
         If _parent.AppSettings.PrinterSpoolerRestartNeedElevation Or (_parent.UserCanControlSpooler = False) Then
             ElevationHelper.GenerateActionFile("RestartPrinterService", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
@@ -101,11 +124,12 @@
         End If
         hh.Close()
         Application.DoEvents()
+        CheckSpoolerServiceStatus()
     End Sub
 
     Private Sub MetroButton5_Click(sender As Object, e As EventArgs) Handles MetroButton5.Click
         Dim hh As New ProcessingDlg
-        hh.Show()
+        hh.Show(Me.ParentForm)
         Application.DoEvents()
         If _parent.AppSettings.PrinterSpoolerRestartNeedElevation Or (_parent.UserCanControlSpooler = False) Then
             ElevationHelper.GenerateActionFile("StopPrinterService", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
@@ -115,5 +139,6 @@
         End If
         hh.Close()
         Application.DoEvents()
+        CheckSpoolerServiceStatus()
     End Sub
 End Class

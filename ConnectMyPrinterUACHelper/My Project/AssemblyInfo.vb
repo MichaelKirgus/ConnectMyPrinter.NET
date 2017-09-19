@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Hilfsapplikation für die Ausführung einzelner Aktionen mittels erhöhter Rechte")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinter.NET UACHelper")>
-<Assembly: AssemblyCopyright("Copyright ©  2016 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2016-2017 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>

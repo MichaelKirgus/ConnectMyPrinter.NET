@@ -117,4 +117,331 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MetroLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MetroLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 60</value>
+  </data>
+  <data name="MetroLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 19</value>
+  </data>
+  <data name="MetroLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MetroLabel1.Text" xml:space="preserve">
+    <value>Bitte wählen Sie, welche Aktionen ausgeführt werden sollen:</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1.Name" xml:space="preserve">
+    <value>MetroLabel1</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="MetroCheckBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 97</value>
+  </data>
+  <data name="MetroCheckBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 15</value>
+  </data>
+  <data name="MetroCheckBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MetroCheckBox1.Text" xml:space="preserve">
+    <value>Druckerwarteschlange mit Benutzerrechten löschen</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox1.Name" xml:space="preserve">
+    <value>MetroCheckBox1</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="MetroCheckBox2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 118</value>
+  </data>
+  <data name="MetroCheckBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 15</value>
+  </data>
+  <data name="MetroCheckBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MetroCheckBox2.Text" xml:space="preserve">
+    <value>Druckerwarteschlange mit erhöhten Benutzerrechten löschen</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox2.Name" xml:space="preserve">
+    <value>MetroCheckBox2</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="MetroCheckBox3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 139</value>
+  </data>
+  <data name="MetroCheckBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 15</value>
+  </data>
+  <data name="MetroCheckBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="MetroCheckBox3.Text" xml:space="preserve">
+    <value>Drucker zurücksetzen</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox3.Name" xml:space="preserve">
+    <value>MetroCheckBox3</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="MetroCheckBox4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 160</value>
+  </data>
+  <data name="MetroCheckBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 15</value>
+  </data>
+  <data name="MetroCheckBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="MetroCheckBox4.Text" xml:space="preserve">
+    <value>Druckereinstellungen löschen</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox4.Name" xml:space="preserve">
+    <value>MetroCheckBox4</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox4.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="MetroCheckBox5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 181</value>
+  </data>
+  <data name="MetroCheckBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 15</value>
+  </data>
+  <data name="MetroCheckBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="MetroCheckBox5.Text" xml:space="preserve">
+    <value>Drucker entfernen</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox5.Name" xml:space="preserve">
+    <value>MetroCheckBox5</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox5.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="MetroCheckBox6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 202</value>
+  </data>
+  <data name="MetroCheckBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 15</value>
+  </data>
+  <data name="MetroCheckBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="MetroCheckBox6.Text" xml:space="preserve">
+    <value>Druckertreiber mit erhöhten Benutzerrechten löschen</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox6.Name" xml:space="preserve">
+    <value>MetroCheckBox6</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox6.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="MetroCheckBox7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MetroCheckBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 223</value>
+  </data>
+  <data name="MetroCheckBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 15</value>
+  </data>
+  <data name="MetroCheckBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="MetroCheckBox7.Text" xml:space="preserve">
+    <value>Treiber manuell mit erhöhten Benutzerrechten entfernen</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox7.Name" xml:space="preserve">
+    <value>MetroCheckBox7</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox7.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 117</value>
+  </data>
+  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
+    <value>PictureBox1</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 201</value>
+  </data>
+  <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="PictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Name" xml:space="preserve">
+    <value>PictureBox2</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 222</value>
+  </data>
+  <data name="PictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="PictureBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Name" xml:space="preserve">
+    <value>PictureBox3</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MetroButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 271</value>
+  </data>
+  <data name="MetroButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="MetroButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="MetroButton1.Text" xml:space="preserve">
+    <value>Druckertreiber löschen</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.Name" xml:space="preserve">
+    <value>MetroButton1</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>446, 317</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Druckertreiber löschen</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DeletePrinterDriverDlg</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
 </root>

@@ -22,6 +22,7 @@ Partial Class DeletePrinterDriverDlg
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeletePrinterDriverDlg))
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.MetroCheckBox1 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroCheckBox2 = New MetroFramework.Controls.MetroCheckBox()
@@ -41,137 +42,95 @@ Partial Class DeletePrinterDriverDlg
         '
         'MetroLabel1
         '
-        Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.Location = New System.Drawing.Point(23, 60)
+        resources.ApplyResources(Me.MetroLabel1, "MetroLabel1")
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(354, 19)
-        Me.MetroLabel1.TabIndex = 0
-        Me.MetroLabel1.Text = "Bitte wählen Sie, welche Aktionen ausgeführt werden sollen:"
         '
         'MetroCheckBox1
         '
-        Me.MetroCheckBox1.AutoSize = True
+        resources.ApplyResources(Me.MetroCheckBox1, "MetroCheckBox1")
         Me.MetroCheckBox1.Checked = True
         Me.MetroCheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.MetroCheckBox1.Location = New System.Drawing.Point(50, 97)
         Me.MetroCheckBox1.Name = "MetroCheckBox1"
-        Me.MetroCheckBox1.Size = New System.Drawing.Size(294, 15)
-        Me.MetroCheckBox1.TabIndex = 1
-        Me.MetroCheckBox1.Text = "Druckerwarteschlange mit Benutzerrechten löschen"
         Me.MetroCheckBox1.UseVisualStyleBackColor = True
         '
         'MetroCheckBox2
         '
-        Me.MetroCheckBox2.AutoSize = True
+        resources.ApplyResources(Me.MetroCheckBox2, "MetroCheckBox2")
         Me.MetroCheckBox2.Checked = True
         Me.MetroCheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.MetroCheckBox2.Location = New System.Drawing.Point(50, 118)
         Me.MetroCheckBox2.Name = "MetroCheckBox2"
-        Me.MetroCheckBox2.Size = New System.Drawing.Size(345, 15)
-        Me.MetroCheckBox2.TabIndex = 2
-        Me.MetroCheckBox2.Text = "Druckerwarteschlange mit erhöhten Benutzerrechten löschen"
         Me.MetroCheckBox2.UseVisualStyleBackColor = True
         '
         'MetroCheckBox3
         '
-        Me.MetroCheckBox3.AutoSize = True
+        resources.ApplyResources(Me.MetroCheckBox3, "MetroCheckBox3")
         Me.MetroCheckBox3.Checked = True
         Me.MetroCheckBox3.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.MetroCheckBox3.Location = New System.Drawing.Point(50, 139)
         Me.MetroCheckBox3.Name = "MetroCheckBox3"
-        Me.MetroCheckBox3.Size = New System.Drawing.Size(135, 15)
-        Me.MetroCheckBox3.TabIndex = 3
-        Me.MetroCheckBox3.Text = "Drucker zurücksetzen"
         Me.MetroCheckBox3.UseVisualStyleBackColor = True
         '
         'MetroCheckBox4
         '
-        Me.MetroCheckBox4.AutoSize = True
+        resources.ApplyResources(Me.MetroCheckBox4, "MetroCheckBox4")
         Me.MetroCheckBox4.Checked = True
         Me.MetroCheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.MetroCheckBox4.Location = New System.Drawing.Point(50, 160)
         Me.MetroCheckBox4.Name = "MetroCheckBox4"
-        Me.MetroCheckBox4.Size = New System.Drawing.Size(179, 15)
-        Me.MetroCheckBox4.TabIndex = 4
-        Me.MetroCheckBox4.Text = "Druckereinstellungen löschen"
         Me.MetroCheckBox4.UseVisualStyleBackColor = True
         '
         'MetroCheckBox5
         '
-        Me.MetroCheckBox5.AutoSize = True
+        resources.ApplyResources(Me.MetroCheckBox5, "MetroCheckBox5")
         Me.MetroCheckBox5.Checked = True
         Me.MetroCheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.MetroCheckBox5.Location = New System.Drawing.Point(50, 181)
         Me.MetroCheckBox5.Name = "MetroCheckBox5"
-        Me.MetroCheckBox5.Size = New System.Drawing.Size(118, 15)
-        Me.MetroCheckBox5.TabIndex = 5
-        Me.MetroCheckBox5.Text = "Drucker entfernen"
         Me.MetroCheckBox5.UseVisualStyleBackColor = True
         '
         'MetroCheckBox6
         '
-        Me.MetroCheckBox6.AutoSize = True
+        resources.ApplyResources(Me.MetroCheckBox6, "MetroCheckBox6")
         Me.MetroCheckBox6.Checked = True
         Me.MetroCheckBox6.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.MetroCheckBox6.Location = New System.Drawing.Point(50, 202)
         Me.MetroCheckBox6.Name = "MetroCheckBox6"
-        Me.MetroCheckBox6.Size = New System.Drawing.Size(303, 15)
-        Me.MetroCheckBox6.TabIndex = 6
-        Me.MetroCheckBox6.Text = "Druckertreiber mit erhöhten Benutzerrechten löschen"
         Me.MetroCheckBox6.UseVisualStyleBackColor = True
         '
         'MetroCheckBox7
         '
-        Me.MetroCheckBox7.AutoSize = True
+        resources.ApplyResources(Me.MetroCheckBox7, "MetroCheckBox7")
         Me.MetroCheckBox7.Checked = True
         Me.MetroCheckBox7.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.MetroCheckBox7.Location = New System.Drawing.Point(50, 223)
         Me.MetroCheckBox7.Name = "MetroCheckBox7"
-        Me.MetroCheckBox7.Size = New System.Drawing.Size(320, 15)
-        Me.MetroCheckBox7.TabIndex = 7
-        Me.MetroCheckBox7.Text = "Treiber manuell mit erhöhten Benutzerrechten entfernen"
         Me.MetroCheckBox7.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.uac_shield1
-        Me.PictureBox1.Location = New System.Drawing.Point(28, 117)
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(16, 16)
-        Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.uac_shield1
-        Me.PictureBox2.Location = New System.Drawing.Point(28, 201)
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(16, 16)
-        Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.uac_shield1
-        Me.PictureBox3.Location = New System.Drawing.Point(28, 222)
+        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(16, 16)
-        Me.PictureBox3.TabIndex = 10
         Me.PictureBox3.TabStop = False
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(278, 271)
+        resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(145, 23)
-        Me.MetroButton1.TabIndex = 11
-        Me.MetroButton1.Text = "Druckertreiber löschen"
         '
         'DeletePrinterDriverDlg
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(446, 317)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -188,9 +147,7 @@ Partial Class DeletePrinterDriverDlg
         Me.Resizable = False
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Style = MetroFramework.MetroColorStyle.Black
-        Me.Text = "Druckertreiber löschen"
         Me.Theme = MetroFramework.MetroThemeStyle.Light
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
