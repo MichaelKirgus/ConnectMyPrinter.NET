@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Werte der Assemblyattribute überprüfen
 
 <Assembly: AssemblyTitle("ConnectMyPrinterForceDeleteLib")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ConnectMyPrinterForceDeleteLib")> 
-<Assembly: AssemblyCopyright("Copyright ©  2017")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("Michael Kirgus")>
+<Assembly: AssemblyProduct("ConnectMyPrinter.NET")>
+<Assembly: AssemblyCopyright("Copyright ©  2017 Michael Kirgus")>
+<Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>
 

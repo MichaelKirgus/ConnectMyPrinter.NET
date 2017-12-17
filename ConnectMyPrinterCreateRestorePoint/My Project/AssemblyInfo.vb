@@ -8,8 +8,8 @@ Imports System.Runtime.InteropServices
 
 ' Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("ConnectMyPrinterForceDelete")>
-<Assembly: AssemblyDescription("Löscht defekte Drucker")>
+<Assembly: AssemblyTitle("ConnectMyPrinterCreateRestorePoint")>
+<Assembly: AssemblyDescription("Erstellt einen Wiederherstellungspunkt")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinter.NET")>
 <Assembly: AssemblyCopyright("Copyright ©  2017 Michael Kirgus")>
@@ -18,7 +18,7 @@ Imports System.Runtime.InteropServices
 <Assembly: ComVisible(False)>
 
 'Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird.
-<Assembly: Guid("485b03df-3252-4d4f-b47c-7516da75e558")>
+<Assembly: Guid("567fedcd-0403-4aba-97dc-c8e681c5d54c")>
 
 ' Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 '

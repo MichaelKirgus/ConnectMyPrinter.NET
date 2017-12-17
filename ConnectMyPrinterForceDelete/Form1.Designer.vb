@@ -43,6 +43,7 @@ Partial Class Form1
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
+        Me.ListView1.FullRowSelect = True
         Me.ListView1.Location = New System.Drawing.Point(15, 35)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(506, 186)
@@ -71,6 +72,7 @@ Partial Class Form1
         '
         'Form1
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(533, 264)

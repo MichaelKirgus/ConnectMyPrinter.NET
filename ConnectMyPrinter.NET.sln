@@ -45,6 +45,12 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterForceDelete
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterForceDeleteLib", "ConnectMyPrinterForceDeleteLib\ConnectMyPrinterForceDeleteLib.vbproj", "{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterForceDeleteManageLib", "ConnectMyPrinterForceDeleteManageLib\ConnectMyPrinterForceDeleteManageLib.vbproj", "{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterSystemRestorePointLib", "ConnectMyPrinterSystemRestorePointLib\ConnectMyPrinterSystemRestorePointLib.vbproj", "{8D1893CD-90B0-4437-BF31-49EDB6D9230E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterCreateRestorePoint", "ConnectMyPrinterCreateRestorePoint\ConnectMyPrinterCreateRestorePoint.vbproj", "{6A583308-17EE-4DAC-B5B3-BA62BD59641E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -204,6 +210,36 @@ Global
 		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1893CD-90B0-4437-BF31-49EDB6D9230E}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{6A583308-17EE-4DAC-B5B3-BA62BD59641E}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
