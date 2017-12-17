@@ -41,6 +41,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterDriverNotif
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterLog", "ConnectMyPrinterLog\ConnectMyPrinterLog.vbproj", "{28D57EFE-E78A-4C8C-9D8C-45914E20D368}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterForceDelete", "ConnectMyPrinterForceDelete\ConnectMyPrinterForceDelete.vbproj", "{9747FA2B-52B3-4C0A-992A-82E0F730E161}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterForceDeleteLib", "ConnectMyPrinterForceDeleteLib\ConnectMyPrinterForceDeleteLib.vbproj", "{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -180,6 +184,26 @@ Global
 		{28D57EFE-E78A-4C8C-9D8C-45914E20D368}.Release|Any CPU.Build.0 = Release|Any CPU
 		{28D57EFE-E78A-4C8C-9D8C-45914E20D368}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{28D57EFE-E78A-4C8C-9D8C-45914E20D368}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{9747FA2B-52B3-4C0A-992A-82E0F730E161}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
