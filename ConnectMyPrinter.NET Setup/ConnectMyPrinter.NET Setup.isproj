@@ -45,9 +45,17 @@
 			<Name>ConnectMyPrinterAppSettingsHandler</Name>
 			<Project>{AE01B7FF-C216-4752-B4FF-D6956A772D44}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterAppSettingsSetup\ConnectMyPrinterAppSettingsSetup.vbproj">
+			<Name>ConnectMyPrinterAppSettingsSetup</Name>
+			<Project>{0EA0EE96-1C53-4994-836C-676D4A5D2AB7}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterClean\ConnectMyPrinterClean.vbproj">
 			<Name>ConnectMyPrinterClean</Name>
 			<Project>{850F3D68-46E3-4982-8306-1EF9B82840A5}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterCreateRestorePoint\ConnectMyPrinterCreateRestorePoint.vbproj">
+			<Name>ConnectMyPrinterCreateRestorePoint</Name>
+			<Project>{6A583308-17EE-4DAC-B5B3-BA62BD59641E}</Project>
 		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterDeleteAllPrinters\ConnectMyPrinterDeleteAllPrinters.vbproj">
 			<Name>ConnectMyPrinterDeleteAllPrinters</Name>
@@ -56,6 +64,10 @@
 		<ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
 			<Name>ConnectMyPrinterEnumerationLib</Name>
 			<Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterForceDelete\ConnectMyPrinterForceDelete.vbproj">
+			<Name>ConnectMyPrinterForceDelete</Name>
+			<Project>{9747FA2B-52B3-4C0A-992A-82E0F730E161}</Project>
 		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
 			<Name>ConnectMyPrinterPrinterManageLib</Name>

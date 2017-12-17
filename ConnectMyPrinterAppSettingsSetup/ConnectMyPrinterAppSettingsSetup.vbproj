@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{53B8A917-53BB-4ECF-9709-C50BA632DA9A}</ProjectGuid>
+    <ProjectGuid>{0EA0EE96-1C53-4994-836C-676D4A5D2AB7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ConnectMyPrinterUACHelper.Module1</StartupObject>
-    <RootNamespace>ConnectMyPrinterUACHelper</RootNamespace>
-    <AssemblyName>ConnectMyPrinterUACHelper</AssemblyName>
+    <StartupObject>ConnectMyPrinterAppSettingsSetup.Module1</StartupObject>
+    <RootNamespace>ConnectMyPrinterAppSettingsSetup</RootNamespace>
+    <AssemblyName>ConnectMyPrinterAppSettingsSetup</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterUACHelper.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterAppSettingsSetup.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterUACHelper.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterAppSettingsSetup.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,28 +47,12 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>PrinterUACIcon.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestCertificateThumbprint>6DB6EB91E354D6E3162AF78D77DBF0A687566A3B</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>Michael_Kirgus_Anwendungsentwicklung.p12</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationIcon>1472876332_settings.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Management" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -113,8 +97,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Michael_Kirgus_Anwendungsentwicklung.p12" />
-    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -127,21 +109,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PrinterUACIcon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
-      <Project>{ae01b7ff-c216-4752-b4ff-d6956a772d44}</Project>
-      <Name>ConnectMyPrinterAppSettingsHandler</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
-      <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
-      <Name>ConnectMyPrinterEnumerationLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
-      <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
-      <Name>ConnectMyPrinterPrinterManageLib</Name>
-    </ProjectReference>
+    <Content Include="1472876332_settings.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

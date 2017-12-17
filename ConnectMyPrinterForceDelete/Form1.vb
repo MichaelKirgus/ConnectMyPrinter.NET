@@ -92,6 +92,7 @@ Public Class Form1
         Dim UserListClassx As ConnectMyPrinterForceDeleteLib.UserListClass
         UserListClassx = ww.Tag
         Dim jj As New ConnectMyPrinterSystemRestorePointLib.CreateRestorePointClass
+        jj.EnsureCreationPoint()
         jj.CreatePoint("Erzwungenes Löschen eines Druckers", True)
         Dim aa As New ConnectMyPrinterPrinterManageLib.PrinterDriverRemover
         Dim bb As New ConnectMyPrinterPrinterManageLib.ManagePrinter
