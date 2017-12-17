@@ -1101,8 +1101,8 @@
 		<col def="S0">Target</col>
 		<col def="I4">ExtendedType</col>
 		<col def="S255">ISComments</col>
-		<row><td>AllowUserToControlPrintSpooler</td><td>1042</td><td>connectmyprinteraclhelper.pr</td><td>/ELEVATED /DOMAIN:%USERDOMAIN% /USER:%USERNAME%</td><td/><td/></row>
-		<row><td>ApplyCustomAppSettingsFile</td><td>1042</td><td>connectmyprinterappsettingss</td><td/><td/><td/></row>
+		<row><td>AllowUserToControlPrintSpooler</td><td>3154</td><td>connectmyprinteraclhelper.pr</td><td>/ELEVATED /DOMAIN:%USERDOMAIN% /USER:%USERNAME%</td><td/><td/></row>
+		<row><td>ApplyCustomAppSettingsFile</td><td>3154</td><td>connectmyprinterappsettingss</td><td/><td/><td/></row>
 		<row><td>ISPreventDowngrade</td><td>19</td><td/><td>[IS_PREVENT_DOWNGRADE_EXIT]</td><td/><td>Exits install when a newer version of this product is found</td></row>
 		<row><td>ISPrint</td><td>1</td><td>SetAllUsers.dll</td><td>PrintScrollableText</td><td/><td>Prints the contents of a ScrollableText control on a dialog.</td></row>
 		<row><td>ISRunSetupTypeAddLocalEvent</td><td>1</td><td>ISExpHlp.dll</td><td>RunSetupTypeAddLocalEvent</td><td/><td>Run the AddLocal events associated with the Next button on the Setup Type dialog.</td></row>
@@ -1111,7 +1111,8 @@
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
 		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
-		<row><td>RemoveUnusedDriverPackets</td><td>1042</td><td>connectmyprinterclean.prim_r</td><td/><td/><td/></row>
+		<row><td>RemoveLocalUnusedDriverPackets</td><td>3154</td><td>connectmyprinterclean.prim_r</td><td/><td/><td/></row>
+		<row><td>RemoveUnusedDriverPackets</td><td>1106</td><td>connectmyprinterclean.prim_r</td><td/><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
 		<row><td>SetAllUsersProfileNT</td><td>51</td><td>ALLUSERSPROFILE</td><td>[%SystemRoot]\Profiles\All Users</td><td/><td/></row>
 		<row><td>ShowMsiLog</td><td>226</td><td>SystemFolder</td><td>[SystemFolder]notepad.exe "[MsiLogFileLocation]"</td><td/><td>Shows Property-driven MSI Log</td></row>
@@ -4073,6 +4074,7 @@
 		<row><td>RemoveFiles</td><td/><td>3500</td><td>RemoveFiles</td><td/></row>
 		<row><td>RemoveFolders</td><td/><td>3600</td><td>RemoveFolders</td><td/></row>
 		<row><td>RemoveIniValues</td><td/><td>3100</td><td>RemoveIniValues</td><td/></row>
+		<row><td>RemoveLocalUnusedDriverPackets</td><td>Not Installed</td><td>6408</td><td/><td/></row>
 		<row><td>RemoveODBC</td><td/><td>2400</td><td>RemoveODBC</td><td/></row>
 		<row><td>RemoveRegistryValues</td><td/><td>2600</td><td>RemoveRegistryValues</td><td/></row>
 		<row><td>RemoveShortcuts</td><td/><td>3200</td><td>RemoveShortcuts</td><td/></row>
