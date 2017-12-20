@@ -6562,10 +6562,43 @@
   <metadata name="LoadAllPrintersAsync.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>20, 19</value>
   </metadata>
-  <metadata name="ToolTip2.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>182, 20</value>
-  </metadata>
   <metadata name="RestartPrinterService.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>876, 19</value>
+  </metadata>
+  <data name="Button5.Enabled" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Button5.FlatStyle" xml:space="preserve" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Button5.ImeMode" xml:space="preserve" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button5.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>324, 5</value>
+  </data>
+  <data name="Button5.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>24, 21</value>
+  </data>
+  <data name="Button5.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="Button5.Visible" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="AdditionalInfoRTF.Anchor" xml:space="preserve" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="AdditionalInfoRTF.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>23, 172</value>
+  </data>
+  <data name="AdditionalInfoRTF.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>425, 426</value>
+  </data>
+  <data name="AdditionalInfoRTF.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <metadata name="ToolTip2.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>191, 20</value>
   </metadata>
 </root>

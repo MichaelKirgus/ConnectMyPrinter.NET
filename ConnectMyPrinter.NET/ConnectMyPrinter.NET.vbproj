@@ -135,6 +135,12 @@
     <Compile Include="AboutFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdvancedPrinterViewDlg.Designer.vb">
+      <DependentUpon>AdvancedPrinterViewDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedPrinterViewDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AppSettingsDlg.Designer.vb">
       <DependentUpon>AppSettingsDlg.vb</DependentUpon>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AboutFrm.resx">
       <DependentUpon>AboutFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedPrinterViewDlg.resx">
+      <DependentUpon>AdvancedPrinterViewDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppSettingsDlg.en-US.resx">
       <DependentUpon>AppSettingsDlg.vb</DependentUpon>
@@ -319,6 +328,9 @@
     <Content Include="ReadMe.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\Find_VS.png" />
+    <None Include="Resources\Help.png" />
     <None Include="Resources\1483921213_Clock.png" />
     <None Include="Resources\restart_printerq.png" />
     <None Include="Resources\printer_standard.png" />

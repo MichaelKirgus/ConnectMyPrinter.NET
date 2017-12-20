@@ -35,6 +35,15 @@ Public Class Form1
 
     Public _Log As New ConnectMyPrinterLog.Logging
 
+    Public Sub New()
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        InitializeComponent()
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+
+    End Sub
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             'Evtl. Spuren löschen, um Fehlverhalten zu verhindern
@@ -84,6 +93,9 @@ Public Class Form1
             If AppSettings.ShowRestartPrinterQueueButton Then
                 Button4.Visible = True
             End If
+            If AppSettings.ShowAdvancedPrinterListButton Then
+                Button5.Visible = True
+            End If
             'Fenstergröße und Modus setzen
             If AppSettings.StartInMinimalMode = True Then
                 OldHeight = Me.Height
@@ -120,6 +132,11 @@ Public Class Form1
             ComboBox1.MaxDropDownItems = AppSettings.AutoCompleteMaxVisibleItems
             MetroTabControl1.SelectedTab = MetroTabControl1.TabPages(0)
             ResetPrinterSearchField()
+
+            'Zusätzliche RTF-Info für Druckernamen laden
+            If Not AppSettings.AdditionalUserHelpInformationRTF = "" Then
+                AdditionalInfoRTF.LoadFile(AppSettings.AdditionalUserHelpInformationRTF)
+            End If
 
             'Seq. Prüfung der Drucker aktivieren/deaktivieren
             _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Seq. Prüfung der Drucker aktivieren/deaktivieren", Err)
@@ -440,7 +457,13 @@ Public Class Form1
                     hh.Server = pq.HostingPrintServer.Name
                     hh.ShareName = pq.ShareName
                     Try
-                        hh.DriverName = pq.QueueDriver.Name
+                        hh.Description = pq.Comment
+                        hh.Location = pq.Location
+                        hh.State = pq.QueueStatus.ToString
+                    Catch ex As Exception
+                    End Try
+                    Try
+                    hh.DriverName = pq.QueueDriver.Name
                     Catch ex As Exception
                     End Try
                     result.Add(hh)
@@ -493,6 +516,9 @@ Public Class Form1
             MetroProgressSpinner1.Visible = False
             PictureBox1.Visible = True
 
+            'Alle Drucker auflisten ermöglichen
+            Button5.Enabled = True
+
             'Anzahl gefundener Drucker anzeigen
             ResetUserStatusInfo()
         Catch ex As Exception
@@ -527,55 +553,87 @@ Public Class Form1
                 MetroButton1.Enabled = False
             End If
 
-
-            If AppSettings.AutoCompleteCountEnable Then
-                If (MetroTextBox1.Text.Length >= AppSettings.AutoCompleteCount) Or (PrintQueuesAutoComplete.Count < AppSettings.AutoCompleteCount) Then
-                    'Die Länge ist ausreichend, um performant zu suchen, oder es sind nicht mehr Elemente vorhanden
-                Else
-                    Exit Try
+            'Prüfen auf Admin-Eingabe
+            If MetroTextBox1.Text.StartsWith("=") Then
+                'Es wird eine Admin-Funktion aufgerufen:
+                If MetroTextBox1.Text.ToLower = "=clean" Then
+                    Shell("ConnectMyPrinterClean.exe")
+                    MetroTextBox1.BackColor = Color.LightGreen
+                    MetroTextBox1.Text = ""
                 End If
-            End If
+                If MetroTextBox1.Text.ToLower = "=settings" Then
+                    Shell("ConnectMyPrinterSettingsConsole.exe")
+                    MetroTextBox1.BackColor = Color.LightGreen
+                    MetroTextBox1.Text = ""
+                End If
+                If MetroTextBox1.Text.ToLower = "=list" Then
+                    Button5.PerformClick()
+                    MetroTextBox1.BackColor = Color.LightGreen
+                    MetroTextBox1.Text = ""
+                End If
+                If MetroTextBox1.Text.ToLower = "=restart" Then
+                    Dim ActionLib As New ConnectMyPrinterPrinterManageLib.ManagePrinter
+                    Dim ElevationHelper As New ElevationHelperClass
+                    If AppSettings.PrinterSpoolerRestartNeedElevation Or (UserCanControlSpooler = False) Then
+                        ElevationHelper.GenerateActionFile("RestartPrinterService", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, Me, New PrinterCtl)
+                        ElevationHelper.StartElevatedActions(Me, Nothing)
+                    Else
+                        ActionLib.RestartPrinterService()
+                    End If
+                    MetroTextBox1.BackColor = Color.LightGreen
+                    MetroTextBox1.Text = ""
+                End If
+            Else
+                    If AppSettings.AutoCompleteCountEnable Then
+                    If (MetroTextBox1.Text.Length >= AppSettings.AutoCompleteCount) Or (PrintQueuesAutoComplete.Count < AppSettings.AutoCompleteCount) Then
+                        'Die Länge ist ausreichend, um performant zu suchen, oder es sind nicht mehr Elemente vorhanden
+                    Else
+                        Exit Try
+                    End If
+                End If
 
-            Dim _result As AutoCompleteStringCollection
-            _result = GetResults(MetroTextBox1.Text, AppSettings.SearchCount, AppSettings.IgnoreUpperLowerCase)
+                Dim _result As AutoCompleteStringCollection
+                _result = GetResults(MetroTextBox1.Text, AppSettings.SearchCount, AppSettings.IgnoreUpperLowerCase)
 
-            FillComboBox(_result)
+                FillComboBox(_result)
 
-            Dim readytoconnect As Boolean = False
+                Dim readytoconnect As Boolean = False
 
-            If ComboBoxSelected = True Then
-                readytoconnect = True
-            End If
+                If ComboBoxSelected = True Then
+                    readytoconnect = True
+                End If
 
-            If Not _result.Count = 1 Or _result.Count = 0 Then
-                If Not ComboBoxSelected Then
-                    ComboBox1.DroppedDown = True
+                If Not _result.Count = 1 Or _result.Count = 0 Then
+                    If Not ComboBoxSelected Then
+                        ComboBox1.DroppedDown = True
+                    Else
+                        ComboBox1.DroppedDown = False
+                    End If
+                    MetroLabel2.Text = "Mehrere Ergebnisse. Bitte Suche verfeinern."
+                    PictureBox1.Image = My.Resources.dialog_ok_3
+                    MultipleSelectionEnabled = True
                 Else
                     ComboBox1.DroppedDown = False
+                    MetroLabel2.Text = "Leider kein Drucker gefunden."
+                    PictureBox1.Image = My.Resources.edit_delete_4
                 End If
-                MetroLabel2.Text = "Mehrere Ergebnisse. Bitte Suche verfeinern."
-                PictureBox1.Image = My.Resources.dialog_ok_3
-                MultipleSelectionEnabled = True
-            Else
-                ComboBox1.DroppedDown = False
-                MetroLabel2.Text = "Leider kein Drucker gefunden."
-                PictureBox1.Image = My.Resources.edit_delete_4
+
+                If _result.Count = 1 Then
+                    ComboBox1.DroppedDown = False
+                    readytoconnect = True
+                End If
+
+                If readytoconnect = True Then
+                    ComboBoxSelected = False
+                    MetroLabel2.Text = "Drucker gefunden, bereit zum verbinden."
+                    MetroButton1.Enabled = True
+                    MetroTextBox1.Text = ComboBox1.Items(0)
+                    ComboBox1.SelectedIndex = 0
+                    PictureBox1.Image = My.Resources.dialog_ok_3
+                    MetroButton1.Focus()
+                End If
             End If
 
-            If _result.Count = 1 Then
-                ComboBox1.DroppedDown = False
-                readytoconnect = True
-            End If
-
-            If readytoconnect = True Then
-                ComboBoxSelected = False
-                MetroLabel2.Text = "Drucker gefunden, bereit zum verbinden."
-                MetroButton1.Enabled = True
-                MetroTextBox1.Text = ComboBox1.Items(0)
-                ComboBox1.SelectedIndex = 0
-                PictureBox1.Image = My.Resources.dialog_ok_3
-                MetroButton1.Focus()
-            End If
 
         Catch ex As Exception
             _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
@@ -663,7 +721,7 @@ Public Class Form1
                 End If
             End If
 
-            If AppSettings.ShowDriverNotifications Then
+            If AppSettings.ShowDriverNotifications And qq = MsgBoxResult.Yes Then
                 If Silent = False Then
                     'Prüfen auf Hinweise zum Drucker bzw. Druckertreiber
                     Dim notifydrv As New ConnectMyPrinterDriverNotifications.CheckDriverNotifications
@@ -758,6 +816,9 @@ Public Class Form1
 
     Private Sub MetroTextBox1_Click(sender As Object, e As EventArgs) Handles MetroTextBox1.Click
         ResetPrinterSearchField()
+        If AppSettings.ShowAdditionalUserHelpOnTextFieldClick Then
+            HandleMouseEnterTextfield()
+        End If
     End Sub
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
@@ -1037,5 +1098,46 @@ Public Class Form1
         Catch ex As Exception
             _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Try
+            Dim qq As New AdvancedPrinterViewDlg
+            qq._parent = Me
+            qq._AllPrinters = PrintQueues
+            qq.Show()
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Public Sub HandleMouseEnterTextfield()
+        If Not AppSettings.AdditionalUserHelpInformationRTF = "" Then
+            AdditionalInfoRTF.Visible = True
+            MetroTabControl1.Visible = False
+            Button3.Visible = False
+        End If
+    End Sub
+
+    Public Sub HandleMouseLeaveTextfield()
+        If Not AppSettings.AdditionalUserHelpInformationRTF = "" Then
+            AdditionalInfoRTF.Visible = False
+            MetroTabControl1.Visible = True
+            Button3.Visible = True
+        End If
+    End Sub
+
+    Private Sub Form1_MouseEnter(sender As Object, e As EventArgs) Handles MyBase.MouseEnter
+        If AppSettings.ShowAdditionalUserHelpOnWindowMouseEnter Then
+            HandleMouseEnterTextfield()
+        End If
+        If AppSettings.ShowAdditionalUserHelpOnTextFieldClick Then
+            HandleMouseLeaveTextfield()
+        End If
+    End Sub
+
+    Private Sub Form1_MouseLeave(sender As Object, e As EventArgs) Handles MyBase.MouseLeave
+        If AppSettings.ShowAdditionalUserHelpOnWindowMouseEnter Then
+            HandleMouseLeaveTextfield()
+        End If
     End Sub
 End Class

@@ -960,7 +960,8 @@
 		<row><td>LicenseAgreement</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>ISPrintButton</td><td>DoAction</td><td>ISPrint</td><td>1</td><td>0</td></row>
-		<row><td>LicenseAgreement</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>AgreeToLicense = "Yes"</td><td>0</td></row>
+		<row><td>LicenseAgreement</td><td>Next</td><td>EndDialog</td><td>Return</td><td>OutOfDiskSpace &lt;&gt; 1</td><td>1</td></row>
+		<row><td>LicenseAgreement</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>0</td><td>1</td></row>
 		<row><td>MaintenanceType</td><td>Back</td><td>NewDialog</td><td>MaintenanceWelcome</td><td>1</td><td>0</td></row>
 		<row><td>MaintenanceType</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>MaintenanceType</td><td>Next</td><td>NewDialog</td><td>CustomSetup</td><td>_IsMaintenance = "Change"</td><td>12</td></row>
@@ -1101,7 +1102,7 @@
 		<col def="S0">Target</col>
 		<col def="I4">ExtendedType</col>
 		<col def="S255">ISComments</col>
-		<row><td>AllowUserToControlPrintSpooler</td><td>3154</td><td>connectmyprinteraclhelper.pr</td><td>/ELEVATED /DOMAIN:%USERDOMAIN% /USER:%USERNAME%</td><td/><td/></row>
+		<row><td>AllowUserToControlPrintSpooler</td><td>1106</td><td>connectmyprinteraclhelper.pr</td><td/><td/><td/></row>
 		<row><td>ApplyCustomAppSettingsFile</td><td>3154</td><td>connectmyprinterappsettingss</td><td/><td/><td/></row>
 		<row><td>ISPreventDowngrade</td><td>19</td><td/><td>[IS_PREVENT_DOWNGRADE_EXIT]</td><td/><td>Exits install when a newer version of this product is found</td></row>
 		<row><td>ISPrint</td><td>1</td><td>SetAllUsers.dll</td><td>PrintScrollableText</td><td/><td>Prints the contents of a ScrollableText control on a dialog.</td></row>
@@ -4020,7 +4021,7 @@
 		<col def="S255">ISComments</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>AllocateRegistrySpace</td><td>NOT Installed</td><td>1550</td><td>AllocateRegistrySpace</td><td/></row>
-		<row><td>AllowUserToControlPrintSpooler</td><td>Not Installed</td><td>6405</td><td/><td/></row>
+		<row><td>AllowUserToControlPrintSpooler</td><td>Not Installed</td><td>6401</td><td/><td/></row>
 		<row><td>AppSearch</td><td/><td>400</td><td>AppSearch</td><td/></row>
 		<row><td>ApplyCustomAppSettingsFile</td><td>Not Installed</td><td>6402</td><td/><td/></row>
 		<row><td>BindImage</td><td/><td>4300</td><td>BindImage</td><td/></row>
@@ -4074,11 +4075,11 @@
 		<row><td>RemoveFiles</td><td/><td>3500</td><td>RemoveFiles</td><td/></row>
 		<row><td>RemoveFolders</td><td/><td>3600</td><td>RemoveFolders</td><td/></row>
 		<row><td>RemoveIniValues</td><td/><td>3100</td><td>RemoveIniValues</td><td/></row>
-		<row><td>RemoveLocalUnusedDriverPackets</td><td>Not Installed</td><td>6408</td><td/><td/></row>
+		<row><td>RemoveLocalUnusedDriverPackets</td><td>Not Installed</td><td>6402</td><td/><td/></row>
 		<row><td>RemoveODBC</td><td/><td>2400</td><td>RemoveODBC</td><td/></row>
 		<row><td>RemoveRegistryValues</td><td/><td>2600</td><td>RemoveRegistryValues</td><td/></row>
 		<row><td>RemoveShortcuts</td><td/><td>3200</td><td>RemoveShortcuts</td><td/></row>
-		<row><td>RemoveUnusedDriverPackets</td><td>Not Installed</td><td>6407</td><td/><td/></row>
+		<row><td>RemoveUnusedDriverPackets</td><td>Not Installed</td><td>6404</td><td/><td/></row>
 		<row><td>ResolveSource</td><td>Not Installed</td><td>850</td><td>ResolveSource</td><td/></row>
 		<row><td>ScheduleReboot</td><td>ISSCHEDULEREBOOT</td><td>6410</td><td>ScheduleReboot</td><td/></row>
 		<row><td>SelfRegModules</td><td/><td>5600</td><td>SelfRegModules</td><td/></row>
@@ -4128,7 +4129,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{FF422083-EAC5-42E8-88AE-4BF0BDBDB2C8}</td></row>
 		<row><td>ISUSSignature</td><td>{016BD373-DE94-485B-95ED-BC73BF4E6E7C}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewUI,viewTextMessages,viewRelease,viewISToday,viewLearnMore,viewProject,viewUpgradePaths,viewUpdateService,viewAppFiles,viewObjects,viewSystemSearch,viewCustomActions,viewShortcuts,viewServices,viewRegistry,viewFileExtensions</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewUI,viewTextMessages,viewRelease,viewISToday,viewLearnMore,viewProject,viewUpgradePaths,viewUpdateService,viewAppFiles,viewObjects,viewSystemSearch,viewCustomActions,viewShortcuts,viewServices,viewRegistry,viewFileExtensions,viewEnvironmentVariables</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4449,6 +4450,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ARPCOMMENTS</td><td>##ID_STRING18##</td><td/></row>
 		<row><td>ARPHELPLINK</td><td>##ID_STRING17##</td><td/></row>
 		<row><td>ARPINSTALLLOCATION</td><td/><td/></row>
+		<row><td>ARPNOMODIFY</td><td>1</td><td/></row>
 		<row><td>ARPPRODUCTICON</td><td>ARPPRODUCTICON.exe</td><td/></row>
 		<row><td>ARPSIZE</td><td/><td/></row>
 		<row><td>ARPURLINFOABOUT</td><td>##ID_STRING2##</td><td/></row>

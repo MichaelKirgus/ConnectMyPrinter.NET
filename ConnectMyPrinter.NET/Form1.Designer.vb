@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits MetroFramework.Forms.MetroForm
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
@@ -54,7 +54,9 @@ Partial Class Form1
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.RestartPrinterService = New System.ComponentModel.BackgroundWorker()
+        Me.AdditionalInfoRTF = New System.Windows.Forms.RichTextBox()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
         Me.MetroPanel1.SuspendLayout()
@@ -290,10 +292,26 @@ Partial Class Form1
         Me.ToolTip2.SetToolTip(Me.Button4, resources.GetString("Button4.ToolTip"))
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        resources.ApplyResources(Me.Button5, "Button5")
+        Me.Button5.ForeColor = System.Drawing.Color.White
+        Me.Button5.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.Find_VS
+        Me.Button5.Name = "Button5"
+        Me.ToolTip2.SetToolTip(Me.Button5, resources.GetString("Button5.ToolTip"))
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'RestartPrinterService
         '
         Me.RestartPrinterService.WorkerReportsProgress = True
         Me.RestartPrinterService.WorkerSupportsCancellation = True
+        '
+        'AdditionalInfoRTF
+        '
+        resources.ApplyResources(Me.AdditionalInfoRTF, "AdditionalInfoRTF")
+        Me.AdditionalInfoRTF.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.AdditionalInfoRTF.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.AdditionalInfoRTF.Name = "AdditionalInfoRTF"
         '
         'Form1
         '
@@ -301,6 +319,7 @@ Partial Class Form1
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button3)
@@ -317,6 +336,7 @@ Partial Class Form1
         Me.Controls.Add(Me.MetroTextBox1)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.AdditionalInfoRTF)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Style = MetroFramework.MetroColorStyle.Black
@@ -364,4 +384,6 @@ Partial Class Form1
     Friend WithEvents Button4 As Button
     Friend WithEvents ToolTip2 As ToolTip
     Friend WithEvents RestartPrinterService As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Button5 As Button
+    Friend WithEvents AdditionalInfoRTF As RichTextBox
 End Class

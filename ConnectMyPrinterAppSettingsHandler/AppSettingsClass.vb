@@ -8,6 +8,9 @@ Imports ConnectMyPrinterEnumerationLib
     Property UserInformation As String = "Bitte geben Sie einen Druckernamen ein."
     Property AdditionalUserInformation As String = ""
     Property CompanyLogoImagePath As String = ""
+    Property AdditionalUserHelpInformationRTF As String = ""
+    Property ShowAdditionalUserHelpOnWindowMouseEnter As Boolean = False
+    Property ShowAdditionalUserHelpOnTextFieldClick As Boolean = False
     Property StartWindowPosition As AppWindowPosition = AppWindowPosition.CenterScreen
     Property StartWindowHeight As Integer = 620
     Property StartInMinimalMode As Boolean = False
@@ -52,6 +55,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property ShowRestartPrinterQueueButton As Boolean = True
     Property AllowUserDeleteLocalPrinter As Boolean = True
     Property ShowDriverNotifications As Boolean = True
+    Property ShowAdvancedPrinterListButton As Boolean = True
     Property DriverNotifications As List(Of DriverNotifications)
 
     Public Enum DoubleClickActionOnPrinterItemAction
