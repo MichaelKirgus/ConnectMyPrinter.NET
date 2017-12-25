@@ -27,6 +27,13 @@ Module Module1
 FileSystemRights.FullControl, AccessControlType.Allow)
         Catch ex As Exception
         End Try
+        Console.WriteLine("Kopiere benutzerdefiniertes Logo in Anwendungsverzeichnis...")
+        Try
+            My.Computer.FileSystem.CopyFile("C:\Temp\logo.gif", "C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\logo.gif", True)
+            Console.WriteLine("Logo erfolgreich kopiert.")
+        Catch ex As Exception
+            Console.WriteLine("Das benutzerdefinierte Logo konnte nicht kopiert werden.")
+        End Try
         Console.WriteLine("Fertig.")
     End Sub
 

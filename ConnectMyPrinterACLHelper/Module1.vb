@@ -100,6 +100,13 @@ Module Module1
                 End If
             Next
 
+            Console.WriteLine("Setzte Berechtigungen in Registry für Benutzer " & user & " in Domäne " & domain & "...")
+            If HelperFunc.SetLocalMachineSpoolKeyPermissions(domain, user) Then
+                Console.WriteLine("Berechtigungen erfolgreich angepasst.")
+            Else
+                Console.WriteLine("Berechtigungen konnten nicht angepasst werden.")
+            End If
+
             If wait = True Then
                 Console.ReadLine()
             End If

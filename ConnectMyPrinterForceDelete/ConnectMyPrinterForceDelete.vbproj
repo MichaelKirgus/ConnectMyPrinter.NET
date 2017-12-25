@@ -153,21 +153,17 @@
       <Project>{4a9e510c-5c2d-4cdc-8ef5-19dd9bce9ef2}</Project>
       <Name>ConnectMyPrinterForceDeleteLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterForceDeleteManageLib\ConnectMyPrinterForceDeleteManageLib.vbproj">
-      <Project>{6e73ddac-ff46-4203-b5f1-cb3f94e9696b}</Project>
-      <Name>ConnectMyPrinterForceDeleteManageLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
-      <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
-      <Name>ConnectMyPrinterPrinterManageLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterSystemRestorePointLib\ConnectMyPrinterSystemRestorePointLib.vbproj">
-      <Project>{8d1893cd-90b0-4437-bf31-49edb6d9230e}</Project>
-      <Name>ConnectMyPrinterSystemRestorePointLib</Name>
+    <ProjectReference Include="..\ConnectMyPrinterRegistryHandler\ConnectMyPrinterRegistryHandler.vbproj">
+      <Project>{06c6b81b-05bf-4764-a3f4-a85143ecd2e8}</Project>
+      <Name>ConnectMyPrinterRegistryHandler</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj">
       <Project>{53b8a917-53bb-4ecf-9709-c50ba632da9a}</Project>
       <Name>ConnectMyPrinterUACHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterUserListLib\ConnectMyPrinterUserListLib.vbproj">
+      <Project>{a015dd48-3a09-413e-8f95-0fa2a07e1190}</Project>
+      <Name>ConnectMyPrinterUserListLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

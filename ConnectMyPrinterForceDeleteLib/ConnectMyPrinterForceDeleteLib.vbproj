@@ -63,7 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserListClass.vb" />
+    <Compile Include="DeleteClass.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -98,6 +98,28 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
+      <Project>{ae01b7ff-c216-4752-b4ff-d6956a772d44}</Project>
+      <Name>ConnectMyPrinterAppSettingsHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterForceDeleteManageLib\ConnectMyPrinterForceDeleteManageLib.vbproj">
+      <Project>{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}</Project>
+      <Name>ConnectMyPrinterForceDeleteManageLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
+      <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
+      <Name>ConnectMyPrinterPrinterManageLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterSystemRestorePointLib\ConnectMyPrinterSystemRestorePointLib.vbproj">
+      <Project>{8d1893cd-90b0-4437-bf31-49edb6d9230e}</Project>
+      <Name>ConnectMyPrinterSystemRestorePointLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterUserListLib\ConnectMyPrinterUserListLib.vbproj">
+      <Project>{a015dd48-3a09-413e-8f95-0fa2a07e1190}</Project>
+      <Name>ConnectMyPrinterUserListLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

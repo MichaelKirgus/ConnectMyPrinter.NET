@@ -1,7 +1,9 @@
 ﻿Imports System
+Imports System.Security.AccessControl
 Imports System.Security.Principal
 Imports System.ServiceProcess
 Imports System.Threading
+Imports Microsoft.Win32
 
 Public Class HelperFunctions
     Public Function CheckIfInDomain() As Boolean
@@ -29,6 +31,34 @@ Public Class HelperFunctions
 
             controller.Pause()
             controller.Continue()
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Function SetLocalMachineSpoolKeyPermissions(ByVal Domain As String, ByVal Username As String) As Boolean
+        Try
+            Dim user As String = Domain & "\" & Username
+            If Domain = "" Then
+                'Keine Domäne, lokaler Computer wird eingesetzt.
+                user = My.Computer.Name & "\" & Username
+            End If
+
+            Dim rs As New RegistrySecurity()
+
+            ' Dem aktuellen Benutzer die Berechtigung zum Ändern und vor allen Löschen der Einträge im Spool-Key geben.
+            '
+            rs.AddAccessRule(New RegistryAccessRule(user,
+            RegistryRights.ReadKey Or RegistryRights.Delete Or RegistryRights.SetValue Or RegistryRights.WriteKey,
+            InheritanceFlags.ObjectInherit,
+            PropagationFlags.None,
+            AccessControlType.Allow))
+
+            Dim qq As Microsoft.Win32.RegistryKey
+            qq = Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print", True)
+            qq.SetAccessControl(rs)
 
             Return True
         Catch ex As Exception

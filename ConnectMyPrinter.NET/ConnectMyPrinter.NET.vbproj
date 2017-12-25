@@ -223,13 +223,25 @@
     <EmbeddedResource Include="AboutFrm.en-US.resx">
       <DependentUpon>AboutFrm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutFrm.en.resx">
+      <DependentUpon>AboutFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutFrm.resx">
       <DependentUpon>AboutFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedPrinterViewDlg.en-US.resx">
+      <DependentUpon>AdvancedPrinterViewDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedPrinterViewDlg.en.resx">
+      <DependentUpon>AdvancedPrinterViewDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdvancedPrinterViewDlg.resx">
       <DependentUpon>AdvancedPrinterViewDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppSettingsDlg.en-US.resx">
+      <DependentUpon>AppSettingsDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSettingsDlg.en.resx">
       <DependentUpon>AppSettingsDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppSettingsDlg.resx">
@@ -238,10 +250,16 @@
     <EmbeddedResource Include="ConnectPrinterDlg.en-US.resx">
       <DependentUpon>ConnectPrinterDlg.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConnectPrinterDlg.en.resx">
+      <DependentUpon>ConnectPrinterDlg.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConnectPrinterDlg.resx">
       <DependentUpon>ConnectPrinterDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeletePrinterDlg.en-US.resx">
+      <DependentUpon>DeletePrinterDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePrinterDlg.en.resx">
       <DependentUpon>DeletePrinterDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeletePrinterDlg.resx">
@@ -250,8 +268,17 @@
     <EmbeddedResource Include="DeletePrinterDriverDlg.en-US.resx">
       <DependentUpon>DeletePrinterDriverDlg.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeletePrinterDriverDlg.en.resx">
+      <DependentUpon>DeletePrinterDriverDlg.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeletePrinterDriverDlg.resx">
       <DependentUpon>DeletePrinterDriverDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverNotificationRtfViewerDlg.en-US.resx">
+      <DependentUpon>DriverNotificationRtfViewerDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverNotificationRtfViewerDlg.en.resx">
+      <DependentUpon>DriverNotificationRtfViewerDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DriverNotificationRtfViewerDlg.resx">
       <DependentUpon>DriverNotificationRtfViewerDlg.vb</DependentUpon>
@@ -262,10 +289,14 @@
     <EmbeddedResource Include="Form1.en-US.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.en.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.en-US.resx" />
+    <EmbeddedResource Include="My Project\Resources.en.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -275,10 +306,16 @@
     <EmbeddedResource Include="PrinterCtl.en-US.resx">
       <DependentUpon>PrinterCtl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrinterCtl.en.resx">
+      <DependentUpon>PrinterCtl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrinterCtl.resx">
       <DependentUpon>PrinterCtl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProcessingDlg.en-US.resx">
+      <DependentUpon>ProcessingDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessingDlg.en.resx">
       <DependentUpon>ProcessingDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProcessingDlg.resx">
@@ -287,10 +324,16 @@
     <EmbeddedResource Include="SavedPrinterCtl.en-US.resx">
       <DependentUpon>SavedPrinterCtl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SavedPrinterCtl.en.resx">
+      <DependentUpon>SavedPrinterCtl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SavedPrinterCtl.resx">
       <DependentUpon>SavedPrinterCtl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectFromMultipleServersDlg.en-US.resx">
+      <DependentUpon>SelectFromMultipleServersDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectFromMultipleServersDlg.en.resx">
       <DependentUpon>SelectFromMultipleServersDlg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectFromMultipleServersDlg.resx">

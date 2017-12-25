@@ -4,34 +4,30 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F56BFD3-F897-4C3E-A71E-0983A4B33E82}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <StartupObject>ConnectMyPrinterACLHelper.Module1</StartupObject>
-    <RootNamespace>ConnectMyPrinterACLHelper</RootNamespace>
-    <AssemblyName>ConnectMyPrinterACLHelper</AssemblyName>
+    <ProjectGuid>{06C6B81B-05BF-4764-A3F4-A85143ECD2E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ConnectMyPrinterRegistryHandler</RootNamespace>
+    <AssemblyName>ConnectMyPrinterRegistryHandler</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>Console</MyType>
+    <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterACLHelper.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterRegistryHandler.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterACLHelper.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterRegistryHandler.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,25 +42,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>PrinterUACIcon.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestCertificateThumbprint>6DB6EB91E354D6E3162AF78D77DBF0A687566A3B</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>Michael_Kirgus_Anwendungsentwicklung.p12</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -83,7 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="RegistryHandler.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -109,8 +89,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Michael_Kirgus_Anwendungsentwicklung.p12" />
-    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -120,19 +98,15 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
-    <Content Include="SetACLs.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PrinterUACIcon.ico" />
-    <None Include="Resources\subinacl.exe" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConnectMyPrinterACLHelperLib\ConnectMyPrinterACLHelperLib.vbproj">
-      <Project>{95c18515-2072-4961-a0ef-8fbdb893810f}</Project>
-      <Name>ConnectMyPrinterACLHelperLib</Name>
+    <ProjectReference Include="..\ConnectMyPrinterForceDeleteLib\ConnectMyPrinterForceDeleteLib.vbproj">
+      <Project>{4a9e510c-5c2d-4cdc-8ef5-19dd9bce9ef2}</Project>
+      <Name>ConnectMyPrinterForceDeleteLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterUserListLib\ConnectMyPrinterUserListLib.vbproj">
+      <Project>{a015dd48-3a09-413e-8f95-0fa2a07e1190}</Project>
+      <Name>ConnectMyPrinterUserListLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -69,17 +69,37 @@
 			<Name>ConnectMyPrinterForceDelete</Name>
 			<Project>{9747FA2B-52B3-4C0A-992A-82E0F730E161}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterForceDeleteLib\ConnectMyPrinterForceDeleteLib.vbproj">
+			<Name>ConnectMyPrinterForceDeleteLib</Name>
+			<Project>{4A9E510C-5C2D-4CDC-8EF5-19DD9BCE9EF2}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterForceDeleteManageLib\ConnectMyPrinterForceDeleteManageLib.vbproj">
+			<Name>ConnectMyPrinterForceDeleteManageLib</Name>
+			<Project>{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
 			<Name>ConnectMyPrinterPrinterManageLib</Name>
 			<Project>{BE968C84-9AE3-4F63-8466-FA21F66386B0}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterRegistryHandler\ConnectMyPrinterRegistryHandler.vbproj">
+			<Name>ConnectMyPrinterRegistryHandler</Name>
+			<Project>{06C6B81B-05BF-4764-A3F4-A85143ECD2E8}</Project>
 		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterSettingsConsole\ConnectMyPrinterSettingsConsole.vbproj">
 			<Name>ConnectMyPrinterSettingsConsole</Name>
 			<Project>{AE1E6B2D-A9A1-4391-8BFC-C2C6FD089D2B}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterSystemRestorePointLib\ConnectMyPrinterSystemRestorePointLib.vbproj">
+			<Name>ConnectMyPrinterSystemRestorePointLib</Name>
+			<Project>{8D1893CD-90B0-4437-BF31-49EDB6D9230E}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj">
 			<Name>ConnectMyPrinterUACHelper</Name>
 			<Project>{53B8A917-53BB-4ECF-9709-C50BA632DA9A}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterUserListLib\ConnectMyPrinterUserListLib.vbproj">
+			<Name>ConnectMyPrinterUserListLib</Name>
+			<Project>{A015DD48-3A09-413E-8F95-0FA2A07E1190}</Project>
 		</ProjectReference>
 	</ItemGroup>
 </Project>

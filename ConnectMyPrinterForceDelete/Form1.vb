@@ -2,11 +2,13 @@
 Imports System.IO
 Imports System.Xml.Serialization
 Imports ConnectMyPrinterAppSettingsHandler
+Imports ConnectMyPrinterUserListLib
 Imports Microsoft.Win32
 
 Public Class Form1
     Public AppSettingFile As String = "AppSettings.xml"
     Public AppSettings As ConnectMyPrinterAppSettingsHandler.AppSettingsClass
+    Public RegistryHelperHandler As New ConnectMyPrinterRegistryHandler.RegistryHandler
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Laden der Einstellungen (über AppData)
@@ -32,80 +34,51 @@ Public Class Form1
         If Not aclhelp.IsAdmin Then
             MsgBox("Die Anwendung wird ohne Admin-Rechte ausgeführt. Drucker können nur für den aktuellen Benutzer gelöscht werden. Dies kann zu Problemen beim Beenden der Druckerwarteschlange führen.", MsgBoxStyle.Critical)
         End If
-        Dim kk As New List(Of ConnectMyPrinterForceDeleteLib.UserListClass)
-        kk = GetAllUsers()
+        Dim kk As New List(Of UserListClass)
+        kk = RegistryHelperHandler.GetAllUsers()
 
-        For Each item As ConnectMyPrinterForceDeleteLib.UserListClass In kk
-            For Each item2 As String In GetAllPrintersForUser(item)
+        For Each item As UserListClass In kk
+            For Each item2 As String In RegistryHelperHandler.GetAllPrintersForUser(item)
                 Dim qq As New ListViewItem
                 qq.Text = item._Username
                 qq.SubItems.Add(item2)
+                qq.SubItems.Add("verbunden")
                 qq.Tag = item
 
                 ListView1.Items.Add(qq)
             Next
         Next
+
+        Dim jj As List(Of String)
+        jj = RegistryHelperHandler.GetLocalPrinters()
+
+        For Each item As String In jj
+            Dim qq As New ListViewItem
+            qq.Text = "Alle Benutzer"
+            qq.SubItems.Add(item)
+            qq.SubItems.Add("lokal installiert")
+            qq.Tag = New UserListClass
+
+            ListView1.Items.Add(qq)
+        Next
     End Sub
 
-    Public Function GetAllUsers() As List(Of ConnectMyPrinterForceDeleteLib.UserListClass)
-        Try
-            Dim qq As New List(Of ConnectMyPrinterForceDeleteLib.UserListClass)
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList", False)
-            For Each item As String In ww.GetSubKeyNames
-                Dim kk As New ConnectMyPrinterForceDeleteLib.UserListClass
-                kk._KEY = item
-
-                Dim pp As RegistryKey
-                pp = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\" & kk._KEY, False)
-                Dim tmpuser As String
-                tmpuser = pp.GetValue("ProfileImagePath")
-                kk._Username = tmpuser.Split("\")(2)
-                qq.Add(kk)
-            Next
-
-            Return qq
-        Catch ex As Exception
-            Return New List(Of ConnectMyPrinterForceDeleteLib.UserListClass)
-        End Try
-    End Function
-
-    Public Function GetAllPrintersForUser(ByVal Userinfo As ConnectMyPrinterForceDeleteLib.UserListClass) As List(Of String)
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.Users.OpenSubKey(Userinfo._KEY & "\Printers\Settings", False)
-
-            Dim jj As New List(Of String)
-            For Each item As String In ww.GetValueNames
-                jj.Add(item)
-            Next
-
-            Return jj
-        Catch ex As Exception
-            Return New List(Of String)
-        End Try
-    End Function
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim ww As ListViewItem
-        ww = ListView1.SelectedItems(0)
-        Dim UserListClassx As ConnectMyPrinterForceDeleteLib.UserListClass
-        UserListClassx = ww.Tag
-        Dim jj As New ConnectMyPrinterSystemRestorePointLib.CreateRestorePointClass
-        jj.EnsureCreationPoint()
-        jj.CreatePoint("Erzwungenes Löschen eines Druckers", True)
-        Dim aa As New ConnectMyPrinterPrinterManageLib.PrinterDriverRemover
-        Dim bb As New ConnectMyPrinterPrinterManageLib.ManagePrinter
-        bb.CancelAllPrintJobs(ww.SubItems(1).Text)
-        bb.ResetPrinter(ww.SubItems(1).Text)
-        Dim SpoolerHelper As New ConnectMyPrinterPrinterManageLib.ManagePrinter
-        SpoolerHelper.StopPrinterService()
-        Dim qq As New ConnectMyPrinterForceDeleteManageLib.ForcePrinterDelete
-        qq.DeletePrinter(ww.SubItems(1).Text, UserListClassx._KEY)
-        SpoolerHelper.StartPrinterService()
-        aa.DeleteUnusedDrivers(AppSettings.PrinterAdminPath)
+        Dim kk As MsgBoxResult
+        kk = MsgBox("Achtung: Bitte schließen Sie alle nicht gespeicherten Arbeiten bzw. Dokumente, da für die korrekte Löschung des Druckers einige Anwendungen geschlossen werden müssen. Bestätigen Sie mit JA, wenn Sie alle Daten gespeichert haben.", MsgBoxStyle.YesNo)
 
-        MsgBox("Der Drucker wurde erfolgreich gelöscht.", MsgBoxStyle.Information)
+        If kk = MsgBoxResult.No Then
+            MsgBox("Vorgang abgebrochen.", MsgBoxStyle.Information)
+        End If
+        If kk = MsgBoxResult.Yes Then
+            Dim ww As ListViewItem
+            ww = ListView1.SelectedItems(0)
+
+            Dim AA As New ConnectMyPrinterForceDeleteLib.DeleteClass
+            AA.DeletePrinterFromRegistry(AppSettings, ww.SubItems(1).Text, ww.Tag, True)
+
+            MsgBox("Der Drucker wurde erfolgreich gelöscht. " & AA.DeletedKeyCount & " Löschungen durchgeführt.", MsgBoxStyle.Information)
+        End If
     End Sub
 
     Public Function LoadSettings(ByVal Filename As String) As AppSettingsClass
