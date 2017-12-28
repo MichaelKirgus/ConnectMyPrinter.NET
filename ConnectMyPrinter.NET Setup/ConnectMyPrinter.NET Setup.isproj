@@ -61,6 +61,10 @@
 			<Name>ConnectMyPrinterDeleteAllPrinters</Name>
 			<Project>{8CB8056A-D5AA-42DD-8A50-B7658D69C95C}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterElevationLib\ConnectMyPrinterElevationLib.vbproj">
+			<Name>ConnectMyPrinterElevationLib</Name>
+			<Project>{728E53CC-92B9-4C1F-94FF-99C2085FCE9B}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
 			<Name>ConnectMyPrinterEnumerationLib</Name>
 			<Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>

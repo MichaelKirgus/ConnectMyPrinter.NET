@@ -4,36 +4,31 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CB8056A-D5AA-42DD-8A50-B7658D69C95C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <StartupObject>ConnectMyPrinterDeleteAllPrinters.Module1</StartupObject>
-    <RootNamespace>ConnectMyPrinterDeleteAllPrinters</RootNamespace>
-    <AssemblyName>ConnectMyPrinterDeleteAllPrinters</AssemblyName>
+    <ProjectGuid>{BF9D7431-74EA-4CE1-A9D5-18868A0F42CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ConnectMyPrinterDriverPackagesLib</RootNamespace>
+    <AssemblyName>ConnectMyPrinterDriverPackagesLib</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>Console</MyType>
+    <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterDeleteAllPrinters.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterDriverPackagesLib.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterDeleteAllPrinters.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterDriverPackagesLib.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -47,26 +42,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>killallprinters.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestCertificateThumbprint>6DB6EB91E354D6E3162AF78D77DBF0A687566A3B</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>Michael_Kirgus_Anwendungsentwicklung.p12</ManifestKeyFile>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MetroFramework">
-      <HintPath>..\ConnectMyPrinter.NET\bin\Debug\MetroFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -85,7 +63,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="DriverPackageItem.vb" />
+    <Compile Include="ManageDriverPackages.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -111,7 +90,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Michael_Kirgus_Anwendungsentwicklung.p12" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -121,24 +99,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="killallprinters.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConnectMyPrinter.NET\ConnectMyPrinter.NET.vbproj">
-      <Project>{2FFB39F5-85AB-405B-8AB7-D3404312B088}</Project>
-      <Name>ConnectMyPrinter.NET</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
-      <Project>{AE01B7FF-C216-4752-B4FF-D6956A772D44}</Project>
-      <Name>ConnectMyPrinterAppSettingsHandler</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
-      <Project>{BE968C84-9AE3-4F63-8466-FA21F66386B0}</Project>
-      <Name>ConnectMyPrinterPrinterManageLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

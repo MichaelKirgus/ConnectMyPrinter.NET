@@ -30,23 +30,24 @@ Partial Class Form1
         Me.DateiSpeichernToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PropertyGrid1
         '
         Me.PropertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertyGrid1.Location = New System.Drawing.Point(0, 24)
+        Me.PropertyGrid1.Location = New System.Drawing.Point(0, 27)
         Me.PropertyGrid1.Name = "PropertyGrid1"
-        Me.PropertyGrid1.Size = New System.Drawing.Size(497, 475)
+        Me.PropertyGrid1.Size = New System.Drawing.Size(497, 472)
         Me.PropertyGrid1.TabIndex = 0
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.ToolStripTextBox1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(497, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(497, 27)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -54,7 +55,7 @@ Partial Class Form1
         '
         Me.DateiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiÖffnenToolStripMenuItem, Me.DateiSpeichernToolStripMenuItem})
         Me.DateiToolStripMenuItem.Name = "DateiToolStripMenuItem"
-        Me.DateiToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.DateiToolStripMenuItem.Size = New System.Drawing.Size(46, 23)
         Me.DateiToolStripMenuItem.Text = "&Datei"
         '
         'DateiÖffnenToolStripMenuItem
@@ -68,6 +69,11 @@ Partial Class Form1
         Me.DateiSpeichernToolStripMenuItem.Name = "DateiSpeichernToolStripMenuItem"
         Me.DateiSpeichernToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.DateiSpeichernToolStripMenuItem.Text = "Datei speichern..."
+        '
+        'ToolStripTextBox1
+        '
+        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
+        Me.ToolStripTextBox1.Size = New System.Drawing.Size(300, 23)
         '
         'Form1
         '
@@ -95,4 +101,5 @@ Partial Class Form1
     Friend WithEvents DateiSpeichernToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
 End Class

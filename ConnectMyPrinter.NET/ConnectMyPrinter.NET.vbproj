@@ -50,6 +50,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>ConnectMyPrinter.NET.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -421,9 +422,21 @@
       <Project>{18a8c35f-24e7-411c-b17a-954e44972e40}</Project>
       <Name>ConnectMyPrinterDriverNotifications</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterDriverPackagesLib\ConnectMyPrinterDriverPackagesLib.vbproj">
+      <Project>{bf9d7431-74ea-4ce1-a9d5-18868a0f42cf}</Project>
+      <Name>ConnectMyPrinterDriverPackagesLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterElevationLib\ConnectMyPrinterElevationLib.vbproj">
+      <Project>{728e53cc-92b9-4c1f-94ff-99c2085fce9b}</Project>
+      <Name>ConnectMyPrinterElevationLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
       <Project>{74098dc4-697b-4692-81b7-088f300d2610}</Project>
       <Name>ConnectMyPrinterEnumerationLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterForceDeleteLib\ConnectMyPrinterForceDeleteLib.vbproj">
+      <Project>{4a9e510c-5c2d-4cdc-8ef5-19dd9bce9ef2}</Project>
+      <Name>ConnectMyPrinterForceDeleteLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterLog\ConnectMyPrinterLog.vbproj">
       <Project>{28d57efe-e78a-4c8c-9d8c-45914e20d368}</Project>
@@ -440,6 +453,10 @@
     <ProjectReference Include="..\ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj">
       <Project>{53b8a917-53bb-4ecf-9709-c50ba632da9a}</Project>
       <Name>ConnectMyPrinterUACHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterUserListLib\ConnectMyPrinterUserListLib.vbproj">
+      <Project>{A015DD48-3A09-413E-8F95-0FA2A07E1190}</Project>
+      <Name>ConnectMyPrinterUserListLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

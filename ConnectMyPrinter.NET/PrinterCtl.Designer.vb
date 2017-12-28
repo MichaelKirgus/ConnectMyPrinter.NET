@@ -53,7 +53,13 @@ Partial Class PrinterCtl
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.DruckerImProfilSpeichernToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DruckerEntfernenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DruckerNeuInstallierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StandardeinstellungenLöschenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DruckereigenschaftenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DruckereinstellungenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DruckereinstellungenExportierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DruckereinstellungenImportierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -63,12 +69,7 @@ Partial Class PrinterCtl
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.DruckerEntfernenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.DruckereigenschaftenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DruckereinstellungenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DruckerNeuInstallierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DruckerEntfernenlokalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -247,7 +248,7 @@ Partial Class PrinterCtl
         '
         Me.ContextMenuStrip1.BackColor = System.Drawing.Color.White
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlsStandarddruckerFestlegenToolStripMenuItem, Me.ToolStripSeparator1, Me.DruckerImProfilSpeichernToolStripMenuItem, Me.ToolStripSeparator2, Me.DruckerEntfernenToolStripMenuItem, Me.DruckerNeuInstallierenToolStripMenuItem, Me.StandardeinstellungenLöschenToolStripMenuItem, Me.ToolStripSeparator3, Me.DruckereigenschaftenToolStripMenuItem, Me.DruckereinstellungenToolStripMenuItem, Me.ToolStripSeparator4, Me.DruckereinstellungenExportierenToolStripMenuItem, Me.DruckereinstellungenImportierenToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlsStandarddruckerFestlegenToolStripMenuItem, Me.ToolStripSeparator1, Me.DruckerImProfilSpeichernToolStripMenuItem, Me.ToolStripSeparator2, Me.DruckerEntfernenToolStripMenuItem, Me.DruckerEntfernenlokalToolStripMenuItem, Me.DruckerNeuInstallierenToolStripMenuItem, Me.StandardeinstellungenLöschenToolStripMenuItem, Me.ToolStripSeparator3, Me.DruckereigenschaftenToolStripMenuItem, Me.DruckereinstellungenToolStripMenuItem, Me.ToolStripSeparator4, Me.DruckereinstellungenExportierenToolStripMenuItem, Me.DruckereinstellungenImportierenToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
@@ -274,10 +275,41 @@ Partial Class PrinterCtl
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
         '
+        'DruckerEntfernenToolStripMenuItem
+        '
+        Me.DruckerEntfernenToolStripMenuItem.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.DeletePrinter
+        Me.DruckerEntfernenToolStripMenuItem.Name = "DruckerEntfernenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckerEntfernenToolStripMenuItem, "DruckerEntfernenToolStripMenuItem")
+        '
+        'DruckerNeuInstallierenToolStripMenuItem
+        '
+        Me.DruckerNeuInstallierenToolStripMenuItem.Name = "DruckerNeuInstallierenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckerNeuInstallierenToolStripMenuItem, "DruckerNeuInstallierenToolStripMenuItem")
+        '
         'StandardeinstellungenLöschenToolStripMenuItem
         '
         Me.StandardeinstellungenLöschenToolStripMenuItem.Name = "StandardeinstellungenLöschenToolStripMenuItem"
         resources.ApplyResources(Me.StandardeinstellungenLöschenToolStripMenuItem, "StandardeinstellungenLöschenToolStripMenuItem")
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
+        '
+        'DruckereigenschaftenToolStripMenuItem
+        '
+        Me.DruckereigenschaftenToolStripMenuItem.Name = "DruckereigenschaftenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckereigenschaftenToolStripMenuItem, "DruckereigenschaftenToolStripMenuItem")
+        '
+        'DruckereinstellungenToolStripMenuItem
+        '
+        Me.DruckereinstellungenToolStripMenuItem.Name = "DruckereinstellungenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckereinstellungenToolStripMenuItem, "DruckereinstellungenToolStripMenuItem")
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        resources.ApplyResources(Me.ToolStripSeparator4, "ToolStripSeparator4")
         '
         'DruckereinstellungenExportierenToolStripMenuItem
         '
@@ -335,36 +367,10 @@ Partial Class PrinterCtl
         resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
         Me.OpenFileDialog1.RestoreDirectory = True
         '
-        'DruckerEntfernenToolStripMenuItem
+        'DruckerEntfernenlokalToolStripMenuItem
         '
-        Me.DruckerEntfernenToolStripMenuItem.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.DeletePrinter
-        Me.DruckerEntfernenToolStripMenuItem.Name = "DruckerEntfernenToolStripMenuItem"
-        resources.ApplyResources(Me.DruckerEntfernenToolStripMenuItem, "DruckerEntfernenToolStripMenuItem")
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        resources.ApplyResources(Me.ToolStripSeparator4, "ToolStripSeparator4")
-        '
-        'DruckereigenschaftenToolStripMenuItem
-        '
-        Me.DruckereigenschaftenToolStripMenuItem.Name = "DruckereigenschaftenToolStripMenuItem"
-        resources.ApplyResources(Me.DruckereigenschaftenToolStripMenuItem, "DruckereigenschaftenToolStripMenuItem")
-        '
-        'DruckereinstellungenToolStripMenuItem
-        '
-        Me.DruckereinstellungenToolStripMenuItem.Name = "DruckereinstellungenToolStripMenuItem"
-        resources.ApplyResources(Me.DruckereinstellungenToolStripMenuItem, "DruckereinstellungenToolStripMenuItem")
-        '
-        'DruckerNeuInstallierenToolStripMenuItem
-        '
-        Me.DruckerNeuInstallierenToolStripMenuItem.Name = "DruckerNeuInstallierenToolStripMenuItem"
-        resources.ApplyResources(Me.DruckerNeuInstallierenToolStripMenuItem, "DruckerNeuInstallierenToolStripMenuItem")
+        Me.DruckerEntfernenlokalToolStripMenuItem.Name = "DruckerEntfernenlokalToolStripMenuItem"
+        resources.ApplyResources(Me.DruckerEntfernenlokalToolStripMenuItem, "DruckerEntfernenlokalToolStripMenuItem")
         '
         'PrinterCtl
         '
@@ -455,4 +461,5 @@ Partial Class PrinterCtl
     Friend WithEvents DruckereinstellungenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents DruckerNeuInstallierenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DruckerEntfernenlokalToolStripMenuItem As ToolStripMenuItem
 End Class

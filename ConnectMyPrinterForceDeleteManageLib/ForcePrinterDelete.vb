@@ -4,11 +4,16 @@ Public Class ForcePrinterDelete
     Public Errors As String = ""
     Public FinishedRuns As Integer = 0
 
-    Public Function DeletePrinter(ByVal PrinterName As String, ByVal UserUUID As String) As Boolean
+    Public Function DeletePrinter(ByVal PrinterName As String, ByVal UserUUID As String, Optional ByVal DeleteLocalMachinePart As Boolean = True) As Boolean
         Dim splitreg As String = PrinterName
+        Dim servername As String = ""
         Try
-            splitreg = PrinterName.Split("\")(2)
-            FinishedRuns += 1
+            splitreg = PrinterName.Split("\")(3)
+        Catch ex As Exception
+            Errors += Err.Description & vbNewLine
+        End Try
+        Try
+            servername = PrinterName.Split("\")(2)
         Catch ex As Exception
             Errors += Err.Description & vbNewLine
         End Try
@@ -84,203 +89,267 @@ Public Class ForcePrinterDelete
         Catch ex As Exception
             Errors += Err.Description & vbNewLine
         End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections", True)
-            ww.DeleteValue(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteValue(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections", True)
-            For Each item As String In ww.GetSubKeyNames
-                Try
-                    For Each item2 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections\" & item, True).GetSubKeyNames
-                        If item2.ToLower.Contains(PrinterName) Or item2.ToLower.Contains(splitreg) Then
+        If DeleteLocalMachinePart Then
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider", True)
+                ww.DeleteValue(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteValue(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider", True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        For Each item2 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\" & item, True).GetSubKeyNames
+                            For Each item3 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\" & item & "\" & item2, True).GetSubKeyNames
+                                If (item3.ToLower.Contains(PrinterName) And item3.ToLower.Contains(servername)) Then
+                                    Try
+                                        Dim ww2 As RegistryKey
+                                        ww2 = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\" & item & "\" & item2, True)
+                                        ww2.DeleteSubKey(item2)
+                                        FinishedRuns += 1
+                                    Catch ex As Exception
+                                    End Try
+                                End If
+                            Next
+                        Next
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\Servers\" & servername, True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        For Each item2 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\Servers\" & servername & "\" & item, True).GetSubKeyNames
                             Try
-                                Dim ww2 As RegistryKey
-                                ww2 = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections\" & item, True)
-                                ww2.DeleteSubKey(item2)
-                                FinishedRuns += 1
+                                Dim dd As RegistryKey
+                                dd = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\Servers\" & servername & "\" & item, False)
+                                Dim desc As String
+                                desc = dd.GetValue("Description")
+                                If desc.ToLower.Contains(PrinterName) Then
+                                    ww.DeleteSubKeyTree(item)
+                                    FinishedRuns += 1
+                                End If
                             Catch ex As Exception
+                                Errors += Err.Description & vbNewLine
                             End Try
+                        Next
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections", True)
+                ww.DeleteValue(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteValue(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections", True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        For Each item2 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections\" & item, True).GetSubKeyNames
+                            If item2.ToLower.Contains(PrinterName) Or item2.ToLower.Contains(splitreg) Then
+                                Try
+                                    Dim ww2 As RegistryKey
+                                    ww2 = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections\" & item, True)
+                                    ww2.DeleteSubKey(item2)
+                                    FinishedRuns += 1
+                                Catch ex As Exception
+                                End Try
+                            End If
+                        Next
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+                ww.DeleteValue(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteValue(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                            ww.DeleteSubKey(item)
+                            FinishedRuns += 1
                         End If
-                    Next
-                Catch ex As Exception
-                    Errors += Err.Description & vbNewLine
-                End Try
-            Next
-            ww.DeleteValue(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteValue(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
-            For Each item As String In ww.GetSubKeyNames
-                Try
-                    If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
-                        ww.DeleteSubKey(item)
-                        FinishedRuns += 1
-                    End If
-                Catch ex As Exception
-                    Errors += Err.Description & vbNewLine
-                End Try
-            Next
-            ww.DeleteValue(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteValue(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
-            For Each item As String In ww.GetSubKeyNames
-                Try
-                    If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
-                        ww.DeleteSubKeyTree(item)
-                        FinishedRuns += 1
-                    End If
-                Catch ex As Exception
-                    Errors += Err.Description & vbNewLine
-                End Try
-            Next
-            ww.DeleteSubKeyTree(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteSubKeyTree(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
-            For Each item As String In ww.GetSubKeyNames
-                Try
-                    If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
-                        ww.DeleteSubKey(item)
-                        FinishedRuns += 1
-                    End If
-                Catch ex As Exception
-                    Errors += Err.Description & vbNewLine
-                End Try
-            Next
-            ww.DeleteValue(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteValue(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Control\Print\Printers", True)
-            For Each item As String In ww.GetSubKeyNames
-                Try
-                    If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
-                        ww.DeleteSubKey(item)
-                        FinishedRuns += 1
-                    End If
-                Catch ex As Exception
-                    Errors += Err.Description & vbNewLine
-                End Try
-            Next
-            ww.DeleteValue(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteValue(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\Print\Printers", True)
-            For Each item As String In ww.GetSubKeyNames
-                Try
-                    If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
-                        ww.DeleteSubKey(item)
-                        FinishedRuns += 1
-                    End If
-                Catch ex As Exception
-                    Errors += Err.Description & vbNewLine
-                End Try
-            Next
-            ww.DeleteValue(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteValue(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
-            ww.DeleteSubKey(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteSubKey(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
-            ww.DeleteSubKeyTree(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteSubKeyTree(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Services\LanmanServer\Shares", True)
-            ww.DeleteSubKey(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteSubKey(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Services\LanmanServer\Shares\Security", True)
-            ww.DeleteSubKey(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteSubKey(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Services\LanmanServer\Shares", True)
-            ww.DeleteSubKey(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteSubKey(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
-        Try
-            Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Services\LanmanServer\Shares\Security", True)
-            ww.DeleteSubKey(PrinterName)
-            FinishedRuns += 1
-            ww.DeleteSubKey(splitreg)
-            FinishedRuns += 1
-        Catch ex As Exception
-            Errors += Err.Description & vbNewLine
-        End Try
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+                ww.DeleteValue(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteValue(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                            ww.DeleteSubKeyTree(item)
+                            FinishedRuns += 1
+                        End If
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+                ww.DeleteSubKeyTree(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteSubKeyTree(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                            ww.DeleteSubKey(item)
+                            FinishedRuns += 1
+                        End If
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+                ww.DeleteValue(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteValue(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Control\Print\Printers", True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                            ww.DeleteSubKey(item)
+                            FinishedRuns += 1
+                        End If
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+                ww.DeleteValue(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteValue(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\Print\Printers", True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                            ww.DeleteSubKey(item)
+                            FinishedRuns += 1
+                        End If
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+                ww.DeleteValue(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteValue(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
+                ww.DeleteSubKey(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteSubKey(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
+                ww.DeleteSubKeyTree(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteSubKeyTree(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Services\LanmanServer\Shares", True)
+                ww.DeleteSubKey(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteSubKey(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Services\LanmanServer\Shares\Security", True)
+                ww.DeleteSubKey(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteSubKey(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Services\LanmanServer\Shares", True)
+                ww.DeleteSubKey(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteSubKey(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Services\LanmanServer\Shares\Security", True)
+                ww.DeleteSubKey(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteSubKey(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+        End If
+
         Try
             Dim ww As RegistryKey
             ww = My.Computer.Registry.CurrentUser.OpenSubKey("Printers\Settings", True)

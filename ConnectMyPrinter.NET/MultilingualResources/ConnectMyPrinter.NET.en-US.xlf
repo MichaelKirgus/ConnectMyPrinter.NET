@@ -1372,8 +1372,9 @@ the printer connect to:</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="ContextMenuStrip1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>269, 312</source>
+          <source>269, 350</source>
           <target state="needs-review-translation">269, 166</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="PictureBox2.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
           <source>336, 7</source>
@@ -1542,6 +1543,18 @@ the printer connect to:</target>
         <trans-unit id="ToolTip1.TrayLocation" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" extradata="metadata">
           <source>174, 17</source>
           <target state="needs-review-translation">174, 17</target>
+        </trans-unit>
+        <trans-unit id="DruckerEntfernenlokalToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>268, 30</source>
+          <target state="needs-review-translation">268, 30</target>
+        </trans-unit>
+        <trans-unit id="DruckerEntfernenlokalToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Drucker entfernen (lokal)</source>
+          <target state="new">Drucker entfernen (lokal)</target>
+        </trans-unit>
+        <trans-unit id="DruckerEntfernenlokalToolStripMenuItem.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
         </trans-unit>
       </group>
     </body>
@@ -14935,27 +14948,27 @@ administrator.</target>
           <source>470, 613</source>
           <target state="final">470, 613</target>
         </trans-unit>
-        <trans-unit id="LoadAllLocalPrinters.TrayLocation" translate="yes" extype="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" extradata="metadata" xml:space="preserve">
+        <trans-unit id="LoadAllLocalPrinters.TrayLocation" translate="yes" extype="System.Drawing.Point, System.Drawing" extradata="metadata" xml:space="preserve">
           <source>350, 19</source>
           <target state="final">350, 19</target>
         </trans-unit>
-        <trans-unit id="$this.Localizable" translate="yes" extype="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extradata="metadata" xml:space="preserve">
+        <trans-unit id="$this.Localizable" translate="yes" extype="System.Boolean, mscorlib" extradata="metadata" xml:space="preserve">
           <source>True</source>
           <target state="final">True</target>
         </trans-unit>
-        <trans-unit id="LocalPrinterIdleWorker.TrayLocation" translate="yes" extype="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" extradata="metadata" xml:space="preserve">
+        <trans-unit id="LocalPrinterIdleWorker.TrayLocation" translate="yes" extype="System.Drawing.Point, System.Drawing" extradata="metadata" xml:space="preserve">
           <source>512, 19</source>
           <target state="final">512, 19</target>
         </trans-unit>
-        <trans-unit id="LocalPrinterChangeTimer.TrayLocation" translate="yes" extype="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" extradata="metadata" xml:space="preserve">
+        <trans-unit id="LocalPrinterChangeTimer.TrayLocation" translate="yes" extype="System.Drawing.Point, System.Drawing" extradata="metadata" xml:space="preserve">
           <source>688, 19</source>
           <target state="final">688, 19</target>
         </trans-unit>
-        <trans-unit id="LoadAllPrintersAsync.TrayLocation" translate="yes" extype="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" extradata="metadata" xml:space="preserve">
+        <trans-unit id="LoadAllPrintersAsync.TrayLocation" translate="yes" extype="System.Drawing.Point, System.Drawing" extradata="metadata" xml:space="preserve">
           <source>20, 19</source>
           <target state="final">20, 19</target>
         </trans-unit>
-        <trans-unit id="RestartPrinterService.TrayLocation" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" extradata="metadata">
+        <trans-unit id="RestartPrinterService.TrayLocation" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing" extradata="metadata">
           <source>876, 19</source>
           <target state="needs-review-translation">876, 19</target>
         </trans-unit>
@@ -15009,12 +15022,63 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="AdditionalInfoRTF.Text" translate="yes" xml:space="preserve">
           <source></source>
-          <target state="new"></target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
         </trans-unit>
-        <trans-unit id="ToolTip2.TrayLocation" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" extradata="metadata">
-          <source>198, 19</source>
-          <target state="needs-review-translation">191, 20</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        <trans-unit id="ContextMenuStrip1.TrayLocation" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>1040, 19</source>
+          <target state="needs-review-translation">1040, 19</target>
+        </trans-unit>
+        <trans-unit id="DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>311, 22</source>
+          <target state="needs-review-translation">311, 22</target>
+        </trans-unit>
+        <trans-unit id="DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Drucker/Treiber/Treiberpaket entfernen...</source>
+          <target state="new">Drucker/Treiber/Treiberpaket entfernen...</target>
+        </trans-unit>
+        <trans-unit id="DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>311, 22</source>
+          <target state="needs-review-translation">311, 22</target>
+        </trans-unit>
+        <trans-unit id="DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Drucker/Treiber/Treiberpaket entfernen (Admin)...</source>
+          <target state="new">Drucker/Treiber/Treiberpaket entfernen (Admin)...</target>
+        </trans-unit>
+        <trans-unit id="WindowsDruckverwaltungÖffnenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>311, 22</source>
+          <target state="needs-review-translation">311, 22</target>
+        </trans-unit>
+        <trans-unit id="WindowsDruckverwaltungÖffnenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Windows-Druckverwaltung öffnen...</source>
+          <target state="new">Windows-Druckverwaltung öffnen...</target>
+        </trans-unit>
+        <trans-unit id="WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>311, 22</source>
+          <target state="needs-review-translation">311, 22</target>
+        </trans-unit>
+        <trans-unit id="WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Windows-Druckverwaltung öffnen (Admin)...</source>
+          <target state="new">Windows-Druckverwaltung öffnen (Admin)...</target>
+        </trans-unit>
+        <trans-unit id="AnwendungseinstellungenBearbeitenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>311, 22</source>
+          <target state="needs-review-translation">311, 22</target>
+        </trans-unit>
+        <trans-unit id="AnwendungseinstellungenBearbeitenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Anwendungseinstellungen bearbeiten...</source>
+          <target state="new">Anwendungseinstellungen bearbeiten...</target>
+        </trans-unit>
+        <trans-unit id="AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>311, 22</source>
+          <target state="needs-review-translation">311, 22</target>
+        </trans-unit>
+        <trans-unit id="AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Anwendungseinstellungen bearbeiten (Admin)...</source>
+          <target state="new">Anwendungseinstellungen bearbeiten (Admin)...</target>
+        </trans-unit>
+        <trans-unit id="ContextMenuStrip1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>312, 158</source>
+          <target state="needs-review-translation">312, 158</target>
         </trans-unit>
       </group>
     </body>

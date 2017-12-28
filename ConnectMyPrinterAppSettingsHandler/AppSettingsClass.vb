@@ -17,6 +17,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property AllowExpandMode As Boolean = True
     Property ShowTopMost As Boolean = False
     Property PrintServers As New List(Of PrintServerItem)
+    Property CollectAdditionalInformation As Boolean = True
     Property AskUserIfMultipleResults As Boolean = True
     Property AskUserIfConnectPrinter As Boolean = True
     Property AskUserIfDisconnectPrinter As Boolean = True
@@ -42,11 +43,16 @@ Imports ConnectMyPrinterEnumerationLib
     Property ElevationBypassUsername As String = ""
     Property ElevationBypassPassword As String = ""
     Property DeletePrinterDriverLowLevel As Boolean = False
+    Property LocalMachineRegistryPermission As Boolean = True
+    Property DeleteLocalMachinePartOnUserPrinterDelete As Boolean = False
     Property PrinterAdminPath As String = "C:\Windows\System32\Printing_Admin_Scripts\de-DE"
     Property CleanPrinterDriverPackagesAtPrinterRemove As Boolean = False
     Property CleanPrinterDriverPackagesAtPrinterDriverRemove As Boolean = True
+    Property CleanLostPrinterDriverItemsAtPrinterRemove As Boolean = True
+    Property CleanLostPrinterDriverItemsAtPrinterDriverRemove As Boolean = True
+    Property ForceAdministratorRightsOnForceDelete As Boolean = False
     Property SavedPrintersProfileFile As String = ""
-    Property ShowLocalPrinters As Boolean = False
+    Property ShowLocalPrinters As Boolean = True
     Property HiddenPrinterList As List(Of String)
     Property CheckUserSpoolerPermissions As Boolean = False
     Property AlwaysCheckForNewPrinters As Boolean = True
@@ -56,6 +62,9 @@ Imports ConnectMyPrinterEnumerationLib
     Property AllowUserDeleteLocalPrinter As Boolean = True
     Property ShowDriverNotifications As Boolean = True
     Property ShowAdvancedPrinterListButton As Boolean = True
+    Property ShowPrintManagementCenterEntry As Boolean = True
+    Property ShowForceDeletePrinterEntry As Boolean = True
+    Property ShowAppSettingsConsoleEntry As Boolean = True
     Property DriverNotifications As List(Of DriverNotifications)
 
     Public Enum DoubleClickActionOnPrinterItemAction

@@ -48,6 +48,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>ConnectMyPrinterForceDelete.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -149,9 +150,17 @@
       <Project>{ae01b7ff-c216-4752-b4ff-d6956a772d44}</Project>
       <Name>ConnectMyPrinterAppSettingsHandler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterDriverPackagesLib\ConnectMyPrinterDriverPackagesLib.vbproj">
+      <Project>{bf9d7431-74ea-4ce1-a9d5-18868a0f42cf}</Project>
+      <Name>ConnectMyPrinterDriverPackagesLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterForceDeleteLib\ConnectMyPrinterForceDeleteLib.vbproj">
       <Project>{4a9e510c-5c2d-4cdc-8ef5-19dd9bce9ef2}</Project>
       <Name>ConnectMyPrinterForceDeleteLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
+      <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
+      <Name>ConnectMyPrinterPrinterManageLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterRegistryHandler\ConnectMyPrinterRegistryHandler.vbproj">
       <Project>{06c6b81b-05bf-4764-a3f4-a85143ecd2e8}</Project>

@@ -83,6 +83,18 @@ Module Module1
             If ll.Name.Contains("TakeownPrinterDriver") Then
                 PrinterRemover.TakeownPrinterDriver(printerobj)
             End If
+            If ll.Name.Contains("DeletePrinterDriver") Then
+                Dim aa As New ConnectMyPrinterDriverPackagesLib.ManageDriverPackages
+                Dim pp As New ConnectMyPrinterDriverPackagesLib.DriverPackageItem
+                pp.DriverName = printerobj.DriverName
+                aa.DeleteDriver(pp)
+            End If
+            If ll.Name.Contains("DeletePrinterDriverPacket") Then
+                Dim aa As New ConnectMyPrinterDriverPackagesLib.ManageDriverPackages
+                Dim pp As New ConnectMyPrinterDriverPackagesLib.DriverPackageItem
+                pp.DriverName = printerobj.DriverName
+                aa.DeleteDriverPacket(pp)
+            End If
             If ll.Name.Contains("DeletePrinterDriverFiles") Then
                 PrinterRemover.DeletePrinterDriverFiles(printerobj)
             End If

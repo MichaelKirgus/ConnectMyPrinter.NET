@@ -31,6 +31,8 @@ Partial Class AppSettingsDlg
         Me.MetroCheckBox2 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroCheckBox1 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
+        Me.status_error = New System.Windows.Forms.PictureBox()
+        Me.status_ok = New System.Windows.Forms.PictureBox()
         Me.MetroButton6 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton5 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton4 = New MetroFramework.Controls.MetroButton()
@@ -39,13 +41,11 @@ Partial Class AppSettingsDlg
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.MetroButton7 = New MetroFramework.Controls.MetroButton()
-        Me.status_ok = New System.Windows.Forms.PictureBox()
-        Me.status_error = New System.Windows.Forms.PictureBox()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
         Me.MetroTabPage2.SuspendLayout()
-        CType(Me.status_ok, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.status_error, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.status_ok, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MetroTabControl1
@@ -120,6 +120,22 @@ Partial Class AppSettingsDlg
         Me.MetroTabPage2.Name = "MetroTabPage2"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
         '
+        'status_error
+        '
+        Me.status_error.BackColor = System.Drawing.Color.Transparent
+        Me.status_error.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.DeletePrinter
+        resources.ApplyResources(Me.status_error, "status_error")
+        Me.status_error.Name = "status_error"
+        Me.status_error.TabStop = False
+        '
+        'status_ok
+        '
+        Me.status_ok.BackColor = System.Drawing.Color.Transparent
+        Me.status_ok.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.dialog_ok
+        resources.ApplyResources(Me.status_ok, "status_ok")
+        Me.status_ok.Name = "status_ok"
+        Me.status_ok.TabStop = False
+        '
         'MetroButton6
         '
         resources.ApplyResources(Me.MetroButton6, "MetroButton6")
@@ -164,22 +180,6 @@ Partial Class AppSettingsDlg
         resources.ApplyResources(Me.MetroButton7, "MetroButton7")
         Me.MetroButton7.Name = "MetroButton7"
         '
-        'status_ok
-        '
-        Me.status_ok.BackColor = System.Drawing.Color.Transparent
-        Me.status_ok.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.dialog_ok
-        resources.ApplyResources(Me.status_ok, "status_ok")
-        Me.status_ok.Name = "status_ok"
-        Me.status_ok.TabStop = False
-        '
-        'status_error
-        '
-        Me.status_error.BackColor = System.Drawing.Color.Transparent
-        Me.status_error.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.DeletePrinter
-        resources.ApplyResources(Me.status_error, "status_error")
-        Me.status_error.Name = "status_error"
-        Me.status_error.TabStop = False
-        '
         'AppSettingsDlg
         '
         Me.AcceptButton = Me.MetroButton7
@@ -200,8 +200,8 @@ Partial Class AppSettingsDlg
         Me.MetroTabPage1.ResumeLayout(False)
         Me.MetroTabPage1.PerformLayout()
         Me.MetroTabPage2.ResumeLayout(False)
-        CType(Me.status_ok, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.status_error, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.status_ok, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

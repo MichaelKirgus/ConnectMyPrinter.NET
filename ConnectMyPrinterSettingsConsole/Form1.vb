@@ -38,9 +38,32 @@ Public Class Form1
         End Try
     End Function
 
-    Public Sub LoadSettings()
+    Public Sub XLoadSettings(Optional ByVal File As String = "")
         Try
-            AppSettings = LoadSettings(AppSettingFile)
+            If File = "" Then
+                'Laden der Einstellungen für alle Benutzer
+                If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile) Then
+                    AppSettingFile = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile
+                Else
+                    'Laden der Einstellungen (über AppData)
+                    If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
+                        AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
+                    End If
+                End If
+
+                'Befehlszeilenparameter prüfen
+                For Each argument In My.Application.CommandLineArgs
+                    If argument.StartsWith("/SETTINGS|") Then
+                        AppSettingFile = argument.Split("|")(1)
+                    End If
+                Next
+
+                AppSettings = LoadSettings(AppSettingFile)
+            Else
+                AppSettings = LoadSettings(AppSettingFile)
+            End If
+
+            ToolStripTextBox1.Text = AppSettingFile
             PropertyGrid1.SelectedObject = AppSettings
         Catch ex As Exception
         End Try
@@ -48,7 +71,7 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadSettings()
+        XLoadSettings()
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -63,7 +86,7 @@ Public Class Form1
         OpenFileDialog1.ShowDialog()
         If Not OpenFileDialog1.FileName = "" Then
             AppSettingFile = OpenFileDialog1.FileName
-            LoadSettings()
+            XLoadSettings(AppSettingFile)
         End If
     End Sub
 

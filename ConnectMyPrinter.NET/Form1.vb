@@ -49,9 +49,14 @@ Public Class Form1
             'Evtl. Spuren löschen, um Fehlverhalten zu verhindern
             CleanOldElevationActionFiles()
 
-            'Laden der Einstellungen (über AppData)
-            If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
-                AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
+            'Laden der Einstellungen für alle Benutzer
+            If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile) Then
+                AppSettingFile = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile
+            Else
+                'Laden der Einstellungen (über AppData)
+                If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
+                    AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
+                End If
             End If
 
             'Befehlszeilenparameter prüfen
@@ -81,7 +86,10 @@ Public Class Form1
             Dim zz As New Size(Me.Width, AppSettings.StartWindowHeight)
             Me.Size = zz
             If Not AppSettings.CompanyLogoImagePath = "" Then
-                PictureBox2.Image = Image.FromFile(AppSettings.CompanyLogoImagePath)
+                Try
+                    PictureBox2.Image = Image.FromFile(AppSettings.CompanyLogoImagePath)
+                Catch ex As Exception
+                End Try
             End If
             If AppSettings.AllowUserToConnectToNotCollectedPrinter Then
                 MetroButton1.Enabled = True
@@ -95,6 +103,11 @@ Public Class Form1
             End If
             If AppSettings.ShowAdvancedPrinterListButton Then
                 Button5.Visible = True
+            End If
+            'Kontextmenü ausblenden, wenn keine erweiterten Verknüpfungen genutzt
+            If (AppSettings.ShowPrintManagementCenterEntry = False And AppSettings.ShowForceDeletePrinterEntry = False) Then
+                Me.ContextMenuStrip = Nothing
+                PictureBox2.ContextMenuStrip = Nothing
             End If
             'Fenstergröße und Modus setzen
             If AppSettings.StartInMinimalMode = True Then
@@ -451,24 +464,35 @@ Public Class Form1
 
             'Druckerwarteschlangen auflisten
             Dim myPrintQueues As PrintQueueCollection = myPrintServer.GetPrintQueues()
-            For Each pq As PrintQueue In myPrintQueues
-                If Not pq.ShareName = "" Then
-                    Dim hh As New PrinterQueueInfo
-                    hh.Server = pq.HostingPrintServer.Name
-                    hh.ShareName = pq.ShareName
-                    Try
-                        hh.Description = pq.Comment
-                        hh.Location = pq.Location
-                        hh.State = pq.QueueStatus.ToString
-                    Catch ex As Exception
-                    End Try
-                    Try
-                    hh.DriverName = pq.QueueDriver.Name
-                    Catch ex As Exception
-                    End Try
-                    result.Add(hh)
-                End If
-            Next pq
+            If AppSettings.CollectAdditionalInformation Then
+                For Each pq As PrintQueue In myPrintQueues
+                    If Not pq.ShareName = "" Then
+                        Dim hh As New PrinterQueueInfo
+                        hh.Server = pq.HostingPrintServer.Name
+                        hh.ShareName = pq.ShareName
+                        Try
+                            hh.Description = pq.Comment
+                            hh.Location = pq.Location
+                            hh.State = pq.QueueStatus.ToString
+                        Catch ex As Exception
+                        End Try
+                        Try
+                            hh.DriverName = pq.QueueDriver.Name
+                        Catch ex As Exception
+                        End Try
+                        result.Add(hh)
+                    End If
+                Next pq
+            Else
+                For Each pq As PrintQueue In myPrintQueues
+                    If Not pq.ShareName = "" Then
+                        Dim hh As New PrinterQueueInfo
+                        hh.Server = pq.HostingPrintServer.Name
+                        hh.ShareName = pq.ShareName
+                        result.Add(hh)
+                    End If
+                Next pq
+            End If
 
             Return result
         Catch ex As Exception
@@ -1139,5 +1163,92 @@ Public Class Form1
         If AppSettings.ShowAdditionalUserHelpOnWindowMouseEnter Then
             HandleMouseLeaveTextfield()
         End If
+    End Sub
+
+    Public Function OpenForceDriverDeleteApp(ByVal AsAdmin As Boolean) As Boolean
+        Try
+            If AsAdmin = True Then
+                Dim dd As New ConnectMyPrinterElevationLib.ElevationHelper
+                dd.RunAppAsAdmin("ConnectMyPrinterForceDelete.exe")
+            Else
+                Shell("ConnectMyPrinterForceDelete.exe", AppWinStyle.NormalFocus)
+            End If
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function OpenWindowsPrintManagerApp(ByVal AsAdmin As Boolean) As Boolean
+        Try
+            If AsAdmin = True Then
+                Dim dd As New ConnectMyPrinterElevationLib.ElevationHelper
+                dd.RunAppAsAdmin("cmd", "", "/C start mmc C:\Windows\system32\printmanagement.msc")
+            Else
+                Dim kk As New Process
+                kk.StartInfo.FileName = "cmd"
+                kk.StartInfo.Arguments = "/C start mmc C:\Windows\system32\printmanagement.msc"
+                kk.Start()
+            End If
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function OpenSettingsConsoleApp(ByVal AsAdmin As Boolean) As Boolean
+        Try
+            If AsAdmin = True Then
+                Dim dd As New ConnectMyPrinterElevationLib.ElevationHelper
+                dd.RunAppAsAdmin("ConnectMyPrinterSettingsConsole.exe")
+            Else
+                Shell("ConnectMyPrinterSettingsConsole.exe", AppWinStyle.NormalFocus)
+            End If
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Private Sub DruckerTreiberTreiberpaketEntfernenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Click
+        OpenForceDriverDeleteApp(False)
+    End Sub
+
+    Private Sub DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Click
+        OpenForceDriverDeleteApp(True)
+    End Sub
+
+    Private Sub WindowsDruckverwaltungÖffnenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WindowsDruckverwaltungÖffnenToolStripMenuItem.Click
+        OpenWindowsPrintManagerApp(False)
+    End Sub
+
+    Private Sub WindowsDruckverwaltungÖffnenAdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Click
+        OpenWindowsPrintManagerApp(True)
+    End Sub
+
+    Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
+        If AppSettings.ShowForceDeletePrinterEntry = False Then
+            DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Visible = False
+            DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Visible = False
+        End If
+        If AppSettings.ShowPrintManagementCenterEntry = False Then
+            WindowsDruckverwaltungÖffnenToolStripMenuItem.Visible = False
+            WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Visible = False
+        End If
+        If AppSettings.ShowAppSettingsConsoleEntry = False Then
+            AnwendungseinstellungenBearbeitenToolStripMenuItem.Visible = False
+            AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Visible = False
+        End If
+    End Sub
+
+    Private Sub AnwendungseinstellungenBearbeitenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnwendungseinstellungenBearbeitenToolStripMenuItem.Click
+        OpenSettingsConsoleApp(False)
+    End Sub
+
+    Private Sub AnwendungseinstellungenBearbeitenAdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Click
+        OpenSettingsConsoleApp(True)
     End Sub
 End Class

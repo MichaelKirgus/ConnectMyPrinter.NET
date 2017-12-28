@@ -770,6 +770,15 @@
   <data name="DruckerEntfernenToolStripMenuItem.Text" xml:space="preserve">
     <value>Drucker entfernen</value>
   </data>
+  <data name="DruckerEntfernenlokalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 30</value>
+  </data>
+  <data name="DruckerEntfernenlokalToolStripMenuItem.Text" xml:space="preserve">
+    <value>Drucker entfernen (lokal)</value>
+  </data>
+  <data name="DruckerEntfernenlokalToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="DruckerNeuInstallierenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 30</value>
   </data>
@@ -834,7 +843,7 @@
     <value>False</value>
   </data>
   <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 312</value>
+    <value>269, 350</value>
   </data>
   <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
     <value>ContextMenuStrip1</value>
@@ -993,11 +1002,47 @@
   <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;DruckerEntfernenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckerEntfernenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckerEntfernenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckerNeuInstallierenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckerNeuInstallierenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckerNeuInstallierenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;StandardeinstellungenLöschenToolStripMenuItem.Name" xml:space="preserve">
     <value>StandardeinstellungenLöschenToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;StandardeinstellungenLöschenToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">
+    <value>ToolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckereigenschaftenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckereigenschaftenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckereigenschaftenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckereinstellungenToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckereinstellungenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckereinstellungenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator4.Name" xml:space="preserve">
+    <value>ToolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DruckereinstellungenExportierenToolStripMenuItem.Name" xml:space="preserve">
     <value>DruckereinstellungenExportierenToolStripMenuItem</value>
@@ -1029,40 +1074,10 @@
   <data name="&gt;&gt;OpenFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DruckerEntfernenToolStripMenuItem.Name" xml:space="preserve">
-    <value>DruckerEntfernenToolStripMenuItem</value>
+  <data name="&gt;&gt;DruckerEntfernenlokalToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckerEntfernenlokalToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;DruckerEntfernenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">
-    <value>ToolStripSeparator3</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator4.Name" xml:space="preserve">
-    <value>ToolStripSeparator4</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DruckereigenschaftenToolStripMenuItem.Name" xml:space="preserve">
-    <value>DruckereigenschaftenToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;DruckereigenschaftenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DruckereinstellungenToolStripMenuItem.Name" xml:space="preserve">
-    <value>DruckereinstellungenToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;DruckereinstellungenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DruckerNeuInstallierenToolStripMenuItem.Name" xml:space="preserve">
-    <value>DruckerNeuInstallierenToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;DruckerNeuInstallierenToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;DruckerEntfernenlokalToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

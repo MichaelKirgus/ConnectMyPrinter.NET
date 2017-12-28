@@ -134,7 +134,7 @@ Public Class PrinterCtl
         _parent.PrinterManageService.ShowPrinterSettings(Me.Tag)
     End Sub
 
-    Sub DeletePrinter()
+    Sub DeletePrinter(Optional ByVal DeleteLocalMachinePart = False)
         Try
             Dim isok As Boolean = False
 
@@ -169,8 +169,18 @@ Public Class PrinterCtl
                         _parent.PrinterDriverRemoverService.DeleteUnusedDrivers(_parent.AppSettings.PrinterAdminPath)
                     End If
                 End If
+                If _parent.AppSettings.CleanLostPrinterDriverItemsAtPrinterRemove Then
+                    Dim aa As PrinterQueueInfo
+                    aa = Me.Tag
+                    Dim ww As New ConnectMyPrinterForceDeleteLib.DeleteClass
+                    If DeleteLocalMachinePart Then
+                        ww.DeletePrinterFromRegistry(_parent.AppSettings, aa.ShareName, New ConnectMyPrinterUserListLib.UserListClass, False, "", False, True)
+                    Else
+                        ww.DeletePrinterFromRegistry(_parent.AppSettings, aa.ShareName, New ConnectMyPrinterUserListLib.UserListClass, False, "", False, _parent.AppSettings.DeleteLocalMachinePartOnUserPrinterDelete)
+                    End If
+                End If
 
-                _parent.ReloadLocalPrinters()
+                    _parent.ReloadLocalPrinters()
                 jj.Close()
             End If
         Catch ex As Exception
@@ -264,30 +274,54 @@ Public Class PrinterCtl
 
     Public Sub DeletePrinterIntJob(ByVal PrinterObj As PrinterQueueInfo, ByVal RestartPrinterSpooler As Boolean)
         Application.DoEvents()
-        _parent.PrinterManageService.PurgePrinterQueue(Me.Tag)
+        _parent.PrinterManageService.PurgePrinterQueue(PrinterObj)
         Application.DoEvents()
-        _parent.PrinterManageService.DeletePrinter(Me.Tag)
+        _parent.PrinterManageService.DeletePrinter(PrinterObj)
         Application.DoEvents()
         If _parent.AppSettings.LocalActionsNeedElevation Then
             If RestartPrinterSpooler Then
-                ElevationHelper.GenerateActionFile("RestartPrinterService", Me.Tag, _parent, Me)
+                If _parent.AppSettings.PrinterSpoolerRestartNeedElevation Then
+                    ElevationHelper.GenerateActionFile("RestartPrinterService", PrinterObj, _parent, Me)
+                End If
             End If
-            ElevationHelper.GenerateActionFile("DeletePrinterAndDriverElevated", Me.Tag, _parent, Me)
+                ElevationHelper.GenerateActionFile("DeletePrinterAndDriverElevated", PrinterObj, _parent, Me)
             If _parent.AppSettings.DeletePrinterDriverLowLevel Then
-                ElevationHelper.GenerateActionFile("TakeownPrinterDriver", Me.Tag, _parent, Me)
-                ElevationHelper.GenerateActionFile("DeletePrinterDriverFiles", Me.Tag, _parent, Me)
+                ElevationHelper.GenerateActionFile("TakeownPrinterDriver", PrinterObj, _parent, Me)
+                ElevationHelper.GenerateActionFile("DeletePrinterDriver", PrinterObj, _parent, Me)
+                ElevationHelper.GenerateActionFile("DeletePrinterDriverFiles", PrinterObj, _parent, Me)
             End If
+
             If RestartPrinterSpooler Then
-                ElevationHelper.GenerateActionFile("RestartPrinterService", Me.Tag, _parent, Me)
+                If _parent.AppSettings.PrinterSpoolerRestartNeedElevation Then
+                    ElevationHelper.GenerateActionFile("RestartPrinterService", PrinterObj, _parent, Me)
+                End If
             End If
+
             ElevationHelper.StartElevatedActions(_parent, Me)
+
+            If RestartPrinterSpooler Then
+                If _parent.AppSettings.PrinterSpoolerRestartNeedElevation = False Then
+                    _parent.PrinterManageService.RestartPrinterService()
+                End If
+            End If
         Else
             If RestartPrinterSpooler Then
                 _parent.PrinterManageService.RestartPrinterService()
             End If
             Application.DoEvents()
-            _parent.PrinterManageService.DeletePrinterAndDriverElevated(Me.Tag)
+            _parent.PrinterManageService.DeletePrinter(PrinterObj)
+            _parent.PrinterManageService.DeletePrinterDriver(PrinterObj.DriverName)
+            _parent.PrinterManageService.DeletePrinterPort(PrinterObj)
             Application.DoEvents()
+            Dim ww As New ConnectMyPrinterForceDeleteLib.DeleteClass
+            ww.DeletePrinterFromRegistry(_parent.AppSettings, PrinterObj.ShareName, New ConnectMyPrinterUserListLib.UserListClass, False, "", False, _parent.AppSettings.DeleteLocalMachinePartOnUserPrinterDelete)
+            Application.DoEvents()
+            Dim gg As New ConnectMyPrinterDriverPackagesLib.ManageDriverPackages
+            Dim dummydrv As New ConnectMyPrinterDriverPackagesLib.DriverPackageItem
+            dummydrv.DriverName = PrinterObj.DriverName
+            gg.DeleteDriver(dummydrv)
+            Application.DoEvents()
+
             If RestartPrinterSpooler Then
                 _parent.PrinterManageService.RestartPrinterService()
             End If
@@ -426,6 +460,7 @@ Public Class PrinterCtl
             DruckerNeuInstallierenToolStripMenuItem.Visible = True
             ToolStripSeparator3.Visible = True
             ToolStripSeparator4.Visible = True
+            DruckerEntfernenlokalToolStripMenuItem.Visible = True
         Else
             DruckereinstellungenExportierenToolStripMenuItem.Visible = False
             DruckereinstellungenImportierenToolStripMenuItem.Visible = False
@@ -434,6 +469,7 @@ Public Class PrinterCtl
             DruckerNeuInstallierenToolStripMenuItem.Visible = False
             ToolStripSeparator3.Visible = False
             ToolStripSeparator4.Visible = False
+            DruckerEntfernenlokalToolStripMenuItem.Visible = False
         End If
         SetSelectedState()
     End Sub
@@ -486,5 +522,9 @@ Public Class PrinterCtl
 
     Private Sub DruckerNeuInstallierenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DruckerNeuInstallierenToolStripMenuItem.Click
         ReinstallPrinter()
+    End Sub
+
+    Private Sub DruckerEntfernenlokalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DruckerEntfernenlokalToolStripMenuItem.Click
+        DeletePrinter(True)
     End Sub
 End Class

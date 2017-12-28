@@ -79,7 +79,6 @@ Module Module1
                 resultstr2 = ExecACLChange(My.Computer.FileSystem.SpecialDirectories.Temp & "\subinacl.exe", cmdstr)
                 If resultstr2.Contains("verweigert") Then
                     Console.WriteLine("Die Berechtigungen konnten nicht eingerichtet werden!")
-                    Console.Beep()
                 End If
                 If resultstr2.Contains("change(s)") Then
                     Console.WriteLine("Fertig, räume auf...")
@@ -91,7 +90,10 @@ Module Module1
             End If
 
             Threading.Thread.Sleep(100)
-            IO.File.Delete(My.Computer.FileSystem.SpecialDirectories.Temp & "\subinacl.exe")
+            Try
+                IO.File.Delete(My.Computer.FileSystem.SpecialDirectories.Temp & "\subinacl.exe")
+            Catch ex As Exception
+            End Try
 
             Dim wait As Boolean = False
             For Each item As String In My.Application.CommandLineArgs
@@ -100,11 +102,16 @@ Module Module1
                 End If
             Next
 
-            Console.WriteLine("Setzte Berechtigungen in Registry für Benutzer " & user & " in Domäne " & domain & "...")
+            Console.WriteLine("Setze Berechtigungen in Registry für Benutzer " & user & " in Domäne " & domain & "...")
             If HelperFunc.SetLocalMachineSpoolKeyPermissions(domain, user) Then
-                Console.WriteLine("Berechtigungen erfolgreich angepasst.")
+                Console.WriteLine("(1/2) Berechtigungen erfolgreich angepasst.")
             Else
-                Console.WriteLine("Berechtigungen konnten nicht angepasst werden.")
+                Console.WriteLine("(1/2) Berechtigungen konnten nicht angepasst werden.")
+            End If
+            If HelperFunc.SetHKEYUsersKeyPermissions(domain, user) Then
+                Console.WriteLine("(2/2) Berechtigungen erfolgreich angepasst.")
+            Else
+                Console.WriteLine("(2/2) Berechtigungen konnten nicht angepasst werden.")
             End If
 
             If wait = True Then
