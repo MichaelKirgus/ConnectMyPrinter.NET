@@ -359,6 +359,7 @@
 		<row><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe</td><td>{5F5254FD-15BE-42AC-B410-518485A37BE0}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterforcedeletem</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td><td>{C16D4F3F-9EEC-4139-AFCF-1CF03C1F333D}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterprintermanag</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe</td><td>{BF297908-519E-44CE-A2E1-5F474959F22A}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterregistryhand</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe</td><td>{81A3182E-0057-4B53-AC90-4D08B1F51CFB}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterrestartspool</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterSettingsConsole.Prim_re_Ausgabe</td><td>{9F4DF3C3-E6E5-4C61-908E-10BCC5483EDD}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprintersettingscons</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterSystemRestorePointLib.Prim_re_Ausgabe</td><td>{48E3DE5A-944A-4B7B-988A-D82B4771050F}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprintersystemrestor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterUACHelper.Prim_re_Ausgabe</td><td>{65B8D5E6-AC84-42A6-9192-42E42D7CCD7D}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinteruachelper.pr</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1102,6 +1103,7 @@
 		<row><td>INSTALLDIR</td><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe</td></row>
 		<row><td>INSTALLDIR</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td></row>
 		<row><td>INSTALLDIR</td><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe</td></row>
+		<row><td>INSTALLDIR</td><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe</td></row>
 		<row><td>INSTALLDIR</td><td>ConnectMyPrinterSettingsConsole.Prim_re_Ausgabe</td></row>
 		<row><td>INSTALLDIR</td><td>ConnectMyPrinterSystemRestorePointLib.Prim_re_Ausgabe</td></row>
 		<row><td>INSTALLDIR</td><td>ConnectMyPrinterUACHelper.Prim_re_Ausgabe</td></row>
@@ -1967,6 +1969,7 @@
 		<row><td>AlwaysInstall</td><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe</td></row>
 		<row><td>AlwaysInstall</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td></row>
 		<row><td>AlwaysInstall</td><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe</td></row>
+		<row><td>AlwaysInstall</td><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe</td></row>
 		<row><td>AlwaysInstall</td><td>ConnectMyPrinterSettingsConsole.Prim_re_Ausgabe</td></row>
 		<row><td>AlwaysInstall</td><td>ConnectMyPrinterSystemRestorePointLib.Prim_re_Ausgabe</td></row>
 		<row><td>AlwaysInstall</td><td>ConnectMyPrinterUACHelper.Prim_re_Ausgabe</td></row>
@@ -2010,6 +2013,7 @@
 		<row><td>connectmyprinterforcedeletem</td><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe</td><td>ConnectMyPrinterForceDeleteManageLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterForceDeleteManageLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterprintermanag</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td><td>ConnectMyPrinterPrinterManageLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterPrinterManageLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterregistryhand</td><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe</td><td>ConnectMyPrinterRegistryHandler.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRegistryHandler&gt;|Built</td><td>3</td><td/></row>
+		<row><td>connectmyprinterrestartspool</td><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe</td><td>ConnectMyPrinterRestartSpooler.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRestartSpooler&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprintersettingscons</td><td>ConnectMyPrinterSettingsConsole.Prim_re_Ausgabe</td><td>ConnectMyPrinterSettingsConsole.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterSettingsConsole&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprintersystemrestor</td><td>ConnectMyPrinterSystemRestorePointLib.Prim_re_Ausgabe</td><td>ConnectMyPrinterSystemRestorePointLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterSystemRestorePointLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinteruachelper.pr</td><td>ConnectMyPrinterUACHelper.Prim_re_Ausgabe</td><td>ConnectMyPrinterUACHelper.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterUACHelper&gt;|Built</td><td>3</td><td/></row>
@@ -2180,6 +2184,7 @@
 		<row><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe</td><td/><td/><td>_AD460FC0_B5E2_481B_89FC_376FEB289587_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td><td/><td/><td>_426EF795_C496_4915_8672_AFB6891FADDD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe</td><td/><td/><td>_6CB1485A_7D0C_429C_92B8_6F123B3716BF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe</td><td/><td/><td>_7C6BBB85_B621_4B93_B5A8_92946346DD83_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterSettingsConsole.Prim_re_Ausgabe</td><td/><td/><td>_1228D526_E6D2_4025_ABDA_3800A2FCC1A3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterSystemRestorePointLib.Prim_re_Ausgabe</td><td/><td/><td>_CC7BD0F5_1777_4697_BFE5_3062F96C9B02_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterUACHelper.Prim_re_Ausgabe</td><td/><td/><td>_40121E57_3179_4D03_B4AE_80F087F99B39_FILTER</td><td/><td/><td/><td/></row>
@@ -2485,6 +2490,7 @@
 		<row><td>ConnectMyPrinterForceDeleteManageLib</td><td>ConnectMyPrinterForceDeleteManageLib\ConnectMyPrinterForceDeleteManageLib.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterPrinterManageLib</td><td>ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterRegistryHandler</td><td>ConnectMyPrinterRegistryHandler\ConnectMyPrinterRegistryHandler.vbproj</td><td/><td>2</td></row>
+		<row><td>ConnectMyPrinterRestartSpooler</td><td>ConnectMyPrinterRestartSpooler\ConnectMyPrinterRestartSpooler.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterSettingsConsole</td><td>ConnectMyPrinterSettingsConsole\ConnectMyPrinterSettingsConsole.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterSystemRestorePointLib</td><td>ConnectMyPrinterSystemRestorePointLib\ConnectMyPrinterSystemRestorePointLib.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterUACHelper</td><td>ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj</td><td/><td>2</td></row>
@@ -3925,6 +3931,8 @@
 		<row><td>ID_STRING4</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>-433775117</td></row>
 		<row><td>ID_STRING5</td><td>1031</td><td>DRUCKE~1|Drucker verwalten</td><td>0</td><td/><td>-433744301</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-433754541</td></row>
+		<row><td>ID_STRING6</td><td>1031</td><td>DRUCKE~1|Druckerwarteschlange neu starten</td><td>0</td><td/><td>-433771083</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>NEWSHO~1|NewShortcut3</td><td>0</td><td/><td>-433721963</td></row>
 		<row><td>ID_STRING8</td><td>1031</td><td>UNGENU~1|Ungenutzte Treiberpakete entfernen</td><td>0</td><td/><td>-1910141517</td></row>
 		<row><td>ID_STRING8</td><td>1033</td><td>NEWSHO~1|NewShortcut5</td><td>0</td><td/><td>-1910153805</td></row>
 		<row><td>ID_STRING9</td><td>1031</td><td>DEINST~1|Deinstallieren</td><td>0</td><td/><td>-1910149677</td></row>
@@ -4108,6 +4116,7 @@
 		<row><td>_4E3B12E0D9D04951BE366EBE707DB7A2.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
 		<row><td>_4E5A3804FC314CBCAE4F589BFA3DE56A.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterDeleteAllPrinters\bin\Release\ConnectMyPrinterDeleteAllPrinters.exe</td><td>0</td></row>
 		<row><td>_4F1ED021448C49FF824279A6F775DB72.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterClean\bin\Release\ConnectMyPrinterClean.exe</td><td>0</td></row>
+		<row><td>_4F2894B9217847E1A06BA5F718A1D193.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
 		<row><td>_4FDE56447E2A446285B4A85923051C81.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterForceDelete\bin\Release\ConnectMyPrinterForceDelete.exe</td><td>0</td></row>
 		<row><td>_50D614722EB24025BA63218AB7307C95.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterForceDelete\bin\Release\ConnectMyPrinterForceDelete.exe</td><td>0</td></row>
 		<row><td>_52DD1F160F6C496B8DDDA92D5851F424.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
@@ -4136,10 +4145,12 @@
 		<row><td>_754C41710B174013B794925246D5FB43.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterClean\bin\Release\ConnectMyPrinterClean.exe</td><td>0</td></row>
 		<row><td>_7646FC6077034121A10DDDE22C10F724.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterCreateRestorePoint\bin\Release\ConnectMyPrinterCreateRestorePoint.exe</td><td>0</td></row>
 		<row><td>_766C4D124A6E471BB1A850772F0C31EB.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterDeleteAllPrinters\bin\Release\ConnectMyPrinterDeleteAllPrinters.exe</td><td>0</td></row>
+		<row><td>_7A62D91727FF42D6A7D84398EB556516.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterDeleteAllPrinters\bin\Release\ConnectMyPrinterDeleteAllPrinters.exe</td><td>0</td></row>
 		<row><td>_7B128A0C8E2E47D58EB5EC7012A827E3.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterForceDelete\bin\Release\ConnectMyPrinterForceDelete.exe</td><td>0</td></row>
 		<row><td>_7B1601667E89419A98A1DCC5F84F413C.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterDeleteAllPrinters\bin\Release\ConnectMyPrinterDeleteAllPrinters.exe</td><td>0</td></row>
 		<row><td>_7B1A060068A64EF382BEB51302A9A82F.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterSettingsConsole\bin\Release\ConnectMyPrinterSettingsConsole.exe</td><td>0</td></row>
 		<row><td>_7C1777463FFA4F4AA1AFCC517976A151.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
+		<row><td>_7D932EC2C95F4A9D8BBE3F2261DE01F4.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
 		<row><td>_7DECCB24AD6B4486AF6A763411937DE1.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
 		<row><td>_7EEC6B2575624BC2AD85D6D22F12692D.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
 		<row><td>_7F1959BE98D84976A16C554F70D49F1F.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
@@ -4182,9 +4193,11 @@
 		<row><td>_BB5316D52F6C4C44BF40FD625BE985AE.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterClean\bin\Release\ConnectMyPrinterClean.exe</td><td>0</td></row>
 		<row><td>_BE73DBE2C0764718A8A2D753F12CE7F9.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterForceDelete\bin\Release\ConnectMyPrinterForceDelete.exe</td><td>0</td></row>
 		<row><td>_BF08D93FF06B4B44A2650513522E956A.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterClean\bin\Release\ConnectMyPrinterClean.exe</td><td>0</td></row>
+		<row><td>_BFF0E5C5764C4876ACAD266EE408C484.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterForceDelete\bin\Release\ConnectMyPrinterForceDelete.exe</td><td>0</td></row>
 		<row><td>_Built_05B9204375914059947DEE4E15012669.exe</td><td/><td>&lt;VSSolutionFolder&gt;\ConnectMyPrinterClean\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
 		<row><td>_C01291E69E644C898F17ACC7EC3EA915.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
 		<row><td>_C0F3645072054216A8467C49ECDFEE5A.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
+		<row><td>_C10304EEE6EE4146803142E8AC6372D6.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterClean\bin\Release\ConnectMyPrinterClean.exe</td><td>0</td></row>
 		<row><td>_C15D2C119084456383DDAF5EB4A3ECA9.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterDeleteAllPrinters\bin\Release\ConnectMyPrinterDeleteAllPrinters.exe</td><td>0</td></row>
 		<row><td>_C2224DE2BFB042909C3A6E7816A4B33A.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterSettingsConsole\bin\Release\ConnectMyPrinterSettingsConsole.exe</td><td>0</td></row>
 		<row><td>_C318FBAD5C5C4EF28105F9B84712CBDE.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterForceDelete\bin\Release\ConnectMyPrinterForceDelete.exe</td><td>0</td></row>
@@ -4844,6 +4857,7 @@ QwBEAF8AUgBPAE0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>NewShortcut1</td><td>ConnectMyPrinter.NET.Prim_re_Ausgabe</td><td/><td>connec_1.net_connectmyprinter.net</td><td>2</td></row>
 		<row><td>NewShortcut10</td><td>ConnectMyPrinterCreateRestorePoint.Prim_re_Ausgabe</td><td/><td>AdminToolsFolder</td><td>2</td></row>
 		<row><td>NewShortcut11</td><td>ConnectMyPrinterForceDelete.Prim_re_Ausgabe</td><td/><td>AdminToolsFolder</td><td>2</td></row>
+		<row><td>NewShortcut3</td><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe</td><td/><td>connec_1.net_connectmyprinter.net</td><td>2</td></row>
 		<row><td>NewShortcut5</td><td>ConnectMyPrinterClean.Prim_re_Ausgabe</td><td/><td>connec_1.net_connectmyprinter.net</td><td>2</td></row>
 		<row><td>NewShortcut6</td><td>ISX_DEFAULTCOMPONENT1</td><td/><td>connec_1.net_connectmyprinter.net</td><td>2</td></row>
 		<row><td>NewShortcut8</td><td>ConnectMyPrinterClean.Prim_re_Ausgabe</td><td/><td>AdminToolsFolder</td><td>2</td></row>
@@ -4937,7 +4951,8 @@ QwBEAF8AUgBPAE0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>NewShortcut1</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING4##</td><td>ConnectMyPrinter.NET.Prim_re_Ausgabe</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut10</td><td>AdminToolsFolder</td><td>##ID_STRING13##</td><td>ConnectMyPrinterCreateRestorePoint.Prim_re_Ausgabe</td><td>AlwaysInstall</td><td/><td/><td/><td>NewShortcut10_850E7B831F3C460EAD76DE51028899FA.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut11</td><td>AdminToolsFolder</td><td>##ID_STRING14##</td><td>ConnectMyPrinterForceDelete.Prim_re_Ausgabe</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>NewShortcut2</td><td>DesktopFolder</td><td>##ID_STRING5##</td><td>ConnectMyPrinter.NET.Prim_re_Ausgabe</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut2</td><td>DesktopFolder</td><td>##ID_STRING5##</td><td>ConnectMyPrinter.NET.Prim_re_Ausgabe</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut3</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING6##</td><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut5</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING8##</td><td>ConnectMyPrinterClean.Prim_re_Ausgabe</td><td>AlwaysInstall</td><td/><td/><td/><td>NewShortcut5_17B5E1786FA14F64B0677CA67FE24F92.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut6</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING9##</td><td>ISX_DEFAULTCOMPONENT1</td><td>[SystemFolder]MsiExec.exe</td><td>/x [ProductCode]</td><td/><td/><td>NewShortcut6_1ABB0F327AF74E15A115A304CA34538B.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut8</td><td>AdminToolsFolder</td><td>##ID_STRING11##</td><td>ConnectMyPrinterClean.Prim_re_Ausgabe</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>

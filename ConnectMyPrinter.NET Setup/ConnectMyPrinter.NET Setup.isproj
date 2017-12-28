@@ -89,6 +89,10 @@
 			<Name>ConnectMyPrinterRegistryHandler</Name>
 			<Project>{06C6B81B-05BF-4764-A3F4-A85143ECD2E8}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterRestartSpooler\ConnectMyPrinterRestartSpooler.vbproj">
+			<Name>ConnectMyPrinterRestartSpooler</Name>
+			<Project>{D3ED7BD7-4566-4489-A88D-D26C0680F78E}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterSettingsConsole\ConnectMyPrinterSettingsConsole.vbproj">
 			<Name>ConnectMyPrinterSettingsConsole</Name>
 			<Project>{AE1E6B2D-A9A1-4391-8BFC-C2C6FD089D2B}</Project>
