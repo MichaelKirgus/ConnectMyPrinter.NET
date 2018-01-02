@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("ConnectMyPrinterRegistryHandler")> 
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("ConnectMyPrinterRegistryHandler")>
+<Assembly: AssemblyDescription("Führt Aktionen in der Registry durch")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinterRegistryHandler")>
-<Assembly: AssemblyCopyright("Copyright ©  2017 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2017-2018 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>

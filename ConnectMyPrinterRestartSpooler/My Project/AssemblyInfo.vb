@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Einfaches Tool zum Neustarten der Druckerwarteschlange")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinterRestartSpooler")>
-<Assembly: AssemblyCopyright("Copyright ©  2017 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2017-2018 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>

@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Tool zum Anpassen von ACLs für den Spooler-Dienst")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinterACLHelper")>
-<Assembly: AssemblyCopyright("Copyright ©  2016-2017 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2016-2018 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter")>
 
 <Assembly: ComVisible(False)>

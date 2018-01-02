@@ -8,12 +8,12 @@ Imports System.Runtime.InteropServices
 
 ' Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("ConnectMyPrinterDriverPackagesLib")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ConnectMyPrinterDriverPackagesLib")> 
-<Assembly: AssemblyCopyright("Copyright ©  2017")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTitle("ConnectMyPrinterDriverPackagesLib")>
+<Assembly: AssemblyDescription("Enthält Methoden und Funktionen zum Verwalten von Treibern sowie Treiberpaketen")>
+<Assembly: AssemblyCompany("Michael Kirgus")>
+<Assembly: AssemblyProduct("ConnectMyPrinterDriverPackagesLib")>
+<Assembly: AssemblyCopyright("Copyright ©  2017-2018 Michael Kirgus")>
+<Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>
 

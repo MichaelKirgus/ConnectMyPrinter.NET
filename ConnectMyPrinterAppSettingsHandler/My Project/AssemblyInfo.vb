@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Enthält die Methoden zum Verwalten der Einstellungen")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinter.NET")>
-<Assembly: AssemblyCopyright("Copyright ©  2016 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2016-2018 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>

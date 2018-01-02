@@ -16,6 +16,22 @@ Module Module1
         Dim FormModule As Form1 = New Form1
 
         Console.WriteLine("Lade Einstellungsdatei...")
+        'Laden der Einstellungen für alle Benutzer
+        If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile) Then
+            AppSettingFile = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile
+        Else
+            'Laden der Einstellungen (über AppData)
+            If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
+                AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
+            End If
+        End If
+
+        'Befehlszeilenparameter prüfen
+        For Each argument In My.Application.CommandLineArgs
+            If argument.StartsWith("/SETTINGS|") Then
+                AppSettingFile = argument.Split("|")(1)
+            End If
+        Next
         AppSettings = FormModule.LoadSettings(AppSettingFile)
 
         'Entferne ungenutzte Treiberpakete

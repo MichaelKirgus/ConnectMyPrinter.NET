@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.ListView1 = New System.Windows.Forms.ListView()
@@ -29,14 +29,16 @@ Partial Class Form1
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView2 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -87,7 +89,7 @@ Partial Class Form1
         Me.ListView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11})
+        Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
         Me.ListView2.FullRowSelect = True
         Me.ListView2.Location = New System.Drawing.Point(3, 3)
         Me.ListView2.Name = "ListView2"
@@ -95,26 +97,6 @@ Partial Class Form1
         Me.ListView2.TabIndex = 3
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = "Treiber"
-        Me.ColumnHeader8.Width = 323
-        '
-        'ColumnHeader9
-        '
-        Me.ColumnHeader9.Text = "Name (intern)"
-        Me.ColumnHeader9.Width = 191
-        '
-        'ColumnHeader10
-        '
-        Me.ColumnHeader10.Text = "CAB-Pfad"
-        Me.ColumnHeader10.Width = 184
-        '
-        'ColumnHeader11
-        '
-        Me.ColumnHeader11.Text = "INF-Pfad"
-        Me.ColumnHeader11.Width = 172
         '
         'Button2
         '
@@ -133,7 +115,7 @@ Partial Class Form1
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(174, 25)
         Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Treiberpaket + Treiber entfernen"
+        Me.Button3.Text = "Treiber + Treiberpaket entfernen"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
@@ -168,6 +150,36 @@ Partial Class Form1
         Me.SplitContainer1.SplitterDistance = 274
         Me.SplitContainer1.TabIndex = 7
         '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Treiber"
+        Me.ColumnHeader4.Width = 259
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Version"
+        Me.ColumnHeader5.Width = 106
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Datum"
+        Me.ColumnHeader6.Width = 106
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Name (intern)"
+        Me.ColumnHeader8.Width = 189
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "CAB-Dateipfad"
+        Me.ColumnHeader9.Width = 107
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "INF-Dateipfad"
+        Me.ColumnHeader10.Width = 107
+        '
         'Form1
         '
         Me.AcceptButton = Me.Button1
@@ -193,11 +205,13 @@ Partial Class Form1
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ListView2 As ListView
     Friend WithEvents Button2 As Button
-    Friend WithEvents ColumnHeader8 As ColumnHeader
-    Friend WithEvents ColumnHeader9 As ColumnHeader
-    Friend WithEvents ColumnHeader10 As ColumnHeader
-    Friend WithEvents ColumnHeader11 As ColumnHeader
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents ColumnHeader10 As ColumnHeader
 End Class

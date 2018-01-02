@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("ConnectMyPrinterSystemRestorePointLib")> 
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("ConnectMyPrinterSystemRestorePointLib")>
+<Assembly: AssemblyDescription("Erstellt einen Systemwiederherstellungspunkt")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinter.NET")>
-<Assembly: AssemblyCopyright("Copyright ©  2017 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2017-2018 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>

@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("ConnectMyPrinterForceDeleteManageLib")> 
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("ConnectMyPrinterForceDeleteManageLib")>
+<Assembly: AssemblyDescription("Verwaltet Methoden und Funktionen für das Löschen von Druckern")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinter.NET")>
-<Assembly: AssemblyCopyright("Copyright ©  2017 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2017-2018 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>

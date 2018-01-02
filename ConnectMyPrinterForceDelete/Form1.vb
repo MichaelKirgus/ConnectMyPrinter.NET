@@ -9,11 +9,18 @@ Public Class Form1
     Public AppSettingFile As String = "AppSettings.xml"
     Public AppSettings As ConnectMyPrinterAppSettingsHandler.AppSettingsClass
     Public RegistryHelperHandler As New ConnectMyPrinterRegistryHandler.RegistryHandler
+    Public ElevatedHelper As New ConnectMyPrinterACLHelperLib.HelperFunctions
+    Public ActionRaised As Boolean = False
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Laden der Einstellungen (über AppData)
-        If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
-            AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
+        'Laden der Einstellungen für alle Benutzer
+        If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile) Then
+            AppSettingFile = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile
+        Else
+            'Laden der Einstellungen (über AppData)
+            If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
+                AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
+            End If
         End If
 
         'Befehlszeilenparameter prüfen
@@ -25,25 +32,34 @@ Public Class Form1
 
         'Laden der Einstellungen (im Programmverzeichnis oder über Befehlszeile)
         AppSettings = LoadSettings(AppSettingFile)
-        If AppSettings.ForceAdministratorRightsOnForceDelete Then
-            Dim ii As New Process
-            ii.StartInfo.FileName = My.Application.Info.DirectoryPath & "\" & My.Application.Info.AssemblyName & ".exe"
-            ii.StartInfo.Verb = "runas"
-            Dim addcmd As String
-            addcmd = ""
-            Try
-                addcmd = " " & My.Application.CommandLineArgs(0)
-            Catch ex As Exception
-            End Try
-            ii.StartInfo.Arguments = addcmd
-            ii.Start()
-            Application.Exit()
+
+        'Prüfen auf Administratorrechte
+        If ElevatedHelper.IsAdmin = False Then
+            If AppSettings.ForceAdministratorRightsOnForceDelete Then
+                Dim ii As New Process
+                ii.StartInfo.FileName = My.Application.Info.DirectoryPath & "\" & My.Application.Info.AssemblyName & ".exe"
+                ii.StartInfo.Verb = "runas"
+                Dim addcmd As String
+                addcmd = ""
+                Try
+                    addcmd = " " & My.Application.CommandLineArgs(0)
+                Catch ex As Exception
+                End Try
+                ii.StartInfo.Arguments = addcmd
+                ii.Start()
+                Application.Exit()
+            End If
+            If AppSettings.AllowForceDeletePrinterStartWithoutAdminRights Then
+                If AppSettings.ShowForceDeletePrinterNonAdminMessageAtStart Then
+                    MsgBox("Die Anwendung wird ohne Admin-Rechte ausgeführt. Drucker können nur für den aktuellen Benutzer gelöscht werden. Dies kann zu Problemen beim Löschen Treiberpaketen sowie Treibern führen.", MsgBoxStyle.Critical)
+                End If
+            Else
+                MsgBox("Benutzer mit normalen Benutzerrechten dürfen diese Anwendung nicht starten.", MsgBoxStyle.Exclamation)
+                Application.Exit()
+            End If
+        Else
         End If
 
-        Dim aclhelp As New ConnectMyPrinterACLHelperLib.HelperFunctions
-        If Not aclhelp.IsAdmin Then
-            MsgBox("Die Anwendung wird ohne Admin-Rechte ausgeführt. Drucker können nur für den aktuellen Benutzer gelöscht werden. Dies kann zu Problemen beim Löschen Treiberpaketen sowei Treibern führen.", MsgBoxStyle.Critical)
-        End If
         LoadAllItems()
     End Sub
 
@@ -88,7 +104,19 @@ Public Class Form1
 
         For Each item As ConnectMyPrinterDriverPackagesLib.DriverPackageItem In ii
             Dim aa As New ListViewItem
-            aa.Text = "[Treiberpaket] " & item.DriverName
+            If item.DriverName = "" Then
+                aa.Text = "[Treiberpaket] (Von keinem Drucker genutzt)"
+            Else
+                aa.Text = "[Treiberpaket] " & item.DriverName
+            End If
+
+            aa.SubItems.Add("")
+            If Not item.CabPath = "" Then
+                aa.SubItems.Add(hh.GetDriverCABFileCreationTime(item.CabPath))
+            Else
+                aa.SubItems.Add("")
+            End If
+
             aa.SubItems.Add(item.DriverKeyName)
             aa.SubItems.Add(item.CabPath)
             aa.SubItems.Add(item.DriverStorePath)
@@ -104,16 +132,22 @@ Public Class Form1
         For Each item As ConnectMyPrinterDriverPackagesLib.DriverPackageItem In uu
             Dim aa As New ListViewItem
             aa.Text = "[Treiber] " & item.DriverName
-            aa.SubItems.Add("")
-            aa.SubItems.Add("")
+            aa.SubItems.Add(item.DriverVersion)
+            aa.SubItems.Add(item.DriverDate)
+            aa.SubItems.Add(item.DriverKeyName)
+            aa.SubItems.Add(item.CabPath)
             aa.SubItems.Add(item.DriverStorePath)
             aa.Tag = item
             ListView2.Items.Add(aa)
         Next
+
+        ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
+        ListView2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
     End Sub
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ActionRaised = True
         For Each ww As ListViewItem In ListView1.SelectedItems
             Dim AA As New ConnectMyPrinterForceDeleteLib.DeleteClass
             AA.DeletePrinterFromRegistry(AppSettings, ww.SubItems(1).Text, ww.Tag, True)
@@ -153,6 +187,7 @@ Public Class Form1
     End Function
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ActionRaised = True
         For Each ww As ListViewItem In ListView2.SelectedItems
             Dim AA As New ConnectMyPrinterDriverPackagesLib.ManageDriverPackages
             AA.DeleteDriverPacket(ww.Tag)
@@ -161,6 +196,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        ActionRaised = True
         For Each ww As ListViewItem In ListView2.SelectedItems
             Dim AA As New ConnectMyPrinterDriverPackagesLib.ManageDriverPackages
             AA.DeleteDriver(ww.Tag, True)
@@ -169,6 +205,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ActionRaised = True
         For Each ww As ListViewItem In ListView2.SelectedItems
             Dim AA As New ConnectMyPrinterDriverPackagesLib.ManageDriverPackages
             AA.DeleteDriverPacket(ww.Tag)
@@ -179,10 +216,11 @@ Public Class Form1
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Try
-            Me.UseWaitCursor = True
-            Dim pp As New ConnectMyPrinterPrinterManageLib.ManagePrinter
-            pp.RestartPrinterService()
-            Me.UseWaitCursor = False
+            If ActionRaised Then
+                Me.UseWaitCursor = True
+                Shell("ConnectMyPrinterRestartSpooler.exe", AppWinStyle.NormalFocus, True)
+                Me.UseWaitCursor = False
+            End If
         Catch ex As Exception
         End Try
     End Sub

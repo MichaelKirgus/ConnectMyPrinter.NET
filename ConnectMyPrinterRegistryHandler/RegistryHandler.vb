@@ -2,6 +2,7 @@
 Imports Microsoft.Win32
 
 Public Class RegistryHandler
+    Public LastError As String = ""
     Public Function GetAllUsers() As List(Of UserListClass)
         Try
             Dim qq As New List(Of UserListClass)
@@ -15,19 +16,22 @@ Public Class RegistryHandler
                     Dim pp As RegistryKey
                     pp = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\" & kk._KEY, False)
                     Dim tmpuser As String
-                    tmpuser = pp.GetValue("ProfileImagePath")
                     Try
+                        tmpuser = pp.GetValue("ProfileImagePath")
                         kk._Username = tmpuser.Split("\")(2)
                     Catch ex As Exception
+                        LastError = Err.Description
                         kk._Username = "Unbekannt"
                     End Try
                     qq.Add(kk)
                 Catch ex As Exception
+                    LastError = Err.Description
                 End Try
             Next
 
             Return qq
         Catch ex As Exception
+            LastError = Err.Description
             Return New List(Of UserListClass)
         End Try
     End Function
@@ -36,7 +40,7 @@ Public Class RegistryHandler
         Try
             Dim _res As New List(Of String)
             Dim ww As RegistryKey
-            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
+            ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers", False)
             For Each item As String In ww.GetSubKeyNames
                 Try
                     _res.Add(item)
@@ -46,6 +50,7 @@ Public Class RegistryHandler
 
             Return _res
         Catch ex As Exception
+            LastError = Err.Description
             Return New List(Of String)
         End Try
     End Function
@@ -63,6 +68,7 @@ Public Class RegistryHandler
 
             Return jj
         Catch ex As Exception
+            LastError = Err.Description
             Return New List(Of String)
         End Try
     End Function

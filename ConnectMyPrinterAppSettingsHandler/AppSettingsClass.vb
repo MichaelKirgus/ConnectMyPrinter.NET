@@ -60,6 +60,9 @@ Imports ConnectMyPrinterEnumerationLib
     Property DoubleClickActionOnPrinterItem As DoubleClickActionOnPrinterItemAction = DoubleClickActionOnPrinterItemAction.ShowPrinterDriverSettingsDialog
     Property ShowRestartPrinterQueueButton As Boolean = True
     Property AllowUserDeleteLocalPrinter As Boolean = True
+    Property AllowForceDeletePrinterStartWithoutAdminRights As Boolean = True
+    Property ShowForceDeletePrinterNonAdminMessageAtStart As Boolean = True
+    Property AllowDeleteAllPrintersStartWithoutAdminRights As Boolean = True
     Property ShowDriverNotifications As Boolean = True
     Property ShowAdvancedPrinterListButton As Boolean = True
     Property ShowPrintManagementCenterEntry As Boolean = True

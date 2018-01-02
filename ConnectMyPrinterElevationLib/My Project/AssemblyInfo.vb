@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("ConnectMyPrinterElevationLib")> 
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("ConnectMyPrinterElevationLib")>
+<Assembly: AssemblyDescription("Sichert die Erkennung sowie die Überwachung von UAC-Aktionen")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinterElevationLib")>
-<Assembly: AssemblyCopyright("Copyright ©  2017 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2017-2018 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>

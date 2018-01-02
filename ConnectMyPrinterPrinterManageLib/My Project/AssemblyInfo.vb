@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Programmbibliothek zum Verwalten von Druckern sowie Druckertreibern")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinterPrinter.NET")>
-<Assembly: AssemblyCopyright("Copyright ©  2016-2017 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2016-2018 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinterPrinter.NET")>
 
 <Assembly: ComVisible(False)>

@@ -131,6 +131,10 @@
       <Project>{2FFB39F5-85AB-405B-8AB7-D3404312B088}</Project>
       <Name>ConnectMyPrinter.NET</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterACLHelperLib\ConnectMyPrinterACLHelperLib.vbproj">
+      <Project>{95c18515-2072-4961-a0ef-8fbdb893810f}</Project>
+      <Name>ConnectMyPrinterACLHelperLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
       <Project>{AE01B7FF-C216-4752-B4FF-D6956A772D44}</Project>
       <Name>ConnectMyPrinterAppSettingsHandler</Name>

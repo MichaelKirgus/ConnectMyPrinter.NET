@@ -94,6 +94,14 @@ Public Class ManageDriverPackages
                                 Dim ww2 As RegistryKey
                                 ww2 = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\Print\Environments\" & item & "\" & item2 & "\" & item3 & "\" & item4, False)
                                 Package.DriverStorePath = ww2.GetValue("InfPath")
+
+                                Try
+                                    Package.DriverVersion = ww2.GetValue("DriverVersion")
+                                    Package.DriverDate = ww2.GetValue("DriverDate")
+                                    Package.DriverKeyName = ww2.GetValue("Driver")
+                                Catch ex As Exception
+                                End Try
+
                                 Package.DriverName = item4
                                 oo.Add(Package)
                             Next
@@ -105,6 +113,15 @@ Public Class ManageDriverPackages
             Return oo
         Catch ex As Exception
             Return New List(Of DriverPackageItem)
+        End Try
+    End Function
+
+    Public Function GetDriverCABFileCreationTime(ByVal File As String) As String
+        Try
+            Dim bb As New IO.FileInfo(File)
+            Return bb.CreationTime.ToShortDateString
+        Catch ex As Exception
+            Return ""
         End Try
     End Function
 
@@ -137,6 +154,32 @@ Public Class ManageDriverPackages
                                         IO.Directory.Delete(qq.DirectoryName, True)
                                     End If
                                 End If
+                                Dim depfiles As String()
+                                depfiles = ww2.GetValue("Dependent Files")
+                                Dim x86driverbasicpath As String = "%SystemRoot%\System32\spool\drivers\W32X86\3"
+                                Dim x64driverbasicpath As String = "%SystemRoot%\System32\spool\drivers\x64\3"
+                                For Each files As String In IO.Directory.GetFiles(x86driverbasicpath)
+                                    Dim filename As New IO.FileInfo(files)
+                                    For Each drvfile As String In depfiles
+                                        If filename.Name.ToLower = drvfile.ToLower Then
+                                            Try
+                                                My.Computer.FileSystem.DeleteFile(files)
+                                            Catch ex As Exception
+                                            End Try
+                                        End If
+                                    Next
+                                Next
+                                For Each files As String In IO.Directory.GetFiles(x64driverbasicpath)
+                                    Dim filename As New IO.FileInfo(files)
+                                    For Each drvfile As String In depfiles
+                                        If filename.Name.ToLower = drvfile.ToLower Then
+                                            Try
+                                                My.Computer.FileSystem.DeleteFile(files)
+                                            Catch ex As Exception
+                                            End Try
+                                        End If
+                                    Next
+                                Next
                             Next
                         Next
                     Next
