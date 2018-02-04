@@ -31,15 +31,15 @@ Partial Class AboutFrm
         Me.MetroTabControl1 = New MetroFramework.Controls.MetroTabControl()
         Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
         Me.MetroTextBox1 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
-        Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
         Me.MetroTabPage3 = New MetroFramework.Controls.MetroTabPage()
         Me.MetroTextBox3 = New MetroFramework.Controls.MetroTextBox()
+        Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
+        Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
-        Me.MetroTabPage2.SuspendLayout()
         Me.MetroTabPage3.SuspendLayout()
+        Me.MetroTabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -75,8 +75,8 @@ Partial Class AboutFrm
         'MetroTabControl1
         '
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
-        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage3)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
+        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage3)
         resources.ApplyResources(Me.MetroTabControl1, "MetroTabControl1")
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 2
@@ -98,22 +98,6 @@ Partial Class AboutFrm
         Me.MetroTextBox1.ReadOnly = True
         Me.MetroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
         '
-        'MetroTabPage2
-        '
-        Me.MetroTabPage2.Controls.Add(Me.MetroTextBox2)
-        Me.MetroTabPage2.HorizontalScrollbarBarColor = True
-        resources.ApplyResources(Me.MetroTabPage2, "MetroTabPage2")
-        Me.MetroTabPage2.Name = "MetroTabPage2"
-        Me.MetroTabPage2.VerticalScrollbarBarColor = True
-        '
-        'MetroTextBox2
-        '
-        resources.ApplyResources(Me.MetroTextBox2, "MetroTextBox2")
-        Me.MetroTextBox2.Multiline = True
-        Me.MetroTextBox2.Name = "MetroTextBox2"
-        Me.MetroTextBox2.ReadOnly = True
-        Me.MetroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        '
         'MetroTabPage3
         '
         Me.MetroTabPage3.Controls.Add(Me.MetroTextBox3)
@@ -129,6 +113,22 @@ Partial Class AboutFrm
         Me.MetroTextBox3.Name = "MetroTextBox3"
         Me.MetroTextBox3.ReadOnly = True
         Me.MetroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        '
+        'MetroTabPage2
+        '
+        Me.MetroTabPage2.Controls.Add(Me.MetroTextBox2)
+        Me.MetroTabPage2.HorizontalScrollbarBarColor = True
+        resources.ApplyResources(Me.MetroTabPage2, "MetroTabPage2")
+        Me.MetroTabPage2.Name = "MetroTabPage2"
+        Me.MetroTabPage2.VerticalScrollbarBarColor = True
+        '
+        'MetroTextBox2
+        '
+        resources.ApplyResources(Me.MetroTextBox2, "MetroTextBox2")
+        Me.MetroTextBox2.Multiline = True
+        Me.MetroTextBox2.Name = "MetroTextBox2"
+        Me.MetroTextBox2.ReadOnly = True
+        Me.MetroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both
         '
         'AboutFrm
         '
@@ -154,8 +154,8 @@ Partial Class AboutFrm
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MetroTabControl1.ResumeLayout(False)
         Me.MetroTabPage1.ResumeLayout(False)
-        Me.MetroTabPage2.ResumeLayout(False)
         Me.MetroTabPage3.ResumeLayout(False)
+        Me.MetroTabPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

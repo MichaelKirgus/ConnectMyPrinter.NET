@@ -6547,24 +6547,24 @@
   <data name="$this.MinimumSize" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>470, 613</value>
   </data>
-  <data name="LoadAllLocalPrinters.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  <metadata name="LoadAllLocalPrinters.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>350, 19</value>
-  </data>
-  <data name="$this.Localizable" xml:space="preserve" type="System.Boolean, mscorlib">
+  </metadata>
+  <metadata name="$this.Localizable" xml:space="preserve" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
-  <data name="LocalPrinterIdleWorker.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="LocalPrinterIdleWorker.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>512, 19</value>
-  </data>
-  <data name="LocalPrinterChangeTimer.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="LocalPrinterChangeTimer.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>688, 19</value>
-  </data>
-  <data name="LoadAllPrintersAsync.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="LoadAllPrintersAsync.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>20, 19</value>
-  </data>
-  <data name="RestartPrinterService.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="RestartPrinterService.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>876, 19</value>
-  </data>
+  </metadata>
   <data name="Button5.Enabled" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -6601,9 +6601,9 @@
   <data name="AdditionalInfoRTF.Text" xml:space="preserve">
     <value></value>
   </data>
-  <data name="ContextMenuStrip1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  <metadata name="ContextMenuStrip1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1040, 19</value>
-  </data>
+  </metadata>
   <data name="DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
   </data>
@@ -6625,4 +6625,7 @@
   <data name="ContextMenuStrip1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>312, 158</value>
   </data>
+  <metadata name="ToolTip2.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

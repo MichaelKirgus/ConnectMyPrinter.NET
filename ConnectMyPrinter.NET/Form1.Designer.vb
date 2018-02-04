@@ -45,6 +45,13 @@ Partial Class Form1
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.LoadAllLocalPrinters = New System.ComponentModel.BackgroundWorker()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.DruckerTreiberTreiberpaketEntfernenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WindowsDruckverwaltungÖffnenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WindowsDruckverwaltungÖffnenAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnwendungseinstellungenBearbeitenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnwendungseinstellungenBearbeitenAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -57,22 +64,15 @@ Partial Class Form1
         Me.Button5 = New System.Windows.Forms.Button()
         Me.RestartPrinterService = New System.ComponentModel.BackgroundWorker()
         Me.AdditionalInfoRTF = New System.Windows.Forms.RichTextBox()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.DruckerTreiberTreiberpaketEntfernenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.WindowsDruckverwaltungÖffnenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.WindowsDruckverwaltungÖffnenAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AnwendungseinstellungenBearbeitenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AnwendungseinstellungenBearbeitenAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
         Me.MetroPanel1.SuspendLayout()
         Me.MetroTabPage2.SuspendLayout()
         Me.MetroPanel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LoadAllPrintersAsync
@@ -242,6 +242,45 @@ Partial Class Form1
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.BackColor = System.Drawing.Color.White
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DruckerTreiberTreiberpaketEntfernenToolStripMenuItem, Me.DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem, Me.WindowsDruckverwaltungÖffnenToolStripMenuItem, Me.WindowsDruckverwaltungÖffnenAdminToolStripMenuItem, Me.AnwendungseinstellungenBearbeitenToolStripMenuItem, Me.AnwendungseinstellungenBearbeitenAdminToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.ContextMenuStrip1.ShowImageMargin = False
+        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
+        '
+        'DruckerTreiberTreiberpaketEntfernenToolStripMenuItem
+        '
+        Me.DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Name = "DruckerTreiberTreiberpaketEntfernenToolStripMenuItem"
+        resources.ApplyResources(Me.DruckerTreiberTreiberpaketEntfernenToolStripMenuItem, "DruckerTreiberTreiberpaketEntfernenToolStripMenuItem")
+        '
+        'DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem
+        '
+        Me.DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Name = "DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem"
+        resources.ApplyResources(Me.DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem, "DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem")
+        '
+        'WindowsDruckverwaltungÖffnenToolStripMenuItem
+        '
+        Me.WindowsDruckverwaltungÖffnenToolStripMenuItem.Name = "WindowsDruckverwaltungÖffnenToolStripMenuItem"
+        resources.ApplyResources(Me.WindowsDruckverwaltungÖffnenToolStripMenuItem, "WindowsDruckverwaltungÖffnenToolStripMenuItem")
+        '
+        'WindowsDruckverwaltungÖffnenAdminToolStripMenuItem
+        '
+        Me.WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Name = "WindowsDruckverwaltungÖffnenAdminToolStripMenuItem"
+        resources.ApplyResources(Me.WindowsDruckverwaltungÖffnenAdminToolStripMenuItem, "WindowsDruckverwaltungÖffnenAdminToolStripMenuItem")
+        '
+        'AnwendungseinstellungenBearbeitenToolStripMenuItem
+        '
+        Me.AnwendungseinstellungenBearbeitenToolStripMenuItem.Name = "AnwendungseinstellungenBearbeitenToolStripMenuItem"
+        resources.ApplyResources(Me.AnwendungseinstellungenBearbeitenToolStripMenuItem, "AnwendungseinstellungenBearbeitenToolStripMenuItem")
+        '
+        'AnwendungseinstellungenBearbeitenAdminToolStripMenuItem
+        '
+        Me.AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Name = "AnwendungseinstellungenBearbeitenAdminToolStripMenuItem"
+        resources.ApplyResources(Me.AnwendungseinstellungenBearbeitenAdminToolStripMenuItem, "AnwendungseinstellungenBearbeitenAdminToolStripMenuItem")
+        '
         'Button2
         '
         resources.ApplyResources(Me.Button2, "Button2")
@@ -322,45 +361,6 @@ Partial Class Form1
         Me.AdditionalInfoRTF.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.AdditionalInfoRTF.Name = "AdditionalInfoRTF"
         '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.BackColor = System.Drawing.Color.White
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DruckerTreiberTreiberpaketEntfernenToolStripMenuItem, Me.DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem, Me.WindowsDruckverwaltungÖffnenToolStripMenuItem, Me.WindowsDruckverwaltungÖffnenAdminToolStripMenuItem, Me.AnwendungseinstellungenBearbeitenToolStripMenuItem, Me.AnwendungseinstellungenBearbeitenAdminToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ContextMenuStrip1.ShowImageMargin = False
-        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
-        '
-        'DruckerTreiberTreiberpaketEntfernenToolStripMenuItem
-        '
-        Me.DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Name = "DruckerTreiberTreiberpaketEntfernenToolStripMenuItem"
-        resources.ApplyResources(Me.DruckerTreiberTreiberpaketEntfernenToolStripMenuItem, "DruckerTreiberTreiberpaketEntfernenToolStripMenuItem")
-        '
-        'DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem
-        '
-        Me.DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Name = "DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem"
-        resources.ApplyResources(Me.DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem, "DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem")
-        '
-        'WindowsDruckverwaltungÖffnenToolStripMenuItem
-        '
-        Me.WindowsDruckverwaltungÖffnenToolStripMenuItem.Name = "WindowsDruckverwaltungÖffnenToolStripMenuItem"
-        resources.ApplyResources(Me.WindowsDruckverwaltungÖffnenToolStripMenuItem, "WindowsDruckverwaltungÖffnenToolStripMenuItem")
-        '
-        'WindowsDruckverwaltungÖffnenAdminToolStripMenuItem
-        '
-        Me.WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Name = "WindowsDruckverwaltungÖffnenAdminToolStripMenuItem"
-        resources.ApplyResources(Me.WindowsDruckverwaltungÖffnenAdminToolStripMenuItem, "WindowsDruckverwaltungÖffnenAdminToolStripMenuItem")
-        '
-        'AnwendungseinstellungenBearbeitenToolStripMenuItem
-        '
-        Me.AnwendungseinstellungenBearbeitenToolStripMenuItem.Name = "AnwendungseinstellungenBearbeitenToolStripMenuItem"
-        resources.ApplyResources(Me.AnwendungseinstellungenBearbeitenToolStripMenuItem, "AnwendungseinstellungenBearbeitenToolStripMenuItem")
-        '
-        'AnwendungseinstellungenBearbeitenAdminToolStripMenuItem
-        '
-        Me.AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Name = "AnwendungseinstellungenBearbeitenAdminToolStripMenuItem"
-        resources.ApplyResources(Me.AnwendungseinstellungenBearbeitenAdminToolStripMenuItem, "AnwendungseinstellungenBearbeitenAdminToolStripMenuItem")
-        '
         'Form1
         '
         Me.AcceptButton = Me.MetroButton1
@@ -396,9 +396,9 @@ Partial Class Form1
         Me.MetroTabPage2.ResumeLayout(False)
         Me.MetroPanel2.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

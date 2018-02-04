@@ -43,6 +43,8 @@ Public Class EnumeratePrinters
         End Try
     End Function
 
+
+
     Public Function InternalLocalPrinterCollector(ByVal EnumerateLocalPrinters As Boolean) As List(Of PrintQueueCollection)
         Try
             'Initialisierung des PrintServer-Objekts

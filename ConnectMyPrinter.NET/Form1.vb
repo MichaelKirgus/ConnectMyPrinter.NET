@@ -28,6 +28,7 @@ Public Class Form1
     Public MultipleSelectionEnabled As Boolean = False
     Public ComboBoxSelected As Boolean = False
     Public UserCanControlSpooler As Boolean = False
+    Public PrinterCollectReturnState As Integer = 0
 
     Public IsExpanded As Boolean = False
     Public CollapsedHeight As Integer = 160
@@ -277,7 +278,9 @@ Public Class Form1
     Public Sub ReloadLocalPrinters()
         Try
             If Not LoadAllLocalPrinters.IsBusy Then
-                MetroProgressSpinner2.Visible = True
+                If AppSettings.ShowProgressCircleOnEvents Then
+                    MetroProgressSpinner2.Visible = True
+                End If
                 Application.DoEvents()
                 LoadAllLocalPrinters.RunWorkerAsync()
             End If
@@ -442,8 +445,47 @@ Public Class Form1
         Try
             Dim result As New List(Of PrinterQueueInfo)
 
+            Dim timeout As New Stopwatch
+            If Not AppSettings.MaxPrinterCollectTime = 0 Then
+                timeout.Start()
+            End If
+
             For Each item As PrintServerItem In AppSettings.PrintServers
-                result.AddRange(GetPrinterQueries(item.PrintServerName))
+                If item.RequestPing Then
+                    Try
+                        If My.Computer.Network.Ping(item.PrintServerName, item.PingTimeout) Then
+                            result.AddRange(GetPrinterQueries(item.PrintServerName))
+                        Else
+                            PrinterCollectReturnState = 2
+                            If AppSettings.CancelCollectionOnPrintServerNotAvailable Then
+                                If timeout.IsRunning Then
+                                    timeout.Stop()
+                                End If
+                                Exit For
+                            End If
+                        End If
+                    Catch ex As Exception
+                        'Eine Ping Exception ist aufgetreten, Host oder Netzwertk nicht erreichbar...
+                        PrinterCollectReturnState = 2
+                        If AppSettings.CancelCollectionOnPrintServerNotAvailable Then
+                            If timeout.IsRunning Then
+                                timeout.Stop()
+                            End If
+                            Exit For
+                        End If
+                    End Try
+
+                Else
+                    result.AddRange(GetPrinterQueries(item.PrintServerName))
+                End If
+
+                If timeout.IsRunning Then
+                    If timeout.ElapsedMilliseconds > AppSettings.MaxPrinterCollectTime Then
+                        PrinterCollectReturnState = 1
+                        timeout.Stop()
+                        Exit For
+                    End If
+                End If
             Next
 
             Return result
@@ -655,8 +697,11 @@ Public Class Form1
                     ComboBox1.SelectedIndex = 0
                     PictureBox1.Image = My.Resources.dialog_ok_3
                     MetroButton1.Focus()
+                    If AppSettings.AutoConnectPrinterIfExactResult Then
+                        MetroButton1.PerformClick()
+                    End If
                 End If
-            End If
+                End If
 
 
         Catch ex As Exception
@@ -826,13 +871,24 @@ Public Class Form1
 
     Public Sub ResetUserStatusInfo()
         Try
-            If AppSettings.ShowPrinterCountAfterSearch Then
-                MetroLabel2.Text = PrintQueuesAutoComplete.Count & " Drucker gefunden."
-            Else
-                MetroLabel2.Text = "Drucker geladen, bitte suchen."
+            If PrinterCollectReturnState = 1 Then
+                MetroLabel2.Text = "Drucker nur teilweise geladen (Timeout)."
+                PictureBox1.Image = My.Resources.dialog_error
+            End If
+            If PrinterCollectReturnState = 2 Then
+                MetroLabel2.Text = "Drucker nur teilweise geladen (Server nicht erreichbar)."
+                PictureBox1.Image = My.Resources.dialog_error
+            End If
+            If PrinterCollectReturnState = 0 Then
+                If AppSettings.ShowPrinterCountAfterSearch Then
+                    MetroLabel2.Text = PrintQueuesAutoComplete.Count & " Drucker gefunden."
+                Else
+                    MetroLabel2.Text = "Drucker geladen, bitte suchen."
+                End If
+
+                PictureBox1.Image = My.Resources.dialog_ok_3
             End If
 
-            PictureBox1.Image = My.Resources.dialog_ok_3
         Catch ex As Exception
             _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler", Err)
         End Try
@@ -920,6 +976,11 @@ Public Class Form1
                 End If
 
                 FlowLayoutPanel1.Controls.Add(ll)
+                If AppSettings.ShowDefaultPrinterAlwaysOnTop Then
+                    If LocalPrinters(index).DefaultPrinter Then
+                        FlowLayoutPanel1.Controls.SetChildIndex(ll, 0)
+                    End If
+                End If
                 Application.DoEvents()
             Next
 

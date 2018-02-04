@@ -127,6 +127,9 @@
   <data name="expandable_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expandable_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="printer_local" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer_local.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="printer_synced" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer_synced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,14 +184,14 @@
   <data name="dialog_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dialog_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="floppy_nocustom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\floppy_nocustom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="refresh16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help-about-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help-about-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="saveHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saveHS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +205,8 @@
   <data name="printer_saved" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer_saved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="printer_local" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer_local.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="help-about-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help-about-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="settings_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +214,10 @@
   <data name="restart_printerq" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restart_printerq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dialog-declare" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dialog-declare.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dialog-error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dialog-error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

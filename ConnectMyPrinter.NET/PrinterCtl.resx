@@ -747,31 +747,31 @@
     <value>17, 17</value>
   </metadata>
   <data name="AlsStandarddruckerFestlegenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="AlsStandarddruckerFestlegenToolStripMenuItem.Text" xml:space="preserve">
     <value>Als Standarddrucker festlegen</value>
   </data>
   <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
+    <value>331, 6</value>
   </data>
   <data name="DruckerImProfilSpeichernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="DruckerImProfilSpeichernToolStripMenuItem.Text" xml:space="preserve">
     <value>Drucker im Profil speichern</value>
   </data>
   <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
+    <value>331, 6</value>
   </data>
   <data name="DruckerEntfernenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="DruckerEntfernenToolStripMenuItem.Text" xml:space="preserve">
     <value>Drucker entfernen</value>
   </data>
   <data name="DruckerEntfernenlokalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="DruckerEntfernenlokalToolStripMenuItem.Text" xml:space="preserve">
     <value>Drucker entfernen (lokal)</value>
@@ -780,7 +780,7 @@
     <value>False</value>
   </data>
   <data name="DruckerNeuInstallierenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="DruckerNeuInstallierenToolStripMenuItem.Text" xml:space="preserve">
     <value>Drucker neu installieren</value>
@@ -789,19 +789,19 @@
     <value>False</value>
   </data>
   <data name="StandardeinstellungenLöschenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="StandardeinstellungenLöschenToolStripMenuItem.Text" xml:space="preserve">
     <value>Standardeinstellungen löschen</value>
   </data>
   <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
+    <value>331, 6</value>
   </data>
   <data name="ToolStripSeparator3.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="DruckereigenschaftenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="DruckereigenschaftenToolStripMenuItem.Text" xml:space="preserve">
     <value>Druckereigenschaften</value>
@@ -810,7 +810,7 @@
     <value>False</value>
   </data>
   <data name="DruckereinstellungenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="DruckereinstellungenToolStripMenuItem.Text" xml:space="preserve">
     <value>Druckereinstellungen</value>
@@ -819,13 +819,13 @@
     <value>False</value>
   </data>
   <data name="ToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
+    <value>331, 6</value>
   </data>
   <data name="ToolStripSeparator4.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="DruckereinstellungenExportierenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="DruckereinstellungenExportierenToolStripMenuItem.Text" xml:space="preserve">
     <value>Druckereinstellungen exportieren...</value>
@@ -834,7 +834,7 @@
     <value>False</value>
   </data>
   <data name="DruckereinstellungenImportierenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 30</value>
+    <value>334, 30</value>
   </data>
   <data name="DruckereinstellungenImportierenToolStripMenuItem.Text" xml:space="preserve">
     <value>Druckereinstellungen importieren...</value>
@@ -842,8 +842,26 @@
   <data name="DruckereinstellungenImportierenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="ProfildateiErstellenverbindenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 30</value>
+  </data>
+  <data name="ProfildateiErstellenverbindenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Profildatei erstellen (verbinden)...</value>
+  </data>
+  <data name="ProfildateiErstellenverbindenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 30</value>
+  </data>
+  <data name="ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Profildatei erstellen (entfernen und verbinden)...</value>
+  </data>
+  <data name="ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 350</value>
+    <value>335, 410</value>
   </data>
   <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
     <value>ContextMenuStrip1</value>
@@ -969,6 +987,12 @@
   <data name="OpenFileDialog1.Filter" xml:space="preserve">
     <value>Druckereinstellungen (*.dat)|*.dat|Alle Dateien|*.*</value>
   </data>
+  <metadata name="SaveFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>552, 17</value>
+  </metadata>
+  <data name="SaveFileDialog2.Filter" xml:space="preserve">
+    <value>Profildatei|*.prpr</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1006,6 +1030,12 @@
     <value>DruckerEntfernenToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;DruckerEntfernenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DruckerEntfernenlokalToolStripMenuItem.Name" xml:space="preserve">
+    <value>DruckerEntfernenlokalToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DruckerEntfernenlokalToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DruckerNeuInstallierenToolStripMenuItem.Name" xml:space="preserve">
@@ -1074,11 +1104,23 @@
   <data name="&gt;&gt;OpenFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DruckerEntfernenlokalToolStripMenuItem.Name" xml:space="preserve">
-    <value>DruckerEntfernenlokalToolStripMenuItem</value>
+  <data name="&gt;&gt;ProfildateiErstellenverbindenToolStripMenuItem.Name" xml:space="preserve">
+    <value>ProfildateiErstellenverbindenToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;DruckerEntfernenlokalToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;ProfildateiErstellenverbindenToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Name" xml:space="preserve">
+    <value>ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog2.Name" xml:space="preserve">
+    <value>SaveFileDialog2</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>PrinterCtl</value>

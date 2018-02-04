@@ -1,0 +1,1 @@
+ConnectMyPrinterACLHelper.exe /ELEVATED /USER:%USERNAME% /DOMAIN:%USERDOMAIN%

@@ -3,7 +3,7 @@
   <WindowTitle>ConnectMyPrinter.NET</WindowTitle>
   <UserInformation>Bitte geben Sie einen Druckernamen ein.</UserInformation>
   <AdditionalUserInformation />
-  <CompanyLogoImagePath />
+  <CompanyLogoImagePath>logo.gif</CompanyLogoImagePath>
   <StartWindowPosition>CenterScreen</StartWindowPosition>
   <StartWindowHeight>650</StartWindowHeight>
   <StartInMinimalMode>false</StartInMinimalMode>

@@ -17,6 +17,8 @@ Imports ConnectMyPrinterEnumerationLib
     Property AllowExpandMode As Boolean = True
     Property ShowTopMost As Boolean = False
     Property PrintServers As New List(Of PrintServerItem)
+    Property MaxPrinterCollectTime As Integer = 10000
+    Property CancelCollectionOnPrintServerNotAvailable As Boolean = False
     Property CollectAdditionalInformation As Boolean = True
     Property AskUserIfMultipleResults As Boolean = True
     Property AskUserIfConnectPrinter As Boolean = True
@@ -33,6 +35,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property AutoCompleteMaxVisibleItems As Integer = 20
     Property SearchCount As Integer = 5
     Property IgnoreUpperLowerCase As Boolean = True
+    Property AutoConnectPrinterIfExactResult As Boolean = False
     Property DeletePrinterIfExists As Boolean = True
     Property AllowUserToChangeSettings As Boolean = True
     Property AllowUserToSaveSettings As Boolean = True
@@ -48,6 +51,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property PrinterAdminPath As String = "C:\Windows\System32\Printing_Admin_Scripts\de-DE"
     Property CleanPrinterDriverPackagesAtPrinterRemove As Boolean = False
     Property CleanPrinterDriverPackagesAtPrinterDriverRemove As Boolean = True
+    Property RestartPrintSpoolerAtPrinterRemove As Boolean = True
     Property CleanLostPrinterDriverItemsAtPrinterRemove As Boolean = True
     Property CleanLostPrinterDriverItemsAtPrinterDriverRemove As Boolean = True
     Property ForceAdministratorRightsOnForceDelete As Boolean = False
@@ -68,7 +72,13 @@ Imports ConnectMyPrinterEnumerationLib
     Property ShowPrintManagementCenterEntry As Boolean = True
     Property ShowForceDeletePrinterEntry As Boolean = True
     Property ShowAppSettingsConsoleEntry As Boolean = True
+    Property ShowProgressCircleOnEvents As Boolean = True
+    Property ShowDefaultPrinterAlwaysOnTop As Boolean = True
     Property DriverNotifications As List(Of DriverNotifications)
+    Property ShowExitEntryInTrayApp As Boolean = True
+    Property ShowManagePrintersEntryInTrayApp As Boolean = True
+    Property ShowCompanyLogoInTrayApp As Boolean = True
+    Property DoubleClickOnTrayIconStartsMainApp As Boolean = True
 
     Public Enum DoubleClickActionOnPrinterItemAction
         DoNothing = 0

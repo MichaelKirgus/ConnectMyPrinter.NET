@@ -156,17 +156,22 @@ Public Class PrinterCtl
             If isok = True Then
                 Dim jj As New ProcessingDlg
                 jj.Show(Me.ParentForm)
+                Application.DoEvents()
                 _parent.PrinterManageService.DeletePrinter(Me.Tag)
                 If _parent.AppSettings.CleanPrinterDriverPackagesAtPrinterRemove Then
                     If _parent.AppSettings.LocalActionsNeedElevation Then
                         ElevationHelper.GenerateActionFile("DeleteUnusedDrivers", Me.Tag, _parent, Me)
-                        ElevationHelper.GenerateActionFile("RestartPrinterService", Me.Tag, _parent, Me)
-                        ElevationHelper.GenerateActionFile("DeleteUnusedDrivers", Me.Tag, _parent, Me)
+                        If _parent.AppSettings.RestartPrintSpoolerAtPrinterRemove Then
+                            ElevationHelper.GenerateActionFile("RestartPrinterService", Me.Tag, _parent, Me)
+                            ElevationHelper.GenerateActionFile("DeleteUnusedDrivers", Me.Tag, _parent, Me)
+                        End If
                         ElevationHelper.StartElevatedActions(_parent, Me)
-                    Else
+                        Else
                         _parent.PrinterDriverRemoverService.DeleteUnusedDrivers(_parent.AppSettings.PrinterAdminPath)
-                        _parent.PrinterManageService.RestartPrinterService()
-                        _parent.PrinterDriverRemoverService.DeleteUnusedDrivers(_parent.AppSettings.PrinterAdminPath)
+                        If _parent.AppSettings.RestartPrintSpoolerAtPrinterRemove Then
+                            _parent.PrinterManageService.RestartPrinterService()
+                            _parent.PrinterDriverRemoverService.DeleteUnusedDrivers(_parent.AppSettings.PrinterAdminPath)
+                        End If
                     End If
                 End If
                 If _parent.AppSettings.CleanLostPrinterDriverItemsAtPrinterRemove Then
@@ -461,6 +466,8 @@ Public Class PrinterCtl
             ToolStripSeparator3.Visible = True
             ToolStripSeparator4.Visible = True
             DruckerEntfernenlokalToolStripMenuItem.Visible = True
+            ProfildateiErstellenverbindenToolStripMenuItem.Visible = True
+            ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Visible = True
         Else
             DruckereinstellungenExportierenToolStripMenuItem.Visible = False
             DruckereinstellungenImportierenToolStripMenuItem.Visible = False
@@ -470,6 +477,8 @@ Public Class PrinterCtl
             ToolStripSeparator3.Visible = False
             ToolStripSeparator4.Visible = False
             DruckerEntfernenlokalToolStripMenuItem.Visible = False
+            ProfildateiErstellenverbindenToolStripMenuItem.Visible = False
+            ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Visible = False
         End If
         SetSelectedState()
     End Sub
@@ -526,5 +535,27 @@ Public Class PrinterCtl
 
     Private Sub DruckerEntfernenlokalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DruckerEntfernenlokalToolStripMenuItem.Click
         DeletePrinter(True)
+    End Sub
+
+    Private Sub ProfildateiErstellenverbindenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfildateiErstellenverbindenToolStripMenuItem.Click
+        Try
+            SaveFileDialog2.ShowDialog()
+            If Not SaveFileDialog2.FileName = "" Then
+                Dim ww As New ConnectMyPrinterRemoteFileHandler.RemoteFileCreator
+                ww.CreateAddPrinterRemoteFile(SaveFileDialog2.FileName, Me.Tag)
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Click
+        Try
+            SaveFileDialog2.ShowDialog()
+            If Not SaveFileDialog2.FileName = "" Then
+                Dim ww As New ConnectMyPrinterRemoteFileHandler.RemoteFileCreator
+                ww.CreateRemoveAndAddPrinterRemoteFile(SaveFileDialog2.FileName, Me.Tag)
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 End Class
