@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="LoadAllPrintersAsync.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LoadAllPrintersAsync.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>116, 17</value>
-  </metadata>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ComboBox1.ItemHeight" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ComboBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 93</value>
   </data>
@@ -185,9 +185,6 @@
   <data name="MetroButton1.Text" xml:space="preserve">
     <value>Drucker verbinden</value>
   </data>
-  <metadata name="ToolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="MetroButton1.ToolTip" xml:space="preserve">
     <value>Verbindet einen Drucker.</value>
   </data>
@@ -330,96 +327,6 @@
   <data name="MetroTabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="MetroProgressSpinner2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="MetroProgressSpinner2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 139</value>
-  </data>
-  <data name="MetroProgressSpinner2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="MetroProgressSpinner2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 120</value>
-  </data>
-  <data name="MetroProgressSpinner2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;MetroProgressSpinner2.Name" xml:space="preserve">
-    <value>MetroProgressSpinner2</value>
-  </data>
-  <data name="&gt;&gt;MetroProgressSpinner2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroProgressSpinner, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MetroProgressSpinner2.Parent" xml:space="preserve">
-    <value>MetroPanel1</value>
-  </data>
-  <data name="&gt;&gt;MetroProgressSpinner2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="FlowLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="FlowLayoutPanel1.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 393</value>
-  </data>
-  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
-    <value>MetroPanel1</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="MetroPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="MetroPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MetroPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 399</value>
-  </data>
-  <data name="MetroPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;MetroPanel1.Name" xml:space="preserve">
-    <value>MetroPanel1</value>
-  </data>
-  <data name="&gt;&gt;MetroPanel1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MetroPanel1.Parent" xml:space="preserve">
-    <value>MetroTabPage1</value>
-  </data>
-  <data name="&gt;&gt;MetroPanel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="MetroTabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 35</value>
-  </data>
-  <data name="MetroTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 399</value>
-  </data>
-  <data name="MetroTabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MetroTabPage1.Text" xml:space="preserve">
-    <value>Vorhandene Drucker</value>
-  </data>
   <data name="&gt;&gt;MetroTabPage1.Name" xml:space="preserve">
     <value>MetroTabPage1</value>
   </data>
@@ -431,120 +338,6 @@
   </data>
   <data name="&gt;&gt;MetroTabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="MetroLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="MetroLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 386</value>
-  </data>
-  <data name="MetroLabel4.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="MetroLabel4.Text" xml:space="preserve">
-    <value>Sie haben keine Drucker gespeichert.</value>
-  </data>
-  <data name="&gt;&gt;MetroLabel4.Name" xml:space="preserve">
-    <value>MetroLabel4</value>
-  </data>
-  <data name="&gt;&gt;MetroLabel4.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MetroLabel4.Parent" xml:space="preserve">
-    <value>MetroPanel2</value>
-  </data>
-  <data name="&gt;&gt;MetroLabel4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="MetroProgressSpinner3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="MetroProgressSpinner3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MetroProgressSpinner3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="MetroProgressSpinner3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>408, 338</value>
-  </data>
-  <data name="MetroProgressSpinner3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;MetroProgressSpinner3.Name" xml:space="preserve">
-    <value>MetroProgressSpinner3</value>
-  </data>
-  <data name="&gt;&gt;MetroProgressSpinner3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroProgressSpinner, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MetroProgressSpinner3.Parent" xml:space="preserve">
-    <value>MetroPanel2</value>
-  </data>
-  <data name="&gt;&gt;MetroProgressSpinner3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="FlowLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="FlowLayoutPanel2.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FlowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="FlowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 393</value>
-  </data>
-  <data name="FlowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel2.Name" xml:space="preserve">
-    <value>FlowLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel2.Parent" xml:space="preserve">
-    <value>MetroPanel2</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="MetroPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="MetroPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MetroPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 399</value>
-  </data>
-  <data name="MetroPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;MetroPanel2.Name" xml:space="preserve">
-    <value>MetroPanel2</value>
-  </data>
-  <data name="&gt;&gt;MetroPanel2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MetroPanel2.Parent" xml:space="preserve">
-    <value>MetroTabPage2</value>
-  </data>
-  <data name="&gt;&gt;MetroPanel2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="MetroTabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 35</value>
-  </data>
-  <data name="MetroTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 399</value>
-  </data>
-  <data name="MetroTabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="MetroTabPage2.Text" xml:space="preserve">
-    <value>Gespeicherte Drucker</value>
   </data>
   <data name="&gt;&gt;MetroTabPage2.Name" xml:space="preserve">
     <value>MetroTabPage2</value>
@@ -579,12 +372,249 @@
   <data name="&gt;&gt;MetroTabControl1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="LoadAllLocalPrinters.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="&gt;&gt;MetroPanel1.Name" xml:space="preserve">
+    <value>MetroPanel1</value>
+  </data>
+  <data name="&gt;&gt;MetroPanel1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroPanel1.Parent" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="MetroTabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 35</value>
+  </data>
+  <data name="MetroTabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>421, 399</value>
+  </data>
+  <data name="MetroTabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MetroTabPage1.Text" xml:space="preserve">
+    <value>Vorhandene Drucker</value>
+  </data>
+  <data name="&gt;&gt;MetroProgressSpinner2.Name" xml:space="preserve">
+    <value>MetroProgressSpinner2</value>
+  </data>
+  <data name="&gt;&gt;MetroProgressSpinner2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroProgressSpinner, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroProgressSpinner2.Parent" xml:space="preserve">
+    <value>MetroPanel1</value>
+  </data>
+  <data name="&gt;&gt;MetroProgressSpinner2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
+    <value>MetroPanel1</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="MetroPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="MetroPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MetroPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>421, 399</value>
+  </data>
+  <data name="MetroPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="MetroProgressSpinner2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="MetroProgressSpinner2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 139</value>
+  </data>
+  <data name="MetroProgressSpinner2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="MetroProgressSpinner2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 120</value>
+  </data>
+  <data name="MetroProgressSpinner2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="FlowLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="FlowLayoutPanel1.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 393</value>
+  </data>
+  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;MetroPanel2.Name" xml:space="preserve">
+    <value>MetroPanel2</value>
+  </data>
+  <data name="&gt;&gt;MetroPanel2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroPanel2.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroPanel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="MetroTabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 35</value>
+  </data>
+  <data name="MetroTabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>421, 399</value>
+  </data>
+  <data name="MetroTabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MetroTabPage2.Text" xml:space="preserve">
+    <value>Gespeicherte Drucker</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel4.Name" xml:space="preserve">
+    <value>MetroLabel4</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel4.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel4.Parent" xml:space="preserve">
+    <value>MetroPanel2</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;MetroProgressSpinner3.Name" xml:space="preserve">
+    <value>MetroProgressSpinner3</value>
+  </data>
+  <data name="&gt;&gt;MetroProgressSpinner3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroProgressSpinner, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroProgressSpinner3.Parent" xml:space="preserve">
+    <value>MetroPanel2</value>
+  </data>
+  <data name="&gt;&gt;MetroProgressSpinner3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Name" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Parent" xml:space="preserve">
+    <value>MetroPanel2</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="MetroPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="MetroPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MetroPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>421, 399</value>
+  </data>
+  <data name="MetroPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="MetroLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="MetroLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>414, 386</value>
+  </data>
+  <data name="MetroLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="MetroLabel4.Text" xml:space="preserve">
+    <value>Sie haben keine Drucker gespeichert.</value>
+  </data>
+  <data name="MetroProgressSpinner3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="MetroProgressSpinner3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="MetroProgressSpinner3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="MetroProgressSpinner3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 386</value>
+  </data>
+  <data name="MetroProgressSpinner3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="FlowLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="FlowLayoutPanel2.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FlowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="FlowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 393</value>
+  </data>
+  <data name="FlowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LoadAllLocalPrinters.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>281, 17</value>
-  </metadata>
-  <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>971, 17</value>
-  </metadata>
+  </data>
+  <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 136</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
+    <value>ContextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 43</value>
+  </data>
+  <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 44</value>
+  </data>
+  <data name="PictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="PictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Name" xml:space="preserve">
+    <value>PictureBox2</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
   </data>
@@ -620,39 +650,6 @@
   </data>
   <data name="AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Text" xml:space="preserve">
     <value>Anwendungseinstellungen bearbeiten (Admin)...</value>
-  </data>
-  <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 136</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
-    <value>ContextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>334, 43</value>
-  </data>
-  <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 44</value>
-  </data>
-  <data name="PictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="PictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;PictureBox2.Name" xml:space="preserve">
-    <value>PictureBox2</value>
-  </data>
-  <data name="&gt;&gt;PictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
-    <value>8</value>
   </data>
   <data name="Button2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -762,12 +759,12 @@
   <data name="&gt;&gt;Button3.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="LocalPrinterIdleWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="LocalPrinterIdleWorker.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>443, 17</value>
-  </metadata>
-  <metadata name="LocalPrinterChangeTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="LocalPrinterChangeTimer.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>619, 17</value>
-  </metadata>
+  </data>
   <data name="PictureBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>298, 94</value>
   </data>
@@ -861,9 +858,9 @@
   <data name="&gt;&gt;Button5.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="RestartPrinterService.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="RestartPrinterService.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>807, 17</value>
-  </metadata>
+  </data>
   <data name="AdditionalInfoRTF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -891,9 +888,9 @@
   <data name="&gt;&gt;AdditionalInfoRTF.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>

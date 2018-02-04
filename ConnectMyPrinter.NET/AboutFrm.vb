@@ -1,9 +1,15 @@
 ﻿Public Class AboutFrm
+    Public _parentFrm As Form1
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
         Me.Close()
     End Sub
 
     Private Sub AboutFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Me.Style = _parentFrm.Style
+        Catch ex As Exception
+        End Try
+
         Try
             MetroTextBox1.Text = My.Computer.FileSystem.ReadAllText("Lizenzbedingungen.txt", System.Text.Encoding.Default)
             MetroTextBox2.Text = My.Computer.FileSystem.ReadAllText("MetroFramework.txt", System.Text.Encoding.Default)

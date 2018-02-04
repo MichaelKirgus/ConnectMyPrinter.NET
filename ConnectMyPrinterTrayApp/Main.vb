@@ -14,6 +14,8 @@ Public Class AppContext
     Private WithEvents Tray As NotifyIcon
     Private WithEvents MainMenu As ContextMenuStrip
     Private WithEvents mnuManagePrinter As ToolStripMenuItem
+    Private WithEvents mnuRefresh As ToolStripMenuItem
+    Private WithEvents mnuRestartPrinterService As ToolStripMenuItem
     Private WithEvents mnuSep1 As ToolStripSeparator
     Private WithEvents mnuSep2 As ToolStripSeparator
     Private WithEvents mnuExit As ToolStripMenuItem
@@ -37,11 +39,13 @@ Public Class AppContext
 
         mnuSep1 = New ToolStripSeparator()
         mnuManagePrinter = New ToolStripMenuItem("Drucker verwalten...")
+        mnuRestartPrinterService = New ToolStripMenuItem("Druckerwarteschlange neu starten")
+        mnuRefresh = New ToolStripMenuItem("Ansicht aktualisieren")
         mnuSep2 = New ToolStripSeparator()
         mnuExit = New ToolStripMenuItem("Beenden")
         MainMenu = New ContextMenuStrip
         MainMenu.BackColor = Drawing.Color.White
-        MainMenu.Items.AddRange(New ToolStripItem() {mnuSep1, mnuManagePrinter, mnuExit, mnuSep2})
+        MainMenu.Items.AddRange(New ToolStripItem() {mnuSep1, mnuManagePrinter, mnuRestartPrinterService, mnuRefresh, mnuExit, mnuSep2})
 
         'Initialize the tray
         Tray = New NotifyIcon
@@ -85,8 +89,14 @@ Public Class AppContext
         mnuSep1.Visible = MainApp.AppSettings.ShowCompanyLogoInTrayApp
         mnuManagePrinter.Visible = MainApp.AppSettings.ShowManagePrintersEntryInTrayApp
         mnuExit.Visible = MainApp.AppSettings.ShowExitEntryInTrayApp
+        mnuRefresh.Visible = MainApp.AppSettings.ShowRefreshEntryInTrayApp
+        mnuRestartPrinterService.Visible = MainApp.AppSettings.ShowRestartPrinterServiceEntryInTrayApp
 
-        If (MainApp.AppSettings.ShowExitEntryInTrayApp = False) And (MainApp.AppSettings.ShowManagePrintersEntryInTrayApp = False) Then
+        If MainApp.AppSettings.ShowClassicTrayMenuStyleInTrayApp Then
+            MainMenu.RenderMode = ToolStripRenderMode.System
+        End If
+
+        If (MainApp.AppSettings.ShowExitEntryInTrayApp = False) And (MainApp.AppSettings.ShowManagePrintersEntryInTrayApp = False) And (MainApp.AppSettings.ShowRefreshEntryInTrayApp = False) Then
             mnuSep2.Visible = False
         End If
 
@@ -101,19 +111,35 @@ Public Class AppContext
                 Dim jj As New ToolStripMenuItem(item.ShareName)
                 jj.Checked = item.DefaultPrinter
                 jj.Tag = item
-                Dim settings As New ToolStripMenuItem("Standardeinstellungen...")
-                settings.Tag = item
-                AddHandler settings.Click, AddressOf ClickOnChangePrinterDefaultSettings
-                Dim delprinter As New ToolStripMenuItem("Drucker löschen")
-                delprinter.Tag = item
-                If MainApp.AppSettings.AllowUserDeleteLocalPrinter = False Then
-                    If item.Server = "Lokal" Then
-                        delprinter.Enabled = False
-                    End If
+                If MainApp.AppSettings.ShowChangeDefaultPrinterDriverSettingsEntryInTrayApp Then
+                    Dim settings As New ToolStripMenuItem("Standardeinstellungen...")
+                    settings.Tag = item
+                    AddHandler settings.Click, AddressOf ClickOnChangePrinterDefaultSettings
+                    jj.DropDownItems.Add(settings)
                 End If
-                AddHandler delprinter.Click, AddressOf ClickOnDeletePrinterEntry
-                jj.DropDownItems.Add(settings)
-                jj.DropDownItems.Add(delprinter)
+
+                If MainApp.AppSettings.ShowDeletePrinterEntryInTrayApp Then
+                    Dim delprinter As New ToolStripMenuItem("Drucker löschen")
+                    delprinter.Tag = item
+                    If MainApp.AppSettings.AllowUserDeleteLocalPrinter = False Then
+                        If item.Server = "Lokal" Then
+                            delprinter.Enabled = False
+                        End If
+                    End If
+                    AddHandler delprinter.Click, AddressOf ClickOnDeletePrinterEntry
+                    jj.DropDownItems.Add(delprinter)
+                End If
+
+                If MainApp.AppSettings.ShowOpenPrinterWebsiteEntryInTrayApp Then
+                    Dim opengui As New ToolStripMenuItem("Gerätewebseite öffnen...")
+                    opengui.Tag = item
+                    If item.Server = "Lokal" Then
+                        opengui.Enabled = False
+                    End If
+                    AddHandler opengui.Click, AddressOf ClickOnPrinterWebguiEntry
+                    jj.DropDownItems.Add(opengui)
+                End If
+
                 AddHandler jj.Click, AddressOf ClickOnPrinterEntry
                 MainMenu.Items.AddRange(New ToolStripItem() {jj})
                 AddHandler MainMenu.Opening, AddressOf MenuOpen
@@ -124,6 +150,11 @@ Public Class AppContext
             Return False
         End Try
     End Function
+
+    Public Sub RestartMyself()
+        Dim aa As String = "cmd.exe /C timeout 1 && start " & My.Resources.String1 & Application.StartupPath & My.Resources.String1 & " " & My.Resources.String1 & Application.ExecutablePath & My.Resources.String1
+        Shell(aa, AppWinStyle.Hide, False)
+    End Sub
 
     Public Sub MenuOpen(ByVal sender As Object, ByVal e As System.EventArgs)
         mnuLogo.Width = MainMenu.ClientRectangle.Width - 80
@@ -147,6 +178,20 @@ Public Class AppContext
             qq = sender
             PrinterManageService.SetDefaultPrinter(qq.Tag)
             qq.Checked = True
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub ClickOnPrinterWebguiEntry(ByVal sender As Object, ByVal e As System.EventArgs)
+        Try
+            Dim qq As ToolStripMenuItem
+            qq = sender
+            Dim ff As PrinterQueueInfo
+            ff = qq.Tag
+
+            Dim hh As New Process
+            hh.StartInfo.FileName = "http://" & ff.ShareName
+            hh.Start()
         Catch ex As Exception
         End Try
     End Sub
@@ -178,6 +223,20 @@ Public Class AppContext
     Private Sub mnuDisplayForm_Click(ByVal sender As Object, ByVal e As System.EventArgs) _
         Handles mnuManagePrinter.Click
         StartMainApp()
+    End Sub
+
+    Private Sub mnuRestartPrinterService_Click(ByVal sender As Object, ByVal e As System.EventArgs) _
+        Handles mnuRestartPrinterService.Click
+        Try
+            Shell("ConnectMyPrinterRestartSpooler.exe", AppWinStyle.NormalFocus, True)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub mnuRefresh_Click(ByVal sender As Object, ByVal e As System.EventArgs) _
+        Handles mnuRefresh.Click
+        RestartMyself()
+        ExitApplication()
     End Sub
 
     Public Function StartMainApp() As Boolean

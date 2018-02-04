@@ -29,20 +29,6 @@
         End Try
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        Try
-            ListView1.BeginUpdate()
-            For index = 0 To ListView1.Items.Count - 1
-                If ListView1.Items(index).Text.ToLower.Contains(MetroTextBox1.Text) Then
-                Else
-                    ListView1.Items.Remove(ListView1.Items(index))
-                End If
-            Next
-            ListView1.EndUpdate()
-        Catch ex As Exception
-        End Try
-    End Sub
-
     Private Sub MetroTextBox1_TextChanged(sender As Object, e As EventArgs) Handles MetroTextBox1.TextChanged
         If MetroTextBox1.Text = "" Then
             Try
@@ -59,5 +45,22 @@
         _parent.ConnectPrinter(ListView1.SelectedItems(0).Text, _parent.PrintQueues, False, False)
         _parent.ReloadLocalPrinters()
         Me.TopMost = True
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            ListView1.BeginUpdate()
+            For index = 0 To ListView1.Items.Count - 1
+                Try
+                    If ListView1.Items(index).Text.ToLower.Contains(MetroTextBox1.Text) Then
+                    Else
+                        ListView1.Items.Remove(ListView1.Items(index))
+                    End If
+                Catch ex As Exception
+                End Try
+            Next
+            ListView1.EndUpdate()
+        Catch ex As Exception
+        End Try
     End Sub
 End Class

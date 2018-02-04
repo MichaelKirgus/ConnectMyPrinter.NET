@@ -79,5 +79,14 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die &quot; ähnelt.
+        '''</summary>
+        Friend ReadOnly Property String1() As String
+            Get
+                Return ResourceManager.GetString("String1", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

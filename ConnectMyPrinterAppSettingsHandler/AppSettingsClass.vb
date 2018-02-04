@@ -8,6 +8,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property UserInformation As String = "Bitte geben Sie einen Druckernamen ein."
     Property AdditionalUserInformation As String = ""
     Property CompanyLogoImagePath As String = ""
+    Property WindowStyle As MetroFramework.MetroColorStyle = MetroFramework.MetroColorStyle.Black
     Property AdditionalUserHelpInformationRTF As String = ""
     Property ShowAdditionalUserHelpOnWindowMouseEnter As Boolean = False
     Property ShowAdditionalUserHelpOnTextFieldClick As Boolean = False
@@ -78,7 +79,13 @@ Imports ConnectMyPrinterEnumerationLib
     Property ShowExitEntryInTrayApp As Boolean = True
     Property ShowManagePrintersEntryInTrayApp As Boolean = True
     Property ShowCompanyLogoInTrayApp As Boolean = True
+    Property ShowRefreshEntryInTrayApp As Boolean = True
+    Property ShowClassicTrayMenuStyleInTrayApp As Boolean = False
     Property DoubleClickOnTrayIconStartsMainApp As Boolean = True
+    Property ShowDeletePrinterEntryInTrayApp As Boolean = True
+    Property ShowChangeDefaultPrinterDriverSettingsEntryInTrayApp As Boolean = True
+    Property ShowOpenPrinterWebsiteEntryInTrayApp As Boolean = False
+    Property ShowRestartPrinterServiceEntryInTrayApp As Boolean = False
 
     Public Enum DoubleClickActionOnPrinterItemAction
         DoNothing = 0

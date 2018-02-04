@@ -142,6 +142,7 @@ Public Class PrinterCtl
                 Dim aa As PrinterQueueInfo
                 aa = Me.Tag
                 Dim oo As New DeletePrinterDlg
+                oo._parent = _parent
                 _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me.ParentForm, "Drucker " & aa.ShareName & " entfernen", Err)
                 oo.MetroLabel2.Text = "Möchten Sie wirklich den Drucker" & vbNewLine & aa.ShareName & " entfernen?"
                 Dim uu As MsgBoxResult

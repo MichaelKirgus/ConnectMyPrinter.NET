@@ -8,6 +8,11 @@ Public Class AppSettingsDlg
 
     Private Sub AppSettingsDlg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+            Me.Style = _parent.Style
+        Catch ex As Exception
+        End Try
+
+        Try
             MetroCheckBox1.Checked = _parent.AppSettings.AskUserIfConnectPrinter
             MetroCheckBox2.Checked = _parent.AppSettings.AskUserIfDisconnectPrinter
             MetroCheckBox3.Checked = _parent.AppSettings.AskUserIfMultipleResults

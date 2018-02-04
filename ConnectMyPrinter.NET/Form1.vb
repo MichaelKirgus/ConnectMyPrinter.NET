@@ -92,6 +92,10 @@ Public Class Form1
                 Catch ex As Exception
                 End Try
             End If
+
+            'Style setzen
+            Me.Style = AppSettings.WindowStyle
+
             If AppSettings.AllowUserToConnectToNotCollectedPrinter Then
                 MetroButton1.Enabled = True
             End If
@@ -671,6 +675,7 @@ Public Class Form1
 
                 If Not _result.Count = 1 Or _result.Count = 0 Then
                     If Not ComboBoxSelected Then
+                        Cursor.Current = Cursors.Default
                         ComboBox1.DroppedDown = True
                     Else
                         ComboBox1.DroppedDown = False
@@ -724,6 +729,7 @@ Public Class Form1
                 If AppSettings.AskUserIfMultipleResults Then
                     'Der Drucker ist auf mehreren Printservern angelegt. Es muss dem Benutzer eine Auswahl an verfügbaren Printservern angezeigt werden.
                     Dim hh As New SelectFromMultipleServersDlg
+                    hh._parent = Me
 
                     For Each item As PrinterQueueInfo In matchprinters
                         hh.ListBox1.Items.Add(item.Server)
@@ -770,6 +776,7 @@ Public Class Form1
             Dim qq As New MsgBoxResult
             If (AppSettings.AskUserIfConnectPrinter) Then
                 Dim kk As New ConnectPrinterDlg
+                kk._parent = Me
                 kk.MetroLabel2.Text = "Möchten Sie den Drucker " & vbNewLine & matchprinters(0).Server & "\" & matchprinters(0).ShareName & " verbinden?"
                 If Silent = False Then
                     kk.ShowDialog()
@@ -800,6 +807,7 @@ Public Class Form1
                     If Not result1 = "" Then
                         'Es wurde eine RTF-Datei zurückgegeben, diese wird nun angezeigt
                         Dim uu As New DriverNotificationRtfViewerDlg
+                        uu._parent = Me
                         uu.Show()
                         uu.RichTextBox1.LoadFile(result1)
                     End If
@@ -1068,6 +1076,7 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim hh As New AboutFrm
+        hh._parentFrm = Me
         hh.ShowDialog()
     End Sub
 
@@ -1312,4 +1321,42 @@ Public Class Form1
     Private Sub AnwendungseinstellungenBearbeitenAdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Click
         OpenSettingsConsoleApp(True)
     End Sub
+
+    Private Sub FlowLayoutPanel1_PreviewKeyDown(sender As Object, e As PreviewKeyDownEventArgs) Handles FlowLayoutPanel1.PreviewKeyDown
+        Try
+            If e.KeyCode = Keys.Up Then
+                ScrollUp(FlowLayoutPanel1, False)
+            End If
+            If e.KeyCode = Keys.Down Then
+                ScrollUp(FlowLayoutPanel1, False)
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Public Function ScrollUp(ByVal ScrollCtl As ScrollableControl, ByVal IsLargeChange As Boolean) As Boolean
+        Try
+            Dim changeAmount As Integer
+
+            If (IsLargeChange = False) Then
+                changeAmount = ScrollCtl.VerticalScroll.SmallChange * 3
+            Else
+                changeAmount = ScrollCtl.VerticalScroll.LargeChange
+            End If
+
+            Dim currentPosition As Integer = ScrollCtl.VerticalScroll.Value
+
+            If ((currentPosition - changeAmount) > ScrollCtl.VerticalScroll.Minimum) Then
+                ScrollCtl.VerticalScroll.Value -= changeAmount
+            Else
+                ScrollCtl.VerticalScroll.Value = ScrollCtl.VerticalScroll.Minimum
+            End If
+
+            ScrollCtl.PerformLayout()
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

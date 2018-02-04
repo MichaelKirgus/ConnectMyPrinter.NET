@@ -102,6 +102,10 @@
 			<Name>ConnectMyPrinterSettingsConsole</Name>
 			<Project>{AE1E6B2D-A9A1-4391-8BFC-C2C6FD089D2B}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterTrayApp\ConnectMyPrinterTrayApp.vbproj">
+			<Name>ConnectMyPrinterTrayApp</Name>
+			<Project>{F7E98612-2DA4-48AE-ADBE-EBD2B45204F5}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj">
 			<Name>ConnectMyPrinterUACHelper</Name>
 			<Project>{53B8A917-53BB-4ECF-9709-C50BA632DA9A}</Project>

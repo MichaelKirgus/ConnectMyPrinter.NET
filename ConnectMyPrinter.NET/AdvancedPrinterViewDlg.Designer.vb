@@ -30,8 +30,7 @@ Partial Class AdvancedPrinterViewDlg
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MetroTextBox1 = New MetroFramework.Controls.MetroTextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ListView1
@@ -80,25 +79,21 @@ Partial Class AdvancedPrinterViewDlg
         '
         Me.MetroTextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MetroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium
-        Me.MetroTextBox1.Location = New System.Drawing.Point(675, 28)
+        Me.MetroTextBox1.Location = New System.Drawing.Point(588, 25)
         Me.MetroTextBox1.Name = "MetroTextBox1"
         Me.MetroTextBox1.PromptText = "Druckerbezeichnung eingeben..."
         Me.MetroTextBox1.Size = New System.Drawing.Size(304, 29)
         Me.MetroTextBox1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroTextBox1.TabIndex = 2
         '
-        'PictureBox3
+        'Button1
         '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.search1
-        Me.PictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox3.Location = New System.Drawing.Point(985, 26)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox3.TabIndex = 17
-        Me.PictureBox3.TabStop = False
+        Me.Button1.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.search1
+        Me.Button1.Location = New System.Drawing.Point(898, 14)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(40, 40)
+        Me.Button1.TabIndex = 3
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'AdvancedPrinterViewDlg
         '
@@ -106,7 +101,7 @@ Partial Class AdvancedPrinterViewDlg
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(1037, 712)
-        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MetroTextBox1)
         Me.Controls.Add(Me.ListView1)
         Me.Name = "AdvancedPrinterViewDlg"
@@ -116,9 +111,7 @@ Partial Class AdvancedPrinterViewDlg
         Me.Text = "Alle Drucker"
         Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.TopMost = True
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -130,5 +123,5 @@ Partial Class AdvancedPrinterViewDlg
     Friend WithEvents ColumnHeader5 As ColumnHeader
     Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents MetroTextBox1 As Controls.MetroTextBox
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Button1 As Button
 End Class
