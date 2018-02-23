@@ -89,6 +89,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property ShowChangeDefaultPrinterDriverSettingsEntryInTrayApp As Boolean = True
     Property ShowOpenPrinterWebsiteEntryInTrayApp As Boolean = False
     Property ShowRestartPrinterServiceEntryInTrayApp As Boolean = False
+    Property ShowBackupPrinterEnvironmentEntryInTrayApp As Boolean = False
 
     Public Enum DoubleClickActionOnPrinterItemAction
         DoNothing = 0

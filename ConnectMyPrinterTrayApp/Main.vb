@@ -16,6 +16,7 @@ Public Class AppContext
     Public WithEvents mnuManagePrinter As ToolStripMenuItem
     Public WithEvents mnuRefresh As ToolStripMenuItem
     Public WithEvents mnuRestartPrinterService As ToolStripMenuItem
+    Public WithEvents mnuBackupPrinterEnv As ToolStripMenuItem
     Public WithEvents mnuSep1 As ToolStripSeparator
     Public WithEvents mnuSep2 As ToolStripSeparator
     Public WithEvents mnuExit As ToolStripMenuItem
@@ -45,6 +46,9 @@ Public Class AppContext
         mnuRestartPrinterService = New ToolStripMenuItem("Druckerwarteschlange neu starten")
         mnuRestartPrinterService.Image = My.Resources.restart_printerq
         mnuRestartPrinterService.Tag = New PrinterQueueInfo
+        mnuBackupPrinterEnv = New ToolStripMenuItem("Druckerumgebung sichern...")
+        mnuBackupPrinterEnv.Image = My.Resources.backup_printer
+        mnuBackupPrinterEnv.Tag = New PrinterQueueInfo
         mnuRefresh = New ToolStripMenuItem("Ansicht aktualisieren")
         mnuRefresh.Image = My.Resources.refresh16
         mnuRefresh.Tag = New PrinterQueueInfo
@@ -104,6 +108,7 @@ Public Class AppContext
         mnuExit.Visible = MainApp.AppSettings.ShowExitEntryInTrayApp
         mnuRefresh.Visible = MainApp.AppSettings.ShowRefreshEntryInTrayApp
         mnuRestartPrinterService.Visible = MainApp.AppSettings.ShowRestartPrinterServiceEntryInTrayApp
+        mnuBackupPrinterEnv.Visible = MainApp.AppSettings.ShowBackupPrinterEnvironmentEntryInTrayApp
 
         If MainApp.AppSettings.ShowClassicTrayMenuStyleInTrayApp Then
             MainMenu.RenderMode = ToolStripRenderMode.System
@@ -285,6 +290,14 @@ Public Class AppContext
         Handles mnuRestartPrinterService.Click
         Try
             Shell("ConnectMyPrinterRestartSpooler.exe", AppWinStyle.NormalFocus, True)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub mnuBackupPrinterEnv_Click(ByVal sender As Object, ByVal e As System.EventArgs) _
+        Handles mnuBackupPrinterEnv.Click
+        Try
+            Shell("ConnectMyPrinterBackupApp.exe", AppWinStyle.NormalFocus, True)
         Catch ex As Exception
         End Try
     End Sub
