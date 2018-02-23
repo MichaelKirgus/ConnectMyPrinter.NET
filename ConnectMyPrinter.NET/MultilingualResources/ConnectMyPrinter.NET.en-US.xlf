@@ -814,10 +814,9 @@ tool to easily manage printers on Windows.</target>
 mehreren Printservern angelegt.
 Bitte wählen Sie den Printserver aus, über welchen Sie 
 den Drucker verbinden möchten:</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">The printer you have selected multiple print servers applied.
- is on 
- Please select the print server which you 
-the printer connect to:</target>
+          <target state="translated">The printer you have selected multiple 
+print servers applied.
+Please select the print server woud you like to connect to:</target>
         </trans-unit>
         <trans-unit id="MetroLabel2.AutoSize" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
           <source>True</source>
@@ -990,7 +989,7 @@ the printer connect to:</target>
         </trans-unit>
         <trans-unit id="MetroLabel6Lbl.Text" translate="yes" xml:space="preserve">
           <source>Standort:</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Where:</target>
+          <target state="translated">Location:</target>
         </trans-unit>
         <trans-unit id="MetroLabel7Lbl.AutoSize" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
           <source>True</source>
@@ -1597,7 +1596,7 @@ the printer connect to:</target>
         </trans-unit>
         <trans-unit id="SaveFileDialog2.Filter" translate="yes" xml:space="preserve">
           <source>Profildatei|*.prpr</source>
-          <target state="translated">Profilfile|*.prpr</target>
+          <target state="translated">Profilefile|*.prpr</target>
         </trans-unit>
         <trans-unit id="SaveFileDialog2.TrayLocation" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing" extradata="metadata">
           <source>552, 17</source>
@@ -15194,7 +15193,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="DriverMultiplePrintersPart1" translate="yes" xml:space="preserve">
           <source>Folgende Drucker verwenden noch den Treiber </source>
-          <target state="new">Folgende Drucker verwenden noch den Treiber </target>
+          <target state="translated">The following printers using the driver </target>
         </trans-unit>
         <trans-unit id="DriverMultiplePrintersRemoveQuestion" translate="yes" xml:space="preserve">
           <source>Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</source>
