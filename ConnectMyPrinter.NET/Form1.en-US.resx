@@ -6583,6 +6583,9 @@
   <data name="Button5.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
+  <data name="Button5.ToolTip" xml:space="preserve">
+    <value>Show all found printers</value>
+  </data>
   <data name="Button5.Visible" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -6607,20 +6610,38 @@
   <data name="DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
   </data>
+  <data name="DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove printer/driver/driverpack...</value>
+  </data>
   <data name="DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
+  </data>
+  <data name="DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove printer/driver/driverpack (Admin)...</value>
   </data>
   <data name="WindowsDruckverwaltungÖffnenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
   </data>
+  <data name="WindowsDruckverwaltungÖffnenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Windows Printer Management...</value>
+  </data>
   <data name="WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
+  </data>
+  <data name="WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Windows Printer Management (Admin)...</value>
   </data>
   <data name="AnwendungseinstellungenBearbeitenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
   </data>
+  <data name="AnwendungseinstellungenBearbeitenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit Application Settings</value>
+  </data>
   <data name="AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
+  </data>
+  <data name="AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit Application Settings (Admin)...</value>
   </data>
   <data name="ContextMenuStrip1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>312, 158</value>
@@ -6634,10 +6655,64 @@
   <data name="MetroLabel5.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
+  <data name="MetroLabel5.Text" xml:space="preserve">
+    <value>Please wait, loading printers...</value>
+  </data>
   <data name="MetroLabel5.TextAlign" xml:space="preserve" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
   <data name="ToolTip2.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
+  </data>
+  <data name="DriverMultiplePrintersPart1" xml:space="preserve">
+    <value>The following printers using the driver </value>
+  </data>
+  <data name="DriverMultiplePrintersRemoveQuestion" xml:space="preserve">
+    <value>The driver can not removed, without removing all dependent printers. Would you like to remove all dependent printers?</value>
+  </data>
+  <data name="ErrorLogStr" xml:space="preserve">
+    <value>error</value>
+  </data>
+  <data name="ExportPrinterSettings" xml:space="preserve">
+    <value>Export successful.</value>
+  </data>
+  <data name="ImportPrinterSettings" xml:space="preserve">
+    <value>Export successful.</value>
+  </data>
+  <data name="RemovePrinterMessagePart1" xml:space="preserve">
+    <value>Dou you like to remove the printer </value>
+  </data>
+  <data name="RemovePrinterMessagePart2" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="AskUserForPrinterConnectionPart1" xml:space="preserve">
+    <value>Would you like to connect the printer </value>
+  </data>
+  <data name="AskUserForPrinterConnectionPart2" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="ExactPrinterFoundPrinterSearchText" xml:space="preserve">
+    <value>Printer found. Ready to connect.</value>
+  </data>
+  <data name="MultipleResultsPrinterSearchText" xml:space="preserve">
+    <value>Multiple results. Please provide more information.</value>
+  </data>
+  <data name="NoResultsPrinterSearchText" xml:space="preserve">
+    <value>No printers found.</value>
+  </data>
+  <data name="PrinterCollectCountText" xml:space="preserve">
+    <value>Printer found.</value>
+  </data>
+  <data name="PrinterCollectFinishedText" xml:space="preserve">
+    <value>Printers found, please search.</value>
+  </data>
+  <data name="PrinterCollectNotFinishedServerNotAv" xml:space="preserve">
+    <value>Search not successful (Server not reachable).</value>
+  </data>
+  <data name="PrinterCollectNotFinishedTimeout" xml:space="preserve">
+    <value>Search not successful (Timeout).</value>
+  </data>
+  <data name="PrinterReadyText" xml:space="preserve">
+    <value>Ready</value>
   </data>
 </root>

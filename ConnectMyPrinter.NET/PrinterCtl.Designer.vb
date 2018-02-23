@@ -63,6 +63,8 @@ Partial Class PrinterCtl
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DruckereinstellungenExportierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DruckereinstellungenImportierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProfildateiErstellenverbindenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -70,8 +72,6 @@ Partial Class PrinterCtl
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.ProfildateiErstellenverbindenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveFileDialog2 = New System.Windows.Forms.SaveFileDialog()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -329,6 +329,16 @@ Partial Class PrinterCtl
         Me.DruckereinstellungenImportierenToolStripMenuItem.Name = "DruckereinstellungenImportierenToolStripMenuItem"
         resources.ApplyResources(Me.DruckereinstellungenImportierenToolStripMenuItem, "DruckereinstellungenImportierenToolStripMenuItem")
         '
+        'ProfildateiErstellenverbindenToolStripMenuItem
+        '
+        Me.ProfildateiErstellenverbindenToolStripMenuItem.Name = "ProfildateiErstellenverbindenToolStripMenuItem"
+        resources.ApplyResources(Me.ProfildateiErstellenverbindenToolStripMenuItem, "ProfildateiErstellenverbindenToolStripMenuItem")
+        '
+        'ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem
+        '
+        Me.ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Name = "ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem"
+        resources.ApplyResources(Me.ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem, "ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem")
+        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
@@ -374,16 +384,6 @@ Partial Class PrinterCtl
         '
         resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
         Me.OpenFileDialog1.RestoreDirectory = True
-        '
-        'ProfildateiErstellenverbindenToolStripMenuItem
-        '
-        Me.ProfildateiErstellenverbindenToolStripMenuItem.Name = "ProfildateiErstellenverbindenToolStripMenuItem"
-        resources.ApplyResources(Me.ProfildateiErstellenverbindenToolStripMenuItem, "ProfildateiErstellenverbindenToolStripMenuItem")
-        '
-        'ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem
-        '
-        Me.ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Name = "ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem"
-        resources.ApplyResources(Me.ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem, "ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem")
         '
         'SaveFileDialog2
         '

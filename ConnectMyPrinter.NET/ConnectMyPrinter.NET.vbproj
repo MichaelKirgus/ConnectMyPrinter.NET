@@ -394,6 +394,8 @@
     <Content Include="ReadMe.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\printer_default.png" />
+    <None Include="Resources\printer_nodefault.png" />
     <None Include="Resources\dialog-error.png" />
     <None Include="Resources\dialog-declare.png" />
     <None Include="Resources\search1.png" />

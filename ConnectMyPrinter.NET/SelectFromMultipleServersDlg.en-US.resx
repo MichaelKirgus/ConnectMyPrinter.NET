@@ -52,10 +52,9 @@
     <value>5</value>
   </data>
   <data name="MetroLabel1.Text" xml:space="preserve">
-    <value>The printer you have selected multiple print servers applied.
- is on 
- Please select the print server which you 
-the printer connect to:</value>
+    <value>The printer you have selected multiple 
+print servers applied.
+Please select the print server woud you like to connect to:</value>
   </data>
   <data name="MetroLabel2.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>True</value>

@@ -1406,6 +1406,7 @@ Please select the print server woud you like to connect to:</target>
         <trans-unit id="Button1.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
           <source>367, 0</source>
           <target state="needs-review-translation">367, 0</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>22, 22</source>
@@ -1426,6 +1427,7 @@ Please select the print server woud you like to connect to:</target>
         <trans-unit id="Button2.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
           <source>367, 20</source>
           <target state="needs-review-translation">367, 20</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button2.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>22, 22</source>
@@ -1604,27 +1606,27 @@ Please select the print server woud you like to connect to:</target>
         </trans-unit>
         <trans-unit id="DriverMultiplePrintersPart1" translate="yes" xml:space="preserve">
           <source>Folgende Drucker verwenden noch den Treiber </source>
-          <target state="translated">The following printers using the driver </target>
+          <target state="new">Folgende Drucker verwenden noch den Treiber </target>
         </trans-unit>
         <trans-unit id="DriverMultiplePrintersRemoveQuestion" translate="yes" xml:space="preserve">
           <source>Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</source>
-          <target state="translated">The driver can not removed, without removing all dependent printers. Would you like to remove all dependent printers?</target>
+          <target state="new">Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</target>
         </trans-unit>
         <trans-unit id="ExportPrinterSettings" translate="yes" xml:space="preserve">
           <source>Druckereinstellungen erfolgreich exportiert.</source>
-          <target state="translated">Export successful.</target>
+          <target state="new">Druckereinstellungen erfolgreich exportiert.</target>
         </trans-unit>
         <trans-unit id="ImportPrinterSettings" translate="yes" xml:space="preserve">
           <source>Druckereinstellungen erfolgreich importiert.</source>
-          <target state="translated">Export successful.</target>
+          <target state="new">Druckereinstellungen erfolgreich importiert.</target>
         </trans-unit>
         <trans-unit id="RemovePrinterMessagePart1" translate="yes" xml:space="preserve">
           <source>Möchten Sie wirklich den Drucker</source>
-          <target state="translated">Dou you like to remove the printer </target>
+          <target state="new">Möchten Sie wirklich den Drucker</target>
         </trans-unit>
         <trans-unit id="RemovePrinterMessagePart2" translate="yes" xml:space="preserve">
           <source> entfernen?</source>
-          <target state="translated"></target>
+          <target state="new"> entfernen?</target>
         </trans-unit>
       </group>
     </body>
@@ -1741,8 +1743,9 @@ Please select the print server woud you like to connect to:</target>
           <target state="final">..\Resources\decollapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
         </trans-unit>
         <trans-unit id="printer_nonstandard" translate="yes" extype="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-          <source>..\Resources\printer_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
-          <target state="final">..\Resources\printer_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+          <source>..\Resources\printer_nodefault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="info_small" translate="yes" extype="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
           <source>..\Resources\info_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
@@ -1773,8 +1776,9 @@ Please select the print server woud you like to connect to:</target>
           <target state="final">..\Resources\printer_connectionl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
         </trans-unit>
         <trans-unit id="printer_standard" translate="yes" extype="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-          <source>..\Resources\printer_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
-          <target state="final">..\Resources\printer_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+          <source>..\Resources\printer_default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="trenn" translate="yes" xml:space="preserve">
           <source>"</source>

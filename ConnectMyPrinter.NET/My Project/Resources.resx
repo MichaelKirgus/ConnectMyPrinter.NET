@@ -169,12 +169,6 @@
   <data name="printer_connectionl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer_connectionl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="printer_nonstandard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="printer_standard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="trenn" xml:space="preserve">
     <value>"</value>
   </data>
@@ -219,5 +213,11 @@
   </data>
   <data name="dialog-error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dialog-error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer_nonstandard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer_nodefault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer_standard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer_default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
