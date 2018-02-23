@@ -70,6 +70,7 @@ Public Class AppSettingsDlg
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
         Dim hh As New ProcessingDlg
+        hh._parent = _parent
         hh.Show(Me.ParentForm)
         Application.DoEvents()
         ElevationHelper.GenerateActionFile("DeleteAllPrintersAndDrivers", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
@@ -81,6 +82,7 @@ Public Class AppSettingsDlg
 
     Private Sub MetroButton2_Click(sender As Object, e As EventArgs) Handles MetroButton2.Click
         Dim hh As New ProcessingDlg
+        hh._parent = _parent
         hh.Show(Me.ParentForm)
         Application.DoEvents()
         ElevationHelper.GenerateActionFile("DeleteUnusedDrivers", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
@@ -93,6 +95,7 @@ Public Class AppSettingsDlg
 
     Private Sub MetroButton3_Click(sender As Object, e As EventArgs) Handles MetroButton3.Click
         Dim hh As New ProcessingDlg
+        hh._parent = _parent
         hh.Show(Me.ParentForm)
         Application.DoEvents()
         ElevationHelper.GenerateActionFile("PurgePrinterSpooler", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, _parent, dummyctl)
@@ -104,6 +107,7 @@ Public Class AppSettingsDlg
 
     Private Sub MetroButton6_Click(sender As Object, e As EventArgs) Handles MetroButton6.Click
         Dim hh As New ProcessingDlg
+        hh._parent = _parent
         hh.Show(Me.ParentForm)
         Application.DoEvents()
         If _parent.AppSettings.PrinterSpoolerRestartNeedElevation Or (_parent.UserCanControlSpooler = False) Then
@@ -119,6 +123,7 @@ Public Class AppSettingsDlg
 
     Private Sub MetroButton4_Click(sender As Object, e As EventArgs) Handles MetroButton4.Click
         Dim hh As New ProcessingDlg
+        hh._parent = _parent
         hh.Show(Me.ParentForm)
         Application.DoEvents()
         If _parent.AppSettings.PrinterSpoolerRestartNeedElevation Or (_parent.UserCanControlSpooler = False) Then
@@ -134,6 +139,7 @@ Public Class AppSettingsDlg
 
     Private Sub MetroButton5_Click(sender As Object, e As EventArgs) Handles MetroButton5.Click
         Dim hh As New ProcessingDlg
+        hh._parent = _parent
         hh.Show(Me.ParentForm)
         Application.DoEvents()
         If _parent.AppSettings.PrinterSpoolerRestartNeedElevation Or (_parent.UserCanControlSpooler = False) Then

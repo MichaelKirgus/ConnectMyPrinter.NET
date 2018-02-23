@@ -1,9 +1,15 @@
 <?xml version="1.0"?>
-<AppSettingsClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <WindowTitle>ConnectMyPrinter.NET</WindowTitle>
-  <UserInformation>Bitte geben Sie einen Druckernamen ein.</UserInformation>
-  <AdditionalUserInformation />
-  <CompanyLogoImagePath>logo.gif</CompanyLogoImagePath>
+<AppSettingsClass xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EnableLogging>false</EnableLogging>
+  <LogFile>Log.txt</LogFile>
+  <WindowTitle>ConnectMyPrinter.NET (Ihr Text)</WindowTitle>
+  <UserInformation>Bitte geben Sie einen Druckernamen ein. (Ihr Text)</UserInformation>
+  <AdditionalUserInformation>Noch mehr Text</AdditionalUserInformation>
+  <CompanyLogoImagePath>demo.png</CompanyLogoImagePath>
+  <WindowStyle>Black</WindowStyle>
+  <AdditionalUserHelpInformationRTF />
+  <ShowAdditionalUserHelpOnWindowMouseEnter>false</ShowAdditionalUserHelpOnWindowMouseEnter>
+  <ShowAdditionalUserHelpOnTextFieldClick>false</ShowAdditionalUserHelpOnTextFieldClick>
   <StartWindowPosition>CenterScreen</StartWindowPosition>
   <StartWindowHeight>650</StartWindowHeight>
   <StartInMinimalMode>false</StartInMinimalMode>
@@ -11,14 +17,21 @@
   <ShowTopMost>false</ShowTopMost>
   <PrintServers>
     <PrintServerItem>
-      <PrintServerName>MICHAEL-PC</PrintServerName>
+      <PrintServerName>Server1</PrintServerName>
       <Priority>2</Priority>
+      <RequestPing>true</RequestPing>
+      <PingTimeout>500</PingTimeout>
     </PrintServerItem>
     <PrintServerItem>
-      <PrintServerName>DESKTOP-NTGV10C</PrintServerName>
+      <PrintServerName>Server2</PrintServerName>
       <Priority>1</Priority>
+      <RequestPing>true</RequestPing>
+      <PingTimeout>500</PingTimeout>
     </PrintServerItem>
   </PrintServers>
+  <MaxPrinterCollectTime>10000</MaxPrinterCollectTime>
+  <CancelCollectionOnPrintServerNotAvailable>false</CancelCollectionOnPrintServerNotAvailable>
+  <CollectAdditionalInformation>true</CollectAdditionalInformation>
   <AskUserIfMultipleResults>true</AskUserIfMultipleResults>
   <AskUserIfConnectPrinter>true</AskUserIfConnectPrinter>
   <AskUserIfDisconnectPrinter>true</AskUserIfDisconnectPrinter>
@@ -34,6 +47,7 @@
   <AutoCompleteMaxVisibleItems>20</AutoCompleteMaxVisibleItems>
   <SearchCount>5</SearchCount>
   <IgnoreUpperLowerCase>true</IgnoreUpperLowerCase>
+  <AutoConnectPrinterIfExactResult>false</AutoConnectPrinterIfExactResult>
   <DeletePrinterIfExists>true</DeletePrinterIfExists>
   <AllowUserToChangeSettings>true</AllowUserToChangeSettings>
   <AllowUserToSaveSettings>true</AllowUserToSaveSettings>
@@ -44,9 +58,15 @@
   <ElevationBypassUsername />
   <ElevationBypassPassword />
   <DeletePrinterDriverLowLevel>false</DeletePrinterDriverLowLevel>
+  <LocalMachineRegistryPermission>true</LocalMachineRegistryPermission>
+  <DeleteLocalMachinePartOnUserPrinterDelete>false</DeleteLocalMachinePartOnUserPrinterDelete>
   <PrinterAdminPath>C:\Windows\System32\Printing_Admin_Scripts\de-DE</PrinterAdminPath>
   <CleanPrinterDriverPackagesAtPrinterRemove>false</CleanPrinterDriverPackagesAtPrinterRemove>
   <CleanPrinterDriverPackagesAtPrinterDriverRemove>true</CleanPrinterDriverPackagesAtPrinterDriverRemove>
+  <RestartPrintSpoolerAtPrinterRemove>true</RestartPrintSpoolerAtPrinterRemove>
+  <CleanLostPrinterDriverItemsAtPrinterRemove>true</CleanLostPrinterDriverItemsAtPrinterRemove>
+  <CleanLostPrinterDriverItemsAtPrinterDriverRemove>true</CleanLostPrinterDriverItemsAtPrinterDriverRemove>
+  <ForceAdministratorRightsOnForceDelete>false</ForceAdministratorRightsOnForceDelete>
   <SavedPrintersProfileFile>O:\Printer.xml</SavedPrintersProfileFile>
   <ShowLocalPrinters>true</ShowLocalPrinters>
   <HiddenPrinterList />
@@ -56,11 +76,30 @@
   <DoubleClickActionOnPrinterItem>ShowPrinterDriverSettingsDialog</DoubleClickActionOnPrinterItem>
   <ShowRestartPrinterQueueButton>true</ShowRestartPrinterQueueButton>
   <AllowUserDeleteLocalPrinter>true</AllowUserDeleteLocalPrinter>
+  <AllowForceDeletePrinterStartWithoutAdminRights>true</AllowForceDeletePrinterStartWithoutAdminRights>
+  <ShowForceDeletePrinterNonAdminMessageAtStart>true</ShowForceDeletePrinterNonAdminMessageAtStart>
+  <AllowDeleteAllPrintersStartWithoutAdminRights>true</AllowDeleteAllPrintersStartWithoutAdminRights>
   <ShowDriverNotifications>true</ShowDriverNotifications>
+  <ShowAdvancedPrinterListButton>true</ShowAdvancedPrinterListButton>
+  <ShowPrintManagementCenterEntry>true</ShowPrintManagementCenterEntry>
+  <ShowForceDeletePrinterEntry>true</ShowForceDeletePrinterEntry>
+  <ShowAppSettingsConsoleEntry>true</ShowAppSettingsConsoleEntry>
+  <ShowProgressCircleOnEvents>true</ShowProgressCircleOnEvents>
+  <ShowDefaultPrinterAlwaysOnTop>true</ShowDefaultPrinterAlwaysOnTop>
   <DriverNotifications>
     <DriverNotifications>
       <ContainsStringInDriverName>Canon</ContainsStringInDriverName>
       <RtfFile>Test1.rtf</RtfFile>
     </DriverNotifications>
   </DriverNotifications>
+  <ShowExitEntryInTrayApp>true</ShowExitEntryInTrayApp>
+  <ShowManagePrintersEntryInTrayApp>true</ShowManagePrintersEntryInTrayApp>
+  <ShowCompanyLogoInTrayApp>true</ShowCompanyLogoInTrayApp>
+  <ShowRefreshEntryInTrayApp>true</ShowRefreshEntryInTrayApp>
+  <ShowClassicTrayMenuStyleInTrayApp>false</ShowClassicTrayMenuStyleInTrayApp>
+  <DoubleClickOnTrayIconStartsMainApp>true</DoubleClickOnTrayIconStartsMainApp>
+  <ShowDeletePrinterEntryInTrayApp>true</ShowDeletePrinterEntryInTrayApp>
+  <ShowChangeDefaultPrinterDriverSettingsEntryInTrayApp>true</ShowChangeDefaultPrinterDriverSettingsEntryInTrayApp>
+  <ShowOpenPrinterWebsiteEntryInTrayApp>false</ShowOpenPrinterWebsiteEntryInTrayApp>
+  <ShowRestartPrinterServiceEntryInTrayApp>false</ShowRestartPrinterServiceEntryInTrayApp>
 </AppSettingsClass>

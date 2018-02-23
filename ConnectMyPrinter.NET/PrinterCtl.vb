@@ -144,7 +144,7 @@ Public Class PrinterCtl
                 Dim oo As New DeletePrinterDlg
                 oo._parent = _parent
                 _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me.ParentForm, "Drucker " & aa.ShareName & " entfernen", Err)
-                oo.MetroLabel2.Text = "Möchten Sie wirklich den Drucker" & vbNewLine & aa.ShareName & " entfernen?"
+                oo.MetroLabel2.Text = My.Resources.PrinterCtl.RemovePrinterMessagePart1 & vbNewLine & aa.ShareName & My.Resources.PrinterCtl.RemovePrinterMessagePart2
                 Dim uu As MsgBoxResult
                 uu = oo.ShowDialog()
                 If uu = MsgBoxResult.Yes Then
@@ -156,6 +156,7 @@ Public Class PrinterCtl
 
             If isok = True Then
                 Dim jj As New ProcessingDlg
+                jj._parent = _parent
                 jj.Show(Me.ParentForm)
                 Application.DoEvents()
                 _parent.PrinterManageService.DeletePrinter(Me.Tag)
@@ -190,7 +191,7 @@ Public Class PrinterCtl
                 jj.Close()
             End If
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -208,6 +209,7 @@ Public Class PrinterCtl
 
     Private Sub MetroButton3_Click(sender As Object, e As EventArgs) Handles MetroButton3.Click
         Dim jj As New ProcessingDlg
+        jj._parent = _parent
         jj.Show(Me.ParentForm)
         Application.DoEvents()
         _parent.PrinterManageService.PurgePrinterQueue(Me.Tag)
@@ -217,6 +219,7 @@ Public Class PrinterCtl
     Private Sub StandardeinstellungenLöschenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StandardeinstellungenLöschenToolStripMenuItem.Click
         _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me.ParentForm, "Lösche Standardeinstellungen", Err)
         Dim jj As New ProcessingDlg
+        jj._parent = _parent
         jj.Show(Me.ParentForm)
         Application.DoEvents()
         _parent.PrinterManageService.DeleteDevModeSettings(Me.Tag)
@@ -227,6 +230,7 @@ Public Class PrinterCtl
 
     Private Sub MetroButton4_Click(sender As Object, e As EventArgs) Handles MetroButton4.Click
         Dim jj As New ProcessingDlg
+        jj._parent = _parent
         jj.Show(Me.ParentForm)
 
         DeletePrinterInt()
@@ -248,14 +252,14 @@ Public Class PrinterCtl
             aa = Me.Tag
 
             If ll.Count > 1 Then
-                Dim pp As String = "Folgende Drucker verwenden noch den Treiber " & aa.DriverName & " :" & vbNewLine
+                Dim pp As String = My.Resources.PrinterCtl.DriverMultiplePrintersPart1 & aa.DriverName & " :" & vbNewLine
 
                 For index = 0 To ll.Count - 1
                     pp += ll(index).ShareName & " Server: " & ll(index).Server & vbNewLine
                 Next
 
                 Dim qq As MsgBoxResult
-                qq = MsgBox(pp & vbNewLine & vbNewLine & "Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?", MsgBoxStyle.OkCancel)
+                qq = MsgBox(pp & vbNewLine & vbNewLine & My.Resources.PrinterCtl.DriverMultiplePrintersRemoveQuestion, MsgBoxStyle.OkCancel)
 
                 If qq = MsgBoxResult.Ok Then
                     For index = 0 To ll.Count - 1
@@ -273,7 +277,7 @@ Public Class PrinterCtl
 
             Return ll
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
             Return New List(Of PrinterQueueInfo)
         End Try
     End Function
@@ -387,7 +391,7 @@ Public Class PrinterCtl
 
             Return True
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -395,6 +399,7 @@ Public Class PrinterCtl
     Sub ReinstallPrinter()
         Try
             Dim jj As New ProcessingDlg
+            jj._parent = _parent
             jj.Show(Me.ParentForm)
             Application.DoEvents()
 
@@ -415,7 +420,7 @@ Public Class PrinterCtl
 
             _parent.ReloadLocalPrinters()
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -425,6 +430,7 @@ Public Class PrinterCtl
 
     Private Sub MetroButton6_Click(sender As Object, e As EventArgs) Handles MetroButton6.Click
         Dim jj As New ProcessingDlg
+        jj._parent = _parent
         jj.Show()
         Application.DoEvents()
         _parent.PrinterManageService.RetrievePrinterInformation(Me.Tag)
@@ -433,6 +439,7 @@ Public Class PrinterCtl
 
     Private Sub AlsStandarddruckerFestlegenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlsStandarddruckerFestlegenToolStripMenuItem.Click
         Dim jj As New ProcessingDlg
+        jj._parent = _parent
         jj.Show()
         Application.DoEvents()
         _parent.PrinterManageService.SetDefaultPrinter(Me.Tag)
@@ -496,10 +503,10 @@ Public Class PrinterCtl
             SaveFileDialog1.ShowDialog()
             If Not SaveFileDialog1.FileName = "" Then
                 gg.ExportPrinterSettings(Me.Tag, SaveFileDialog1.FileName)
-                MsgBox("Druckereinstellungen erfolgreich exportiert.")
+                MsgBox(My.Resources.PrinterCtl.ExportPrinterSettings)
             End If
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -511,10 +518,10 @@ Public Class PrinterCtl
             SaveFileDialog1.ShowDialog()
             If Not SaveFileDialog1.FileName = "" Then
                 gg.ExportPrinterSettings(Me.Tag, SaveFileDialog1.FileName)
-                MsgBox("Druckereinstellungen erfolgreich importiert.")
+                MsgBox(My.Resources.PrinterCtl.ImportPrinterSettings)
             End If
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, "Fehler", Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
         End Try
     End Sub
 

@@ -56,7 +56,9 @@ Public Class ProcessDlg
             End If
             If ActionItem.Action = RemoteFileActionsEnums.ActionEnum.ShowMessage Then
                 'Hinweismeldung anzeigen
-                MsgBox(ActionItem.CustomData, MsgBoxStyle.ApplicationModal)
+                Me.TopMost = False
+                MsgBox(ActionItem.CustomData, MsgBoxStyle.Information)
+                Me.TopMost = True
                 Return True
             End If
             If ActionItem.Action = RemoteFileActionsEnums.ActionEnum.StartSpooler Then
@@ -75,6 +77,19 @@ Public Class ProcessDlg
                 'Benutzerdefinierte Zeit (in Millisekunden) warten
                 Threading.Thread.Sleep(ActionItem.CustomData)
                 Return True
+            End If
+            If ActionItem.Action = RemoteFileActionsEnums.ActionEnum.SetDefaultPrinter Then
+                'Standarddrucker ändern
+                Try
+                    Dim uu As New ConnectMyPrinterPrinterManageLib.ManagePrinter
+                    Dim qq As New PrinterQueueInfo
+                    qq.ShareName = ActionItem.PrinterName
+                    qq.Name = ActionItem.PrinterName
+                    qq.Server = "\\" & ActionItem.PrintServer
+
+                    uu.SetDefaultPrinter(qq)
+                Catch ex As Exception
+                End Try
             End If
 
             Return True
@@ -97,6 +112,7 @@ Public Class ProcessDlg
                     Dim qq As New PrinterQueueInfo
                     qq.ShareName = item.PrinterName
                     qq.Name = item.PrinterName
+                    qq.Server = "\\" & item.PrintServer
                     uu.DeletePrinter(qq)
                 Catch ex As Exception
                 End Try
@@ -113,7 +129,7 @@ Public Class ProcessDlg
                     Dim uu As New ConnectMyPrinterPrinterManageLib.ManagePrinter
                     Dim qq As New PrinterQueueInfo
                     qq.ShareName = item.PrinterName
-                    qq.Server = item.Printserver
+                    qq.Server = "\\" & item.Printserver
                     qq.Name = item.PrinterName
 
                     Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Printserver & "\" & item.PrinterName, AppWinStyle.Hide, True, 5000)

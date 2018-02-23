@@ -9,5 +9,6 @@
         ResetPrinterSettings = 5
         CleanUnusedDrivers = 6
         WaitForMilliseconds = 7
+        SetDefaultPrinter = 8
     End Enum
 End Class

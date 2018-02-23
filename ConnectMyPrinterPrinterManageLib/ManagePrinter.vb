@@ -179,7 +179,7 @@ Public Class ManagePrinter
             If PrinterEntry.Server = "Lokal" Then
                 Shell("rundll32 printui.dll PrintUIEntry /dl /n " & My.Resources.trenn & PrinterEntry.ShareName & My.Resources.trenn & " /q")
             Else
-                Shell("rundll32 printui.dll PrintUIEntry /dn /n" & PrinterEntry.Server & "\" & PrinterEntry.ShareName & " /q")
+                Shell("rundll32 printui.dll PrintUIEntry /dn /n " & PrinterEntry.Server & "\" & PrinterEntry.ShareName & " /q")
             End If
 
             Return True

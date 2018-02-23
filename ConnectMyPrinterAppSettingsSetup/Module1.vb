@@ -6,7 +6,13 @@ Module Module1
     Sub Main()
         If Environment.Is64BitOperatingSystem Then
             Console.WriteLine("Kopiere Einstellungsdatei von C:\Temp nach C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET...")
-            My.Computer.FileSystem.CopyFile("C:\Temp\AppSettings.xml", "C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", True)
+            Try
+                My.Computer.FileSystem.CopyFile("C:\Temp\AppSettings.xml", "C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", True)
+                Console.WriteLine("Einstellungsdatei von C:\Temp nach C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET kopiert.")
+            Catch ex As Exception
+                Console.WriteLine("Einstellungsdatei konnte nicht kopiert werden.")
+            End Try
+
             Console.WriteLine("Ändere ACLs für Einstellungsdatei...")
             Try
                 AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "Everyone",

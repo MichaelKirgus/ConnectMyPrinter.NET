@@ -6625,4 +6625,19 @@
   <data name="ContextMenuStrip1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>312, 158</value>
   </data>
+  <data name="MetroLabel5.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>24, 94</value>
+  </data>
+  <data name="MetroLabel5.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>302, 27</value>
+  </data>
+  <data name="MetroLabel5.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="MetroLabel5.TextAlign" xml:space="preserve" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="ToolTip2.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
 </root>

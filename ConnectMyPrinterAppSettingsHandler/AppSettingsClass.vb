@@ -12,6 +12,8 @@ Imports ConnectMyPrinterEnumerationLib
     Property AdditionalUserHelpInformationRTF As String = ""
     Property ShowAdditionalUserHelpOnWindowMouseEnter As Boolean = False
     Property ShowAdditionalUserHelpOnTextFieldClick As Boolean = False
+    Property FocusPrinternameFieldAtStart As Boolean = True
+    Property AllowUserToEnterPrinternameBeforeSearchFinished As Boolean = False
     Property StartWindowPosition As AppWindowPosition = AppWindowPosition.CenterScreen
     Property StartWindowHeight As Integer = 620
     Property StartInMinimalMode As Boolean = False

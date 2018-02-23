@@ -62,7 +62,7 @@ Partial Class ProcessingDlg
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Style = MetroFramework.MetroColorStyle.White
+        Me.Style = MetroFramework.MetroColorStyle.Black
         Me.Text = "Bitte warten..."
         Me.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center
         Me.Theme = MetroFramework.MetroThemeStyle.Light
