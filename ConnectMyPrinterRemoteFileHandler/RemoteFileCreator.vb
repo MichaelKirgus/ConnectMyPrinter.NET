@@ -38,6 +38,7 @@ Public Class RemoteFileCreator
                         onlyserver = item.Server
                     End If
                     jj.Printserver = onlyserver
+                    jj.SetDefaultPrinter = item.DefaultPrinter
                     aa.ConnectPrinters.Add(jj)
                 End If
             Next
