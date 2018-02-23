@@ -105,10 +105,15 @@ Public Class BackupFrm
             If Not BWork.PrinterSettingsFolder = "" Then
                 Dim jj As New ExportImportPrinterSettings
 
-                For Each item As PrinterQueueInfo In ConnectedPrinters
+                For Each item As PrinterQueueInfo In LocalPrinters
                     Try
-                        jj.ExportPrinterSettings(item, BWork.PrinterSettingsFolder & "\" & item.Name & ".dat")
+                        If item.ShareName = "" Then
+                            jj.ExportPrinterSettings(item, BWork.PrinterSettingsFolder & "\" & item.Name & ".dat")
+                        Else
+                            jj.ExportPrinterSettings(item, BWork.PrinterSettingsFolder & "\" & item.ShareName & ".dat")
+                        End If
                     Catch ex As Exception
+                        MsgBox(Err.Description)
                     End Try
                 Next
             End If

@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Werte der Assemblyattribute überprüfen
 
 <Assembly: AssemblyTitle("ConnectMyPrinterBackupApp")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("ConnectMyPrinterBackupApp")>
-<Assembly: AssemblyCopyright("Copyright ©  2018")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyDescription("Sichert alle verbundenen Drucker sowie optional alle Druckereinstellungen")>
+<Assembly: AssemblyCompany("Michael Kirgus")>
+<Assembly: AssemblyProduct("ConnectMyPrinter.NET")>
+<Assembly: AssemblyCopyright("Copyright ©  2018 Michael Kirgus")>
+<Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>
 
