@@ -1565,7 +1565,7 @@ the printer connect to:</target>
         </trans-unit>
         <trans-unit id="DruckerEntfernenlokalToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Drucker entfernen (lokal)</source>
-          <target state="new">Drucker entfernen (lokal)</target>
+          <target state="translated">Remove printer (local)</target>
         </trans-unit>
         <trans-unit id="DruckerEntfernenlokalToolStripMenuItem.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
           <source>False</source>
@@ -1577,7 +1577,7 @@ the printer connect to:</target>
         </trans-unit>
         <trans-unit id="ProfildateiErstellenverbindenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Profildatei erstellen (verbinden)...</source>
-          <target state="new">Profildatei erstellen (verbinden)...</target>
+          <target state="translated">Generate profile (connect)...</target>
         </trans-unit>
         <trans-unit id="ProfildateiErstellenverbindenToolStripMenuItem.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
           <source>False</source>
@@ -1589,7 +1589,7 @@ the printer connect to:</target>
         </trans-unit>
         <trans-unit id="ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Profildatei erstellen (entfernen und verbinden)...</source>
-          <target state="new">Profildatei erstellen (entfernen und verbinden)...</target>
+          <target state="translated">Generate profile (disconnect and connect)...</target>
         </trans-unit>
         <trans-unit id="ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
           <source>False</source>
@@ -1597,7 +1597,7 @@ the printer connect to:</target>
         </trans-unit>
         <trans-unit id="SaveFileDialog2.Filter" translate="yes" xml:space="preserve">
           <source>Profildatei|*.prpr</source>
-          <target state="new">Profildatei|*.prpr</target>
+          <target state="translated">Profilfile|*.prpr</target>
         </trans-unit>
         <trans-unit id="SaveFileDialog2.TrayLocation" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing" extradata="metadata">
           <source>552, 17</source>
@@ -1605,27 +1605,27 @@ the printer connect to:</target>
         </trans-unit>
         <trans-unit id="DriverMultiplePrintersPart1" translate="yes" xml:space="preserve">
           <source>Folgende Drucker verwenden noch den Treiber </source>
-          <target state="new">Folgende Drucker verwenden noch den Treiber </target>
+          <target state="translated">The following printers using the driver </target>
         </trans-unit>
         <trans-unit id="DriverMultiplePrintersRemoveQuestion" translate="yes" xml:space="preserve">
           <source>Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</source>
-          <target state="new">Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</target>
+          <target state="translated">The driver can not removed, without removing all dependent printers. Would you like to remove all dependent printers?</target>
         </trans-unit>
         <trans-unit id="ExportPrinterSettings" translate="yes" xml:space="preserve">
           <source>Druckereinstellungen erfolgreich exportiert.</source>
-          <target state="new">Druckereinstellungen erfolgreich exportiert.</target>
+          <target state="translated">Export successful.</target>
         </trans-unit>
         <trans-unit id="ImportPrinterSettings" translate="yes" xml:space="preserve">
           <source>Druckereinstellungen erfolgreich importiert.</source>
-          <target state="new">Druckereinstellungen erfolgreich importiert.</target>
+          <target state="translated">Export successful.</target>
         </trans-unit>
         <trans-unit id="RemovePrinterMessagePart1" translate="yes" xml:space="preserve">
           <source>Möchten Sie wirklich den Drucker</source>
-          <target state="new">Möchten Sie wirklich den Drucker</target>
+          <target state="translated">Dou you like to remove the printer </target>
         </trans-unit>
         <trans-unit id="RemovePrinterMessagePart2" translate="yes" xml:space="preserve">
           <source> entfernen?</source>
-          <target state="new"> entfernen?</target>
+          <target state="translated"></target>
         </trans-unit>
       </group>
     </body>
@@ -15084,7 +15084,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="Button5.ToolTip" translate="yes" xml:space="preserve">
           <source>Alle gefundenen Drucker anzeigen</source>
-          <target state="new">Alle gefundenen Drucker anzeigen</target>
+          <target state="translated">Show all found printers</target>
         </trans-unit>
         <trans-unit id="Button5.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
           <source>False</source>
@@ -15121,7 +15121,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="DruckerTreiberTreiberpaketEntfernenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Drucker/Treiber/Treiberpaket entfernen...</source>
-          <target state="new">Drucker/Treiber/Treiberpaket entfernen...</target>
+          <target state="translated">Remove printer/driver/driverpack...</target>
         </trans-unit>
         <trans-unit id="DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>311, 22</source>
@@ -15129,7 +15129,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Drucker/Treiber/Treiberpaket entfernen (Admin)...</source>
-          <target state="new">Drucker/Treiber/Treiberpaket entfernen (Admin)...</target>
+          <target state="translated">Remove printer/driver/driverpack (Admin)...</target>
         </trans-unit>
         <trans-unit id="WindowsDruckverwaltungÖffnenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>311, 22</source>
@@ -15137,7 +15137,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="WindowsDruckverwaltungÖffnenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Windows-Druckverwaltung öffnen...</source>
-          <target state="new">Windows-Druckverwaltung öffnen...</target>
+          <target state="translated">Open Windows Printer Management...</target>
         </trans-unit>
         <trans-unit id="WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>311, 22</source>
@@ -15145,7 +15145,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Windows-Druckverwaltung öffnen (Admin)...</source>
-          <target state="new">Windows-Druckverwaltung öffnen (Admin)...</target>
+          <target state="translated">Open Windows Printer Management (Admin)...</target>
         </trans-unit>
         <trans-unit id="AnwendungseinstellungenBearbeitenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>311, 22</source>
@@ -15153,7 +15153,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="AnwendungseinstellungenBearbeitenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Anwendungseinstellungen bearbeiten...</source>
-          <target state="new">Anwendungseinstellungen bearbeiten...</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Edit Application Settings</target>
         </trans-unit>
         <trans-unit id="AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>311, 22</source>
@@ -15161,7 +15161,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Anwendungseinstellungen bearbeiten (Admin)...</source>
-          <target state="new">Anwendungseinstellungen bearbeiten (Admin)...</target>
+          <target state="translated">Edit Application Settings (Admin)...</target>
         </trans-unit>
         <trans-unit id="ContextMenuStrip1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>312, 136</source>
@@ -15182,7 +15182,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="MetroLabel5.Text" translate="yes" xml:space="preserve">
           <source>Bitte warten, Drucker werden geladen...</source>
-          <target state="new">Bitte warten, Drucker werden geladen...</target>
+          <target state="translated">Please wait, loading printers...</target>
         </trans-unit>
         <trans-unit id="MetroLabel5.TextAlign" translate="yes" xml:space="preserve" extype="System.Drawing.ContentAlignment, System.Drawing">
           <source>MiddleCenter</source>
@@ -15198,67 +15198,67 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="DriverMultiplePrintersRemoveQuestion" translate="yes" xml:space="preserve">
           <source>Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</source>
-          <target state="new">Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</target>
+          <target state="translated">The driver can not removed, without removing all dependent printers. Would you like to remove all dependent printers?</target>
         </trans-unit>
         <trans-unit id="ErrorLogStr" translate="yes" xml:space="preserve">
           <source>Fehler</source>
-          <target state="new">Fehler</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">error</target>
         </trans-unit>
         <trans-unit id="ExportPrinterSettings" translate="yes" xml:space="preserve">
           <source>Druckereinstellungen erfolgreich exportiert.</source>
-          <target state="new">Druckereinstellungen erfolgreich exportiert.</target>
+          <target state="translated">Export successful.</target>
         </trans-unit>
         <trans-unit id="ImportPrinterSettings" translate="yes" xml:space="preserve">
           <source>Druckereinstellungen erfolgreich importiert.</source>
-          <target state="new">Druckereinstellungen erfolgreich importiert.</target>
+          <target state="translated">Export successful.</target>
         </trans-unit>
         <trans-unit id="RemovePrinterMessagePart1" translate="yes" xml:space="preserve">
           <source>Möchten Sie wirklich den Drucker </source>
-          <target state="new">Möchten Sie wirklich den Drucker </target>
+          <target state="translated">Dou you like to remove the printer </target>
         </trans-unit>
         <trans-unit id="RemovePrinterMessagePart2" translate="yes" xml:space="preserve">
           <source> entfernen?</source>
-          <target state="new"> entfernen?</target>
+          <target state="translated"></target>
         </trans-unit>
         <trans-unit id="AskUserForPrinterConnectionPart1" translate="yes" xml:space="preserve">
           <source>Möchten Sie den Drucker </source>
-          <target state="new">Möchten Sie den Drucker </target>
+          <target state="translated">Would you like to connect the printer </target>
         </trans-unit>
         <trans-unit id="AskUserForPrinterConnectionPart2" translate="yes" xml:space="preserve">
           <source> verbinden?</source>
-          <target state="new"> verbinden?</target>
+          <target state="translated">?</target>
         </trans-unit>
         <trans-unit id="ExactPrinterFoundPrinterSearchText" translate="yes" xml:space="preserve">
           <source>Drucker gefunden, bereit zum verbinden.</source>
-          <target state="new">Drucker gefunden, bereit zum verbinden.</target>
+          <target state="translated">Printer found. Ready to connect.</target>
         </trans-unit>
         <trans-unit id="MultipleResultsPrinterSearchText" translate="yes" xml:space="preserve">
           <source>Mehrere Ergebnisse. Bitte Suche verfeinern.</source>
-          <target state="new">Mehrere Ergebnisse. Bitte Suche verfeinern.</target>
+          <target state="translated">Multiple results. Please provide more information.</target>
         </trans-unit>
         <trans-unit id="NoResultsPrinterSearchText" translate="yes" xml:space="preserve">
           <source>Leider kein Drucker gefunden.</source>
-          <target state="new">Leider kein Drucker gefunden.</target>
+          <target state="translated">No printers found.</target>
         </trans-unit>
         <trans-unit id="PrinterCollectCountText" translate="yes" xml:space="preserve">
           <source> Drucker gefunden.</source>
-          <target state="new"> Drucker gefunden.</target>
+          <target state="translated">Printer found.</target>
         </trans-unit>
         <trans-unit id="PrinterCollectFinishedText" translate="yes" xml:space="preserve">
           <source>Drucker geladen, bitte suchen.</source>
-          <target state="new">Drucker geladen, bitte suchen.</target>
+          <target state="translated">Printers found, please search.</target>
         </trans-unit>
         <trans-unit id="PrinterCollectNotFinishedServerNotAv" translate="yes" xml:space="preserve">
           <source>Drucker nur teilweise geladen (Server nicht erreichbar).</source>
-          <target state="new">Drucker nur teilweise geladen (Server nicht erreichbar).</target>
+          <target state="translated">Search not successful (Server not reachable).</target>
         </trans-unit>
         <trans-unit id="PrinterCollectNotFinishedTimeout" translate="yes" xml:space="preserve">
           <source>Drucker nur teilweise geladen (Timeout).</source>
-          <target state="new">Drucker nur teilweise geladen (Timeout).</target>
+          <target state="translated">Search not successful (Timeout).</target>
         </trans-unit>
         <trans-unit id="PrinterReadyText" translate="yes" xml:space="preserve">
           <source>Bereit</source>
-          <target state="new">Bereit</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ready</target>
         </trans-unit>
       </group>
     </body>
