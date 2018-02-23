@@ -2338,7 +2338,8 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="MetroTextBox1.TabIndex" translate="yes" extype="System.Int32, mscorlib" xml:space="preserve">
           <source>1</source>
-          <target state="final">1</target>
+          <target state="needs-review-translation">1</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="PictureBox1.TabIndex" translate="yes" extype="System.Int32, mscorlib" xml:space="preserve">
           <source>7</source>
@@ -15203,10 +15204,6 @@ administrator.</target>
           <source>Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</source>
           <target state="translated">The driver can not removed, without removing all dependent printers. Would you like to remove all dependent printers?</target>
         </trans-unit>
-        <trans-unit id="ErrorLogStr" translate="yes" xml:space="preserve">
-          <source>Fehler</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">error</target>
-        </trans-unit>
         <trans-unit id="ExportPrinterSettings" translate="yes" xml:space="preserve">
           <source>Druckereinstellungen erfolgreich exportiert.</source>
           <target state="translated">Export successful.</target>
@@ -15223,45 +15220,49 @@ administrator.</target>
           <source> entfernen?</source>
           <target state="translated"></target>
         </trans-unit>
+        <trans-unit id="ErrorLogStr" translate="yes" xml:space="preserve">
+          <source>Fehler</source>
+          <target state="new">Fehler</target>
+        </trans-unit>
         <trans-unit id="AskUserForPrinterConnectionPart1" translate="yes" xml:space="preserve">
           <source>Möchten Sie den Drucker </source>
-          <target state="translated">Would you like to connect the printer </target>
+          <target state="new">Möchten Sie den Drucker </target>
         </trans-unit>
         <trans-unit id="AskUserForPrinterConnectionPart2" translate="yes" xml:space="preserve">
           <source> verbinden?</source>
-          <target state="translated">?</target>
+          <target state="new"> verbinden?</target>
         </trans-unit>
         <trans-unit id="ExactPrinterFoundPrinterSearchText" translate="yes" xml:space="preserve">
           <source>Drucker gefunden, bereit zum verbinden.</source>
-          <target state="translated">Printer found. Ready to connect.</target>
+          <target state="new">Drucker gefunden, bereit zum verbinden.</target>
         </trans-unit>
         <trans-unit id="MultipleResultsPrinterSearchText" translate="yes" xml:space="preserve">
           <source>Mehrere Ergebnisse. Bitte Suche verfeinern.</source>
-          <target state="translated">Multiple results. Please provide more information.</target>
+          <target state="new">Mehrere Ergebnisse. Bitte Suche verfeinern.</target>
         </trans-unit>
         <trans-unit id="NoResultsPrinterSearchText" translate="yes" xml:space="preserve">
           <source>Leider kein Drucker gefunden.</source>
-          <target state="translated">No printers found.</target>
+          <target state="new">Leider kein Drucker gefunden.</target>
         </trans-unit>
         <trans-unit id="PrinterCollectCountText" translate="yes" xml:space="preserve">
           <source> Drucker gefunden.</source>
-          <target state="translated">Printer found.</target>
+          <target state="new"> Drucker gefunden.</target>
         </trans-unit>
         <trans-unit id="PrinterCollectFinishedText" translate="yes" xml:space="preserve">
           <source>Drucker geladen, bitte suchen.</source>
-          <target state="translated">Printers found, please search.</target>
+          <target state="new">Drucker geladen, bitte suchen.</target>
         </trans-unit>
         <trans-unit id="PrinterCollectNotFinishedServerNotAv" translate="yes" xml:space="preserve">
           <source>Drucker nur teilweise geladen (Server nicht erreichbar).</source>
-          <target state="translated">Search not successful (Server not reachable).</target>
+          <target state="new">Drucker nur teilweise geladen (Server nicht erreichbar).</target>
         </trans-unit>
         <trans-unit id="PrinterCollectNotFinishedTimeout" translate="yes" xml:space="preserve">
           <source>Drucker nur teilweise geladen (Timeout).</source>
-          <target state="translated">Search not successful (Timeout).</target>
+          <target state="new">Drucker nur teilweise geladen (Timeout).</target>
         </trans-unit>
         <trans-unit id="PrinterReadyText" translate="yes" xml:space="preserve">
           <source>Bereit</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ready</target>
+          <target state="new">Bereit</target>
         </trans-unit>
       </group>
     </body>

@@ -6670,9 +6670,6 @@
   <data name="DriverMultiplePrintersRemoveQuestion" xml:space="preserve">
     <value>The driver can not removed, without removing all dependent printers. Would you like to remove all dependent printers?</value>
   </data>
-  <data name="ErrorLogStr" xml:space="preserve">
-    <value>error</value>
-  </data>
   <data name="ExportPrinterSettings" xml:space="preserve">
     <value>Export successful.</value>
   </data>
@@ -6684,35 +6681,5 @@
   </data>
   <data name="RemovePrinterMessagePart2" xml:space="preserve">
     <value></value>
-  </data>
-  <data name="AskUserForPrinterConnectionPart1" xml:space="preserve">
-    <value>Would you like to connect the printer </value>
-  </data>
-  <data name="AskUserForPrinterConnectionPart2" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="ExactPrinterFoundPrinterSearchText" xml:space="preserve">
-    <value>Printer found. Ready to connect.</value>
-  </data>
-  <data name="MultipleResultsPrinterSearchText" xml:space="preserve">
-    <value>Multiple results. Please provide more information.</value>
-  </data>
-  <data name="NoResultsPrinterSearchText" xml:space="preserve">
-    <value>No printers found.</value>
-  </data>
-  <data name="PrinterCollectCountText" xml:space="preserve">
-    <value>Printer found.</value>
-  </data>
-  <data name="PrinterCollectFinishedText" xml:space="preserve">
-    <value>Printers found, please search.</value>
-  </data>
-  <data name="PrinterCollectNotFinishedServerNotAv" xml:space="preserve">
-    <value>Search not successful (Server not reachable).</value>
-  </data>
-  <data name="PrinterCollectNotFinishedTimeout" xml:space="preserve">
-    <value>Search not successful (Timeout).</value>
-  </data>
-  <data name="PrinterReadyText" xml:space="preserve">
-    <value>Ready</value>
   </data>
 </root>

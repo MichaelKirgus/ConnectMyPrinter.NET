@@ -189,8 +189,8 @@ Public Class Form1
             'Prüfen, ob das Textfeld den Fokus haben soll:
             If AppSettings.FocusPrinternameFieldAtStart Then
                 Me.FocusMe()
-                Application.DoEvents()
                 MetroTextBox1.TabIndex = 0
+                Application.DoEvents()
                 SendKeys.Send("{TAB}")
             End If
         Catch ex As Exception
