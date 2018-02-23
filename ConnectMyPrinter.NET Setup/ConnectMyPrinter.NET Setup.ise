@@ -353,6 +353,7 @@
 		<row><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe1</td><td>{6A607A62-0AF9-4B72-9D0E-58F9FAA313D2}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterappsettingsh1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe2</td><td>{833D8C91-04B7-4EEF-9584-5B3F06264484}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterappsettingsh2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterAppSettingsSetup.Prim_re_Ausgabe</td><td>{2EC37254-5F40-4640-B9C1-FC6F49B76EA7}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterappsettingss</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ConnectMyPrinterBackupApp.Prim_re_Ausgabe</td><td>{86F35B87-C538-462B-B47A-3DE434D3B634}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterbackupapp.pr</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterClean.Prim_re_Ausgabe1</td><td>{0170629C-9478-4344-9AF2-ABC1FFA34686}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterclean.prim_r1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterCreateRestorePoint.Prim_re_Ausgabe1</td><td>{A09ED34F-9584-4C7D-A575-7A150A1A2008}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprintercreaterestor1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterDeleteAllPrinters.Prim_re_Ausgabe1</td><td>{518EF5D7-CDCC-48BD-A818-A966232DBBE9}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterdeleteallpri1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1916,6 +1917,7 @@
 		<col def="S255">ProgId_</col>
 		<col def="S64">MIME_</col>
 		<col def="s38">Feature_</col>
+		<row><td>NewExtension1</td><td>ConnectMyPrinterRemoteFileHelper.Prim_re_Ausgabe1</td><td>prpr.File</td><td/><td>NewFeature6</td></row>
 		<row><td>prpr</td><td>ConnectMyPrinterRemoteFileHelper.Prim_re_Ausgabe1</td><td>prpr.File</td><td/><td>NewFeature6</td></row>
 	</table>
 
@@ -1963,6 +1965,7 @@
 		<row><td>NewFeature1</td><td>ConnectMyPrinterLog.Prim_re_Ausgabe</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe1</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterUACHelper.Prim_re_Ausgabe1</td></row>
+		<row><td>NewFeature2</td><td>ConnectMyPrinterBackupApp.Prim_re_Ausgabe</td></row>
 		<row><td>NewFeature2</td><td>ConnectMyPrinterClean.Prim_re_Ausgabe1</td></row>
 		<row><td>NewFeature2</td><td>ConnectMyPrinterCreateRestorePoint.Prim_re_Ausgabe1</td></row>
 		<row><td>NewFeature2</td><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe1</td></row>
@@ -2007,6 +2010,7 @@
 		<row><td>connectmyprinterappsettingsh1</td><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe1</td><td>ConnectMyPrinterAppSettingsHandler.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterAppSettingsHandler&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterappsettingsh2</td><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe2</td><td>ConnectMyPrinterAppSettingsHandler.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterAppSettingsHandler&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterappsettingss</td><td>ConnectMyPrinterAppSettingsSetup.Prim_re_Ausgabe</td><td>ConnectMyPrinterAppSettingsSetup.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterAppSettingsSetup&gt;|Built</td><td>3</td><td/></row>
+		<row><td>connectmyprinterbackupapp.pr</td><td>ConnectMyPrinterBackupApp.Prim_re_Ausgabe</td><td>ConnectMyPrinterBackupApp.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterBackupApp&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterclean.prim_r1</td><td>ConnectMyPrinterClean.Prim_re_Ausgabe1</td><td>ConnectMyPrinterClean.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterClean&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprintercreaterestor1</td><td>ConnectMyPrinterCreateRestorePoint.Prim_re_Ausgabe1</td><td>ConnectMyPrinterCreateRestorePoint.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterCreateRestorePoint&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterdeleteallpri1</td><td>ConnectMyPrinterDeleteAllPrinters.Prim_re_Ausgabe1</td><td>ConnectMyPrinterDeleteAllPrinters.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterDeleteAllPrinters&gt;|Built</td><td>3</td><td/></row>
@@ -2182,6 +2186,7 @@
 		<row><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe1</td><td/><td/><td>_F7C4470B_269B_4AD1_AE48_1D1C25582BA3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe2</td><td/><td/><td>_5E2815F5_77AC_4B67_9970_4B5CCD07E480_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterAppSettingsSetup.Prim_re_Ausgabe</td><td/><td/><td>_3FB92BDB_7F56_44A5_99CE_3B93DF05CF8D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ConnectMyPrinterBackupApp.Prim_re_Ausgabe</td><td/><td/><td>_E5C78A1F_BD05_4C17_A258_E0A67C9A9FA0_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterClean.Prim_re_Ausgabe1</td><td/><td/><td>_2537CE1C_8AF6_46CF_8FE7_5A9DB03EDFA2_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterCreateRestorePoint.Prim_re_Ausgabe1</td><td/><td/><td>_A12496C5_15C4_4079_8345_E95CE6641520_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterDeleteAllPrinters.Prim_re_Ausgabe1</td><td/><td/><td>_45CBD714_1043_41FB_84C1_7DC3D5B069A5_FILTER</td><td/><td/><td/><td/></row>
@@ -2492,6 +2497,7 @@
 		<row><td>ConnectMyPrinterACLHelperLib</td><td>ConnectMyPrinterACLHelperLib\ConnectMyPrinterACLHelperLib.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterAppSettingsHandler</td><td>ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterAppSettingsSetup</td><td>ConnectMyPrinterAppSettingsSetup\ConnectMyPrinterAppSettingsSetup.vbproj</td><td/><td>2</td></row>
+		<row><td>ConnectMyPrinterBackupApp</td><td>ConnectMyPrinterBackupApp\ConnectMyPrinterBackupApp.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterClean</td><td>ConnectMyPrinterClean\ConnectMyPrinterClean.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterCreateRestorePoint</td><td>ConnectMyPrinterCreateRestorePoint\ConnectMyPrinterCreateRestorePoint.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterDeleteAllPrinters</td><td>ConnectMyPrinterDeleteAllPrinters\ConnectMyPrinterDeleteAllPrinters.vbproj</td><td/><td>2</td></row>
@@ -5134,6 +5140,8 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>ID_STRING51</td><td>1033</td><td>NEWSHO~1|NewShortcut15</td><td>0</td><td/><td>958811125</td></row>
 		<row><td>ID_STRING52</td><td>1031</td><td>DRUCKE~1|Druckerprofile verwalten</td><td>0</td><td/><td>958819445</td></row>
 		<row><td>ID_STRING52</td><td>1033</td><td>DRUCKE~1|Druckerprofile verwalten</td><td>0</td><td/><td>958819445</td></row>
+		<row><td>ID_STRING53</td><td>1031</td><td>DRUCKE~1|Drucker sichern</td><td>0</td><td/><td>-1188660044</td></row>
+		<row><td>ID_STRING53</td><td>1033</td><td>NEWSHO~1|NewShortcut17</td><td>0</td><td/><td>-1188670284</td></row>
 		<row><td>ID_STRING6</td><td>1031</td><td>DRUCKE~1|Druckerwarteschlange neu starten</td><td>0</td><td/><td>-433771083</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>NEWSHO~1|NewShortcut3</td><td>0</td><td/><td>-433721963</td></row>
 		<row><td>ID_STRING7</td><td>1031</td><td>Hauptanwendung</td><td>0</td><td/><td>-2002326988</td></row>
@@ -6096,7 +6104,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S72">Icon_</col>
 		<col def="I2">IconIndex</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>prpr.File</td><td/><td/><td/><td/><td>0</td><td/></row>
+		<row><td>prpr.File</td><td/><td/><td>Druckerprofil</td><td/><td>0</td><td/></row>
 	</table>
 
 	<table name="Property">
@@ -6268,6 +6276,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>NewShortcut13</td><td>ConnectMyPrinterCreateRestorePoint.Prim_re_Ausgabe1</td><td/><td>newfolder2</td><td>2</td></row>
 		<row><td>NewShortcut15</td><td>ConnectMyPrinterTrayApp.Prim_re_Ausgabe</td><td/><td>newfolder2</td><td>2</td></row>
 		<row><td>NewShortcut16</td><td>ConnectMyPrinterRemoteFileHelper.Prim_re_Ausgabe1</td><td/><td>newfolder2</td><td>2</td></row>
+		<row><td>NewShortcut17</td><td>ConnectMyPrinterBackupApp.Prim_re_Ausgabe</td><td/><td>newfolder2</td><td>2</td></row>
 		<row><td>NewShortcut2</td><td>ConnectMyPrinter.NET.Prim_re_Ausgabe1</td><td/><td>connec_1.net_connectmyprinter.net</td><td>2</td></row>
 		<row><td>NewShortcut3</td><td>ConnectMyPrinterClean.Prim_re_Ausgabe1</td><td/><td>connec_1.net_connectmyprinter.net</td><td>2</td></row>
 		<row><td>NewShortcut4</td><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe1</td><td/><td>connec_1.net_connectmyprinter.net</td><td>2</td></row>
@@ -6366,6 +6375,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>NewShortcut14</td><td>StartupFolder</td><td>##ID_STRING42##</td><td>ConnectMyPrinterTrayApp.Prim_re_Ausgabe</td><td>NewFeature5</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut15</td><td>newfolder2</td><td>##ID_STRING51##</td><td>ConnectMyPrinterTrayApp.Prim_re_Ausgabe</td><td>NewFeature5</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut16</td><td>newfolder2</td><td>##ID_STRING52##</td><td>ConnectMyPrinterRemoteFileHelper.Prim_re_Ausgabe1</td><td>NewFeature6</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut17</td><td>newfolder2</td><td>##ID_STRING53##</td><td>ConnectMyPrinterBackupApp.Prim_re_Ausgabe</td><td>NewFeature2</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut2</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING26##</td><td>ConnectMyPrinter.NET.Prim_re_Ausgabe1</td><td>NewFeature1</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut3</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING27##</td><td>ConnectMyPrinterClean.Prim_re_Ausgabe1</td><td>NewFeature2</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut4</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING28##</td><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe1</td><td>NewFeature2</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>

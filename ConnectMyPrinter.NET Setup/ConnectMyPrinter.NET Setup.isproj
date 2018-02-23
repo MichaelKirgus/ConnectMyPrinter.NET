@@ -38,6 +38,10 @@
 			<Name>ConnectMyPrinterAppSettingsSetup</Name>
 			<Project>{0EA0EE96-1C53-4994-836C-676D4A5D2AB7}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterBackupApp\ConnectMyPrinterBackupApp.vbproj">
+			<Name>ConnectMyPrinterBackupApp</Name>
+			<Project>{1ACECB39-366E-4186-B000-51D37F8C65F4}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterClean\ConnectMyPrinterClean.vbproj">
 			<Name>ConnectMyPrinterClean</Name>
 			<Project>{850F3D68-46E3-4982-8306-1EF9B82840A5}</Project>
