@@ -631,6 +631,18 @@ Public Class Form1
         Return newList
     End Function
 
+    Public Sub ClickOnCompanyLogo(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Try
+            If Not AppSettings.CompanyLogoImageClickURL = "" Then
+                Dim hh As New Process
+                hh.StartInfo.FileName = AppSettings.CompanyLogoImageClickURL
+                hh.Start()
+            End If
+        Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+        End Try
+    End Sub
+
     Private Sub MetroTextBox1_TextChanged(sender As Object, e As EventArgs) Handles MetroTextBox1.TextChanged
 
         MultipleSelectionEnabled = False

@@ -8,6 +8,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property UserInformation As String = "Bitte geben Sie einen Druckernamen ein."
     Property AdditionalUserInformation As String = ""
     Property CompanyLogoImagePath As String = ""
+    Property CompanyLogoImageClickURL As String = ""
     Property WindowStyle As MetroFramework.MetroColorStyle = MetroFramework.MetroColorStyle.Black
     Property AdditionalUserHelpInformationRTF As String = ""
     Property ShowAdditionalUserHelpOnWindowMouseEnter As Boolean = False
