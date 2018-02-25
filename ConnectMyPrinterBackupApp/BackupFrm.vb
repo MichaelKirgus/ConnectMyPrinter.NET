@@ -150,6 +150,7 @@ Public Class BackupFrm
             End If
 
             If Silent = False Then
+                Me.TopMost = False
                 If e.Result = 0 Then
                     MsgBox("Es konnten keine Drucker gefunden werden, welche in einer Profildatei gespeichert werden könnten. Bitte beachten Sie, dass keine lokalen Drucker gesichert werden können.", MsgBoxStyle.Exclamation)
                     Exit Try
