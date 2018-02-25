@@ -396,6 +396,8 @@ Public Class Form1
         'Diese Funktion stellt eine zusätzliche Auflistung bereit, um in der ComboBox ein Autocomplete zu ermöglichen.
 
         Try
+            PrintQueuesAutoComplete.Clear()
+
             For index = 0 To Obj.Count - 1
                 PrintQueuesAutoComplete.Add(Obj(index).ShareName)
             Next
@@ -575,9 +577,55 @@ Public Class Form1
 
         CheckForIllegalCrossThreadCalls = False
         Try
+            Dim WasCachedContentLoaded As Boolean = False
+
+            Dim oo As New SavedPrinterEnumerationSerializer
+            Dim _cacheresult As List(Of PrinterQueueInfo) = Nothing
+            'Prüfen, ob kurzfristig eine Cache-Datei geladen werden soll:
+            If AppSettings.FirstLoadCachedPrinters Then
+                _cacheresult = oo.LoadMyPrinterCollectionFile(AppSettings.CacheFoundPrintersFilepath)
+                GenerateAutoCompleteList(_cacheresult)
+                PrintQueues = CopyList(e.Result)
+                ComboBox1.AutoCompleteCustomSource = PrintQueuesAutoComplete
+                If Not _cacheresult.Count = 0 Then
+                    WasCachedContentLoaded = True
+                End If
+            Else
+                _cacheresult = oo.LoadMyPrinterCollectionFile(AppSettings.CacheFoundPrintersFilepath)
+                If Not _cacheresult.Count = 0 Then
+                    WasCachedContentLoaded = True
+                End If
+            End If
+
             'Netzwerkdrucker laden
             Dim _result As List(Of PrinterQueueInfo)
             _result = LoadAllNetworkPrinters()
+
+            'Prüfen, ob die zwischengeladenen Ergebnisse beibehalten werden sollen:
+            If Not PrinterCollectReturnState = 0 Then
+                'Die Suche wurde nicht abgeschlossen, bzw. nicht vollständig abgeschlossen. 
+                If AppSettings.FirstLoadCachedPrinters And WasCachedContentLoaded Then
+                    'Es wurden Ergebnisse zwischengeladen und werden endgültig verwendet:
+                    GenerateAutoCompleteList(_cacheresult)
+                    e.Result = _cacheresult
+                    Exit Try
+                End If
+                If (AppSettings.FirstLoadCachedPrinters = False) And (WasCachedContentLoaded) Then
+                    'Es wurden Ergebnisse zwischengeladen, allerdings noch nicht angezeigt.
+                    'Verwende diese Elemente nun als Ergebnisse:
+                    GenerateAutoCompleteList(_cacheresult)
+                    e.Result = _cacheresult
+                    Exit Try
+                End If
+            End If
+
+            'Es werden Live-Ergebnisse angezeigt:
+            'Ergebnis ggf. in Cache-File speichern:
+            If Not AppSettings.CacheFoundPrintersFilepath = "" Then
+                If Not _result.Count = 0 Then
+                    oo.SaveMyPrinterCollectionFile(_result, AppSettings.CacheFoundPrintersFilepath)
+                End If
+            End If
 
             'Autocomplete aufbauen
             GenerateAutoCompleteList(_result)

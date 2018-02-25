@@ -33,6 +33,8 @@ Imports ConnectMyPrinterEnumerationLib
     Property AllowUserToSetPrinterToDefaultByConnecting As Boolean = True
     Property DefaultPrinterOptionActivated As Boolean = False
     Property UsePrinterSavingFeature As Boolean = True
+    Property CacheFoundPrintersFilepath As String = "%TEMP%\PrinterCache.xml"
+    Property FirstLoadCachedPrinters As Boolean = False
     Property FixedPrefix As String = ""
     Property AutoCompleteCount As Integer = 5
     Property AutoCompleteCountEnable As Boolean = False
