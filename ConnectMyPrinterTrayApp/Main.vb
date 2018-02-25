@@ -59,7 +59,7 @@ Public Class AppContext
         mnuExit.Image = My.Resources.exit_gray
         MainMenu = New ContextMenuStrip
         MainMenu.BackColor = Drawing.Color.White
-        MainMenu.Items.AddRange(New ToolStripItem() {mnuSep1, mnuManagePrinter, mnuRestartPrinterService, mnuRefresh, mnuExit, mnuSep2})
+        MainMenu.Items.AddRange(New ToolStripItem() {mnuSep1, mnuManagePrinter, mnuBackupPrinterEnv, mnuRestartPrinterService, mnuRefresh, mnuExit, mnuSep2})
 
         'Initialize the tray
         Tray = New NotifyIcon
