@@ -5,7 +5,7 @@ Public Class ForcePrinterDelete
     Public FinishedRuns As Integer = 0
 
     Public Function DeletePrinter(ByVal PrinterName As String, ByVal UserUUID As String, Optional ByVal DeleteLocalMachinePart As Boolean = True) As Boolean
-        Dim splitreg As String = PrinterName
+        Dim splitreg As String = PrinterName.ToLower
         Dim servername As String = ""
         Try
             splitreg = PrinterName.Split("\")(3)
@@ -82,7 +82,7 @@ Public Class ForcePrinterDelete
             ww = My.Computer.Registry.Users.OpenSubKey(UserUUID & "\Software\Microsoft\Windows NT\CurrentVersion\Devices", True)
             Dim key As String
             key = ww.GetValue("Device")
-            If key.Contains(PrinterName) Or key.Contains(splitreg) Then
+            If key.Contains(PrinterName.ToLower) Or key.Contains(splitreg) Then
                 ww.DeleteValue("Device")
                 FinishedRuns += 1
             End If
@@ -107,7 +107,7 @@ Public Class ForcePrinterDelete
                     Try
                         For Each item2 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\" & item, True).GetSubKeyNames
                             For Each item3 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\" & item & "\" & item2, True).GetSubKeyNames
-                                If (item3.ToLower.Contains(PrinterName) And item3.ToLower.Contains(servername)) Then
+                                If (item3.ToLower.Contains(PrinterName.ToLower) And item3.ToLower.Contains(servername)) Then
                                     Try
                                         Dim ww2 As RegistryKey
                                         ww2 = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\" & item & "\" & item2, True)
@@ -136,7 +136,7 @@ Public Class ForcePrinterDelete
                                 dd = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\Servers\" & servername & "\" & item, False)
                                 Dim desc As String
                                 desc = dd.GetValue("Description")
-                                If desc.ToLower.Contains(PrinterName) Then
+                                If desc.ToLower.Contains(PrinterName.ToLower) Then
                                     ww.DeleteSubKeyTree(item)
                                     FinishedRuns += 1
                                 End If
@@ -167,7 +167,7 @@ Public Class ForcePrinterDelete
                 For Each item As String In ww.GetSubKeyNames
                     Try
                         For Each item2 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections\" & item, True).GetSubKeyNames
-                            If item2.ToLower.Contains(PrinterName) Or item2.ToLower.Contains(splitreg) Then
+                            If item2.ToLower.Contains(PrinterName.ToLower) Or item2.ToLower.Contains(splitreg) Then
                                 Try
                                     Dim ww2 As RegistryKey
                                     ww2 = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Connections\" & item, True)
@@ -193,7 +193,7 @@ Public Class ForcePrinterDelete
                 ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
                 For Each item As String In ww.GetSubKeyNames
                     Try
-                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                        If item.ToLower.Contains(PrinterName.ToLower) Or item.ToLower.Contains(splitreg) Then
                             ww.DeleteSubKey(item)
                             FinishedRuns += 1
                         End If
@@ -213,7 +213,7 @@ Public Class ForcePrinterDelete
                 ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
                 For Each item As String In ww.GetSubKeyNames
                     Try
-                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                        If item.ToLower.Contains(PrinterName.ToLower) Or item.ToLower.Contains(splitreg) Then
                             ww.DeleteSubKeyTree(item)
                             FinishedRuns += 1
                         End If
@@ -233,7 +233,7 @@ Public Class ForcePrinterDelete
                 ww = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers", True)
                 For Each item As String In ww.GetSubKeyNames
                     Try
-                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                        If item.ToLower.Contains(PrinterName.ToLower) Or item.ToLower.Contains(splitreg) Then
                             ww.DeleteSubKey(item)
                             FinishedRuns += 1
                         End If
@@ -253,7 +253,7 @@ Public Class ForcePrinterDelete
                 ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Control\Print\Printers", True)
                 For Each item As String In ww.GetSubKeyNames
                     Try
-                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                        If item.ToLower.Contains(PrinterName.ToLower) Or item.ToLower.Contains(splitreg) Then
                             ww.DeleteSubKey(item)
                             FinishedRuns += 1
                         End If
@@ -273,7 +273,7 @@ Public Class ForcePrinterDelete
                 ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\Print\Printers", True)
                 For Each item As String In ww.GetSubKeyNames
                     Try
-                        If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                        If item.ToLower.Contains(PrinterName.ToLower) Or item.ToLower.Contains(splitreg) Then
                             ww.DeleteSubKey(item)
                             FinishedRuns += 1
                         End If
@@ -340,6 +340,68 @@ Public Class ForcePrinterDelete
             End Try
             Try
                 Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Control\Print\Environments", True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        For Each item2 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Control\Print\Environments\" & item, True).GetSubKeyNames
+                            For Each item3 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Control\Print\Environments\" & item & "\" & item2, True).GetSubKeyNames
+                                For Each item4 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Control\Print\Environments\" & item & "\" & item2 & "\" & item3, True).GetSubKeyNames
+                                    If item4.ToLower.Contains(PrinterName.ToLower) Or item4.ToLower.Contains(splitreg) Then
+                                        Try
+                                            Dim ww2 As RegistryKey
+                                            ww2 = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\ControlSet001\Control\Print\Environments\" & item & "\" & item2 & "\" & item3, True)
+                                            ww2.DeleteSubKey(item4)
+                                            FinishedRuns += 1
+                                        Catch ex As Exception
+                                        End Try
+                                    End If
+                                Next
+                            Next
+                        Next
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+                ww.DeleteValue(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteValue(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
+                ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\Print\Environments", True)
+                For Each item As String In ww.GetSubKeyNames
+                    Try
+                        For Each item2 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\Print\Environments\" & item, True).GetSubKeyNames
+                            For Each item3 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\Print\Environments\" & item & "\" & item2, True).GetSubKeyNames
+                                For Each item4 As String In My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\Print\Environments\" & item & "\" & item2 & "\" & item3, True).GetSubKeyNames
+                                    If item4.ToLower.Contains(PrinterName.ToLower) Or item4.ToLower.Contains(splitreg) Then
+                                        Try
+                                            Dim ww2 As RegistryKey
+                                            ww2 = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\Print\Environments\" & item & "\" & item2 & "\" & item3, True)
+                                            ww2.DeleteSubKey(item4)
+                                            FinishedRuns += 1
+                                        Catch ex As Exception
+                                        End Try
+                                    End If
+                                Next
+                            Next
+                        Next
+                    Catch ex As Exception
+                        Errors += Err.Description & vbNewLine
+                    End Try
+                Next
+                ww.DeleteValue(PrinterName)
+                FinishedRuns += 1
+                ww.DeleteValue(splitreg)
+                FinishedRuns += 1
+            Catch ex As Exception
+                Errors += Err.Description & vbNewLine
+            End Try
+            Try
+                Dim ww As RegistryKey
                 ww = My.Computer.Registry.LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Services\LanmanServer\Shares\Security", True)
                 ww.DeleteSubKey(PrinterName)
                 FinishedRuns += 1
@@ -355,7 +417,7 @@ Public Class ForcePrinterDelete
             ww = My.Computer.Registry.CurrentUser.OpenSubKey("Printers\Settings", True)
 
             For Each item As String In ww.GetValueNames
-                If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                If item.ToLower.Contains(PrinterName.ToLower) Or item.ToLower.Contains(splitreg) Then
                     ww.DeleteValue(item)
                     FinishedRuns += 1
                 End If
@@ -368,7 +430,7 @@ Public Class ForcePrinterDelete
             ww = My.Computer.Registry.CurrentUser.OpenSubKey("\Software\Microsoft\Windows NT\CurrentVersion\PrinterPorts", True)
 
             For Each item As String In ww.GetValueNames
-                If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                If item.ToLower.Contains(PrinterName.ToLower) Or item.ToLower.Contains(splitreg) Then
                     ww.DeleteValue(item)
                     FinishedRuns += 1
                 End If
@@ -381,7 +443,7 @@ Public Class ForcePrinterDelete
             ww = My.Computer.Registry.CurrentUser.OpenSubKey("\Software\Microsoft\Windows NT\CurrentVersion\Devices", True)
 
             For Each item As String In ww.GetValueNames
-                If item.ToLower.Contains(PrinterName) Or item.ToLower.Contains(splitreg) Then
+                If item.ToLower.Contains(PrinterName.ToLower) Or item.ToLower.Contains(splitreg) Then
                     ww.DeleteValue(item)
                     FinishedRuns += 1
                 End If

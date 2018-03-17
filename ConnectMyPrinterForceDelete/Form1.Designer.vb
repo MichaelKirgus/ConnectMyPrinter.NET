@@ -22,6 +22,7 @@ Partial Class Form1
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -29,20 +30,28 @@ Partial Class Form1
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView2 = New System.Windows.Forms.ListView()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SpoolerStoppenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SpoolerStartenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
+        Me.ContextMenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ListView1
@@ -98,6 +107,36 @@ Partial Class Form1
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Details
         '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Treiber"
+        Me.ColumnHeader4.Width = 259
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Version"
+        Me.ColumnHeader5.Width = 106
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Datum"
+        Me.ColumnHeader6.Width = 106
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Name (intern)"
+        Me.ColumnHeader8.Width = 189
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "CAB-Dateipfad"
+        Me.ColumnHeader9.Width = 107
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "INF-Dateipfad"
+        Me.ColumnHeader10.Width = 107
+        '
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -142,6 +181,8 @@ Partial Class Form1
         '
         'SplitContainer1.Panel2
         '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Button6)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Button5)
         Me.SplitContainer1.Panel2.Controls.Add(Me.ListView2)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button4)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button3)
@@ -150,35 +191,53 @@ Partial Class Form1
         Me.SplitContainer1.SplitterDistance = 274
         Me.SplitContainer1.TabIndex = 7
         '
-        'ColumnHeader4
+        'Button5
         '
-        Me.ColumnHeader4.Text = "Treiber"
-        Me.ColumnHeader4.Width = 259
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.ContextMenuStrip = Me.ContextMenuStrip2
+        Me.Button5.Location = New System.Drawing.Point(374, 343)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(112, 25)
+        Me.Button5.TabIndex = 7
+        Me.Button5.Text = "Spooler starten"
+        Me.Button5.UseVisualStyleBackColor = True
         '
-        'ColumnHeader5
+        'Button6
         '
-        Me.ColumnHeader5.Text = "Version"
-        Me.ColumnHeader5.Width = 106
+        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button6.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.Button6.Location = New System.Drawing.Point(256, 343)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(112, 25)
+        Me.Button6.TabIndex = 8
+        Me.Button6.Text = "Spooler stoppen"
+        Me.Button6.UseVisualStyleBackColor = True
         '
-        'ColumnHeader6
+        'ContextMenuStrip1
         '
-        Me.ColumnHeader6.Text = "Datum"
-        Me.ColumnHeader6.Width = 106
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpoolerStoppenToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(161, 26)
         '
-        'ColumnHeader8
+        'SpoolerStoppenToolStripMenuItem
         '
-        Me.ColumnHeader8.Text = "Name (intern)"
-        Me.ColumnHeader8.Width = 189
+        Me.SpoolerStoppenToolStripMenuItem.Image = Global.ConnectMyPrinterForceDelete.My.Resources.Resources.uac_16
+        Me.SpoolerStoppenToolStripMenuItem.Name = "SpoolerStoppenToolStripMenuItem"
+        Me.SpoolerStoppenToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.SpoolerStoppenToolStripMenuItem.Text = "Spooler stoppen"
         '
-        'ColumnHeader9
+        'ContextMenuStrip2
         '
-        Me.ColumnHeader9.Text = "CAB-Dateipfad"
-        Me.ColumnHeader9.Width = 107
+        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpoolerStartenToolStripMenuItem})
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(154, 48)
         '
-        'ColumnHeader10
+        'SpoolerStartenToolStripMenuItem
         '
-        Me.ColumnHeader10.Text = "INF-Dateipfad"
-        Me.ColumnHeader10.Width = 107
+        Me.SpoolerStartenToolStripMenuItem.Image = Global.ConnectMyPrinterForceDelete.My.Resources.Resources.uac_16
+        Me.SpoolerStartenToolStripMenuItem.Name = "SpoolerStartenToolStripMenuItem"
+        Me.SpoolerStartenToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.SpoolerStartenToolStripMenuItem.Text = "Spooler starten"
         '
         'Form1
         '
@@ -195,6 +254,8 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.ContextMenuStrip2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -214,4 +275,10 @@ Partial Class Form1
     Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents ColumnHeader9 As ColumnHeader
     Friend WithEvents ColumnHeader10 As ColumnHeader
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents SpoolerStoppenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
+    Friend WithEvents SpoolerStartenToolStripMenuItem As ToolStripMenuItem
 End Class

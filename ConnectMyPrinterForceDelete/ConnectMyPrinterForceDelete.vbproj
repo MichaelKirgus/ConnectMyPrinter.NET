@@ -66,6 +66,7 @@
     <ApplicationIcon>killallprinters.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -154,6 +155,14 @@
       <Project>{bf9d7431-74ea-4ce1-a9d5-18868a0f42cf}</Project>
       <Name>ConnectMyPrinterDriverPackagesLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterElevationLib\ConnectMyPrinterElevationLib.vbproj">
+      <Project>{728E53CC-92B9-4C1F-94FF-99C2085FCE9B}</Project>
+      <Name>ConnectMyPrinterElevationLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
+      <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
+      <Name>ConnectMyPrinterEnumerationLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterForceDeleteLib\ConnectMyPrinterForceDeleteLib.vbproj">
       <Project>{4a9e510c-5c2d-4cdc-8ef5-19dd9bce9ef2}</Project>
       <Name>ConnectMyPrinterForceDeleteLib</Name>
@@ -177,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="killallprinters.ico" />
+    <None Include="Resources\uac_16.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

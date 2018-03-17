@@ -1,7 +1,9 @@
 ﻿
 Imports System.IO
 Imports System.Xml.Serialization
+Imports ConnectMyPrinter.NET
 Imports ConnectMyPrinterAppSettingsHandler
+Imports ConnectMyPrinterElevationLib
 Imports ConnectMyPrinterUserListLib
 Imports Microsoft.Win32
 
@@ -221,6 +223,44 @@ Public Class Form1
                 Shell("ConnectMyPrinterRestartSpooler.exe", AppWinStyle.NormalFocus, True)
                 Me.UseWaitCursor = False
             End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Try
+            Dim ss As New ConnectMyPrinterPrinterManageLib.ManagePrinter
+            ss.StopPrinterService()
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Try
+            Dim ss As New ConnectMyPrinterPrinterManageLib.ManagePrinter
+            ss.StartPrinterService()
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub SpoolerStoppenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SpoolerStoppenToolStripMenuItem.Click
+        Try
+            Dim ElevationHelper As New ElevationHelperClass
+            Dim SpoolerElevationHelper As New ElevationHelper
+            Dim frm As New ConnectMyPrinter.NET.Form1
+            ElevationHelper.GenerateActionFile("StopPrinterService", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, frm, New PrinterCtl)
+            ElevationHelper.StartElevatedActions(frm, New PrinterCtl)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub SpoolerStartenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SpoolerStartenToolStripMenuItem.Click
+        Try
+            Dim ElevationHelper As New ElevationHelperClass
+            Dim SpoolerElevationHelper As New ElevationHelper
+            Dim frm As New ConnectMyPrinter.NET.Form1
+            ElevationHelper.GenerateActionFile("StartPrinterService", New ConnectMyPrinterEnumerationLib.PrinterQueueInfo, frm, New PrinterCtl)
+            ElevationHelper.StartElevatedActions(frm, New PrinterCtl)
         Catch ex As Exception
         End Try
     End Sub
