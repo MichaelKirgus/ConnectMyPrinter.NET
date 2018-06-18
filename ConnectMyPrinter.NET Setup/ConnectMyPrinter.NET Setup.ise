@@ -51,11 +51,11 @@
 	
 	<summary>
 		<codepage>1252</codepage>
-		<title>Installation Database</title>
+		<title>##ID_STRING55##</title>
 		<subject>ConnectMyPrinter.NET</subject>
 		<author>##ID_STRING3##</author>
 		<keywords>Installer,MSI,Database</keywords>
-		<comments>Contact:  Your local administrator</comments>
+		<comments>##ID_STRING54##</comments>
 		<template>Intel;1033</template>
 		<lastauthor>Administrator</lastauthor>
 		<revnumber>{65C538C5-FECB-4339-AED4-D7B157B1D50E}</revnumber>
@@ -5142,6 +5142,10 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>ID_STRING52</td><td>1033</td><td>DRUCKE~1|Druckerprofile verwalten</td><td>0</td><td/><td>958819445</td></row>
 		<row><td>ID_STRING53</td><td>1031</td><td>DRUCKE~1|Drucker sichern</td><td>0</td><td/><td>-1188660044</td></row>
 		<row><td>ID_STRING53</td><td>1033</td><td>NEWSHO~1|NewShortcut17</td><td>0</td><td/><td>-1188670284</td></row>
+		<row><td>ID_STRING54</td><td>1031</td><td>Dieses Paket installiert ConnectMyPrinter.NET</td><td>0</td><td/><td>-2094639885</td></row>
+		<row><td>ID_STRING54</td><td>1033</td><td>Dieses Paket installiert </td><td>0</td><td/><td>-2094643981</td></row>
+		<row><td>ID_STRING55</td><td>1031</td><td>Installation von ConnectMyPrinter.NET</td><td>0</td><td/><td>-2094619405</td></row>
+		<row><td>ID_STRING55</td><td>1033</td><td>Installation von ConnectMyPrinter.NET</td><td>0</td><td/><td>-2094619405</td></row>
 		<row><td>ID_STRING6</td><td>1031</td><td>DRUCKE~1|Druckerwarteschlange neu starten</td><td>0</td><td/><td>-433771083</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>NEWSHO~1|NewShortcut3</td><td>0</td><td/><td>-433721963</td></row>
 		<row><td>ID_STRING7</td><td>1031</td><td>Hauptanwendung</td><td>0</td><td/><td>-2002326988</td></row>
@@ -5852,8 +5856,8 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<col def="S0">Value</col>
 		<row><td>ActiveLanguage</td><td>1031</td></row>
 		<row><td>Comments</td><td/></row>
-		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="de9f554a3bc05c12be9c31b998217995">
-UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
+		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="85fe6206c3b1cbc9a5c68909720e0394">
+QwB1AHMAdABvAG0AAQBFAHgAcAByAGUAcwBzAA==
 			</td></row>
 		<row><td>DefaultProductConfiguration</td><td>Express</td></row>
 		<row><td>EnableSwidtag</td><td>0</td></row>
@@ -6253,7 +6257,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConnectMyPrinter.NET.Primäre Ausgabe</td><td/></row>
 		<row><td>ProductCode</td><td>{D9F305BE-DA52-4B9B-BCD9-9CF4C34BBE07}</td><td/></row>
 		<row><td>ProductName</td><td>ConnectMyPrinter.NET</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0016</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.0017</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

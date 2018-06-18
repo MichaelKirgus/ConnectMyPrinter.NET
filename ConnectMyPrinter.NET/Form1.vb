@@ -86,15 +86,28 @@ Public Class Form1
             MetroLabel3.Text = AppSettings.AdditionalUserInformation
             Dim zz As New Size(Me.Width, AppSettings.StartWindowHeight)
             Me.Size = zz
+
+            'Bild aus Bilddatei oder aus Base64-String laden
             If Not AppSettings.CompanyLogoImagePath = "" Then
                 Try
                     PictureBox2.Image = Image.FromFile(AppSettings.CompanyLogoImagePath)
                 Catch ex As Exception
                 End Try
             End If
+            If Not AppSettings.CompanyLogoImageBase64 = "" Then
+                Try
+                    Dim tmp As Image
+                    Dim ByteArray
+                    ByteArray = ConvertBase64ToByteArray(AppSettings.CompanyLogoImageBase64)
+                    tmp = convertbytetoimage(ByteArray)
+                    PictureBox2.Image = tmp
+                Catch ex As Exception
+                End Try
+            End If
 
             'Style setzen
             Me.Style = AppSettings.WindowStyle
+            ComboBox1.Style = AppSettings.ComboxBoxStyle
 
             If AppSettings.AllowUserToConnectToNotCollectedPrinter Then
                 MetroButton1.Enabled = True
@@ -197,6 +210,25 @@ Public Class Form1
             _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler beim Start der Anwendung", Err)
         End Try
     End Sub
+
+    Public Function ConvertImageToBase64String() As String
+        Using ms As New MemoryStream()
+            PictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png) 'We load the image from first PictureBox in the MemoryStream
+            Dim obyte = ms.ToArray() 'We tranform it to byte array..
+
+            Return Convert.ToBase64String(obyte) 'We then convert the byte array to base 64 string.
+        End Using
+    End Function
+
+    Public Function ConvertBase64ToByteArray(base64 As String) As Byte()
+        Return Convert.FromBase64String(base64) 'Convert the base64 back to byte array.
+    End Function
+
+    Private Function convertbytetoimage(ByVal BA As Byte())
+        Dim ms As MemoryStream = New MemoryStream(BA)
+        Dim image = System.Drawing.Image.FromStream(ms)
+        Return image
+    End Function
 
     Public Function AddSavedPrinter(ByVal Obj As PrinterQueueInfo, ByVal OverwriteDuplicate As Boolean) As Boolean
         Try
@@ -359,7 +391,7 @@ Public Class Form1
                         End If
                     Next
 
-                    zz.Description = pq.Description
+                    zz.Description = pq.Comment
                     zz.Location = pq.Location
 
                     Dim isdup As Boolean = False
@@ -1035,7 +1067,7 @@ Public Class Form1
                 End If
                 ll.LocationLbl.Text = LocalPrinters(index).Location
                 Try
-                    ll.DescriptionLbl.Text = LocalPrinters(index).Description.Split(",")(1)
+                    ll.DescriptionLbl.Text = LocalPrinters(index).Description
                 Catch ex As Exception
                 End Try
                 ll.DriverLbl.Text = LocalPrinters(index).DriverName
