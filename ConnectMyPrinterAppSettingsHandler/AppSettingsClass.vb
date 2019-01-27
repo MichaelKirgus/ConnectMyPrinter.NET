@@ -13,6 +13,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property CompanyLogoImageClickURL As String = ""
     Property WindowStyle As MetroFramework.MetroColorStyle = MetroFramework.MetroColorStyle.Black
     Property ComboxBoxStyle As MetroFramework.MetroColorStyle = MetroFramework.MetroColorStyle.Black
+    Property TabControlStyle As MetroFramework.MetroColorStyle = MetroFramework.MetroColorStyle.Black
     Property MainWindowAutoScaleMode As AutoScaleMode = AutoScaleMode.Font
     Property AdditionalUserHelpInformationRTF As String = ""
     Property ShowAdditionalUserHelpOnWindowMouseEnter As Boolean = False

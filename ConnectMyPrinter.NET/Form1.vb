@@ -108,6 +108,10 @@ Public Class Form1
             'Style setzen
             Me.Style = AppSettings.WindowStyle
             ComboBox1.Style = AppSettings.ComboxBoxStyle
+            MetroTabControl1.Style = AppSettings.TabControlStyle
+
+            'Verhindern, dass die Farbe des ausgewählen Elements im ComboBox-Element die gesamte Liste füllt:
+            ComboBox1.Refresh()
 
             If AppSettings.AllowUserToConnectToNotCollectedPrinter Then
                 MetroButton1.Enabled = True

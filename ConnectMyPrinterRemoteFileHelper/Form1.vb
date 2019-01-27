@@ -43,4 +43,33 @@ Public Class Form1
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
         SaveFileDialog1.ShowDialog()
     End Sub
+
+    Public Sub ApplPrinterConfigToClass()
+        If Not RemoteFile.ConnectPrinters.Count = 0 Then
+            Dim kk As MsgBoxResult
+            kk = MsgBox("Es ist bereits ein oder mehrere Drucker in der Konfiguration vorhanden. Drucker überschreiben?", MsgBoxStyle.YesNo)
+
+            If kk = MsgBoxResult.Yes Then
+                RemoteFile.ConnectPrinters.Clear()
+            End If
+        End If
+
+        Dim qq As New RemoteFilePrinterConnectItem
+        qq.PrinterName = TextBox1.Text
+        qq.Printserver = TextBox2.Text
+        qq.SetDefaultPrinter = CheckBox1.Checked
+
+        RemoteFile.ConnectPrinters.Add(qq)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ApplPrinterConfigToClass()
+        LoadNewRemoteFile()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ApplPrinterConfigToClass()
+        LoadNewRemoteFile()
+        ToolStripButton2.PerformClick()
+    End Sub
 End Class

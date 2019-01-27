@@ -7,6 +7,7 @@
     Private Sub AboutFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Me.Style = _parentFrm.Style
+            Me.MetroTabControl1.Style = _parentFrm.MetroTabControl1.Style
         Catch ex As Exception
         End Try
 
