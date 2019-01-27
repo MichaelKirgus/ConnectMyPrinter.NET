@@ -59,7 +59,7 @@
           <target state="needs-review-translation">2</target>
         </trans-unit>
         <trans-unit id="MetroLabel2.Text" translate="yes" xml:space="preserve">
-          <source>Copyright 2016-2018 Michael Kirgus
+          <source>Copyright 2016-2019 Michael Kirgus
 Tool zum einfachen Verwalten von Druckern unter Windows.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Copyright 2016-2017 Michael Kirgus
 tool to easily manage printers on Windows.</target>
