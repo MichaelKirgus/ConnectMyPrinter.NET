@@ -154,4 +154,16 @@
   <data name="backup_printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backup_printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cmp_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cmp_green.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cmp_magenta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cmp_magenta.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cmp_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cmp_red.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cmp_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cmp_yellow.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

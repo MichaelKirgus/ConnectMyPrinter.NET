@@ -383,7 +383,7 @@ Public Class Form1
                     If IsLocal Then
                         zz.Server = "Lokal"
                     End If
-                    zz.State = pq.QueueStatus.ToString
+                    zz.State = String.Join(",", pq.QueueStatus)
                     zz.DriverName = pq.QueueDriver.Name
 
                     'Zugehörigen Treiber suchen
@@ -1066,10 +1066,45 @@ Public Class Form1
                 Dim ll As New PrinterCtl
                 ll.MetroLabel1Lbl.Text = LocalPrinters(index).ShareName
                 ll.MetroLabel2Lbl.Text = LocalPrinters(index).Server
+
                 If LocalPrinters(index).DefaultPrinter Then
-                    ll.PictureBox1.Image = My.Resources.printer_standard
+                    Dim isok As Boolean = True
+                    If LocalPrinters(index).State.Contains("Error") Or LocalPrinters(index).State.Contains("PaperJam") Then
+                        ll.PictureBox1.Image = My.Resources.printer_error_standard
+                        isok = False
+                    End If
+                    If LocalPrinters(index).State.Contains("Offline") Or LocalPrinters(index).State.Contains("Paused") Then
+                        ll.PictureBox1.Image = My.Resources.printer_offline_standard
+                        isok = False
+                    End If
+                    If LocalPrinters(index).State.Contains("None") Or LocalPrinters(index).State.Contains("Printing") Or LocalPrinters(index).State.Contains("Processing") Then
+                        ll.PictureBox1.Image = My.Resources.printer_online_standard
+                        isok = False
+                    End If
+                    If isok = True Then
+                        ll.PictureBox1.Image = My.Resources.printer_nostat_default_new
+                    End If
+                Else
+                    Dim isok As Boolean = True
+                    If LocalPrinters(index).State.Contains("Error") Or LocalPrinters(index).State.Contains("PaperJam") Then
+                        ll.PictureBox1.Image = My.Resources.printer_error_nonstandard
+                        isok = False
+                    End If
+                    If LocalPrinters(index).State.Contains("Offline") Or LocalPrinters(index).State.Contains("Paused") Then
+                        ll.PictureBox1.Image = My.Resources.printer_offline_nonstandard
+                        isok = False
+                    End If
+                    If LocalPrinters(index).State.Contains("None") Or LocalPrinters(index).State.Contains("Printing") Or LocalPrinters(index).State.Contains("Processing") Then
+                        ll.PictureBox1.Image = My.Resources.printer_online_nonstandard
+                        isok = False
+                    End If
+                    If isok = True Then
+                        ll.PictureBox1.Image = My.Resources.printer_nostat_nodefault_new
+                    End If
                 End If
+
                 ll.LocationLbl.Text = LocalPrinters(index).Location
+
                 Try
                     ll.DescriptionLbl.Text = LocalPrinters(index).Description
                 Catch ex As Exception

@@ -65,6 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1472877498_BT_printer.ico" />
+    <None Include="Resources\cmp_green.ico" />
+    <None Include="Resources\cmp_red.ico" />
+    <None Include="Resources\cmp_yellow.ico" />
+    <None Include="Resources\cmp_magenta.ico" />
     <None Include="Resources\backup_printer.png" />
     <None Include="Resources\exit_gray.png" />
     <None Include="Resources\manageprinters_png.png" />

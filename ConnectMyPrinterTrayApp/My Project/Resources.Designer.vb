@@ -93,6 +93,46 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
         '''</summary>
+        Friend ReadOnly Property cmp_green() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cmp_green", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        '''</summary>
+        Friend ReadOnly Property cmp_magenta() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cmp_magenta", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        '''</summary>
+        Friend ReadOnly Property cmp_red() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cmp_red", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        '''</summary>
+        Friend ReadOnly Property cmp_yellow() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cmp_yellow", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        '''</summary>
         Friend ReadOnly Property connectmyprinter_tray() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("connectmyprinter_tray", resourceCulture)

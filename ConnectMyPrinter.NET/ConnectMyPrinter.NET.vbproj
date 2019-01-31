@@ -348,6 +348,7 @@
     <EmbeddedResource Include="SelectFromMultipleServersDlg.resx">
       <DependentUpon>SelectFromMultipleServersDlg.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TranslatedStrings.en-US.resx" />
     <EmbeddedResource Include="TranslatedStrings.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
@@ -386,6 +387,14 @@
     <Content Include="ReadMe.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\printer_nostat_nodefault_new.png" />
+    <None Include="Resources\printer_nostat_default_new.png" />
+    <None Include="Resources\printer_online_nonstandard.png" />
+    <None Include="Resources\printer_offline_nonstandard.png" />
+    <None Include="Resources\printer_error_nonstandard.png" />
+    <None Include="Resources\printer_online_standard.png" />
+    <None Include="Resources\printer_error_standard.png" />
+    <None Include="Resources\printer_offline_standard.png" />
     <None Include="Resources\printer_default.png" />
     <None Include="Resources\printer_nodefault.png" />
     <None Include="Resources\dialog-error.png" />

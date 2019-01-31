@@ -1488,7 +1488,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Windows.Forms.PictureBoxSizeMode ähnlich wie StretchImage.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Windows.Forms.PictureBoxSizeMode ähnlich wie CenterImage.
         '''</summary>
         Public Shared ReadOnly Property PictureBox1_SizeMode() As System.Windows.Forms.PictureBoxSizeMode
             Get

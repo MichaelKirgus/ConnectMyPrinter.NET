@@ -1518,8 +1518,9 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">35, 35</target>
         </trans-unit>
         <trans-unit id="PictureBox1.SizeMode" translate="yes" xml:space="preserve" extype="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-          <source>StretchImage</source>
+          <source>CenterImage</source>
           <target state="needs-review-translation">StretchImage</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="PictureBox1.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
           <source>0</source>
@@ -1895,6 +1896,38 @@ Please select the print server woud you like to connect to:</target>
         <trans-unit id="dialog-error" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
           <source>..\Resources\dialog-error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
           <target state="needs-review-translation">..\Resources\dialog-error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_error_nonstandard" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_error_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_error_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_error_standard" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_error_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_error_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_offline_nonstandard" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_offline_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_offline_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_offline_standard" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_offline_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_offline_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_online_nonstandard" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_online_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_online_nonstandard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_online_standard" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_online_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_online_standard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_nostat_default_new" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_nostat_default_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_nostat_default_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_nostat_nodefault_new" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_nostat_nodefault_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_nostat_nodefault_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
         </trans-unit>
       </group>
     </body>
@@ -15297,30 +15330,6 @@ administrator.</target>
     </header>
     <body>
       <group id="CONNECTMYPRINTER.NET/TRANSLATEDSTRINGS.RESX" datatype="resx">
-        <trans-unit id="DriverMultiplePrintersPart1" translate="yes" xml:space="preserve">
-          <source>Folgende Drucker verwenden noch den Treiber </source>
-          <target state="new">Folgende Drucker verwenden noch den Treiber </target>
-        </trans-unit>
-        <trans-unit id="DriverMultiplePrintersRemoveQuestion" translate="yes" xml:space="preserve">
-          <source>Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</source>
-          <target state="new">Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</target>
-        </trans-unit>
-        <trans-unit id="ExportPrinterSettings" translate="yes" xml:space="preserve">
-          <source>Die Druckereinstellungen wurden erfolgreich exportiert.</source>
-          <target state="new">Die Druckereinstellungen wurden erfolgreich exportiert.</target>
-        </trans-unit>
-        <trans-unit id="ImportPrinterSettings" translate="yes" xml:space="preserve">
-          <source>Die Druckereinstellungen wurden erfolgreich importiert.</source>
-          <target state="new">Die Druckereinstellungen wurden erfolgreich importiert.</target>
-        </trans-unit>
-        <trans-unit id="RemovePrinterMessagePart1" translate="yes" xml:space="preserve">
-          <source> entfernen?</source>
-          <target state="new"> entfernen?</target>
-        </trans-unit>
-        <trans-unit id="RemovePrinterMessagePart2" translate="yes" xml:space="preserve">
-          <source>Möchten Sie wirklich den Drucker </source>
-          <target state="new">Möchten Sie wirklich den Drucker </target>
-        </trans-unit>
         <trans-unit id="AskUserForPrinterConnectionPart1" translate="yes" xml:space="preserve">
           <source>Möchten Sie den Drucker </source>
           <target state="new">Möchten Sie den Drucker </target>
@@ -15329,6 +15338,14 @@ administrator.</target>
           <source> verbinden?</source>
           <target state="new"> verbinden?</target>
         </trans-unit>
+        <trans-unit id="DriverMultiplePrintersPart1" translate="yes" xml:space="preserve">
+          <source>Folgende Drucker verwenden noch den Treiber </source>
+          <target state="new">Folgende Drucker verwenden noch den Treiber </target>
+        </trans-unit>
+        <trans-unit id="DriverMultiplePrintersRemoveQuestion" translate="yes" xml:space="preserve">
+          <source>Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</source>
+          <target state="new">Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</target>
+        </trans-unit>
         <trans-unit id="ErrorLogStr" translate="yes" xml:space="preserve">
           <source>Es ist ein unbehandelter Fehler in der Anwendung aufgetreten</source>
           <target state="new">Es ist ein unbehandelter Fehler in der Anwendung aufgetreten</target>
@@ -15336,6 +15353,14 @@ administrator.</target>
         <trans-unit id="ExactPrinterFoundPrinterSearchText" translate="yes" xml:space="preserve">
           <source>Drucker gefunden, bereit zum verbinden.</source>
           <target state="new">Drucker gefunden, bereit zum verbinden.</target>
+        </trans-unit>
+        <trans-unit id="ExportPrinterSettings" translate="yes" xml:space="preserve">
+          <source>Die Druckereinstellungen wurden erfolgreich exportiert.</source>
+          <target state="new">Die Druckereinstellungen wurden erfolgreich exportiert.</target>
+        </trans-unit>
+        <trans-unit id="ImportPrinterSettings" translate="yes" xml:space="preserve">
+          <source>Die Druckereinstellungen wurden erfolgreich importiert.</source>
+          <target state="new">Die Druckereinstellungen wurden erfolgreich importiert.</target>
         </trans-unit>
         <trans-unit id="MultipleResultsPrinterSearchText" translate="yes" xml:space="preserve">
           <source>Mehrere Ergebnisse. Bitte Suche verfeinern.</source>
@@ -15364,6 +15389,14 @@ administrator.</target>
         <trans-unit id="PrinterReadyText" translate="yes" xml:space="preserve">
           <source>Bereit</source>
           <target state="new">Bereit</target>
+        </trans-unit>
+        <trans-unit id="RemovePrinterMessagePart1" translate="yes" xml:space="preserve">
+          <source> entfernen?</source>
+          <target state="new"> entfernen?</target>
+        </trans-unit>
+        <trans-unit id="RemovePrinterMessagePart2" translate="yes" xml:space="preserve">
+          <source>Möchten Sie wirklich den Drucker </source>
+          <target state="new">Möchten Sie wirklich den Drucker </target>
         </trans-unit>
       </group>
     </body>
