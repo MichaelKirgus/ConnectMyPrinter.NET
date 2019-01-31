@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports MetroFramework
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits MetroFramework.Forms.MetroForm
 
@@ -366,8 +368,6 @@ Partial Class Form1
         'MetroLabel5
         '
         Me.MetroLabel5.BackColor = System.Drawing.SystemColors.Control
-        Me.MetroLabel5.CustomBackground = True
-        Me.MetroLabel5.CustomForeColor = True
         Me.MetroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular
         resources.ApplyResources(Me.MetroLabel5, "MetroLabel5")
         Me.MetroLabel5.Name = "MetroLabel5"
@@ -377,7 +377,7 @@ Partial Class Form1
         Me.AcceptButton = Me.MetroButton1
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
+        Me.BorderStyle = Forms.MetroFormBorderStyle.FixedSingle
         Me.ContextMenuStrip = Me.ContextMenuStrip1
         Me.Controls.Add(Me.MetroLabel5)
         Me.Controls.Add(Me.Button5)
@@ -428,7 +428,7 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroTabControl1 As Controls.MetroTabControl
+    Friend WithEvents MetroTabControl1 As MetroFramework.Controls.MetroTabControl
     Friend WithEvents MetroTabPage1 As Controls.MetroTabPage
     Friend WithEvents MetroTabPage2 As Controls.MetroTabPage
     Friend WithEvents MetroProgressSpinner2 As Controls.MetroProgressSpinner

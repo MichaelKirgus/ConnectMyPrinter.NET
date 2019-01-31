@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports MetroFramework
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AboutFrm
     Inherits MetroFramework.Forms.MetroForm
 
@@ -135,7 +137,7 @@ Partial Class AboutFrm
         Me.AcceptButton = Me.MetroButton1
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
+        Me.BorderStyle = Forms.MetroFormBorderStyle.FixedSingle
         Me.Controls.Add(Me.MetroTabControl1)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.MetroLabel3)

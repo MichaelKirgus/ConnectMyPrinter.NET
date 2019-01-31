@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports MetroFramework
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class DriverNotificationRtfViewerDlg
     Inherits MetroFramework.Forms.MetroForm
 
@@ -51,7 +53,7 @@ Partial Class DriverNotificationRtfViewerDlg
         Me.AcceptButton = Me.MetroButton2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
+        Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(459, 369)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.MetroButton2)

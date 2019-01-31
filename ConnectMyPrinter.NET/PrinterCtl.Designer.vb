@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports MetroFramework
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PrinterCtl
     Inherits MetroFramework.Controls.MetroUserControl
 
@@ -81,7 +83,6 @@ Partial Class PrinterCtl
         'MetroLabel1Lbl
         '
         Me.MetroLabel1Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel1Lbl.CustomBackground = True
         Me.MetroLabel1Lbl.FontSize = MetroFramework.MetroLabelSize.Tall
         resources.ApplyResources(Me.MetroLabel1Lbl, "MetroLabel1Lbl")
         Me.MetroLabel1Lbl.Name = "MetroLabel1Lbl"
@@ -90,7 +91,6 @@ Partial Class PrinterCtl
         'MetroLabel2Lbl
         '
         Me.MetroLabel2Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel2Lbl.CustomBackground = True
         Me.MetroLabel2Lbl.FontSize = MetroFramework.MetroLabelSize.Small
         resources.ApplyResources(Me.MetroLabel2Lbl, "MetroLabel2Lbl")
         Me.MetroLabel2Lbl.Name = "MetroLabel2Lbl"
@@ -100,76 +100,65 @@ Partial Class PrinterCtl
         '
         resources.ApplyResources(Me.MetroLabel3Lbl, "MetroLabel3Lbl")
         Me.MetroLabel3Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel3Lbl.CustomBackground = True
         Me.MetroLabel3Lbl.Name = "MetroLabel3Lbl"
         '
         'MetroLabel4Lbl
         '
         resources.ApplyResources(Me.MetroLabel4Lbl, "MetroLabel4Lbl")
         Me.MetroLabel4Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel4Lbl.CustomBackground = True
         Me.MetroLabel4Lbl.Name = "MetroLabel4Lbl"
         '
         'MetroLabel5Lbl
         '
         resources.ApplyResources(Me.MetroLabel5Lbl, "MetroLabel5Lbl")
         Me.MetroLabel5Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel5Lbl.CustomBackground = True
         Me.MetroLabel5Lbl.Name = "MetroLabel5Lbl"
         '
         'MetroLabel6Lbl
         '
         resources.ApplyResources(Me.MetroLabel6Lbl, "MetroLabel6Lbl")
         Me.MetroLabel6Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel6Lbl.CustomBackground = True
         Me.MetroLabel6Lbl.Name = "MetroLabel6Lbl"
         '
         'MetroLabel7Lbl
         '
         resources.ApplyResources(Me.MetroLabel7Lbl, "MetroLabel7Lbl")
         Me.MetroLabel7Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel7Lbl.CustomBackground = True
         Me.MetroLabel7Lbl.Name = "MetroLabel7Lbl"
         '
         'LocationLbl
         '
         resources.ApplyResources(Me.LocationLbl, "LocationLbl")
         Me.LocationLbl.BackColor = System.Drawing.Color.White
-        Me.LocationLbl.CustomBackground = True
         Me.LocationLbl.Name = "LocationLbl"
         '
         'DescriptionLbl
         '
         resources.ApplyResources(Me.DescriptionLbl, "DescriptionLbl")
         Me.DescriptionLbl.BackColor = System.Drawing.Color.White
-        Me.DescriptionLbl.CustomBackground = True
         Me.DescriptionLbl.Name = "DescriptionLbl"
         '
         'DriverLbl
         '
         resources.ApplyResources(Me.DriverLbl, "DriverLbl")
         Me.DriverLbl.BackColor = System.Drawing.Color.White
-        Me.DriverLbl.CustomBackground = True
         Me.DriverLbl.Name = "DriverLbl"
         '
         'DriverVersionLbl
         '
         resources.ApplyResources(Me.DriverVersionLbl, "DriverVersionLbl")
         Me.DriverVersionLbl.BackColor = System.Drawing.Color.White
-        Me.DriverVersionLbl.CustomBackground = True
         Me.DriverVersionLbl.Name = "DriverVersionLbl"
         '
         'StateLbl
         '
         resources.ApplyResources(Me.StateLbl, "StateLbl")
         Me.StateLbl.BackColor = System.Drawing.Color.White
-        Me.StateLbl.CustomBackground = True
         Me.StateLbl.Name = "StateLbl"
         '
         'DataFileLbl
         '
         Me.DataFileLbl.BackColor = System.Drawing.Color.White
-        Me.DataFileLbl.CustomBackground = True
         Me.DataFileLbl.FontSize = MetroFramework.MetroLabelSize.Small
         Me.DataFileLbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Selectable
         resources.ApplyResources(Me.DataFileLbl, "DataFileLbl")
@@ -179,14 +168,12 @@ Partial Class PrinterCtl
         '
         resources.ApplyResources(Me.MetroLabel10Lbl, "MetroLabel10Lbl")
         Me.MetroLabel10Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel10Lbl.CustomBackground = True
         Me.MetroLabel10Lbl.FontSize = MetroFramework.MetroLabelSize.Small
         Me.MetroLabel10Lbl.Name = "MetroLabel10Lbl"
         '
         'ConfigFileLbl
         '
         Me.ConfigFileLbl.BackColor = System.Drawing.Color.White
-        Me.ConfigFileLbl.CustomBackground = True
         Me.ConfigFileLbl.FontSize = MetroFramework.MetroLabelSize.Small
         Me.ConfigFileLbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Selectable
         resources.ApplyResources(Me.ConfigFileLbl, "ConfigFileLbl")
@@ -196,14 +183,12 @@ Partial Class PrinterCtl
         '
         resources.ApplyResources(Me.MetroLabel12Lbl, "MetroLabel12Lbl")
         Me.MetroLabel12Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel12Lbl.CustomBackground = True
         Me.MetroLabel12Lbl.FontSize = MetroFramework.MetroLabelSize.Small
         Me.MetroLabel12Lbl.Name = "MetroLabel12Lbl"
         '
         'DriverPathLbl
         '
         Me.DriverPathLbl.BackColor = System.Drawing.Color.White
-        Me.DriverPathLbl.CustomBackground = True
         Me.DriverPathLbl.FontSize = MetroFramework.MetroLabelSize.Small
         Me.DriverPathLbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Selectable
         resources.ApplyResources(Me.DriverPathLbl, "DriverPathLbl")
@@ -213,7 +198,6 @@ Partial Class PrinterCtl
         '
         resources.ApplyResources(Me.MetroLabel13Lbl, "MetroLabel13Lbl")
         Me.MetroLabel13Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel13Lbl.CustomBackground = True
         Me.MetroLabel13Lbl.FontSize = MetroFramework.MetroLabelSize.Small
         Me.MetroLabel13Lbl.Name = "MetroLabel13Lbl"
         '
@@ -424,7 +408,6 @@ Partial Class PrinterCtl
         Me.Controls.Add(Me.MetroLabel2Lbl)
         Me.Controls.Add(Me.MetroLabel1Lbl)
         Me.Controls.Add(Me.PictureBox1)
-        Me.CustomBackground = True
         Me.Name = "PrinterCtl"
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

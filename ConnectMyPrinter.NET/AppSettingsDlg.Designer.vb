@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports MetroFramework
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AppSettingsDlg
     Inherits MetroFramework.Forms.MetroForm
 
@@ -169,8 +171,6 @@ Partial Class AppSettingsDlg
         'MetroLabel1
         '
         Me.MetroLabel1.BackColor = System.Drawing.Color.Linen
-        Me.MetroLabel1.CustomBackground = True
-        Me.MetroLabel1.CustomForeColor = True
         Me.MetroLabel1.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.MetroLabel1, "MetroLabel1")
         Me.MetroLabel1.Name = "MetroLabel1"
@@ -185,7 +185,7 @@ Partial Class AppSettingsDlg
         Me.AcceptButton = Me.MetroButton7
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
+        Me.BorderStyle = Forms.MetroFormBorderStyle.FixedSingle
         Me.Controls.Add(Me.MetroButton7)
         Me.Controls.Add(Me.MetroTabControl1)
         Me.MaximizeBox = False

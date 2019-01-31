@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports MetroFramework
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ProcessingDlg
     Inherits MetroFramework.Forms.MetroForm
 
@@ -50,7 +52,7 @@ Partial Class ProcessingDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
+        Me.BorderStyle = Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(203, 151)
         Me.Controls.Add(Me.MetroLabel2)
         Me.Controls.Add(Me.MetroProgressSpinner1)

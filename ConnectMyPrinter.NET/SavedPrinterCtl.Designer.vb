@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports MetroFramework
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SavedPrinterCtl
     Inherits MetroFramework.Controls.MetroUserControl
 
@@ -40,7 +42,6 @@ Partial Class SavedPrinterCtl
         'MetroLabel1Lbl
         '
         Me.MetroLabel1Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel1Lbl.CustomBackground = True
         Me.MetroLabel1Lbl.FontSize = MetroFramework.MetroLabelSize.Tall
         resources.ApplyResources(Me.MetroLabel1Lbl, "MetroLabel1Lbl")
         Me.MetroLabel1Lbl.Name = "MetroLabel1Lbl"
@@ -48,7 +49,6 @@ Partial Class SavedPrinterCtl
         'MetroLabel2Lbl
         '
         Me.MetroLabel2Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel2Lbl.CustomBackground = True
         Me.MetroLabel2Lbl.FontSize = MetroFramework.MetroLabelSize.Small
         resources.ApplyResources(Me.MetroLabel2Lbl, "MetroLabel2Lbl")
         Me.MetroLabel2Lbl.Name = "MetroLabel2Lbl"
@@ -57,28 +57,24 @@ Partial Class SavedPrinterCtl
         '
         resources.ApplyResources(Me.MetroLabel6Lbl, "MetroLabel6Lbl")
         Me.MetroLabel6Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel6Lbl.CustomBackground = True
         Me.MetroLabel6Lbl.Name = "MetroLabel6Lbl"
         '
         'MetroLabel7Lbl
         '
         resources.ApplyResources(Me.MetroLabel7Lbl, "MetroLabel7Lbl")
         Me.MetroLabel7Lbl.BackColor = System.Drawing.Color.White
-        Me.MetroLabel7Lbl.CustomBackground = True
         Me.MetroLabel7Lbl.Name = "MetroLabel7Lbl"
         '
         'LocationLbl
         '
         resources.ApplyResources(Me.LocationLbl, "LocationLbl")
         Me.LocationLbl.BackColor = System.Drawing.Color.White
-        Me.LocationLbl.CustomBackground = True
         Me.LocationLbl.Name = "LocationLbl"
         '
         'DescriptionLbl
         '
         resources.ApplyResources(Me.DescriptionLbl, "DescriptionLbl")
         Me.DescriptionLbl.BackColor = System.Drawing.Color.White
-        Me.DescriptionLbl.CustomBackground = True
         Me.DescriptionLbl.Name = "DescriptionLbl"
         '
         'PictureBox2
@@ -128,7 +124,6 @@ Partial Class SavedPrinterCtl
         Me.Controls.Add(Me.MetroLabel2Lbl)
         Me.Controls.Add(Me.MetroLabel1Lbl)
         Me.Controls.Add(Me.PictureBox1)
-        Me.CustomBackground = True
         Me.Name = "SavedPrinterCtl"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
