@@ -175,4 +175,49 @@ tool to easily manage printers on Windows.</value>
   <metadata name="$this.Localizable" xml:space="preserve" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="resource.Image" xml:space="preserve" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value></value>
+  </data>
+  <data name="resource.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>275, 1</value>
+  </data>
+  <data name="resource.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>221, 221</value>
+  </data>
+  <data name="resource.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resource.Image2" xml:space="preserve" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value></value>
+  </data>
+  <data name="resource.Location2" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>275, 1</value>
+  </data>
+  <data name="resource.Size2" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>221, 221</value>
+  </data>
+  <data name="resource.TabIndex2" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible2" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resource.Image1" xml:space="preserve" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value></value>
+  </data>
+  <data name="resource.Location1" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>275, 1</value>
+  </data>
+  <data name="resource.Size1" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>221, 221</value>
+  </data>
+  <data name="resource.TabIndex1" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible1" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
 </root>

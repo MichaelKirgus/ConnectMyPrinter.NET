@@ -86,8 +86,9 @@ tool to easily manage printers on Windows.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">This software uses the MetroFramework by Jens Thiel.</target>
         </trans-unit>
         <trans-unit id="MetroButton1.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>450, 491</source>
+          <source>438, 491</source>
           <target state="needs-review-translation">450, 491</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroButton1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>89, 23</source>
@@ -98,8 +99,9 @@ tool to easily manage printers on Windows.</target>
           <target state="needs-review-translation">4</target>
         </trans-unit>
         <trans-unit id="MetroButton1.Text" translate="yes" xml:space="preserve">
-          <source>Schließen</source>
+          <source>&amp;Schließen</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Close</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTextBox1.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
           <source>3, 3</source>
@@ -118,12 +120,14 @@ tool to easily manage printers on Windows.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">#</target>
         </trans-unit>
         <trans-unit id="MetroTabPage1.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>4, 35</source>
+          <source>4, 38</source>
           <target state="needs-review-translation">4, 35</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>503, 229</source>
+          <source>503, 226</source>
           <target state="needs-review-translation">503, 229</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage1.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
           <source>0</source>
@@ -150,12 +154,14 @@ tool to easily manage printers on Windows.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">#</target>
         </trans-unit>
         <trans-unit id="MetroTabPage3.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>4, 35</source>
+          <source>4, 38</source>
           <target state="needs-review-translation">4, 35</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage3.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>503, 229</source>
+          <source>503, 226</source>
           <target state="needs-review-translation">503, 229</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage3.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
           <source>2</source>
@@ -182,12 +188,14 @@ tool to easily manage printers on Windows.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">#</target>
         </trans-unit>
         <trans-unit id="MetroTabPage2.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>4, 35</source>
+          <source>4, 38</source>
           <target state="needs-review-translation">4, 35</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage2.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>503, 229</source>
+          <source>503, 226</source>
           <target state="needs-review-translation">503, 229</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage2.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
           <source>1</source>
@@ -224,6 +232,66 @@ tool to easily manage printers on Windows.</target>
         <trans-unit id="$this.Localizable" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extradata="metadata">
           <source>True</source>
           <target state="needs-review-translation">True</target>
+        </trans-unit>
+        <trans-unit id="resource.Image" translate="yes" xml:space="preserve" extype="System.Resources.ResXNullRef, System.Windows.Forms">
+          <source></source>
+          <target state="needs-review-translation"></target>
+        </trans-unit>
+        <trans-unit id="resource.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>275, 1</source>
+          <target state="needs-review-translation">275, 1</target>
+        </trans-unit>
+        <trans-unit id="resource.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>221, 221</source>
+          <target state="needs-review-translation">221, 221</target>
+        </trans-unit>
+        <trans-unit id="resource.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>1</source>
+          <target state="needs-review-translation">1</target>
+        </trans-unit>
+        <trans-unit id="resource.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
+        </trans-unit>
+        <trans-unit id="resource.Image2" translate="yes" xml:space="preserve" extype="System.Resources.ResXNullRef, System.Windows.Forms">
+          <source></source>
+          <target state="needs-review-translation"></target>
+        </trans-unit>
+        <trans-unit id="resource.Location2" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>275, 1</source>
+          <target state="needs-review-translation">275, 1</target>
+        </trans-unit>
+        <trans-unit id="resource.Size2" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>221, 221</source>
+          <target state="needs-review-translation">221, 221</target>
+        </trans-unit>
+        <trans-unit id="resource.TabIndex2" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>1</source>
+          <target state="needs-review-translation">1</target>
+        </trans-unit>
+        <trans-unit id="resource.Visible2" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
+        </trans-unit>
+        <trans-unit id="resource.Image1" translate="yes" xml:space="preserve" extype="System.Resources.ResXNullRef, System.Windows.Forms">
+          <source></source>
+          <target state="needs-review-translation"></target>
+        </trans-unit>
+        <trans-unit id="resource.Location1" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>275, 1</source>
+          <target state="needs-review-translation">275, 1</target>
+        </trans-unit>
+        <trans-unit id="resource.Size1" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>221, 221</source>
+          <target state="needs-review-translation">221, 221</target>
+        </trans-unit>
+        <trans-unit id="resource.TabIndex1" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>1</source>
+          <target state="needs-review-translation">1</target>
+        </trans-unit>
+        <trans-unit id="resource.Visible1" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
         </trans-unit>
       </group>
     </body>
@@ -1938,12 +2006,14 @@ Please select the print server woud you like to connect to:</target>
           <target state="final" state-qualifier="mt-suggestion">Prompt before printer connection</target>
         </trans-unit>
         <trans-unit id="MetroTabPage1.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>4, 35</source>
-          <target state="final">4, 35</target>
+          <source>4, 38</source>
+          <target state="needs-review-translation">4, 35</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage1.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>441, 265</source>
-          <target state="final">441, 265</target>
+          <source>441, 262</source>
+          <target state="needs-review-translation">441, 265</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage1.TabIndex" translate="yes" extype="System.Int32, mscorlib" xml:space="preserve">
           <source>0</source>
@@ -2068,12 +2138,14 @@ Administrator ausgeführt werden.</source>
 administrator.</target>
         </trans-unit>
         <trans-unit id="MetroTabPage2.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>4, 35</source>
-          <target state="final">4, 35</target>
+          <source>4, 38</source>
+          <target state="needs-review-translation">4, 35</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage2.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>441, 265</source>
-          <target state="final">441, 265</target>
+          <source>441, 262</source>
+          <target state="needs-review-translation">441, 265</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage2.TabIndex" translate="yes" extype="System.Int32, mscorlib" xml:space="preserve">
           <source>1</source>

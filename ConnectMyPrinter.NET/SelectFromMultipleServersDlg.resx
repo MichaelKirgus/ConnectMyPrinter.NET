@@ -162,7 +162,7 @@
     <value>MetroButton1</value>
   </data>
   <data name="&gt;&gt;MetroButton1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -192,7 +192,7 @@ den Drucker verbinden möchten:</value>
     <value>MetroLabel1</value>
   </data>
   <data name="&gt;&gt;MetroLabel1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -219,7 +219,7 @@ den Drucker verbinden möchten:</value>
     <value>MetroLabel2</value>
   </data>
   <data name="&gt;&gt;MetroLabel2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -247,6 +247,6 @@ den Drucker verbinden möchten:</value>
     <value>SelectFromMultipleServersDlg</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
 </root>

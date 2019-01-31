@@ -41,6 +41,7 @@ Partial Class SelectFromMultipleServersDlg
         '
         resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.UseSelectable = True
         '
         'MetroLabel1
         '
@@ -64,10 +65,10 @@ Partial Class SelectFromMultipleServersDlg
         Me.Controls.Add(Me.ListBox1)
         Me.Name = "SelectFromMultipleServersDlg"
         Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.Style = MetroFramework.MetroColorStyle.Black
-        Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

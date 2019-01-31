@@ -58,6 +58,7 @@ Partial Class AppSettingsDlg
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 1
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Black
+        Me.MetroTabControl1.UseSelectable = True
         '
         'MetroTabPage1
         '
@@ -67,44 +68,48 @@ Partial Class AppSettingsDlg
         Me.MetroTabPage1.Controls.Add(Me.MetroCheckBox2)
         Me.MetroTabPage1.Controls.Add(Me.MetroCheckBox1)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
+        Me.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage1.HorizontalScrollbarSize = 10
         resources.ApplyResources(Me.MetroTabPage1, "MetroTabPage1")
         Me.MetroTabPage1.Name = "MetroTabPage1"
         Me.MetroTabPage1.VerticalScrollbarBarColor = True
+        Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage1.VerticalScrollbarSize = 10
         '
         'MetroCheckBox5
         '
         resources.ApplyResources(Me.MetroCheckBox5, "MetroCheckBox5")
         Me.MetroCheckBox5.Name = "MetroCheckBox5"
         Me.MetroCheckBox5.Style = MetroFramework.MetroColorStyle.Black
-        Me.MetroCheckBox5.UseVisualStyleBackColor = True
+        Me.MetroCheckBox5.UseSelectable = True
         '
         'MetroCheckBox4
         '
         resources.ApplyResources(Me.MetroCheckBox4, "MetroCheckBox4")
         Me.MetroCheckBox4.Name = "MetroCheckBox4"
         Me.MetroCheckBox4.Style = MetroFramework.MetroColorStyle.Black
-        Me.MetroCheckBox4.UseVisualStyleBackColor = True
+        Me.MetroCheckBox4.UseSelectable = True
         '
         'MetroCheckBox3
         '
         resources.ApplyResources(Me.MetroCheckBox3, "MetroCheckBox3")
         Me.MetroCheckBox3.Name = "MetroCheckBox3"
         Me.MetroCheckBox3.Style = MetroFramework.MetroColorStyle.Black
-        Me.MetroCheckBox3.UseVisualStyleBackColor = True
+        Me.MetroCheckBox3.UseSelectable = True
         '
         'MetroCheckBox2
         '
         resources.ApplyResources(Me.MetroCheckBox2, "MetroCheckBox2")
         Me.MetroCheckBox2.Name = "MetroCheckBox2"
         Me.MetroCheckBox2.Style = MetroFramework.MetroColorStyle.Black
-        Me.MetroCheckBox2.UseVisualStyleBackColor = True
+        Me.MetroCheckBox2.UseSelectable = True
         '
         'MetroCheckBox1
         '
         resources.ApplyResources(Me.MetroCheckBox1, "MetroCheckBox1")
         Me.MetroCheckBox1.Name = "MetroCheckBox1"
         Me.MetroCheckBox1.Style = MetroFramework.MetroColorStyle.Black
-        Me.MetroCheckBox1.UseVisualStyleBackColor = True
+        Me.MetroCheckBox1.UseSelectable = True
         '
         'MetroTabPage2
         '
@@ -118,9 +123,13 @@ Partial Class AppSettingsDlg
         Me.MetroTabPage2.Controls.Add(Me.MetroButton1)
         Me.MetroTabPage2.Controls.Add(Me.MetroLabel1)
         Me.MetroTabPage2.HorizontalScrollbarBarColor = True
+        Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage2.HorizontalScrollbarSize = 10
         resources.ApplyResources(Me.MetroTabPage2, "MetroTabPage2")
         Me.MetroTabPage2.Name = "MetroTabPage2"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
+        Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage2.VerticalScrollbarSize = 10
         '
         'status_error
         '
@@ -142,31 +151,37 @@ Partial Class AppSettingsDlg
         '
         resources.ApplyResources(Me.MetroButton6, "MetroButton6")
         Me.MetroButton6.Name = "MetroButton6"
+        Me.MetroButton6.UseSelectable = True
         '
         'MetroButton5
         '
         resources.ApplyResources(Me.MetroButton5, "MetroButton5")
         Me.MetroButton5.Name = "MetroButton5"
+        Me.MetroButton5.UseSelectable = True
         '
         'MetroButton4
         '
         resources.ApplyResources(Me.MetroButton4, "MetroButton4")
         Me.MetroButton4.Name = "MetroButton4"
+        Me.MetroButton4.UseSelectable = True
         '
         'MetroButton3
         '
         resources.ApplyResources(Me.MetroButton3, "MetroButton3")
         Me.MetroButton3.Name = "MetroButton3"
+        Me.MetroButton3.UseSelectable = True
         '
         'MetroButton2
         '
         resources.ApplyResources(Me.MetroButton2, "MetroButton2")
         Me.MetroButton2.Name = "MetroButton2"
+        Me.MetroButton2.UseSelectable = True
         '
         'MetroButton1
         '
         resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.UseSelectable = True
         '
         'MetroLabel1
         '
@@ -174,28 +189,30 @@ Partial Class AppSettingsDlg
         Me.MetroLabel1.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.MetroLabel1, "MetroLabel1")
         Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.UseCustomBackColor = True
         '
         'MetroButton7
         '
         resources.ApplyResources(Me.MetroButton7, "MetroButton7")
         Me.MetroButton7.Name = "MetroButton7"
+        Me.MetroButton7.UseSelectable = True
         '
         'AppSettingsDlg
         '
         Me.AcceptButton = Me.MetroButton7
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BorderStyle = Forms.MetroFormBorderStyle.FixedSingle
+        Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.Controls.Add(Me.MetroButton7)
         Me.Controls.Add(Me.MetroTabControl1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AppSettingsDlg"
         Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.Style = MetroFramework.MetroColorStyle.Black
-        Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTabControl1.ResumeLayout(False)
         Me.MetroTabPage1.ResumeLayout(False)
         Me.MetroTabPage1.PerformLayout()

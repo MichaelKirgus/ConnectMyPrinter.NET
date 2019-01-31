@@ -117,11 +117,140 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;MetroTabPage1.Name" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Parent" xml:space="preserve">
+    <value>MetroTabControl1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Name" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Parent" xml:space="preserve">
+    <value>MetroTabControl1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MetroTabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 63</value>
+  </data>
+  <data name="MetroTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 304</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MetroTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MetroTabControl1.Name" xml:space="preserve">
+    <value>MetroTabControl1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabControl1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroTabControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox5.Name" xml:space="preserve">
+    <value>MetroCheckBox5</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox5.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox5.Parent" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox4.Name" xml:space="preserve">
+    <value>MetroCheckBox4</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox4.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox4.Parent" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox3.Name" xml:space="preserve">
+    <value>MetroCheckBox3</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox3.Parent" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox2.Name" xml:space="preserve">
+    <value>MetroCheckBox2</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox2.Parent" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox1.Name" xml:space="preserve">
+    <value>MetroCheckBox1</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox1.Parent" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroCheckBox1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="MetroTabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
+  </data>
+  <data name="MetroTabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 262</value>
+  </data>
+  <data name="MetroTabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MetroTabPage1.Text" xml:space="preserve">
+    <value>Anwendungsverhalten</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Name" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Parent" xml:space="preserve">
+    <value>MetroTabControl1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="MetroCheckBox5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MetroCheckBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 109</value>
   </data>
@@ -138,7 +267,7 @@
     <value>MetroCheckBox5</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox5.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox5.Parent" xml:space="preserve">
     <value>MetroTabPage1</value>
@@ -165,7 +294,7 @@
     <value>MetroCheckBox4</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox4.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox4.Parent" xml:space="preserve">
     <value>MetroTabPage1</value>
@@ -192,7 +321,7 @@
     <value>MetroCheckBox3</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox3.Parent" xml:space="preserve">
     <value>MetroTabPage1</value>
@@ -219,7 +348,7 @@
     <value>MetroCheckBox2</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox2.Parent" xml:space="preserve">
     <value>MetroTabPage1</value>
@@ -246,7 +375,7 @@
     <value>MetroCheckBox1</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroCheckBox1.Parent" xml:space="preserve">
     <value>MetroTabPage1</value>
@@ -254,29 +383,137 @@
   <data name="&gt;&gt;MetroCheckBox1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="MetroTabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 35</value>
+  <data name="&gt;&gt;status_error.Name" xml:space="preserve">
+    <value>status_error</value>
   </data>
-  <data name="MetroTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 265</value>
+  <data name="&gt;&gt;status_error.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MetroTabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;status_error.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
   </data>
-  <data name="MetroTabPage1.Text" xml:space="preserve">
-    <value>Anwendungsverhalten</value>
+  <data name="&gt;&gt;status_error.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage1.Name" xml:space="preserve">
-    <value>MetroTabPage1</value>
+  <data name="&gt;&gt;status_ok.Name" xml:space="preserve">
+    <value>status_ok</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="&gt;&gt;status_ok.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;status_ok.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;status_ok.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;MetroButton6.Name" xml:space="preserve">
+    <value>MetroButton6</value>
+  </data>
+  <data name="&gt;&gt;MetroButton6.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton6.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroButton6.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;MetroButton5.Name" xml:space="preserve">
+    <value>MetroButton5</value>
+  </data>
+  <data name="&gt;&gt;MetroButton5.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton5.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroButton5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;MetroButton4.Name" xml:space="preserve">
+    <value>MetroButton4</value>
+  </data>
+  <data name="&gt;&gt;MetroButton4.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton4.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroButton4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;MetroButton3.Name" xml:space="preserve">
+    <value>MetroButton3</value>
+  </data>
+  <data name="&gt;&gt;MetroButton3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton3.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroButton3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;MetroButton2.Name" xml:space="preserve">
+    <value>MetroButton2</value>
+  </data>
+  <data name="&gt;&gt;MetroButton2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton2.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroButton2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.Name" xml:space="preserve">
+    <value>MetroButton1</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroButton1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1.Name" xml:space="preserve">
+    <value>MetroLabel1</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroLabel1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="MetroTabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
+  </data>
+  <data name="MetroTabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 262</value>
+  </data>
+  <data name="MetroTabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MetroTabPage2.Text" xml:space="preserve">
+    <value>Erweitert</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Name" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Parent" xml:space="preserve">
     <value>MetroTabControl1</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;MetroTabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="status_error.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -349,7 +586,7 @@
     <value>MetroButton6</value>
   </data>
   <data name="&gt;&gt;MetroButton6.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton6.Parent" xml:space="preserve">
     <value>MetroTabPage2</value>
@@ -373,7 +610,7 @@
     <value>MetroButton5</value>
   </data>
   <data name="&gt;&gt;MetroButton5.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton5.Parent" xml:space="preserve">
     <value>MetroTabPage2</value>
@@ -397,7 +634,7 @@
     <value>MetroButton4</value>
   </data>
   <data name="&gt;&gt;MetroButton4.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton4.Parent" xml:space="preserve">
     <value>MetroTabPage2</value>
@@ -421,7 +658,7 @@
     <value>MetroButton3</value>
   </data>
   <data name="&gt;&gt;MetroButton3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton3.Parent" xml:space="preserve">
     <value>MetroTabPage2</value>
@@ -445,7 +682,7 @@
     <value>MetroButton2</value>
   </data>
   <data name="&gt;&gt;MetroButton2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton2.Parent" xml:space="preserve">
     <value>MetroTabPage2</value>
@@ -469,7 +706,7 @@
     <value>MetroButton1</value>
   </data>
   <data name="&gt;&gt;MetroButton1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton1.Parent" xml:space="preserve">
     <value>MetroTabPage2</value>
@@ -494,58 +731,13 @@ Administrator ausgeführt werden.</value>
     <value>MetroLabel1</value>
   </data>
   <data name="&gt;&gt;MetroLabel1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel1.Parent" xml:space="preserve">
     <value>MetroTabPage2</value>
   </data>
   <data name="&gt;&gt;MetroLabel1.ZOrder" xml:space="preserve">
     <value>10</value>
-  </data>
-  <data name="MetroTabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 35</value>
-  </data>
-  <data name="MetroTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 265</value>
-  </data>
-  <data name="MetroTabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="MetroTabPage2.Text" xml:space="preserve">
-    <value>Erweitert</value>
-  </data>
-  <data name="&gt;&gt;MetroTabPage2.Name" xml:space="preserve">
-    <value>MetroTabPage2</value>
-  </data>
-  <data name="&gt;&gt;MetroTabPage2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MetroTabPage2.Parent" xml:space="preserve">
-    <value>MetroTabControl1</value>
-  </data>
-  <data name="&gt;&gt;MetroTabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="MetroTabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 63</value>
-  </data>
-  <data name="MetroTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 304</value>
-  </data>
-  <data name="MetroTabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;MetroTabControl1.Name" xml:space="preserve">
-    <value>MetroTabControl1</value>
-  </data>
-  <data name="&gt;&gt;MetroTabControl1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MetroTabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MetroTabControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="MetroButton7.Location" type="System.Drawing.Point, System.Drawing">
     <value>368, 375</value>
@@ -563,7 +755,7 @@ Administrator ausgeführt werden.</value>
     <value>MetroButton7</value>
   </data>
   <data name="&gt;&gt;MetroButton7.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton7.Parent" xml:space="preserve">
     <value>$this</value>
@@ -590,6 +782,6 @@ Administrator ausgeführt werden.</value>
     <value>AppSettingsDlg</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
 </root>

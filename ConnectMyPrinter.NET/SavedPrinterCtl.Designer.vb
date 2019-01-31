@@ -45,6 +45,7 @@ Partial Class SavedPrinterCtl
         Me.MetroLabel1Lbl.FontSize = MetroFramework.MetroLabelSize.Tall
         resources.ApplyResources(Me.MetroLabel1Lbl, "MetroLabel1Lbl")
         Me.MetroLabel1Lbl.Name = "MetroLabel1Lbl"
+        Me.MetroLabel1Lbl.UseCustomBackColor = True
         '
         'MetroLabel2Lbl
         '
@@ -52,30 +53,35 @@ Partial Class SavedPrinterCtl
         Me.MetroLabel2Lbl.FontSize = MetroFramework.MetroLabelSize.Small
         resources.ApplyResources(Me.MetroLabel2Lbl, "MetroLabel2Lbl")
         Me.MetroLabel2Lbl.Name = "MetroLabel2Lbl"
+        Me.MetroLabel2Lbl.UseCustomBackColor = True
         '
         'MetroLabel6Lbl
         '
         resources.ApplyResources(Me.MetroLabel6Lbl, "MetroLabel6Lbl")
         Me.MetroLabel6Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel6Lbl.Name = "MetroLabel6Lbl"
+        Me.MetroLabel6Lbl.UseCustomBackColor = True
         '
         'MetroLabel7Lbl
         '
         resources.ApplyResources(Me.MetroLabel7Lbl, "MetroLabel7Lbl")
         Me.MetroLabel7Lbl.BackColor = System.Drawing.Color.White
         Me.MetroLabel7Lbl.Name = "MetroLabel7Lbl"
+        Me.MetroLabel7Lbl.UseCustomBackColor = True
         '
         'LocationLbl
         '
         resources.ApplyResources(Me.LocationLbl, "LocationLbl")
         Me.LocationLbl.BackColor = System.Drawing.Color.White
         Me.LocationLbl.Name = "LocationLbl"
+        Me.LocationLbl.UseCustomBackColor = True
         '
         'DescriptionLbl
         '
         resources.ApplyResources(Me.DescriptionLbl, "DescriptionLbl")
         Me.DescriptionLbl.BackColor = System.Drawing.Color.White
         Me.DescriptionLbl.Name = "DescriptionLbl"
+        Me.DescriptionLbl.UseCustomBackColor = True
         '
         'PictureBox2
         '
@@ -125,6 +131,7 @@ Partial Class SavedPrinterCtl
         Me.Controls.Add(Me.MetroLabel1Lbl)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "SavedPrinterCtl"
+        Me.UseCustomBackColor = True
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

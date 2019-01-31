@@ -80,16 +80,41 @@ Partial Class AdvancedPrinterViewDlg
         'MetroTextBox1
         '
         Me.MetroTextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        '
+        '
+        '
+        Me.MetroTextBox1.CustomButton.Image = Nothing
+        Me.MetroTextBox1.CustomButton.Location = New System.Drawing.Point(276, 1)
+        Me.MetroTextBox1.CustomButton.Name = ""
+        Me.MetroTextBox1.CustomButton.Size = New System.Drawing.Size(27, 27)
+        Me.MetroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.MetroTextBox1.CustomButton.TabIndex = 1
+        Me.MetroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroTextBox1.CustomButton.UseSelectable = True
+        Me.MetroTextBox1.CustomButton.Visible = False
         Me.MetroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium
-        Me.MetroTextBox1.Location = New System.Drawing.Point(588, 25)
+        Me.MetroTextBox1.Lines = New String(-1) {}
+        Me.MetroTextBox1.Location = New System.Drawing.Point(588, 21)
+        Me.MetroTextBox1.MaxLength = 32767
         Me.MetroTextBox1.Name = "MetroTextBox1"
+        Me.MetroTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.MetroTextBox1.PromptText = "Druckerbezeichnung eingeben..."
+        Me.MetroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.MetroTextBox1.SelectedText = ""
+        Me.MetroTextBox1.SelectionLength = 0
+        Me.MetroTextBox1.SelectionStart = 0
+        Me.MetroTextBox1.ShortcutsEnabled = True
         Me.MetroTextBox1.Size = New System.Drawing.Size(304, 29)
         Me.MetroTextBox1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroTextBox1.TabIndex = 2
+        Me.MetroTextBox1.UseSelectable = True
+        Me.MetroTextBox1.WaterMark = "Druckerbezeichnung eingeben..."
+        Me.MetroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.MetroTextBox1.WaterMarkFont = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         '
         'Button1
         '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.search1
         Me.Button1.Location = New System.Drawing.Point(898, 14)
         Me.Button1.Name = "Button1"
@@ -107,11 +132,11 @@ Partial Class AdvancedPrinterViewDlg
         Me.Controls.Add(Me.MetroTextBox1)
         Me.Controls.Add(Me.ListView1)
         Me.Name = "AdvancedPrinterViewDlg"
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
         Me.ShowIcon = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.Style = MetroFramework.MetroColorStyle.Black
         Me.Text = "Alle Drucker"
-        Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.TopMost = True
         Me.ResumeLayout(False)
 

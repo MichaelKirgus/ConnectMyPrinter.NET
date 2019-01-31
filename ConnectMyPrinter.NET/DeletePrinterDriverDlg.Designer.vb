@@ -53,7 +53,7 @@ Partial Class DeletePrinterDriverDlg
         Me.MetroCheckBox1.Checked = True
         Me.MetroCheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.MetroCheckBox1.Name = "MetroCheckBox1"
-        Me.MetroCheckBox1.UseVisualStyleBackColor = True
+        Me.MetroCheckBox1.UseSelectable = True
         '
         'MetroCheckBox2
         '
@@ -61,7 +61,7 @@ Partial Class DeletePrinterDriverDlg
         Me.MetroCheckBox2.Checked = True
         Me.MetroCheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
         Me.MetroCheckBox2.Name = "MetroCheckBox2"
-        Me.MetroCheckBox2.UseVisualStyleBackColor = True
+        Me.MetroCheckBox2.UseSelectable = True
         '
         'MetroCheckBox3
         '
@@ -69,7 +69,7 @@ Partial Class DeletePrinterDriverDlg
         Me.MetroCheckBox3.Checked = True
         Me.MetroCheckBox3.CheckState = System.Windows.Forms.CheckState.Checked
         Me.MetroCheckBox3.Name = "MetroCheckBox3"
-        Me.MetroCheckBox3.UseVisualStyleBackColor = True
+        Me.MetroCheckBox3.UseSelectable = True
         '
         'MetroCheckBox4
         '
@@ -77,7 +77,7 @@ Partial Class DeletePrinterDriverDlg
         Me.MetroCheckBox4.Checked = True
         Me.MetroCheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
         Me.MetroCheckBox4.Name = "MetroCheckBox4"
-        Me.MetroCheckBox4.UseVisualStyleBackColor = True
+        Me.MetroCheckBox4.UseSelectable = True
         '
         'MetroCheckBox5
         '
@@ -85,7 +85,7 @@ Partial Class DeletePrinterDriverDlg
         Me.MetroCheckBox5.Checked = True
         Me.MetroCheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
         Me.MetroCheckBox5.Name = "MetroCheckBox5"
-        Me.MetroCheckBox5.UseVisualStyleBackColor = True
+        Me.MetroCheckBox5.UseSelectable = True
         '
         'MetroCheckBox6
         '
@@ -93,7 +93,7 @@ Partial Class DeletePrinterDriverDlg
         Me.MetroCheckBox6.Checked = True
         Me.MetroCheckBox6.CheckState = System.Windows.Forms.CheckState.Checked
         Me.MetroCheckBox6.Name = "MetroCheckBox6"
-        Me.MetroCheckBox6.UseVisualStyleBackColor = True
+        Me.MetroCheckBox6.UseSelectable = True
         '
         'MetroCheckBox7
         '
@@ -101,7 +101,7 @@ Partial Class DeletePrinterDriverDlg
         Me.MetroCheckBox7.Checked = True
         Me.MetroCheckBox7.CheckState = System.Windows.Forms.CheckState.Checked
         Me.MetroCheckBox7.Name = "MetroCheckBox7"
-        Me.MetroCheckBox7.UseVisualStyleBackColor = True
+        Me.MetroCheckBox7.UseSelectable = True
         '
         'PictureBox1
         '
@@ -128,6 +128,7 @@ Partial Class DeletePrinterDriverDlg
         '
         resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.UseSelectable = True
         '
         'DeletePrinterDriverDlg
         '
@@ -147,10 +148,10 @@ Partial Class DeletePrinterDriverDlg
         Me.Controls.Add(Me.MetroLabel1)
         Me.Name = "DeletePrinterDriverDlg"
         Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.Style = MetroFramework.MetroColorStyle.Black
-        Me.Theme = MetroFramework.MetroThemeStyle.Light
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()

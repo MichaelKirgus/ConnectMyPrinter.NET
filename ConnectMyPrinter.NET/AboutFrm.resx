@@ -163,7 +163,7 @@
     <value>MetroLabel1</value>
   </data>
   <data name="&gt;&gt;MetroLabel1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -191,7 +191,7 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>MetroLabel2</value>
   </data>
   <data name="&gt;&gt;MetroLabel2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -218,7 +218,7 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>MetroLabel3</value>
   </data>
   <data name="&gt;&gt;MetroLabel3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -227,7 +227,7 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>2</value>
   </data>
   <data name="MetroButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 491</value>
+    <value>438, 491</value>
   </data>
   <data name="MetroButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 23</value>
@@ -236,19 +236,127 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>4</value>
   </data>
   <data name="MetroButton1.Text" xml:space="preserve">
-    <value>Schließen</value>
+    <value>&amp;Schließen</value>
   </data>
   <data name="&gt;&gt;MetroButton1.Name" xml:space="preserve">
     <value>MetroButton1</value>
   </data>
   <data name="&gt;&gt;MetroButton1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MetroButton1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Name" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Parent" xml:space="preserve">
+    <value>MetroTabControl1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Name" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Parent" xml:space="preserve">
+    <value>MetroTabControl1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage3.Name" xml:space="preserve">
+    <value>MetroTabPage3</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage3.Parent" xml:space="preserve">
+    <value>MetroTabControl1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="MetroTabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 217</value>
+  </data>
+  <data name="MetroTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>511, 268</value>
+  </data>
+  <data name="MetroTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;MetroTabControl1.Name" xml:space="preserve">
+    <value>MetroTabControl1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabControl1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroTabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox1.Name" xml:space="preserve">
+    <value>MetroTextBox1</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox1.Parent" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="MetroTabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
+  </data>
+  <data name="MetroTabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>503, 226</value>
+  </data>
+  <data name="MetroTabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MetroTabPage1.Text" xml:space="preserve">
+    <value>Programmlizenz</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Name" xml:space="preserve">
+    <value>MetroTabPage1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.Parent" xml:space="preserve">
+    <value>MetroTabControl1</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="resource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 1</value>
+  </data>
+  <data name="resource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 221</value>
+  </data>
+  <data name="resource.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="MetroTextBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -266,7 +374,7 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>MetroTextBox1</value>
   </data>
   <data name="&gt;&gt;MetroTextBox1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroTextBox1.Parent" xml:space="preserve">
     <value>MetroTabPage1</value>
@@ -274,29 +382,56 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
   <data name="&gt;&gt;MetroTextBox1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="MetroTabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 35</value>
+  <data name="&gt;&gt;MetroTextBox3.Name" xml:space="preserve">
+    <value>MetroTextBox3</value>
   </data>
-  <data name="MetroTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>503, 229</value>
+  <data name="&gt;&gt;MetroTextBox3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="MetroTabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;MetroTextBox3.Parent" xml:space="preserve">
+    <value>MetroTabPage3</value>
   </data>
-  <data name="MetroTabPage1.Text" xml:space="preserve">
-    <value>Programmlizenz</value>
+  <data name="&gt;&gt;MetroTextBox3.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage1.Name" xml:space="preserve">
-    <value>MetroTabPage1</value>
+  <data name="MetroTabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="MetroTabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>503, 226</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage1.Parent" xml:space="preserve">
+  <data name="MetroTabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MetroTabPage3.Text" xml:space="preserve">
+    <value>Open Icon Library</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage3.Name" xml:space="preserve">
+    <value>MetroTabPage3</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage3.Parent" xml:space="preserve">
     <value>MetroTabControl1</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;MetroTabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="resource.Image2" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="resource.Location2" type="System.Drawing.Point, System.Drawing">
+    <value>275, 1</value>
+  </data>
+  <data name="resource.Size2" type="System.Drawing.Size, System.Drawing">
+    <value>221, 221</value>
+  </data>
+  <data name="resource.TabIndex2" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible2" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="MetroTextBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -314,7 +449,7 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>MetroTextBox3</value>
   </data>
   <data name="&gt;&gt;MetroTextBox3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroTextBox3.Parent" xml:space="preserve">
     <value>MetroTabPage3</value>
@@ -322,29 +457,56 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
   <data name="&gt;&gt;MetroTextBox3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="MetroTabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 35</value>
+  <data name="&gt;&gt;MetroTextBox2.Name" xml:space="preserve">
+    <value>MetroTextBox2</value>
   </data>
-  <data name="MetroTabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>503, 229</value>
+  <data name="&gt;&gt;MetroTextBox2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="MetroTabPage3.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;MetroTextBox2.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="MetroTabPage3.Text" xml:space="preserve">
-    <value>Open Icon Library</value>
+  <data name="MetroTabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage3.Name" xml:space="preserve">
-    <value>MetroTabPage3</value>
+  <data name="MetroTabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>503, 226</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="MetroTabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage3.Parent" xml:space="preserve">
+  <data name="MetroTabPage2.Text" xml:space="preserve">
+    <value>MetroFramework</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Name" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTabPage2.Parent" xml:space="preserve">
     <value>MetroTabControl1</value>
   </data>
-  <data name="&gt;&gt;MetroTabPage3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MetroTabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="resource.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="resource.Location1" type="System.Drawing.Point, System.Drawing">
+    <value>275, 1</value>
+  </data>
+  <data name="resource.Size1" type="System.Drawing.Size, System.Drawing">
+    <value>221, 221</value>
+  </data>
+  <data name="resource.TabIndex1" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible1" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="MetroTextBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -362,58 +524,13 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>MetroTextBox2</value>
   </data>
   <data name="&gt;&gt;MetroTextBox2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroTextBox2.Parent" xml:space="preserve">
     <value>MetroTabPage2</value>
   </data>
   <data name="&gt;&gt;MetroTextBox2.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="MetroTabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 35</value>
-  </data>
-  <data name="MetroTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>503, 229</value>
-  </data>
-  <data name="MetroTabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="MetroTabPage2.Text" xml:space="preserve">
-    <value>MetroFramework</value>
-  </data>
-  <data name="&gt;&gt;MetroTabPage2.Name" xml:space="preserve">
-    <value>MetroTabPage2</value>
-  </data>
-  <data name="&gt;&gt;MetroTabPage2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MetroTabPage2.Parent" xml:space="preserve">
-    <value>MetroTabControl1</value>
-  </data>
-  <data name="&gt;&gt;MetroTabPage2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="MetroTabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 217</value>
-  </data>
-  <data name="MetroTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>511, 268</value>
-  </data>
-  <data name="MetroTabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;MetroTabControl1.Name" xml:space="preserve">
-    <value>MetroTabControl1</value>
-  </data>
-  <data name="&gt;&gt;MetroTabControl1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MetroTabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MetroTabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -431,6 +548,6 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>AboutFrm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
 </root>

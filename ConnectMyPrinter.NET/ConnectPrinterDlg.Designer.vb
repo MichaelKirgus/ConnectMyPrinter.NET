@@ -39,11 +39,13 @@ Partial Class ConnectPrinterDlg
         '
         resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.UseSelectable = True
         '
         'MetroButton2
         '
         resources.ApplyResources(Me.MetroButton2, "MetroButton2")
         Me.MetroButton2.Name = "MetroButton2"
+        Me.MetroButton2.UseSelectable = True
         '
         'ConnectPrinterDlg
         '
@@ -57,11 +59,11 @@ Partial Class ConnectPrinterDlg
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ConnectPrinterDlg"
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Style = MetroFramework.MetroColorStyle.Black
-        Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.ResumeLayout(False)
 
     End Sub

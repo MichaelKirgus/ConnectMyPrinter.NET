@@ -35,6 +35,7 @@ Partial Class DriverNotificationRtfViewerDlg
         Me.MetroButton2.Size = New System.Drawing.Size(90, 23)
         Me.MetroButton2.TabIndex = 3
         Me.MetroButton2.Text = "&OK"
+        Me.MetroButton2.UseSelectable = True
         '
         'RichTextBox1
         '
@@ -61,12 +62,12 @@ Partial Class DriverNotificationRtfViewerDlg
         Me.MinimizeBox = False
         Me.Name = "DriverNotificationRtfViewerDlg"
         Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Style = MetroFramework.MetroColorStyle.Black
         Me.Text = "Infos zum Drucker"
-        Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.TopMost = True
         Me.ResumeLayout(False)
 
