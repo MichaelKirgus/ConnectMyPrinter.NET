@@ -108,7 +108,7 @@ Partial Class Form1
         Me.MetroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium
         resources.ApplyResources(Me.MetroTextBox1, "MetroTextBox1")
         Me.MetroTextBox1.Name = "MetroTextBox1"
-        Me.MetroTextBox1.PromptText = "Druckerbezeichnung eingeben..."
+        Me.MetroTextBox1.WaterMark = "Druckerbezeichnung eingeben..."
         Me.MetroTextBox1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroTextBox1.TabIndex = 0
         Me.ToolTip2.SetToolTip(Me.MetroTextBox1, resources.GetString("MetroTextBox1.ToolTip"))
