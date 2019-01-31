@@ -205,31 +205,37 @@ Partial Class PrinterCtl
         '
         resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.UseSelectable = True
         '
         'MetroButton2
         '
         resources.ApplyResources(Me.MetroButton2, "MetroButton2")
         Me.MetroButton2.Name = "MetroButton2"
+        Me.MetroButton2.UseSelectable = True
         '
         'MetroButton3
         '
         resources.ApplyResources(Me.MetroButton3, "MetroButton3")
         Me.MetroButton3.Name = "MetroButton3"
+        Me.MetroButton3.UseSelectable = True
         '
         'MetroButton4
         '
         resources.ApplyResources(Me.MetroButton4, "MetroButton4")
         Me.MetroButton4.Name = "MetroButton4"
+        Me.MetroButton4.UseSelectable = True
         '
         'MetroButton5
         '
         resources.ApplyResources(Me.MetroButton5, "MetroButton5")
         Me.MetroButton5.Name = "MetroButton5"
+        Me.MetroButton5.UseSelectable = True
         '
         'MetroButton6
         '
         resources.ApplyResources(Me.MetroButton6, "MetroButton6")
         Me.MetroButton6.Name = "MetroButton6"
+        Me.MetroButton6.UseSelectable = True
         '
         'ContextMenuStrip1
         '
@@ -409,6 +415,7 @@ Partial Class PrinterCtl
         Me.Controls.Add(Me.MetroLabel1Lbl)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "PrinterCtl"
+        Me.UseCustomBackColor = True
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

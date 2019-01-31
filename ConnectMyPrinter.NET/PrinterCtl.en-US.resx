@@ -12,15 +12,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ContextMenuStrip1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  <metadata name="ContextMenuStrip1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </data>
-  <data name="SaveFileDialog1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="SaveFileDialog1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>273, 17</value>
-  </data>
-  <data name="OpenFileDialog1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="OpenFileDialog1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>410, 17</value>
-  </data>
+  </metadata>
   <data name="MetroLabel1Lbl.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
     <value>44, 1</value>
   </data>
@@ -459,9 +459,9 @@
   <data name="$this.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>391, 42</value>
   </data>
-  <data name="$this.Localizable" xml:space="preserve" type="System.Boolean, mscorlib">
+  <metadata name="$this.Localizable" xml:space="preserve" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="DruckerEntfernenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>268, 30</value>
   </data>
@@ -516,9 +516,9 @@
   <data name="ToolStripSeparator4.Visible" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="ToolTip1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  <metadata name="ToolTip1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>174, 17</value>
-  </data>
+  </metadata>
   <data name="DruckerEntfernenlokalToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>268, 30</value>
   </data>
@@ -549,7 +549,7 @@
   <data name="SaveFileDialog2.Filter" xml:space="preserve">
     <value>Profilefile|*.prpr</value>
   </data>
-  <data name="SaveFileDialog2.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+  <metadata name="SaveFileDialog2.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>552, 17</value>
-  </data>
+  </metadata>
 </root>

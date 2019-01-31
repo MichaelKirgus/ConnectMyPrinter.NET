@@ -222,6 +222,11 @@
     <Compile Include="SelectFromMultipleServersDlg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TranslatedStrings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TranslatedStrings.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutFrm.en-US.resx">
@@ -348,6 +353,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SelectFromMultipleServersDlg.resx">
       <DependentUpon>SelectFromMultipleServersDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranslatedStrings.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TranslatedStrings.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()>  _
     Public Class PrinterCtl
@@ -221,7 +221,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=410}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=388}.
         '''</summary>
         Public Shared ReadOnly Property ContextMenuStrip1_Size() As System.Drawing.Size
             Get
@@ -374,24 +374,6 @@ Namespace My.Resources
         Public Shared ReadOnly Property DriverLbl_Text() As String
             Get
                 Return ResourceManager.GetString("DriverLbl.Text", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Folgende Drucker verwenden noch den Treiber  ähnelt.
-        '''</summary>
-        Public Shared ReadOnly Property DriverMultiplePrintersPart1() As String
-            Get
-                Return ResourceManager.GetString("DriverMultiplePrintersPart1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen? ähnelt.
-        '''</summary>
-        Public Shared ReadOnly Property DriverMultiplePrintersRemoveQuestion() As String
-            Get
-                Return ResourceManager.GetString("DriverMultiplePrintersRemoveQuestion", resourceCulture)
             End Get
         End Property
         
@@ -692,24 +674,6 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("DruckerNeuInstallierenToolStripMenuItem.Visible", resourceCulture)
                 Return CType(obj,Boolean)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Druckereinstellungen erfolgreich exportiert. ähnelt.
-        '''</summary>
-        Public Shared ReadOnly Property ExportPrinterSettings() As String
-            Get
-                Return ResourceManager.GetString("ExportPrinterSettings", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Druckereinstellungen erfolgreich importiert. ähnelt.
-        '''</summary>
-        Public Shared ReadOnly Property ImportPrinterSettings() As String
-            Get
-                Return ResourceManager.GetString("ImportPrinterSettings", resourceCulture)
             End Get
         End Property
         
@@ -1647,24 +1611,6 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Visible", resourceCulture)
                 Return CType(obj,Boolean)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Möchten Sie wirklich den Drucker ähnelt.
-        '''</summary>
-        Public Shared ReadOnly Property RemovePrinterMessagePart1() As String
-            Get
-                Return ResourceManager.GetString("RemovePrinterMessagePart1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  entfernen? ähnelt.
-        '''</summary>
-        Public Shared ReadOnly Property RemovePrinterMessagePart2() As String
-            Get
-                Return ResourceManager.GetString("RemovePrinterMessagePart2", resourceCulture)
             End Get
         End Property
         

@@ -144,7 +144,7 @@ Public Class PrinterCtl
                 Dim oo As New DeletePrinterDlg
                 oo._parent = _parent
                 _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me.ParentForm, "Drucker " & aa.ShareName & " entfernen", Err)
-                oo.MetroLabel2.Text = My.Resources.PrinterCtl.RemovePrinterMessagePart1 & vbNewLine & aa.ShareName & My.Resources.PrinterCtl.RemovePrinterMessagePart2
+                oo.MetroLabel2.Text = My.Resources.TranslatedStrings.RemovePrinterMessagePart1 & vbNewLine & aa.ShareName & My.Resources.TranslatedStrings.RemovePrinterMessagePart2
                 Dim uu As MsgBoxResult
                 uu = oo.ShowDialog()
                 If uu = MsgBoxResult.Yes Then
@@ -252,14 +252,14 @@ Public Class PrinterCtl
             aa = Me.Tag
 
             If ll.Count > 1 Then
-                Dim pp As String = My.Resources.PrinterCtl.DriverMultiplePrintersPart1 & aa.DriverName & " :" & vbNewLine
+                Dim pp As String = My.Resources.TranslatedStrings.DriverMultiplePrintersPart1 & aa.DriverName & " :" & vbNewLine
 
                 For index = 0 To ll.Count - 1
                     pp += ll(index).ShareName & " Server: " & ll(index).Server & vbNewLine
                 Next
 
                 Dim qq As MsgBoxResult
-                qq = MsgBox(pp & vbNewLine & vbNewLine & My.Resources.PrinterCtl.DriverMultiplePrintersRemoveQuestion, MsgBoxStyle.OkCancel)
+                qq = MsgBox(pp & vbNewLine & vbNewLine & My.Resources.TranslatedStrings.DriverMultiplePrintersRemoveQuestion, MsgBoxStyle.OkCancel)
 
                 If qq = MsgBoxResult.Ok Then
                     For index = 0 To ll.Count - 1
@@ -503,7 +503,7 @@ Public Class PrinterCtl
             SaveFileDialog1.ShowDialog()
             If Not SaveFileDialog1.FileName = "" Then
                 gg.ExportPrinterSettings(Me.Tag, SaveFileDialog1.FileName)
-                MsgBox(My.Resources.PrinterCtl.ExportPrinterSettings)
+                MsgBox(My.Resources.TranslatedStrings.ExportPrinterSettings)
             End If
         Catch ex As Exception
             _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
@@ -518,7 +518,7 @@ Public Class PrinterCtl
             SaveFileDialog1.ShowDialog()
             If Not SaveFileDialog1.FileName = "" Then
                 gg.ExportPrinterSettings(Me.Tag, SaveFileDialog1.FileName)
-                MsgBox(My.Resources.PrinterCtl.ImportPrinterSettings)
+                MsgBox(My.Resources.TranslatedStrings.ImportPrinterSettings)
             End If
         Catch ex As Exception
             _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)

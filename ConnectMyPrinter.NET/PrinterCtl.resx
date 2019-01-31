@@ -131,9 +131,9 @@
   <data name="MetroLabel1Lbl.Text" xml:space="preserve">
     <value>&lt;PrinterName&gt;</value>
   </data>
-  <data name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>174, 17</value>
-  </data>
+  </metadata>
   <data name="MetroLabel1Lbl.ToolTip" xml:space="preserve">
     <value>Druckername</value>
   </data>
@@ -141,7 +141,7 @@
     <value>MetroLabel1Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel1Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel1Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -168,7 +168,7 @@
     <value>MetroLabel2Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel2Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel2Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -195,7 +195,7 @@
     <value>MetroLabel3Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel3Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel3Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -222,7 +222,7 @@
     <value>MetroLabel4Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel4Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel4Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -249,7 +249,7 @@
     <value>MetroLabel5Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel5Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel5Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -276,7 +276,7 @@
     <value>MetroLabel6Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel6Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel6Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -303,7 +303,7 @@
     <value>MetroLabel7Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel7Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel7Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -330,7 +330,7 @@
     <value>LocationLbl</value>
   </data>
   <data name="&gt;&gt;LocationLbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;LocationLbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -357,7 +357,7 @@
     <value>DescriptionLbl</value>
   </data>
   <data name="&gt;&gt;DescriptionLbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;DescriptionLbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -384,7 +384,7 @@
     <value>DriverLbl</value>
   </data>
   <data name="&gt;&gt;DriverLbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;DriverLbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -411,7 +411,7 @@
     <value>DriverVersionLbl</value>
   </data>
   <data name="&gt;&gt;DriverVersionLbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;DriverVersionLbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -438,7 +438,7 @@
     <value>StateLbl</value>
   </data>
   <data name="&gt;&gt;StateLbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;StateLbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -462,7 +462,7 @@
     <value>DataFileLbl</value>
   </data>
   <data name="&gt;&gt;DataFileLbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;DataFileLbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -489,7 +489,7 @@
     <value>MetroLabel10Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel10Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel10Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -513,7 +513,7 @@
     <value>ConfigFileLbl</value>
   </data>
   <data name="&gt;&gt;ConfigFileLbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;ConfigFileLbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -540,7 +540,7 @@
     <value>MetroLabel12Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel12Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel12Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -564,7 +564,7 @@
     <value>DriverPathLbl</value>
   </data>
   <data name="&gt;&gt;DriverPathLbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;DriverPathLbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -591,7 +591,7 @@
     <value>MetroLabel13Lbl</value>
   </data>
   <data name="&gt;&gt;MetroLabel13Lbl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroLabel13Lbl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -615,7 +615,7 @@
     <value>MetroButton1</value>
   </data>
   <data name="&gt;&gt;MetroButton1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -639,7 +639,7 @@
     <value>MetroButton2</value>
   </data>
   <data name="&gt;&gt;MetroButton2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -663,7 +663,7 @@
     <value>MetroButton3</value>
   </data>
   <data name="&gt;&gt;MetroButton3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -687,7 +687,7 @@
     <value>MetroButton4</value>
   </data>
   <data name="&gt;&gt;MetroButton4.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton4.Parent" xml:space="preserve">
     <value>$this</value>
@@ -711,7 +711,7 @@
     <value>MetroButton5</value>
   </data>
   <data name="&gt;&gt;MetroButton5.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton5.Parent" xml:space="preserve">
     <value>$this</value>
@@ -735,7 +735,7 @@
     <value>MetroButton6</value>
   </data>
   <data name="&gt;&gt;MetroButton6.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;MetroButton6.Parent" xml:space="preserve">
     <value>$this</value>
@@ -743,9 +743,9 @@
   <data name="&gt;&gt;MetroButton6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </data>
+  </metadata>
   <data name="AlsStandarddruckerFestlegenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>334, 30</value>
   </data>
@@ -861,7 +861,7 @@
     <value>False</value>
   </data>
   <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 410</value>
+    <value>335, 388</value>
   </data>
   <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
     <value>ContextMenuStrip1</value>
@@ -975,27 +975,27 @@
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="SaveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="SaveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>273, 17</value>
-  </data>
+  </metadata>
   <data name="SaveFileDialog1.Filter" xml:space="preserve">
     <value>Druckereinstellungen (*.dat)|*.dat|Alle Dateien|*.*</value>
   </data>
-  <data name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>410, 17</value>
-  </data>
+  </metadata>
   <data name="OpenFileDialog1.Filter" xml:space="preserve">
     <value>Druckereinstellungen (*.dat)|*.dat|Alle Dateien|*.*</value>
   </data>
-  <data name="SaveFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="SaveFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>552, 17</value>
-  </data>
+  </metadata>
   <data name="SaveFileDialog2.Filter" xml:space="preserve">
     <value>Profildatei|*.prpr</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -1086,6 +1086,18 @@
   <data name="&gt;&gt;DruckereinstellungenImportierenToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ProfildateiErstellenverbindenToolStripMenuItem.Name" xml:space="preserve">
+    <value>ProfildateiErstellenverbindenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ProfildateiErstellenverbindenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Name" xml:space="preserve">
+    <value>ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
     <value>ToolTip1</value>
   </data>
@@ -1104,18 +1116,6 @@
   <data name="&gt;&gt;OpenFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ProfildateiErstellenverbindenToolStripMenuItem.Name" xml:space="preserve">
-    <value>ProfildateiErstellenverbindenToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ProfildateiErstellenverbindenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Name" xml:space="preserve">
-    <value>ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;SaveFileDialog2.Name" xml:space="preserve">
     <value>SaveFileDialog2</value>
   </data>
@@ -1126,24 +1126,6 @@
     <value>PrinterCtl</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroUserControl, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="DriverMultiplePrintersPart1" xml:space="preserve">
-    <value>Folgende Drucker verwenden noch den Treiber </value>
-  </data>
-  <data name="DriverMultiplePrintersRemoveQuestion" xml:space="preserve">
-    <value>Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</value>
-  </data>
-  <data name="ExportPrinterSettings" xml:space="preserve">
-    <value>Druckereinstellungen erfolgreich exportiert.</value>
-  </data>
-  <data name="ImportPrinterSettings" xml:space="preserve">
-    <value>Druckereinstellungen erfolgreich importiert.</value>
-  </data>
-  <data name="RemovePrinterMessagePart1" xml:space="preserve">
-    <value>Möchten Sie wirklich den Drucker</value>
-  </data>
-  <data name="RemovePrinterMessagePart2" xml:space="preserve">
-    <value> entfernen?</value>
+    <value>MetroFramework.Controls.MetroUserControl, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
 </root>
