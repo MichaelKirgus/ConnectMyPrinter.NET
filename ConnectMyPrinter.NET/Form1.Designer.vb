@@ -62,7 +62,7 @@ Partial Class Form1
         Me.LocalPrinterChangeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip2_ = New System.Windows.Forms.ToolTip(Me.components)
         Me.Button5 = New System.Windows.Forms.Button()
         Me.RestartPrinterService = New System.ComponentModel.BackgroundWorker()
         Me.AdditionalInfoRTF = New System.Windows.Forms.RichTextBox()
@@ -90,6 +90,7 @@ Partial Class Form1
         resources.ApplyResources(Me.ComboBox1, "ComboBox1")
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Style = MetroFramework.MetroColorStyle.Black
+        Me.ComboBox1.UseSelectable = True
         '
         'MetroLabel1
         '
@@ -101,17 +102,41 @@ Partial Class Form1
         '
         resources.ApplyResources(Me.MetroButton1, "MetroButton1")
         Me.MetroButton1.Name = "MetroButton1"
-        Me.ToolTip2.SetToolTip(Me.MetroButton1, resources.GetString("MetroButton1.ToolTip"))
+        Me.ToolTip2_.SetToolTip(Me.MetroButton1, resources.GetString("MetroButton1.ToolTip"))
+        Me.MetroButton1.UseSelectable = True
         '
         'MetroTextBox1
         '
+        '
+        '
+        '
+        Me.MetroTextBox1.CustomButton.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        Me.MetroTextBox1.CustomButton.Location = CType(resources.GetObject("resource.Location"), System.Drawing.Point)
+        Me.MetroTextBox1.CustomButton.Name = ""
+        Me.MetroTextBox1.CustomButton.Size = CType(resources.GetObject("resource.Size"), System.Drawing.Size)
+        Me.MetroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.MetroTextBox1.CustomButton.TabIndex = CType(resources.GetObject("resource.TabIndex"), Integer)
+        Me.MetroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroTextBox1.CustomButton.UseSelectable = True
+        Me.MetroTextBox1.CustomButton.Visible = CType(resources.GetObject("resource.Visible"), Boolean)
         Me.MetroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium
+        Me.MetroTextBox1.Lines = New String(-1) {}
         resources.ApplyResources(Me.MetroTextBox1, "MetroTextBox1")
+        Me.MetroTextBox1.MaxLength = 32767
         Me.MetroTextBox1.Name = "MetroTextBox1"
-        Me.MetroTextBox1.WaterMark = "Druckerbezeichnung eingeben..."
+        Me.MetroTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox1.PromptText = "Druckernamen hier suchen..."
+        Me.MetroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.MetroTextBox1.SelectedText = ""
+        Me.MetroTextBox1.SelectionLength = 0
+        Me.MetroTextBox1.SelectionStart = 0
+        Me.MetroTextBox1.ShortcutsEnabled = True
         Me.MetroTextBox1.Style = MetroFramework.MetroColorStyle.Black
-        Me.MetroTextBox1.TabIndex = 0
-        Me.ToolTip2.SetToolTip(Me.MetroTextBox1, resources.GetString("MetroTextBox1.ToolTip"))
+        Me.ToolTip2_.SetToolTip(Me.MetroTextBox1, resources.GetString("MetroTextBox1.ToolTip"))
+        Me.MetroTextBox1.UseSelectable = True
+        Me.MetroTextBox1.WaterMark = "Druckernamen hier suchen..."
+        Me.MetroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.MetroTextBox1.WaterMarkFont = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'MetroLabel2
         '
@@ -122,16 +147,18 @@ Partial Class Form1
         'MetroProgressSpinner1
         '
         resources.ApplyResources(Me.MetroProgressSpinner1, "MetroProgressSpinner1")
-        Me.MetroProgressSpinner1.Maximum = 100
+        Me.MetroProgressSpinner1.Maximum = 75
         Me.MetroProgressSpinner1.Name = "MetroProgressSpinner1"
         Me.MetroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Black
+        Me.MetroProgressSpinner1.UseSelectable = True
         '
         'MetroCheckBox1
         '
         resources.ApplyResources(Me.MetroCheckBox1, "MetroCheckBox1")
         Me.MetroCheckBox1.Name = "MetroCheckBox1"
         Me.MetroCheckBox1.Style = MetroFramework.MetroColorStyle.Black
-        Me.ToolTip2.SetToolTip(Me.MetroCheckBox1, resources.GetString("MetroCheckBox1.ToolTip"))
+        Me.ToolTip2_.SetToolTip(Me.MetroCheckBox1, resources.GetString("MetroCheckBox1.ToolTip"))
+        Me.MetroCheckBox1.UseSelectable = True
         '
         'MetroLabel3
         '
@@ -148,6 +175,7 @@ Partial Class Form1
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 0
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Black
+        Me.MetroTabControl1.UseSelectable = True
         Me.MetroTabControl1.UseStyleColors = True
         '
         'MetroTabPage1
@@ -155,12 +183,14 @@ Partial Class Form1
         Me.MetroTabPage1.BackColor = System.Drawing.Color.White
         Me.MetroTabPage1.Controls.Add(Me.MetroPanel1)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
+        Me.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = False
         Me.MetroTabPage1.HorizontalScrollbarSize = 0
         resources.ApplyResources(Me.MetroTabPage1, "MetroTabPage1")
         Me.MetroTabPage1.Name = "MetroTabPage1"
         Me.MetroTabPage1.Style = MetroFramework.MetroColorStyle.White
         Me.MetroTabPage1.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTabPage1.VerticalScrollbarBarColor = True
+        Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage1.VerticalScrollbarSize = 0
         '
         'MetroPanel1
@@ -182,6 +212,7 @@ Partial Class Form1
         Me.MetroProgressSpinner2.Maximum = 100
         Me.MetroProgressSpinner2.Name = "MetroProgressSpinner2"
         Me.MetroProgressSpinner2.Style = MetroFramework.MetroColorStyle.Black
+        Me.MetroProgressSpinner2.UseSelectable = True
         '
         'FlowLayoutPanel1
         '
@@ -194,10 +225,12 @@ Partial Class Form1
         Me.MetroTabPage2.BackColor = System.Drawing.Color.White
         Me.MetroTabPage2.Controls.Add(Me.MetroPanel2)
         Me.MetroTabPage2.HorizontalScrollbarBarColor = True
+        Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
         Me.MetroTabPage2.HorizontalScrollbarSize = 0
         resources.ApplyResources(Me.MetroTabPage2, "MetroTabPage2")
         Me.MetroTabPage2.Name = "MetroTabPage2"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
+        Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage2.VerticalScrollbarSize = 0
         '
         'MetroPanel2
@@ -226,6 +259,7 @@ Partial Class Form1
         Me.MetroProgressSpinner3.Name = "MetroProgressSpinner3"
         Me.MetroProgressSpinner3.Speed = 2.0!
         Me.MetroProgressSpinner3.Style = MetroFramework.MetroColorStyle.Black
+        Me.MetroProgressSpinner3.UseSelectable = True
         '
         'FlowLayoutPanel2
         '
@@ -290,7 +324,7 @@ Partial Class Form1
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.settings_small
         Me.Button2.Name = "Button2"
-        Me.ToolTip2.SetToolTip(Me.Button2, resources.GetString("Button2.ToolTip"))
+        Me.ToolTip2_.SetToolTip(Me.Button2, resources.GetString("Button2.ToolTip"))
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
@@ -299,7 +333,7 @@ Partial Class Form1
         Me.Button1.ForeColor = System.Drawing.Color.Transparent
         Me.Button1.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.info_small
         Me.Button1.Name = "Button1"
-        Me.ToolTip2.SetToolTip(Me.Button1, resources.GetString("Button1.ToolTip"))
+        Me.ToolTip2_.SetToolTip(Me.Button1, resources.GetString("Button1.ToolTip"))
         Me.Button1.UseVisualStyleBackColor = True
         '
         'PictureBox1
@@ -315,7 +349,7 @@ Partial Class Form1
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.refresh16
         Me.Button3.Name = "Button3"
-        Me.ToolTip2.SetToolTip(Me.Button3, resources.GetString("Button3.ToolTip"))
+        Me.ToolTip2_.SetToolTip(Me.Button3, resources.GetString("Button3.ToolTip"))
         Me.Button3.UseVisualStyleBackColor = True
         '
         'LocalPrinterIdleWorker
@@ -340,7 +374,7 @@ Partial Class Form1
         Me.Button4.ForeColor = System.Drawing.Color.Transparent
         Me.Button4.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.restart_printerq
         Me.Button4.Name = "Button4"
-        Me.ToolTip2.SetToolTip(Me.Button4, resources.GetString("Button4.ToolTip"))
+        Me.ToolTip2_.SetToolTip(Me.Button4, resources.GetString("Button4.ToolTip"))
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
@@ -349,7 +383,7 @@ Partial Class Form1
         Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.Image = Global.ConnectMyPrinter.NET.My.Resources.Resources.Find_VS
         Me.Button5.Name = "Button5"
-        Me.ToolTip2.SetToolTip(Me.Button5, resources.GetString("Button5.ToolTip"))
+        Me.ToolTip2_.SetToolTip(Me.Button5, resources.GetString("Button5.ToolTip"))
         Me.Button5.UseVisualStyleBackColor = True
         '
         'RestartPrinterService
@@ -367,6 +401,7 @@ Partial Class Form1
         'MetroLabel5
         '
         Me.MetroLabel5.BackColor = System.Drawing.SystemColors.Control
+        Me.MetroLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.MetroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular
         resources.ApplyResources(Me.MetroLabel5, "MetroLabel5")
         Me.MetroLabel5.Name = "MetroLabel5"
@@ -376,7 +411,7 @@ Partial Class Form1
         Me.AcceptButton = Me.MetroButton1
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BorderStyle = Forms.MetroFormBorderStyle.FixedSingle
+        Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ContextMenuStrip = Me.ContextMenuStrip1
         Me.Controls.Add(Me.MetroLabel5)
         Me.Controls.Add(Me.Button5)
@@ -399,8 +434,8 @@ Partial Class Form1
         Me.Controls.Add(Me.AdditionalInfoRTF)
         Me.MaximizeBox = False
         Me.Name = "Form1"
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
         Me.Style = MetroFramework.MetroColorStyle.Black
-        Me.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTabControl1.ResumeLayout(False)
         Me.MetroTabPage1.ResumeLayout(False)
         Me.MetroPanel1.ResumeLayout(False)
@@ -443,7 +478,7 @@ Partial Class Form1
     Friend WithEvents LocalPrinterChangeTimer As Timer
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Button4 As Button
-    Friend WithEvents ToolTip2 As ToolTip
+    Friend WithEvents ToolTip2_ As ToolTip
     Friend WithEvents RestartPrinterService As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button5 As Button
     Friend WithEvents AdditionalInfoRTF As RichTextBox

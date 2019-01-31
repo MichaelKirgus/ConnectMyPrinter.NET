@@ -65,7 +65,25 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Folgender Drucker ist auf mehr als einem Printserver angelegt. Name des Druckers:  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Möchten Sie den Drucker  ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property AskUserForPrinterConnectionPart1() As String
+            Get
+                Return ResourceManager.GetString("AskUserForPrinterConnectionPart1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  verbinden? ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property AskUserForPrinterConnectionPart2() As String
+            Get
+                Return ResourceManager.GetString("AskUserForPrinterConnectionPart2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Folgende Drucker verwenden noch den Treiber  ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property DriverMultiplePrintersPart1() As String
             Get
@@ -74,11 +92,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Der Treiber wird von mehreren Druckern verwendet. Möchten Sie alle Drucker, welche diesen Treiber verwenden entfernen? ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen? ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property DriverMultiplePrintersRemoveQuestion() As String
             Get
                 Return ResourceManager.GetString("DriverMultiplePrintersRemoveQuestion", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Es ist ein unbehandelter Fehler in der Anwendung aufgetreten ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ErrorLogStr() As String
+            Get
+                Return ResourceManager.GetString("ErrorLogStr", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Drucker gefunden, bereit zum verbinden. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExactPrinterFoundPrinterSearchText() As String
+            Get
+                Return ResourceManager.GetString("ExactPrinterFoundPrinterSearchText", resourceCulture)
             End Get
         End Property
         
@@ -101,7 +137,70 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  wirklich entfernen? ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Mehrere Ergebnisse. Bitte Suche verfeinern. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MultipleResultsPrinterSearchText() As String
+            Get
+                Return ResourceManager.GetString("MultipleResultsPrinterSearchText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Leider kein Drucker gefunden. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property NoResultsPrinterSearchText() As String
+            Get
+                Return ResourceManager.GetString("NoResultsPrinterSearchText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  Drucker gefunden. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property PrinterCollectCountText() As String
+            Get
+                Return ResourceManager.GetString("PrinterCollectCountText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Drucker geladen, bitte suchen. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property PrinterCollectFinishedText() As String
+            Get
+                Return ResourceManager.GetString("PrinterCollectFinishedText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Drucker nur teilweise geladen (Server nicht erreichbar). ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property PrinterCollectNotFinishedServerNotAv() As String
+            Get
+                Return ResourceManager.GetString("PrinterCollectNotFinishedServerNotAv", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Drucker nur teilweise geladen (Timeout). ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property PrinterCollectNotFinishedTimeout() As String
+            Get
+                Return ResourceManager.GetString("PrinterCollectNotFinishedTimeout", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Bereit ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property PrinterReadyText() As String
+            Get
+                Return ResourceManager.GetString("PrinterReadyText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  entfernen? ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property RemovePrinterMessagePart1() As String
             Get
@@ -110,7 +209,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Möchten Sie den Drucker  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Möchten Sie wirklich den Drucker  ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property RemovePrinterMessagePart2() As String
             Get

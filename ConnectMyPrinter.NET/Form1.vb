@@ -110,7 +110,7 @@ Public Class Form1
             ComboBox1.Style = AppSettings.ComboxBoxStyle
             MetroTabControl1.Style = AppSettings.TabControlStyle
 
-            'Verhindern, dass die Farbe des ausgewählen Elements im ComboBox-Element die gesamte Liste füllt:
+            'Verhindern, dass die Farbe des ausgewählten Elements im ComboBox-Element die gesamte Liste füllt:
             ComboBox1.Refresh()
 
             If AppSettings.AllowUserToConnectToNotCollectedPrinter Then
@@ -278,7 +278,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -291,7 +291,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -304,7 +304,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -323,7 +323,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -339,7 +339,7 @@ Public Class Form1
                 LoadAllLocalPrinters.RunWorkerAsync()
             End If
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -423,7 +423,7 @@ Public Class Form1
 
             Return result
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return New List(Of PrinterQueueInfo)
         End Try
     End Function
@@ -440,7 +440,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -459,7 +459,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -476,7 +476,7 @@ Public Class Form1
 
             Return p2
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return New AppSettingsClass
         End Try
     End Function
@@ -492,7 +492,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -546,7 +546,7 @@ Public Class Form1
 
             Return result
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return New List(Of PrinterQueueInfo)
         End Try
     End Function
@@ -594,17 +594,17 @@ Public Class Form1
 
             Return result
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return New List(Of PrinterQueueInfo)
         End Try
     End Function
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
         Try
             MetroTextBox1.Text = ComboBox1.SelectedItem
-            MetroLabel2.Text = My.Resources.Form1.ExactPrinterFoundPrinterSearchText
+            MetroLabel2.Text = My.Resources.TranslatedStrings.ExactPrinterFoundPrinterSearchText
             MetroButton1.Enabled = True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -668,7 +668,7 @@ Public Class Form1
 
             e.Result = _result
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             e.Result = New List(Of PrinterQueueInfo)
         End Try
     End Sub
@@ -693,7 +693,7 @@ Public Class Form1
             'Anzahl gefundener Drucker anzeigen
             ResetUserStatusInfo()
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -723,7 +723,7 @@ Public Class Form1
                 hh.Start()
             End If
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -793,13 +793,13 @@ Public Class Form1
                     Else
                         ComboBox1.DroppedDown = False
                     End If
-                    MetroLabel2.Text = My.Resources.Form1.MultipleResultsPrinterSearchText
+                    MetroLabel2.Text = My.Resources.TranslatedStrings.MultipleResultsPrinterSearchText
                     'MetroLabel2.Text = "Mehrere Ergebnisse. Bitte Suche verfeinern."
                     PictureBox1.Image = My.Resources.dialog_ok_3
                     MultipleSelectionEnabled = True
                 Else
                     ComboBox1.DroppedDown = False
-                    MetroLabel2.Text = My.Resources.Form1.NoResultsPrinterSearchText
+                    MetroLabel2.Text = My.Resources.TranslatedStrings.NoResultsPrinterSearchText
                     'MetroLabel2.Text = "Leider kein Drucker gefunden."
                     PictureBox1.Image = My.Resources.edit_delete_4
                 End If
@@ -811,7 +811,7 @@ Public Class Form1
 
                 If readytoconnect = True Then
                     ComboBoxSelected = False
-                    MetroLabel2.Text = My.Resources.Form1.ExactPrinterFoundPrinterSearchText
+                    MetroLabel2.Text = My.Resources.TranslatedStrings.ExactPrinterFoundPrinterSearchText
                     'MetroLabel2.Text = "Drucker gefunden, bereit zum verbinden."
                     MetroButton1.Enabled = True
                     MetroTextBox1.Text = ComboBox1.Items(0)
@@ -826,7 +826,7 @@ Public Class Form1
 
 
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -894,7 +894,7 @@ Public Class Form1
                 Dim kk As New ConnectPrinterDlg
                 kk._parent = Me
 
-                kk.MetroLabel2.Text = My.Resources.Form1.AskUserForPrinterConnectionPart1 & vbNewLine & matchprinters(0).Server & "\" & matchprinters(0).ShareName & My.Resources.Form1.AskUserForPrinterConnectionPart2
+                kk.MetroLabel2.Text = My.Resources.TranslatedStrings.AskUserForPrinterConnectionPart1 & vbNewLine & matchprinters(0).Server & "\" & matchprinters(0).ShareName & My.Resources.TranslatedStrings.AskUserForPrinterConnectionPart2
                 If Silent = False Then
                     kk.ShowDialog()
                     qq = kk.DialogResult
@@ -933,7 +933,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -968,7 +968,7 @@ Public Class Form1
 
             Return result
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return New AutoCompleteStringCollection
         End Try
     End Function
@@ -990,32 +990,32 @@ Public Class Form1
         Try
             MetroTextBox1.Text = AppSettings.FixedPrefix
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
     Public Sub ResetUserStatusInfo()
         Try
             If PrinterCollectReturnState = 1 Then
-                MetroLabel2.Text = My.Resources.Form1.PrinterCollectNotFinishedTimeout
+                MetroLabel2.Text = My.Resources.TranslatedStrings.PrinterCollectNotFinishedTimeout
                 PictureBox1.Image = My.Resources.dialog_error
             End If
             If PrinterCollectReturnState = 2 Then
-                MetroLabel2.Text = My.Resources.Form1.PrinterCollectNotFinishedServerNotAv
+                MetroLabel2.Text = My.Resources.TranslatedStrings.PrinterCollectNotFinishedServerNotAv
                 PictureBox1.Image = My.Resources.dialog_error
             End If
             If PrinterCollectReturnState = 0 Then
                 If AppSettings.ShowPrinterCountAfterSearch Then
-                    MetroLabel2.Text = PrintQueuesAutoComplete.Count & My.Resources.Form1.PrinterCollectCountText
+                    MetroLabel2.Text = PrintQueuesAutoComplete.Count & My.Resources.TranslatedStrings.PrinterCollectCountText
                 Else
-                    MetroLabel2.Text = PrintQueuesAutoComplete.Count & My.Resources.Form1.PrinterCollectFinishedText
+                    MetroLabel2.Text = PrintQueuesAutoComplete.Count & My.Resources.TranslatedStrings.PrinterCollectFinishedText
                 End If
 
                 PictureBox1.Image = My.Resources.dialog_ok_3
             End If
 
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -1051,7 +1051,7 @@ Public Class Form1
 
             e.Result = result
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             e.Result = New List(Of PrinterQueueInfo)
         End Try
     End Sub
@@ -1078,7 +1078,7 @@ Public Class Form1
                 ll.DriverVersionLbl.Text = LocalPrinters(index).DriverVersion
 
                 If LocalPrinters(index).State = "None" Then
-                    ll.StateLbl.Text = My.Resources.Form1.PrinterReadyText
+                    ll.StateLbl.Text = My.Resources.TranslatedStrings.PrinterReadyText
                 Else
                     ll.StateLbl.Text = LocalPrinters(index).State
                 End If
@@ -1113,7 +1113,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -1152,7 +1152,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -1174,7 +1174,7 @@ Public Class Form1
             MetroProgressSpinner2.Visible = False
             Button3.Enabled = True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -1212,7 +1212,7 @@ Public Class Form1
             Else
             End If
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -1223,7 +1223,7 @@ Public Class Form1
 
             e.Result = result
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -1239,7 +1239,7 @@ Public Class Form1
 
             LocalPrinterChangeTimer.Start()
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -1288,7 +1288,7 @@ Public Class Form1
                 Application.DoEvents()
             End If
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -1298,7 +1298,7 @@ Public Class Form1
             hh.RestartPrinterService()
             e.Result = e.Argument
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -1309,7 +1309,7 @@ Public Class Form1
             Application.DoEvents()
             tt.Close()
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -1365,7 +1365,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -1384,7 +1384,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -1400,7 +1400,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.Form1.ErrorLogStr, Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function

@@ -2181,8 +2181,9 @@ administrator.</target>
     <body>
       <group id="CONNECTMYPRINTER.NET/FORM1.RESX" datatype="resx">
         <trans-unit id="FlowLayoutPanel1.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>415, 393</source>
-          <target state="final">415, 393</target>
+          <source>415, 390</source>
+          <target state="needs-review-translation">415, 393</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroPanel1.Dock" translate="yes" extype="System.Windows.Forms.DockStyle, System.Windows.Forms" xml:space="preserve">
           <source>Fill</source>
@@ -2205,8 +2206,9 @@ administrator.</target>
           <target state="final">-800, -800</target>
         </trans-unit>
         <trans-unit id="MetroTabPage1.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>421, 399</source>
-          <target state="final">421, 399</target>
+          <source>421, 396</source>
+          <target state="needs-review-translation">421, 399</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage1.TabIndex" translate="yes" extype="System.Int32, mscorlib" xml:space="preserve">
           <source>0</source>
@@ -2313,7 +2315,7 @@ administrator.</target>
           <target state="final">23, 164</target>
         </trans-unit>
         <trans-unit id="MetroTextBox1.TabIndex" translate="yes" extype="System.Int32, mscorlib" xml:space="preserve">
-          <source>1</source>
+          <source>0</source>
           <target state="needs-review-translation">1</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -2322,8 +2324,9 @@ administrator.</target>
           <target state="final">7</target>
         </trans-unit>
         <trans-unit id="FlowLayoutPanel2.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>415, 393</source>
-          <target state="final">415, 393</target>
+          <source>415, 390</source>
+          <target state="needs-review-translation">415, 393</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroLabel2.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
           <source>184, 15</source>
@@ -2354,12 +2357,14 @@ administrator.</target>
           <target state="final">298, 19</target>
         </trans-unit>
         <trans-unit id="MetroTabPage2.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>421, 399</source>
-          <target state="final">421, 399</target>
+          <source>421, 396</source>
+          <target state="needs-review-translation">421, 399</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage1.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>4, 35</source>
-          <target state="final">4, 35</target>
+          <source>4, 38</source>
+          <target state="needs-review-translation">4, 35</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="ComboBox1.TabIndex" translate="yes" extype="System.Int32, mscorlib" xml:space="preserve">
           <source>0</source>
@@ -2426,17 +2431,19 @@ administrator.</target>
           <target state="final">367, 5</target>
         </trans-unit>
         <trans-unit id="MetroPanel1.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>421, 399</source>
-          <target state="final">421, 399</target>
+          <source>421, 396</source>
+          <target state="needs-review-translation">421, 399</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroProgressSpinner3.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>417, 386</source>
+          <source>417, 383</source>
           <target state="needs-review-translation">408, 338</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroTabPage2.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>4, 35</source>
-          <target state="final">4, 35</target>
+          <source>4, 38</source>
+          <target state="needs-review-translation">4, 35</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button4.TabIndex" translate="yes" extype="System.Int32, mscorlib" xml:space="preserve">
           <source>17</source>
@@ -14922,8 +14929,9 @@ administrator.</target>
           <target state="final">8</target>
         </trans-unit>
         <trans-unit id="MetroPanel2.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>421, 399</source>
-          <target state="final">421, 399</target>
+          <source>421, 396</source>
+          <target state="needs-review-translation">421, 399</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button3.ToolTip" translate="yes" xml:space="preserve">
           <source>Ansicht aktualisieren</source>
@@ -14946,8 +14954,9 @@ administrator.</target>
           <target state="final">1</target>
         </trans-unit>
         <trans-unit id="MetroTextBox1.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>304, 29</source>
-          <target state="final">304, 29</target>
+          <source>300, 29</source>
+          <target state="needs-review-translation">304, 29</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroPanel1.TabIndex" translate="yes" extype="System.Int32, mscorlib" xml:space="preserve">
           <source>5</source>
@@ -15149,12 +15158,14 @@ administrator.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroLabel5.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>24, 94</source>
+          <source>23, 93</source>
           <target state="needs-review-translation">24, 94</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroLabel5.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>302, 27</source>
+          <source>305, 29</source>
           <target state="needs-review-translation">302, 27</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroLabel5.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
           <source>21</source>
@@ -15168,37 +15179,75 @@ administrator.</target>
           <source>MiddleCenter</source>
           <target state="needs-review-translation">MiddleCenter</target>
         </trans-unit>
-        <trans-unit id="ToolTip2.TrayLocation" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing" extradata="metadata">
-          <source>17, 17</source>
-          <target state="needs-review-translation">17, 17</target>
+        <trans-unit id="resource.Image" translate="yes" xml:space="preserve" extype="System.Resources.ResXNullRef, System.Windows.Forms">
+          <source></source>
+          <target state="needs-review-translation"></target>
         </trans-unit>
+        <trans-unit id="resource.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>272, 1</source>
+          <target state="needs-review-translation">276, 1</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="resource.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>27, 27</source>
+          <target state="needs-review-translation">27, 27</target>
+        </trans-unit>
+        <trans-unit id="resource.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>1</source>
+          <target state="needs-review-translation">1</target>
+        </trans-unit>
+        <trans-unit id="resource.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTER.NET/DRIVERNOTIFICATIONRTFVIEWERDLG.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1795.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTER.NET/DRIVERNOTIFICATIONRTFVIEWERDLG.RESX" datatype="resx" />
+    </body>
+  </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTER.NET/ADVANCEDPRINTERVIEWDLG.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1795.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTER.NET/ADVANCEDPRINTERVIEWDLG.RESX" datatype="resx" />
+    </body>
+  </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTER.NET/TRANSLATEDSTRINGS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTER.NET/TRANSLATEDSTRINGS.RESX" datatype="resx">
         <trans-unit id="DriverMultiplePrintersPart1" translate="yes" xml:space="preserve">
           <source>Folgende Drucker verwenden noch den Treiber </source>
-          <target state="translated">The following printers using the driver </target>
+          <target state="new">Folgende Drucker verwenden noch den Treiber </target>
         </trans-unit>
         <trans-unit id="DriverMultiplePrintersRemoveQuestion" translate="yes" xml:space="preserve">
           <source>Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</source>
-          <target state="translated">The driver can not removed, without removing all dependent printers. Would you like to remove all dependent printers?</target>
+          <target state="new">Der Treiber kann nicht entfernt werden, ohne alle von dem Treiber abhängigen Drucker zu löschen. Möchten Sie alle abhängigen Drucker löschen?</target>
         </trans-unit>
         <trans-unit id="ExportPrinterSettings" translate="yes" xml:space="preserve">
-          <source>Druckereinstellungen erfolgreich exportiert.</source>
-          <target state="translated">Export successful.</target>
+          <source>Die Druckereinstellungen wurden erfolgreich exportiert.</source>
+          <target state="new">Die Druckereinstellungen wurden erfolgreich exportiert.</target>
         </trans-unit>
         <trans-unit id="ImportPrinterSettings" translate="yes" xml:space="preserve">
-          <source>Druckereinstellungen erfolgreich importiert.</source>
-          <target state="translated">Export successful.</target>
+          <source>Die Druckereinstellungen wurden erfolgreich importiert.</source>
+          <target state="new">Die Druckereinstellungen wurden erfolgreich importiert.</target>
         </trans-unit>
         <trans-unit id="RemovePrinterMessagePart1" translate="yes" xml:space="preserve">
-          <source>Möchten Sie wirklich den Drucker </source>
-          <target state="translated">Dou you like to remove the printer </target>
+          <source> entfernen?</source>
+          <target state="new"> entfernen?</target>
         </trans-unit>
         <trans-unit id="RemovePrinterMessagePart2" translate="yes" xml:space="preserve">
-          <source> entfernen?</source>
-          <target state="translated"></target>
-        </trans-unit>
-        <trans-unit id="ErrorLogStr" translate="yes" xml:space="preserve">
-          <source>Fehler</source>
-          <target state="new">Fehler</target>
+          <source>Möchten Sie wirklich den Drucker </source>
+          <target state="new">Möchten Sie wirklich den Drucker </target>
         </trans-unit>
         <trans-unit id="AskUserForPrinterConnectionPart1" translate="yes" xml:space="preserve">
           <source>Möchten Sie den Drucker </source>
@@ -15207,6 +15256,10 @@ administrator.</target>
         <trans-unit id="AskUserForPrinterConnectionPart2" translate="yes" xml:space="preserve">
           <source> verbinden?</source>
           <target state="new"> verbinden?</target>
+        </trans-unit>
+        <trans-unit id="ErrorLogStr" translate="yes" xml:space="preserve">
+          <source>Es ist ein unbehandelter Fehler in der Anwendung aufgetreten</source>
+          <target state="new">Es ist ein unbehandelter Fehler in der Anwendung aufgetreten</target>
         </trans-unit>
         <trans-unit id="ExactPrinterFoundPrinterSearchText" translate="yes" xml:space="preserve">
           <source>Drucker gefunden, bereit zum verbinden.</source>
@@ -15239,55 +15292,6 @@ administrator.</target>
         <trans-unit id="PrinterReadyText" translate="yes" xml:space="preserve">
           <source>Bereit</source>
           <target state="new">Bereit</target>
-        </trans-unit>
-      </group>
-    </body>
-  </file>
-  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTER.NET/DRIVERNOTIFICATIONRTFVIEWERDLG.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
-    <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1795.0" tool-company="Microsoft" />
-    </header>
-    <body>
-      <group id="CONNECTMYPRINTER.NET/DRIVERNOTIFICATIONRTFVIEWERDLG.RESX" datatype="resx" />
-    </body>
-  </file>
-  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTER.NET/ADVANCEDPRINTERVIEWDLG.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
-    <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1795.0" tool-company="Microsoft" />
-    </header>
-    <body>
-      <group id="CONNECTMYPRINTER.NET/ADVANCEDPRINTERVIEWDLG.RESX" datatype="resx" />
-    </body>
-  </file>
-  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTER.NET/TRANSLATEDSTRINGS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
-    <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
-    </header>
-    <body>
-      <group id="CONNECTMYPRINTER.NET/TRANSLATEDSTRINGS.RESX" datatype="resx">
-        <trans-unit id="DriverMultiplePrintersPart1" translate="yes" xml:space="preserve">
-          <source>Folgender Drucker ist auf mehr als einem Printserver angelegt. Name des Druckers: </source>
-          <target state="new">Folgender Drucker ist auf mehr als einem Printserver angelegt. Name des Druckers: </target>
-        </trans-unit>
-        <trans-unit id="DriverMultiplePrintersRemoveQuestion" translate="yes" xml:space="preserve">
-          <source>Der Treiber wird von mehreren Druckern verwendet. Möchten Sie alle Drucker, welche diesen Treiber verwenden entfernen?</source>
-          <target state="new">Der Treiber wird von mehreren Druckern verwendet. Möchten Sie alle Drucker, welche diesen Treiber verwenden entfernen?</target>
-        </trans-unit>
-        <trans-unit id="ExportPrinterSettings" translate="yes" xml:space="preserve">
-          <source>Die Druckereinstellungen wurden erfolgreich exportiert.</source>
-          <target state="new">Die Druckereinstellungen wurden erfolgreich exportiert.</target>
-        </trans-unit>
-        <trans-unit id="ImportPrinterSettings" translate="yes" xml:space="preserve">
-          <source>Die Druckereinstellungen wurden erfolgreich importiert.</source>
-          <target state="new">Die Druckereinstellungen wurden erfolgreich importiert.</target>
-        </trans-unit>
-        <trans-unit id="RemovePrinterMessagePart1" translate="yes" xml:space="preserve">
-          <source> wirklich entfernen?</source>
-          <target state="new"> wirklich entfernen?</target>
-        </trans-unit>
-        <trans-unit id="RemovePrinterMessagePart2" translate="yes" xml:space="preserve">
-          <source>Möchten Sie den Drucker </source>
-          <target state="new">Möchten Sie den Drucker </target>
         </trans-unit>
       </group>
     </body>

@@ -6661,25 +6661,19 @@
   <data name="MetroLabel5.TextAlign" xml:space="preserve" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="ToolTip2.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
-    <value>17, 17</value>
-  </data>
-  <data name="DriverMultiplePrintersPart1" xml:space="preserve">
-    <value>The following printers using the driver </value>
-  </data>
-  <data name="DriverMultiplePrintersRemoveQuestion" xml:space="preserve">
-    <value>The driver can not removed, without removing all dependent printers. Would you like to remove all dependent printers?</value>
-  </data>
-  <data name="ExportPrinterSettings" xml:space="preserve">
-    <value>Export successful.</value>
-  </data>
-  <data name="ImportPrinterSettings" xml:space="preserve">
-    <value>Export successful.</value>
-  </data>
-  <data name="RemovePrinterMessagePart1" xml:space="preserve">
-    <value>Dou you like to remove the printer </value>
-  </data>
-  <data name="RemovePrinterMessagePart2" xml:space="preserve">
+  <data name="resource.Image" xml:space="preserve" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value></value>
+  </data>
+  <data name="resource.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>276, 1</value>
+  </data>
+  <data name="resource.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <data name="resource.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
 </root>

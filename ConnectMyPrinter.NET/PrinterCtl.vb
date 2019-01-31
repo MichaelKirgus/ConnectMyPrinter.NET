@@ -191,7 +191,7 @@ Public Class PrinterCtl
                 jj.Close()
             End If
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -277,7 +277,7 @@ Public Class PrinterCtl
 
             Return ll
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return New List(Of PrinterQueueInfo)
         End Try
     End Function
@@ -391,7 +391,7 @@ Public Class PrinterCtl
 
             Return True
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.TranslatedStrings.ErrorLogStr, Err)
             Return False
         End Try
     End Function
@@ -420,7 +420,7 @@ Public Class PrinterCtl
 
             _parent.ReloadLocalPrinters()
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -506,7 +506,7 @@ Public Class PrinterCtl
                 MsgBox(My.Resources.TranslatedStrings.ExportPrinterSettings)
             End If
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
@@ -521,7 +521,7 @@ Public Class PrinterCtl
                 MsgBox(My.Resources.TranslatedStrings.ImportPrinterSettings)
             End If
         Catch ex As Exception
-            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.Form1.ErrorLogStr, Err)
+            _parent._Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me.ParentForm, My.Resources.TranslatedStrings.ErrorLogStr, Err)
         End Try
     End Sub
 
