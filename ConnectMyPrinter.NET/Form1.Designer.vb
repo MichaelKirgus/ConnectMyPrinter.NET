@@ -132,7 +132,6 @@ Partial Class Form1
         Me.MetroCheckBox1.Name = "MetroCheckBox1"
         Me.MetroCheckBox1.Style = MetroFramework.MetroColorStyle.Black
         Me.ToolTip2.SetToolTip(Me.MetroCheckBox1, resources.GetString("MetroCheckBox1.ToolTip"))
-        Me.MetroCheckBox1.UseVisualStyleBackColor = True
         '
         'MetroLabel3
         '
