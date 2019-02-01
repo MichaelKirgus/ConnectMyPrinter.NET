@@ -15391,12 +15391,12 @@ administrator.</target>
           <target state="new">Bereit</target>
         </trans-unit>
         <trans-unit id="RemovePrinterMessagePart1" translate="yes" xml:space="preserve">
-          <source> entfernen?</source>
-          <target state="new"> entfernen?</target>
-        </trans-unit>
-        <trans-unit id="RemovePrinterMessagePart2" translate="yes" xml:space="preserve">
           <source>Möchten Sie wirklich den Drucker </source>
           <target state="new">Möchten Sie wirklich den Drucker </target>
+        </trans-unit>
+        <trans-unit id="RemovePrinterMessagePart2" translate="yes" xml:space="preserve">
+          <source> entfernen?</source>
+          <target state="new"> entfernen?</target>
         </trans-unit>
       </group>
     </body>

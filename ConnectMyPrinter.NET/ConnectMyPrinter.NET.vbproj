@@ -465,6 +465,10 @@
       <Project>{4a9e510c-5c2d-4cdc-8ef5-19dd9bce9ef2}</Project>
       <Name>ConnectMyPrinterForceDeleteLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterLanguageHelper\ConnectMyPrinterLanguageHelper.vbproj">
+      <Project>{24d22097-0588-43aa-93e8-d9408234b53f}</Project>
+      <Name>ConnectMyPrinterLanguageHelper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterLog\ConnectMyPrinterLog.vbproj">
       <Project>{28d57efe-e78a-4c8c-9d8c-45914e20d368}</Project>
       <Name>ConnectMyPrinterLog</Name>

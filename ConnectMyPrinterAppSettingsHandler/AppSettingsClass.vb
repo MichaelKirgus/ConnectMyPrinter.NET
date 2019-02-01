@@ -97,6 +97,9 @@ Imports ConnectMyPrinterEnumerationLib
     Property ShowOpenPrinterWebsiteEntryInTrayApp As Boolean = False
     Property ShowRestartPrinterServiceEntryInTrayApp As Boolean = False
     Property ShowBackupPrinterEnvironmentEntryInTrayApp As Boolean = False
+    Property ShowTrayAppAfterInstall As Boolean = True
+    Property UseTracePathFeature As Boolean = False
+    Property ActionsTracePath As String = "%TEMP%\PrinterActions"
 
     Public Enum DoubleClickActionOnPrinterItemAction
         DoNothing = 0

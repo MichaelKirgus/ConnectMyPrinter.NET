@@ -200,7 +200,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  entfernen? ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Möchten Sie wirklich den Drucker  ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property RemovePrinterMessagePart1() As String
             Get
@@ -209,7 +209,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Möchten Sie wirklich den Drucker  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die  entfernen? ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property RemovePrinterMessagePart2() As String
             Get
