@@ -63,4 +63,10 @@
   <data name="RemovePrinterMessagePart2" xml:space="preserve">
     <value> ?</value>
   </data>
+  <data name="LocalPrintServerStr" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="TextBoxWatermarkStr" xml:space="preserve">
+    <value>Search printer here...</value>
+  </data>
 </root>

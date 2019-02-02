@@ -6502,9 +6502,6 @@
   <data name="$this.ClientSize" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>491, 502</value>
   </data>
-  <data name="$this.MinimumSize" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
-    <value>507, 541</value>
-  </data>
   <data name="$this.StartPosition" xml:space="preserve" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
@@ -6534,5 +6531,20 @@
   </data>
   <data name="SplitContainer1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>7</value>
+  </data>
+  <data name="ToolStripSeparator1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>6, 31</value>
+  </data>
+  <data name="ToolStripButton3.ImageTransparentColor" xml:space="preserve" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ToolStripButton3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>23, 28</value>
+  </data>
+  <data name="SplitContainer1.IsSplitterFixed" xml:space="preserve" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SplitContainer1.SplitterWidth" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
 </root>

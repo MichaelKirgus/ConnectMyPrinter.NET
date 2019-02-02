@@ -83,6 +83,10 @@
           <source>..\Resources\prprico.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
           <target state="needs-review-translation">..\Resources\prprico.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
         </trans-unit>
+        <trans-unit id="plus_bw" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\plus_bw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\plus_bw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -12500,7 +12504,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="PropertyGrid1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>491, 269</source>
+          <source>491, 246</source>
           <target state="needs-review-translation">491, 275</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12527,7 +12531,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="TabControl1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>491, 198</source>
+          <source>491, 180</source>
           <target state="needs-review-translation">491, 194</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12544,7 +12548,7 @@
           <target state="needs-review-translation">3, 3, 3, 3</target>
         </trans-unit>
         <trans-unit id="TabPage1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>483, 172</source>
+          <source>483, 154</source>
           <target state="needs-review-translation">483, 168</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12557,12 +12561,14 @@
           <target state="translated">Generate profile local</target>
         </trans-unit>
         <trans-unit id="Button4.Anchor" translate="yes" xml:space="preserve" extype="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-          <source>Top, Right</source>
+          <source>Bottom, Right</source>
           <target state="needs-review-translation">Top, Right</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button4.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>327, 131</source>
+          <source>327, 117</source>
           <target state="needs-review-translation">327, 131</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button4.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>146, 27</source>
@@ -12577,12 +12583,14 @@
           <target state="translated">Build and send...</target>
         </trans-unit>
         <trans-unit id="Button2.Anchor" translate="yes" xml:space="preserve" extype="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-          <source>Top, Right</source>
+          <source>Bottom, Right</source>
           <target state="needs-review-translation">Top, Right</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button2.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>89, 131</source>
+          <source>89, 117</source>
           <target state="needs-review-translation">89, 131</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button2.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>93, 27</source>
@@ -12597,12 +12605,14 @@
           <target state="translated">Build</target>
         </trans-unit>
         <trans-unit id="Button1.Anchor" translate="yes" xml:space="preserve" extype="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-          <source>Top, Right</source>
+          <source>Bottom, Right</source>
           <target state="needs-review-translation">Top, Right</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button1.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>188, 131</source>
+          <source>188, 117</source>
           <target state="needs-review-translation">188, 131</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>133, 27</source>
@@ -12717,7 +12727,7 @@
           <target state="needs-review-translation">3, 3, 3, 3</target>
         </trans-unit>
         <trans-unit id="TabPage2.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>483, 172</source>
+          <source>483, 404</source>
           <target state="needs-review-translation">483, 168</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12730,12 +12740,14 @@
           <target state="translated">Apply profile on client</target>
         </trans-unit>
         <trans-unit id="Button3.Anchor" translate="yes" xml:space="preserve" extype="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-          <source>Top, Right</source>
+          <source>Bottom, Right</source>
           <target state="needs-review-translation">Top, Right</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button3.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>340, 131</source>
+          <source>340, 368</source>
           <target state="needs-review-translation">340, 131</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button3.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>133, 27</source>
@@ -12870,12 +12882,9 @@
           <target state="needs-review-translation">6, 13</target>
         </trans-unit>
         <trans-unit id="$this.ClientSize" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>491, 502</source>
+          <source>491, 211</source>
           <target state="needs-review-translation">491, 502</target>
-        </trans-unit>
-        <trans-unit id="$this.MinimumSize" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>507, 541</source>
-          <target state="needs-review-translation">507, 541</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="$this.StartPosition" translate="yes" xml:space="preserve" extype="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
           <source>CenterScreen</source>
@@ -12906,16 +12915,38 @@
           <target state="needs-review-translation">Horizontal</target>
         </trans-unit>
         <trans-unit id="SplitContainer1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>491, 471</source>
+          <source>491, 180</source>
           <target state="needs-review-translation">491, 471</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="SplitContainer1.SplitterDistance" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
-          <source>198</source>
+          <source>180</source>
           <target state="needs-review-translation">198</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="SplitContainer1.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
           <source>7</source>
           <target state="needs-review-translation">7</target>
+        </trans-unit>
+        <trans-unit id="ToolStripSeparator1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>6, 31</source>
+          <target state="needs-review-translation">6, 31</target>
+        </trans-unit>
+        <trans-unit id="ToolStripButton3.ImageTransparentColor" translate="yes" xml:space="preserve" extype="System.Drawing.Color, System.Drawing">
+          <source>Magenta</source>
+          <target state="needs-review-translation">Magenta</target>
+        </trans-unit>
+        <trans-unit id="ToolStripButton3.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>23, 28</source>
+          <target state="needs-review-translation">23, 28</target>
+        </trans-unit>
+        <trans-unit id="SplitContainer1.IsSplitterFixed" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>True</source>
+          <target state="needs-review-translation">True</target>
+        </trans-unit>
+        <trans-unit id="SplitContainer1.SplitterWidth" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>2</source>
+          <target state="needs-review-translation">2</target>
         </trans-unit>
       </group>
     </body>

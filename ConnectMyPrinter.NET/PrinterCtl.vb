@@ -431,7 +431,7 @@ Public Class PrinterCtl
     Private Sub MetroButton6_Click(sender As Object, e As EventArgs) Handles MetroButton6.Click
         Dim jj As New ProcessingDlg
         jj._parent = _parent
-        jj.Show()
+        jj.Show(Me.ParentForm)
         Application.DoEvents()
         _parent.PrinterManageService.RetrievePrinterInformation(Me.Tag)
         jj.Close()
@@ -440,7 +440,7 @@ Public Class PrinterCtl
     Private Sub AlsStandarddruckerFestlegenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlsStandarddruckerFestlegenToolStripMenuItem.Click
         Dim jj As New ProcessingDlg
         jj._parent = _parent
-        jj.Show()
+        jj.Show(Me.ParentForm)
         Application.DoEvents()
         _parent.PrinterManageService.SetDefaultPrinter(Me.Tag)
         jj.Close()
