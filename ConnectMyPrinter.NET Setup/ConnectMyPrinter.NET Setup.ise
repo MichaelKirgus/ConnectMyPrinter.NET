@@ -1128,6 +1128,8 @@
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
 		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
+		<row><td>KillOldTrayApp</td><td>1058</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
+		<row><td>KillTrayApp</td><td>34</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
 		<row><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>1</td><td>NewBinary20</td><td>LaunchProgram</td><td/><td/></row>
 		<row><td>RemoveLocalUnusedDriverPackets</td><td>3154</td><td>connectmyprinterclean.prim_r1</td><td/><td/><td/></row>
 		<row><td>RemoveUnusedDriverPackets</td><td>1106</td><td>connectmyprinterclean.prim_r1</td><td/><td/><td/></row>
@@ -1203,7 +1205,6 @@
 		<row><td>CommonFilesFolder</td><td>TARGETDIR</td><td>.:Common</td><td/><td>0</td><td/></row>
 		<row><td>DATABASEDIR</td><td>ISYourDataBaseDir</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DE_DE</td><td>INSTALLDIR</td><td>de-DE</td><td/><td>0</td><td/></row>
-		<row><td>DIRPROPERTY1</td><td>TARGETDIR</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DesktopFolder</td><td>TARGETDIR</td><td>.:Desktop</td><td/><td>3</td><td/></row>
 		<row><td>EN_US</td><td>INSTALLDIR</td><td>en-US</td><td/><td>0</td><td/></row>
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
@@ -1220,6 +1221,7 @@
 		<row><td>MY_PRODUCT_NAME</td><td>MICHAEL_KIRGUS</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY1</td><td>TARGETDIR</td><td>NEW_DIRECTORY1</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY10</td><td>TARGETDIR</td><td>NEW_DIRECTORY10</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY2</td><td>TARGETDIR</td><td>NEW_DIRECTORY2</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY3</td><td>TARGETDIR</td><td>NEW_DIRECTORY3</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY4</td><td>TARGETDIR</td><td>NEW_DIRECTORY4</td><td/><td>0</td><td/></row>
@@ -1227,6 +1229,7 @@
 		<row><td>NEW_DIRECTORY6</td><td>TARGETDIR</td><td>NEW_DIRECTORY6</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY7</td><td>TARGETDIR</td><td>NEW_DIRECTORY7</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY8</td><td>TARGETDIR</td><td>NEW_DIRECTORY8</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY9</td><td>TARGETDIR</td><td>NEW_DIRECTORY9</td><td/><td>0</td><td/></row>
 		<row><td>NetHoodFolder</td><td>TARGETDIR</td><td>.:NetHood</td><td/><td>0</td><td/></row>
 		<row><td>PersonalFolder</td><td>TARGETDIR</td><td>.:Personal</td><td/><td>0</td><td/></row>
 		<row><td>PrimaryVolumePath</td><td>TARGETDIR</td><td>.:Primar~1|PrimaryVolumePath</td><td/><td>0</td><td/></row>
@@ -5885,6 +5888,8 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>InstallServices</td><td>VersionNT</td><td>5800</td><td>InstallServices</td><td/></row>
 		<row><td>InstallValidate</td><td/><td>1400</td><td>InstallValidate</td><td/></row>
 		<row><td>IsolateComponents</td><td/><td>950</td><td>IsolateComponents</td><td/></row>
+		<row><td>KillOldTrayApp</td><td>Not Installed</td><td>6402</td><td/><td/></row>
+		<row><td>KillTrayApp</td><td>REMOVE="ALL"</td><td>1455</td><td/><td/></row>
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
 		<row><td>MigrateFeatureStates</td><td/><td>1010</td><td>MigrateFeatureStates</td><td/></row>
 		<row><td>MoveFiles</td><td/><td>3800</td><td>MoveFiles</td><td/></row>
