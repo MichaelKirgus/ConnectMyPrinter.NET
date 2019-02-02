@@ -53,7 +53,7 @@
   </data>
   <data name="MetroLabel2.Text" xml:space="preserve">
     <value>Copyright 2016-2017 Michael Kirgus
-tool to easily manage printers on Windows.</value>
+Tool to easily manage printers on Windows.</value>
   </data>
   <data name="MetroLabel3.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>True</value>

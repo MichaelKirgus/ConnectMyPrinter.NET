@@ -12,4 +12,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AskUserForPrinterConnectionPart1" xml:space="preserve">
+    <value>Do you want to connect to the printer </value>
+  </data>
+  <data name="AskUserForPrinterConnectionPart2" xml:space="preserve">
+    <value> ?</value>
+  </data>
+  <data name="DriverMultiplePrintersPart1" xml:space="preserve">
+    <value>The following printer uses the printer driver </value>
+  </data>
+  <data name="DriverMultiplePrintersRemoveQuestion" xml:space="preserve">
+    <value>The driver cannot removed until all dependent printers are removed. Do you want to delete all dependent printers?</value>
+  </data>
+  <data name="ErrorLogStr" xml:space="preserve">
+    <value>An error was raised.</value>
+  </data>
+  <data name="ExactPrinterFoundPrinterSearchText" xml:space="preserve">
+    <value>Printer found, ready to connect.</value>
+  </data>
+  <data name="ExportPrinterSettings" xml:space="preserve">
+    <value>Printer settings successfull saved.</value>
+  </data>
+  <data name="ImportPrinterSettings" xml:space="preserve">
+    <value>Printer settings successfull loaded.</value>
+  </data>
+  <data name="MultipleResultsPrinterSearchText" xml:space="preserve">
+    <value>Multiple results, please refine you search.</value>
+  </data>
+  <data name="NoResultsPrinterSearchText" xml:space="preserve">
+    <value>No printers found.</value>
+  </data>
+  <data name="PrinterCollectCountText" xml:space="preserve">
+    <value>Printer found.</value>
+  </data>
+  <data name="PrinterCollectFinishedText" xml:space="preserve">
+    <value>Printers collected. Please search.</value>
+  </data>
+  <data name="PrinterCollectNotFinishedServerNotAv" xml:space="preserve">
+    <value>Printers partially collected (Server not available).</value>
+  </data>
+  <data name="PrinterCollectNotFinishedTimeout" xml:space="preserve">
+    <value>Printers partially collected (Server timeout).</value>
+  </data>
+  <data name="PrinterReadyText" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="RemovePrinterMessagePart1" xml:space="preserve">
+    <value>Do you really want to remove the printer </value>
+  </data>
+  <data name="RemovePrinterMessagePart2" xml:space="preserve">
+    <value> ?</value>
+  </data>
 </root>

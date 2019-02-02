@@ -194,7 +194,7 @@ administrator.</value>
     <value>1</value>
   </data>
   <data name="MetroTabPage2.Text" xml:space="preserve">
-    <value>Expanded</value>
+    <value>Advanced</value>
   </data>
   <data name="MetroTabControl1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
     <value>23, 63</value>

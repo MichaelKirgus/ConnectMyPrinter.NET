@@ -79,8 +79,8 @@ Public Class Form1
         End If
 
         Dim qq As New RemoteFilePrinterConnectItem
-        qq.PrinterName = TextBox1.Text
-        qq.Printserver = TextBox2.Text
+        qq.PrinterName = TextBox2.Text
+        qq.Printserver = TextBox1.Text
         qq.SetDefaultPrinter = CheckBox1.Checked
 
         RemoteFile.ConnectPrinters.Add(qq)
@@ -181,6 +181,16 @@ Public Class Form1
             TextBox4.Enabled = False
         Else
             TextBox4.Enabled = True
+        End If
+    End Sub
+
+    Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
+        If ToolStripButton3.Checked Then
+            SplitContainer1.Panel2Collapsed = False
+            Me.Height = 520
+        Else
+            SplitContainer1.Panel2Collapsed = True
+            Me.Height = 250
         End If
     End Sub
 End Class

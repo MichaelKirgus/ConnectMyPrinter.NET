@@ -6226,9 +6226,6 @@
   <data name="ToolStripButton2.Text" xml:space="preserve">
     <value>Save printer profile...</value>
   </data>
-  <data name="PropertyGrid1.Anchor" xml:space="preserve" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="PropertyGrid1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
     <value>0, 227</value>
   </data>
@@ -6517,4 +6514,25 @@
   <metadata name="$this.Localizable" xml:space="preserve" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="PropertyGrid1.Dock" xml:space="preserve" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="SplitContainer1.Dock" xml:space="preserve" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="SplitContainer1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SplitContainer1.Orientation" xml:space="preserve" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="SplitContainer1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>491, 471</value>
+  </data>
+  <data name="SplitContainer1.SplitterDistance" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>198</value>
+  </data>
+  <data name="SplitContainer1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
 </root>

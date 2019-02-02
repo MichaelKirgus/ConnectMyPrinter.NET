@@ -12,4 +12,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BackupPrintingEnv" xml:space="preserve">
+    <value>Save print environment...</value>
+  </data>
+  <data name="DefaultSettingsEntry" xml:space="preserve">
+    <value>Printer default settings...</value>
+  </data>
+  <data name="DisconnectPrinterEntry" xml:space="preserve">
+    <value>Disconnect printer...</value>
+  </data>
+  <data name="ExitEntry" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="LaunchAppEntry" xml:space="preserve">
+    <value>Manage printers...</value>
+  </data>
+  <data name="OpenDeviceWebsiteEntry" xml:space="preserve">
+    <value>Open device website...</value>
+  </data>
+  <data name="RefreshView" xml:space="preserve">
+    <value>Refresh view</value>
+  </data>
+  <data name="RemoveLocalPrinterEntry" xml:space="preserve">
+    <value>Delete printer</value>
+  </data>
+  <data name="RestartPrinterQ" xml:space="preserve">
+    <value>Restart print spooler</value>
+  </data>
+  <data name="TrayIconText" xml:space="preserve">
+    <value>ConnectMyPrinter.NET - Printers</value>
+  </data>
 </root>

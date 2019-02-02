@@ -141,6 +141,9 @@
   <data name="ImportPrinterSettings" xml:space="preserve">
     <value>Die Druckereinstellungen wurden erfolgreich importiert.</value>
   </data>
+  <data name="LocalPrintServerStr" xml:space="preserve">
+    <value>Lokal</value>
+  </data>
   <data name="MultipleResultsPrinterSearchText" xml:space="preserve">
     <value>Mehrere Ergebnisse. Bitte Suche verfeinern.</value>
   </data>
@@ -167,5 +170,8 @@
   </data>
   <data name="RemovePrinterMessagePart2" xml:space="preserve">
     <value> entfernen?</value>
+  </data>
+  <data name="TextBoxWatermarkStr" xml:space="preserve">
+    <value>Druckernamen hier suchen...</value>
   </data>
 </root>

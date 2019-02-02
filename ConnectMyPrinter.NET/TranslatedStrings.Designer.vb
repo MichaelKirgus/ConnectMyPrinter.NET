@@ -137,6 +137,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Lokal ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property LocalPrintServerStr() As String
+            Get
+                Return ResourceManager.GetString("LocalPrintServerStr", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Mehrere Ergebnisse. Bitte Suche verfeinern. ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property MultipleResultsPrinterSearchText() As String
@@ -214,6 +223,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property RemovePrinterMessagePart2() As String
             Get
                 Return ResourceManager.GetString("RemovePrinterMessagePart2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Druckernamen hier suchen... ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property TextBoxWatermarkStr() As String
+            Get
+                Return ResourceManager.GetString("TextBoxWatermarkStr", resourceCulture)
             End Get
         End Property
     End Class

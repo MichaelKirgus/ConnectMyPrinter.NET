@@ -346,13 +346,13 @@
     <value>37</value>
   </data>
   <data name="MetroButton6.Text" xml:space="preserve">
-    <value>Redetermine printer information</value>
+    <value>Rebuild printer information</value>
   </data>
   <data name="AlsStandarddruckerFestlegenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>268, 30</value>
   </data>
   <data name="AlsStandarddruckerFestlegenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Set as Default Printer</value>
+    <value>Set as default printer</value>
   </data>
   <data name="ToolStripSeparator1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>265, 6</value>
@@ -418,7 +418,7 @@
     <value>12</value>
   </data>
   <data name="Button1.ToolTip" xml:space="preserve">
-    <value>Remove Printer</value>
+    <value>Remove printer</value>
   </data>
   <data name="Button2.FlatStyle" xml:space="preserve" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -496,7 +496,7 @@
     <value>268, 30</value>
   </data>
   <data name="DruckereigenschaftenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Printer Properties</value>
+    <value>Printer properties</value>
   </data>
   <data name="DruckereigenschaftenToolStripMenuItem.Visible" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -555,11 +555,17 @@
   <data name="ProfildateiVersendenverbindenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>344, 30</value>
   </data>
+  <data name="ProfildateiVersendenverbindenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Send printer profile (connect)...</value>
+  </data>
   <data name="ProfildateiVersendenverbindenToolStripMenuItem.Visible" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>344, 30</value>
+  </data>
+  <data name="ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Send printer profile (remove and connect)...</value>
   </data>
   <data name="ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Visible" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>False</value>

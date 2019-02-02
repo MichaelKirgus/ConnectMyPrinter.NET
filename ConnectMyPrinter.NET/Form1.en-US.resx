@@ -172,7 +172,7 @@
     <value>23, 124</value>
   </data>
   <data name="MetroLabel4.Text" xml:space="preserve">
-    <value>You have saved any printer.</value>
+    <value>You have not saved any printer.</value>
   </data>
   <data name="Button3.FlatStyle" xml:space="preserve" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -232,7 +232,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="MetroCheckBox1.Text" xml:space="preserve">
-    <value>default printer</value>
+    <value>Default printer</value>
   </data>
   <data name="PictureBox3.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>16</value>
@@ -6524,7 +6524,7 @@
     <value>423, 173</value>
   </data>
   <data name="MetroButton1.ToolTip" xml:space="preserve">
-    <value>Connecting a printer.</value>
+    <value>Connect a printer.</value>
   </data>
   <data name="MetroButton1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
     <value>334, 93</value>
@@ -6617,31 +6617,31 @@
     <value>311, 22</value>
   </data>
   <data name="DruckertreiberTreiberpaketEntfernenAdminToolStripMenuItem.Text" xml:space="preserve">
-    <value>Remove printer/driver/driverpack (Admin)...</value>
+    <value>Remove printer/driver/driverpack (admin)...</value>
   </data>
   <data name="WindowsDruckverwaltungÖffnenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
   </data>
   <data name="WindowsDruckverwaltungÖffnenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open Windows Printer Management...</value>
+    <value>Open windows printer management...</value>
   </data>
   <data name="WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
   </data>
   <data name="WindowsDruckverwaltungÖffnenAdminToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open Windows Printer Management (Admin)...</value>
+    <value>Open windows printer management (admin)...</value>
   </data>
   <data name="AnwendungseinstellungenBearbeitenToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
   </data>
   <data name="AnwendungseinstellungenBearbeitenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Edit Application Settings</value>
+    <value>Edit application settings</value>
   </data>
   <data name="AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>311, 22</value>
   </data>
   <data name="AnwendungseinstellungenBearbeitenAdminToolStripMenuItem.Text" xml:space="preserve">
-    <value>Edit Application Settings (Admin)...</value>
+    <value>Edit application settings (admin)...</value>
   </data>
   <data name="ContextMenuStrip1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>312, 158</value>

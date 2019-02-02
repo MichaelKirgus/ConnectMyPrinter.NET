@@ -100,7 +100,7 @@
     <value>5</value>
   </data>
   <data name="MetroCheckBox5.Text" xml:space="preserve">
-    <value>Remove Printer</value>
+    <value>Remove printer</value>
   </data>
   <data name="MetroCheckBox6.AutoSize" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>True</value>

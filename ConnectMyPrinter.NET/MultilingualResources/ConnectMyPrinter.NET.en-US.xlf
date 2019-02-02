@@ -15455,6 +15455,14 @@ administrator.</target>
           <source> entfernen?</source>
           <target state="translated"> ?</target>
         </trans-unit>
+        <trans-unit id="LocalPrintServerStr" translate="yes" xml:space="preserve">
+          <source>Lokal</source>
+          <target state="translated">Local</target>
+        </trans-unit>
+        <trans-unit id="TextBoxWatermarkStr" translate="yes" xml:space="preserve">
+          <source>Druckernamen hier suchen...</source>
+          <target state="translated">Search printer here...</target>
+        </trans-unit>
       </group>
     </body>
   </file>

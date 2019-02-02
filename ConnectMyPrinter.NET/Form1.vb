@@ -119,6 +119,9 @@ Public Class Form1
             MetroProgressSpinner2.Style = AppSettings.SpinnerControlStyle
             MetroProgressSpinner3.Style = AppSettings.SpinnerControlStyle
 
+            'Watermark in Textbox in korrekter Sprache laden:
+            MetroTextBox1.WaterMark = MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "TextBoxWatermarkStr", "")
+
             'Verhindern, dass die Farbe des ausgewählten Elements im ComboBox-Element die gesamte Liste füllt:
             ComboBox1.Refresh()
 
@@ -390,7 +393,7 @@ Public Class Form1
                         zz.DefaultPrinter = True
                     End If
                     If IsLocal Then
-                        zz.Server = "Lokal"
+                        zz.Server = MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "LocalPrintServerStr", "Local")
                     End If
                     zz.State = String.Join(",", pq.QueueStatus)
                     zz.DriverName = pq.QueueDriver.Name
@@ -1135,7 +1138,7 @@ Public Class Form1
                 ll.Tag = LocalPrinters(index)
                 ll._parent = Me
 
-                If LocalPrinters(index).Server = "Lokal" Then
+                If LocalPrinters(index).Server = MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "LocalPrintServerStr", "Local") Then
                     If Not AppSettings.AllowUserDeleteLocalPrinter Then
                         ll.Button1.Enabled = False
                         ll.MetroButton4.Enabled = False
