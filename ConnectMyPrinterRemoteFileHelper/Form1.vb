@@ -68,7 +68,7 @@ Public Class Form1
         SaveFileDialog1.ShowDialog()
     End Sub
 
-    Public Sub ApplPrinterConfigToClass()
+    Public Sub ApplyPrinterConfigToClass()
         If Not RemoteFile.ConnectPrinters.Count = 0 Then
             Dim kk As MsgBoxResult
             kk = MsgBox("Es ist bereits ein oder mehrere Drucker in der Konfiguration vorhanden. Drucker überschreiben?", MsgBoxStyle.YesNo)
@@ -86,13 +86,13 @@ Public Class Form1
         RemoteFile.ConnectPrinters.Add(qq)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-        ApplPrinterConfigToClass()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ApplyPrinterConfigToClass()
         LoadNewRemoteFile()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        ApplPrinterConfigToClass()
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ApplyPrinterConfigToClass()
         LoadNewRemoteFile()
         ToolStripButton2.PerformClick()
     End Sub
@@ -153,13 +153,14 @@ Public Class Form1
     End Function
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Button2.PerformClick()
+        ApplyPrinterConfigToClass()
+        LoadNewRemoteFile()
         PublishProfileToClient(TextBox3.Text, TextBox4.Text, CheckBox2.Checked, CheckBox3.Checked)
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Try
-            ApplPrinterConfigToClass()
+            ApplyPrinterConfigToClass()
             LoadNewRemoteFile()
             Dim yy As New RemoteFileSerializer
             Dim tmpfilename As String

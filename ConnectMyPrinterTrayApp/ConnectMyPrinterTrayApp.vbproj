@@ -160,7 +160,6 @@
     <EmbeddedResource Include="PopupForm.resx">
       <DependentUpon>PopupForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TranslatedString.en-US.resx" />
     <EmbeddedResource Include="TranslatedStrings.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>

@@ -74,6 +74,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Standardeinstellungen... ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property DefaultSettingsEntry() As String
+            Get
+                Return ResourceManager.GetString("DefaultSettingsEntry", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Drucker trennen ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property DisconnectPrinterEntry() As String
+            Get
+                Return ResourceManager.GetString("DisconnectPrinterEntry", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Beenden ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property ExitEntry() As String
@@ -92,11 +110,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Gerätewebseite öffnen... ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property OpenDeviceWebsiteEntry() As String
+            Get
+                Return ResourceManager.GetString("OpenDeviceWebsiteEntry", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Ansicht aktualisieren ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property RefreshView() As String
             Get
                 Return ResourceManager.GetString("RefreshView", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Drucker löschen ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property RemoveLocalPrinterEntry() As String
+            Get
+                Return ResourceManager.GetString("RemoveLocalPrinterEntry", resourceCulture)
             End Get
         End Property
         

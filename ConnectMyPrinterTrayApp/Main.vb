@@ -271,7 +271,7 @@ Imports ConnectMyPrinterLanguageHelper
                     jj.Tag = LocalPrinters(index)
 
                     If MainApp.AppSettings.ShowChangeDefaultPrinterDriverSettingsEntryInTrayApp Then
-                        Dim settings As New ToolStripMenuItem("Standardeinstellungen...")
+                        Dim settings As New ToolStripMenuItem(MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "DefaultSettingsEntry", ""))
                         settings.Tag = LocalPrinters(index)
                         settings.Image = My.Resources.settings_small
                         AddHandler settings.Click, AddressOf ClickOnChangePrinterDefaultSettings
@@ -279,25 +279,25 @@ Imports ConnectMyPrinterLanguageHelper
                     End If
 
                     If MainApp.AppSettings.ShowDeletePrinterEntryInTrayApp Then
-                        Dim delprinter As New ToolStripMenuItem("Drucker trennen")
+                        Dim delprinter As New ToolStripMenuItem(MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "DisconnectPrinterEntry", ""))
                         delprinter.Tag = LocalPrinters(index)
                         delprinter.Image = My.Resources.DeletePrinter2
                         If MainApp.AppSettings.AllowUserDeleteLocalPrinter = False Then
-                            If LocalPrinters(index).Server = "Lokal" Then
+                            If LocalPrinters(index).Server = "Lokal" Or LocalPrinters(index).Server = "Local" Then
                                 delprinter.Enabled = False
                             End If
                         End If
-                        If LocalPrinters(index).Server = "Lokal" Then
-                            delprinter.Text = "Drucker löschen"
+                        If LocalPrinters(index).Server = "Lokal" Or LocalPrinters(index).Server = "Local" Then
+                            delprinter.Text = MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "RemoveLocalPrinterEntry", "")
                         End If
                         AddHandler delprinter.Click, AddressOf ClickOnDeletePrinterEntry
                         jj.DropDownItems.Add(delprinter)
                     End If
 
                     If MainApp.AppSettings.ShowOpenPrinterWebsiteEntryInTrayApp Then
-                        Dim opengui As New ToolStripMenuItem("Gerätewebseite öffnen...")
+                        Dim opengui As New ToolStripMenuItem(MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "OpenDeviceWebsiteEntry", ""))
                         opengui.Tag = LocalPrinters(index)
-                        If LocalPrinters(index).Server = "Lokal" Then
+                        If LocalPrinters(index).Server = "Lokal" Or LocalPrinters(index).Server = "Local" Then
                             opengui.Enabled = False
                         End If
                         AddHandler opengui.Click, AddressOf ClickOnPrinterWebguiEntry

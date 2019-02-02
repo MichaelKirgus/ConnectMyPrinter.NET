@@ -120,14 +120,26 @@
   <data name="BackupPrintingEnv" xml:space="preserve">
     <value>Druckerumgebung sichern...</value>
   </data>
+  <data name="DefaultSettingsEntry" xml:space="preserve">
+    <value>Standardeinstellungen...</value>
+  </data>
+  <data name="DisconnectPrinterEntry" xml:space="preserve">
+    <value>Drucker trennen</value>
+  </data>
   <data name="ExitEntry" xml:space="preserve">
     <value>Beenden</value>
   </data>
   <data name="LaunchAppEntry" xml:space="preserve">
     <value>Drucker verwalten...</value>
   </data>
+  <data name="OpenDeviceWebsiteEntry" xml:space="preserve">
+    <value>Gerätewebseite öffnen...</value>
+  </data>
   <data name="RefreshView" xml:space="preserve">
     <value>Ansicht aktualisieren</value>
+  </data>
+  <data name="RemoveLocalPrinterEntry" xml:space="preserve">
+    <value>Drucker löschen</value>
   </data>
   <data name="RestartPrinterQ" xml:space="preserve">
     <value>Druckerwarteschlange neu starten</value>

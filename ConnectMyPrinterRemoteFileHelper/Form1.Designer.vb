@@ -31,7 +31,7 @@ Partial Class Form1
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -39,22 +39,22 @@ Partial Class Form1
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -134,18 +134,15 @@ Partial Class Form1
         Me.TabPage1.Text = "Profildatei lokal erstellen"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TabPage2
+        'Button4
         '
-        Me.TabPage2.Controls.Add(Me.Button3)
-        Me.TabPage2.Controls.Add(Me.GroupBox4)
-        Me.TabPage2.Controls.Add(Me.GroupBox3)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(483, 168)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Profil auf Client anwenden"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.Location = New System.Drawing.Point(327, 131)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(146, 27)
+        Me.Button4.TabIndex = 10
+        Me.Button4.Text = "Erstellen und &versenden..."
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -216,24 +213,28 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(471, 20)
         Me.TextBox1.TabIndex = 0
         '
-        'GroupBox3
+        'TabPage2
         '
-        Me.GroupBox3.Controls.Add(Me.TextBox3)
-        Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox3.Location = New System.Drawing.Point(3, 3)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(477, 42)
-        Me.GroupBox3.TabIndex = 7
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Client (mehrere Clients mit ; trennen)"
+        Me.TabPage2.Controls.Add(Me.Button3)
+        Me.TabPage2.Controls.Add(Me.GroupBox4)
+        Me.TabPage2.Controls.Add(Me.GroupBox3)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(483, 168)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Profil auf Client anwenden"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'Button3
         '
-        Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TextBox3.Location = New System.Drawing.Point(3, 16)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(471, 20)
-        Me.TextBox3.TabIndex = 0
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.Location = New System.Drawing.Point(340, 131)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(133, 27)
+        Me.Button3.TabIndex = 9
+        Me.Button3.Text = "&Anwenden"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
@@ -247,6 +248,17 @@ Partial Class Form1
         Me.GroupBox4.TabIndex = 8
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Benutzer"
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(348, 42)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(126, 17)
+        Me.CheckBox3.TabIndex = 2
+        Me.CheckBox3.Text = "Dauerhaft anwenden"
+        Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'CheckBox2
         '
@@ -266,36 +278,24 @@ Partial Class Form1
         Me.TextBox4.Size = New System.Drawing.Size(471, 20)
         Me.TextBox4.TabIndex = 0
         '
-        'Button3
+        'GroupBox3
         '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(340, 131)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(133, 27)
-        Me.Button3.TabIndex = 9
-        Me.Button3.Text = "&Anwenden"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.GroupBox3.Controls.Add(Me.TextBox3)
+        Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.GroupBox3.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(477, 42)
+        Me.GroupBox3.TabIndex = 7
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Client (mehrere Clients mit ; trennen)"
         '
-        'CheckBox3
+        'TextBox3
         '
-        Me.CheckBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(348, 42)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(126, 17)
-        Me.CheckBox3.TabIndex = 2
-        Me.CheckBox3.Text = "Dauerhaft anwenden"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(327, 131)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(146, 27)
-        Me.Button4.TabIndex = 10
-        Me.Button4.Text = "Erstellen und &versenden..."
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox3.Location = New System.Drawing.Point(3, 16)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(471, 20)
+        Me.TextBox3.TabIndex = 0
         '
         'Form1
         '
@@ -314,15 +314,15 @@ Partial Class Form1
         Me.ToolStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
