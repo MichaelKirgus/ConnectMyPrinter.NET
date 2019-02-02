@@ -40,10 +40,10 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SpoolerStoppenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SpoolerStartenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,123 +56,86 @@ Partial Class Form1
         '
         'ListView1
         '
-        Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.ListView1.FullRowSelect = True
-        Me.ListView1.Location = New System.Drawing.Point(3, 3)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(911, 237)
-        Me.ListView1.TabIndex = 1
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader1
         '
-        Me.ColumnHeader1.Text = "Benutzer"
-        Me.ColumnHeader1.Width = 220
+        resources.ApplyResources(Me.ColumnHeader1, "ColumnHeader1")
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "Druckername"
-        Me.ColumnHeader2.Width = 513
+        resources.ApplyResources(Me.ColumnHeader2, "ColumnHeader2")
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "Status"
-        Me.ColumnHeader3.Width = 134
+        resources.ApplyResources(Me.ColumnHeader3, "ColumnHeader3")
         '
         'Button1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(790, 246)
+        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(124, 25)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Drucker entfernen"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ListView2
         '
-        Me.ListView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.ListView2, "ListView2")
         Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
         Me.ListView2.FullRowSelect = True
-        Me.ListView2.Location = New System.Drawing.Point(3, 3)
         Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(911, 334)
-        Me.ListView2.TabIndex = 3
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader4
         '
-        Me.ColumnHeader4.Text = "Treiber"
-        Me.ColumnHeader4.Width = 259
+        resources.ApplyResources(Me.ColumnHeader4, "ColumnHeader4")
         '
         'ColumnHeader5
         '
-        Me.ColumnHeader5.Text = "Version"
-        Me.ColumnHeader5.Width = 106
+        resources.ApplyResources(Me.ColumnHeader5, "ColumnHeader5")
         '
         'ColumnHeader6
         '
-        Me.ColumnHeader6.Text = "Datum"
-        Me.ColumnHeader6.Width = 106
+        resources.ApplyResources(Me.ColumnHeader6, "ColumnHeader6")
         '
         'ColumnHeader8
         '
-        Me.ColumnHeader8.Text = "Name (intern)"
-        Me.ColumnHeader8.Width = 189
+        resources.ApplyResources(Me.ColumnHeader8, "ColumnHeader8")
         '
         'ColumnHeader9
         '
-        Me.ColumnHeader9.Text = "CAB-Dateipfad"
-        Me.ColumnHeader9.Width = 107
+        resources.ApplyResources(Me.ColumnHeader9, "ColumnHeader9")
         '
         'ColumnHeader10
         '
-        Me.ColumnHeader10.Text = "INF-Dateipfad"
-        Me.ColumnHeader10.Width = 107
+        resources.ApplyResources(Me.ColumnHeader10, "ColumnHeader10")
         '
         'Button2
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(790, 343)
+        resources.ApplyResources(Me.Button2, "Button2")
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(124, 25)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Treiberpaket entfernen"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(610, 343)
+        resources.ApplyResources(Me.Button3, "Button3")
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(174, 25)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Treiber + Treiberpaket entfernen"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(492, 343)
+        resources.ApplyResources(Me.Button4, "Button4")
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(112, 25)
-        Me.Button4.TabIndex = 6
-        Me.Button4.Text = "Treiber entfernen"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'SplitContainer1
         '
-        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        resources.ApplyResources(Me.SplitContainer1, "SplitContainer1")
         Me.SplitContainer1.Name = "SplitContainer1"
-        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
         'SplitContainer1.Panel1
         '
@@ -187,69 +150,52 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button4)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button3)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(917, 649)
-        Me.SplitContainer1.SplitterDistance = 274
-        Me.SplitContainer1.TabIndex = 7
-        '
-        'Button5
-        '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.ContextMenuStrip = Me.ContextMenuStrip2
-        Me.Button5.Location = New System.Drawing.Point(374, 343)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(112, 25)
-        Me.Button5.TabIndex = 7
-        Me.Button5.Text = "Spooler starten"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.Button6, "Button6")
         Me.Button6.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.Button6.Location = New System.Drawing.Point(256, 343)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(112, 25)
-        Me.Button6.TabIndex = 8
-        Me.Button6.Text = "Spooler stoppen"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpoolerStoppenToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(161, 26)
+        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
         '
         'SpoolerStoppenToolStripMenuItem
         '
         Me.SpoolerStoppenToolStripMenuItem.Image = Global.ConnectMyPrinterForceDelete.My.Resources.Resources.uac_16
         Me.SpoolerStoppenToolStripMenuItem.Name = "SpoolerStoppenToolStripMenuItem"
-        Me.SpoolerStoppenToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.SpoolerStoppenToolStripMenuItem.Text = "Spooler stoppen"
+        resources.ApplyResources(Me.SpoolerStoppenToolStripMenuItem, "SpoolerStoppenToolStripMenuItem")
+        '
+        'Button5
+        '
+        resources.ApplyResources(Me.Button5, "Button5")
+        Me.Button5.ContextMenuStrip = Me.ContextMenuStrip2
+        Me.Button5.Name = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'ContextMenuStrip2
         '
         Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpoolerStartenToolStripMenuItem})
         Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
-        Me.ContextMenuStrip2.Size = New System.Drawing.Size(154, 48)
+        resources.ApplyResources(Me.ContextMenuStrip2, "ContextMenuStrip2")
         '
         'SpoolerStartenToolStripMenuItem
         '
         Me.SpoolerStartenToolStripMenuItem.Image = Global.ConnectMyPrinterForceDelete.My.Resources.Resources.uac_16
         Me.SpoolerStartenToolStripMenuItem.Name = "SpoolerStartenToolStripMenuItem"
-        Me.SpoolerStartenToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
-        Me.SpoolerStartenToolStripMenuItem.Text = "Spooler starten"
+        resources.ApplyResources(Me.SpoolerStartenToolStripMenuItem, "SpoolerStartenToolStripMenuItem")
         '
         'Form1
         '
         Me.AcceptButton = Me.Button1
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(917, 649)
         Me.Controls.Add(Me.SplitContainer1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Drucker/Treiber/Treiberpaket entfernen erzwingen"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
