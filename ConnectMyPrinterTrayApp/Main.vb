@@ -133,7 +133,7 @@ Imports ConnectMyPrinterRemoteFileHandler
         mnuLogo.Tag = New PrinterQueueInfo
         Dim ii As Image
         Try
-            ii = Image.FromFile(MainApp.AppSettings.CompanyLogoImagePath)
+            ii = Image.FromFile(Environment.ExpandEnvironmentVariables(MainApp.AppSettings.CompanyLogoImagePath))
             mnuLogo.Height = ii.Height
         Catch ex As Exception
             ii = My.Resources._1472877498_BT_printer.ToBitmap

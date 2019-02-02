@@ -81,7 +81,7 @@ Public Class Form1
 
             'Ggf. Logging aktivieren
             _Log.Enable = AppSettings.EnableLogging
-            _Log.LogFile = AppSettings.LogFile
+            _Log.LogFile = Environment.ExpandEnvironmentVariables(AppSettings.LogFile)
             _Log.WriteLogSystemInfo()
 
             'GUI-Einstellungen setzen
@@ -93,9 +93,9 @@ Public Class Form1
             Me.Size = zz
 
             'Bild aus Bilddatei oder aus Base64-String laden
-            If Not AppSettings.CompanyLogoImagePath = "" Then
+            If Not Environment.ExpandEnvironmentVariables(AppSettings.CompanyLogoImagePath) = "" Then
                 Try
-                    PictureBox2.Image = Image.FromFile(AppSettings.CompanyLogoImagePath)
+                    PictureBox2.Image = Image.FromFile(Environment.ExpandEnvironmentVariables(AppSettings.CompanyLogoImagePath))
                 Catch ex As Exception
                 End Try
             End If
@@ -631,7 +631,7 @@ Public Class Form1
             Dim _cacheresult As List(Of PrinterQueueInfo) = Nothing
             'Prüfen, ob kurzfristig eine Cache-Datei geladen werden soll:
             If AppSettings.FirstLoadCachedPrinters Then
-                _cacheresult = oo.LoadMyPrinterCollectionFile(AppSettings.CacheFoundPrintersFilepath)
+                _cacheresult = oo.LoadMyPrinterCollectionFile(Environment.ExpandEnvironmentVariables(AppSettings.CacheFoundPrintersFilepath))
                 GenerateAutoCompleteList(_cacheresult)
                 PrintQueues = CopyList(e.Result)
                 ComboBox1.AutoCompleteCustomSource = PrintQueuesAutoComplete
@@ -639,7 +639,7 @@ Public Class Form1
                     WasCachedContentLoaded = True
                 End If
             Else
-                _cacheresult = oo.LoadMyPrinterCollectionFile(AppSettings.CacheFoundPrintersFilepath)
+                _cacheresult = oo.LoadMyPrinterCollectionFile(Environment.ExpandEnvironmentVariables(AppSettings.CacheFoundPrintersFilepath))
                 If Not _cacheresult.Count = 0 Then
                     WasCachedContentLoaded = True
                 End If
@@ -669,9 +669,9 @@ Public Class Form1
 
             'Es werden Live-Ergebnisse angezeigt:
             'Ergebnis ggf. in Cache-File speichern:
-            If Not AppSettings.CacheFoundPrintersFilepath = "" Then
+            If Not Environment.ExpandEnvironmentVariables(AppSettings.CacheFoundPrintersFilepath) = "" Then
                 If Not _result.Count = 0 Then
-                    oo.SaveMyPrinterCollectionFile(_result, AppSettings.CacheFoundPrintersFilepath)
+                    oo.SaveMyPrinterCollectionFile(_result, Environment.ExpandEnvironmentVariables(AppSettings.CacheFoundPrintersFilepath))
                 End If
             End If
 
