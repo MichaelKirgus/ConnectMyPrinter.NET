@@ -1384,7 +1384,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Redetermine printer information</target>
         </trans-unit>
         <trans-unit id="AlsStandarddruckerFestlegenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1393,12 +1393,12 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Set as Default Printer</target>
         </trans-unit>
         <trans-unit id="ToolStripSeparator1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>331, 6</source>
+          <source>332, 6</source>
           <target state="needs-review-translation">265, 6</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="DruckerImProfilSpeichernToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1407,12 +1407,12 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Printer in the profile store</target>
         </trans-unit>
         <trans-unit id="ToolStripSeparator2.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>331, 6</source>
+          <source>332, 6</source>
           <target state="needs-review-translation">265, 6</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="StandardeinstellungenLöschenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1421,7 +1421,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Delete default settings</target>
         </trans-unit>
         <trans-unit id="DruckereinstellungenExportierenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1434,7 +1434,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="DruckereinstellungenImportierenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1447,7 +1447,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="ContextMenuStrip1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>335, 388</source>
+          <source>345, 470</source>
           <target state="needs-review-translation">269, 166</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1547,7 +1547,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">True</target>
         </trans-unit>
         <trans-unit id="DruckerEntfernenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1568,7 +1568,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Expand/minimize the element. More information and actions shows / hides.</target>
         </trans-unit>
         <trans-unit id="DruckerNeuInstallierenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1581,7 +1581,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="ToolStripSeparator3.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>331, 6</source>
+          <source>332, 6</source>
           <target state="needs-review-translation">265, 6</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1590,7 +1590,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="DruckereigenschaftenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1603,7 +1603,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="DruckereinstellungenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1616,7 +1616,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="ToolStripSeparator4.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>331, 6</source>
+          <source>332, 6</source>
           <target state="needs-review-translation">265, 6</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1629,7 +1629,7 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">174, 17</target>
         </trans-unit>
         <trans-unit id="DruckerEntfernenlokalToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">268, 30</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1642,8 +1642,9 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="ProfildateiErstellenverbindenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">334, 30</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="ProfildateiErstellenverbindenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Profildatei erstellen (verbinden)...</source>
@@ -1654,8 +1655,9 @@ Please select the print server woud you like to connect to:</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>334, 30</source>
+          <source>335, 30</source>
           <target state="needs-review-translation">334, 30</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
           <source>Profildatei erstellen (entfernen und verbinden)...</source>
@@ -1672,6 +1674,30 @@ Please select the print server woud you like to connect to:</target>
         <trans-unit id="SaveFileDialog2.TrayLocation" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" extradata="metadata">
           <source>552, 17</source>
           <target state="needs-review-translation">552, 17</target>
+        </trans-unit>
+        <trans-unit id="ProfildateiVersendenverbindenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>344, 30</source>
+          <target state="needs-review-translation">344, 30</target>
+        </trans-unit>
+        <trans-unit id="ProfildateiVersendenverbindenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Profildatei versenden (verbinden)...</source>
+          <target state="new">Profildatei versenden (verbinden)...</target>
+        </trans-unit>
+        <trans-unit id="ProfildateiVersendenverbindenToolStripMenuItem.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
+        </trans-unit>
+        <trans-unit id="ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>344, 30</source>
+          <target state="needs-review-translation">344, 30</target>
+        </trans-unit>
+        <trans-unit id="ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Profildatei versenden (entfernen und verbinden)...</source>
+          <target state="new">Profildatei versenden (entfernen und verbinden)...</target>
+        </trans-unit>
+        <trans-unit id="ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
         </trans-unit>
       </group>
     </body>
@@ -1928,6 +1954,38 @@ Please select the print server woud you like to connect to:</target>
         <trans-unit id="printer_nostat_nodefault_new" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
           <source>..\Resources\printer_nostat_nodefault_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
           <target state="needs-review-translation">..\Resources\printer_nostat_nodefault_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_error_nonstandard_2" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_error_nonstandard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_error_nonstandard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_error_standard_2" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_error_standard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_error_standard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_nostat_default_new_2" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_nostat_default_new_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_nostat_default_new_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_nostat_nodefault_new_2" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_nostat_nodefault_new_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_nostat_nodefault_new_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_offline_nonstandard_2" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_offline_nonstandard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_offline_nonstandard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_offline_standard_2" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_offline_standard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_offline_standard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_online_nonstandard_2" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_online_nonstandard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_online_nonstandard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="printer_online_standard_2" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\printer_online_standard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\printer_online_standard_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
         </trans-unit>
       </group>
     </body>

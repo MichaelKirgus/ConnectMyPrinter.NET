@@ -75,6 +75,8 @@ Partial Class PrinterCtl
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog2 = New System.Windows.Forms.SaveFileDialog()
+        Me.ProfildateiVersendenverbindenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -259,7 +261,7 @@ Partial Class PrinterCtl
         '
         Me.ContextMenuStrip1.BackColor = System.Drawing.Color.White
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlsStandarddruckerFestlegenToolStripMenuItem, Me.ToolStripSeparator1, Me.DruckerImProfilSpeichernToolStripMenuItem, Me.ToolStripSeparator2, Me.DruckerEntfernenToolStripMenuItem, Me.DruckerEntfernenlokalToolStripMenuItem, Me.DruckerNeuInstallierenToolStripMenuItem, Me.StandardeinstellungenLöschenToolStripMenuItem, Me.ToolStripSeparator3, Me.DruckereigenschaftenToolStripMenuItem, Me.DruckereinstellungenToolStripMenuItem, Me.ToolStripSeparator4, Me.DruckereinstellungenExportierenToolStripMenuItem, Me.DruckereinstellungenImportierenToolStripMenuItem, Me.ProfildateiErstellenverbindenToolStripMenuItem, Me.ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlsStandarddruckerFestlegenToolStripMenuItem, Me.ToolStripSeparator1, Me.DruckerImProfilSpeichernToolStripMenuItem, Me.ToolStripSeparator2, Me.DruckerEntfernenToolStripMenuItem, Me.DruckerEntfernenlokalToolStripMenuItem, Me.DruckerNeuInstallierenToolStripMenuItem, Me.StandardeinstellungenLöschenToolStripMenuItem, Me.ToolStripSeparator3, Me.DruckereigenschaftenToolStripMenuItem, Me.DruckereinstellungenToolStripMenuItem, Me.ToolStripSeparator4, Me.DruckereinstellungenExportierenToolStripMenuItem, Me.DruckereinstellungenImportierenToolStripMenuItem, Me.ProfildateiErstellenverbindenToolStripMenuItem, Me.ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem, Me.ProfildateiVersendenverbindenToolStripMenuItem, Me.ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
@@ -398,6 +400,16 @@ Partial Class PrinterCtl
         Me.SaveFileDialog2.DefaultExt = "prpr"
         resources.ApplyResources(Me.SaveFileDialog2, "SaveFileDialog2")
         '
+        'ProfildateiVersendenverbindenToolStripMenuItem
+        '
+        Me.ProfildateiVersendenverbindenToolStripMenuItem.Name = "ProfildateiVersendenverbindenToolStripMenuItem"
+        resources.ApplyResources(Me.ProfildateiVersendenverbindenToolStripMenuItem, "ProfildateiVersendenverbindenToolStripMenuItem")
+        '
+        'ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem
+        '
+        Me.ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Name = "ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem"
+        resources.ApplyResources(Me.ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem, "ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem")
+        '
         'PrinterCtl
         '
         resources.ApplyResources(Me, "$this")
@@ -491,4 +503,6 @@ Partial Class PrinterCtl
     Friend WithEvents ProfildateiErstellenverbindenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveFileDialog2 As SaveFileDialog
+    Friend WithEvents ProfildateiVersendenverbindenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem As ToolStripMenuItem
 End Class

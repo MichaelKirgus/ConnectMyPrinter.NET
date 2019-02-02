@@ -387,6 +387,14 @@
     <Content Include="ReadMe.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\printer_online_nonstandard_2.png" />
+    <None Include="Resources\printer_error_nonstandard_2.png" />
+    <None Include="Resources\printer_offline_nonstandard_2.png" />
+    <None Include="Resources\printer_offline_standard_2.png" />
+    <None Include="Resources\printer_online_standard_2.png" />
+    <None Include="Resources\printer_error_standard_2.png" />
+    <None Include="Resources\printer_nostat_default_new_2.png" />
+    <None Include="Resources\printer_nostat_nodefault_new_2.png" />
     <None Include="Resources\printer_nostat_nodefault_new.png" />
     <None Include="Resources\printer_nostat_default_new.png" />
     <None Include="Resources\printer_online_nonstandard.png" />
@@ -472,6 +480,10 @@
     <ProjectReference Include="..\ConnectMyPrinterLog\ConnectMyPrinterLog.vbproj">
       <Project>{28d57efe-e78a-4c8c-9d8c-45914e20d368}</Project>
       <Name>ConnectMyPrinterLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterOutlookHelper\ConnectMyPrinterOutlookHelper.vbproj">
+      <Project>{6e7264c3-52a0-4c0f-8ffd-d56758d7d991}</Project>
+      <Name>ConnectMyPrinterOutlookHelper</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
       <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>

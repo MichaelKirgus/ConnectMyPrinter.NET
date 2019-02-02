@@ -114,6 +114,10 @@ Public Class Form1
             Me.Style = AppSettings.WindowStyle
             ComboBox1.Style = AppSettings.ComboxBoxStyle
             MetroTabControl1.Style = AppSettings.TabControlStyle
+            MetroButton1.Style = AppSettings.ButtonControlStyle
+            MetroProgressSpinner1.Style = AppSettings.SpinnerControlStyle
+            MetroProgressSpinner2.Style = AppSettings.SpinnerControlStyle
+            MetroProgressSpinner3.Style = AppSettings.SpinnerControlStyle
 
             'Verhindern, dass die Farbe des ausgewählten Elements im ComboBox-Element die gesamte Liste füllt:
             ComboBox1.Refresh()
@@ -216,14 +220,14 @@ Public Class Form1
                 SendKeys.Send("{TAB}")
             End If
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler beim Start der Anwendung", Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "ErrorLogStr", "Error"), Err)
         End Try
     End Sub
 
     Public Function ConvertImageToBase64String() As String
         Using ms As New MemoryStream()
             PictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png) 'We load the image from first PictureBox in the MemoryStream
-            Dim obyte = ms.ToArray() 'We tranform it to byte array..
+            Dim obyte = ms.ToArray() 'We transform it to byte array..
 
             Return Convert.ToBase64String(obyte) 'We then convert the byte array to base 64 string.
         End Using
@@ -262,7 +266,7 @@ Public Class Form1
 
             Return True
         Catch ex As Exception
-            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, "Fehler beim Hinzufügen des Druckers", Err)
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "ErrorLogStr", "Error"), Err)
             Return False
         End Try
     End Function
@@ -1076,36 +1080,36 @@ Public Class Form1
                 If LocalPrinters(index).DefaultPrinter Then
                     Dim isok As Boolean = True
                     If LocalPrinters(index).State.Contains("Error") Or LocalPrinters(index).State.Contains("PaperJam") Then
-                        ll.PictureBox1.Image = My.Resources.printer_error_standard
+                        ll.PictureBox1.Image = My.Resources.printer_error_standard_2
                         isok = False
                     End If
                     If LocalPrinters(index).State.Contains("Offline") Or LocalPrinters(index).State.Contains("Paused") Then
-                        ll.PictureBox1.Image = My.Resources.printer_offline_standard
+                        ll.PictureBox1.Image = My.Resources.printer_offline_standard_2
                         isok = False
                     End If
                     If LocalPrinters(index).State.Contains("None") Or LocalPrinters(index).State.Contains("Printing") Or LocalPrinters(index).State.Contains("Processing") Then
-                        ll.PictureBox1.Image = My.Resources.printer_online_standard
+                        ll.PictureBox1.Image = My.Resources.printer_online_standard_2
                         isok = False
                     End If
                     If isok = True Then
-                        ll.PictureBox1.Image = My.Resources.printer_nostat_default_new
+                        ll.PictureBox1.Image = My.Resources.printer_nostat_default_new_2
                     End If
                 Else
                     Dim isok As Boolean = True
                     If LocalPrinters(index).State.Contains("Error") Or LocalPrinters(index).State.Contains("PaperJam") Then
-                        ll.PictureBox1.Image = My.Resources.printer_error_nonstandard
+                        ll.PictureBox1.Image = My.Resources.printer_error_nonstandard_2
                         isok = False
                     End If
                     If LocalPrinters(index).State.Contains("Offline") Or LocalPrinters(index).State.Contains("Paused") Then
-                        ll.PictureBox1.Image = My.Resources.printer_offline_nonstandard
+                        ll.PictureBox1.Image = My.Resources.printer_offline_nonstandard_2
                         isok = False
                     End If
                     If LocalPrinters(index).State.Contains("None") Or LocalPrinters(index).State.Contains("Printing") Or LocalPrinters(index).State.Contains("Processing") Then
-                        ll.PictureBox1.Image = My.Resources.printer_online_nonstandard
+                        ll.PictureBox1.Image = My.Resources.printer_online_nonstandard_2
                         isok = False
                     End If
                     If isok = True Then
-                        ll.PictureBox1.Image = My.Resources.printer_nostat_nodefault_new
+                        ll.PictureBox1.Image = My.Resources.printer_nostat_nodefault_new_2
                     End If
                 End If
 

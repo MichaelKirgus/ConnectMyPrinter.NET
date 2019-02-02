@@ -100,9 +100,17 @@
       <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
       <Name>ConnectMyPrinterEnumerationLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterLanguageHelper\ConnectMyPrinterLanguageHelper.vbproj">
+      <Project>{24D22097-0588-43AA-93E8-D9408234B53F}</Project>
+      <Name>ConnectMyPrinterLanguageHelper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
       <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
       <Name>ConnectMyPrinterPrinterManageLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework\MetroFramework.csproj">
+      <Project>{bb41ac8b-cbed-4387-a7e0-4567edb3f57f}</Project>
+      <Name>MetroFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -125,11 +133,13 @@
     <Compile Include="PopupForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TranslatedStrings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TranslatedStrings.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MetroFramework">
-      <HintPath>..\ConnectMyPrinter.NET\bin\Debug\MetroFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -149,6 +159,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopupForm.resx">
       <DependentUpon>PopupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranslatedString.en-US.resx" />
+    <EmbeddedResource Include="TranslatedStrings.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TranslatedStrings.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -139,6 +139,10 @@
     <None Include="Resources\document-save-5.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConnectMyPrinter.NET\ConnectMyPrinter.NET.vbproj">
+      <Project>{2ffb39f5-85ab-405b-8ab7-d3404312b088}</Project>
+      <Name>ConnectMyPrinter.NET</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
       <Project>{ae01b7ff-c216-4752-b4ff-d6956a772d44}</Project>
       <Name>ConnectMyPrinterAppSettingsHandler</Name>
@@ -150,6 +154,10 @@
     <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
       <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
       <Name>ConnectMyPrinterEnumerationLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterOutlookHelper\ConnectMyPrinterOutlookHelper.vbproj">
+      <Project>{6e7264c3-52a0-4c0f-8ffd-d56758d7d991}</Project>
+      <Name>ConnectMyPrinterOutlookHelper</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
       <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
@@ -166,6 +174,10 @@
     <ProjectReference Include="..\ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj">
       <Project>{53b8a917-53bb-4ecf-9709-c50ba632da9a}</Project>
       <Name>ConnectMyPrinterUACHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework\MetroFramework.csproj">
+      <Project>{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F}</Project>
+      <Name>MetroFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

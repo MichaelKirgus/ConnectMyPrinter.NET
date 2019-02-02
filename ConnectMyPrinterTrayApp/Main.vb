@@ -1,14 +1,17 @@
 ﻿Imports System.Collections.Generic
+Imports System.ComponentModel
 Imports System.Diagnostics
 Imports System.Drawing
+Imports System.Globalization
 Imports System.IO
+Imports System.Security.Permissions
 Imports System.Windows.Forms
 Imports System.Xml.Serialization
 Imports ConnectMyPrinterAppSettingsHandler
 Imports ConnectMyPrinterEnumerationLib
+Imports ConnectMyPrinterLanguageHelper
 
-Public Class AppContext
-
+<PermissionSet(SecurityAction.Demand, Name:="FullTrust")> Public Class AppContext
     Inherits ApplicationContext
 
     Public WithEvents Tray As NotifyIcon
@@ -22,9 +25,16 @@ Public Class AppContext
     Public WithEvents mnuExit As ToolStripMenuItem
     Public WithEvents mnuLogo As ToolStripLabel
 
+    Public MLangHelper As New LanguageApplyHelper
+    Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
+
     Public MainApp As New ConnectMyPrinter.NET.Form1
     Public LocalPrinters As New List(Of PrinterQueueInfo)
     Public PrinterManageService As New ConnectMyPrinterPrinterManageLib.ManagePrinter
+
+    Public WithEvents TracePrinterProfileWorker As New BackgroundWorker
+    Public WithEvents TracePrinterProfileWorkerStartup As New BackgroundWorker
+    Public WithEvents TracePrinterProfileWatcher As New FileSystemWatcher
 
     Public AppSettings As New AppSettingsClass
     Public AppSettingFile As String = "AppSettings.xml"
@@ -40,21 +50,21 @@ Public Class AppContext
 
         mnuSep1 = New ToolStripSeparator()
         mnuSep1.Tag = New PrinterQueueInfo
-        mnuManagePrinter = New ToolStripMenuItem("Drucker verwalten...")
+        mnuManagePrinter = New ToolStripMenuItem(MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "LaunchAppEntry", ""))
         mnuManagePrinter.Image = My.Resources.manageprinters_png
         mnuManagePrinter.Tag = New PrinterQueueInfo
-        mnuRestartPrinterService = New ToolStripMenuItem("Druckerwarteschlange neu starten")
+        mnuRestartPrinterService = New ToolStripMenuItem(MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "RestartPrinterQ", ""))
         mnuRestartPrinterService.Image = My.Resources.restart_printerq
         mnuRestartPrinterService.Tag = New PrinterQueueInfo
-        mnuBackupPrinterEnv = New ToolStripMenuItem("Druckerumgebung sichern...")
+        mnuBackupPrinterEnv = New ToolStripMenuItem(MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "BackupPrintingEnv", ""))
         mnuBackupPrinterEnv.Image = My.Resources.backup_printer
         mnuBackupPrinterEnv.Tag = New PrinterQueueInfo
-        mnuRefresh = New ToolStripMenuItem("Ansicht aktualisieren")
+        mnuRefresh = New ToolStripMenuItem(MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "RefreshView", ""))
         mnuRefresh.Image = My.Resources.refresh16
         mnuRefresh.Tag = New PrinterQueueInfo
         mnuSep2 = New ToolStripSeparator()
         mnuSep2.Tag = New PrinterQueueInfo
-        mnuExit = New ToolStripMenuItem("Beenden")
+        mnuExit = New ToolStripMenuItem(MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "ExitEntry", ""))
         mnuExit.Tag = New PrinterQueueInfo
         mnuExit.Image = My.Resources.exit_gray
         MainMenu = New ContextMenuStrip
@@ -65,24 +75,49 @@ Public Class AppContext
         Tray = New NotifyIcon
         Tray.Icon = My.Resources.connectmyprinter_tray
         Tray.ContextMenuStrip = MainMenu
-        Tray.Text = "ConnectMyPrinter.NET - Drucker"
+        Tray.Text = MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "TrayIconText", "")
 
         'Display
         Tray.Visible = True
 
         'Lade Anwendungseinstellungen
         'Laden der Einstellungen für alle Benutzer
-        If IO.File.Exists(Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile) Then
-            AppSettingFile = Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile
+        If IO.File.Exists(Environment.SpecialFolder.LocalApplicationData & "\" & MainApp.AppSettingFile) Then
+            MainApp.AppSettingFile = Environment.SpecialFolder.LocalApplicationData & "\" & MainApp.AppSettingFile
+            Debug.WriteLine(Environment.SpecialFolder.LocalApplicationData & "\" & MainApp.AppSettingFile)
         Else
             'Laden der Einstellungen (über AppData)
-            If IO.File.Exists(Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile) Then
-                AppSettingFile = Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile
+            If IO.File.Exists(Environment.SpecialFolder.ApplicationData & "\" & MainApp.AppSettingFile) Then
+                MainApp.AppSettingFile = Environment.SpecialFolder.ApplicationData & "\" & MainApp.AppSettingFile
+                Debug.WriteLine(Environment.SpecialFolder.ApplicationData & "\" & MainApp.AppSettingFile)
             End If
         End If
 
         'Laden der Einstellungen (im Programmverzeichnis oder über Befehlszeile)
         MainApp.AppSettings = MainApp.LoadSettings(AppSettingFile)
+
+        'Prüfen, ob ein Verzeichnis für das Verarbeiten von Profildateien überwacht werden soll:
+        If MainApp.AppSettings.UseTracePathFeature Then
+            Debug.WriteLine("Use TracePath feature...")
+            Try
+                If Not IO.Directory.Exists(MainApp.AppSettings.ActionsTracePath) Then
+                    IO.Directory.CreateDirectory(MainApp.AppSettings.ActionsTracePath)
+                End If
+
+                TracePrinterProfileWatcher.Path = MainApp.AppSettings.ActionsTracePath
+                TracePrinterProfileWatcher.Filter = "*.prpr"
+                TracePrinterProfileWatcher.IncludeSubdirectories = False
+
+                If MainApp.AppSettings.ProcessActionsOnTrayStart Then
+                    'Soll bei jedem Start das Verzeichnis durchsucht werden?
+                    TracePrinterProfileWorkerStartup.RunWorkerAsync(MainApp.AppSettings.ActionsTracePath)
+                End If
+
+                TracePrinterProfileWatcher.EnableRaisingEvents = True
+            Catch ex As Exception
+                Debug.WriteLine(Err.Description)
+            End Try
+        End If
 
         mnuLogo = New ToolStripLabel
         mnuLogo.BackgroundImageLayout = ImageLayout.Center
@@ -98,7 +133,6 @@ Public Class AppContext
         End Try
 
         mnuLogo.BackgroundImage = ii
-
 
         MainMenu.Items.Insert(0, mnuLogo)
 
@@ -117,6 +151,87 @@ Public Class AppContext
         If (MainApp.AppSettings.ShowExitEntryInTrayApp = False) And (MainApp.AppSettings.ShowManagePrintersEntryInTrayApp = False) And (MainApp.AppSettings.ShowRefreshEntryInTrayApp = False) Then
             mnuSep2.Visible = False
         End If
+
+        If Environment.GetEnvironmentVariables.Count > 0 Then
+            If MainApp.AppSettings.ShowTrayAppAfterInstall = False Then
+                ExitApplication()
+            End If
+        End If
+    End Sub
+
+    Public Function RaiseProfileFileApply(ByVal ProfileFile As String) As Boolean
+        Try
+            Dim kk As New Process
+            kk.StartInfo.FileName = "ConnectMyPrinterRemoteFileHelper.exe"
+            kk.StartInfo.Arguments = ProfileFile
+            kk.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+
+            kk.Start()
+            kk.WaitForExit(3600)
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function DeleteProfileFile(ByVal ProfileFile As String, ByVal ProfileFileFullPath As String) As Boolean
+        Try
+            If Not ProfileFile.ToLower.Contains("permanent") Then
+                IO.File.Delete(ProfileFileFullPath)
+            End If
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Private Sub TracePrinterProfileWatcherChanged(source As Object, e As FileSystemEventArgs) Handles TracePrinterProfileWatcher.Created
+        Try
+            Debug.WriteLine("File " & e.FullPath & " detected.")
+            If Not TracePrinterProfileWorker.IsBusy Then
+                Dim uu As New List(Of String)
+                uu.Add(e.Name)
+                uu.Add(e.FullPath)
+
+                TracePrinterProfileWorker.RunWorkerAsync(uu)
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub TracePrinterProfileWorkerDoWork(source As Object, e As DoWorkEventArgs) Handles TracePrinterProfileWorker.DoWork
+        Try
+            Dim filename As String
+            Dim obj1 As List(Of String)
+            obj1 = e.Argument
+            filename = obj1(0)
+
+            If filename.StartsWith(System.Environment.UserName.ToLower) Or filename.StartsWith("LM") Then
+                'Gültige Datei erkannt
+                RaiseProfileFileApply(obj1(1))
+                DeleteProfileFile(obj1(0), obj1(1))
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub TracePrinterProfileWorkerStartupDoWork(source As Object, e As DoWorkEventArgs) Handles TracePrinterProfileWorkerStartup.DoWork
+        Dim dir As String
+        dir = e.Argument
+
+        For Each item As String In IO.Directory.GetFiles(dir, "*.prpr*", SearchOption.TopDirectoryOnly)
+            Try
+                Dim hh As New IO.FileInfo(item)
+                If (hh.Name.StartsWith(System.Environment.UserName.ToLower) Or hh.Name.StartsWith("LM")) Then
+                    'Gültige Datei erkannt
+                    RaiseProfileFileApply(hh.FullName)
+                    DeleteProfileFile(hh.Name, hh.FullName)
+                End If
+            Catch ex As Exception
+            End Try
+        Next
     End Sub
 
     Public Function DeleteOldEntries() As Boolean

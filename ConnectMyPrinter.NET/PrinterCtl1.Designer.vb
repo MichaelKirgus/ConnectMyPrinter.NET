@@ -65,7 +65,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property AlsStandarddruckerFestlegenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -221,7 +221,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=388}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=345, Height=470}.
         '''</summary>
         Public Shared ReadOnly Property ContextMenuStrip1_Size() As System.Drawing.Size
             Get
@@ -466,7 +466,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property DruckereigenschaftenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -495,7 +495,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property DruckereinstellungenExportierenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -524,7 +524,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property DruckereinstellungenImportierenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -553,7 +553,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property DruckereinstellungenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -582,7 +582,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property DruckerEntfernenlokalToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -611,7 +611,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property DruckerEntfernenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -630,7 +630,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property DruckerImProfilSpeichernToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -649,7 +649,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property DruckerNeuInstallierenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -1557,7 +1557,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property ProfildateiErstellenverbindenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -1586,7 +1586,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -1610,6 +1610,64 @@ Namespace My.Resources
         Public Shared ReadOnly Property ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem_Visible() As Boolean
             Get
                 Dim obj As Object = ResourceManager.GetObject("ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Visible", resourceCulture)
+                Return CType(obj,Boolean)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=344, Height=30}.
+        '''</summary>
+        Public Shared ReadOnly Property ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem_Size() As System.Drawing.Size
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Size", resourceCulture)
+                Return CType(obj,System.Drawing.Size)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Profildatei versenden (entfernen und verbinden)... ähnelt.
+        '''</summary>
+        Public Shared ReadOnly Property ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem_Text() As String
+            Get
+                Return ResourceManager.GetString("ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+        '''</summary>
+        Public Shared ReadOnly Property ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem_Visible() As Boolean
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Visible", resourceCulture)
+                Return CType(obj,Boolean)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=344, Height=30}.
+        '''</summary>
+        Public Shared ReadOnly Property ProfildateiVersendenverbindenToolStripMenuItem_Size() As System.Drawing.Size
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ProfildateiVersendenverbindenToolStripMenuItem.Size", resourceCulture)
+                Return CType(obj,System.Drawing.Size)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Profildatei versenden (verbinden)... ähnelt.
+        '''</summary>
+        Public Shared ReadOnly Property ProfildateiVersendenverbindenToolStripMenuItem_Text() As String
+            Get
+                Return ResourceManager.GetString("ProfildateiVersendenverbindenToolStripMenuItem.Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+        '''</summary>
+        Public Shared ReadOnly Property ProfildateiVersendenverbindenToolStripMenuItem_Visible() As Boolean
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ProfildateiVersendenverbindenToolStripMenuItem.Visible", resourceCulture)
                 Return CType(obj,Boolean)
             End Get
         End Property
@@ -1653,7 +1711,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=334, Height=30}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=335, Height=30}.
         '''</summary>
         Public Shared ReadOnly Property StandardeinstellungenLöschenToolStripMenuItem_Size() As System.Drawing.Size
             Get
@@ -1721,7 +1779,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=331, Height=6}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=332, Height=6}.
         '''</summary>
         Public Shared ReadOnly Property ToolStripSeparator1_Size() As System.Drawing.Size
             Get
@@ -1731,7 +1789,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=331, Height=6}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=332, Height=6}.
         '''</summary>
         Public Shared ReadOnly Property ToolStripSeparator2_Size() As System.Drawing.Size
             Get
@@ -1741,7 +1799,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=331, Height=6}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=332, Height=6}.
         '''</summary>
         Public Shared ReadOnly Property ToolStripSeparator3_Size() As System.Drawing.Size
             Get
@@ -1761,7 +1819,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=331, Height=6}.
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Size ähnlich wie {Width=332, Height=6}.
         '''</summary>
         Public Shared ReadOnly Property ToolStripSeparator4_Size() As System.Drawing.Size
             Get

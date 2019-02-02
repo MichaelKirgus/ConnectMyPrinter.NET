@@ -476,6 +476,8 @@ Public Class PrinterCtl
             DruckerEntfernenlokalToolStripMenuItem.Visible = True
             ProfildateiErstellenverbindenToolStripMenuItem.Visible = True
             ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Visible = True
+            ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Visible = True
+            ProfildateiVersendenverbindenToolStripMenuItem.Visible = True
         Else
             DruckereinstellungenExportierenToolStripMenuItem.Visible = False
             DruckereinstellungenImportierenToolStripMenuItem.Visible = False
@@ -487,6 +489,8 @@ Public Class PrinterCtl
             DruckerEntfernenlokalToolStripMenuItem.Visible = False
             ProfildateiErstellenverbindenToolStripMenuItem.Visible = False
             ProfildateioErstellenentfernenUndVerbindenToolStripMenuItem.Visible = False
+            ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Visible = False
+            ProfildateiVersendenverbindenToolStripMenuItem.Visible = False
         End If
         SetSelectedState()
     End Sub
@@ -565,5 +569,29 @@ Public Class PrinterCtl
             End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub ProfildateiVersendenverbindenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfildateiVersendenverbindenToolStripMenuItem.Click
+        Dim ww As New ConnectMyPrinterRemoteFileHandler.RemoteFileCreator
+        Dim tmpfilename As String
+        tmpfilename = My.Computer.FileSystem.SpecialDirectories.Temp & "\Druckerprofil.prpr"
+        If IO.File.Exists(tmpfilename) Then
+            IO.File.Delete(tmpfilename)
+        End If
+        ww.CreateAddPrinterRemoteFile(tmpfilename, Me.Tag)
+        Dim kk As New ConnectMyPrinterOutlookHelper.OutlookHelperClass
+        kk.SendOutlookMail("Druckerprofil", "", tmpfilename)
+    End Sub
+
+    Private Sub ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfildateiVersendenentfernenUndVerbindenToolStripMenuItem.Click
+        Dim ww As New ConnectMyPrinterRemoteFileHandler.RemoteFileCreator
+        Dim tmpfilename As String
+        tmpfilename = My.Computer.FileSystem.SpecialDirectories.Temp & "\Druckerprofil.prpr"
+        If IO.File.Exists(tmpfilename) Then
+            IO.File.Delete(tmpfilename)
+        End If
+        ww.CreateRemoveAndAddPrinterRemoteFile(tmpfilename, Me.Tag)
+        Dim kk As New ConnectMyPrinterOutlookHelper.OutlookHelperClass
+        kk.SendOutlookMail("Druckerprofil", "", tmpfilename)
     End Sub
 End Class

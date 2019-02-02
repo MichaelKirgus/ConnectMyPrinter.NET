@@ -67,7 +67,6 @@
     <ApplicationIcon>killallprinters.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -183,6 +182,10 @@
     <ProjectReference Include="..\ConnectMyPrinterUserListLib\ConnectMyPrinterUserListLib.vbproj">
       <Project>{a015dd48-3a09-413e-8f95-0fa2a07e1190}</Project>
       <Name>ConnectMyPrinterUserListLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework\MetroFramework.csproj">
+      <Project>{bb41ac8b-cbed-4387-a7e0-4567edb3f57f}</Project>
+      <Name>MetroFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
