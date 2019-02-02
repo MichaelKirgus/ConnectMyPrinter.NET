@@ -8,8 +8,10 @@ Imports System.Security.Permissions
 Imports System.Windows.Forms
 Imports System.Xml.Serialization
 Imports ConnectMyPrinterAppSettingsHandler
+Imports ConnectMyPrinterBackupApp.BackupFrm
 Imports ConnectMyPrinterEnumerationLib
 Imports ConnectMyPrinterLanguageHelper
+Imports ConnectMyPrinterRemoteFileHandler
 
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> Public Class AppContext
     Inherits ApplicationContext
@@ -35,6 +37,7 @@ Imports ConnectMyPrinterLanguageHelper
     Public WithEvents TracePrinterProfileWorker As New BackgroundWorker
     Public WithEvents TracePrinterProfileWorkerStartup As New BackgroundWorker
     Public WithEvents TracePrinterProfileWatcher As New FileSystemWatcher
+    Public WithEvents BackupPrinterEnvironmentWorker As New BackgroundWorker
 
     Public AppSettings As New AppSettingsClass
     Public AppSettingFile As String = "AppSettings.xml"
@@ -100,23 +103,28 @@ Imports ConnectMyPrinterLanguageHelper
         If MainApp.AppSettings.UseTracePathFeature Then
             Debug.WriteLine("Use TracePath feature...")
             Try
-                If Not IO.Directory.Exists(MainApp.AppSettings.ActionsTracePath) Then
-                    IO.Directory.CreateDirectory(MainApp.AppSettings.ActionsTracePath)
+                If Not IO.Directory.Exists(Environment.ExpandEnvironmentVariables(MainApp.AppSettings.ActionsTracePath)) Then
+                    IO.Directory.CreateDirectory(Environment.ExpandEnvironmentVariables(MainApp.AppSettings.ActionsTracePath))
                 End If
 
-                TracePrinterProfileWatcher.Path = MainApp.AppSettings.ActionsTracePath
+                TracePrinterProfileWatcher.Path = Environment.ExpandEnvironmentVariables(MainApp.AppSettings.ActionsTracePath)
                 TracePrinterProfileWatcher.Filter = "*.prpr"
                 TracePrinterProfileWatcher.IncludeSubdirectories = False
 
                 If MainApp.AppSettings.ProcessActionsOnTrayStart Then
                     'Soll bei jedem Start das Verzeichnis durchsucht werden?
-                    TracePrinterProfileWorkerStartup.RunWorkerAsync(MainApp.AppSettings.ActionsTracePath)
+                    TracePrinterProfileWorkerStartup.RunWorkerAsync(Environment.ExpandEnvironmentVariables(MainApp.AppSettings.ActionsTracePath))
                 End If
 
                 TracePrinterProfileWatcher.EnableRaisingEvents = True
             Catch ex As Exception
                 Debug.WriteLine(Err.Description)
             End Try
+        End If
+
+        'Prüfen, ob Drucker in Profildatei nach Start der Anwendung gesichert werden sollen:
+        If MainApp.AppSettings.AutoBackupPrinterEnvironmentAtStartup And Not MainApp.AppSettings.AutoBackupPrinterEnvironmentPath = "" Then
+            BackupPrinterEnvironmentWorker.RunWorkerAsync()
         End If
 
         mnuLogo = New ToolStripLabel
@@ -232,6 +240,40 @@ Imports ConnectMyPrinterLanguageHelper
             Catch ex As Exception
             End Try
         Next
+    End Sub
+
+    Private Sub BackupPrinterEnvironmentWorkerDoWork() Handles BackupPrinterEnvironmentWorker.DoWork
+        Try
+            Dim dirstr As String
+            dirstr = Environment.ExpandEnvironmentVariables(MainApp.AppSettings.AutoBackupPrinterEnvironmentPath)
+
+            If Not IO.Directory.Exists(dirstr) Then
+                IO.Directory.CreateDirectory(dirstr)
+            End If
+
+            Dim filenamestr As String
+            filenamestr = Environment.ExpandEnvironmentVariables(MainApp.AppSettings.AutoBackupPrinterEnvironmentFilenameBegin)
+            filenamestr += "_" & Environment.MachineName & ".prpr"
+
+            If IO.File.Exists(filenamestr) Then
+                IO.File.Delete(filenamestr)
+            End If
+
+            Dim LocalPrinters As List(Of PrinterQueueInfo)
+            LocalPrinters = MainApp.LoadLocalPrinters()
+
+            Dim ConnectedPrinters As New List(Of PrinterQueueInfo)
+
+            For Each item As PrinterQueueInfo In LocalPrinters
+                If (Not item.Server = "Lokal") Or (Not item.Server = "Local") Then
+                    ConnectedPrinters.Add(item)
+                End If
+            Next
+
+            Dim RemoteFileService As New RemoteFileCreator
+            RemoteFileService.CreateMultiplePrinterRemoteFile(dirstr & "\" & filenamestr, ConnectedPrinters)
+        Catch ex As Exception
+        End Try
     End Sub
 
     Public Function DeleteOldEntries() As Boolean
@@ -392,6 +434,14 @@ Imports ConnectMyPrinterLanguageHelper
 
     Private Sub AppContext_ThreadExit(ByVal sender As Object, ByVal e As System.EventArgs) _
         Handles Me.ThreadExit
+
+        'Prüfen, ob Drucker in Profildatei bei dem Beenden der Trayanwendung gesichert werden sollen
+        If MainApp.AppSettings.AutoBackupPrinterEnvironmentAtLogout And Not MainApp.AppSettings.AutoBackupPrinterEnvironmentPath = "" Then
+            BackupPrinterEnvironmentWorker.RunWorkerAsync()
+            Do While BackupPrinterEnvironmentWorker.IsBusy
+            Loop
+        End If
+
         'Guarantees that the icon will not linger.
         Tray.Visible = False
     End Sub

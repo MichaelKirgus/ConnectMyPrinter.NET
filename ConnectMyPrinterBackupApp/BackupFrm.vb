@@ -113,7 +113,7 @@ Public Class BackupFrm
             Dim ConnectedPrinters As New List(Of PrinterQueueInfo)
 
             For Each item As PrinterQueueInfo In LocalPrinters
-                If Not item.Server = "Lokal" Then
+                If (Not item.Server = "Lokal") Or (Not item.Server = "Local") Then
                     ConnectedPrinters.Add(item)
                 End If
             Next

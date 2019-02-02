@@ -34,24 +34,18 @@ Partial Class BackupFrm
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(12, 29)
+        resources.ApplyResources(Me.ProgressBar1, "ProgressBar1")
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(408, 23)
         Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
-        Me.ProgressBar1.TabIndex = 3
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 11)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(377, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Bitte warten Sie, während die Drucker in einer Profildatei gespeichert werden..."
         '
         'SaveFileDialog1
         '
-        Me.SaveFileDialog1.Filter = "Profildatei|*.prpr"
+        resources.ApplyResources(Me.SaveFileDialog1, "SaveFileDialog1")
         Me.SaveFileDialog1.RestoreDirectory = True
         Me.SaveFileDialog1.SupportMultiDottedExtensions = True
         '
@@ -62,20 +56,17 @@ Partial Class BackupFrm
         '
         'FolderBrowserDialog1
         '
-        Me.FolderBrowserDialog1.Description = "Bitte wählen Sie einen Pfad, in welchem die Druckereinstellungen gespeichert werd" &
-    "en:"
+        resources.ApplyResources(Me.FolderBrowserDialog1, "FolderBrowserDialog1")
         '
         'NotifyIcon1
         '
         Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon1.Text = "ConnectMyPrinter.NET - Sichere Druckerumgebung..."
+        resources.ApplyResources(Me.NotifyIcon1, "NotifyIcon1")
         '
         'BackupFrm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(435, 64)
         Me.ControlBox = False
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label1)
@@ -84,8 +75,6 @@ Partial Class BackupFrm
         Me.MinimizeBox = False
         Me.Name = "BackupFrm"
         Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Drucker sichern..."
         Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
         Me.ResumeLayout(False)

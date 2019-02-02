@@ -102,6 +102,10 @@
       <Project>{AE01B7FF-C216-4752-B4FF-D6956A772D44}</Project>
       <Name>ConnectMyPrinterAppSettingsHandler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterBackupApp\ConnectMyPrinterBackupApp.vbproj">
+      <Project>{1ACECB39-366E-4186-B000-51D37F8C65F4}</Project>
+      <Name>ConnectMyPrinterBackupApp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
       <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
       <Name>ConnectMyPrinterEnumerationLib</Name>
@@ -113,6 +117,10 @@
     <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
       <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
       <Name>ConnectMyPrinterPrinterManageLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterRemoteFileHandler\ConnectMyPrinterRemoteFileHandler.vbproj">
+      <Project>{0D65D86F-F312-411C-93FA-879C49F0797F}</Project>
+      <Name>ConnectMyPrinterRemoteFileHandler</Name>
     </ProjectReference>
     <ProjectReference Include="..\MetroFramework\MetroFramework\MetroFramework.csproj">
       <Project>{bb41ac8b-cbed-4387-a7e0-4567edb3f57f}</Project>
