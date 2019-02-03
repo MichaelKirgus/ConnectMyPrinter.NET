@@ -225,8 +225,10 @@ Imports ConnectMyPrinterRemoteFileHandler
 
             If filename.StartsWith("REQ") Then
                 'Generiere Profildatei und lege diese temp. ab.
-                IO.File.Delete(filename)
-                FetchPrinterEnvironmentWorker.RunWorkerAsync()
+                If Not FetchPrinterEnvironmentWorker.IsBusy Then
+                    IO.File.Delete(filename)
+                    FetchPrinterEnvironmentWorker.RunWorkerAsync()
+                End If
             End If
         Catch ex As Exception
         End Try
@@ -246,8 +248,10 @@ Imports ConnectMyPrinterRemoteFileHandler
                 End If
                 If hh.Name.StartsWith("REQ") Then
                     'Generiere Profildatei und lege diese temp. ab.
-                    IO.File.Delete(item)
-                    FetchPrinterEnvironmentWorker.RunWorkerAsync()
+                    If Not FetchPrinterEnvironmentWorker.IsBusy Then
+                        IO.File.Delete(item)
+                        FetchPrinterEnvironmentWorker.RunWorkerAsync()
+                    End If
                 End If
             Catch ex As Exception
             End Try
