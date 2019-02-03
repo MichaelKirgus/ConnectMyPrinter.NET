@@ -478,6 +478,12 @@ Imports ConnectMyPrinterRemoteFileHandler
     Private Sub AppContext_ThreadExit(ByVal sender As Object, ByVal e As System.EventArgs) _
         Handles Me.ThreadExit
 
+        Try
+            TracePrinterProfileWatcher.EnableRaisingEvents = False
+            TracePrinterProfileWatcher.Dispose()
+        Catch ex As Exception
+        End Try
+
         'Prüfen, ob Drucker in Profildatei bei dem Beenden der Trayanwendung gesichert werden sollen
         If MainApp.AppSettings.AutoBackupPrinterEnvironmentAtLogout And Not MainApp.AppSettings.AutoBackupPrinterEnvironmentPath = "" Then
             BackupPrinterEnvironmentWorker.RunWorkerAsync()
@@ -533,11 +539,6 @@ Imports ConnectMyPrinterRemoteFileHandler
 
     Private Sub mnuExit_Click(ByVal sender As Object, ByVal e As System.EventArgs) _
         Handles mnuExit.Click
-        Try
-            TracePrinterProfileWatcher.EnableRaisingEvents = False
-            TracePrinterProfileWatcher.Dispose()
-        Catch ex As Exception
-        End Try
 
         ExitApplication()
     End Sub
