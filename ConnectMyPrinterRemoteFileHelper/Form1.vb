@@ -175,6 +175,15 @@ Public Class Form1
             If IO.File.Exists("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr") Then
                 Dim yy As New RemoteFileSerializer
                 RemoteFile = yy.LoadRemoteFile("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")
+
+                If AppSettings.IgnoreLocalPrintersAtRemoteFetching Then
+                    For index = 0 To RemoteFile.ConnectPrinters.Count - 1
+                        If RemoteFile.ConnectPrinters(index).Printserver = "Lokal" Or RemoteFile.ConnectPrinters(index).Printserver = "Local" Then
+                            RemoteFile.ConnectPrinters.Remove(RemoteFile.ConnectPrinters(index))
+                        End If
+                    Next
+                End If
+
                 PropertyGrid1.SelectedObject = Nothing
                 PropertyGrid1.SelectedObject = RemoteFile
 
@@ -248,7 +257,7 @@ Public Class Form1
     Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
         If ToolStripButton3.Checked Then
             SplitContainer1.Panel2Collapsed = False
-            Me.Height = 520
+            Me.Height = 550
         Else
             SplitContainer1.Panel2Collapsed = True
             Me.Height = 250

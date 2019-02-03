@@ -243,6 +243,8 @@ Imports ConnectMyPrinterEnumerationLib
     Property AutoBackupPrinterEnvironmentAtLogout As Boolean = False
     Property AutoBackupPrinterEnvironmentPath As String = ""
     Property AutoBackupPrinterEnvironmentFilenameBegin As String = ""
+    Property IgnoreLocalPrintersAtRemoteFetching As Boolean = True
+    Property IgnoreLocalPrintersAtAutoBackup As Boolean = True
 
     Public Enum DoubleClickActionOnPrinterItemAction
         DoNothing = 0
