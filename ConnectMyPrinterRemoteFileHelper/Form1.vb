@@ -1,7 +1,12 @@
-﻿Imports ConnectMyPrinterAppSettingsHandler
+﻿Imports System.Globalization
+Imports ConnectMyPrinterAppSettingsHandler
+Imports ConnectMyPrinterLanguageHelper
 Imports ConnectMyPrinterRemoteFileHandler
 
 Public Class Form1
+    Public MLangHelper As New LanguageApplyHelper
+    Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
+
     Public RemoteFile As New RemoteFileClass
     Public MainApp As New ConnectMyPrinter.NET.Form1
     Public AppSettings As New AppSettingsClass
@@ -71,7 +76,7 @@ Public Class Form1
     Public Sub ApplyPrinterConfigToClass()
         If Not RemoteFile.ConnectPrinters.Count = 0 Then
             Dim kk As MsgBoxResult
-            kk = MsgBox("Es ist bereits ein oder mehrere Drucker in der Konfiguration vorhanden. Drucker überschreiben?", MsgBoxStyle.YesNo)
+            kk = MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterAlreadyAddedStr", ""), MsgBoxStyle.YesNo)
 
             If kk = MsgBoxResult.Yes Then
                 RemoteFile.ConnectPrinters.Clear()
@@ -100,7 +105,7 @@ Public Class Form1
     Public Function PublishProfileToClient(ByVal Clientname As String, ByVal Username As String, ByVal LocalMachine As Boolean, ByVal Permanent As Boolean) As Boolean
         Try
             If Not AppSettings.UseTracePathFeature Then
-                MsgBox("Diese Funktion ist in der Einstellungsdatei clientseitig nicht aktiviert.", MsgBoxStyle.Exclamation)
+                MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterPushFeatureNotEnabledStr", ""), MsgBoxStyle.Exclamation)
                 Return False
             End If
 
@@ -126,18 +131,18 @@ Public Class Form1
                         options = "permanent"
                     End If
                     If LocalMachine Then
-                        filename = "\\" & clientlist(index) & AppSettings.ActionsTraceAdminPath & "\LM_" & uuid & "_" & options & ".prpr"
+                        filename = "\\" & clientlist(index) & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\LM_" & uuid & "_" & options & ".prpr"
                     Else
-                        filename = "\\" & clientlist(index) & AppSettings.ActionsTraceAdminPath & "\" & Username & "_" & uuid & "_" & options & ".prpr"
+                        filename = "\\" & clientlist(index) & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\" & Username & "_" & uuid & "_" & options & ".prpr"
                     End If
 
                     If IO.Directory.Exists("\\" & clientlist(index) & AppSettings.ActionsTraceAdminPath) Then
                         If Not IO.File.Exists(filename) Then
                             Dim yy As New RemoteFileSerializer
                             If yy.SaveRemoteFile(RemoteFile, filename) Then
-                                LogTxt += "Profildatei erfolgreich auf Client " & clientlist(index) & " veröffentlicht." & vbNewLine
+                                LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedSuccessStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedSuccessStr2", "") & vbNewLine
                             Else
-                                LogTxt += "Die Profildatei konnte nicht auf Client " & clientlist(index) & " geschrieben werden. Bitte Hostname überprüfen." & vbNewLine
+                                LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedFailStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedFailStr2", "") & vbNewLine
                             End If
                         End If
                     End If
@@ -152,6 +157,53 @@ Public Class Form1
         End Try
     End Function
 
+    Public Function RequestPrinterProfileFromClient(ByVal Clientname As String) As Boolean
+        Try
+            Dim uuid As String
+            uuid = Guid.NewGuid.ToString.Replace("{", "").Replace("}", "")
+
+            IO.File.WriteAllText("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\REQ_" & uuid & "_.prpr", "")
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function GetRequestedProfileFromClient(ByVal Clientname As String) As Boolean
+        Try
+            If IO.File.Exists("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr") Then
+                Dim yy As New RemoteFileSerializer
+                RemoteFile = yy.LoadRemoteFile("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")
+                PropertyGrid1.SelectedObject = Nothing
+                PropertyGrid1.SelectedObject = RemoteFile
+
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function LoadPrinterProfileFromClient(ByVal Clientname As String) As Boolean
+        Me.UseWaitCursor = True
+        RequestPrinterProfileFromClient(Clientname)
+        Dim counter As Integer = 0
+        Do Until (IO.File.Exists("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")) Or (counter = 350)
+            Application.DoEvents()
+            Threading.Thread.Sleep(10)
+            counter += 1
+        Loop
+        If GetRequestedProfileFromClient(Clientname) Then
+            Me.UseWaitCursor = False
+            Return True
+        End If
+        Me.UseWaitCursor = False
+        Return False
+    End Function
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ApplyPrinterConfigToClass()
         LoadNewRemoteFile()
@@ -164,14 +216,16 @@ Public Class Form1
             LoadNewRemoteFile()
             Dim yy As New RemoteFileSerializer
             Dim tmpfilename As String
-            tmpfilename = My.Computer.FileSystem.SpecialDirectories.Temp & "\Druckerprofil.prpr"
+            Dim translatedstr As String
+            translatedstr = MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "SendPrinterProfileNameStr", "")
+            tmpfilename = My.Computer.FileSystem.SpecialDirectories.Temp & "\" & translatedstr & ".prpr"
             If IO.File.Exists(tmpfilename) Then
                 IO.File.Delete(tmpfilename)
             End If
 
             yy.SaveRemoteFile(RemoteFile, tmpfilename)
             Dim MailHelper As New ConnectMyPrinterOutlookHelper.OutlookHelperClass
-            MailHelper.SendOutlookMail("Druckerprofil", "", tmpfilename)
+            MailHelper.SendOutlookMail(translatedstr, "", tmpfilename)
         Catch ex As Exception
         End Try
     End Sub
@@ -192,5 +246,14 @@ Public Class Form1
             SplitContainer1.Panel2Collapsed = True
             Me.Height = 250
         End If
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        LoadPrinterProfileFromClient(TextBox5.Text)
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        LoadPrinterProfileFromClient(TextBox5.Text)
+        ToolStripButton2.PerformClick()
     End Sub
 End Class

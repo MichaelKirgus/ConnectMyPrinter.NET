@@ -6547,4 +6547,79 @@
   <data name="SplitContainer1.SplitterWidth" xml:space="preserve" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="Button6.Anchor" xml:space="preserve" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="Button6.ImeMode" xml:space="preserve" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button6.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>201, 118</value>
+  </data>
+  <data name="Button6.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>133, 27</value>
+  </data>
+  <data name="Button6.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Button6.Text" xml:space="preserve">
+    <value>&amp;Load</value>
+  </data>
+  <data name="Button5.Anchor" xml:space="preserve" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="Button5.ImeMode" xml:space="preserve" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button5.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>340, 118</value>
+  </data>
+  <data name="Button5.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>133, 27</value>
+  </data>
+  <data name="Button5.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="Button5.Text" xml:space="preserve">
+    <value>&amp;Load and save</value>
+  </data>
+  <data name="GroupBox5.Dock" xml:space="preserve" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupBox5.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="GroupBox5.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>477, 42</value>
+  </data>
+  <data name="GroupBox5.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="TabPage3.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="TabPage3.Padding" xml:space="preserve" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabPage3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>483, 154</value>
+  </data>
+  <data name="TabPage3.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>Get profile from client</value>
+  </data>
+  <data name="TextBox5.Dock" xml:space="preserve" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="TextBox5.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="TextBox5.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="TextBox5.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
 </root>

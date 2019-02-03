@@ -38,6 +38,7 @@ Imports ConnectMyPrinterRemoteFileHandler
     Public WithEvents TracePrinterProfileWorkerStartup As New BackgroundWorker
     Public WithEvents TracePrinterProfileWatcher As New FileSystemWatcher
     Public WithEvents BackupPrinterEnvironmentWorker As New BackgroundWorker
+    Public WithEvents FetchPrinterEnvironmentWorker As New BackgroundWorker
 
     Public AppSettings As New AppSettingsClass
     Public AppSettingFile As String = "AppSettings.xml"
@@ -221,6 +222,12 @@ Imports ConnectMyPrinterRemoteFileHandler
                 RaiseProfileFileApply(obj1(1))
                 DeleteProfileFile(obj1(0), obj1(1))
             End If
+
+            If filename.StartsWith("REQ") Then
+                'Generiere Profildatei und lege diese temp. ab.
+                IO.File.Delete(filename)
+                FetchPrinterEnvironmentWorker.RunWorkerAsync()
+            End If
         Catch ex As Exception
         End Try
     End Sub
@@ -236,6 +243,11 @@ Imports ConnectMyPrinterRemoteFileHandler
                     'Gültige Datei erkannt
                     RaiseProfileFileApply(hh.FullName)
                     DeleteProfileFile(hh.Name, hh.FullName)
+                End If
+                If hh.Name.StartsWith("REQ") Then
+                    'Generiere Profildatei und lege diese temp. ab.
+                    IO.File.Delete(item)
+                    FetchPrinterEnvironmentWorker.RunWorkerAsync()
                 End If
             Catch ex As Exception
             End Try
@@ -272,6 +284,33 @@ Imports ConnectMyPrinterRemoteFileHandler
 
             Dim RemoteFileService As New RemoteFileCreator
             RemoteFileService.CreateMultiplePrinterRemoteFile(dirstr & "\" & filenamestr, ConnectedPrinters)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub FetchPrinterEnvironmentWorkerDoWork() Handles FetchPrinterEnvironmentWorker.DoWork
+        Try
+            Dim filenamestr As String
+            filenamestr = Environment.ExpandEnvironmentVariables(MainApp.AppSettings.ActionsTracePath)
+            filenamestr += "\" & "RESULT.prpr"
+
+            If IO.File.Exists(filenamestr) Then
+                IO.File.Delete(filenamestr)
+            End If
+
+            Dim LocalPrinters As List(Of PrinterQueueInfo)
+            LocalPrinters = MainApp.LoadLocalPrinters()
+
+            Dim ConnectedPrinters As New List(Of PrinterQueueInfo)
+
+            For Each item As PrinterQueueInfo In LocalPrinters
+                If (Not item.Server = "Lokal") Or (Not item.Server = "Local") Then
+                    ConnectedPrinters.Add(item)
+                End If
+            Next
+
+            Dim RemoteFileService As New RemoteFileCreator
+            RemoteFileService.CreateMultiplePrinterRemoteFile(filenamestr, ConnectedPrinters)
         Catch ex As Exception
         End Try
     End Sub

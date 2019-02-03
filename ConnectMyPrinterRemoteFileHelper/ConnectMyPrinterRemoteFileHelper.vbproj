@@ -111,6 +111,11 @@
     <Compile Include="ProcessDlg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TranslatedStrings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TranslatedStrings.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.de-DE.resx">
@@ -137,6 +142,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProcessDlg.resx">
       <DependentUpon>ProcessDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranslatedStrings.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TranslatedStrings.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +183,10 @@
     <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
       <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
       <Name>ConnectMyPrinterEnumerationLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterLanguageHelper\ConnectMyPrinterLanguageHelper.vbproj">
+      <Project>{24D22097-0588-43AA-93E8-D9408234B53F}</Project>
+      <Name>ConnectMyPrinterLanguageHelper</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterOutlookHelper\ConnectMyPrinterOutlookHelper.vbproj">
       <Project>{6e7264c3-52a0-4c0f-8ffd-d56758d7d991}</Project>

@@ -50,6 +50,11 @@ Partial Class Form1
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -62,6 +67,8 @@ Partial Class Form1
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -119,6 +126,7 @@ Partial Class Form1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -250,6 +258,39 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.Controls.Add(Me.PropertyGrid1)
         Me.SplitContainer1.Panel2Collapsed = True
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Button6)
+        Me.TabPage3.Controls.Add(Me.Button5)
+        Me.TabPage3.Controls.Add(Me.GroupBox5)
+        resources.ApplyResources(Me.TabPage3, "TabPage3")
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.TextBox5)
+        resources.ApplyResources(Me.GroupBox5, "GroupBox5")
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.TabStop = False
+        '
+        'TextBox5
+        '
+        resources.ApplyResources(Me.TextBox5, "TextBox5")
+        Me.TextBox5.Name = "TextBox5"
+        '
+        'Button5
+        '
+        resources.ApplyResources(Me.Button5, "Button5")
+        Me.Button5.Name = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        resources.ApplyResources(Me.Button6, "Button6")
+        Me.Button6.Name = "Button6"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         resources.ApplyResources(Me, "$this")
@@ -274,6 +315,9 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -306,4 +350,9 @@ Partial Class Form1
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripButton3 As ToolStripButton
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class

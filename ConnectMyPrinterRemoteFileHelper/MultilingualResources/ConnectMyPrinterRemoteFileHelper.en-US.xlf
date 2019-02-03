@@ -12504,7 +12504,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="PropertyGrid1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>491, 246</source>
+          <source>491, 25</source>
           <target state="needs-review-translation">491, 275</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12727,7 +12727,7 @@
           <target state="needs-review-translation">3, 3, 3, 3</target>
         </trans-unit>
         <trans-unit id="TabPage2.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>483, 404</source>
+          <source>483, 154</source>
           <target state="needs-review-translation">483, 168</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12745,7 +12745,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button3.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>340, 368</source>
+          <source>340, 118</source>
           <target state="needs-review-translation">340, 131</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12920,7 +12920,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="SplitContainer1.SplitterDistance" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
-          <source>180</source>
+          <source>151</source>
           <target state="needs-review-translation">198</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12947,6 +12947,147 @@
         <trans-unit id="SplitContainer1.SplitterWidth" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
           <source>2</source>
           <target state="needs-review-translation">2</target>
+        </trans-unit>
+        <trans-unit id="Button6.Anchor" translate="yes" xml:space="preserve" extype="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+          <source>Bottom, Right</source>
+          <target state="needs-review-translation">Bottom, Right</target>
+        </trans-unit>
+        <trans-unit id="Button6.ImeMode" translate="yes" xml:space="preserve" extype="System.Windows.Forms.ImeMode, System.Windows.Forms">
+          <source>NoControl</source>
+          <target state="needs-review-translation">NoControl</target>
+        </trans-unit>
+        <trans-unit id="Button6.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>201, 118</source>
+          <target state="needs-review-translation">201, 118</target>
+        </trans-unit>
+        <trans-unit id="Button6.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>133, 27</source>
+          <target state="needs-review-translation">133, 27</target>
+        </trans-unit>
+        <trans-unit id="Button6.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>11</source>
+          <target state="needs-review-translation">11</target>
+        </trans-unit>
+        <trans-unit id="Button6.Text" translate="yes" xml:space="preserve">
+          <source>&amp;Laden</source>
+          <target state="translated">&amp;Load</target>
+        </trans-unit>
+        <trans-unit id="Button5.Anchor" translate="yes" xml:space="preserve" extype="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+          <source>Bottom, Right</source>
+          <target state="needs-review-translation">Bottom, Right</target>
+        </trans-unit>
+        <trans-unit id="Button5.ImeMode" translate="yes" xml:space="preserve" extype="System.Windows.Forms.ImeMode, System.Windows.Forms">
+          <source>NoControl</source>
+          <target state="needs-review-translation">NoControl</target>
+        </trans-unit>
+        <trans-unit id="Button5.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>340, 118</source>
+          <target state="needs-review-translation">340, 118</target>
+        </trans-unit>
+        <trans-unit id="Button5.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>133, 27</source>
+          <target state="needs-review-translation">133, 27</target>
+        </trans-unit>
+        <trans-unit id="Button5.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>10</source>
+          <target state="needs-review-translation">10</target>
+        </trans-unit>
+        <trans-unit id="Button5.Text" translate="yes" xml:space="preserve">
+          <source>&amp;Laden und speichern</source>
+          <target state="translated">&amp;Load and save</target>
+        </trans-unit>
+        <trans-unit id="GroupBox5.Dock" translate="yes" xml:space="preserve" extype="System.Windows.Forms.DockStyle, System.Windows.Forms">
+          <source>Top</source>
+          <target state="needs-review-translation">Top</target>
+        </trans-unit>
+        <trans-unit id="GroupBox5.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>3, 3</source>
+          <target state="needs-review-translation">3, 3</target>
+        </trans-unit>
+        <trans-unit id="GroupBox5.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>477, 42</source>
+          <target state="needs-review-translation">477, 42</target>
+        </trans-unit>
+        <trans-unit id="GroupBox5.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>8</source>
+          <target state="needs-review-translation">8</target>
+        </trans-unit>
+        <trans-unit id="GroupBox5.Text" translate="yes" xml:space="preserve">
+          <source>Client</source>
+          <target state="new">Client</target>
+        </trans-unit>
+        <trans-unit id="TabPage3.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>4, 22</source>
+          <target state="needs-review-translation">4, 22</target>
+        </trans-unit>
+        <trans-unit id="TabPage3.Padding" translate="yes" xml:space="preserve" extype="System.Windows.Forms.Padding, System.Windows.Forms">
+          <source>3, 3, 3, 3</source>
+          <target state="needs-review-translation">3, 3, 3, 3</target>
+        </trans-unit>
+        <trans-unit id="TabPage3.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>483, 154</source>
+          <target state="needs-review-translation">483, 154</target>
+        </trans-unit>
+        <trans-unit id="TabPage3.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>2</source>
+          <target state="needs-review-translation">2</target>
+        </trans-unit>
+        <trans-unit id="TabPage3.Text" translate="yes" xml:space="preserve">
+          <source>Profil von Client laden</source>
+          <target state="translated">Get profile from client</target>
+        </trans-unit>
+        <trans-unit id="TextBox5.Dock" translate="yes" xml:space="preserve" extype="System.Windows.Forms.DockStyle, System.Windows.Forms">
+          <source>Top</source>
+          <target state="needs-review-translation">Top</target>
+        </trans-unit>
+        <trans-unit id="TextBox5.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>3, 16</source>
+          <target state="needs-review-translation">3, 16</target>
+        </trans-unit>
+        <trans-unit id="TextBox5.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>471, 20</source>
+          <target state="needs-review-translation">471, 20</target>
+        </trans-unit>
+        <trans-unit id="TextBox5.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>0</source>
+          <target state="needs-review-translation">0</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERREMOTEFILEHELPER/TRANSLATEDSTRINGS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERREMOTEFILEHELPER/TRANSLATEDSTRINGS.RESX" datatype="resx">
+        <trans-unit id="PrinterAlreadyAddedStr" translate="yes" xml:space="preserve">
+          <source>Es ist bereits ein oder mehrere Drucker in der Konfiguration vorhanden. Drucker überschreiben?</source>
+          <target state="translated">There are printers already in the collection. Do you want to overwrite?</target>
+        </trans-unit>
+        <trans-unit id="PrinterPushFeatureNotEnabledStr" translate="yes" xml:space="preserve">
+          <source>Diese Funktion ist in der Einstellungsdatei clientseitig nicht aktiviert.</source>
+          <target state="translated">This function is currentyl disabled.</target>
+        </trans-unit>
+        <trans-unit id="ProfilePublishedFailStr1" translate="yes" xml:space="preserve">
+          <source>Die Profildatei konnte nicht auf Client </source>
+          <target state="translated">Failed applying profile to client </target>
+        </trans-unit>
+        <trans-unit id="ProfilePublishedFailStr2" translate="yes" xml:space="preserve">
+          <source> geschrieben werden. Bitte Hostname überprüfen.</source>
+          <target state="translated">. Please check hostname.</target>
+        </trans-unit>
+        <trans-unit id="ProfilePublishedSuccessStr1" translate="yes" xml:space="preserve">
+          <source>Profildatei erfolgreich auf Client </source>
+          <target state="translated">Sucessfully applied profile on client </target>
+        </trans-unit>
+        <trans-unit id="ProfilePublishedSuccessStr2" translate="yes" xml:space="preserve">
+          <source> veröffentlicht.</source>
+          <target state="translated">.</target>
+        </trans-unit>
+        <trans-unit id="SendPrinterProfileNameStr" translate="yes" xml:space="preserve">
+          <source>Druckerprofil</source>
+          <target state="translated">Printer profile</target>
         </trans-unit>
       </group>
     </body>
