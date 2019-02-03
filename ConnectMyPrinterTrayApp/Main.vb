@@ -533,6 +533,12 @@ Imports ConnectMyPrinterRemoteFileHandler
 
     Private Sub mnuExit_Click(ByVal sender As Object, ByVal e As System.EventArgs) _
         Handles mnuExit.Click
+        Try
+            TracePrinterProfileWatcher.EnableRaisingEvents = False
+            TracePrinterProfileWatcher.Dispose()
+        Catch ex As Exception
+        End Try
+
         ExitApplication()
     End Sub
 
