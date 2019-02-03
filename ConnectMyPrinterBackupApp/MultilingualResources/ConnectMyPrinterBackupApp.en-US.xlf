@@ -2913,4 +2913,41 @@
       </group>
     </body>
   </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERBACKUPAPP/TRANSLATEDSTRINGS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERBACKUPAPP/TRANSLATEDSTRINGS.RESX" datatype="resx">
+        <trans-unit id="ExportPrinterSettingsMessageStr" translate="yes" xml:space="preserve">
+          <source>Möchten Sie zusätzlich die Druckereinstellungen exportieren?</source>
+          <target state="translated">Do you want to export the printer settings?</target>
+        </trans-unit>
+        <trans-unit id="NoPrinterToSaveFoundStr" translate="yes" xml:space="preserve">
+          <source>Es konnten keine Drucker gefunden werden, welche in einer Profildatei gespeichert werden könnten. Bitte beachten Sie, dass keine lokalen Drucker gesichert werden können.</source>
+          <target state="translated">No connected printers where found. Please notice, that only connected printers (no lokal printers) can saved.</target>
+        </trans-unit>
+        <trans-unit id="PrinterSavingFailStr" translate="yes" xml:space="preserve">
+          <source>Die Drucker konnten nicht in eine Profildatei gesichert werden!</source>
+          <target state="translated">The printers profile export failed!</target>
+        </trans-unit>
+        <trans-unit id="PrinterSavingFinishedStr" translate="yes" xml:space="preserve">
+          <source>Die Drucker werden mit einem Doppelklick auf die Profildatei automatisch verbunden. Anzahl der gespeicherten Drucker: </source>
+          <target state="translated">Printer saving successfull. Number of saved printers: </target>
+        </trans-unit>
+        <trans-unit id="PrintingEnvSaveFinishedTextStr" translate="yes" xml:space="preserve">
+          <source>Die Druckerumgebung wurde gesichert.</source>
+          <target state="translated">The printing environment was saved.</target>
+        </trans-unit>
+        <trans-unit id="PrintingEnvSaveTextStr" translate="yes" xml:space="preserve">
+          <source>Die Druckerumgebung wird gesichert, bitte warten...</source>
+          <target state="translated">Saving printing environment, please wait...</target>
+        </trans-unit>
+        <trans-unit id="PrintingEnvSaveTitleStr" translate="yes" xml:space="preserve">
+          <source>Druckerumgebung sichern</source>
+          <target state="translated">Saving printing environment</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
 </xliff>

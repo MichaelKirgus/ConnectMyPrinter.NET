@@ -1,11 +1,15 @@
-﻿Imports System.Windows.Forms
+﻿Imports System.Globalization
+Imports System.Windows.Forms
 Imports ConnectMyPrinter.NET
 Imports ConnectMyPrinterAppSettingsHandler
 Imports ConnectMyPrinterEnumerationLib
+Imports ConnectMyPrinterLanguageHelper
 Imports ConnectMyPrinterPrinterManageLib
 Imports ConnectMyPrinterRemoteFileHandler
 
 Public Class BackupFrm
+    Public MLangHelper As New LanguageApplyHelper
+    Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
 
     Dim AppSettings As New AppSettingsClass
     Dim PrinterManageService As New ManagePrinter
@@ -63,16 +67,16 @@ Public Class BackupFrm
             End If
 
             Dim hh As MsgBoxResult
-                hh = MsgBox("Möchten Sie zusätzlich die Druckereinstellungen exportieren?", MsgBoxStyle.YesNo)
+            hh = MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterBackupApp.TranslatedStrings", GetType(BackupFrm), MCultureInf, "ExportPrinterSettingsMessageStr", ""), MsgBoxStyle.YesNo)
 
-                If hh = MsgBoxResult.Yes Then
-                    FolderBrowserDialog1.ShowDialog()
-                End If
+            If hh = MsgBoxResult.Yes Then
+                FolderBrowserDialog1.ShowDialog()
+            End If
 
-                Me.WindowState = FormWindowState.Normal
-                Me.Height += 35
-                Me.Width += 5
-                Application.DoEvents()
+            Me.WindowState = FormWindowState.Normal
+            Me.Height += 35
+            Me.Width += 5
+            Application.DoEvents()
 
             If Not SaveFileDialog1.FileName = "" Then
                 BWork.BackupFilePath = SaveFileDialog1.FileName
@@ -81,16 +85,17 @@ Public Class BackupFrm
                 BackgroundWorker1.RunWorkerAsync(BWork)
             Else
                 Application.Exit()
-                End If
-            Else
-                'Es wurde eine Datei für die Sicherung übergeben, führe alle Aktionen ohne GUI aus...
-                Silent = True
+            End If
+        Else
+            'Es wurde eine Datei für die Sicherung übergeben, führe alle Aktionen ohne GUI aus...
+            Silent = True
             BWork.BackupFilePath = BackupFilePath
             BWork.PrinterSettingsFolder = PrinterSettingsBackupPath
 
             If ShowNotifys Then
                 NotifyIcon1.Visible = True
-                NotifyIcon1.ShowBalloonTip(1000, "Druckerumgebung sichern", "Die Druckerumgebung wird gesichert, bitte warten...", ToolTipIcon.Info)
+                NotifyIcon1.ShowBalloonTip(1000, MLangHelper.GetCultureString("ConnectMyPrinterBackupApp.TranslatedStrings", GetType(BackupFrm), MCultureInf, "PrintingEnvSaveTitleStr", ""),
+                                           MLangHelper.GetCultureString("ConnectMyPrinterBackupApp.TranslatedStrings", GetType(BackupFrm), MCultureInf, "PrintingEnvSaveTextStr", ""), ToolTipIcon.Info)
             End If
 
             BackgroundWorker1.RunWorkerAsync(BWork)
@@ -146,19 +151,20 @@ Public Class BackupFrm
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         Try
             If ShowNotifys Then
-                NotifyIcon1.ShowBalloonTip(1000, "Druckerumgebung sichern", "Die Druckerumgebung wurde gesichert.", ToolTipIcon.Info)
+                NotifyIcon1.ShowBalloonTip(1000, MLangHelper.GetCultureString("ConnectMyPrinterBackupApp.TranslatedStrings", GetType(BackupFrm), MCultureInf, "PrintingEnvSaveTitleStr", ""),
+                                           MLangHelper.GetCultureString("ConnectMyPrinterBackupApp.TranslatedStrings", GetType(BackupFrm), MCultureInf, "PrintingEnvSaveFinishedTextStr", ""), ToolTipIcon.Info)
             End If
 
             If Silent = False Then
                 Me.TopMost = False
                 If e.Result = 0 Then
-                    MsgBox("Es konnten keine Drucker gefunden werden, welche in einer Profildatei gespeichert werden könnten. Bitte beachten Sie, dass keine lokalen Drucker gesichert werden können.", MsgBoxStyle.Exclamation)
+                    MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterBackupApp.TranslatedStrings", GetType(BackupFrm), MCultureInf, "NoPrinterToSaveFoundStr", ""), MsgBoxStyle.Exclamation)
                     Exit Try
                 End If
                 If e.Result = -1 Then
-                    MsgBox("Die Drucker konnten nicht in eine Profildatei gesichert werden!", MsgBoxStyle.Critical)
+                    MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterBackupApp.TranslatedStrings", GetType(BackupFrm), MCultureInf, "PrinterSavingFailStr", ""), MsgBoxStyle.Critical)
                 Else
-                    MsgBox("Es wurden erfolgreich " & e.Result & " Drucker in eine Profildatei gesichert. Die Drucker werden mit einem Doppelklick auf die Profildatei automatisch verbunden.", MsgBoxStyle.Information)
+                    MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterBackupApp.TranslatedStrings", GetType(BackupFrm), MCultureInf, "PrinterSavingFinishedStr", "") & e.Result, MsgBoxStyle.Information)
                 End If
             End If
         Catch ex As Exception

@@ -40,7 +40,7 @@
         </trans-unit>
         <trans-unit id="MetroLabel1.Text" translate="yes" xml:space="preserve">
           <source>ConnectMyPrinter.NET</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ConnectMyPrinter.NET</target>
+          <target state="translated">ConnectMyPrinter.NET</target>
         </trans-unit>
         <trans-unit id="MetroLabel2.AutoSize" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
           <source>True</source>
@@ -15429,7 +15429,7 @@ administrator.</target>
         </trans-unit>
         <trans-unit id="PrinterCollectCountText" translate="yes" xml:space="preserve">
           <source> Drucker gefunden.</source>
-          <target state="translated">Printer found.</target>
+          <target state="translated"> printers found.</target>
         </trans-unit>
         <trans-unit id="PrinterCollectFinishedText" translate="yes" xml:space="preserve">
           <source>Drucker geladen, bitte suchen.</source>

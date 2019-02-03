@@ -1,8 +1,12 @@
-﻿Imports System.IO
+﻿Imports System.Globalization
+Imports System.IO
 Imports System.Xml.Serialization
 Imports ConnectMyPrinterAppSettingsHandler
+Imports ConnectMyPrinterLanguageHelper
 
 Public Class Form1
+    Public MLangHelper As New LanguageApplyHelper
+    Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
 
     Public AppSettings As New AppSettingsClass
     Public AppSettingFile As String = "AppSettings.xml"
@@ -76,7 +80,7 @@ Public Class Form1
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim jj As MsgBoxResult
-        jj = MsgBox("Möchten Sie die Änderungen speichern?", MsgBoxStyle.YesNo)
+        jj = MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterSettingsConsole.TranslatedStrings", GetType(Form1), MCultureInf, "SaveSettingsStr", ""), MsgBoxStyle.YesNo)
         If jj = MsgBoxResult.Yes Then
             SaveSettings(AppSettings, AppSettingFile)
         End If

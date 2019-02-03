@@ -28,65 +28,52 @@ Partial Class Form1
         Me.DateiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DateiÖffnenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DateiSpeichernToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PropertyGrid1
         '
-        Me.PropertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertyGrid1.Location = New System.Drawing.Point(0, 27)
+        resources.ApplyResources(Me.PropertyGrid1, "PropertyGrid1")
         Me.PropertyGrid1.Name = "PropertyGrid1"
-        Me.PropertyGrid1.Size = New System.Drawing.Size(497, 472)
-        Me.PropertyGrid1.TabIndex = 0
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.ToolStripTextBox1})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(497, 27)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'DateiToolStripMenuItem
         '
         Me.DateiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiÖffnenToolStripMenuItem, Me.DateiSpeichernToolStripMenuItem})
         Me.DateiToolStripMenuItem.Name = "DateiToolStripMenuItem"
-        Me.DateiToolStripMenuItem.Size = New System.Drawing.Size(46, 23)
-        Me.DateiToolStripMenuItem.Text = "&Datei"
+        resources.ApplyResources(Me.DateiToolStripMenuItem, "DateiToolStripMenuItem")
         '
         'DateiÖffnenToolStripMenuItem
         '
         Me.DateiÖffnenToolStripMenuItem.Name = "DateiÖffnenToolStripMenuItem"
-        Me.DateiÖffnenToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.DateiÖffnenToolStripMenuItem.Text = "Datei öffnen..."
+        resources.ApplyResources(Me.DateiÖffnenToolStripMenuItem, "DateiÖffnenToolStripMenuItem")
         '
         'DateiSpeichernToolStripMenuItem
         '
         Me.DateiSpeichernToolStripMenuItem.Name = "DateiSpeichernToolStripMenuItem"
-        Me.DateiSpeichernToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.DateiSpeichernToolStripMenuItem.Text = "Datei speichern..."
+        resources.ApplyResources(Me.DateiSpeichernToolStripMenuItem, "DateiSpeichernToolStripMenuItem")
         '
         'ToolStripTextBox1
         '
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        Me.ToolStripTextBox1.Size = New System.Drawing.Size(300, 23)
+        resources.ApplyResources(Me.ToolStripTextBox1, "ToolStripTextBox1")
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(497, 499)
         Me.Controls.Add(Me.PropertyGrid1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Einstellungen"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
