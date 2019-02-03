@@ -162,7 +162,7 @@ Public Class Form1
             Dim uuid As String
             uuid = Guid.NewGuid.ToString.Replace("{", "").Replace("}", "")
 
-            IO.File.WriteAllText("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\REQ_" & uuid & "_.prpr", "")
+            IO.File.WriteAllText("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\REQ_" & uuid & "_.prpr", "")
 
             Return True
         Catch ex As Exception
@@ -174,7 +174,7 @@ Public Class Form1
         Try
             If IO.File.Exists("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr") Then
                 Dim yy As New RemoteFileSerializer
-                RemoteFile = yy.LoadRemoteFile("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")
+                RemoteFile = yy.LoadRemoteFile("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")
                 PropertyGrid1.SelectedObject = Nothing
                 PropertyGrid1.SelectedObject = RemoteFile
 
@@ -189,18 +189,25 @@ Public Class Form1
 
     Public Function LoadPrinterProfileFromClient(ByVal Clientname As String) As Boolean
         Me.UseWaitCursor = True
+        Application.DoEvents()
         RequestPrinterProfileFromClient(Clientname)
         Dim counter As Integer = 0
-        Do Until (IO.File.Exists("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")) Or (counter = 350)
+        Do Until (IO.File.Exists("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")) Or (counter = 500)
             Application.DoEvents()
             Threading.Thread.Sleep(10)
             counter += 1
         Loop
-        If GetRequestedProfileFromClient(Clientname) Then
-            Me.UseWaitCursor = False
-            Return True
+        If Not counter = 500 Then
+            Threading.Thread.Sleep(250)
+            If GetRequestedProfileFromClient(Clientname) Then
+                IO.File.Delete("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")
+                Me.UseWaitCursor = False
+                Return True
+            End If
         End If
+
         Me.UseWaitCursor = False
+        Application.DoEvents()
         Return False
     End Function
 
