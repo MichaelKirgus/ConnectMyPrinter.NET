@@ -172,20 +172,25 @@ Public Class Form1
 
     Public Function GetRequestedProfileFromClient(ByVal Clientname As String) As Boolean
         Try
-            If IO.File.Exists("\\" & Clientname & "\" & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr") Then
+            If IO.File.Exists("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr") Then
+                Debug.WriteLine("File exists")
                 Dim yy As New RemoteFileSerializer
                 RemoteFile = yy.LoadRemoteFile("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")
 
                 If AppSettings.IgnoreLocalPrintersAtRemoteFetching Then
-                    For index = 0 To RemoteFile.ConnectPrinters.Count - 1
-                        If RemoteFile.ConnectPrinters(index).Printserver = "Lokal" Or RemoteFile.ConnectPrinters(index).Printserver = "Local" Then
-                            RemoteFile.ConnectPrinters.Remove(RemoteFile.ConnectPrinters(index))
-                        End If
-                    Next
-                End If
+                    If Not RemoteFile.ConnectPrinters.Count = 0 Then
+                        Dim newcoll As New List(Of RemoteFilePrinterConnectItem)
 
-                PropertyGrid1.SelectedObject = Nothing
-                PropertyGrid1.SelectedObject = RemoteFile
+                        For Each item As RemoteFilePrinterConnectItem In RemoteFile.ConnectPrinters
+                            If (Not item.Printserver = "Lokal") And (Not item.Printserver = "Local") And (Not item.Printserver.ToLower = Clientname.ToLower) Then
+                                newcoll.Add(item)
+                            End If
+                        Next
+
+                        RemoteFile.ConnectPrinters.Clear()
+                        RemoteFile.ConnectPrinters = newcoll
+                    End If
+                End If
 
                 Return True
             Else
@@ -196,20 +201,41 @@ Public Class Form1
         End Try
     End Function
 
+    Public Function CleanOldRequestFiles(ByVal Clientname As String) As Boolean
+        Try
+            For Each item As String In IO.Directory.GetFiles("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath))
+                Dim kk As New IO.FileInfo(item)
+                If kk.Name.StartsWith("REQ") Then
+                    IO.File.Delete(item)
+                End If
+            Next
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
     Public Function LoadPrinterProfileFromClient(ByVal Clientname As String) As Boolean
         Me.UseWaitCursor = True
         Application.DoEvents()
         RequestPrinterProfileFromClient(Clientname)
         Dim counter As Integer = 0
-        Do Until (IO.File.Exists("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")) Or (counter = 500)
+        Debug.WriteLine("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")
+
+        Do Until counter = 500
             Application.DoEvents()
             Threading.Thread.Sleep(10)
+            If IO.File.Exists("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr") Then
+                Exit Do
+            End If
             counter += 1
         Loop
         If Not counter = 500 Then
-            Threading.Thread.Sleep(250)
+            Threading.Thread.Sleep(150)
             If GetRequestedProfileFromClient(Clientname) Then
                 IO.File.Delete("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettings.ActionsTraceAdminPath) & "\RESULT.prpr")
+                CleanOldRequestFiles(Clientname)
                 Me.UseWaitCursor = False
                 Return True
             End If
@@ -221,8 +247,6 @@ Public Class Form1
     End Function
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        ApplyPrinterConfigToClass()
-        LoadNewRemoteFile()
         PublishProfileToClient(TextBox3.Text, TextBox4.Text, CheckBox2.Checked, CheckBox3.Checked)
     End Sub
 
@@ -258,6 +282,7 @@ Public Class Form1
         If ToolStripButton3.Checked Then
             SplitContainer1.Panel2Collapsed = False
             Me.Height = 550
+            SplitContainer1.SplitterDistance = 185
         Else
             SplitContainer1.Panel2Collapsed = True
             Me.Height = 250
@@ -265,11 +290,46 @@ Public Class Form1
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        LoadPrinterProfileFromClient(TextBox5.Text)
+        TextBox5.BackColor = Color.LightGray
+        If LoadPrinterProfileFromClient(TextBox5.Text) Then
+            TextBox5.BackColor = Color.LightGreen
+        Else
+            TextBox5.BackColor = Color.LightCoral
+        End If
+        PropertyGrid1.SelectedObject = Nothing
+        PropertyGrid1.SelectedObject = RemoteFile
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        LoadPrinterProfileFromClient(TextBox5.Text)
+        TextBox5.BackColor = Color.LightGray
+        If LoadPrinterProfileFromClient(TextBox5.Text) Then
+            TextBox5.BackColor = Color.LightGreen
+        Else
+            TextBox5.BackColor = Color.LightCoral
+        End If
+        PropertyGrid1.SelectedObject = Nothing
+        PropertyGrid1.SelectedObject = RemoteFile
         ToolStripButton2.PerformClick()
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        ApplyPrinterConfigToClass()
+        LoadNewRemoteFile()
+        PublishProfileToClient(TextBox3.Text, TextBox4.Text, CheckBox2.Checked, CheckBox3.Checked)
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        If TextBox4.Text = "" Then
+            CheckBox2.Checked = True
+        End If
+
+        TextBox6.BackColor = Color.LightGray
+        TextBox7.BackColor = Color.LightGray
+        If LoadPrinterProfileFromClient(TextBox6.Text) Then
+            TextBox6.BackColor = Color.LightGreen
+            If PublishProfileToClient(TextBox7.Text, TextBox4.Text, CheckBox2.Checked, CheckBox3.Checked) Then
+                TextBox7.BackColor = Color.LightGreen
+            End If
+        End If
     End Sub
 End Class

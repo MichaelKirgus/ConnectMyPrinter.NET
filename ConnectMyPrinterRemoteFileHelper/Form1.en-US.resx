@@ -6541,12 +6541,6 @@
   <data name="ToolStripButton3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>23, 28</value>
   </data>
-  <data name="SplitContainer1.IsSplitterFixed" xml:space="preserve" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="SplitContainer1.SplitterWidth" xml:space="preserve" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="Button6.Anchor" xml:space="preserve" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -6620,6 +6614,120 @@
     <value>471, 20</value>
   </data>
   <data name="TextBox5.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="SplitContainer1.Panel2MinSize" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="$this.MinimumSize" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>507, 250</value>
+  </data>
+  <data name="SplitContainer1.Panel1MinSize" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Button8.Anchor" xml:space="preserve" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="Button8.ImeMode" xml:space="preserve" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button8.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>340, 118</value>
+  </data>
+  <data name="Button8.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>133, 27</value>
+  </data>
+  <data name="Button8.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Button8.Text" xml:space="preserve">
+    <value>&amp;Transfer</value>
+  </data>
+  <data name="GroupBox7.Dock" xml:space="preserve" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupBox7.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>3, 45</value>
+  </data>
+  <data name="GroupBox7.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>477, 42</value>
+  </data>
+  <data name="GroupBox7.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="GroupBox7.Text" xml:space="preserve">
+    <value>Client (Destination)</value>
+  </data>
+  <data name="GroupBox6.Dock" xml:space="preserve" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupBox6.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="GroupBox6.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>477, 42</value>
+  </data>
+  <data name="GroupBox6.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="GroupBox6.Text" xml:space="preserve">
+    <value>Client (Target)</value>
+  </data>
+  <data name="TabPage4.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="TabPage4.Padding" xml:space="preserve" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabPage4.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>483, 154</value>
+  </data>
+  <data name="TabPage4.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="TabPage4.Text" xml:space="preserve">
+    <value>Clone profile</value>
+  </data>
+  <data name="Button7.Anchor" xml:space="preserve" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="Button7.ImeMode" xml:space="preserve" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button7.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>340, 118</value>
+  </data>
+  <data name="Button7.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>133, 27</value>
+  </data>
+  <data name="Button7.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="Button7.Text" xml:space="preserve">
+    <value>&amp;Build and apply</value>
+  </data>
+  <data name="TextBox6.Dock" xml:space="preserve" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="TextBox6.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="TextBox6.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="TextBox6.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox7.Dock" xml:space="preserve" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="TextBox7.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="TextBox7.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="TextBox7.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
 </root>
