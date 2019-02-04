@@ -6748,6 +6748,9 @@
   <data name="Button9.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
+  <data name="Button9.Text" xml:space="preserve">
+    <value>&amp;Send...</value>
+  </data>
   <data name="ToolStripButton4.ImageTransparentColor" xml:space="preserve" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -6757,16 +6760,25 @@
   <data name="LöscheAlleZuVerbindenendenDruckerToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>321, 22</value>
   </data>
+  <data name="LöscheAlleZuVerbindenendenDruckerToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete all "added" printers from collection</value>
+  </data>
   <data name="ToolStripSeparator3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>318, 6</value>
   </data>
   <data name="SetzeProfilZurückToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>321, 22</value>
   </data>
+  <data name="SetzeProfilZurückToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reset profile</value>
+  </data>
   <data name="ToolStripButton5.ImageTransparentColor" xml:space="preserve" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton5.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>23, 28</value>
+  </data>
+  <data name="ToolStripButton5.Text" xml:space="preserve">
+    <value>Reset input fields</value>
   </data>
 </root>

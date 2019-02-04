@@ -1254,7 +1254,7 @@ Public Class Form1
 
     Private Sub LocalPrinterChangeTimer_Tick(sender As Object, e As EventArgs) Handles LocalPrinterChangeTimer.Tick
         Try
-            If (Application.OpenForms.Count = 1) And LoadAllLocalPrinters.IsBusy = False Then
+            If (Application.OpenForms.Count = 1 Or Application.OpenForms.Count = 2) And LoadAllLocalPrinters.IsBusy = False Then
                 LocalPrinterIdleWorker.RunWorkerAsync()
                 LocalPrinterChangeTimer.Stop()
             Else
