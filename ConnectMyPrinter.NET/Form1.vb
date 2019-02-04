@@ -533,7 +533,7 @@ Public Class Form1
                             End If
                         End If
                     Catch ex As Exception
-                        'Eine Ping Exception ist aufgetreten, Host oder Netzwertk nicht erreichbar...
+                        'Eine Ping Exception ist aufgetreten, Host oder Netzwerk nicht erreichbar...
                         PrinterCollectReturnState = 2
                         If AppSettings.CancelCollectionOnPrintServerNotAvailable Then
                             If timeout.IsRunning Then
@@ -1254,7 +1254,7 @@ Public Class Form1
 
     Private Sub LocalPrinterChangeTimer_Tick(sender As Object, e As EventArgs) Handles LocalPrinterChangeTimer.Tick
         Try
-            If (Application.OpenForms.Count = 2) And LoadAllLocalPrinters.IsBusy = False Then
+            If (Application.OpenForms.Count = 1) And LoadAllLocalPrinters.IsBusy = False Then
                 LocalPrinterIdleWorker.RunWorkerAsync()
                 LocalPrinterChangeTimer.Stop()
             Else
@@ -1280,7 +1280,25 @@ Public Class Form1
             Dim jj As List(Of PrinterQueueInfo)
             jj = e.Result
 
-            If LocalPrinters.Count = jj.Count Then
+            'Was war der alte Standarddrucker?
+            Dim olddef As String = ""
+            For index = 0 To jj.Count - 1
+                If LocalPrinters(index).DefaultPrinter Then
+                    olddef = LocalPrinters(index).ShareName
+                    Exit For
+                End If
+            Next
+
+            'Was ist jetzt der Standarddrucker?
+            Dim newdef As String = ""
+            For index = 0 To jj.Count - 1
+                If jj(index).DefaultPrinter Then
+                    newdef = jj(index).ShareName
+                    Exit For
+                End If
+            Next
+
+            If (LocalPrinters.Count = jj.Count) And (newdef = olddef) Then
             Else
                 ReloadLocalPrinters()
             End If

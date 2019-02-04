@@ -6730,4 +6730,43 @@
   <data name="TextBox7.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="ToolStripSeparator2.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>6, 31</value>
+  </data>
+  <data name="Button9.Anchor" xml:space="preserve" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="Button9.ImeMode" xml:space="preserve" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button9.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>243, 118</value>
+  </data>
+  <data name="Button9.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>78, 27</value>
+  </data>
+  <data name="Button9.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="ToolStripButton4.ImageTransparentColor" xml:space="preserve" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ToolStripButton4.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>32, 28</value>
+  </data>
+  <data name="LöscheAlleZuVerbindenendenDruckerToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>321, 22</value>
+  </data>
+  <data name="ToolStripSeparator3.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>318, 6</value>
+  </data>
+  <data name="SetzeProfilZurückToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>321, 22</value>
+  </data>
+  <data name="ToolStripButton5.ImageTransparentColor" xml:space="preserve" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ToolStripButton5.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>23, 28</value>
+  </data>
 </root>

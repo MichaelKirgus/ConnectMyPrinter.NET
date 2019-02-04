@@ -218,6 +218,8 @@
     <Content Include="prprico.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\backup_printer.png" />
+    <None Include="Resources\DeletePrinter2.png" />
     <None Include="Resources\plus_bw.png" />
     <None Include="Resources\prprico.ico" />
   </ItemGroup>

@@ -138,4 +138,7 @@
   <data name="SendPrinterProfileNameStr" xml:space="preserve">
     <value>Druckerprofil</value>
   </data>
+  <data name="trenn" xml:space="preserve">
+    <value>"</value>
+  </data>
 </root>

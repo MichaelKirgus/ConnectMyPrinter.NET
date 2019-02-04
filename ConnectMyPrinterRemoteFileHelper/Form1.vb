@@ -21,7 +21,11 @@ Public Class Form1
         Try
             Dim RemoteFilePath As String = ""
             For Each argument In My.Application.CommandLineArgs
-                RemoteFilePath = argument
+                If argument.StartsWith(My.Resources.TranslatedStrings.trenn) Then
+                    RemoteFilePath = argument.Replace(My.Resources.TranslatedStrings.trenn, "")
+                Else
+                    RemoteFilePath = argument
+                End If
             Next
             If IO.File.Exists(RemoteFilePath) Then
                 'Aktionen ausführen, Anwendung nicht im Audit-Modus öffnen...
@@ -75,11 +79,13 @@ Public Class Form1
 
     Public Sub ApplyPrinterConfigToClass()
         If Not RemoteFile.ConnectPrinters.Count = 0 Then
-            Dim kk As MsgBoxResult
-            kk = MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterAlreadyAddedStr", ""), MsgBoxStyle.YesNo)
+            If Not RemoteFile.ConnectPrinters(0).PrinterName = TextBox2.Text Then
+                Dim kk As MsgBoxResult
+                kk = MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterAlreadyAddedStr", ""), MsgBoxStyle.YesNo)
 
-            If kk = MsgBoxResult.Yes Then
-                RemoteFile.ConnectPrinters.Clear()
+                If kk = MsgBoxResult.Yes Then
+                    RemoteFile.ConnectPrinters.Clear()
+                End If
             End If
         End If
 
@@ -251,9 +257,13 @@ Public Class Form1
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        ApplyPrinterConfigToClass()
+        LoadNewRemoteFile()
+        SendClassFileWithMail()
+    End Sub
+
+    Public Function SendClassFileWithMail() As Boolean
         Try
-            ApplyPrinterConfigToClass()
-            LoadNewRemoteFile()
             Dim yy As New RemoteFileSerializer
             Dim tmpfilename As String
             Dim translatedstr As String
@@ -266,9 +276,12 @@ Public Class Form1
             yy.SaveRemoteFile(RemoteFile, tmpfilename)
             Dim MailHelper As New ConnectMyPrinterOutlookHelper.OutlookHelperClass
             MailHelper.SendOutlookMail(translatedstr, "", tmpfilename)
+
+            Return True
         Catch ex As Exception
+            Return False
         End Try
-    End Sub
+    End Function
 
     Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
         If CheckBox2.Checked Then
@@ -290,6 +303,10 @@ Public Class Form1
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Button6.Enabled = False
+        Me.UseWaitCursor = True
+        Application.DoEvents()
+
         TextBox5.BackColor = Color.LightGray
         If LoadPrinterProfileFromClient(TextBox5.Text) Then
             TextBox5.BackColor = Color.LightGreen
@@ -298,6 +315,10 @@ Public Class Form1
         End If
         PropertyGrid1.SelectedObject = Nothing
         PropertyGrid1.SelectedObject = RemoteFile
+
+        Button6.Enabled = False
+        Me.UseWaitCursor = False
+        Application.DoEvents()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -319,17 +340,78 @@ Public Class Form1
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        If TextBox4.Text = "" Then
-            CheckBox2.Checked = True
-        End If
+        Button8.Enabled = False
+        TextBox6.Enabled = False
+        TextBox7.Enabled = False
+        Me.UseWaitCursor = True
+        Application.DoEvents()
 
-        TextBox6.BackColor = Color.LightGray
-        TextBox7.BackColor = Color.LightGray
-        If LoadPrinterProfileFromClient(TextBox6.Text) Then
-            TextBox6.BackColor = Color.LightGreen
-            If PublishProfileToClient(TextBox7.Text, TextBox4.Text, CheckBox2.Checked, CheckBox3.Checked) Then
-                TextBox7.BackColor = Color.LightGreen
+        Try
+            If TextBox4.Text = "" Then
+                CheckBox2.Checked = True
             End If
-        End If
+
+            Dim clientcoll As New List(Of String)
+
+            If TextBox7.Text.Contains(";") Then
+                clientcoll.AddRange(TextBox7.Text.Split(";"))
+            Else
+                clientcoll.Add(TextBox7.Text)
+            End If
+
+            Dim LogTxt As String = ""
+            For index = 0 To clientcoll.Count - 1
+                If LoadPrinterProfileFromClient(TextBox6.Text) Then
+                    If PublishProfileToClient(clientcoll(index), TextBox4.Text, CheckBox2.Checked, CheckBox3.Checked) Then
+                        LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedSuccessStr1", "") & clientcoll(index) & MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedSuccessStr2", "") & vbNewLine
+                    Else
+                        LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedFailStr1", "") & clientcoll(index) & MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedFailStr2", "") & vbNewLine
+                    End If
+                End If
+            Next
+
+            MsgBox(LogTxt, MsgBoxStyle.Information)
+        Catch ex As Exception
+        End Try
+
+        Button8.Enabled = True
+        TextBox6.Enabled = True
+        TextBox7.Enabled = True
+        Me.UseWaitCursor = False
+        Application.DoEvents()
+    End Sub
+
+    Private Sub LöscheAlleZuVerbindenendenDruckerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LöscheAlleZuVerbindenendenDruckerToolStripMenuItem.Click
+        RemoteFile.ConnectPrinters.Clear()
+        PropertyGrid1.SelectedObject = Nothing
+        PropertyGrid1.SelectedObject = RemoteFile
+    End Sub
+
+    Private Sub SetzeProfilZurückToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetzeProfilZurückToolStripMenuItem.Click
+        RemoteFile = New RemoteFileClass
+        PropertyGrid1.SelectedObject = Nothing
+        PropertyGrid1.SelectedObject = RemoteFile
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        LoadNewRemoteFile()
+        SendClassFileWithMail()
+    End Sub
+
+    Public Sub ResetGUI()
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+        TextBox6.Text = ""
+        TextBox7.Text = ""
+        CheckBox1.Checked = False
+        CheckBox2.Checked = False
+        CheckBox3.Checked = False
+    End Sub
+
+    Private Sub ToolStripButton5_Click(sender As Object, e As EventArgs) Handles ToolStripButton5.Click
+        ResetGUI()
     End Sub
 End Class

@@ -6752,7 +6752,7 @@ QwB1AHMAdABvAG0AAQBFAHgAcAByAGUAcwBzAA==
 		<col def="I2">Sequence</col>
 		<col def="L255">Command</col>
 		<col def="L255">Argument</col>
-		<row><td>prpr</td><td>open</td><td/><td>Profil anwenden</td><td>%1</td></row>
+		<row><td>prpr</td><td>open</td><td/><td>Profil anwenden</td><td>"%1"</td></row>
 	</table>
 
 	<table name="_Validation">

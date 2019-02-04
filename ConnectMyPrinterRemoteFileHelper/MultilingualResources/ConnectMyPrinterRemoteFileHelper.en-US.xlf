@@ -87,6 +87,14 @@
           <source>..\Resources\plus_bw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
           <target state="needs-review-translation">..\Resources\plus_bw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
         </trans-unit>
+        <trans-unit id="DeletePrinter2" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\DeletePrinter2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\DeletePrinter2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="backup_printer" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\Resources\backup_printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\Resources\backup_printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -12566,7 +12574,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button4.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>327, 117</source>
+          <source>327, 118</source>
           <target state="needs-review-translation">327, 131</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12588,7 +12596,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button2.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>89, 117</source>
+          <source>5, 118</source>
           <target state="needs-review-translation">89, 131</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12610,7 +12618,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Button1.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>188, 117</source>
+          <source>104, 118</source>
           <target state="needs-review-translation">188, 131</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -12920,7 +12928,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="SplitContainer1.SplitterDistance" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
-          <source>180</source>
+          <source>151</source>
           <target state="needs-review-translation">198</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -13098,8 +13106,9 @@
           <target state="needs-review-translation">10</target>
         </trans-unit>
         <trans-unit id="GroupBox7.Text" translate="yes" xml:space="preserve">
-          <source>Client (Ziel)</source>
-          <target state="translated">Client (Destination)</target>
+          <source>Client (Ziel, mehrere Clients mit ; trennen)</source>
+          <target state="needs-review-translation">Client (Destination)</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="GroupBox6.Dock" translate="yes" xml:space="preserve" extype="System.Windows.Forms.DockStyle, System.Windows.Forms">
           <source>Top</source>
@@ -13197,6 +13206,78 @@
           <source>0</source>
           <target state="needs-review-translation">0</target>
         </trans-unit>
+        <trans-unit id="ToolStripSeparator2.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>6, 31</source>
+          <target state="needs-review-translation">6, 31</target>
+        </trans-unit>
+        <trans-unit id="Button9.Anchor" translate="yes" xml:space="preserve" extype="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+          <source>Bottom, Right</source>
+          <target state="needs-review-translation">Bottom, Right</target>
+        </trans-unit>
+        <trans-unit id="Button9.ImeMode" translate="yes" xml:space="preserve" extype="System.Windows.Forms.ImeMode, System.Windows.Forms">
+          <source>NoControl</source>
+          <target state="needs-review-translation">NoControl</target>
+        </trans-unit>
+        <trans-unit id="Button9.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>243, 118</source>
+          <target state="needs-review-translation">243, 118</target>
+        </trans-unit>
+        <trans-unit id="Button9.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>78, 27</source>
+          <target state="needs-review-translation">78, 27</target>
+        </trans-unit>
+        <trans-unit id="Button9.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>11</source>
+          <target state="needs-review-translation">11</target>
+        </trans-unit>
+        <trans-unit id="Button9.Text" translate="yes" xml:space="preserve">
+          <source>&amp;Versenden...</source>
+          <target state="translated">&amp;Send...</target>
+        </trans-unit>
+        <trans-unit id="ToolStripButton4.ImageTransparentColor" translate="yes" xml:space="preserve" extype="System.Drawing.Color, System.Drawing">
+          <source>Magenta</source>
+          <target state="needs-review-translation">Magenta</target>
+        </trans-unit>
+        <trans-unit id="ToolStripButton4.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>32, 28</source>
+          <target state="needs-review-translation">32, 28</target>
+        </trans-unit>
+        <trans-unit id="ToolStripButton4.Text" translate="yes" xml:space="preserve">
+          <source>ToolStripButton4</source>
+          <target state="new">ToolStripButton4</target>
+        </trans-unit>
+        <trans-unit id="LöscheAlleZuVerbindenendenDruckerToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>321, 22</source>
+          <target state="needs-review-translation">321, 22</target>
+        </trans-unit>
+        <trans-unit id="LöscheAlleZuVerbindenendenDruckerToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Lösche alle Drucker, welche verbunden werden</source>
+          <target state="translated">Delete all "added" printers from collection</target>
+        </trans-unit>
+        <trans-unit id="ToolStripSeparator3.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>318, 6</source>
+          <target state="needs-review-translation">318, 6</target>
+        </trans-unit>
+        <trans-unit id="SetzeProfilZurückToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>321, 22</source>
+          <target state="needs-review-translation">321, 22</target>
+        </trans-unit>
+        <trans-unit id="SetzeProfilZurückToolStripMenuItem.Text" translate="yes" xml:space="preserve">
+          <source>Setze Profil zurück</source>
+          <target state="translated">Reset profile</target>
+        </trans-unit>
+        <trans-unit id="ToolStripButton5.ImageTransparentColor" translate="yes" xml:space="preserve" extype="System.Drawing.Color, System.Drawing">
+          <source>Magenta</source>
+          <target state="needs-review-translation">Magenta</target>
+        </trans-unit>
+        <trans-unit id="ToolStripButton5.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>23, 28</source>
+          <target state="needs-review-translation">23, 28</target>
+        </trans-unit>
+        <trans-unit id="ToolStripButton5.Text" translate="yes" xml:space="preserve">
+          <source>Setze Eingabefelder zurück</source>
+          <target state="translated">Reset input fields</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -13233,6 +13314,10 @@
         <trans-unit id="SendPrinterProfileNameStr" translate="yes" xml:space="preserve">
           <source>Druckerprofil</source>
           <target state="translated">Printer profile</target>
+        </trans-unit>
+        <trans-unit id="trenn" translate="yes" xml:space="preserve">
+          <source>"</source>
+          <target state="new">"</target>
         </trans-unit>
       </group>
     </body>

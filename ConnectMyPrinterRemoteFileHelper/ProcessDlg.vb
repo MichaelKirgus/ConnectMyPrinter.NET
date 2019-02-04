@@ -57,7 +57,7 @@ Public Class ProcessDlg
             If ActionItem.Action = RemoteFileActionsEnums.ActionEnum.ShowMessage Then
                 'Hinweismeldung anzeigen
                 Me.TopMost = False
-                MsgBox(ActionItem.CustomData, MsgBoxStyle.Information)
+                MsgBox(ActionItem.CustomData, MsgBoxStyle.MsgBoxSetForeground)
                 Me.TopMost = True
                 Return True
             End If

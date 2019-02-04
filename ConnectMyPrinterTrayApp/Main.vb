@@ -99,6 +99,7 @@ Imports ConnectMyPrinterRemoteFileHandler
 
         'Laden der Einstellungen (im Programmverzeichnis oder über Befehlszeile)
         MainApp.AppSettings = MainApp.LoadSettings(AppSettingFile)
+        AppSettings = MainApp.LoadSettings(AppSettingFile)
 
         'Prüfen, ob ein Verzeichnis für das Verarbeiten von Profildateien überwacht werden soll:
         If MainApp.AppSettings.UseTracePathFeature Then
@@ -281,7 +282,7 @@ Imports ConnectMyPrinterRemoteFileHandler
             Dim ConnectedPrinters As New List(Of PrinterQueueInfo)
 
             For Each item As PrinterQueueInfo In LocalPrinters
-                If MainApp.AppSettings.IgnoreLocalPrintersAtAutoBackup Then
+                If AppSettings.IgnoreLocalPrintersAtAutoBackup Then
                     If (Not item.Server = "Lokal") Or (Not item.Server = "Local") Then
                         ConnectedPrinters.Add(item)
                     End If
@@ -490,9 +491,17 @@ Imports ConnectMyPrinterRemoteFileHandler
 
         'Prüfen, ob Drucker in Profildatei bei dem Beenden der Trayanwendung gesichert werden sollen
         If MainApp.AppSettings.AutoBackupPrinterEnvironmentAtLogout And Not MainApp.AppSettings.AutoBackupPrinterEnvironmentPath = "" Then
-            BackupPrinterEnvironmentWorker.RunWorkerAsync()
-            Do While BackupPrinterEnvironmentWorker.IsBusy
-            Loop
+            If BackupPrinterEnvironmentWorker.IsBusy = False Then
+                BackupPrinterEnvironmentWorker.RunWorkerAsync()
+                Dim timcnt As Integer = 0
+                Do Until timcnt = 300
+                    If Not BackupPrinterEnvironmentWorker.IsBusy Then
+                        Exit Do
+                    End If
+                    Threading.Thread.Sleep(10)
+                    timcnt += 1
+                Loop
+            End If
         End If
 
         'Guarantees that the icon will not linger.
