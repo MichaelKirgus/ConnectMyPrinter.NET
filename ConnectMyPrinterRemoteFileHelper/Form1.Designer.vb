@@ -399,6 +399,7 @@ Partial Class Form1
         '
         'Form1
         '
+        Me.AcceptButton = Me.Button7
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.SplitContainer1)

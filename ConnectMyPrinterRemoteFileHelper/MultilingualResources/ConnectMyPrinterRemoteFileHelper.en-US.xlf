@@ -13243,8 +13243,8 @@
           <target state="needs-review-translation">32, 28</target>
         </trans-unit>
         <trans-unit id="ToolStripButton4.Text" translate="yes" xml:space="preserve">
-          <source>ToolStripButton4</source>
-          <target state="new">ToolStripButton4</target>
+          <source>Zurücksetzen...</source>
+          <target state="translated">Reset...</target>
         </trans-unit>
         <trans-unit id="LöscheAlleZuVerbindenendenDruckerToolStripMenuItem.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>321, 22</source>

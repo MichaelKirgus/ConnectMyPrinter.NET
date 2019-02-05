@@ -414,4 +414,8 @@ Public Class Form1
     Private Sub ToolStripButton5_Click(sender As Object, e As EventArgs) Handles ToolStripButton5.Click
         ResetGUI()
     End Sub
+
+    Private Sub ToolStripButton4_ButtonClick(sender As Object, e As EventArgs) Handles ToolStripButton4.ButtonClick
+        ToolStripButton4.ShowDropDown()
+    End Sub
 End Class
