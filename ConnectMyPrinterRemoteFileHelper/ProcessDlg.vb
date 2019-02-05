@@ -132,7 +132,9 @@ Public Class ProcessDlg
                     qq.Server = "\\" & item.Printserver
                     qq.Name = item.PrinterName
 
-                    Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Printserver & "\" & item.PrinterName, AppWinStyle.Hide, True, 5000)
+                    If (Not item.Printserver = "Lokal") And (Not item.Printserver = "Local") Then
+                        Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Printserver & "\" & item.PrinterName, AppWinStyle.Hide, True, 5000)
+                    End If
 
                     If item.SetDefaultPrinter Then
                         uu.SetDefaultPrinter(qq)

@@ -283,7 +283,7 @@ Imports ConnectMyPrinterRemoteFileHandler
 
             For Each item As PrinterQueueInfo In LocalPrinters
                 If AppSettings.IgnoreLocalPrintersAtAutoBackup Then
-                    If (Not item.Server = "Lokal") Or (Not item.Server = "Local") Then
+                    If (Not item.Server = "Lokal") And (Not item.Server = "Local") Then
                         ConnectedPrinters.Add(item)
                     End If
                 Else
@@ -313,7 +313,7 @@ Imports ConnectMyPrinterRemoteFileHandler
             Dim ConnectedPrinters As New List(Of PrinterQueueInfo)
 
             For Each item As PrinterQueueInfo In LocalPrinters
-                If (Not item.Server = "Lokal") Or (Not item.Server = "Local") Then
+                If (Not item.Server = "Lokal") And (Not item.Server = "Local") Then
                     ConnectedPrinters.Add(item)
                 End If
             Next
