@@ -133,7 +133,7 @@ Public Class ProcessDlg
                     qq.Name = item.PrinterName
 
                     If (Not item.Printserver = "Lokal") And (Not item.Printserver = "Local") Then
-                        Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Printserver & "\" & item.PrinterName, AppWinStyle.Hide, True, 5000)
+                        Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Printserver & "\" & item.PrinterName, AppWinStyle.Hide, True, DefaultAppSettings.MaxPrinterAPIShellTimout)
                     End If
 
                     If item.SetDefaultPrinter Then

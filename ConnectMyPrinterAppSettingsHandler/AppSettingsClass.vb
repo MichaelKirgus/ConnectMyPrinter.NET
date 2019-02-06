@@ -236,6 +236,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property ShowBackupPrinterEnvironmentEntryInTrayApp As Boolean = False
     Property ShowTrayAppAfterInstall As Boolean = True
     Property ShowTrayAppIcon As Boolean = True
+    Property MaxPrinterAPIShellTimout As Integer = 30000
     Property UseTracePathFeature As Boolean = False
     Property ActionsTracePath As String = "%TEMP%\PrinterActions"
     Property ActionsTraceAdminPath As String = "\c$\%TEMP%\PrinterActions"

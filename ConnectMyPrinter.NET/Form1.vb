@@ -919,8 +919,8 @@ Public Class Form1
             End If
 
             If qq = MsgBoxResult.Yes Then
-                Shell("rundll32 printui.dll PrintUIEntry /dn /n" & matchprinters(0).Server & "\" & matchprinters(0).ShareName & " /q", AppWinStyle.Hide, True, 5000)
-                Shell("rundll32 printui.dll PrintUIEntry /in /n" & matchprinters(0).Server & "\" & matchprinters(0).ShareName, AppWinStyle.Hide, True, 5000)
+                Shell("rundll32 printui.dll PrintUIEntry /dn /n" & matchprinters(0).Server & "\" & matchprinters(0).ShareName & " /q", AppWinStyle.Hide, True, AppSettings.MaxPrinterAPIShellTimout)
+                Shell("rundll32 printui.dll PrintUIEntry /in /n" & matchprinters(0).Server & "\" & matchprinters(0).ShareName, AppWinStyle.Hide, True, AppSettings.MaxPrinterAPIShellTimout)
 
                 If SetDefaultPrinter Then
                     PrinterManageService.SetDefaultPrinter(matchprinters(0))
