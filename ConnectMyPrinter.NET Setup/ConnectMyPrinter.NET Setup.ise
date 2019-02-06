@@ -5198,6 +5198,7 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<col key="yes" def="s72">Name</col>
 		<col def="s0">Value</col>
 		<row><td>SfwCreatorName</td><td>Michael Kirgus</td></row>
+		<row><td>TagCreatorName</td><td>Michael Kirgus</td></row>
 		<row><td>UniqueId</td><td>D9BBBA0A-85AC-4234-8D3D-4366EC69B93A</td></row>
 	</table>
 
@@ -6475,7 +6476,7 @@ QwB1AHMAdABvAG0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConnectMyPrinter.NET.Primäre Ausgabe</td><td/></row>
 		<row><td>ProductCode</td><td>{D9F305BE-DA52-4B9B-BCD9-9CF4C34BBE07}</td><td/></row>
 		<row><td>ProductName</td><td>ConnectMyPrinter.NET</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0023</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.0024</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

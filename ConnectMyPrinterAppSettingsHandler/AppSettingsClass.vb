@@ -235,6 +235,7 @@ Imports ConnectMyPrinterEnumerationLib
     Property ShowRestartPrinterServiceEntryInTrayApp As Boolean = False
     Property ShowBackupPrinterEnvironmentEntryInTrayApp As Boolean = False
     Property ShowTrayAppAfterInstall As Boolean = True
+    Property ShowTrayAppIcon As Boolean = True
     Property UseTracePathFeature As Boolean = False
     Property ActionsTracePath As String = "%TEMP%\PrinterActions"
     Property ActionsTraceAdminPath As String = "\c$\%TEMP%\PrinterActions"

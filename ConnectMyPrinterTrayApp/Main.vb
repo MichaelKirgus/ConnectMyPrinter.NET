@@ -77,12 +77,8 @@ Imports ConnectMyPrinterRemoteFileHandler
 
         'Initialize the tray
         Tray = New NotifyIcon
-        Tray.Icon = My.Resources.connectmyprinter_tray
         Tray.ContextMenuStrip = MainMenu
         Tray.Text = MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "TrayIconText", "")
-
-        'Display
-        Tray.Visible = True
 
         'Lade Anwendungseinstellungen
         'Laden der Einstellungen für alle Benutzer
@@ -100,6 +96,12 @@ Imports ConnectMyPrinterRemoteFileHandler
         'Laden der Einstellungen (im Programmverzeichnis oder über Befehlszeile)
         MainApp.AppSettings = MainApp.LoadSettings(AppSettingFile)
         AppSettings = MainApp.LoadSettings(AppSettingFile)
+
+        'Display
+        If AppSettings.ShowTrayAppIcon Then
+            Tray.Icon = My.Resources.connectmyprinter_tray_processing_0000
+            Tray.Visible = True
+        End If
 
         'Prüfen, ob ein Verzeichnis für das Verarbeiten von Profildateien überwacht werden soll:
         If MainApp.AppSettings.UseTracePathFeature Then
@@ -135,7 +137,19 @@ Imports ConnectMyPrinterRemoteFileHandler
         mnuLogo.Tag = New PrinterQueueInfo
         Dim ii As Image
         Try
-            ii = Image.FromFile(Environment.ExpandEnvironmentVariables(MainApp.AppSettings.CompanyLogoImagePath))
+            If Not AppSettings.CompanyLogoImageBase64 = "" Then
+                Try
+                    Dim ByteArray
+                    ByteArray = ConvertBase64ToByteArray(AppSettings.CompanyLogoImageBase64)
+                    ii = convertbytetoimage(ByteArray)
+                Catch ex As Exception
+                    ii = My.Resources._1472877498_BT_printer.ToBitmap
+                    mnuLogo.Height = My.Resources._1472877498_BT_printer.Height
+                End Try
+            Else
+                ii = Image.FromFile(Environment.ExpandEnvironmentVariables(MainApp.AppSettings.CompanyLogoImagePath))
+            End If
+
             mnuLogo.Height = ii.Height
         Catch ex As Exception
             ii = My.Resources._1472877498_BT_printer.ToBitmap
@@ -167,7 +181,21 @@ Imports ConnectMyPrinterRemoteFileHandler
                 ExitApplication()
             End If
         End If
+
+        If Not MainApp.AppSettings.AutoBackupPrinterEnvironmentAtStartup = True Then
+            Tray.Icon = My.Resources.connectmyprinter_tray
+        End If
     End Sub
+
+    Public Function ConvertBase64ToByteArray(base64 As String) As Byte()
+        Return Convert.FromBase64String(base64) 'Convert the base64 back to byte array.
+    End Function
+
+    Private Function convertbytetoimage(ByVal BA As Byte())
+        Dim ms As MemoryStream = New MemoryStream(BA)
+        Dim image = System.Drawing.Image.FromStream(ms)
+        Return image
+    End Function
 
     Public Function RaiseProfileFileApply(ByVal ProfileFile As String) As Boolean
         Try
@@ -295,6 +323,10 @@ Imports ConnectMyPrinterRemoteFileHandler
             RemoteFileService.CreateMultiplePrinterRemoteFile(dirstr & "\" & filenamestr, ConnectedPrinters)
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub BackupRinterEnvironmentWorkerCompleted() Handles BackupPrinterEnvironmentWorker.RunWorkerCompleted
+        Tray.Icon = My.Resources.connectmyprinter_tray
     End Sub
 
     Private Sub FetchPrinterEnvironmentWorkerDoWork() Handles FetchPrinterEnvironmentWorker.DoWork

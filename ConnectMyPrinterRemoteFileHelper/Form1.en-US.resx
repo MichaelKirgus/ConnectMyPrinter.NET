@@ -6757,6 +6757,9 @@
   <data name="ToolStripButton4.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>32, 28</value>
   </data>
+  <data name="ToolStripButton4.Text" xml:space="preserve">
+    <value>Reset...</value>
+  </data>
   <data name="LöscheAlleZuVerbindenendenDruckerToolStripMenuItem.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
     <value>321, 22</value>
   </data>
