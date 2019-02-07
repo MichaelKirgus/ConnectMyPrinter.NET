@@ -34,16 +34,25 @@ Module Module1
         AppSettings = FormModule.LoadSettings(AppSettingFile)
 
         'Prüfen, ob aktueller User Adminrechte hat...
-        If AdminCheck.IsAdmin = False Then
+        Try
+            If AdminCheck.IsAdmin = False Then
+                If AppSettings.AllowDeleteAllPrintersStartWithoutAdminRights = False Then
+                    Console.WriteLine("Die Anwendung darf nicht mit normalen Benutzerrechten gestartet werden.")
+                Else
+                    DeleteAllPrinters()
+                    Exit Sub
+                End If
+            Else
+                DeleteAllPrinters()
+            End If
+        Catch ex As Exception
             If AppSettings.AllowDeleteAllPrintersStartWithoutAdminRights = False Then
                 Console.WriteLine("Die Anwendung darf nicht mit normalen Benutzerrechten gestartet werden.")
             Else
                 DeleteAllPrinters()
                 Exit Sub
             End If
-        Else
-            DeleteAllPrinters()
-        End If
+        End Try
     End Sub
 
     Sub DeleteAllPrinters()
