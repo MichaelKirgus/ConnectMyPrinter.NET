@@ -46,6 +46,8 @@ Module Module1
                 DeleteAllPrinters()
             End If
         Catch ex As Exception
+            'Es ist zu einem Fehler kommen, da der Benutzer keine Adminrechte hat.
+
             If AppSettings.AllowDeleteAllPrintersStartWithoutAdminRights = False Then
                 Console.WriteLine("Die Anwendung darf nicht mit normalen Benutzerrechten gestartet werden.")
             Else

@@ -1944,12 +1944,17 @@
 		<col def="S255">ISProFeatureName</col>
 		<row><td>AlwaysInstall</td><td/><td>##DN_AlwaysInstall##</td><td>##ID_STRING44##</td><td>0</td><td>1</td><td>INSTALLDIR</td><td>16</td><td/><td>Enter comments regarding this feature here.</td><td/><td/></row>
 		<row><td>NewFeature1</td><td/><td>##ID_STRING7##</td><td>##ID_STRING19##</td><td>3</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature10</td><td>NewFeature5</td><td>##ID_STRING60##</td><td>##ID_STRING61##</td><td>2</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature11</td><td>NewFeature4</td><td>##ID_STRING62##</td><td>##ID_STRING63##</td><td>2</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature12</td><td>NewFeature1</td><td>##ID_STRING64##</td><td>##ID_STRING65##</td><td>1</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature2</td><td/><td>##ID_STRING20##</td><td>##ID_STRING46##</td><td>6</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature3</td><td/><td>##ID_STRING21##</td><td>##ID_STRING47##</td><td>10</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature4</td><td/><td>##ID_STRING22##</td><td>##ID_STRING48##</td><td>14</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature5</td><td/><td>##ID_STRING41##</td><td>##ID_STRING43##</td><td>22</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature6</td><td/><td>##ID_STRING24##</td><td>##ID_STRING49##</td><td>20</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature7</td><td/><td>##ID_STRING25##</td><td>##ID_STRING45##</td><td>5</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature8</td><td>NewFeature2</td><td>##ID_STRING56##</td><td>##ID_STRING57##</td><td>2</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature9</td><td>NewFeature2</td><td>##ID_STRING58##</td><td>##ID_STRING59##</td><td>4</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="FeatureComponents">
@@ -5170,8 +5175,28 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>ID_STRING54</td><td>1033</td><td>Dieses Paket installiert </td><td>0</td><td/><td>-2094643981</td></row>
 		<row><td>ID_STRING55</td><td>1031</td><td>Installation von ConnectMyPrinter.NET</td><td>0</td><td/><td>-2094619405</td></row>
 		<row><td>ID_STRING55</td><td>1033</td><td>Installation von ConnectMyPrinter.NET</td><td>0</td><td/><td>-2094619405</td></row>
+		<row><td>ID_STRING56</td><td>1031</td><td>Ungenutzte Treiberpakete löschen (User)</td><td>0</td><td/><td>958909173</td></row>
+		<row><td>ID_STRING56</td><td>1033</td><td>NewFeature8</td><td>0</td><td/><td>958882549</td></row>
+		<row><td>ID_STRING57</td><td>1031</td><td>Ungenutzte Treiberpakete bei Installation löschen (als eingeschränkter Benutzer)</td><td>0</td><td/><td>958903157</td></row>
+		<row><td>ID_STRING57</td><td>1033</td><td>Ungenutzte Treiberpakete löschen (im Benutzerkontext)</td><td>0</td><td/><td>958878485</td></row>
+		<row><td>ID_STRING58</td><td>1031</td><td>Ungenutzte Treiberpakete löschen (System)</td><td>0</td><td/><td>958896917</td></row>
+		<row><td>ID_STRING58</td><td>1033</td><td>NewFeature9</td><td>0</td><td/><td>958884629</td></row>
+		<row><td>ID_STRING59</td><td>1031</td><td>Ungenutzte Treiberpakete bei Installation löschen (als Administrator)</td><td>0</td><td/><td>958909301</td></row>
+		<row><td>ID_STRING59</td><td>1033</td><td>Ungenutzte Treiberpakete löschen (als Administrator)</td><td>0</td><td/><td>958866229</td></row>
 		<row><td>ID_STRING6</td><td>1031</td><td>DRUCKE~1|Druckerwarteschlange neu starten</td><td>0</td><td/><td>-433771083</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>NEWSHO~1|NewShortcut3</td><td>0</td><td/><td>-433721963</td></row>
+		<row><td>ID_STRING60</td><td>1031</td><td>Trayanwendung nach Installation starten</td><td>0</td><td/><td>958892885</td></row>
+		<row><td>ID_STRING60</td><td>1033</td><td>NewFeature10</td><td>0</td><td/><td>958880597</td></row>
+		<row><td>ID_STRING61</td><td>1031</td><td>Startet die Trayanwendung direkt nach der Installation der Anwendung.</td><td>0</td><td/><td>958911317</td></row>
+		<row><td>ID_STRING61</td><td>1033</td><td>Startet die Trayanwendung direkt nach der Installation der Anwendung.</td><td>0</td><td/><td>958911317</td></row>
+		<row><td>ID_STRING62</td><td>1031</td><td>Berechtigungen der Druckerwarteschlange anpassen</td><td>0</td><td/><td>958895317</td></row>
+		<row><td>ID_STRING62</td><td>1033</td><td>NewFeature11</td><td>0</td><td/><td>958878645</td></row>
+		<row><td>ID_STRING63</td><td>1031</td><td>Passt die Berechtigungen der Druckerwarteschlange so an, dass diese auch ohne administrative Berechtigungen gesteuert werden kann.</td><td>0</td><td/><td>958884853</td></row>
+		<row><td>ID_STRING63</td><td>1033</td><td>Passt die Berechtigungen der Druckerwarteschlange so an, dass diese auch ohne administrative Berechtigungen gesteuert werden kann.</td><td>0</td><td/><td>958884853</td></row>
+		<row><td>ID_STRING64</td><td>1031</td><td>Suche nach Anwendungseinstellungen</td><td>0</td><td/><td>958872757</td></row>
+		<row><td>ID_STRING64</td><td>1033</td><td>NewFeature12</td><td>0</td><td/><td>958860469</td></row>
+		<row><td>ID_STRING65</td><td>1031</td><td>Hiermit wird nach einer Einstellungsdatei (AppSettings.xml) in verschiedenen Verzeichnissen des Systems gesucht und diese ggf. ins Programmverzeichnis kopiert.</td><td>0</td><td/><td>958858453</td></row>
+		<row><td>ID_STRING65</td><td>1033</td><td>Hiermit wird nach einer Einstellungsdatei (AppSettings.xml) in verschiedenen Verzeichnissen des Systems gesucht und diese ggf. ins Programmverzeichnis kopiert.</td><td>0</td><td/><td>958858453</td></row>
 		<row><td>ID_STRING7</td><td>1031</td><td>Hauptanwendung</td><td>0</td><td/><td>-2002326988</td></row>
 		<row><td>ID_STRING7</td><td>1033</td><td>NewFeature1</td><td>0</td><td/><td>-2002354125</td></row>
 		<row><td>ID_STRING8</td><td>1031</td><td>UNGENU~1|Ungenutzte Treiberpakete entfernen</td><td>0</td><td/><td>-1910141517</td></row>
@@ -5318,7 +5343,7 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\ConnectMyPrinter.NET\1472877498_BT_printer.ico</td><td>0</td></row>
 		<row><td>NewShortcut10_850E7B831F3C460EAD76DE51028899FA.exe</td><td/><td>&lt;VSSolutionFolder&gt;\ConnectMyPrinterCreateRestorePoint\bin\Release\ConnectMyPrinterCreateRestorePoint.exe</td><td>0</td></row>
 		<row><td>NewShortcut5_17B5E1786FA14F64B0677CA67FE24F92.exe</td><td/><td>&lt;VSSolutionFolder&gt;\ConnectMyPrinterClean\bin\Release\ConnectMyPrinterClean.exe</td><td>0</td></row>
-		<row><td>NewShortcut6_1ABB0F327AF74E15A115A304CA34538B.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>NewShortcut6_9B642022E3D94FB7943DDF0157724BB4.exe</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\IS.ico</td><td>0</td></row>
 		<row><td>_0059CBFBED17445AB5CBA014D4C82633.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Release\ConnectMyPrinter.NET.exe</td><td>0</td></row>
 		<row><td>_005C7DC992EB4D519E542B4BF7C7E893.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterCreateRestorePoint\bin\Debug\ConnectMyPrinterCreateRestorePoint.exe</td><td>0</td></row>
 		<row><td>_006724A0A0DE48E8B7ED333E14295E17.exe</td><td/><td>o:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinterRestartSpooler\bin\Debug\ConnectMyPrinterRestartSpooler.exe</td><td>0</td></row>
@@ -5980,11 +6005,11 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<col def="S255">ISComments</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>AllocateRegistrySpace</td><td>NOT Installed</td><td>1550</td><td>AllocateRegistrySpace</td><td/></row>
-		<row><td>AllowNonPrivUserToControlPrintSpooler</td><td>Not Installed And (&amp;NewFeature4&gt;2)</td><td>6402</td><td/><td/></row>
-		<row><td>AllowUserToControlPrintSpooler</td><td>Not Installed And (&amp;NewFeature4&gt;2)</td><td>6405</td><td/><td/></row>
+		<row><td>AllowNonPrivUserToControlPrintSpooler</td><td>Not Installed And (&amp;NewFeature11&gt;2)</td><td>6402</td><td/><td/></row>
+		<row><td>AllowUserToControlPrintSpooler</td><td>Not Installed And (&amp;NewFeature11&gt;2)</td><td>6405</td><td/><td/></row>
 		<row><td>AppSearch</td><td/><td>400</td><td>AppSearch</td><td/></row>
-		<row><td>ApplyCustomAppSettingsFile</td><td>Not Installed And (&amp;NewFeature1&gt;2)</td><td>6401</td><td/><td/></row>
-		<row><td>ApplySettingsFileFromMSIRootPath</td><td>Not Installed</td><td>6402</td><td/><td/></row>
+		<row><td>ApplyCustomAppSettingsFile</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6401</td><td/><td/></row>
+		<row><td>ApplySettingsFileFromMSIRootPath</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6402</td><td/><td/></row>
 		<row><td>BindImage</td><td/><td>4300</td><td>BindImage</td><td/></row>
 		<row><td>CCPSearch</td><td>CCP_TEST</td><td>500</td><td>CCPSearch</td><td/></row>
 		<row><td>CostFinalize</td><td/><td>1000</td><td>CostFinalize</td><td/></row>
@@ -6038,11 +6063,11 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>RemoveFiles</td><td/><td>3500</td><td>RemoveFiles</td><td/></row>
 		<row><td>RemoveFolders</td><td/><td>3600</td><td>RemoveFolders</td><td/></row>
 		<row><td>RemoveIniValues</td><td/><td>3100</td><td>RemoveIniValues</td><td/></row>
-		<row><td>RemoveLocalUnusedDriverPackets</td><td>Not Installed And (&amp;NewFeature2&gt;2)</td><td>6402</td><td/><td/></row>
+		<row><td>RemoveLocalUnusedDriverPackets</td><td>Not Installed And (&amp;NewFeature9&gt;2)</td><td>6402</td><td/><td/></row>
 		<row><td>RemoveODBC</td><td/><td>2400</td><td>RemoveODBC</td><td/></row>
 		<row><td>RemoveRegistryValues</td><td/><td>2600</td><td>RemoveRegistryValues</td><td/></row>
 		<row><td>RemoveShortcuts</td><td/><td>3200</td><td>RemoveShortcuts</td><td/></row>
-		<row><td>RemoveUnusedDriverPackets</td><td>Not Installed And (&amp;NewFeature2&gt;2)</td><td>6402</td><td/><td/></row>
+		<row><td>RemoveUnusedDriverPackets</td><td>Not Installed And (&amp;NewFeature8&gt;2)</td><td>6402</td><td/><td/></row>
 		<row><td>ResolveSource</td><td>Not Installed</td><td>850</td><td>ResolveSource</td><td/></row>
 		<row><td>ScheduleReboot</td><td>ISSCHEDULEREBOOT</td><td>6410</td><td>ScheduleReboot</td><td/></row>
 		<row><td>SelfRegModules</td><td/><td>5600</td><td>SelfRegModules</td><td/></row>
@@ -6476,7 +6501,7 @@ QwB1AHMAdABvAG0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConnectMyPrinter.NET.Primäre Ausgabe</td><td/></row>
 		<row><td>ProductCode</td><td>{D9F305BE-DA52-4B9B-BCD9-9CF4C34BBE07}</td><td/></row>
 		<row><td>ProductName</td><td>ConnectMyPrinter.NET</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0024</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.0025</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -6667,7 +6692,7 @@ QwB1AHMAdABvAG0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>NewShortcut3</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING27##</td><td>ConnectMyPrinterClean.Prim_re_Ausgabe1</td><td>NewFeature2</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut4</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING28##</td><td>ConnectMyPrinterRestartSpooler.Prim_re_Ausgabe1</td><td>NewFeature2</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut5</td><td>newfolder1</td><td>##ID_STRING30##</td><td>ConnectMyPrinterForceDelete.Prim_re_Ausgabe1</td><td>NewFeature3</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>NewShortcut6</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING9##</td><td>ISX_DEFAULTCOMPONENT1</td><td>[SystemFolder]MsiExec.exe</td><td>/x [ProductCode]</td><td/><td/><td>NewShortcut6_1ABB0F327AF74E15A115A304CA34538B.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut6</td><td>connec_1.net_connectmyprinter.net</td><td>##ID_STRING9##</td><td>ISX_DEFAULTCOMPONENT1</td><td>[SystemFolder]MsiExec.exe</td><td>/x [ProductCode]</td><td/><td/><td>NewShortcut6_9B642022E3D94FB7943DDF0157724BB4.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut7</td><td>newfolder1</td><td>##ID_STRING31##</td><td>ConnectMyPrinterSettingsConsole.Prim_re_Ausgabe1</td><td>NewFeature7</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut8</td><td>DesktopFolder</td><td>##ID_STRING34##</td><td>ConnectMyPrinter.NET.Prim_re_Ausgabe1</td><td>NewFeature1</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>NewShortcut9</td><td>StartMenuFolder</td><td>##ID_STRING35##</td><td>ConnectMyPrinter.NET.Prim_re_Ausgabe1</td><td>NewFeature1</td><td/><td/><td/><td/><td/><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
