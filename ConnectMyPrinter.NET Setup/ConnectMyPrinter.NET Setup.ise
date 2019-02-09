@@ -1133,17 +1133,26 @@
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
 		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
-		<row><td>KillACLHelperApp</td><td>162</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterACLHelper.exe</td><td/><td/></row>
-		<row><td>KillCreateRestorePointApp</td><td>162</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterCreateRestorePoint.exe</td><td/><td/></row>
-		<row><td>KillDeleteAllPrintersApp</td><td>162</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterDeleteAllPrinters.exe</td><td/><td/></row>
+		<row><td>KillACLHelperApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterACLHelper.exe</td><td/><td/></row>
+		<row><td>KillACLHelperApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterACLHelper.exe</td><td/><td/></row>
+		<row><td>KillCreateRestorePointApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterCreateRestorePoint.exe</td><td/><td/></row>
+		<row><td>KillCreateRestorePointApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterCreateRestorePoint.exe</td><td/><td/></row>
+		<row><td>KillDeleteAllPrintersApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterDeleteAllPrinters.exe</td><td/><td/></row>
+		<row><td>KillDeleteAllPrintersApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterDeleteAllPrinters.exe</td><td/><td/></row>
 		<row><td>KillForcePrinterDeleteApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterForceDelete.exe</td><td/><td/></row>
+		<row><td>KillForcePrinterDeleteApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterForceDelete.exe</td><td/><td/></row>
 		<row><td>KillMainApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinter.exe</td><td/><td/></row>
-		<row><td>KillOldTrayApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
-		<row><td>KillPrinterCleanApp</td><td>162</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterClean.exe</td><td/><td/></row>
-		<row><td>KillRestartSpoolerApp</td><td>162</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterRestartSpooler.exe</td><td/><td/></row>
+		<row><td>KillMainApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinter.exe</td><td/><td/></row>
+		<row><td>KillPrinterCleanApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterClean.exe</td><td/><td/></row>
+		<row><td>KillPrinterCleanApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterClean.exe</td><td/><td/></row>
+		<row><td>KillRestartSpoolerApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterRestartSpooler.exe</td><td/><td/></row>
+		<row><td>KillRestartSpoolerApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterRestartSpooler.exe</td><td/><td/></row>
 		<row><td>KillSettingsConsoleApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterSettingsConsole.exe</td><td/><td/></row>
+		<row><td>KillSettingsConsoleApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterSettingsConsole.exe</td><td/><td/></row>
 		<row><td>KillTrayApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
-		<row><td>KillUACHelperApp</td><td>162</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterUACHelper.exe</td><td/><td/></row>
+		<row><td>KillTrayApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
+		<row><td>KillUACHelperApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterUACHelper.exe</td><td/><td/></row>
+		<row><td>KillUACHelperApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /IM ConnectMyPrinterUACHelper.exe</td><td/><td/></row>
 		<row><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>1</td><td>NewBinary20</td><td>LaunchProgram</td><td/><td/></row>
 		<row><td>RemoveLocalUnusedDriverPackets</td><td>3154</td><td>connectmyprinterclean.prim_r1</td><td/><td/><td/></row>
 		<row><td>RemoveUnusedDriverPackets</td><td>1106</td><td>connectmyprinterclean.prim_r1</td><td/><td/><td/></row>
@@ -1246,6 +1255,15 @@
 		<row><td>NEW_DIRECTORY18</td><td>TARGETDIR</td><td>NEW_DIRECTORY18</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY19</td><td>TARGETDIR</td><td>NEW_DIRECTORY19</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY2</td><td>TARGETDIR</td><td>NEW_DIRECTORY2</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY20</td><td>TARGETDIR</td><td>NEW_DIRECTORY20</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY21</td><td>TARGETDIR</td><td>NEW_DIRECTORY21</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY22</td><td>TARGETDIR</td><td>NEW_DIRECTORY22</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY23</td><td>TARGETDIR</td><td>NEW_DIRECTORY23</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY24</td><td>TARGETDIR</td><td>NEW_DIRECTORY24</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY25</td><td>TARGETDIR</td><td>NEW_DIRECTORY25</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY26</td><td>TARGETDIR</td><td>NEW_DIRECTORY26</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY27</td><td>TARGETDIR</td><td>NEW_DIRECTORY27</td><td/><td>0</td><td/></row>
+		<row><td>NEW_DIRECTORY28</td><td>TARGETDIR</td><td>NEW_DIRECTORY28</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY3</td><td>TARGETDIR</td><td>NEW_DIRECTORY3</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY4</td><td>TARGETDIR</td><td>NEW_DIRECTORY4</td><td/><td>0</td><td/></row>
 		<row><td>NEW_DIRECTORY5</td><td>TARGETDIR</td><td>NEW_DIRECTORY5</td><td/><td>0</td><td/></row>
@@ -6073,22 +6091,31 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>ISUnSelfRegisterFiles</td><td/><td>2202</td><td/><td/></row>
 		<row><td>InstallFiles</td><td/><td>4000</td><td>InstallFiles</td><td/></row>
 		<row><td>InstallFinalize</td><td/><td>6600</td><td>InstallFinalize</td><td/></row>
-		<row><td>InstallInitialize</td><td/><td>1501</td><td>InstallInitialize</td><td/></row>
+		<row><td>InstallInitialize</td><td/><td>1504</td><td>InstallInitialize</td><td/></row>
 		<row><td>InstallODBC</td><td/><td>5400</td><td>InstallODBC</td><td/></row>
 		<row><td>InstallServices</td><td>VersionNT</td><td>5800</td><td>InstallServices</td><td/></row>
 		<row><td>InstallValidate</td><td/><td>1400</td><td>InstallValidate</td><td/></row>
 		<row><td>IsolateComponents</td><td/><td>950</td><td>IsolateComponents</td><td/></row>
 		<row><td>KillACLHelperApp</td><td>Not Installed</td><td>3601</td><td/><td/></row>
+		<row><td>KillACLHelperApp1</td><td>REMOVE="ALL"</td><td>1498</td><td/><td/></row>
 		<row><td>KillCreateRestorePointApp</td><td>Not Installed</td><td>3601</td><td/><td/></row>
+		<row><td>KillCreateRestorePointApp1</td><td>REMOVE="ALL"</td><td>1499</td><td/><td/></row>
 		<row><td>KillDeleteAllPrintersApp</td><td>Not Installed</td><td>3603</td><td/><td/></row>
+		<row><td>KillDeleteAllPrintersApp1</td><td>REMOVE="ALL"</td><td>1500</td><td/><td/></row>
 		<row><td>KillForcePrinterDeleteApp</td><td>Not Installed</td><td>3606</td><td/><td/></row>
+		<row><td>KillForcePrinterDeleteApp1</td><td>REMOVE="ALL"</td><td>1501</td><td/><td/></row>
 		<row><td>KillMainApp</td><td>Not Installed</td><td>3650</td><td/><td/></row>
-		<row><td>KillOldTrayApp</td><td>Not Installed</td><td>3625</td><td/><td/></row>
+		<row><td>KillMainApp1</td><td>REMOVE="ALL"</td><td>1503</td><td/><td/></row>
 		<row><td>KillPrinterCleanApp</td><td>Not Installed</td><td>3601</td><td/><td/></row>
+		<row><td>KillPrinterCleanApp1</td><td>REMOVE="ALL"</td><td>1495</td><td/><td/></row>
 		<row><td>KillRestartSpoolerApp</td><td>Not Installed</td><td>3601</td><td/><td/></row>
+		<row><td>KillRestartSpoolerApp1</td><td>REMOVE="ALL"</td><td>1489</td><td/><td/></row>
 		<row><td>KillSettingsConsoleApp</td><td>Not Installed</td><td>3612</td><td/><td/></row>
-		<row><td>KillTrayApp</td><td>REMOVE="ALL"</td><td>1455</td><td/><td/></row>
+		<row><td>KillSettingsConsoleApp1</td><td>REMOVE="ALL"</td><td>1502</td><td/><td/></row>
+		<row><td>KillTrayApp</td><td>Not Installed</td><td>3625</td><td/><td/></row>
+		<row><td>KillTrayApp1</td><td>REMOVE="ALL"</td><td>1455</td><td/><td/></row>
 		<row><td>KillUACHelperApp</td><td>Not Installed</td><td>3601</td><td/><td/></row>
+		<row><td>KillUACHelperApp1</td><td>REMOVE="ALL"</td><td>1478</td><td/><td/></row>
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
 		<row><td>MigrateFeatureStates</td><td/><td>1010</td><td>MigrateFeatureStates</td><td/></row>
 		<row><td>MoveFiles</td><td/><td>3800</td><td>MoveFiles</td><td/></row>
