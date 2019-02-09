@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERDISTRIBUTIONLIB/MY PROJECT/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERDISTRIBUTIONLIB/MY PROJECT/RESOURCES.RESX" datatype="resx" />
+    </body>
+  </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERDISTRIBUTIONLIB/TRANSLATEDSTRINGS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERDISTRIBUTIONLIB/TRANSLATEDSTRINGS.RESX" datatype="resx">
+        <trans-unit id="PrinterPushFeatureNotEnabledStr" translate="yes" xml:space="preserve">
+          <source>Diese Funktion ist in der Einstellungsdatei clientseitig nicht aktiviert.</source>
+          <target state="translated">This function is currentyl disabled.</target>
+        </trans-unit>
+        <trans-unit id="ProfilePublishedFailStr1" translate="yes" xml:space="preserve">
+          <source>Die Profildatei konnte nicht auf Client </source>
+          <target state="translated">Failed applying profile to client </target>
+        </trans-unit>
+        <trans-unit id="ProfilePublishedFailStr2" translate="yes" xml:space="preserve">
+          <source> geschrieben werden. Bitte Hostname überprüfen.</source>
+          <target state="translated">. Please check hostname.</target>
+        </trans-unit>
+        <trans-unit id="ProfilePublishedSuccessStr1" translate="yes" xml:space="preserve">
+          <source>Profildatei erfolgreich auf Client </source>
+          <target state="translated">Sucessfully applied profile on client </target>
+        </trans-unit>
+        <trans-unit id="ProfilePublishedSuccessStr2" translate="yes" xml:space="preserve">
+          <source> veröffentlicht.</source>
+          <target state="translated">.</target>
+        </trans-unit>
+        <trans-unit id="SendPrinterProfileNameStr" translate="yes" xml:space="preserve">
+          <source>Druckerprofil</source>
+          <target state="translated">Printer profile</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

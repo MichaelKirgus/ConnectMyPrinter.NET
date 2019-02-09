@@ -1,40 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A899593B-26E7-4284-B395-4CD7D677A522}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>ConnectMyPrinterRemoteFileHelper.My.MyApplication</StartupObject>
-    <RootNamespace>ConnectMyPrinterRemoteFileHelper</RootNamespace>
-    <AssemblyName>ConnectMyPrinterRemoteFileHelper</AssemblyName>
+    <ProjectGuid>{36A34E45-127F-4266-892C-C7645E1BF488}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ConnectMyPrinterDistributionLib</RootNamespace>
+    <AssemblyName>ConnectMyPrinterDistributionLib</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterRemoteFileHelper.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterDistributionLib.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterRemoteFileHelper.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterDistributionLib.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -48,9 +43,6 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>1472876332_settings.ico</ApplicationIcon>
-  </PropertyGroup>
   <PropertyGroup Label="MultilingualAppToolkit">
     <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
     <MultilingualFallbackLanguage>de-DE</MultilingualFallbackLanguage>
@@ -60,9 +52,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -75,21 +64,13 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DistributionHelper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -105,12 +86,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ProcessDlg.Designer.vb">
-      <DependentUpon>ProcessDlg.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ProcessDlg.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TranslatedStrings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,15 +93,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.de-DE.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.en-US.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.en-US.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -134,15 +100,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProcessDlg.de-DE.resx">
-      <DependentUpon>ProcessDlg.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProcessDlg.en-US.resx">
-      <DependentUpon>ProcessDlg.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProcessDlg.resx">
-      <DependentUpon>ProcessDlg.vb</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="TranslatedStrings.en-US.resx" />
     <EmbeddedResource Include="TranslatedStrings.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
@@ -159,91 +117,27 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\document-open-7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document-save-5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConnectMyPrinter.NET\ConnectMyPrinter.NET.vbproj">
-      <Project>{2ffb39f5-85ab-405b-8ab7-d3404312b088}</Project>
-      <Name>ConnectMyPrinter.NET</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
       <Project>{ae01b7ff-c216-4752-b4ff-d6956a772d44}</Project>
       <Name>ConnectMyPrinterAppSettingsHandler</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterDistributionLib\ConnectMyPrinterDistributionLib.vbproj">
-      <Project>{36a34e45-127f-4266-892c-c7645e1bf488}</Project>
-      <Name>ConnectMyPrinterDistributionLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterDriverPackagesLib\ConnectMyPrinterDriverPackagesLib.vbproj">
-      <Project>{bf9d7431-74ea-4ce1-a9d5-18868a0f42cf}</Project>
-      <Name>ConnectMyPrinterDriverPackagesLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
-      <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
-      <Name>ConnectMyPrinterEnumerationLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterLanguageHelper\ConnectMyPrinterLanguageHelper.vbproj">
-      <Project>{24D22097-0588-43AA-93E8-D9408234B53F}</Project>
+      <Project>{24d22097-0588-43aa-93e8-d9408234b53f}</Project>
       <Name>ConnectMyPrinterLanguageHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterOutlookHelper\ConnectMyPrinterOutlookHelper.vbproj">
-      <Project>{6e7264c3-52a0-4c0f-8ffd-d56758d7d991}</Project>
-      <Name>ConnectMyPrinterOutlookHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
-      <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
-      <Name>ConnectMyPrinterPrinterManageLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterRemoteFileHandler\ConnectMyPrinterRemoteFileHandler.vbproj">
       <Project>{0d65d86f-f312-411c-93fa-879c49f0797f}</Project>
       <Name>ConnectMyPrinterRemoteFileHandler</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterSystemRestorePointLib\ConnectMyPrinterSystemRestorePointLib.vbproj">
-      <Project>{8d1893cd-90b0-4437-bf31-49edb6d9230e}</Project>
-      <Name>ConnectMyPrinterSystemRestorePointLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectMyPrinterUACHelper\ConnectMyPrinterUACHelper.vbproj">
-      <Project>{53b8a917-53bb-4ecf-9709-c50ba632da9a}</Project>
-      <Name>ConnectMyPrinterUACHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MetroFramework\MetroFramework\MetroFramework.csproj">
-      <Project>{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F}</Project>
-      <Name>MetroFramework</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1472876332_settings.ico" />
-    <Content Include="prprico.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="Resources\backup_printer.png" />
-    <None Include="Resources\DeletePrinter2.png" />
-    <None Include="Resources\plus_bw.png" />
-    <None Include="Resources\prprico.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <XliffResource Include="MultilingualResources\ConnectMyPrinterRemoteFileHelper.en-US.xlf" />
+    <XliffResource Include="MultilingualResources\ConnectMyPrinterDistributionLib.en-US.xlf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
-  <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

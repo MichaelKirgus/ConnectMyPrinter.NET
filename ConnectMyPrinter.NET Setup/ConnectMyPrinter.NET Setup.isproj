@@ -54,6 +54,10 @@
 			<Name>ConnectMyPrinterDeleteAllPrinters</Name>
 			<Project>{8CB8056A-D5AA-42DD-8A50-B7658D69C95C}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterDistributionLib\ConnectMyPrinterDistributionLib.vbproj">
+			<Name>ConnectMyPrinterDistributionLib</Name>
+			<Project>{36A34E45-127F-4266-892C-C7645E1BF488}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterDriverPackagesLib\ConnectMyPrinterDriverPackagesLib.vbproj">
 			<Name>ConnectMyPrinterDriverPackagesLib</Name>
 			<Project>{BF9D7431-74EA-4CE1-A9D5-18868A0F42CF}</Project>
