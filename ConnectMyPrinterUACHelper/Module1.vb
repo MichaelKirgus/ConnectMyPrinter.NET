@@ -21,13 +21,13 @@ Module Module1
         Dim jj As Array = IO.Directory.GetFiles(My.Application.CommandLineArgs(0))
 
         For Each argument As String In jj
-            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterUACHelper.TranslatedStrings", GetType(AppContext), MCultureInf, "ReadPrinterEntryStr", ""))
+            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterUACHelper.TranslatedStrings", GetType(Module1), MCultureInf, "ReadPrinterEntryStr", ""))
 
             Dim printerobj As PrinterQueueInfo
             ll = New IO.FileInfo(argument)
             printerobj = DeserializeLib.LoadQueueFile(argument)
 
-            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterUACHelper.TranslatedStrings", GetType(AppContext), MCultureInf, "ExecActionStr", ""))
+            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterUACHelper.TranslatedStrings", GetType(Module1), MCultureInf, "ExecActionStr", ""))
 
             If ll.Name.Contains("DeletePrinter") Then
                 PrinterServices.DeletePrinter(printerobj)

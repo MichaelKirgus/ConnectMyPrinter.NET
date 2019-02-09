@@ -11,7 +11,7 @@ Public Class DistributionHelper
         Try
             If Not AppSettingsClass.UseTracePathFeature Then
                 If Silent = False Then
-                    MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(AppContext), MCultureInf, "PrinterPushFeatureNotEnabledStr", ""), MsgBoxStyle.Exclamation)
+                    MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "PrinterPushFeatureNotEnabledStr", ""), MsgBoxStyle.Exclamation)
                 End If
                 Return False
             End If
@@ -47,9 +47,9 @@ Public Class DistributionHelper
                         If Not IO.File.Exists(filename) Then
                             Dim yy As New RemoteFileSerializer
                             If yy.SaveRemoteFile(RemoteFileProfile, filename) Then
-                                LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(AppContext), MCultureInf, "ProfilePublishedSuccessStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(AppContext), MCultureInf, "ProfilePublishedSuccessStr2", "") & vbNewLine
+                                LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedSuccessStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedSuccessStr2", "") & vbNewLine
                             Else
-                                LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(AppContext), MCultureInf, "ProfilePublishedFailStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(AppContext), MCultureInf, "ProfilePublishedFailStr2", "") & vbNewLine
+                                LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedFailStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedFailStr2", "") & vbNewLine
                             End If
                         End If
                     End If

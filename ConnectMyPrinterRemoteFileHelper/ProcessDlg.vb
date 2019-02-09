@@ -137,6 +137,7 @@ Public Class ProcessDlg
                     End If
 
                     If item.SetDefaultPrinter Then
+                        Threading.Thread.Sleep(500)
                         uu.SetDefaultPrinter(qq)
                     End If
                 Catch ex As Exception

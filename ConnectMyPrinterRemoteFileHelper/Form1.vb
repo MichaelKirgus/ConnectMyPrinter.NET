@@ -88,6 +88,8 @@ Public Class Form1
                 If kk = MsgBoxResult.Yes Then
                     RemoteFile.ConnectPrinters.Clear()
                 End If
+            Else
+                RemoteFile.ConnectPrinters.Clear()
             End If
         End If
 
@@ -179,7 +181,7 @@ Public Class Form1
         PropertyGrid1.SelectedObject = Nothing
         PropertyGrid1.SelectedObject = RemoteFile
 
-        Button6.Enabled = False
+        Button6.Enabled = True
         Me.UseWaitCursor = False
         Application.DoEvents()
     End Sub

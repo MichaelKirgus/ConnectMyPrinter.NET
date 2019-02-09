@@ -7,10 +7,10 @@ Module Module1
     Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
 
     Sub Main()
-        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterCreateRestorePoint.TranslatedStrings", GetType(AppContext), MCultureInf, "ProcessingStr", ""))
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterCreateRestorePoint.TranslatedStrings", GetType(Module1), MCultureInf, "ProcessingStr", ""))
         Dim aa As New ConnectMyPrinterSystemRestorePointLib.CreateRestorePointClass
         aa.EnsureCreationPoint()
-        aa.CreatePoint(MLangHelper.GetCultureString("ConnectMyPrinterCreateRestorePoint.TranslatedStrings", GetType(AppContext), MCultureInf, "RestorePointNameStr", ""), True)
-        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterCreateRestorePoint.TranslatedStrings", GetType(AppContext), MCultureInf, "FinishedStr", ""))
+        aa.CreatePoint(MLangHelper.GetCultureString("ConnectMyPrinterCreateRestorePoint.TranslatedStrings", GetType(Module1), MCultureInf, "RestorePointNameStr", ""), True)
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterCreateRestorePoint.TranslatedStrings", GetType(Module1), MCultureInf, "FinishedStr", ""))
     End Sub
 End Module

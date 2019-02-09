@@ -10,17 +10,17 @@ Module Module1
 
     Sub Main()
         If Environment.Is64BitOperatingSystem Then
-            MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyPictureLogoToProgramPathStr", "")
+            MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathStr", "")
 
-            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyFileToProgramPathStr", ""))
+            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyFileToProgramPathStr", ""))
             Try
                 My.Computer.FileSystem.CopyFile("C:\Temp\AppSettings.xml", "C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", True)
-                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyFileToProgramPathFinishedStr", ""))
+                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyFileToProgramPathFinishedStr", ""))
             Catch ex As Exception
-                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyFileToProgramPathErrorStr", ""))
+                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyFileToProgramPathErrorStr", ""))
             End Try
 
-            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "ChangeACLsAtAppSettingsFileStr", ""))
+            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "ChangeACLsAtAppSettingsFileStr", ""))
 
             Try
                 AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "Everyone",
@@ -47,23 +47,23 @@ Module Module1
     FileSystemRights.FullControl, AccessControlType.Allow)
             Catch ex As Exception
             End Try
-            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyPictureLogoToProgramPathStr", ""))
+            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathStr", ""))
             Try
                 My.Computer.FileSystem.CopyFile("C:\Temp\logo.gif", "C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\logo.gif", True)
-                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyPictureLogoToProgramPathFinishedStr", ""))
+                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathFinishedStr", ""))
             Catch ex As Exception
-                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyPictureLogoToProgramPathErrorStr", ""))
+                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathErrorStr", ""))
             End Try
         Else
-            MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyPictureLogoToProgramPathStr", "")
+            MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathStr", "")
             Try
                 My.Computer.FileSystem.CopyFile("C:\Temp\AppSettings.xml", "C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", True)
-                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyFileToProgramPathFinishedStr", ""))
+                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyFileToProgramPathFinishedStr", ""))
             Catch ex As Exception
-                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyFileToProgramPathErrorStr", ""))
+                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyFileToProgramPathErrorStr", ""))
             End Try
 
-            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "ChangeACLsAtAppSettingsFileStr", ""))
+            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "ChangeACLsAtAppSettingsFileStr", ""))
 
             Try
                 AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "Everyone",
@@ -90,16 +90,16 @@ Module Module1
     FileSystemRights.FullControl, AccessControlType.Allow)
             Catch ex As Exception
             End Try
-            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyPictureLogoToProgramPathStr", ""))
+            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathStr", ""))
             Try
                 My.Computer.FileSystem.CopyFile("C:\Temp\logo.gif", "C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\logo.gif", True)
-                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyPictureLogoToProgramPathFinishedStr", ""))
+                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathFinishedStr", ""))
             Catch ex As Exception
-                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "CopyPictureLogoToProgramPathErrorStr", ""))
+                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathErrorStr", ""))
             End Try
         End If
 
-        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(AppContext), MCultureInf, "FinishedStr", ""))
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "FinishedStr", ""))
     End Sub
 
     Sub AddFileSecurity(ByVal fileName As String, ByVal account As String,

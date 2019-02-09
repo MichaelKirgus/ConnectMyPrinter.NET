@@ -10,7 +10,7 @@ Module Module1
     Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
 
     Sub Main()
-        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterClean.TranslatedStrings", GetType(AppContext), MCultureInf, "LoadEnvStr", ""))
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterClean.TranslatedStrings", GetType(Module1), MCultureInf, "LoadEnvStr", ""))
 
         Dim ElevationHelper As New ElevationHelperClass
         Dim PrinterDriverRemoverService As New PrinterDriverRemover
@@ -20,7 +20,7 @@ Module Module1
         Dim ActionFileDir As String = "PrinterActionsElv"
         Dim FormModule As Form1 = New Form1
 
-        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterClean.TranslatedStrings", GetType(AppContext), MCultureInf, "LoadSettingsStr", ""))
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterClean.TranslatedStrings", GetType(Module1), MCultureInf, "LoadSettingsStr", ""))
         'Laden der Einstellungen für alle Benutzer
         If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile) Then
             AppSettingFile = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile
@@ -40,11 +40,11 @@ Module Module1
         AppSettings = FormModule.LoadSettings(AppSettingFile)
 
         'Entferne ungenutzte Treiberpakete
-        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterClean.TranslatedStrings", GetType(AppContext), MCultureInf, "DeleteUnusedDriverPacketsStr", ""))
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterClean.TranslatedStrings", GetType(Module1), MCultureInf, "DeleteUnusedDriverPacketsStr", ""))
         PrinterDriverRemoverService.DeleteUnusedDrivers(AppSettings.PrinterAdminPath)
         PrinterManageService.RestartPrinterService()
         PrinterDriverRemoverService.DeleteUnusedDrivers(AppSettings.PrinterAdminPath)
-        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterClean.TranslatedStrings", GetType(AppContext), MCultureInf, "FinishedStr", ""))
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterClean.TranslatedStrings", GetType(Module1), MCultureInf, "FinishedStr", ""))
     End Sub
 
 End Module
