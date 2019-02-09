@@ -40,7 +40,7 @@ Public Class DistributionHelper
                     If LocalMachine Then
                         filename = "\\" & clientlist(index) & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\LM_" & uuid & "_" & options & ".prpr"
                     Else
-                        filename = "\\" & clientlist(index) & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\" & Username & "_" & uuid & "_" & options & ".prpr"
+                        filename = "\\" & clientlist(index) & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\" & Username.ToLower & "_" & uuid & "_" & options & ".prpr"
                     End If
 
                     If IO.Directory.Exists("\\" & clientlist(index) & AppSettingsClass.ActionsTraceAdminPath) Then
