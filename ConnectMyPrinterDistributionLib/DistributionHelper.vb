@@ -126,7 +126,7 @@ Public Class DistributionHelper
         End Try
     End Function
 
-    Public Function LoadPrinterProfileFromClient(ByVal Clientname As String, ByVal AppSettingsClass As AppSettingsClass) As Boolean
+    Public Function LoadPrinterProfileFromClient(ByVal Clientname As String, ByVal AppSettingsClass As AppSettingsClass) As RemoteFileClass
         RequestPrinterProfileFromClient(Clientname, AppSettingsClass)
         Dim counter As Integer = 0
         Debug.WriteLine("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\RESULT.prpr")
@@ -140,13 +140,16 @@ Public Class DistributionHelper
         Loop
         If Not counter = 500 Then
             Threading.Thread.Sleep(150)
-            If Not GetRequestedProfileFromClient(Clientname, AppSettingsClass).ConnectPrinters.Count = 0 Then
+            Dim rs1 As RemoteFileClass
+            rs1 = GetRequestedProfileFromClient(Clientname, AppSettingsClass)
+
+            If Not rs1.ConnectPrinters.Count = 0 Then
                 IO.File.Delete("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\RESULT.prpr")
                 CleanOldRequestFiles(Clientname, AppSettingsClass)
-                Return True
+                Return rs1
             End If
         End If
 
-        Return False
+        Return New RemoteFileClass
     End Function
 End Class

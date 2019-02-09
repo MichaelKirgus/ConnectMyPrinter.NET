@@ -166,11 +166,16 @@ Public Class Form1
         Application.DoEvents()
 
         TextBox5.BackColor = Color.LightGray
-        If DistHelper.LoadPrinterProfileFromClient(TextBox5.Text, AppSettings) Then
+
+        Dim result As New RemoteFileClass
+        result = DistHelper.LoadPrinterProfileFromClient(TextBox5.Text, AppSettings)
+        If Not result.ConnectPrinters.Count = 0 Then
             TextBox5.BackColor = Color.LightGreen
         Else
             TextBox5.BackColor = Color.LightCoral
         End If
+
+        RemoteFile = result
         PropertyGrid1.SelectedObject = Nothing
         PropertyGrid1.SelectedObject = RemoteFile
 
@@ -181,11 +186,14 @@ Public Class Form1
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         TextBox5.BackColor = Color.LightGray
-        If DistHelper.LoadPrinterProfileFromClient(TextBox5.Text, AppSettings) Then
+        Dim result As New RemoteFileClass
+        result = DistHelper.LoadPrinterProfileFromClient(TextBox5.Text, AppSettings)
+        If Not result.ConnectPrinters.Count = 0 Then
             TextBox5.BackColor = Color.LightGreen
         Else
             TextBox5.BackColor = Color.LightCoral
         End If
+        RemoteFile = result
         PropertyGrid1.SelectedObject = Nothing
         PropertyGrid1.SelectedObject = RemoteFile
         ToolStripButton2.PerformClick()
@@ -218,15 +226,19 @@ Public Class Form1
             End If
 
             Dim LogTxt As String = ""
-            For index = 0 To clientcoll.Count - 1
-                If DistHelper.LoadPrinterProfileFromClient(TextBox6.Text, AppSettings) Then
-                    If DistHelper.PublishProfileToClient(clientcoll(index), TextBox4.Text, CheckBox2.Checked, CheckBox3.Checked, RemoteFile, AppSettings) Then
+
+            Dim result As New RemoteFileClass
+            result = DistHelper.LoadPrinterProfileFromClient(TextBox6.Text, AppSettings)
+
+            If Not result.ConnectPrinters.Count = 0 Then
+                For index = 0 To clientcoll.Count - 1
+                    If DistHelper.PublishProfileToClient(clientcoll(index), TextBox4.Text, CheckBox2.Checked, CheckBox3.Checked, result, AppSettings) Then
                         LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedSuccessStr1", "") & clientcoll(index) & MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedSuccessStr2", "") & vbNewLine
                     Else
                         LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedFailStr1", "") & clientcoll(index) & MLangHelper.GetCultureString("ConnectMyPrinterRemoteFileHelper.TranslatedStrings", GetType(Form1), MCultureInf, "ProfilePublishedFailStr2", "") & vbNewLine
                     End If
-                End If
-            Next
+                Next
+            End If
 
             MsgBox(LogTxt, MsgBoxStyle.Information)
         Catch ex As Exception
