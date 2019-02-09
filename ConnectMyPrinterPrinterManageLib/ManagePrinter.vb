@@ -84,7 +84,7 @@ Public Class ManagePrinter
 
     Public Function SetDefaultPrinter(ByVal PrinterEntry As PrinterQueueInfo) As Boolean
         Try
-            If (PrinterEntry.Server = "Lokal") Or (PrinterEntry.Server.ToLower.Contains(My.Computer.Name.ToLower)) Then
+            If (PrinterEntry.Server = "Lokal") Or (PrinterEntry.Server.ToLower.Contains(My.Computer.Name.ToLower) Or PrinterEntry.Server = "Local") Then
                 Dim classInstance As New ManagementObject(
         "root\CIMV2",
         "Win32_Printer.DeviceID='" & PrinterEntry.Name & "'",
@@ -121,7 +121,7 @@ Public Class ManagePrinter
 
     Public Function ShowPrinterSettings(ByVal PrinterEntry As PrinterQueueInfo) As Boolean
         Try
-            If PrinterEntry.Server = "Lokal" Then
+            If PrinterEntry.Server = "Lokal" Or PrinterEntry.Server = "Local" Then
                 Shell("rundll32 printui.dll PrintUIEntry /p /n " & My.Resources.trenn & PrinterEntry.ShareName & My.Resources.trenn)
             Else
                 Shell("rundll32 printui.dll PrintUIEntry /p /n" & PrinterEntry.Server & "\" & PrinterEntry.ShareName)
@@ -134,7 +134,7 @@ Public Class ManagePrinter
     End Function
     Public Function ShowPrinterDriverSettings(ByVal PrinterEntry As PrinterQueueInfo) As Boolean
         Try
-            If PrinterEntry.Server = "Lokal" Then
+            If PrinterEntry.Server = "Lokal" Or PrinterEntry.Server = "Local" Then
                 Shell("rundll32 printui.dll PrintUIEntry /e /n " & My.Resources.trenn & PrinterEntry.ShareName & My.Resources.trenn)
             Else
                 Shell("rundll32 printui.dll PrintUIEntry /e /n" & PrinterEntry.Server & "\" & PrinterEntry.ShareName)
@@ -148,7 +148,7 @@ Public Class ManagePrinter
 
     Public Function PrintTestPage(ByVal PrinterEntry As PrinterQueueInfo) As Boolean
         Try
-            If PrinterEntry.Server = "Lokal" Then
+            If PrinterEntry.Server = "Lokal" Or PrinterEntry.Server = "Local" Then
                 Shell("rundll32 printui.dll PrintUIEntry /k /n " & My.Resources.trenn & PrinterEntry.ShareName & My.Resources.trenn)
             Else
                 Shell("rundll32 printui.dll PrintUIEntry /k /n" & PrinterEntry.Server & "\" & PrinterEntry.ShareName)
@@ -162,7 +162,7 @@ Public Class ManagePrinter
 
     Public Function ShowPrinterQueue(ByVal PrinterEntry As PrinterQueueInfo) As Boolean
         Try
-            If PrinterEntry.Server = "Lokal" Then
+            If PrinterEntry.Server = "Lokal" Or PrinterEntry.Server = "Local" Then
                 Shell("rundll32 printui.dll PrintUIEntry /o /n " & My.Resources.trenn & PrinterEntry.ShareName & My.Resources.trenn)
             Else
                 Shell("rundll32 printui.dll PrintUIEntry /o /n" & PrinterEntry.Server & "\" & PrinterEntry.ShareName)
@@ -176,7 +176,7 @@ Public Class ManagePrinter
 
     Public Function DeletePrinter(ByVal PrinterEntry As PrinterQueueInfo) As Boolean
         Try
-            If PrinterEntry.Server = "Lokal" Then
+            If PrinterEntry.Server = "Lokal" Or PrinterEntry.Server = "Local" Then
                 Shell("rundll32 printui.dll PrintUIEntry /dl /n " & My.Resources.trenn & PrinterEntry.ShareName & My.Resources.trenn & " /q")
             Else
                 Shell("rundll32 printui.dll PrintUIEntry /dn /n " & PrinterEntry.Server & "\" & PrinterEntry.ShareName & " /q")
