@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERCLEAN/MY PROJECT/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERCLEAN/MY PROJECT/RESOURCES.RESX" datatype="resx" />
+    </body>
+  </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERCLEAN/TRANSLATEDSTRINGS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERCLEAN/TRANSLATEDSTRINGS.RESX" datatype="resx">
+        <trans-unit id="DeleteUnusedDriverPacketsStr" translate="yes" xml:space="preserve">
+          <source>Entferne ungenutzte Treiberpakete...</source>
+          <target state="translated">Delete unused driver packets...</target>
+        </trans-unit>
+        <trans-unit id="FinishedStr" translate="yes" xml:space="preserve">
+          <source>Abgeschlossen!</source>
+          <target state="translated">Finished!</target>
+        </trans-unit>
+        <trans-unit id="LoadEnvStr" translate="yes" xml:space="preserve">
+          <source>Lade Umgebung...</source>
+          <target state="translated">Loading environment...</target>
+        </trans-unit>
+        <trans-unit id="LoadSettingsStr" translate="yes" xml:space="preserve">
+          <source>Lade Einstellungsdatei...</source>
+          <target state="translated">Loading settings...</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERAPPSETTINGSSETUP/MY PROJECT/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERAPPSETTINGSSETUP/MY PROJECT/RESOURCES.RESX" datatype="resx" />
+    </body>
+  </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERAPPSETTINGSSETUP/TRANSLATEDSTRINGS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERAPPSETTINGSSETUP/TRANSLATEDSTRINGS.RESX" datatype="resx">
+        <trans-unit id="ChangeACLsAtAppSettingsFileStr" translate="yes" xml:space="preserve">
+          <source>Ändere ACLs für Einstellungsdatei...</source>
+          <target state="translated">Change permissions at settings file...</target>
+        </trans-unit>
+        <trans-unit id="CopyFileToProgramPathErrorStr" translate="yes" xml:space="preserve">
+          <source>Einstellungsdatei konnte nicht kopiert werden.</source>
+          <target state="translated">Failed copy app settings file.</target>
+        </trans-unit>
+        <trans-unit id="CopyFileToProgramPathFinishedStr" translate="yes" xml:space="preserve">
+          <source>Einstellungsdatei von C:\Temp nach C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET kopiert.</source>
+          <target state="translated">Copy app settings from C:\Temp to C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET sucessfull.</target>
+        </trans-unit>
+        <trans-unit id="CopyFileToProgramPathStr" translate="yes" xml:space="preserve">
+          <source>Kopiere Einstellungsdatei von C:\Temp nach C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET...</source>
+          <target state="translated">Copy app settings file from C:\Temp to C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET...</target>
+        </trans-unit>
+        <trans-unit id="CopyPictureLogoToProgramPathErrorStr" translate="yes" xml:space="preserve">
+          <source>Das benutzerdefinierte Logo konnte nicht kopiert werden.</source>
+          <target state="translated">Failed copy user definied graphic file.</target>
+        </trans-unit>
+        <trans-unit id="CopyPictureLogoToProgramPathFinishedStr" translate="yes" xml:space="preserve">
+          <source>Logo erfolgreich kopiert.</source>
+          <target state="translated">Copy logo file successfull.</target>
+        </trans-unit>
+        <trans-unit id="CopyPictureLogoToProgramPathStr" translate="yes" xml:space="preserve">
+          <source>Kopiere benutzerdefiniertes Logo in Anwendungsverzeichnis...</source>
+          <target state="translated">Copy custom logo file to application dir...</target>
+        </trans-unit>
+        <trans-unit id="FinishedStr" translate="yes" xml:space="preserve">
+          <source>Fertig.</source>
+          <target state="translated">Finished.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

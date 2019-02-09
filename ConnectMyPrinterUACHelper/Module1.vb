@@ -1,9 +1,13 @@
-﻿Imports System.Management
+﻿Imports System.Globalization
+Imports System.Management
 Imports ConnectMyPrinterAppSettingsHandler
 Imports ConnectMyPrinterEnumerationLib
+Imports ConnectMyPrinterLanguageHelper
 Imports ConnectMyPrinterPrinterManageLib
 
 Module Module1
+    Public MLangHelper As New LanguageApplyHelper
+    Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
 
     Public DeserializeLib As New PrinterEnumerationSerializer
     Public PrinterServices As New ManagePrinter
@@ -17,14 +21,13 @@ Module Module1
         Dim jj As Array = IO.Directory.GetFiles(My.Application.CommandLineArgs(0))
 
         For Each argument As String In jj
-
-            Console.WriteLine("> Lese Druckerinformationen...")
+            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterUACHelper.TranslatedStrings", GetType(AppContext), MCultureInf, "ReadPrinterEntryStr", ""))
 
             Dim printerobj As PrinterQueueInfo
             ll = New IO.FileInfo(argument)
             printerobj = DeserializeLib.LoadQueueFile(argument)
 
-            Console.WriteLine("> Führe Aktion aus...")
+            Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterUACHelper.TranslatedStrings", GetType(AppContext), MCultureInf, "ExecActionStr", ""))
 
             If ll.Name.Contains("DeletePrinter") Then
                 PrinterServices.DeletePrinter(printerobj)

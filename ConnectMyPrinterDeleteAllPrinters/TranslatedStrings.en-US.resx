@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExecWithoutAdminStr" xml:space="preserve">
+    <value>It is not allowed to run this application without an administrative user-account.</value>
+  </data>
+  <data name="FinishedStepStr" xml:space="preserve">
+    <value>Finished!</value>
+  </data>
+  <data name="LoadEnvStr" xml:space="preserve">
+    <value>Load environment...</value>
+  </data>
+  <data name="LoadSettingsFileStr" xml:space="preserve">
+    <value>Load settings...</value>
+  </data>
+  <data name="Step1Str" xml:space="preserve">
+    <value>1. Restart spooler...</value>
+  </data>
+  <data name="Step2Str" xml:space="preserve">
+    <value>2. Delete unused driver packets...</value>
+  </data>
+  <data name="Step3Str" xml:space="preserve">
+    <value>3. Delete all printers...</value>
+  </data>
+  <data name="Step4Str" xml:space="preserve">
+    <value>4. Restart spooler...</value>
+  </data>
+  <data name="Step5Str" xml:space="preserve">
+    <value>5. Delete unused driver packets...</value>
+  </data>
+</root>

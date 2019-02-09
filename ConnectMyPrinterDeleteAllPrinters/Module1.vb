@@ -1,8 +1,13 @@
-﻿Imports ConnectMyPrinter.NET
+﻿Imports System.Globalization
+Imports ConnectMyPrinter.NET
 Imports ConnectMyPrinterAppSettingsHandler
+Imports ConnectMyPrinterLanguageHelper
 Imports ConnectMyPrinterPrinterManageLib
 
 Module Module1
+    Public MLangHelper As New LanguageApplyHelper
+    Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
+
     Dim AdminCheck As New ConnectMyPrinterACLHelperLib.HelperFunctions
     Dim ElevationHelper As New ElevationHelperClass
     Dim PrinterDriverRemoverService As New PrinterDriverRemover
@@ -13,8 +18,8 @@ Module Module1
     Dim FormModule As Form1 = New Form1
 
     Sub Main()
-        Console.WriteLine("Lade Umgebung...")
-        Console.WriteLine("Lade Einstellungsdatei...")
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "LoadEnvStr", ""))
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "LoadSettingsFileStr", ""))
         'Laden der Einstellungen für alle Benutzer
         If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile) Then
             AppSettingFile = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile
@@ -37,7 +42,7 @@ Module Module1
         Try
             If AdminCheck.IsAdmin = False Then
                 If AppSettings.AllowDeleteAllPrintersStartWithoutAdminRights = False Then
-                    Console.WriteLine("Die Anwendung darf nicht mit normalen Benutzerrechten gestartet werden.")
+                    Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "ExecWithoutAdminStr", ""))
                 Else
                     DeleteAllPrinters()
                     Exit Sub
@@ -49,7 +54,7 @@ Module Module1
             'Es ist zu einem Fehler kommen, da der Benutzer keine Adminrechte hat.
 
             If AppSettings.AllowDeleteAllPrintersStartWithoutAdminRights = False Then
-                Console.WriteLine("Die Anwendung darf nicht mit normalen Benutzerrechten gestartet werden.")
+                Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "ExecWithoutAdminStr", ""))
             Else
                 DeleteAllPrinters()
                 Exit Sub
@@ -59,16 +64,16 @@ Module Module1
 
     Sub DeleteAllPrinters()
         'Entferne ungenutzte Treiberpakete
-        Console.WriteLine("1. Neustart Druckerwarteschlange...")
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "Step1Str", ""))
         PrinterManageService.RestartPrinterService()
-        Console.WriteLine("2. Unbenutzte Treiberpakete löschen...")
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "Step2Str", ""))
         PrinterDriverRemoverService.DeleteUnusedDrivers(AppSettings.PrinterAdminPath)
-        Console.WriteLine("3. Alle Drucker löschen...")
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "Step3Str", ""))
         PrinterDriverRemoverService.DeleteAllPrintersAndDrivers(AppSettings.PrinterAdminPath)
-        Console.WriteLine("4. Neustart Druckerwarteschlange...")
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "Step4Str", ""))
         PrinterManageService.RestartPrinterService()
-        Console.WriteLine("5. Unbenutzte Treiberpakete löschen...")
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "Step5Str", ""))
         PrinterDriverRemoverService.DeleteUnusedDrivers(AppSettings.PrinterAdminPath)
-        Console.WriteLine("Abgeschlossen!")
+        Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(AppContext), MCultureInf, "FinishedStepStr", ""))
     End Sub
 End Module

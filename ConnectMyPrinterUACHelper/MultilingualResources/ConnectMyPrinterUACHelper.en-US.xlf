@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERUACHELPER/MY PROJECT/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERUACHELPER/MY PROJECT/RESOURCES.RESX" datatype="resx" />
+    </body>
+  </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERUACHELPER/TRANSLATEDSTRINGS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERUACHELPER/TRANSLATEDSTRINGS.RESX" datatype="resx">
+        <trans-unit id="ExecActionStr" translate="yes" xml:space="preserve">
+          <source>&gt; Führe Aktion aus...</source>
+          <target state="translated">&gt; Proccesing action...</target>
+        </trans-unit>
+        <trans-unit id="ReadPrinterEntryStr" translate="yes" xml:space="preserve">
+          <source>&gt; Lese Druckerinformationen...</source>
+          <target state="translated">&gt; Read printer information...</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

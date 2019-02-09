@@ -9,7 +9,7 @@ Module Module1
     Sub ShowHelp()
         Console.WriteLine("-----------------------------------------------------------")
         Console.WriteLine("Tool zum Bearbeiten der ACLs des Windows-Spoolerdienstes")
-        Console.WriteLine("Copyright 2016 Michael Kirgus")
+        Console.WriteLine("Copyright 2016 - 2019 Michael Kirgus")
         Console.WriteLine("-----------------------------------------------------------")
         Console.WriteLine("Folgende Befehlszeilenparameter sind zugelassen:")
         Console.WriteLine("/ELEVATED: Die Anwendung wurde mit Administratorrechten gestartet. Wenn die Anwendung ohne Argumente gestartet wird, startet die Anwendung sich selbst mit Administrator-Rechten und fügt dieses Argument ein.")

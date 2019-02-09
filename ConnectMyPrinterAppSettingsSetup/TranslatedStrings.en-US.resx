@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChangeACLsAtAppSettingsFileStr" xml:space="preserve">
+    <value>Change permissions at settings file...</value>
+  </data>
+  <data name="CopyFileToProgramPathErrorStr" xml:space="preserve">
+    <value>Failed copy app settings file.</value>
+  </data>
+  <data name="CopyFileToProgramPathFinishedStr" xml:space="preserve">
+    <value>Copy app settings from C:\Temp to C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET sucessfull.</value>
+  </data>
+  <data name="CopyFileToProgramPathStr" xml:space="preserve">
+    <value>Copy app settings file from C:\Temp to C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET...</value>
+  </data>
+  <data name="CopyPictureLogoToProgramPathErrorStr" xml:space="preserve">
+    <value>Failed copy user definied graphic file.</value>
+  </data>
+  <data name="CopyPictureLogoToProgramPathFinishedStr" xml:space="preserve">
+    <value>Copy logo file successfull.</value>
+  </data>
+  <data name="CopyPictureLogoToProgramPathStr" xml:space="preserve">
+    <value>Copy custom logo file to application dir...</value>
+  </data>
+  <data name="FinishedStr" xml:space="preserve">
+    <value>Finished.</value>
+  </data>
+</root>
