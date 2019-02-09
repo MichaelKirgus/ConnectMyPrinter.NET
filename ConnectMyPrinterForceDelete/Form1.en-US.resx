@@ -1116,6 +1116,9 @@
   <data name="$this.StartPosition" xml:space="preserve" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Force printer/driver/driverpacket delete</value>
+  </data>
   <metadata name="ContextMenuStrip1.TrayLocation" xml:space="preserve" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

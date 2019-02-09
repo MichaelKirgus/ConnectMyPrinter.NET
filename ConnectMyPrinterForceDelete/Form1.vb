@@ -1,13 +1,17 @@
 ﻿
+Imports System.Globalization
 Imports System.IO
 Imports System.Xml.Serialization
 Imports ConnectMyPrinter.NET
 Imports ConnectMyPrinterAppSettingsHandler
 Imports ConnectMyPrinterElevationLib
+Imports ConnectMyPrinterLanguageHelper
 Imports ConnectMyPrinterUserListLib
-Imports Microsoft.Win32
 
 Public Class Form1
+    Public MLangHelper As New LanguageApplyHelper
+    Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
+
     Public AppSettingFile As String = "AppSettings.xml"
     Public AppSettings As ConnectMyPrinterAppSettingsHandler.AppSettingsClass
     Public RegistryHelperHandler As New ConnectMyPrinterRegistryHandler.RegistryHandler
@@ -53,10 +57,10 @@ Public Class Form1
             End If
             If AppSettings.AllowForceDeletePrinterStartWithoutAdminRights Then
                 If AppSettings.ShowForceDeletePrinterNonAdminMessageAtStart Then
-                    MsgBox("Die Anwendung wird ohne Admin-Rechte ausgeführt. Drucker können nur für den aktuellen Benutzer gelöscht werden. Dies kann zu Problemen beim Löschen Treiberpaketen sowie Treibern führen.", MsgBoxStyle.Critical)
+                    MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterForceDelete.TranslatedStrings", GetType(Form1), MCultureInf, "StartWithoutAdministrativeRightsStr", ""), MsgBoxStyle.Critical)
                 End If
             Else
-                MsgBox("Benutzer mit normalen Benutzerrechten dürfen diese Anwendung nicht starten.", MsgBoxStyle.Exclamation)
+                MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterForceDelete.TranslatedStrings", GetType(Form1), MCultureInf, "UserWithoutAdministrativeRightsDenyStr", ""), MsgBoxStyle.Exclamation)
                 Application.Exit()
             End If
         Else
@@ -78,7 +82,7 @@ Public Class Form1
                 Dim qq As New ListViewItem
                 qq.Text = item._Username
                 qq.SubItems.Add(item2)
-                qq.SubItems.Add("verbunden")
+                qq.SubItems.Add(MLangHelper.GetCultureString("ConnectMyPrinterForceDelete.TranslatedStrings", GetType(Form1), MCultureInf, "ConnectedListStr", ""))
                 qq.Tag = item
 
                 ListView1.Items.Add(qq)
@@ -91,9 +95,9 @@ Public Class Form1
 
         For Each item As String In jj
             Dim qq As New ListViewItem
-            qq.Text = "Alle Benutzer"
+            qq.Text = MLangHelper.GetCultureString("ConnectMyPrinterForceDelete.TranslatedStrings", GetType(Form1), MCultureInf, "AllUsersListStr", "")
             qq.SubItems.Add(item)
-            qq.SubItems.Add("lokal installiert")
+            qq.SubItems.Add(MLangHelper.GetCultureString("ConnectMyPrinterForceDelete.TranslatedStrings", GetType(Form1), MCultureInf, "LocalInstalledStr", ""))
             qq.Tag = New UserListClass
 
             ListView1.Items.Add(qq)
@@ -107,9 +111,9 @@ Public Class Form1
         For Each item As ConnectMyPrinterDriverPackagesLib.DriverPackageItem In ii
             Dim aa As New ListViewItem
             If item.DriverName = "" Then
-                aa.Text = "[Treiberpaket] (Von keinem Drucker genutzt)"
+                aa.Text = MLangHelper.GetCultureString("ConnectMyPrinterForceDelete.TranslatedStrings", GetType(Form1), MCultureInf, "DriverPacketNotUsedStr", "")
             Else
-                aa.Text = "[Treiberpaket] " & item.DriverName
+                aa.Text = MLangHelper.GetCultureString("ConnectMyPrinterForceDelete.TranslatedStrings", GetType(Form1), MCultureInf, "DriverPacketStr", "") & item.DriverName
             End If
 
             aa.SubItems.Add("")
@@ -133,7 +137,7 @@ Public Class Form1
 
         For Each item As ConnectMyPrinterDriverPackagesLib.DriverPackageItem In uu
             Dim aa As New ListViewItem
-            aa.Text = "[Treiber] " & item.DriverName
+            aa.Text = MLangHelper.GetCultureString("ConnectMyPrinterForceDelete.TranslatedStrings", GetType(Form1), MCultureInf, "DriverStr", "") & item.DriverName
             aa.SubItems.Add(item.DriverVersion)
             aa.SubItems.Add(item.DriverDate)
             aa.SubItems.Add(item.DriverKeyName)

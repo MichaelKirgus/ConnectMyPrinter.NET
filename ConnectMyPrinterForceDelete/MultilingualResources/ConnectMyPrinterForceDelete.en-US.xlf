@@ -2091,7 +2091,7 @@
         </trans-unit>
         <trans-unit id="$this.Text" translate="yes" xml:space="preserve">
           <source>Drucker/Treiber/Treiberpaket entfernen erzwingen</source>
-          <target state="new">Drucker/Treiber/Treiberpaket entfernen erzwingen</target>
+          <target state="translated">Force printer/driver/driverpacket delete</target>
         </trans-unit>
         <trans-unit id="ContextMenuStrip1.TrayLocation" translate="yes" extype="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" extradata="metadata" xml:space="preserve">
           <source>17, 17</source>
@@ -2104,6 +2104,47 @@
         <trans-unit id="$this.Localizable" translate="yes" extype="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extradata="metadata" xml:space="preserve">
           <source>True</source>
           <target state="needs-review-translation">True</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="de-DE" target-language="en-US" original="CONNECTMYPRINTERFORCEDELETE/TRANSLATEDSTRINGS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="CONNECTMYPRINTERFORCEDELETE/TRANSLATEDSTRINGS.RESX" datatype="resx">
+        <trans-unit id="AllUsersListStr" translate="yes" xml:space="preserve">
+          <source>Alle Benutzer</source>
+          <target state="translated">All users</target>
+        </trans-unit>
+        <trans-unit id="ConnectedListStr" translate="yes" xml:space="preserve">
+          <source>verbunden</source>
+          <target state="translated">connected</target>
+        </trans-unit>
+        <trans-unit id="DriverPacketNotUsedStr" translate="yes" xml:space="preserve">
+          <source>[Treiberpaket] (Von keinem Drucker genutzt)</source>
+          <target state="translated">[Driverpacket] (No printer association)</target>
+        </trans-unit>
+        <trans-unit id="DriverPacketStr" translate="yes" xml:space="preserve">
+          <source>[Treiberpaket] </source>
+          <target state="translated">[Driverpacket] </target>
+        </trans-unit>
+        <trans-unit id="DriverStr" translate="yes" xml:space="preserve">
+          <source>[Treiber] </source>
+          <target state="translated">[Driver] </target>
+        </trans-unit>
+        <trans-unit id="LocalInstalledStr" translate="yes" xml:space="preserve">
+          <source>lokal installiert</source>
+          <target state="translated">local installed</target>
+        </trans-unit>
+        <trans-unit id="StartWithoutAdministrativeRightsStr" translate="yes" xml:space="preserve">
+          <source>Die Anwendung wird ohne Admin-Rechte ausgeführt. Drucker können nur für den aktuellen Benutzer gelöscht werden. Dies kann zu Problemen beim Löschen Treiberpaketen sowie Treibern führen.</source>
+          <target state="translated">This application is running without administrative rights. Only printers from the current usere can be deleted. This may cause problems with deleting drivers.</target>
+        </trans-unit>
+        <trans-unit id="UserWithoutAdministrativeRightsDenyStr" translate="yes" xml:space="preserve">
+          <source>Benutzer mit normalen Benutzerrechten dürfen diese Anwendung nicht starten.</source>
+          <target state="translated">This not allowed to run this application as normal user.</target>
         </trans-unit>
       </group>
     </body>
