@@ -89,6 +89,7 @@ Public Class Form1
             Me.Text = AppSettings.WindowTitle
             MetroLabel1.Text = AppSettings.UserInformation
             MetroLabel3.Text = AppSettings.AdditionalUserInformation
+            CustomSupportInfoLbl.Text = AppSettings.AdditionalSupportBottomInformation
             Dim zz As New Size(Me.Width, AppSettings.StartWindowHeight)
             Me.Size = zz
 

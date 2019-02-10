@@ -20,5 +20,11 @@
             MetroTextBox1.Select(0, 0)
         Catch ex As Exception
         End Try
+
+        Try
+            AppVersionLbl.Text = My.Application.Info.Version.ToString
+            UserAboutInfoLbl.Text = _parentFrm.AppSettings.AdditionalAboutInformation
+        Catch ex As Exception
+        End Try
     End Sub
 End Class

@@ -24,6 +24,14 @@ Imports ConnectMyPrinterEnumerationLib
     ''' </summary>
     Property AdditionalUserInformation As String = ""
     ''' <summary>
+    ''' Zusätzliche Informationen für den Endanwender, welche im unteren Bereich des Hauptfensters angezeigt werden (optional).
+    ''' </summary>
+    Property AdditionalSupportBottomInformation As String = ""
+    ''' <summary>
+    ''' Zusätzliche Informationen für den Endanwender im Über-Fenster der Anwendung (optional).
+    ''' </summary>
+    Property AdditionalAboutInformation As String = ""
+    ''' <summary>
     ''' Der Dateipfad zum benutzerdefinierten Logo (JPEG, PNG, GIF, BMP) (optional).
     ''' </summary>
     Property CompanyLogoImagePath As String = ""
@@ -183,12 +191,33 @@ Imports ConnectMyPrinterEnumerationLib
     ''' Definiert, ob die Groß/Kleinschreibung bei der Suche nach einem Drucker beachtet werden soll.
     ''' </summary>
     Property IgnoreUpperLowerCase As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob bei einem direkten (einzigen) Treffer der Drucker direkt verbunden werden soll.
+    ''' </summary>
     Property AutoConnectPrinterIfExactResult As Boolean = False
+    ''' <summary>
+    ''' Wenn ein bereits bestehender Drucker verbunden werden soll wird dieser neu verbunden (getrennt + verbunden).
+    ''' </summary>
     Property DeletePrinterIfExists As Boolean = True
+    ''' <summary>
+    ''' Der Endanwender ist in der Lage, über die Oberfläche die Anwendungseinstellungen aufzurufen.
+    ''' </summary>
     Property AllowUserToChangeSettings As Boolean = True
+    ''' <summary>
+    ''' Die Anwendungseinstellungen können dauerhaft gespeichert werden.
+    ''' </summary>
     Property AllowUserToSaveSettings As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob für das lokale Löschen von Druckern administrative Berechtigungen notwendig sind.
+    ''' </summary>
     Property LocalActionsNeedElevation As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob für das Starten/Stoppen der Druckerwarteschlange administrative Berechtigungen notwendig sind.
+    ''' </summary>
     Property PrinterSpoolerRestartNeedElevation As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob für administrative Prozesse abweichende Benutzerdaten verwendet werden sollen.
+    ''' </summary>
     Property EnableElevationBypass As Boolean = False
     Property ElevationBypassDomain As String = "WORKGROUP"
     Property ElevationBypassUsername As String = ""

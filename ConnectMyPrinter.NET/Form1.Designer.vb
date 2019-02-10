@@ -67,6 +67,7 @@ Partial Class Form1
         Me.RestartPrinterService = New System.ComponentModel.BackgroundWorker()
         Me.AdditionalInfoRTF = New System.Windows.Forms.RichTextBox()
         Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
+        Me.CustomSupportInfoLbl = New MetroFramework.Controls.MetroLabel()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
         Me.MetroPanel1.SuspendLayout()
@@ -406,6 +407,13 @@ Partial Class Form1
         resources.ApplyResources(Me.MetroLabel5, "MetroLabel5")
         Me.MetroLabel5.Name = "MetroLabel5"
         '
+        'CustomSupportInfoLbl
+        '
+        resources.ApplyResources(Me.CustomSupportInfoLbl, "CustomSupportInfoLbl")
+        Me.CustomSupportInfoLbl.BackColor = System.Drawing.Color.Transparent
+        Me.CustomSupportInfoLbl.Name = "CustomSupportInfoLbl"
+        Me.CustomSupportInfoLbl.UseCustomBackColor = True
+        '
         'Form1
         '
         Me.AcceptButton = Me.MetroButton1
@@ -413,6 +421,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.Controls.Add(Me.CustomSupportInfoLbl)
         Me.Controls.Add(Me.MetroLabel5)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -490,4 +499,5 @@ Partial Class Form1
     Friend WithEvents AnwendungseinstellungenBearbeitenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AnwendungseinstellungenBearbeitenAdminToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MetroLabel5 As Controls.MetroLabel
+    Friend WithEvents CustomSupportInfoLbl As Controls.MetroLabel
 End Class
