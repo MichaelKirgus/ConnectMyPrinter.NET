@@ -61,7 +61,7 @@
         <trans-unit id="MetroLabel2.Text" translate="yes" xml:space="preserve">
           <source>Copyright 2016-2019 Michael Kirgus
 Tool zum einfachen Verwalten von Druckern unter Windows.</source>
-          <target state="translated">Copyright 2016-2017 Michael Kirgus
+          <target state="translated">Copyright 2016-2019 Michael Kirgus
 Tool to easily manage printers on Windows.</target>
         </trans-unit>
         <trans-unit id="MetroLabel3.AutoSize" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">

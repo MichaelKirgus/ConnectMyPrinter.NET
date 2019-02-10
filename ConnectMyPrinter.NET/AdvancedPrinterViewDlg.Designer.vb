@@ -98,7 +98,7 @@ Partial Class AdvancedPrinterViewDlg
         Me.MetroTextBox1.MaxLength = 32767
         Me.MetroTextBox1.Name = "MetroTextBox1"
         Me.MetroTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox1.PromptText = "Druckerbezeichnung eingeben..."
+        Me.MetroTextBox1.PromptText = "..."
         Me.MetroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox1.SelectedText = ""
         Me.MetroTextBox1.SelectionLength = 0
@@ -108,7 +108,7 @@ Partial Class AdvancedPrinterViewDlg
         Me.MetroTextBox1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroTextBox1.TabIndex = 2
         Me.MetroTextBox1.UseSelectable = True
-        Me.MetroTextBox1.WaterMark = "Druckerbezeichnung eingeben..."
+        Me.MetroTextBox1.WaterMark = "..."
         Me.MetroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.MetroTextBox1.WaterMarkFont = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         '
