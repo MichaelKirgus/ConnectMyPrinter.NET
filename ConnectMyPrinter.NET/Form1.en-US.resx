@@ -6676,4 +6676,19 @@
   <data name="resource.Visible" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="CustomSupportInfoLbl.Anchor" xml:space="preserve" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="CustomSupportInfoLbl.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>27, 600</value>
+  </data>
+  <data name="CustomSupportInfoLbl.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>421, 15</value>
+  </data>
+  <data name="CustomSupportInfoLbl.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="CustomSupportInfoLbl.TextAlign" xml:space="preserve" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
 </root>

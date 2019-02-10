@@ -91,9 +91,6 @@ Tool to easily manage printers on Windows.</value>
   <data name="MetroTextBox1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="MetroTextBox1.Text" xml:space="preserve">
-    <value>#</value>
-  </data>
   <data name="MetroTabPage1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
     <value>4, 35</value>
   </data>
@@ -115,9 +112,6 @@ Tool to easily manage printers on Windows.</value>
   <data name="MetroTextBox3.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="MetroTextBox3.Text" xml:space="preserve">
-    <value>#</value>
-  </data>
   <data name="MetroTabPage3.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
     <value>4, 35</value>
   </data>
@@ -138,9 +132,6 @@ Tool to easily manage printers on Windows.</value>
   </data>
   <data name="MetroTextBox2.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="MetroTextBox2.Text" xml:space="preserve">
-    <value>#</value>
   </data>
   <data name="MetroTabPage2.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
     <value>4, 35</value>
@@ -219,5 +210,23 @@ Tool to easily manage printers on Windows.</value>
   </data>
   <data name="resource.Visible1" xml:space="preserve" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="UserAboutInfoLbl.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>182, 173</value>
+  </data>
+  <data name="UserAboutInfoLbl.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>357, 38</value>
+  </data>
+  <data name="UserAboutInfoLbl.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="AppVersionLbl.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>391, 74</value>
+  </data>
+  <data name="AppVersionLbl.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>148, 15</value>
+  </data>
+  <data name="AppVersionLbl.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
 </root>
