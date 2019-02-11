@@ -2003,20 +2003,20 @@
 		<row><td>AlwaysInstall</td><td/><td>##DN_AlwaysInstall##</td><td>##ID_STRING44##</td><td>0</td><td>1</td><td>INSTALLDIR</td><td>16</td><td/><td>Enter comments regarding this feature here.</td><td/><td/></row>
 		<row><td>NewFeature1</td><td/><td>##ID_STRING7##</td><td>##ID_STRING19##</td><td>3</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature10</td><td>NewFeature5</td><td>##ID_STRING60##</td><td>##ID_STRING61##</td><td>2</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature11</td><td>NewFeature4</td><td>##ID_STRING62##</td><td>##ID_STRING63##</td><td>2</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature11</td><td>NewFeature4</td><td>##ID_STRING62##</td><td>##ID_STRING63##</td><td>2</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature12</td><td>NewFeature1</td><td>##ID_STRING64##</td><td>##ID_STRING65##</td><td>1</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature13</td><td/><td>##ID_STRING66##</td><td>##ID_STRING67##</td><td>24</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature14</td><td>NewFeature1</td><td>##ID_STRING73##</td><td>##ID_STRING75##</td><td>3</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature15</td><td>NewFeature1</td><td>##ID_STRING74##</td><td>##ID_STRING76##</td><td>5</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature14</td><td>NewFeature1</td><td>##ID_STRING73##</td><td>##ID_STRING75##</td><td>3</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature15</td><td>NewFeature1</td><td>##ID_STRING74##</td><td>##ID_STRING76##</td><td>5</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature16</td><td>NewFeature1</td><td>##ID_STRING77##</td><td>##ID_STRING78##</td><td>6</td><td>101</td><td>INSTALLDIR</td><td>4</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature2</td><td/><td>##ID_STRING20##</td><td>##ID_STRING46##</td><td>6</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature3</td><td/><td>##ID_STRING21##</td><td>##ID_STRING47##</td><td>10</td><td>201</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature4</td><td/><td>##ID_STRING22##</td><td>##ID_STRING48##</td><td>14</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature2</td><td/><td>##ID_STRING20##</td><td>##ID_STRING46##</td><td>6</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature3</td><td/><td>##ID_STRING21##</td><td>##ID_STRING47##</td><td>10</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature4</td><td/><td>##ID_STRING22##</td><td>##ID_STRING48##</td><td>14</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature5</td><td/><td>##ID_STRING41##</td><td>##ID_STRING43##</td><td>22</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature6</td><td/><td>##ID_STRING24##</td><td>##ID_STRING49##</td><td>20</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature7</td><td/><td>##ID_STRING25##</td><td>##ID_STRING45##</td><td>5</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature8</td><td>NewFeature2</td><td>##ID_STRING56##</td><td>##ID_STRING57##</td><td>2</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature9</td><td>NewFeature2</td><td>##ID_STRING58##</td><td>##ID_STRING59##</td><td>4</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature7</td><td/><td>##ID_STRING25##</td><td>##ID_STRING45##</td><td>5</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature8</td><td>NewFeature2</td><td>##ID_STRING56##</td><td>##ID_STRING57##</td><td>2</td><td>201</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature9</td><td>NewFeature2</td><td>##ID_STRING58##</td><td>##ID_STRING59##</td><td>4</td><td>201</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="FeatureComponents">
@@ -2949,7 +2949,9 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<col key="yes" def="s38">Feature_</col>
 		<row><td>Custom</td><td>AlwaysInstall</td></row>
 		<row><td>Minimal</td><td>AlwaysInstall</td></row>
+		<row><td>Minimal</td><td>NewFeature7</td></row>
 		<row><td>Typical</td><td>AlwaysInstall</td></row>
+		<row><td>Typical</td><td>NewFeature3</td></row>
 	</table>
 
 	<table name="ISStorages">
@@ -6468,7 +6470,7 @@ QwB1AHMAdABvAG0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{FF422083-EAC5-42E8-88AE-4BF0BDBDB2C8}</td></row>
 		<row><td>ISUSSignature</td><td>{016BD373-DE94-485B-95ED-BC73BF4E6E7C}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewUI,viewTextMessages,viewRelease,viewISToday,viewLearnMore,viewProject,viewUpgradePaths,viewUpdateService,viewAppFiles,viewObjects,viewSystemSearch,viewCustomActions,viewShortcuts,viewServices,viewRegistry,viewFileExtensions,viewEnvironmentVariables,viewSetupDesign,viewSetupTypes,viewFeatureFiles,viewDependencies,viewVRoots,viewSupportFiles,viewComponentServices,viewHelpContent</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewUI,viewTextMessages,viewRelease,viewISToday,viewLearnMore,viewProject,viewUpgradePaths,viewUpdateService,viewAppFiles,viewObjects,viewSystemSearch,viewCustomActions,viewShortcuts,viewServices,viewRegistry,viewFileExtensions,viewEnvironmentVariables,viewSetupDesign,viewSetupTypes,viewFeatureFiles,viewDependencies,viewVRoots,viewSupportFiles,viewComponentServices,viewHelpContent,viewBillboards</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
 		<row><td>MsiLogFile</td><td/></row>
