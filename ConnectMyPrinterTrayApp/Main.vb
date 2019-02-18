@@ -12,6 +12,7 @@ Imports ConnectMyPrinterBackupApp.BackupFrm
 Imports ConnectMyPrinterEnumerationLib
 Imports ConnectMyPrinterLanguageHelper
 Imports ConnectMyPrinterRemoteFileHandler
+Imports ConnectMyPrinterReportingLib
 
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> Public Class AppContext
     Inherits ApplicationContext
@@ -38,6 +39,7 @@ Imports ConnectMyPrinterRemoteFileHandler
     Public WithEvents TracePrinterProfileWorkerStartup As New BackgroundWorker
     Public WithEvents TracePrinterProfileWatcher As New FileSystemWatcher
     Public WithEvents BackupPrinterEnvironmentWorker As New BackgroundWorker
+    Public WithEvents ReportPrinterEnvironmentWorker As New BackgroundWorker
     Public WithEvents FetchPrinterEnvironmentWorker As New BackgroundWorker
 
     Public AppSettings As New AppSettingsClass
@@ -129,6 +131,11 @@ Imports ConnectMyPrinterRemoteFileHandler
         'Prüfen, ob Drucker in Profildatei nach Start der Anwendung gesichert werden sollen:
         If MainApp.AppSettings.AutoBackupPrinterEnvironmentAtStartup And Not MainApp.AppSettings.AutoBackupPrinterEnvironmentPath = "" Then
             BackupPrinterEnvironmentWorker.RunWorkerAsync()
+        End If
+
+        'Prüfen, ob ein Report erstellt werden soll:
+        If MainApp.AppSettings.UseReportingFeature Then
+            ReportPrinterEnvironmentWorker.RunWorkerAsync()
         End If
 
         mnuLogo = New ToolStripLabel
@@ -321,6 +328,29 @@ Imports ConnectMyPrinterRemoteFileHandler
 
             Dim RemoteFileService As New RemoteFileCreator
             RemoteFileService.CreateMultiplePrinterRemoteFile(dirstr & "\" & filenamestr, ConnectedPrinters)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub ReportPrinterEnvironmentWorkerDoWork() Handles ReportPrinterEnvironmentWorker.DoWork
+        Try
+            Dim domainstr As String
+            domainstr = Environment.UserDomainName
+
+            Dim usernamestr As String
+            usernamestr = Environment.UserName
+
+            Dim hostnamestr As String
+            hostnamestr = Environment.MachineName
+
+            Dim ReportingHelper As New ReportingLib
+
+            If Not ReportingHelper.CheckIfUserIsBlacklisted(AppSettings, usernamestr) Then
+                If ReportingHelper.CheckForFolderStructure(AppSettings, hostnamestr, usernamestr, domainstr) Then
+                    ReportingHelper.SavePrinterProfileToReportingPath(AppSettings, hostnamestr, usernamestr, domainstr)
+                    ReportingHelper.SavePrinterEnvironmentToCSV(AppSettings, hostnamestr, usernamestr, domainstr)
+                End If
+            End If
         Catch ex As Exception
         End Try
     End Sub

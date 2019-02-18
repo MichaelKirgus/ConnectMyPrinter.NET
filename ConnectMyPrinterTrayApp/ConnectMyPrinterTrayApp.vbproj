@@ -123,6 +123,10 @@
       <Project>{0D65D86F-F312-411C-93FA-879C49F0797F}</Project>
       <Name>ConnectMyPrinterRemoteFileHandler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterReportingLib\ConnectMyPrinterReportingLib.vbproj">
+      <Project>{46576F5C-F689-4EFB-9019-A5DE8AD8063C}</Project>
+      <Name>ConnectMyPrinterReportingLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MetroFramework\MetroFramework\MetroFramework.csproj">
       <Project>{bb41ac8b-cbed-4387-a7e0-4567edb3f57f}</Project>
       <Name>MetroFramework</Name>
