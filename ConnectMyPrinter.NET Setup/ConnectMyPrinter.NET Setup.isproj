@@ -42,6 +42,10 @@
 			<Name>ConnectMyPrinterBackupApp</Name>
 			<Project>{1ACECB39-366E-4186-B000-51D37F8C65F4}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterCLIHelper\ConnectMyPrinterCLIHelper.vbproj">
+			<Name>ConnectMyPrinterCLIHelper</Name>
+			<Project>{81CCC78B-2413-4DE8-80C0-15925F40D8D1}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterClean\ConnectMyPrinterClean.vbproj">
 			<Name>ConnectMyPrinterClean</Name>
 			<Project>{850F3D68-46E3-4982-8306-1EF9B82840A5}</Project>
@@ -85,6 +89,10 @@
 		<ProjectReference Include="..\ConnectMyPrinterLog\ConnectMyPrinterLog.vbproj">
 			<Name>ConnectMyPrinterLog</Name>
 			<Project>{28D57EFE-E78A-4C8C-9D8C-45914E20D368}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterManagerConsole\ConnectMyPrinterManagerConsole.vbproj">
+			<Name>ConnectMyPrinterManagerConsole</Name>
+			<Project>{DE381076-47BA-4F7E-8C25-31B82FA45A3C}</Project>
 		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
 			<Name>ConnectMyPrinterPrinterManageLib</Name>
