@@ -4,35 +4,31 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE381076-47BA-4F7E-8C25-31B82FA45A3C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <StartupObject>ConnectMyPrinterManagerConsole.Module1</StartupObject>
-    <RootNamespace>ConnectMyPrinterManagerConsole</RootNamespace>
-    <AssemblyName>ConnectMyPrinterManagerConsole</AssemblyName>
+    <ProjectGuid>{81CCC78B-2413-4DE8-80C0-15925F40D8D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ConnectMyPrinterCLIHelper</RootNamespace>
+    <AssemblyName>ConnectMyPrinterCLIHelper</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>Console</MyType>
+    <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterManagerConsole.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterCLIHelper.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ConnectMyPrinterManagerConsole.xml</DocumentationFile>
+    <DocumentationFile>ConnectMyPrinterCLIHelper.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,13 +43,10 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>1472876332_settings.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -72,7 +65,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="CLIWrapper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -107,15 +100,35 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1472876332_settings.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConnectMyPrinterCLIHelper\ConnectMyPrinterCLIHelper.vbproj">
-      <Project>{81ccc78b-2413-4de8-80c0-15925f40d8d1}</Project>
-      <Name>ConnectMyPrinterCLIHelper</Name>
+    <ProjectReference Include="..\ConnectMyPrinter.NET\ConnectMyPrinter.NET.vbproj">
+      <Project>{2ffb39f5-85ab-405b-8ab7-d3404312b088}</Project>
+      <Name>ConnectMyPrinter.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
+      <Project>{AE01B7FF-C216-4752-B4FF-D6956A772D44}</Project>
+      <Name>ConnectMyPrinterAppSettingsHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterDistributionLib\ConnectMyPrinterDistributionLib.vbproj">
+      <Project>{36a34e45-127f-4266-892c-c7645e1bf488}</Project>
+      <Name>ConnectMyPrinterDistributionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterEnumerationLib\ConnectMyPrinterEnumerationLib.vbproj">
+      <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
+      <Name>ConnectMyPrinterEnumerationLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
+      <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
+      <Name>ConnectMyPrinterPrinterManageLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterRemoteFileHandler\ConnectMyPrinterRemoteFileHandler.vbproj">
+      <Project>{0D65D86F-F312-411C-93FA-879C49F0797F}</Project>
+      <Name>ConnectMyPrinterRemoteFileHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroFramework\MetroFramework\MetroFramework.csproj">
+      <Project>{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F}</Project>
+      <Name>MetroFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
