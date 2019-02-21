@@ -94,6 +94,10 @@
 			<Name>ConnectMyPrinterManagerConsole</Name>
 			<Project>{DE381076-47BA-4F7E-8C25-31B82FA45A3C}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterManagerCoreConsole\ConnectMyPrinterManagerCoreConsole.vbproj">
+			<Name>ConnectMyPrinterManagerCoreConsole</Name>
+			<Project>{136CDEC0-24C6-4EAC-A1AF-E9AF08745AED}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
 			<Name>ConnectMyPrinterPrinterManageLib</Name>
 			<Project>{BE968C84-9AE3-4F63-8466-FA21F66386B0}</Project>

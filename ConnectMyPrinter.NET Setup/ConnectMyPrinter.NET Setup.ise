@@ -375,6 +375,7 @@
 		<row><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe1</td><td>{3A395D9D-7D35-4367-A510-850C70B35ECE}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterforcedeletem1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterLog.Prim_re_Ausgabe</td><td>{7A78085A-80BC-4189-9635-8B81F574D03B}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterlog.prim_re_</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterManagerConsole.Prim_re_Ausgabe</td><td>{D5DA5226-CE2F-44A6-82AC-EA87F28B2803}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprintermanagerconso</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ConnectMyPrinterManagerCoreConsole.Prim_re_Ausgabe</td><td>{AAD306F2-4C35-416B-8C99-0DF45EEC4E3E}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprintermanagercorec</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td><td>{3C4EF5C9-F61F-439C-A264-1DB98F1CA8B9}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterprintermanag</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe1</td><td>{C2D5E1DC-CE3A-42FF-A69D-05554A0D0D19}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterprintermanag1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe1</td><td>{6CBD72D9-F3C6-4B61-9965-B9DB2C0FE834}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterregistryhand1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -2005,14 +2006,15 @@
 		<col def="S255">ISProFeatureName</col>
 		<row><td>AlwaysInstall</td><td/><td>##DN_AlwaysInstall##</td><td>##ID_STRING44##</td><td>0</td><td>1</td><td>INSTALLDIR</td><td>16</td><td/><td>Enter comments regarding this feature here.</td><td/><td/></row>
 		<row><td>NewFeature1</td><td/><td>##ID_STRING7##</td><td>##ID_STRING19##</td><td>3</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature10</td><td>NewFeature5</td><td>##ID_STRING60##</td><td>##ID_STRING61##</td><td>2</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature10</td><td>NewFeature5</td><td>##ID_STRING60##</td><td>##ID_STRING61##</td><td>2</td><td>201</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature11</td><td>NewFeature4</td><td>##ID_STRING62##</td><td>##ID_STRING63##</td><td>2</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature12</td><td>NewFeature1</td><td>##ID_STRING64##</td><td>##ID_STRING65##</td><td>1</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature13</td><td/><td>##ID_STRING66##</td><td>##ID_STRING67##</td><td>24</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature14</td><td>NewFeature1</td><td>##ID_STRING73##</td><td>##ID_STRING75##</td><td>3</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature15</td><td>NewFeature1</td><td>##ID_STRING74##</td><td>##ID_STRING76##</td><td>5</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature16</td><td>NewFeature1</td><td>##ID_STRING77##</td><td>##ID_STRING78##</td><td>6</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature17</td><td>NewFeature3</td><td>##ID_STRING79##</td><td>##ID_STRING80##</td><td>2</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature17</td><td>NewFeature3</td><td>##ID_STRING79##</td><td>##ID_STRING80##</td><td>2</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature18</td><td>NewFeature17</td><td>##ID_STRING81##</td><td>##ID_STRING82##</td><td>2</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature2</td><td/><td>##ID_STRING20##</td><td>##ID_STRING46##</td><td>6</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature3</td><td/><td>##ID_STRING21##</td><td>##ID_STRING47##</td><td>10</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature4</td><td/><td>##ID_STRING22##</td><td>##ID_STRING48##</td><td>14</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
@@ -2052,6 +2054,7 @@
 		<row><td>NewFeature17</td><td>ConnectMyPrinterCLIHelper.Prim_re_Ausgabe</td></row>
 		<row><td>NewFeature17</td><td>ConnectMyPrinterManagerConsole.Prim_re_Ausgabe</td></row>
 		<row><td>NewFeature17</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td></row>
+		<row><td>NewFeature18</td><td>ConnectMyPrinterManagerCoreConsole.Prim_re_Ausgabe</td></row>
 		<row><td>NewFeature2</td><td>ConnectMyPrinterBackupApp.Lokalisierte_Ressourcen</td></row>
 		<row><td>NewFeature2</td><td>ConnectMyPrinterBackupApp.Prim_re_Ausgabe</td></row>
 		<row><td>NewFeature2</td><td>ConnectMyPrinterClean.Lokalisierte_Ressourcen</td></row>
@@ -2129,6 +2132,7 @@
 		<row><td>connectmyprinterforcedeletem1</td><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe1</td><td>ConnectMyPrinterForceDeleteManageLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterForceDeleteManageLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterlog.prim_re_</td><td>ConnectMyPrinterLog.Prim_re_Ausgabe</td><td>ConnectMyPrinterLog.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterLog&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprintermanagerconso</td><td>ConnectMyPrinterManagerConsole.Prim_re_Ausgabe</td><td>ConnectMyPrinterManagerConsole.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterManagerConsole&gt;|Built</td><td>3</td><td/></row>
+		<row><td>connectmyprintermanagercorec</td><td>ConnectMyPrinterManagerCoreConsole.Prim_re_Ausgabe</td><td>ConnectMyPrinterManagerCoreConsole.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterManagerCoreConsole&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterprintermanag</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td><td>ConnectMyPrinterPrinterManageLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterPrinterManageLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterprintermanag1</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe1</td><td>ConnectMyPrinterPrinterManageLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterPrinterManageLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterregistryhand1</td><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe1</td><td>ConnectMyPrinterRegistryHandler.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRegistryHandler&gt;|Built</td><td>3</td><td/></row>
@@ -2322,6 +2326,7 @@
 		<row><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe1</td><td/><td/><td>_72FB3A5D_3EBF_4849_802B_306A6225473B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterLog.Prim_re_Ausgabe</td><td/><td/><td>_1D9CD578_8A80_4FC0_92D8_07D34DDDBEDF_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterManagerConsole.Prim_re_Ausgabe</td><td/><td/><td>_79F68E51_7249_4D7F_886E_60AFEB3213BD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ConnectMyPrinterManagerCoreConsole.Prim_re_Ausgabe</td><td/><td/><td>_F3424671_2E50_45A7_8089_C7B7BB829751_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td><td/><td/><td>_E4A199C2_A320_4402_B594_46A53EFB34FD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe1</td><td/><td/><td>_67852B30_AAF0_4A2B_A2E6_0CEF8305AC09_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe1</td><td/><td/><td>_9BBDC43E_52B3_4F42_9D9B_31CC6FBB6E99_FILTER</td><td/><td/><td/><td/></row>
@@ -2645,6 +2650,7 @@
 		<row><td>ConnectMyPrinterForceDeleteManageLib</td><td>ConnectMyPrinterForceDeleteManageLib\ConnectMyPrinterForceDeleteManageLib.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterLog</td><td>ConnectMyPrinterLog\ConnectMyPrinterLog.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterManagerConsole</td><td>ConnectMyPrinterManagerConsole\ConnectMyPrinterManagerConsole.vbproj</td><td/><td>2</td></row>
+		<row><td>ConnectMyPrinterManagerCoreConsole</td><td>ConnectMyPrinterManagerCoreConsole\ConnectMyPrinterManagerCoreConsole.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterPrinterManageLib</td><td>ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterRegistryHandler</td><td>ConnectMyPrinterRegistryHandler\ConnectMyPrinterRegistryHandler.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterRemoteFileHandler</td><td>ConnectMyPrinterRemoteFileHandler\ConnectMyPrinterRemoteFileHandler.vbproj</td><td/><td>2</td></row>
@@ -5343,6 +5349,10 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>ID_STRING8</td><td>1033</td><td>NEWSHO~1|NewShortcut5</td><td>0</td><td/><td>-1910153805</td></row>
 		<row><td>ID_STRING80</td><td>1031</td><td>Kommandozeilentool für die Verwaltung von Druckern lokal sowie remote.</td><td>0</td><td/><td>-1591229643</td></row>
 		<row><td>ID_STRING80</td><td>1033</td><td>Kommandozeilentool für die Verwaltung von Druckern lokal sowie remote.</td><td>0</td><td/><td>-1591229643</td></row>
+		<row><td>ID_STRING81</td><td>1031</td><td>CLI .NET Core</td><td>0</td><td/><td>-1457006158</td></row>
+		<row><td>ID_STRING81</td><td>1033</td><td>NewFeature18</td><td>0</td><td/><td>-1457014350</td></row>
+		<row><td>ID_STRING82</td><td>1031</td><td>Installiert eine .NET Core CLI, mit welchen das Verwalten von Druckern auf Windows (remote) von einem Linux bzw. Mac OS-Systems möglich ist.</td><td>0</td><td/><td>-1457049102</td></row>
+		<row><td>ID_STRING82</td><td>1033</td><td>Installiert eine .NET Core CLI, mit welchen das Verwalten von Druckern auf Windows (remote) von einem Linux bzw. Mac OS-Systems</td><td>0</td><td/><td>-1457053198</td></row>
 		<row><td>ID_STRING9</td><td>1031</td><td>DEINST~1|Deinstallieren</td><td>0</td><td/><td>-1910149677</td></row>
 		<row><td>ID_STRING9</td><td>1033</td><td>NEWSHO~1|NewShortcut6</td><td>0</td><td/><td>-1910157869</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1031</td><td>Dieses Feature wird nicht installiert.</td><td>0</td><td/><td>1092982101</td></row>
