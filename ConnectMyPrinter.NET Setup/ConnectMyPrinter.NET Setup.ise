@@ -1095,6 +1095,7 @@
 		<row><td>SetupResume</td><td>Next</td><td>NewDialog</td><td>OutOfSpace</td><td>OutOfNoRbDiskSpace = 1</td><td>0</td></row>
 		<row><td>SetupType</td><td>Back</td><td>NewDialog</td><td>LicenseAgreement</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>SetupType</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
+		<row><td>SetupType</td><td>Next</td><td>AddLocal</td><td>NewFeature18</td><td>_IsSetupTypeMin = "Minimal"</td><td>5</td></row>
 		<row><td>SetupType</td><td>Next</td><td>EndDialog</td><td>Return</td><td>OutOfDiskSpace &lt;&gt; 1 And _IsSetupTypeMin &lt;&gt; "Custom"</td><td>1</td></row>
 		<row><td>SetupType</td><td>Next</td><td>NewDialog</td><td>CustomSetup</td><td>1</td><td>9</td></row>
 		<row><td>SetupType</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>0</td><td>8</td></row>
@@ -2014,7 +2015,7 @@
 		<row><td>NewFeature15</td><td>NewFeature1</td><td>##ID_STRING74##</td><td>##ID_STRING76##</td><td>5</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature16</td><td>NewFeature1</td><td>##ID_STRING77##</td><td>##ID_STRING78##</td><td>6</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature17</td><td>NewFeature3</td><td>##ID_STRING79##</td><td>##ID_STRING80##</td><td>2</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
-		<row><td>NewFeature18</td><td>NewFeature17</td><td>##ID_STRING81##</td><td>##ID_STRING82##</td><td>2</td><td>1</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
+		<row><td>NewFeature18</td><td>NewFeature17</td><td>##ID_STRING81##</td><td>##ID_STRING82##</td><td>2</td><td>201</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature2</td><td/><td>##ID_STRING20##</td><td>##ID_STRING46##</td><td>6</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature3</td><td/><td>##ID_STRING21##</td><td>##ID_STRING47##</td><td>10</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
 		<row><td>NewFeature4</td><td/><td>##ID_STRING22##</td><td>##ID_STRING48##</td><td>14</td><td>101</td><td>INSTALLDIR</td><td>0</td><td/><td/><td/><td/></row>
@@ -6930,7 +6931,7 @@ QwB1AHMAdABvAG0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConnectMyPrinter.NET.Primäre Ausgabe</td><td/></row>
 		<row><td>ProductCode</td><td>{D9F305BE-DA52-4B9B-BCD9-9CF4C34BBE07}</td><td/></row>
 		<row><td>ProductName</td><td>ConnectMyPrinter.NET</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0027</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.0028</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
