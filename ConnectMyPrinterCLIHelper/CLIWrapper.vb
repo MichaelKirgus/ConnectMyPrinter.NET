@@ -67,7 +67,7 @@ Public Class CLIWrapper
                         ShowHelp()
                     End If
                 Else
-                    If args.Length > 1 Then
+                    If args.Length >= 1 Then
                         If ReadAllCommandSwitchesAndSetSettings(args) Then
                             If ProcessActions() Then
                                 Return True
@@ -276,6 +276,10 @@ Public Class CLIWrapper
                 ListPrinterRemoteFileToOutput(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings), True)
                 Return True
             End If
+
+            'BACKUP LOCAL
+
+
             If CLIAction = CLIActionEnum.BackupPrintersFromClient Then
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
