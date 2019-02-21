@@ -2,6 +2,7 @@
 Imports ConnectMyPrinterAppSettingsHandler
 Imports ConnectMyPrinterDistributionLib
 Imports ConnectMyPrinterEnumerationLib
+Imports ConnectMyPrinterPrinterManageLib
 Imports ConnectMyPrinterRemoteFileHandler
 
 Public Class CLIWrapper
@@ -37,6 +38,10 @@ Public Class CLIWrapper
         ApplyProfileToRemoteClient = 13
         BackupPrintersFromLocalMachine = 14
         RestorePrintersToLocalMachine = 15
+        RemoveAllPrintersFromLocalMachine = 16
+        RemoveAllPrintersFromRemoteMachine = 17
+        RemoveAllConnectedPrintersFromLocalMachine = 18
+        RemoveAllConnectedPrintersFromRemoteMachine = 19
     End Enum
 
     Public Sub LoadSettingsFile()
@@ -55,6 +60,7 @@ Public Class CLIWrapper
 
         'Laden der Einstellungen (im Programmverzeichnis oder über Befehlszeile)
         AppSettings = MainForm.LoadSettings(AppSettingFile)
+        MainForm.AppSettings = AppSettings
     End Sub
 
     Public Function LunchCli(args As String(), Optional ByVal OutputErrors As Boolean = True) As Boolean
@@ -140,6 +146,7 @@ Public Class CLIWrapper
                         CLIAction = CLIActionEnum.RemoveLocalPrinters
                         Dim QQ As New RemoteFilePrinterDisconnectItem
                         QQ.PrinterName = arglist(ind + 1)
+                        QQ.PrintServer = arglist(ind + 2)
                         DisconnectPrinterCollection.Add(QQ)
                     End If
                     If arglist(ind).StartsWith("-RRP") Then
@@ -149,12 +156,24 @@ Public Class CLIWrapper
                         DisconnectRemoteMachineCollection.Add(hostnamestr)
                         Dim QQ As New RemoteFilePrinterDisconnectItem
                         QQ.PrinterName = arglist(ind + 2)
+                        QQ.PrintServer = arglist(ind + 3)
                         DisconnectPrinterCollection.Add(QQ)
+                    End If
+                    If arglist(ind).StartsWith("-CALP") Then
+                        CLIAction = CLIActionEnum.RemoveAllPrintersFromLocalMachine
+                    End If
+                    If arglist(ind).StartsWith("-CACLP") Then
+                        CLIAction = CLIActionEnum.RemoveAllConnectedPrintersFromLocalMachine
+                    End If
+                    If arglist(ind).StartsWith("-CACRP") Then
+                        CLIAction = CLIActionEnum.RemoveAllConnectedPrintersFromRemoteMachine
+                        Clientname = arglist(ind + 1)
                     End If
                     If arglist(ind).StartsWith("-CLDP") Then
                         CLIAction = CLIActionEnum.SetLocalDefaultPrinter
                         Dim QQ As New RemoteFilePrinterConnectItem
                         QQ.PrinterName = arglist(ind + 1)
+                        QQ.Printserver = arglist(ind + 2)
                         QQ.SetDefaultPrinter = True
                         ConnectPrinterCollection.Add(QQ)
                     End If
@@ -165,6 +184,7 @@ Public Class CLIWrapper
                         ConnectRemoteMachineCollection.Add(hostnamestr)
                         Dim QQ As New RemoteFilePrinterConnectItem
                         QQ.PrinterName = arglist(ind + 2)
+                        QQ.Printserver = arglist(ind + 3)
                         QQ.SetDefaultPrinter = True
                         ConnectPrinterCollection.Add(QQ)
                     End If
@@ -221,10 +241,10 @@ Public Class CLIWrapper
             Dim remotefileobj As New RemoteFileClass
 
             If CLIAction = CLIActionEnum.ConnectRemotePrinters Or CLIAction = CLIActionEnum.SetRemoteDefaultPrinter Then
-                remotefileobj.ConnectPrinters = ConnectPrinterCollection
+                remotefileobj.ConnectPrinters.AddRange(ConnectPrinterCollection)
             End If
             If CLIAction = CLIActionEnum.RemoveRemotePrinters Then
-                remotefileobj.DisconnectPrinters = DisconnectPrinterCollection
+                remotefileobj.DisconnectPrinters.AddRange(DisconnectPrinterCollection)
             End If
 
             Return remotefileobj
@@ -243,7 +263,7 @@ Public Class CLIWrapper
                 'Drucker trennen
                 For Each item As RemoteFilePrinterDisconnectItem In DisconnectPrinterCollection
                     Try
-                        Dim uu As New ConnectMyPrinterPrinterManageLib.ManagePrinter
+                        Dim uu As New ManagePrinter
                         Dim qq As New PrinterQueueInfo
                         qq.ShareName = item.PrinterName
                         qq.Name = item.PrinterName
@@ -265,7 +285,6 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.ListRemotePrinters Then
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = False
-
                 ListPrinterRemoteFileToOutput(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings))
                 Return True
             End If
@@ -276,14 +295,62 @@ Public Class CLIWrapper
                 ListPrinterRemoteFileToOutput(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings), True)
                 Return True
             End If
+            If CLIAction = CLIActionEnum.RemoveAllPrintersFromLocalMachine Then
+                Dim dd As New PrinterDriverRemover
+                dd.DeleteAllPrintersAndDrivers(AppSettings.PrinterAdminPath)
+                Return True
+            End If
+            If CLIAction = CLIActionEnum.RemoveAllConnectedPrintersFromLocalMachine Then
+                Dim connectedprinters
+                connectedprinters = MainForm.LoadLocalPrinters()
 
-            'BACKUP LOCAL
-
-
+                For Each item As RemoteFilePrinterDisconnectItem In DisconnectPrinterCollection
+                    If (Not item.PrintServer = "Lokal") And (Not item.PrintServer = "Local") Then
+                        Try
+                            Dim uu As New ManagePrinter
+                            Dim qq As New PrinterQueueInfo
+                            qq.ShareName = item.PrinterName
+                            qq.Name = item.PrinterName
+                            uu.DeletePrinter(qq)
+                        Catch ex As Exception
+                            Return False
+                        End Try
+                    End If
+                Next
+                Return True
+            End If
+            If CLIAction = CLIActionEnum.RemoveAllConnectedPrintersFromRemoteMachine Then
+                Dim disthandler As New DistributionHelper
+                Dim resultclass As RemoteFileClass
+                resultclass = disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings)
+                For Each item As RemoteFilePrinterConnectItem In resultclass.ConnectPrinters
+                    If (Not item.Printserver = "Lokal") And (Not item.Printserver = "Local") Then
+                        Dim jj As New RemoteFilePrinterDisconnectItem
+                        jj.PrinterName = item.PrinterName
+                        jj.PrintServer = item.Printserver
+                        resultclass.DisconnectPrinters.Add(jj)
+                    End If
+                Next
+                resultclass.ConnectPrinters.Clear()
+                If disthandler.PublishProfileToClient(Clientname, "", True, False, resultclass, AppSettings) Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
+            If CLIAction = CLIActionEnum.BackupPrintersFromLocalMachine Then
+                Dim RemoteFileService As New RemoteFileCreator
+                RemoteFileService.CreateMultiplePrinterRemoteFile(BackupFilePath, MainForm.LoadLocalPrinters)
+                Return True
+            End If
+            If CLIAction = CLIActionEnum.RestorePrintersToLocalMachine Then
+                Dim jj As New RemoteFileSerializer
+                ConnectPrinterCollectionFunc(jj.LoadRemoteFile(RestoreFilePath).ConnectPrinters)
+                Return True
+            End If
             If CLIAction = CLIActionEnum.BackupPrintersFromClient Then
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
-
                 Dim jj As New RemoteFileSerializer
                 jj.SaveRemoteFile(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings), BackupFilePath)
                 Return True
@@ -291,40 +358,28 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.RestoreBackupToClient Or CLIAction = CLIActionEnum.ApplyProfileToRemoteClient Then
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
-
                 Dim jj As New RemoteFileSerializer
                 disthandler.PublishProfileToClient(Clientname, "", True, False, jj.LoadRemoteFile(RestoreFilePath), AppSettings)
+                Return True
             End If
             If CLIAction = CLIActionEnum.ConnectLocalPrinters Then
-                For Each item As RemoteFilePrinterConnectItem In ConnectPrinterCollection
-                    Try
-                        Dim uu As New ConnectMyPrinterPrinterManageLib.ManagePrinter
-                        Dim qq As New PrinterQueueInfo
-                        qq.ShareName = item.PrinterName
-                        qq.Server = "\\" & item.Printserver
-                        qq.Name = item.PrinterName
-
-                        If (Not item.Printserver = "Lokal") And (Not item.Printserver = "Local") Then
-                            Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Printserver & "\" & item.PrinterName, AppWinStyle.Hide, True, 120)
-                        End If
-
-                        If item.SetDefaultPrinter Then
-                            Threading.Thread.Sleep(500)
-                            uu.SetDefaultPrinter(qq)
-                        End If
-                    Catch ex As Exception
-                        Return False
-                    End Try
-                Next
+                ConnectPrinterCollectionFunc(ConnectPrinterCollection)
                 Return True
             End If
             If CLIAction = CLIActionEnum.SetLocalDefaultPrinter Then
                 For Each item As RemoteFilePrinterConnectItem In ConnectPrinterCollection
                     Try
-                        Dim uu As New ConnectMyPrinterPrinterManageLib.ManagePrinter
+                        Dim uu As New ManagePrinter
                         Dim qq As New PrinterQueueInfo
                         qq.ShareName = item.PrinterName
                         qq.Name = item.PrinterName
+
+                        If item.Printserver = "Lokal" Or item.Printserver = "Local" Then
+                            qq.Server = item.Printserver
+                        Else
+                            qq.Server = "\\" & item.Printserver
+                        End If
+
                         uu.SetDefaultPrinter(qq)
                     Catch ex As Exception
                         Return False
@@ -347,6 +402,33 @@ Public Class CLIWrapper
         End Try
     End Function
 
+    Public Function ConnectPrinterCollectionFunc(ByVal ConnectPrinterCollectionObj As List(Of RemoteFilePrinterConnectItem)) As Boolean
+        Try
+            For Each item As RemoteFilePrinterConnectItem In ConnectPrinterCollectionObj
+                Try
+                    Dim uu As New ConnectMyPrinterPrinterManageLib.ManagePrinter
+                    Dim qq As New PrinterQueueInfo
+                    qq.ShareName = item.PrinterName
+                    qq.Server = "\\" & item.Printserver
+                    qq.Name = item.PrinterName
+
+                    If (Not item.Printserver = "Lokal") And (Not item.Printserver = "Local") Then
+                        Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Printserver & "\" & item.PrinterName, AppWinStyle.Hide, True, 120)
+                    End If
+
+                    If item.SetDefaultPrinter Then
+                        Threading.Thread.Sleep(500)
+                        uu.SetDefaultPrinter(qq)
+                    End If
+                Catch ex As Exception
+                    Return False
+                End Try
+            Next
+        Catch ex As Exception
+
+        End Try
+    End Function
+
     Sub ListPrinterToOutput(ByVal PrinterCollection As List(Of PrinterQueueInfo), Optional ByVal OnlyConnectedPrinters As Boolean = False)
         If OnlyConnectedPrinters Then
             For ind = 0 To PrinterCollection.Count - 1
@@ -356,7 +438,13 @@ Public Class CLIWrapper
             Next
         Else
             For ind = 0 To PrinterCollection.Count - 1
-                Console.WriteLine(PrinterCollection(ind).ShareName & vbTab & PrinterCollection(ind).Server & vbTab & PrinterCollection(ind).DefaultPrinter.ToString)
+                Dim servernamestr As String
+                servernamestr = PrinterCollection(ind).Server
+                If servernamestr = "Lokal" Then
+                    servernamestr = servernamestr.Replace("Lokal", "Local")
+                End If
+
+                Console.WriteLine(PrinterCollection(ind).ShareName & vbTab & servernamestr & vbTab & PrinterCollection(ind).DefaultPrinter.ToString)
             Next
         End If
     End Sub
@@ -370,13 +458,19 @@ Public Class CLIWrapper
             Next
         Else
             For ind = 0 To PrinterCollection.ConnectPrinters.Count - 1
-                Console.WriteLine(PrinterCollection.ConnectPrinters(ind).PrinterName & vbTab & PrinterCollection.ConnectPrinters(ind).Printserver & vbTab & PrinterCollection.ConnectPrinters(ind).SetDefaultPrinter.ToString)
+                Dim servernamestr As String
+                servernamestr = PrinterCollection.ConnectPrinters(ind).Printserver
+                If servernamestr = "Lokal" Then
+                    servernamestr = servernamestr.Replace("Lokal", "Local")
+                End If
+
+                Console.WriteLine(PrinterCollection.ConnectPrinters(ind).PrinterName & vbTab & servernamestr & vbTab & PrinterCollection.ConnectPrinters(ind).SetDefaultPrinter.ToString)
             Next
         End If
     End Sub
 
     Public Sub ShowHelp(Optional ByVal IntErrorText As String = "", Optional ByVal UserErrorText As String = "", Optional ByVal ShowOnlyError As Boolean = False)
-        Console.WriteLine("ConnectMyPrinter.NET CLI")
+        Console.WriteLine("ConnectMyPrinter.NET CLI (" & Environment.Version.ToString & ")")
         If Not UserErrorText = "" Then
             Console.WriteLine("Error: " & UserErrorText)
             Console.WriteLine("Error (internal): " & IntErrorText)
@@ -386,10 +480,13 @@ Public Class CLIWrapper
             Console.WriteLine("Help:")
             Console.WriteLine("-CLP" & vbTab & vbTab & "Connect printers to local machine: <Printer share name> <Print server> [Default]")
             Console.WriteLine("-CRP" & vbTab & vbTab & "Connect printers to remote machine: <Hostname> <Printer share name> <Print server> [Default]")
-            Console.WriteLine("-RLP" & vbTab & vbTab & "Disconnect printers from local machine: <Printer share name>")
-            Console.WriteLine("-RRP" & vbTab & vbTab & "Disconnect printers from remote machine: <Hostname> <Printer share name>")
-            Console.WriteLine("-CLDP" & vbTab & vbTab & "Change local machine default printer: <Printer share name>")
-            Console.WriteLine("-CRDP" & vbTab & vbTab & "Change remote machine default printer: <Hostname> <Printer share name>")
+            Console.WriteLine("-RLP" & vbTab & vbTab & "Disconnect printers from local machine: <Printer share name> <Print server>")
+            Console.WriteLine("-RRP" & vbTab & vbTab & "Disconnect printers from remote machine: <Hostname> <Printer share name> <Print server>")
+            Console.WriteLine("-CALP" & vbTab & vbTab & "Remove all printers from local machine")
+            Console.WriteLine("-CACLP" & vbTab & vbTab & "Remove all connected printers from local machine")
+            Console.WriteLine("-CACRP" & vbTab & vbTab & "Remove all connected printers from remote machine: <Hostname>")
+            Console.WriteLine("-CLDP" & vbTab & vbTab & "Change local machine default printer: <Printer share name> <Print server>")
+            Console.WriteLine("-CRDP" & vbTab & vbTab & "Change remote machine default printer: <Hostname> <Printer share name> <Print server>")
             Console.WriteLine("-LLP" & vbTab & vbTab & "List all local machine printers")
             Console.WriteLine("-LRP" & vbTab & vbTab & "List all remote machine printers: <Hostname>")
             Console.WriteLine("-LLCP" & vbTab & vbTab & "List all local connected printers")

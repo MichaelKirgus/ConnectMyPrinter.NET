@@ -7,6 +7,10 @@
     <ApplicationIcon>1472876332_settings.ico</ApplicationIcon>
     <StartupObject>ConnectMyPrinterManagerCoreConsole.Program</StartupObject>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Michael Kirgus</Company>
+    <Authors>Michael Kirgus</Authors>
+    <Product>ConnectMyPrinter.NET Management Core Console</Product>
+    <Copyright>2019 Michael Kirgus</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
