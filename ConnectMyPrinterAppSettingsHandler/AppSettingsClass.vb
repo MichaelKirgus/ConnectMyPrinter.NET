@@ -4,7 +4,7 @@ Imports ConnectMyPrinterEnumerationLib
 
 <Serializable> Public Class AppSettingsClass
     ''' <summary>
-    ''' Aktiviere das schreiben von Logs in der Anwendung.
+    ''' Aktiviere das Schreiben von Logs in der Anwendung.
     ''' </summary>
     Property EnableLogging As Boolean = False
     ''' <summary>
@@ -219,69 +219,260 @@ Imports ConnectMyPrinterEnumerationLib
     ''' Definiert, ob für administrative Prozesse abweichende Benutzerdaten verwendet werden sollen.
     ''' </summary>
     Property EnableElevationBypass As Boolean = False
+    ''' <summary>
+    ''' Definiert die Arbeitsgruppe/Domäne, welche für die Anmeldung für den administrativen Prozess verwendet werden soll.
+    ''' </summary>
     Property ElevationBypassDomain As String = "WORKGROUP"
+    ''' <summary>
+    ''' Definiert den Benutzernamen, welcher für die Anmeldung für den administrativen Prozess verwendet werden soll.
+    ''' </summary>
     Property ElevationBypassUsername As String = ""
+    ''' <summary>
+    ''' Definiert das Kennwort, welches für die Anmeldung für den administrativen Prozess verwendet werden soll.
+    ''' </summary>
     Property ElevationBypassPassword As String = ""
+    ''' <summary>
+    ''' Definiert, ob ein Treiber neben dem Löschen über die Windows-APIs auch zusätzlich Low-Level in der Registry sowie im Spooler-Verzeichnis gelöscht werden soll. Diese Funktion ist nur sinnvoll, wenn der Benutzer administrative Berechtigungen hat.
+    ''' </summary>
     Property DeletePrinterDriverLowLevel As Boolean = False
+    ''' <summary>
+    ''' Legt fest, ob vom Installationsprogramm Schreibrechte auf den Spool-Registryzweig eingerichtet wurden. Somit kann das Löschen der Treiber in der Registry ohne administrative Berechtigungen erfolgen.
+    ''' </summary>
     Property LocalMachineRegistryPermission As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob auch Druckereinstellungen des Treibers auf dem Client gelöscht werden sollen, wenn der Drucker gelöscht wird.
+    ''' </summary>
     Property DeleteLocalMachinePartOnUserPrinterDelete As Boolean = False
+    ''' <summary>
+    ''' Definiert den PrinterAdminScripts-Pfad. Unter einer deutschsprachigen Windows-Version ist dies "C:\Windows\System32\Printing_Admin_Scripts\de-DE"
+    ''' </summary>
     Property PrinterAdminPath As String = "C:\Windows\System32\Printing_Admin_Scripts\de-DE"
+    ''' <summary>
+    ''' Definiert, ob auch das Treiberpaket nach dem Entfernen des Druckers gelöscht werden soll.
+    ''' </summary>
     Property CleanPrinterDriverPackagesAtPrinterRemove As Boolean = False
+    ''' <summary>
+    ''' Definiert, ob auch das Treiberpaket nach dem Entfernen des Druckertreibers gelöscht werden soll.
+    ''' </summary>
     Property CleanPrinterDriverPackagesAtPrinterDriverRemove As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob auch das Treiberpaket nach dem Entfernen des Druckers gelöscht werden soll.
+    ''' </summary>
     Property RestartPrintSpoolerAtPrinterRemove As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob alle nicht genutzten Treiberpakete nach dem Entfernen des Druckers gelöscht werden sollen.
+    ''' </summary>
     Property CleanLostPrinterDriverItemsAtPrinterRemove As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob alle nicht genutzten Treiberpakete nach dem Entfernen des Druckertreibers gelöscht werden sollen.
+    ''' </summary>
     Property CleanLostPrinterDriverItemsAtPrinterDriverRemove As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob die Anwendung für das Low-Level-Entfernen zwangsweise nur mit Administrator-Berechtigungen gestartet werden kann.
+    ''' </summary>
     Property ForceAdministratorRightsOnForceDelete As Boolean = False
+    ''' <summary>
+    ''' Definiert, in welcher XML-Datei die gespeicherten Drucker abgelegt werden.
+    ''' </summary>
     Property SavedPrintersProfileFile As String = ""
+    ''' <summary>
+    ''' Definiert, ob die Hauptanwendung lokale Drucker anzeigt (oder nur verbundene Netzwerkdrucker).
+    ''' </summary>
     Property ShowLocalPrinters As Boolean = True
+    ''' <summary>
+    ''' Definiert eine String-Collection von Druckernamen, welche nicht in der Hauptanwendung angezeigt werden.
+    ''' </summary>
     Property HiddenPrinterList As List(Of String)
+    ''' <summary>
+    ''' Definiert eine Prüfung während dem Start der Hauptanwendung, um zu erkennen, ob der Benutzer die Berechtigung zum Steuern der Druckerwarteschlange hat. Falls dies der Fall ist, wird für den Start/Stopp der Druckerwarteschlange keine UAC-Meldung mehr angezeigt.
+    ''' </summary>
     Property CheckUserSpoolerPermissions As Boolean = False
+    ''' <summary>
+    ''' Definiert, ob die Anwendung während der Ausführung laufend auf neue Drucker prüft.
+    ''' </summary>
     Property AlwaysCheckForNewPrinters As Boolean = True
+    ''' <summary>
+    ''' Definiert den Abfrageintervall (ms), in welchem die Anwendung während der Ausführung laufend auf neue Drucker prüft.
+    ''' </summary>
     Property AlwaysCheckForNewPrintersInterval As Integer = 2000
+    ''' <summary>
+    ''' Definiert die Aktion, welche ausgeführt wird, wenn ein Anwender einen Doppelkick auf einen Druckereintrag in der Hauptanwendung ausführt.
+    ''' </summary>
     Property DoubleClickActionOnPrinterItem As DoubleClickActionOnPrinterItemAction = DoubleClickActionOnPrinterItemAction.ShowPrinterDriverSettingsDialog
+    ''' <summary>
+    ''' Legt fest, ob in den Steuerschaltflächen der Hauptanwendung die Schaltfläche für den Neustart der Druckerwarteschlange angezeigt wird.
+    ''' </summary>
     Property ShowRestartPrinterQueueButton As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob ein Anwender einen lokalen Drucker löschen darf.
+    ''' </summary>
     Property AllowUserDeleteLocalPrinter As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Anwendung für das Low-Level-Entfernen auch optional ohne Administrator-Berechtigungen gestartet werden kann.
+    ''' </summary>
     Property AllowForceDeletePrinterStartWithoutAdminRights As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Anwendung für das Low-Level-Entfernen bei einem Start ohne Administrator-Berechtigungen eine Warnmeldung anzeigt.
+    ''' </summary>
     Property ShowForceDeletePrinterNonAdminMessageAtStart As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Anwendung für das Löschen aller Drucker auch ohne Administrator-Berechtigungen gestartet werden kann.
+    ''' </summary>
     Property AllowDeleteAllPrintersStartWithoutAdminRights As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Hauptanwendung benutzerdefinierte RTF-Dateien für bestimmte Treibernamen anzeigt.
+    ''' </summary>
     Property ShowDriverNotifications As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob Steuerschaltflächen in der Hauptanwendung angezeigt werden, welche eine Druckersuche in einer großen Listenansicht ermöglicht.
+    ''' </summary>
     Property ShowAdvancedPrinterListButton As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Hauptanwendung im administrativen Kontextmenü einen Eintrag für den Start der Windows-Druckerverwaltung anzeigt.
+    ''' </summary>
     Property ShowPrintManagementCenterEntry As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Hauptanwendung im administrativen Kontextmenü einen Eintrag für den Start der Low-Level-Entfernen-Anwendung anzeigt.
+    ''' </summary>
     Property ShowForceDeletePrinterEntry As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Hauptanwendung im administrativen Kontextmenü einen Eintrag für die Einstellungskonsole anzeigt.
+    ''' </summary>
     Property ShowAppSettingsConsoleEntry As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Hauptanwendung bei jedem Vorgang einen Lade-Kreis anzeigt.
+    ''' </summary>
     Property ShowProgressCircleOnEvents As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob der Standarddrucker immer ganz oben in der Liste anzeigt werden soll.
+    ''' </summary>
     Property ShowDefaultPrinterAlwaysOnTop As Boolean = True
+    ''' <summary>
+    ''' Legt alle Treiberinformationen fest, bei welchen eine benutzerdefinierte RTF-Datei angezeigt wird. (Nach dem Verbinden eines Druckers)
+    ''' </summary>
     Property DriverNotifications As List(Of DriverNotifications)
+    ''' <summary>
+    ''' Legt fest, ob im Kontextmenü der Trayanwendung ein Eintrag für das Beenden der Trayanwendung angezeigt wird.
+    ''' </summary>
     Property ShowExitEntryInTrayApp As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob im Kontextmenü der Trayanwendung ein Eintrag für das Starten der Hauptanwendung angezeigt wird.
+    ''' </summary>
     Property ShowManagePrintersEntryInTrayApp As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob im oberen Bereich des Kontextmenüs der Trayanwendung das benutzerdefinierte Logo angezeigt wird.
+    ''' </summary>
     Property ShowCompanyLogoInTrayApp As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob im Kontextmenü der Trayanwendung ein Eintrag für das Aktualisieren der Druckerauflistung angezeigt wird. Dies startet die Trayanwendung neu.
+    ''' </summary>
     Property ShowRefreshEntryInTrayApp As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob das Kontextmenü der Trayanwendung in einem klassischen Design angezeigt wird.
+    ''' </summary>
     Property ShowClassicTrayMenuStyleInTrayApp As Boolean = False
+    ''' <summary>
+    ''' Legt fest, ob ein Doppelklick auf das Trayicon die Hauptanwendung starten soll.
+    ''' </summary>
     Property DoubleClickOnTrayIconStartsMainApp As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob im Kontextmenü der Trayanwendung ein Eintrag für das Entfernen/Trennen des Druckers angezeigt werden soll. (Bei jedem Drucker im Untermenü)
+    ''' </summary>
     Property ShowDeletePrinterEntryInTrayApp As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob im Kontextmenü der Trayanwendung ein Eintrag für das Ändern der Standarddruckereinstellungen angezeigt werden soll. (Bei jedem Drucker im Untermenü)
+    ''' </summary>
     Property ShowChangeDefaultPrinterDriverSettingsEntryInTrayApp As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob im Kontextmenü der Trayanwendung ein Eintrag für das Öffnen der Gerätewebseite (analog Freigabename) im Standardbrowser angezeigt werden soll. (Bei jedem Drucker im Untermenü)
+    ''' </summary>
     Property ShowOpenPrinterWebsiteEntryInTrayApp As Boolean = False
+    ''' <summary>
+    ''' Legt fest, ob im Kontextmenü der Trayanwendung ein Eintrag für den Neustart der Druckerwarteschlange angezeigt werden soll.
+    ''' </summary>
     Property ShowRestartPrinterServiceEntryInTrayApp As Boolean = False
+    ''' <summary>
+    ''' Legt fest, ob im Kontextmenü der Trayanwendung ein Eintrag für die Sicherung der Druckerumgebung angezeigt werden soll.
+    ''' </summary>
     Property ShowBackupPrinterEnvironmentEntryInTrayApp As Boolean = False
+    ''' <summary>
+    ''' Legt fest, ob die Trayanwendung direkt nach der Installation der Anwendung gestartet werden soll.
+    ''' </summary>
     Property ShowTrayAppAfterInstall As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Trayanwendung sichtbar im Infobereich der Taskleiste sein soll. (Sonst wird diese versteckt nur als Prozess ausgeführt)
+    ''' </summary>
     Property ShowTrayAppIcon As Boolean = True
+    ''' <summary>
+    ''' Legt fest, wie lange auf einen Shell bzw. API-Befehl gewartet werden soll.
+    ''' </summary>
     Property MaxPrinterAPIShellTimout As Integer = 30000
+    ''' <summary>
+    ''' Legt fest, on die Anwendung auf Remote-Profildateien reagieren soll.
+    ''' </summary>
     Property UseTracePathFeature As Boolean = False
+    ''' <summary>
+    ''' Legt fest, in welchem Pfad die Anwendung auf Remote-Profildateien reagieren soll.
+    ''' </summary>
     Property ActionsTracePath As String = "%TEMP%\PrinterActions"
+    ''' <summary>
+    ''' Legt fest, in welchem Pfad der Profileditor sowie die Konsolenanwendung Remote-Profildateien generieren soll. Der Pfad muss mit "\" starten, da dieser Pfad direkt nach dem Hostnamen angefügt wird.
+    ''' </summary>
     Property ActionsTraceAdminPath As String = "\c$\%TEMP%\PrinterActions"
+    ''' <summary>
+    ''' Legt fest, on die Trayanwendung beim Start auf nicht ausgeführte Remote-Profildateien prüfen und diese ausführen soll.
+    ''' </summary>
     Property ProcessActionsOnTrayStart As Boolean = True
+    ''' <summary>
+    ''' Legt fest, ob die Trayanwendung die Druckerumgebung beim Tray-Anwendungsstart sichern soll.
+    ''' </summary>
     Property AutoBackupPrinterEnvironmentAtStartup As Boolean = False
+    ''' <summary>
+    ''' Legt fest, ob die Trayanwendung die Druckerumgebung bei der Abmeldung des Benutzers sichern soll.
+    ''' </summary>
     Property AutoBackupPrinterEnvironmentAtLogout As Boolean = False
+    ''' <summary>
+    ''' Legt den Pfad fest, in welcher die Trayanwendung die Druckerumgebung sichert.
+    ''' </summary>
     Property AutoBackupPrinterEnvironmentPath As String = ""
+    ''' <summary>
+    ''' Legt den ersten Teil des Dateinamens für die Sicherung fest. Syntax ist hierbei FilenameStart_%Hostname%.prpr
+    ''' </summary>
     Property AutoBackupPrinterEnvironmentFilenameBegin As String = ""
+    ''' <summary>
+    ''' Definiert, ob bei einer entfernen Abfrage der installierten/verbundenen Drucker die lokalen Drucker ignoriert werden.
+    ''' </summary>
     Property IgnoreLocalPrintersAtRemoteFetching As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob bei einer Sicherung der installierten/verbundenen Drucker die lokalen Drucker ignoriert werden.
+    ''' </summary>
     Property IgnoreLocalPrintersAtAutoBackup As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob beim Reporting der installierten/verbundenen Drucker die lokalen Drucker ignoriert werden.
+    ''' </summary>
     Property IgnoreLocalPrintersAtReporting As Boolean = True
+    ''' <summary>
+    ''' Definiert, ob beim Start der Trayanwendung Reports über die verbundenen Drucker auf einer zentralen Freigabe generiert werden.
+    ''' </summary>
     Property UseReportingFeature As Boolean = False
+    ''' <summary>
+    ''' Definiert, in welchen Pfad die Reports über die verbundenen Drucker auf einer zentralen Freigabe generiert werden.
+    ''' </summary>
     Property ReportingPath As String = ""
+    ''' <summary>
+    ''' Definiert Benutzer, welche für die Reports über die verbundenen Drucker auf einer zentralen Freigabe ausgenommen sind.
+    ''' </summary>
     Property ReportingUserBlacklist As String = ""
+    ''' <summary>
+    ''' Definiert, ob es über eine Profildatei möglich ist, einen benutzerdefinierten Shell-Befehl auszuführen.
+    ''' </summary>
+    Property AllowExecuteCustomCommandFromProfileFile As Boolean = True
 
+    ''' <summary>
+    ''' Definiert die Standardaktion bei einem Doppelklick auf einen Druckereintrag in der Hauptanwendung.
+    ''' </summary>
     Public Enum DoubleClickActionOnPrinterItemAction
+
         DoNothing = 0
         ShowPrinterQueueDialog = 1
         ShowPrinterPropertiesDialog = 2
@@ -289,6 +480,9 @@ Imports ConnectMyPrinterEnumerationLib
         MakePrinterToDefaultPrinter = 4
     End Enum
 
+    ''' <summary>
+    ''' Definiert die Startposition des Hauptfensters der Hauptanwendung.
+    ''' </summary>
     Public Enum AppWindowPosition As Integer
         CenterScreen = 0
         AtNotificationBar = 1
