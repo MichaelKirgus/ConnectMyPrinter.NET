@@ -6,6 +6,7 @@ Imports ConnectMyPrinterEnumerationLib
 Imports ConnectMyPrinterRemoteFileHandler
 
 Public Class ProcessDlg
+    Public AppSettingFile As String = "AppSettings.xml"
     Public RemoteFilePath As String = ""
     Public Profile As New RemoteFileClass
     Public DefaultAppSettings As New AppSettingsClass
@@ -19,6 +20,20 @@ Public Class ProcessDlg
 
             If IO.File.Exists(xProfile.CustomAppSettingsFile) Then
                 DefaultAppSettings = LoadSettings(xProfile.CustomAppSettingsFile)
+            Else
+                If IO.File.Exists(Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile) Then
+                    DefaultAppSettings = LoadSettings(Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile)
+                Else
+                    'Laden der Einstellungen (über AppData)
+                    If IO.File.Exists(Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile) Then
+                        DefaultAppSettings = LoadSettings(Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile)
+                    Else
+                        'Laden der Einstellungen aus dem Programmverzeichnis
+                        If IO.File.Exists(AppSettingFile) Then
+                            DefaultAppSettings = LoadSettings(AppSettingFile)
+                        End If
+                    End If
+                End If
             End If
 
             BackgroundWorker1.RunWorkerAsync()
@@ -51,8 +66,12 @@ Public Class ProcessDlg
             End If
             If ActionItem.Action = RemoteFileActionsEnums.ActionEnum.RunExecCommand Then
                 'Benutzerdefinierter Befehl ausführen
-                Shell(ActionItem.CustomData)
-                Return True
+                If DefaultAppSettings.AllowExecuteCustomCommandFromProfileFile Then
+                    Shell(ActionItem.CustomData)
+                    Return True
+                Else
+                    Return False
+                End If
             End If
             If ActionItem.Action = RemoteFileActionsEnums.ActionEnum.ShowMessage Then
                 'Hinweismeldung anzeigen
@@ -85,7 +104,11 @@ Public Class ProcessDlg
                     Dim qq As New PrinterQueueInfo
                     qq.ShareName = ActionItem.PrinterName
                     qq.Name = ActionItem.PrinterName
-                    qq.Server = "\\" & ActionItem.PrintServer
+                    If (ActionItem.PrintServer = "Lokal") Or (ActionItem.PrintServer = "Local") Then
+                        qq.Server = ActionItem.PrintServer
+                    Else
+                        qq.Server = "\\" & ActionItem.PrintServer
+                    End If
 
                     uu.SetDefaultPrinter(qq)
                 Catch ex As Exception

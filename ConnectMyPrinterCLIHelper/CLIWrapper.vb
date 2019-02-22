@@ -18,6 +18,8 @@ Public Class CLIWrapper
     Public BackupFilePath As String = ""
     Public RestoreFilePath As String = ""
     Public Clientname As String = ""
+    Public Verbose As Boolean = False
+    Public WaitForUserInput As Boolean = False
 
     Public CLIAction As CLIActionEnum = 0
 
@@ -58,10 +60,21 @@ Public Class CLIWrapper
             End If
         End If
 
-        'Laden der Einstellungen (im Programmverzeichnis oder über Befehlszeile)
-        AppSettings = MainForm.LoadSettings(AppSettingFile)
-        MainForm.AppSettings = AppSettings
+        LoadAppSettingsInternal()
     End Sub
+
+    Public Function LoadAppSettingsInternal() As Boolean
+        Try
+            'Laden der Einstellungen (im Programmverzeichnis oder über Befehlszeile)
+            AppSettings = MainForm.LoadSettings(AppSettingFile)
+            AppSettings.UseTracePathFeature = True
+            MainForm.AppSettings = AppSettings
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 
     Public Function LunchCli(args As String(), Optional ByVal OutputErrors As Boolean = True) As Boolean
         Try
@@ -74,10 +87,21 @@ Public Class CLIWrapper
                     End If
                 Else
                     If args.Length >= 1 Then
+                        Dim oldappsettingsfile As String
+                        oldappsettingsfile = AppSettingFile
                         If ReadAllCommandSwitchesAndSetSettings(args) Then
+                            PostVerboseText("Check application file path...")
+                            If Not oldappsettingsfile = AppSettingFile Then
+                                PostVerboseText("Reload application settings...")
+                                LoadAppSettingsInternal()
+                                PostVerboseText("Success: Reload application settings")
+                            End If
+                            PostVerboseText("Run actions...")
                             If ProcessActions() Then
+                                PostVerboseText("Success: Run actions")
                                 Return True
                             Else
+                                PostVerboseText("Failed running actions!")
                                 If OutputErrors Then
                                     ShowHelp("", "Processing actions failed.", True)
                                 End If
@@ -106,6 +130,12 @@ Public Class CLIWrapper
         Return False
     End Function
 
+    Public Sub PostVerboseText(ByVal TextStr As String)
+        If Verbose Then
+            Console.WriteLine(TextStr)
+        End If
+    End Sub
+
     Public Function ReadAllCommandSwitchesAndSetSettings(ByVal CmdArgs As String()) As Boolean
         Try
             Dim arglist As List(Of String)
@@ -113,6 +143,8 @@ Public Class CLIWrapper
 
             For ind = 0 To arglist.Count - 1
                 Try
+                    PostVerboseText("Parsing argument '" & arglist(ind) & "'")
+
                     If arglist(ind).StartsWith("-CLP") Then
                         CLIAction = CLIActionEnum.ConnectLocalPrinters
                         Dim QQ As New RemoteFilePrinterConnectItem
@@ -223,6 +255,15 @@ Public Class CLIWrapper
                         Clientname = arglist(ind + 1)
                         RestoreFilePath = arglist(ind + 2)
                     End If
+                    If arglist(ind).StartsWith("-S") Then
+                        AppSettingFile = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-V") Then
+                        Verbose = True
+                    End If
+                    If arglist(ind).StartsWith("-W") Then
+                        WaitForUserInput = True
+                    End If
                 Catch ex As Exception
                     ShowHelp(ex.Message, "Unknown cli parameter or parameter list is not complete.")
                     Return False
@@ -256,11 +297,13 @@ Public Class CLIWrapper
     Public Function ProcessActions() As Boolean
         Try
             If CLIAction = CLIActionEnum.DoNothing Then
+                PostVerboseText("Selected Action: Nothing")
                 Return True
             End If
 
             If CLIAction = CLIActionEnum.RemoveLocalPrinters Then
                 'Drucker trennen
+                PostVerboseText("Selected Action: Disconnect local printer")
                 For Each item As RemoteFilePrinterDisconnectItem In DisconnectPrinterCollection
                     Try
                         Dim uu As New ManagePrinter
@@ -275,6 +318,7 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.ConnectRemotePrinters Or CLIAction = CLIActionEnum.RemoveRemotePrinters Or CLIAction = CLIActionEnum.SetRemoteDefaultPrinter Then
+                PostVerboseText("Selected Action: Remote client action")
                 Dim disthandler As New DistributionHelper
                 If disthandler.PublishProfileToClient(ConnectRemoteMachineCollection(0), "", True, False, BuildRemoteFile, AppSettings) Then
                     Return True
@@ -283,12 +327,14 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.ListRemotePrinters Then
+                PostVerboseText("Selected Action: List all remote printers")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = False
                 ListPrinterRemoteFileToOutput(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings))
                 Return True
             End If
             If CLIAction = CLIActionEnum.ListConnectedRemotePrinters Then
+                PostVerboseText("Selected Action: List all remote connected printers")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
 
@@ -296,11 +342,13 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.RemoveAllPrintersFromLocalMachine Then
+                PostVerboseText("Selected Action: Remove all printers from local machine")
                 Dim dd As New PrinterDriverRemover
                 dd.DeleteAllPrintersAndDrivers(AppSettings.PrinterAdminPath)
                 Return True
             End If
             If CLIAction = CLIActionEnum.RemoveAllConnectedPrintersFromLocalMachine Then
+                PostVerboseText("Selected Action: Remove all connected printers from local machine")
                 Dim connectedprinters
                 connectedprinters = MainForm.LoadLocalPrinters()
 
@@ -320,6 +368,7 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.RemoveAllConnectedPrintersFromRemoteMachine Then
+                PostVerboseText("Selected Action: Remove all connected printers from remote machine")
                 Dim disthandler As New DistributionHelper
                 Dim resultclass As RemoteFileClass
                 resultclass = disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings)
@@ -339,16 +388,19 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.BackupPrintersFromLocalMachine Then
+                PostVerboseText("Selected Action: Backup printers from local machine")
                 Dim RemoteFileService As New RemoteFileCreator
                 RemoteFileService.CreateMultiplePrinterRemoteFile(BackupFilePath, MainForm.LoadLocalPrinters)
                 Return True
             End If
             If CLIAction = CLIActionEnum.RestorePrintersToLocalMachine Then
+                PostVerboseText("Selected Action: Restore printers to local machine")
                 Dim jj As New RemoteFileSerializer
                 ConnectPrinterCollectionFunc(jj.LoadRemoteFile(RestoreFilePath).ConnectPrinters)
                 Return True
             End If
             If CLIAction = CLIActionEnum.BackupPrintersFromClient Then
+                PostVerboseText("Selected Action: Backup printers from remote machine")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
                 Dim jj As New RemoteFileSerializer
@@ -356,6 +408,7 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.RestoreBackupToClient Or CLIAction = CLIActionEnum.ApplyProfileToRemoteClient Then
+                PostVerboseText("Selected Action: Restore printers to remote machine or apply profile to client")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
                 Dim jj As New RemoteFileSerializer
@@ -363,10 +416,12 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.ConnectLocalPrinters Then
+                PostVerboseText("Selected Action: Connect lokal printer")
                 ConnectPrinterCollectionFunc(ConnectPrinterCollection)
                 Return True
             End If
             If CLIAction = CLIActionEnum.SetLocalDefaultPrinter Then
+                PostVerboseText("Selected Action: Set default printer")
                 For Each item As RemoteFilePrinterConnectItem In ConnectPrinterCollection
                     Try
                         Dim uu As New ManagePrinter
@@ -388,10 +443,12 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.ListLocalPrinters Then
+                PostVerboseText("Selected Action: List all local printers")
                 ListPrinterToOutput(MainForm.LoadLocalPrinters)
                 Return True
             End If
             If CLIAction = CLIActionEnum.ListConnectedLocalPrinters Then
+                PostVerboseText("Selected Action: List all connected local printers")
                 ListPrinterToOutput(MainForm.LoadLocalPrinters, True)
                 Return True
             End If
@@ -496,6 +553,9 @@ Public Class CLIWrapper
             Console.WriteLine("-BPERC" & vbTab & vbTab & "Backup all printers from remote client: <Hostname> <Filename>")
             Console.WriteLine("-RPERC" & vbTab & vbTab & "Restore all printers to remote client: <Hostname> <Filename>")
             Console.WriteLine("-ARPPF" & vbTab & vbTab & "Apply profile file to remote machine: <Hostname> <Filename>")
+            Console.WriteLine("[-S]" & vbTab & vbTab & "Load custom settings file <File>")
+            Console.WriteLine("[-V]" & vbTab & vbTab & "Verbose output")
+            Console.WriteLine("[-W]" & vbTab & vbTab & "Wait for user input after processing actions")
         End If
     End Sub
 End Class
