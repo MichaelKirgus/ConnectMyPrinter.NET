@@ -351,6 +351,8 @@
 		<row><td>ConnectMyPrinterACLHelper.Prim_re_Ausgabe1</td><td>{9BB96483-766C-43C1-8618-1C0F2E289FB2}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinteraclhelper.pr1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterACLHelper.Prim_re_Ausgabe2</td><td>{661EFDAA-2D51-489B-931E-C493F4C4BE21}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinteraclhelper.pr2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterACLHelperLib.Prim_re_Ausgabe1</td><td>{985C2EB9-A3C8-4668-84ED-EAF1BF28C07C}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinteraclhelperlib1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien</td><td>{037CE100-8F0F-47A7-86C8-A226334588B3}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterappsettingsh</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien1</td><td>{F9D1415D-4056-4A3E-B8EC-272BF23F6F01}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterappsettingsh3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe1</td><td>{6A607A62-0AF9-4B72-9D0E-58F9FAA313D2}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterappsettingsh1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe2</td><td>{833D8C91-04B7-4EEF-9584-5B3F06264484}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterappsettingsh2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterAppSettingsSetup.Lokalisierte_Ressourcen</td><td>{CB6BF891-A503-4BD1-AE94-0358522E0DFB}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterappsettingss1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -379,6 +381,8 @@
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td><td>{3C4EF5C9-F61F-439C-A264-1DB98F1CA8B9}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterprintermanag</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe1</td><td>{C2D5E1DC-CE3A-42FF-A69D-05554A0D0D19}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterprintermanag1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe1</td><td>{6CBD72D9-F3C6-4B61-9965-B9DB2C0FE834}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterregistryhand1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien</td><td>{9F257C9F-93D9-494B-AB1B-E1809971246A}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterremotefileha</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien1</td><td>{895DC145-E182-4B80-A655-3BA61775CE94}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterremotefileha2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterRemoteFileHandler.Prim_re_Ausgabe1</td><td>{949D2CED-65EC-416E-9AAA-4CD2277E9790}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterremotefileha1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterRemoteFileHelper.Lokalisierte_Ressourcen</td><td>{65F58BA0-5C49-4200-8518-6C85B6E197F4}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterremotefilehe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterRemoteFileHelper.Prim_re_Ausgabe1</td><td>{8DA8F819-7170-4168-ADB7-76E35D8F046F}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterremotefilehe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -2044,6 +2048,7 @@
 		<row><td>NewFeature1</td><td>ConnectMyPrinter.NET.Lokalisierte_Ressourcen1</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinter.NET.Prim_re_Ausgabe1</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterACLHelper.Prim_re_Ausgabe1</td></row>
+		<row><td>NewFeature1</td><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe1</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterAppSettingsSetup.Lokalisierte_Ressourcen</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterAppSettingsSetup.Prim_re_Ausgabe</td></row>
@@ -2051,6 +2056,7 @@
 		<row><td>NewFeature1</td><td>ConnectMyPrinterEnumerationLib.Prim_re_Ausgabe1</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterLog.Prim_re_Ausgabe</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe1</td></row>
+		<row><td>NewFeature1</td><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien1</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterUACHelper.Lokalisierte_Ressourcen</td></row>
 		<row><td>NewFeature1</td><td>ConnectMyPrinterUACHelper.Prim_re_Ausgabe1</td></row>
 		<row><td>NewFeature13</td><td>Hilfe.chm</td></row>
@@ -2087,10 +2093,12 @@
 		<row><td>NewFeature5</td><td>ConnectMyPrinterTrayApp.Prim_re_Ausgabe</td></row>
 		<row><td>NewFeature6</td><td>ConnectMyPrinterDistributionLib.Lokalisierte_Ressourcen</td></row>
 		<row><td>NewFeature6</td><td>ConnectMyPrinterDistributionLib.Prim_re_Ausgabe</td></row>
+		<row><td>NewFeature6</td><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien</td></row>
 		<row><td>NewFeature6</td><td>ConnectMyPrinterRemoteFileHandler.Prim_re_Ausgabe1</td></row>
 		<row><td>NewFeature6</td><td>ConnectMyPrinterRemoteFileHelper.Lokalisierte_Ressourcen</td></row>
 		<row><td>NewFeature6</td><td>ConnectMyPrinterRemoteFileHelper.Prim_re_Ausgabe1</td></row>
 		<row><td>NewFeature6</td><td>ISX_DEFAULTCOMPONENT6</td></row>
+		<row><td>NewFeature7</td><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien1</td></row>
 		<row><td>NewFeature7</td><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe2</td></row>
 		<row><td>NewFeature7</td><td>ConnectMyPrinterSettingsConsole.Lokalisierte_Ressourcen</td></row>
 		<row><td>NewFeature7</td><td>ConnectMyPrinterSettingsConsole.Prim_re_Ausgabe1</td></row>
@@ -2116,8 +2124,10 @@
 		<row><td>connectmyprinteraclhelper.pr1</td><td>ConnectMyPrinterACLHelper.Prim_re_Ausgabe1</td><td>ConnectMyPrinterACLHelper.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterACLHelper&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinteraclhelper.pr2</td><td>ConnectMyPrinterACLHelper.Prim_re_Ausgabe2</td><td>ConnectMyPrinterACLHelper.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterACLHelper&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinteraclhelperlib1</td><td>ConnectMyPrinterACLHelperLib.Prim_re_Ausgabe1</td><td>ConnectMyPrinterACLHelperLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterACLHelperLib&gt;|Built</td><td>3</td><td/></row>
+		<row><td>connectmyprinterappsettingsh</td><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien</td><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterAppSettingsHandler&gt;|Documentation</td><td>3</td><td/></row>
 		<row><td>connectmyprinterappsettingsh1</td><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe1</td><td>ConnectMyPrinterAppSettingsHandler.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterAppSettingsHandler&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterappsettingsh2</td><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe2</td><td>ConnectMyPrinterAppSettingsHandler.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterAppSettingsHandler&gt;|Built</td><td>3</td><td/></row>
+		<row><td>connectmyprinterappsettingsh3</td><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien1</td><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterAppSettingsHandler&gt;|Documentation</td><td>3</td><td/></row>
 		<row><td>connectmyprinterappsettingss</td><td>ConnectMyPrinterAppSettingsSetup.Prim_re_Ausgabe</td><td>ConnectMyPrinterAppSettingsSetup.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterAppSettingsSetup&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterappsettingss1</td><td>ConnectMyPrinterAppSettingsSetup.Lokalisierte_Ressourcen</td><td>ConnectMyPrinterAppSettingsSetup.Lokalisierte Ressourcen</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterAppSettingsSetup&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
 		<row><td>connectmyprinterbackupapp.lo</td><td>ConnectMyPrinterBackupApp.Lokalisierte_Ressourcen</td><td>ConnectMyPrinterBackupApp.Lokalisierte Ressourcen</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterBackupApp&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
@@ -2144,7 +2154,9 @@
 		<row><td>connectmyprinterprintermanag</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td><td>ConnectMyPrinterPrinterManageLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterPrinterManageLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterprintermanag1</td><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe1</td><td>ConnectMyPrinterPrinterManageLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterPrinterManageLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterregistryhand1</td><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe1</td><td>ConnectMyPrinterRegistryHandler.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRegistryHandler&gt;|Built</td><td>3</td><td/></row>
+		<row><td>connectmyprinterremotefileha</td><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien</td><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRemoteFileHandler&gt;|Documentation</td><td>3</td><td/></row>
 		<row><td>connectmyprinterremotefileha1</td><td>ConnectMyPrinterRemoteFileHandler.Prim_re_Ausgabe1</td><td>ConnectMyPrinterRemoteFileHandler.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRemoteFileHandler&gt;|Built</td><td>3</td><td/></row>
+		<row><td>connectmyprinterremotefileha2</td><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien1</td><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRemoteFileHandler&gt;|Documentation</td><td>3</td><td/></row>
 		<row><td>connectmyprinterremotefilehe</td><td>ConnectMyPrinterRemoteFileHelper.Lokalisierte_Ressourcen</td><td>ConnectMyPrinterRemoteFileHelper.Lokalisierte Ressourcen</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRemoteFileHelper&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
 		<row><td>connectmyprinterremotefilehe1</td><td>ConnectMyPrinterRemoteFileHelper.Prim_re_Ausgabe1</td><td>ConnectMyPrinterRemoteFileHelper.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRemoteFileHelper&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterrestartspool</td><td>ConnectMyPrinterRestartSpooler.Lokalisierte_Ressourcen</td><td>ConnectMyPrinterRestartSpooler.Lokalisierte Ressourcen</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterRestartSpooler&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
@@ -2310,6 +2322,8 @@
 		<row><td>ConnectMyPrinterACLHelper.Prim_re_Ausgabe1</td><td/><td/><td>_9081C20C_366C_4C2F_AB21_E1C04339C2A3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterACLHelper.Prim_re_Ausgabe2</td><td/><td/><td>_1A0B45BB_59B4_4A8A_8FFA_38A2B03E83AE_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterACLHelperLib.Prim_re_Ausgabe1</td><td/><td/><td>_DC2AF0C5_34E4_4774_8FA1_101D8A98D2E3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien</td><td/><td/><td>_D42977A6_56D3_4525_86B2_9589ACE9420B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ConnectMyPrinterAppSettingsHandler.Dokumentationsdateien1</td><td/><td/><td>_3DA391B7_C34A_42AA_B1B7_CFE14B11D33A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe1</td><td/><td/><td>_F7C4470B_269B_4AD1_AE48_1D1C25582BA3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterAppSettingsHandler.Prim_re_Ausgabe2</td><td/><td/><td>_5E2815F5_77AC_4B67_9970_4B5CCD07E480_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterAppSettingsSetup.Lokalisierte_Ressourcen</td><td/><td/><td>_E7264385_F9D5_4469_B69E_57B7F7585CEA_FILTER</td><td/><td/><td/><td/></row>
@@ -2338,6 +2352,8 @@
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe</td><td/><td/><td>_E4A199C2_A320_4402_B594_46A53EFB34FD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterPrinterManageLib.Prim_re_Ausgabe1</td><td/><td/><td>_67852B30_AAF0_4A2B_A2E6_0CEF8305AC09_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterRegistryHandler.Prim_re_Ausgabe1</td><td/><td/><td>_9BBDC43E_52B3_4F42_9D9B_31CC6FBB6E99_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien</td><td/><td/><td>_FD507C69_6C74_493A_B3E5_E1CA3553AF62_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ConnectMyPrinterRemoteFileHandler.Dokumentationsdateien1</td><td/><td/><td>_3F33AD7A_E50A_44CA_A610_BF66182433CE_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterRemoteFileHandler.Prim_re_Ausgabe1</td><td/><td/><td>_D74F889F_9CC8_45CE_9204_902DC24603F1_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterRemoteFileHelper.Lokalisierte_Ressourcen</td><td/><td/><td>_6FA3DE9E_CD73_4405_807F_83E18483F34F_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterRemoteFileHelper.Prim_re_Ausgabe1</td><td/><td/><td>_F5E51193_B412_491F_92F5_732E407B969C_FILTER</td><td/><td/><td/><td/></row>
