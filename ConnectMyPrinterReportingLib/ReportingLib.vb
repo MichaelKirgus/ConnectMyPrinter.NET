@@ -9,7 +9,7 @@ Public Class ReportingLib
         Try
             Dim reportpath As String
             reportpath = Environment.ExpandEnvironmentVariables(AppSettings.ReportingPath)
-            If (Not AppSettings.UseReportingFeature = False) And (Not reportpath = "") Then
+            If Not reportpath = "" Then
                 'Existiert die Freigabe für das Reporting?
                 If IO.Directory.Exists(reportpath) Then
                     If Not IO.Directory.Exists(reportpath & "\" & Domain.ToUpper) Then
