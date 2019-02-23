@@ -17,6 +17,8 @@ Public Class CLIWrapper
 
     Public BackupFilePath As String = ""
     Public RestoreFilePath As String = ""
+    Public Merge1FilePath As String = ""
+    Public Merge2FilePath As String = ""
     Public Clientname As String = ""
     Public Verbose As Boolean = False
     Public PingClients As Boolean = False
@@ -46,6 +48,14 @@ Public Class CLIWrapper
         RemoveAllPrintersFromRemoteMachine = 17
         RemoveAllConnectedPrintersFromLocalMachine = 18
         RemoveAllConnectedPrintersFromRemoteMachine = 19
+        CreateConnectPrinterProfileFile = 20
+        CreateDisconnectPrinterProfileFile = 21
+        CreateChangeDefaultPrinterProfileFile = 22
+        ListProfileFileContent = 23
+        ConnectRemotePrintersUNC = 24
+        DisconnectRemotePrintersUNC = 25
+        SetRemoteDefaultPrinterUNC = 26
+        Merge2FilesToNewProfileFile = 27
     End Enum
 
     Public Sub LoadSettingsFile()
@@ -103,20 +113,23 @@ Public Class CLIWrapper
                             End If
                             PostVerboseText("Run actions...")
                             If ProcessActions() Then
-                                PostVerboseText("Success: Run actions")
+                                PostVerboseText("Success: Run actions", ConsoleColor.Green)
                                 If WaitForUserInput Then
-                                    Console.WriteLine("Press any key to close window...")
+                                    Console.WriteLine("Press any key to continue...")
                                     Console.ReadLine()
+                                End If
+                                If Verbose Then
+                                    Console.ForegroundColor = ConsoleColor.White
                                 End If
 
                                 Return True
                             Else
-                                PostVerboseText("Failed running actions!")
+                                PostVerboseText("Failed running actions!", ConsoleColor.Red)
                                 If OutputErrors Then
                                     ShowHelp("", "Processing actions failed.", True)
                                 End If
                                 If WaitForUserInput Then
-                                    Console.WriteLine("Press any key to close window...")
+                                    Console.WriteLine("Press any key to continue...")
                                     Console.ReadLine()
                                 End If
                                 Return False
@@ -144,8 +157,9 @@ Public Class CLIWrapper
         Return False
     End Function
 
-    Public Sub PostVerboseText(ByVal TextStr As String)
+    Public Sub PostVerboseText(ByVal TextStr As String, Optional ForeColor As ConsoleColor = ConsoleColor.White)
         If Verbose Then
+            Console.ForegroundColor = ForeColor
             Console.WriteLine(TextStr)
         End If
     End Sub
@@ -188,6 +202,26 @@ Public Class CLIWrapper
                         End Try
                         ConnectPrinterCollection.Add(QQ)
                     End If
+                    If arglist(ind).StartsWith("-UNCCRP") Then
+                        CLIAction = CLIActionEnum.ConnectRemotePrintersUNC
+                        Dim hostnamestr As String
+                        hostnamestr = arglist(ind + 1)
+                        ConnectRemoteMachineCollection.Add(hostnamestr)
+                        Dim QQ As New RemoteFilePrinterConnectItem
+                        Dim uncserverstr As String
+                        uncserverstr = arglist(ind + 2).Split("\")(2)
+                        Dim uncprinterstr As String
+                        uncprinterstr = arglist(ind + 2).Split("\")(3)
+                        QQ.PrinterName = uncprinterstr
+                        QQ.Printserver = uncserverstr
+                        Try
+                            If arglist(ind + 2) = "Default" Then
+                                QQ.SetDefaultPrinter = True
+                            End If
+                        Catch ex As Exception
+                        End Try
+                        ConnectPrinterCollection.Add(QQ)
+                    End If
                     If arglist(ind).StartsWith("-RLP") Then
                         CLIAction = CLIActionEnum.RemoveLocalPrinters
                         Dim QQ As New RemoteFilePrinterDisconnectItem
@@ -204,6 +238,20 @@ Public Class CLIWrapper
                         QQ.PrinterName = arglist(ind + 2)
                         QQ.PrintServer = arglist(ind + 3)
                         DisconnectPrinterCollection.Add(QQ)
+                    End If
+                    If arglist(ind).StartsWith("-UNCRRP") Then
+                        CLIAction = CLIActionEnum.DisconnectRemotePrintersUNC
+                        Dim hostnamestr As String
+                        hostnamestr = arglist(ind + 1)
+                        DisconnectRemoteMachineCollection.Add(hostnamestr)
+                        Dim QQ As New RemoteFilePrinterConnectItem
+                        Dim uncserverstr As String
+                        uncserverstr = arglist(ind + 2).Split("\")(2)
+                        Dim uncprinterstr As String
+                        uncprinterstr = arglist(ind + 2).Split("\")(3)
+                        QQ.PrinterName = uncprinterstr
+                        QQ.Printserver = uncserverstr
+                        ConnectPrinterCollection.Add(QQ)
                     End If
                     If arglist(ind).StartsWith("-CALP") Then
                         CLIAction = CLIActionEnum.RemoveAllPrintersFromLocalMachine
@@ -231,6 +279,21 @@ Public Class CLIWrapper
                         Dim QQ As New RemoteFilePrinterConnectItem
                         QQ.PrinterName = arglist(ind + 2)
                         QQ.Printserver = arglist(ind + 3)
+                        QQ.SetDefaultPrinter = True
+                        ConnectPrinterCollection.Add(QQ)
+                    End If
+                    If arglist(ind).StartsWith("-UNCCRDP") Then
+                        CLIAction = CLIActionEnum.SetRemoteDefaultPrinterUNC
+                        Dim hostnamestr As String
+                        hostnamestr = arglist(ind + 1)
+                        ConnectRemoteMachineCollection.Add(hostnamestr)
+                        Dim QQ As New RemoteFilePrinterConnectItem
+                        Dim uncserverstr As String
+                        uncserverstr = arglist(ind + 2).Split("\")(2)
+                        Dim uncprinterstr As String
+                        uncprinterstr = arglist(ind + 2).Split("\")(3)
+                        QQ.PrinterName = uncprinterstr
+                        QQ.Printserver = uncserverstr
                         QQ.SetDefaultPrinter = True
                         ConnectPrinterCollection.Add(QQ)
                     End If
@@ -269,6 +332,48 @@ Public Class CLIWrapper
                         Clientname = arglist(ind + 1)
                         RestoreFilePath = arglist(ind + 2)
                     End If
+                    If arglist(ind).StartsWith("-BCPPF") Then
+                        CLIAction = CLIActionEnum.CreateConnectPrinterProfileFile
+                        BackupFilePath = arglist(ind + 1)
+                        Dim QQ As New RemoteFilePrinterConnectItem
+                        QQ.PrinterName = arglist(ind + 2)
+                        QQ.Printserver = arglist(ind + 3)
+                        Try
+                            If arglist(ind + 4) = "Default" Then
+                                QQ.SetDefaultPrinter = True
+                            End If
+                        Catch ex As Exception
+                        End Try
+                        ConnectPrinterCollection.Add(QQ)
+                    End If
+                    If arglist(ind).StartsWith("-BDPPF") Then
+                        CLIAction = CLIActionEnum.CreateDisconnectPrinterProfileFile
+                        BackupFilePath = arglist(ind + 1)
+                        Dim QQ As New RemoteFilePrinterDisconnectItem
+                        QQ.PrinterName = arglist(ind + 2)
+                        QQ.PrintServer = arglist(ind + 3)
+                        DisconnectPrinterCollection.Add(QQ)
+                    End If
+                    If arglist(ind).StartsWith("-BCDPF") Then
+                        CLIAction = CLIActionEnum.CreateChangeDefaultPrinterProfileFile
+                        BackupFilePath = arglist(ind + 1)
+                        Dim QQ As New RemoteFilePrinterConnectItem
+                        QQ.PrinterName = arglist(ind + 2)
+                        QQ.Printserver = arglist(ind + 3)
+                        QQ.SetDefaultPrinter = True
+                        ConnectPrinterCollection.Add(QQ)
+                    End If
+                    If arglist(ind).StartsWith("-LPFC") Then
+                        CLIAction = CLIActionEnum.ListProfileFileContent
+                        RestoreFilePath = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-CBPF") Then
+                        CLIAction = CLIActionEnum.Merge2FilesToNewProfileFile
+                        Merge1FilePath = arglist(ind + 1)
+                        Merge2FilePath = arglist(ind + 2)
+                        BackupFilePath = arglist(ind + 3)
+                    End If
+
                     If arglist(ind).StartsWith("-S") Then
                         AppSettingFile = arglist(ind + 1)
                     End If
@@ -277,6 +382,9 @@ Public Class CLIWrapper
                     End If
                     If arglist(ind).StartsWith("-CTAP") Then
                         CheckForAdminTracePath = True
+                    End If
+                    If arglist(ind).StartsWith("-CATP") Then
+                        AppSettings.ActionsTraceAdminPath = arglist(ind + 1)
                     End If
                     If arglist(ind).StartsWith("-P") Then
                         PingClients = True
@@ -317,13 +425,13 @@ Public Class CLIWrapper
     Public Function ProcessActions() As Boolean
         Try
             If CLIAction = CLIActionEnum.DoNothing Then
-                PostVerboseText("Selected Action: Nothing")
+                PostVerboseText("Selected action: Nothing")
                 Return True
             End If
 
             If CLIAction = CLIActionEnum.RemoveLocalPrinters Then
                 'Drucker trennen
-                PostVerboseText("Selected Action: Disconnect local printer")
+                PostVerboseText("Selected action: Disconnect local printer")
                 For Each item As RemoteFilePrinterDisconnectItem In DisconnectPrinterCollection
                     PostVerboseText("Processing Item " & item.PrinterName)
                     Try
@@ -339,8 +447,8 @@ Public Class CLIWrapper
                 Next
                 Return True
             End If
-            If CLIAction = CLIActionEnum.ConnectRemotePrinters Or CLIAction = CLIActionEnum.RemoveRemotePrinters Or CLIAction = CLIActionEnum.SetRemoteDefaultPrinter Then
-                PostVerboseText("Selected Action: Remote client action")
+            If CLIAction = CLIActionEnum.ConnectRemotePrinters Or CLIAction = CLIActionEnum.RemoveRemotePrinters Or CLIAction = CLIActionEnum.SetRemoteDefaultPrinter Or CLIAction = CLIActionEnum.ConnectRemotePrintersUNC Or CLIAction = CLIActionEnum.DisconnectRemotePrintersUNC Or CLIAction = CLIActionEnum.SetRemoteDefaultPrinterUNC Then
+                PostVerboseText("Selected action: Remote client action")
                 Dim disthandler As New DistributionHelper
                 PostVerboseText("Publish profile to client " & ConnectRemoteMachineCollection(0))
                 If disthandler.PublishProfileToClient(ConnectRemoteMachineCollection(0), "", True, False, BuildRemoteFile, AppSettings, True, PingClients, CheckForAdminTracePath) Then
@@ -352,7 +460,7 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.ListRemotePrinters Then
-                PostVerboseText("Selected Action: List all remote printers")
+                PostVerboseText("Selected action: List all remote printers")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = False
                 PostVerboseText("Fetch all printers from client " & Clientname)
@@ -360,7 +468,7 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.ListConnectedRemotePrinters Then
-                PostVerboseText("Selected Action: List all remote connected printers")
+                PostVerboseText("Selected action: List all remote connected printers")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
                 PostVerboseText("Fetch all connected printers from client " & Clientname)
@@ -368,7 +476,7 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.RemoveAllPrintersFromLocalMachine Then
-                PostVerboseText("Selected Action: Remove all printers from local machine")
+                PostVerboseText("Selected action: Remove all printers from local machine")
                 Dim dd As New PrinterDriverRemover
                 PostVerboseText("Delete all printers from local machine...")
                 If dd.DeleteAllPrintersAndDrivers(AppSettings.PrinterAdminPath) Then
@@ -380,7 +488,7 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.RemoveAllConnectedPrintersFromLocalMachine Then
-                PostVerboseText("Selected Action: Remove all connected printers from local machine")
+                PostVerboseText("Selected action: Remove all connected printers from local machine")
                 Dim connectedprinters
                 connectedprinters = MainForm.LoadLocalPrinters()
                 PostVerboseText("Delete all connected printers from local machine...")
@@ -402,7 +510,7 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.RemoveAllConnectedPrintersFromRemoteMachine Then
-                PostVerboseText("Selected Action: Remove all connected printers from remote machine")
+                PostVerboseText("Selected action: Remove all connected printers from remote machine")
                 Dim disthandler As New DistributionHelper
                 Dim resultclass As RemoteFileClass
                 PostVerboseText("Fetch all connected printers from remote machine...")
@@ -426,7 +534,7 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.BackupPrintersFromLocalMachine Then
-                PostVerboseText("Selected Action: Backup printers from local machine")
+                PostVerboseText("Selected action: Backup printers from local machine")
                 Dim RemoteFileService As New RemoteFileCreator
                 If RemoteFileService.CreateMultiplePrinterRemoteFile(BackupFilePath, MainForm.LoadLocalPrinters) Then
                     PostVerboseText("Success: Backup local printers")
@@ -437,7 +545,7 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.RestorePrintersToLocalMachine Then
-                PostVerboseText("Selected Action: Restore printers to local machine")
+                PostVerboseText("Selected action: Restore printers to local machine")
                 Dim jj As New RemoteFileSerializer
                 If ConnectPrinterCollectionFunc(jj.LoadRemoteFile(RestoreFilePath).ConnectPrinters) Then
                     PostVerboseText("Success: Restore local printers")
@@ -448,7 +556,7 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.BackupPrintersFromClient Then
-                PostVerboseText("Selected Action: Backup printers from remote machine")
+                PostVerboseText("Selected action: Backup printers from remote machine")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
                 Dim jj As New RemoteFileSerializer
@@ -461,7 +569,7 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.RestoreBackupToClient Or CLIAction = CLIActionEnum.ApplyProfileToRemoteClient Then
-                PostVerboseText("Selected Action: Restore printers to remote machine or apply profile to client")
+                PostVerboseText("Selected action: Restore printers to remote machine or apply profile to client")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
                 Dim jj As New RemoteFileSerializer
@@ -474,7 +582,7 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.ConnectLocalPrinters Then
-                PostVerboseText("Selected Action: Connect local printer")
+                PostVerboseText("Selected action: Connect local printer")
                 If ConnectPrinterCollectionFunc(ConnectPrinterCollection) Then
                     PostVerboseText("Success: Connect local printer")
                     Return True
@@ -484,7 +592,7 @@ Public Class CLIWrapper
                 End If
             End If
             If CLIAction = CLIActionEnum.SetLocalDefaultPrinter Then
-                PostVerboseText("Selected Action: Set default printer")
+                PostVerboseText("Selected action: Set default printer")
                 For Each item As RemoteFilePrinterConnectItem In ConnectPrinterCollection
                     PostVerboseText("Processing Item " & item.PrinterName)
                     Try
@@ -508,14 +616,99 @@ Public Class CLIWrapper
                 Return True
             End If
             If CLIAction = CLIActionEnum.ListLocalPrinters Then
-                PostVerboseText("Selected Action: List all local printers")
+                PostVerboseText("Selected action: List all local printers")
                 ListPrinterToOutput(MainForm.LoadLocalPrinters)
                 Return True
             End If
             If CLIAction = CLIActionEnum.ListConnectedLocalPrinters Then
-                PostVerboseText("Selected Action: List all connected local printers")
+                PostVerboseText("Selected action: List all connected local printers")
                 ListPrinterToOutput(MainForm.LoadLocalPrinters, True)
                 Return True
+            End If
+            If CLIAction = CLIActionEnum.CreateConnectPrinterProfileFile Then
+                PostVerboseText("Selected action: Create connect printer profile file")
+                Dim tt As New RemoteFileClass
+                Dim savehandler As New RemoteFileSerializer
+                tt.ConnectPrinters.AddRange(ConnectPrinterCollection)
+                PostVerboseText("Save profile file...")
+                If savehandler.SaveRemoteFile(tt, BackupFilePath) Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
+            If CLIAction = CLIActionEnum.CreateDisconnectPrinterProfileFile Then
+                PostVerboseText("Selected action: Create disconnect printer profile file")
+                Dim tt As New RemoteFileClass
+                Dim savehandler As New RemoteFileSerializer
+                tt.DisconnectPrinters.AddRange(DisconnectPrinterCollection)
+                PostVerboseText("Save profile file...")
+                If savehandler.SaveRemoteFile(tt, BackupFilePath) Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
+            If CLIAction = CLIActionEnum.CreateChangeDefaultPrinterProfileFile Then
+                PostVerboseText("Selected action: Create change default printer profile file")
+                Dim tt As New RemoteFileClass
+                Dim savehandler As New RemoteFileSerializer
+                Dim jj As New RemoteFileActions
+                jj.Action = RemoteFileActionsEnums.ActionEnum.SetDefaultPrinter
+                jj.PrinterName = ConnectPrinterCollection(0).PrinterName
+                jj.PrintServer = ConnectPrinterCollection(0).Printserver
+                tt.IntermediateActions.Add(jj)
+                PostVerboseText("Save profile file...")
+                If savehandler.SaveRemoteFile(tt, BackupFilePath) Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
+            If CLIAction = CLIActionEnum.ListProfileFileContent Then
+                PostVerboseText("Selected action: List all items from profile file")
+                Dim tt As RemoteFileClass
+                Dim fileopener As New RemoteFileSerializer
+                PostVerboseText("Parsing profile file...")
+                If IO.File.Exists(RestoreFilePath) Then
+                    tt = fileopener.LoadRemoteFile(RestoreFilePath)
+                    If Not (tt.ConnectPrinters.Count = 0 And tt.DisconnectPrinters.Count = 0 And tt.IntermediateActions.Count = 0 And tt.Postactions.Count = 0 And tt.Preactions.Count = 0 And tt.CustomAppSettingsFile = "") Then
+                        ListAllPrinterRemoteFileContentToOutput(tt)
+                        Return True
+                    Else
+                        Return False
+                    End If
+                Else
+                    Return False
+                End If
+            End If
+            If CLIAction = CLIActionEnum.Merge2FilesToNewProfileFile Then
+                PostVerboseText("Selected action: Merge multiple profile files to new profile file")
+                Dim fileopener As New RemoteFileSerializer
+                Dim merge1class As RemoteFileClass
+                Dim merge2class As RemoteFileClass
+                Dim newclass As New RemoteFileClass
+                PostVerboseText("Parsing 1st profile file...")
+                merge1class = fileopener.LoadRemoteFile(Merge1FilePath)
+                PostVerboseText("Parsing 2nd profile file...")
+                merge2class = fileopener.LoadRemoteFile(Merge2FilePath)
+                PostVerboseText("Merging profiles...")
+                newclass.ConnectPrinters.AddRange(merge1class.ConnectPrinters)
+                newclass.ConnectPrinters.AddRange(merge2class.ConnectPrinters)
+                newclass.DisconnectPrinters.AddRange(merge1class.DisconnectPrinters)
+                newclass.DisconnectPrinters.AddRange(merge2class.DisconnectPrinters)
+                newclass.Preactions.AddRange(merge1class.Preactions)
+                newclass.Preactions.AddRange(merge2class.Preactions)
+                newclass.IntermediateActions.AddRange(merge1class.IntermediateActions)
+                newclass.IntermediateActions.AddRange(merge2class.IntermediateActions)
+                newclass.Postactions.AddRange(merge1class.Postactions)
+                newclass.Postactions.AddRange(merge2class.Postactions)
+                PostVerboseText("Saving new profile file...")
+                If fileopener.SaveRemoteFile(newclass, BackupFilePath) Then
+                    Return True
+                Else
+                    Return False
+                End If
             End If
 
             Return False
@@ -552,6 +745,8 @@ Public Class CLIWrapper
     End Function
 
     Sub ListPrinterToOutput(ByVal PrinterCollection As List(Of PrinterQueueInfo), Optional ByVal OnlyConnectedPrinters As Boolean = False)
+        Console.WriteLine("")
+
         If OnlyConnectedPrinters Then
             For ind = 0 To PrinterCollection.Count - 1
                 If (Not PrinterCollection(ind).Server = "Lokal") And (Not PrinterCollection(ind).Server = "Local") Then
@@ -569,9 +764,13 @@ Public Class CLIWrapper
                 Console.WriteLine(PrinterCollection(ind).ShareName & vbTab & servernamestr & vbTab & PrinterCollection(ind).DefaultPrinter.ToString)
             Next
         End If
+
+        Console.WriteLine("")
     End Sub
 
     Sub ListPrinterRemoteFileToOutput(ByVal PrinterCollection As RemoteFileClass, Optional ByVal OnlyConnectedPrinters As Boolean = False)
+        Console.WriteLine("")
+
         If OnlyConnectedPrinters Then
             For ind = 0 To PrinterCollection.ConnectPrinters.Count - 1
                 If (Not PrinterCollection.ConnectPrinters(ind).Printserver = "Lokal") And (Not PrinterCollection.ConnectPrinters(ind).Printserver = "Local") Then
@@ -589,7 +788,46 @@ Public Class CLIWrapper
                 Console.WriteLine(PrinterCollection.ConnectPrinters(ind).PrinterName & vbTab & servernamestr & vbTab & PrinterCollection.ConnectPrinters(ind).SetDefaultPrinter.ToString)
             Next
         End If
+
+        Console.WriteLine("")
     End Sub
+
+    Sub ListAllPrinterRemoteFileContentToOutput(ByVal PrinterCollection As RemoteFileClass)
+        Console.WriteLine("")
+
+        For ind = 0 To PrinterCollection.ConnectPrinters.Count - 1
+            Dim servernamestr As String
+            servernamestr = PrinterCollection.ConnectPrinters(ind).Printserver
+            If servernamestr = "Lokal" Then
+                servernamestr = servernamestr.Replace("Lokal", "Local")
+            End If
+
+            Console.WriteLine("Connect" & vbTab & PrinterCollection.ConnectPrinters(ind).PrinterName & vbTab & servernamestr & vbTab & PrinterCollection.ConnectPrinters(ind).SetDefaultPrinter.ToString)
+        Next
+
+        For ind = 0 To PrinterCollection.DisconnectPrinters.Count - 1
+            Dim servernamestr As String
+            servernamestr = PrinterCollection.DisconnectPrinters(ind).PrintServer
+            If servernamestr = "Lokal" Then
+                servernamestr = servernamestr.Replace("Lokal", "Local")
+            End If
+
+            Console.WriteLine("Disconnect" & vbTab & PrinterCollection.DisconnectPrinters(ind).PrinterName & vbTab & servernamestr)
+        Next
+
+        For ind = 0 To PrinterCollection.Preactions.Count - 1
+            Console.WriteLine("Preaction" & vbTab & PrinterCollection.Preactions(ind).Action.ToString & vbTab & PrinterCollection.Preactions(ind).CustomData & vbTab & PrinterCollection.Preactions(ind).PrinterName & vbTab & PrinterCollection.Preactions(ind).PrintServer)
+        Next
+        For ind = 0 To PrinterCollection.IntermediateActions.Count - 1
+            Console.WriteLine("IntermediateAction" & vbTab & PrinterCollection.IntermediateActions(ind).Action.ToString & vbTab & PrinterCollection.IntermediateActions(ind).CustomData & vbTab & PrinterCollection.IntermediateActions(ind).PrinterName & vbTab & PrinterCollection.IntermediateActions(ind).PrintServer)
+        Next
+        For ind = 0 To PrinterCollection.Postactions.Count - 1
+            Console.WriteLine("Postaction" & vbTab & PrinterCollection.Postactions(ind).Action.ToString & vbTab & PrinterCollection.Postactions(ind).CustomData & vbTab & PrinterCollection.Postactions(ind).PrinterName & vbTab & PrinterCollection.Postactions(ind).PrintServer)
+        Next
+
+        Console.WriteLine("")
+    End Sub
+
 
     Public Sub ShowHelp(Optional ByVal IntErrorText As String = "", Optional ByVal UserErrorText As String = "", Optional ByVal ShowOnlyError As Boolean = False)
         Console.WriteLine("ConnectMyPrinter.NET CLI (" & Environment.Version.ToString & ")")
@@ -602,13 +840,16 @@ Public Class CLIWrapper
             Console.WriteLine("Help:")
             Console.WriteLine("-CLP" & vbTab & vbTab & "Connect printers to local machine: <Printer share name> <Print server> [Default]")
             Console.WriteLine("-CRP" & vbTab & vbTab & "Connect printers to remote machine: <Hostname> <Printer share name> <Print server> [Default]")
+            Console.WriteLine("-UNCCRP" & vbTab & vbTab & "Connect printers to remote machine (UNC): <Hostname> <UNC share name> [Default]")
             Console.WriteLine("-RLP" & vbTab & vbTab & "Disconnect printers from local machine: <Printer share name> <Print server>")
             Console.WriteLine("-RRP" & vbTab & vbTab & "Disconnect printers from remote machine: <Hostname> <Printer share name> <Print server>")
+            Console.WriteLine("-UNCRRP" & vbTab & vbTab & "Disconnect printers from remote machine (UNC): <Hostname> <UNC share name>")
             Console.WriteLine("-CALP" & vbTab & vbTab & "Remove all printers from local machine")
             Console.WriteLine("-CACLP" & vbTab & vbTab & "Remove all connected printers from local machine")
             Console.WriteLine("-CACRP" & vbTab & vbTab & "Remove all connected printers from remote machine: <Hostname>")
             Console.WriteLine("-CLDP" & vbTab & vbTab & "Change local machine default printer: <Printer share name> <Print server>")
             Console.WriteLine("-CRDP" & vbTab & vbTab & "Change remote machine default printer: <Hostname> <Printer share name> <Print server>")
+            Console.WriteLine("-UNCCRDP" & vbTab & "Change remote machine default printer (UNC): <Hostname> <UNC share name>")
             Console.WriteLine("-LLP" & vbTab & vbTab & "List all local machine printers")
             Console.WriteLine("-LRP" & vbTab & vbTab & "List all remote machine printers: <Hostname>")
             Console.WriteLine("-LLCP" & vbTab & vbTab & "List all local connected printers")
@@ -618,9 +859,15 @@ Public Class CLIWrapper
             Console.WriteLine("-BPERC" & vbTab & vbTab & "Backup all printers from remote client: <Hostname> <Filename>")
             Console.WriteLine("-RPERC" & vbTab & vbTab & "Restore all printers to remote client: <Hostname> <Filename>")
             Console.WriteLine("-ARPPF" & vbTab & vbTab & "Apply profile file to remote machine: <Hostname> <Filename>")
+            Console.WriteLine("-BCPPF" & vbTab & vbTab & "Build printer connect profile file: <Filename> <Printer share name> <Print server>")
+            Console.WriteLine("-BDPPF" & vbTab & vbTab & "Build printer disconnect profile file: <Filename> <Printer share name> <Print server>")
+            Console.WriteLine("-BCDPF" & vbTab & vbTab & "Build change default printer profile file: <Filename> <Printer share name> <Print server>")
+            Console.WriteLine("-LPFC" & vbTab & vbTab & "List all items from profile file: <Filename>")
+            Console.WriteLine("-CBPF" & vbTab & vbTab & "Merge 2 profile files to new profile file: <Filename 1> <Filename 2> <New filename>")
             Console.WriteLine("[-S]" & vbTab & vbTab & "Load custom settings file <File>")
+            Console.WriteLine("[-CATP]" & vbTab & vbTab & "Set custom admin trace path <Tracing path>")
             Console.WriteLine("[-V]" & vbTab & vbTab & "Verbose output")
-            Console.WriteLine("[-P]" & vbTab & vbTab & "Check if remote machine(s) is up")
+            Console.WriteLine("[-P]" & vbTab & vbTab & "Check if remote machine is up")
             Console.WriteLine("[-CTAP]" & vbTab & vbTab & "Check if admin-trace path is accessible")
             Console.WriteLine("[-W]" & vbTab & vbTab & "Wait for user input after processing actions")
         End If
