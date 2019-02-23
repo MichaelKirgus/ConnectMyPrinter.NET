@@ -7,7 +7,7 @@ Public Class DistributionHelper
     Public MLangHelper As New LanguageApplyHelper
     Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
 
-    Public Function PublishProfileToClient(ByVal Clientname As String, ByVal Username As String, ByVal LocalMachine As Boolean, ByVal Permanent As Boolean, ByVal RemoteFileProfile As RemoteFileClass, ByVal AppSettingsClass As AppSettingsClass, Optional ByVal Silent As Boolean = False) As Boolean
+    Public Function PublishProfileToClient(ByVal Clientname As String, ByVal Username As String, ByVal LocalMachine As Boolean, ByVal Permanent As Boolean, ByVal RemoteFileProfile As RemoteFileClass, ByVal AppSettingsClass As AppSettingsClass, Optional ByVal Silent As Boolean = False, Optional PingClients As Boolean = False, Optional ByVal CheckForTraceAdminPath As Boolean = False) As Boolean
         Try
             If Not AppSettingsClass.UseTracePathFeature Then
                 If Silent = False Then
@@ -23,6 +23,18 @@ Public Class DistributionHelper
                 clientlist.AddRange(spliarr)
             Else
                 clientlist.Add(Clientname)
+
+                If PingClients Then
+                    If Not My.Computer.Network.Ping(Clientname, 1000) Then
+                        Return False
+                    Else
+                        If CheckForTraceAdminPath Then
+                            If Not IO.Directory.Exists("\\" & Clientname & AppSettingsClass.ActionsTraceAdminPath) Then
+                                Return False
+                            End If
+                        End If
+                    End If
+                End If
             End If
 
             Dim uuid As String
@@ -43,16 +55,31 @@ Public Class DistributionHelper
                         filename = "\\" & clientlist(index) & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\" & Username.ToLower & "_" & uuid & "_" & options & ".prpr"
                     End If
 
-                    If IO.Directory.Exists("\\" & clientlist(index) & AppSettingsClass.ActionsTraceAdminPath) Then
-                        If Not IO.File.Exists(filename) Then
-                            Dim yy As New RemoteFileSerializer
-                            If yy.SaveRemoteFile(RemoteFileProfile, filename) Then
-                                LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedSuccessStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedSuccessStr2", "") & vbNewLine
+                    Try
+                        If PingClients Then
+                            If Not My.Computer.Network.Ping(clientlist(index), 1000) Then
+                                Exit Try
                             Else
-                                LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedFailStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedFailStr2", "") & vbNewLine
+                                If CheckForTraceAdminPath Then
+                                    If Not IO.Directory.Exists("\\" & clientlist(index) & AppSettingsClass.ActionsTraceAdminPath) Then
+                                        Exit Try
+                                    End If
+                                End If
                             End If
                         End If
-                    End If
+
+                        If IO.Directory.Exists("\\" & clientlist(index) & AppSettingsClass.ActionsTraceAdminPath) Then
+                            If Not IO.File.Exists(filename) Then
+                                Dim yy As New RemoteFileSerializer
+                                If yy.SaveRemoteFile(RemoteFileProfile, filename) Then
+                                    LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedSuccessStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedSuccessStr2", "") & vbNewLine
+                                Else
+                                    LogTxt += MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedFailStr1", "") & clientlist(index) & MLangHelper.GetCultureString("ConnectMyPrinterDistributionLib.TranslatedStrings", GetType(DistributionHelper), MCultureInf, "ProfilePublishedFailStr2", "") & vbNewLine
+                                End If
+                            End If
+                        End If
+                    Catch ex As Exception
+                    End Try
                 End If
             Next
 
@@ -66,10 +93,22 @@ Public Class DistributionHelper
         End Try
     End Function
 
-    Public Function RequestPrinterProfileFromClient(ByVal Clientname As String, ByVal AppSettingsClass As AppSettingsClass) As Boolean
+    Public Function RequestPrinterProfileFromClient(ByVal Clientname As String, ByVal AppSettingsClass As AppSettingsClass, Optional PingClients As Boolean = False, Optional ByVal CheckForTraceAdminPath As Boolean = False) As Boolean
         Try
             Dim uuid As String
             uuid = Guid.NewGuid.ToString.Replace("{", "").Replace("}", "")
+
+            If PingClients Then
+                If Not My.Computer.Network.Ping(Clientname, 1000) Then
+                    Return False
+                Else
+                    If CheckForTraceAdminPath Then
+                        If Not IO.Directory.Exists("\\" & Clientname & AppSettingsClass.ActionsTraceAdminPath) Then
+                            Return False
+                        End If
+                    End If
+                End If
+            End If
 
             IO.File.WriteAllText("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\REQ_" & uuid & "_.prpr", "")
 
@@ -79,8 +118,20 @@ Public Class DistributionHelper
         End Try
     End Function
 
-    Public Function GetRequestedProfileFromClient(ByVal Clientname As String, ByVal AppSettingsClass As AppSettingsClass) As RemoteFileClass
+    Public Function GetRequestedProfileFromClient(ByVal Clientname As String, ByVal AppSettingsClass As AppSettingsClass, Optional PingClients As Boolean = False, Optional ByVal CheckForTraceAdminPath As Boolean = False) As RemoteFileClass
         Try
+            If PingClients Then
+                If Not My.Computer.Network.Ping(Clientname, 1000) Then
+                    Return New RemoteFileClass
+                Else
+                    If CheckForTraceAdminPath Then
+                        If Not IO.Directory.Exists("\\" & Clientname & AppSettingsClass.ActionsTraceAdminPath) Then
+                            Return New RemoteFileClass
+                        End If
+                    End If
+                End If
+            End If
+
             If IO.File.Exists("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\RESULT.prpr") Then
                 Debug.WriteLine("File exists")
                 Dim yy As New RemoteFileSerializer
@@ -126,8 +177,8 @@ Public Class DistributionHelper
         End Try
     End Function
 
-    Public Function LoadPrinterProfileFromClient(ByVal Clientname As String, ByVal AppSettingsClass As AppSettingsClass) As RemoteFileClass
-        RequestPrinterProfileFromClient(Clientname, AppSettingsClass)
+    Public Function LoadPrinterProfileFromClient(ByVal Clientname As String, ByVal AppSettingsClass As AppSettingsClass, Optional PingClients As Boolean = False, Optional ByVal CheckForTraceAdminPath As Boolean = False) As RemoteFileClass
+        RequestPrinterProfileFromClient(Clientname, AppSettingsClass, PingClients, CheckForTraceAdminPath)
         Dim counter As Integer = 0
         Debug.WriteLine("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\RESULT.prpr")
 
@@ -141,7 +192,7 @@ Public Class DistributionHelper
         If Not counter = 500 Then
             Threading.Thread.Sleep(150)
             Dim rs1 As RemoteFileClass
-            rs1 = GetRequestedProfileFromClient(Clientname, AppSettingsClass)
+            rs1 = GetRequestedProfileFromClient(Clientname, AppSettingsClass, PingClients, CheckForTraceAdminPath)
 
             If Not rs1.ConnectPrinters.Count = 0 Then
                 IO.File.Delete("\\" & Clientname & Environment.ExpandEnvironmentVariables(AppSettingsClass.ActionsTraceAdminPath) & "\RESULT.prpr")

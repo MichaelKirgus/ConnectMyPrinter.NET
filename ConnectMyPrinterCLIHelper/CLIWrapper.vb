@@ -19,6 +19,8 @@ Public Class CLIWrapper
     Public RestoreFilePath As String = ""
     Public Clientname As String = ""
     Public Verbose As Boolean = False
+    Public PingClients As Boolean = False
+    Public CheckForAdminTracePath As Boolean = False
     Public WaitForUserInput As Boolean = False
 
     Public CLIAction As CLIActionEnum = 0
@@ -95,15 +97,27 @@ Public Class CLIWrapper
                                 PostVerboseText("Reload application settings...")
                                 LoadAppSettingsInternal()
                                 PostVerboseText("Success: Reload application settings")
+                                PostVerboseText("AppSettingsPath: " & AppSettingFile)
+                            Else
+                                PostVerboseText("No application settings reload needed.")
                             End If
                             PostVerboseText("Run actions...")
                             If ProcessActions() Then
                                 PostVerboseText("Success: Run actions")
+                                If WaitForUserInput Then
+                                    Console.WriteLine("Press any key to close window...")
+                                    Console.ReadLine()
+                                End If
+
                                 Return True
                             Else
                                 PostVerboseText("Failed running actions!")
                                 If OutputErrors Then
                                     ShowHelp("", "Processing actions failed.", True)
+                                End If
+                                If WaitForUserInput Then
+                                    Console.WriteLine("Press any key to close window...")
+                                    Console.ReadLine()
                                 End If
                                 Return False
                             End If
@@ -261,6 +275,12 @@ Public Class CLIWrapper
                     If arglist(ind).StartsWith("-V") Then
                         Verbose = True
                     End If
+                    If arglist(ind).StartsWith("-CTAP") Then
+                        CheckForAdminTracePath = True
+                    End If
+                    If arglist(ind).StartsWith("-P") Then
+                        PingClients = True
+                    End If
                     If arglist(ind).StartsWith("-W") Then
                         WaitForUserInput = True
                     End If
@@ -305,6 +325,7 @@ Public Class CLIWrapper
                 'Drucker trennen
                 PostVerboseText("Selected Action: Disconnect local printer")
                 For Each item As RemoteFilePrinterDisconnectItem In DisconnectPrinterCollection
+                    PostVerboseText("Processing Item " & item.PrinterName)
                     Try
                         Dim uu As New ManagePrinter
                         Dim qq As New PrinterQueueInfo
@@ -312,6 +333,7 @@ Public Class CLIWrapper
                         qq.Name = item.PrinterName
                         uu.DeletePrinter(qq)
                     Catch ex As Exception
+                        PostVerboseText("Failed: Processing Item " & item.PrinterName)
                         Return False
                     End Try
                 Next
@@ -320,9 +342,12 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.ConnectRemotePrinters Or CLIAction = CLIActionEnum.RemoveRemotePrinters Or CLIAction = CLIActionEnum.SetRemoteDefaultPrinter Then
                 PostVerboseText("Selected Action: Remote client action")
                 Dim disthandler As New DistributionHelper
-                If disthandler.PublishProfileToClient(ConnectRemoteMachineCollection(0), "", True, False, BuildRemoteFile, AppSettings) Then
+                PostVerboseText("Publish profile to client " & ConnectRemoteMachineCollection(0))
+                If disthandler.PublishProfileToClient(ConnectRemoteMachineCollection(0), "", True, False, BuildRemoteFile, AppSettings, True, PingClients, CheckForAdminTracePath) Then
+                    PostVerboseText("Success: Publish profile to client")
                     Return True
                 Else
+                    PostVerboseText("Failed: Publish profile to client")
                     Return False
                 End If
             End If
@@ -330,30 +355,38 @@ Public Class CLIWrapper
                 PostVerboseText("Selected Action: List all remote printers")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = False
-                ListPrinterRemoteFileToOutput(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings))
+                PostVerboseText("Fetch all printers from client " & Clientname)
+                ListPrinterRemoteFileToOutput(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings, PingClients, CheckForAdminTracePath))
                 Return True
             End If
             If CLIAction = CLIActionEnum.ListConnectedRemotePrinters Then
                 PostVerboseText("Selected Action: List all remote connected printers")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
-
-                ListPrinterRemoteFileToOutput(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings), True)
+                PostVerboseText("Fetch all connected printers from client " & Clientname)
+                ListPrinterRemoteFileToOutput(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings, PingClients, CheckForAdminTracePath), True)
                 Return True
             End If
             If CLIAction = CLIActionEnum.RemoveAllPrintersFromLocalMachine Then
                 PostVerboseText("Selected Action: Remove all printers from local machine")
                 Dim dd As New PrinterDriverRemover
-                dd.DeleteAllPrintersAndDrivers(AppSettings.PrinterAdminPath)
-                Return True
+                PostVerboseText("Delete all printers from local machine...")
+                If dd.DeleteAllPrintersAndDrivers(AppSettings.PrinterAdminPath) Then
+                    PostVerboseText("Success: Delete all printers")
+                    Return True
+                Else
+                    PostVerboseText("Failed: Delete all printers")
+                    Return False
+                End If
             End If
             If CLIAction = CLIActionEnum.RemoveAllConnectedPrintersFromLocalMachine Then
                 PostVerboseText("Selected Action: Remove all connected printers from local machine")
                 Dim connectedprinters
                 connectedprinters = MainForm.LoadLocalPrinters()
-
+                PostVerboseText("Delete all connected printers from local machine...")
                 For Each item As RemoteFilePrinterDisconnectItem In DisconnectPrinterCollection
                     If (Not item.PrintServer = "Lokal") And (Not item.PrintServer = "Local") Then
+                        PostVerboseText("Processing Item " & item.PrinterName)
                         Try
                             Dim uu As New ManagePrinter
                             Dim qq As New PrinterQueueInfo
@@ -361,6 +394,7 @@ Public Class CLIWrapper
                             qq.Name = item.PrinterName
                             uu.DeletePrinter(qq)
                         Catch ex As Exception
+                            PostVerboseText("Failed: Processing Item " & item.PrinterName)
                             Return False
                         End Try
                     End If
@@ -371,9 +405,12 @@ Public Class CLIWrapper
                 PostVerboseText("Selected Action: Remove all connected printers from remote machine")
                 Dim disthandler As New DistributionHelper
                 Dim resultclass As RemoteFileClass
-                resultclass = disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings)
+                PostVerboseText("Fetch all connected printers from remote machine...")
+                resultclass = disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings, PingClients, CheckForAdminTracePath)
+                PostVerboseText("Build remote file...")
                 For Each item As RemoteFilePrinterConnectItem In resultclass.ConnectPrinters
                     If (Not item.Printserver = "Lokal") And (Not item.Printserver = "Local") Then
+                        PostVerboseText("Parsing profile file: Item " & item.PrinterName)
                         Dim jj As New RemoteFilePrinterDisconnectItem
                         jj.PrinterName = item.PrinterName
                         jj.PrintServer = item.Printserver
@@ -381,7 +418,8 @@ Public Class CLIWrapper
                     End If
                 Next
                 resultclass.ConnectPrinters.Clear()
-                If disthandler.PublishProfileToClient(Clientname, "", True, False, resultclass, AppSettings) Then
+                PostVerboseText("Delete all connected printers from remote machine...")
+                If disthandler.PublishProfileToClient(Clientname, "", True, False, resultclass, AppSettings, True, PingClients, CheckForAdminTracePath) Then
                     Return True
                 Else
                     Return False
@@ -390,39 +428,65 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.BackupPrintersFromLocalMachine Then
                 PostVerboseText("Selected Action: Backup printers from local machine")
                 Dim RemoteFileService As New RemoteFileCreator
-                RemoteFileService.CreateMultiplePrinterRemoteFile(BackupFilePath, MainForm.LoadLocalPrinters)
-                Return True
+                If RemoteFileService.CreateMultiplePrinterRemoteFile(BackupFilePath, MainForm.LoadLocalPrinters) Then
+                    PostVerboseText("Success: Backup local printers")
+                    Return True
+                Else
+                    PostVerboseText("Failed: Backup local printers")
+                    Return False
+                End If
             End If
             If CLIAction = CLIActionEnum.RestorePrintersToLocalMachine Then
                 PostVerboseText("Selected Action: Restore printers to local machine")
                 Dim jj As New RemoteFileSerializer
-                ConnectPrinterCollectionFunc(jj.LoadRemoteFile(RestoreFilePath).ConnectPrinters)
-                Return True
+                If ConnectPrinterCollectionFunc(jj.LoadRemoteFile(RestoreFilePath).ConnectPrinters) Then
+                    PostVerboseText("Success: Restore local printers")
+                    Return True
+                Else
+                    PostVerboseText("Failed: Restore local printers")
+                    Return False
+                End If
             End If
             If CLIAction = CLIActionEnum.BackupPrintersFromClient Then
                 PostVerboseText("Selected Action: Backup printers from remote machine")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
                 Dim jj As New RemoteFileSerializer
-                jj.SaveRemoteFile(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings), BackupFilePath)
-                Return True
+                If jj.SaveRemoteFile(disthandler.LoadPrinterProfileFromClient(Clientname, AppSettings, PingClients, CheckForAdminTracePath), BackupFilePath) Then
+                    PostVerboseText("Success: Backup printers from remote machine")
+                    Return True
+                Else
+                    PostVerboseText("Failed: Backup printers from remote machine")
+                    Return False
+                End If
             End If
             If CLIAction = CLIActionEnum.RestoreBackupToClient Or CLIAction = CLIActionEnum.ApplyProfileToRemoteClient Then
                 PostVerboseText("Selected Action: Restore printers to remote machine or apply profile to client")
                 Dim disthandler As New DistributionHelper
                 AppSettings.IgnoreLocalPrintersAtRemoteFetching = True
                 Dim jj As New RemoteFileSerializer
-                disthandler.PublishProfileToClient(Clientname, "", True, False, jj.LoadRemoteFile(RestoreFilePath), AppSettings)
-                Return True
+                If disthandler.PublishProfileToClient(Clientname, "", True, False, jj.LoadRemoteFile(RestoreFilePath), AppSettings, True, PingClients, CheckForAdminTracePath) Then
+                    PostVerboseText("Success: Restore printers to remote machine or apply profile to client")
+                    Return True
+                Else
+                    PostVerboseText("Failed: Restore printers to remote machine or apply profile to client")
+                    Return False
+                End If
             End If
             If CLIAction = CLIActionEnum.ConnectLocalPrinters Then
-                PostVerboseText("Selected Action: Connect lokal printer")
-                ConnectPrinterCollectionFunc(ConnectPrinterCollection)
-                Return True
+                PostVerboseText("Selected Action: Connect local printer")
+                If ConnectPrinterCollectionFunc(ConnectPrinterCollection) Then
+                    PostVerboseText("Success: Connect local printer")
+                    Return True
+                Else
+                    PostVerboseText("Failed: Connect local printer")
+                    Return False
+                End If
             End If
             If CLIAction = CLIActionEnum.SetLocalDefaultPrinter Then
                 PostVerboseText("Selected Action: Set default printer")
                 For Each item As RemoteFilePrinterConnectItem In ConnectPrinterCollection
+                    PostVerboseText("Processing Item " & item.PrinterName)
                     Try
                         Dim uu As New ManagePrinter
                         Dim qq As New PrinterQueueInfo
@@ -437,6 +501,7 @@ Public Class CLIWrapper
 
                         uu.SetDefaultPrinter(qq)
                     Catch ex As Exception
+                        PostVerboseText("Failed: Processing Item " & item.PrinterName)
                         Return False
                     End Try
                 Next
@@ -555,6 +620,8 @@ Public Class CLIWrapper
             Console.WriteLine("-ARPPF" & vbTab & vbTab & "Apply profile file to remote machine: <Hostname> <Filename>")
             Console.WriteLine("[-S]" & vbTab & vbTab & "Load custom settings file <File>")
             Console.WriteLine("[-V]" & vbTab & vbTab & "Verbose output")
+            Console.WriteLine("[-P]" & vbTab & vbTab & "Check if remote machine(s) is up")
+            Console.WriteLine("[-CTAP]" & vbTab & vbTab & "Check if admin-trace path is accessible")
             Console.WriteLine("[-W]" & vbTab & vbTab & "Wait for user input after processing actions")
         End If
     End Sub
