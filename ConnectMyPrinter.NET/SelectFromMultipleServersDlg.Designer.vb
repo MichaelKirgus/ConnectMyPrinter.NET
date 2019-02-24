@@ -63,6 +63,8 @@ Partial Class SelectFromMultipleServersDlg
         Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.ListBox1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "SelectFromMultipleServersDlg"
         Me.Resizable = False
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
