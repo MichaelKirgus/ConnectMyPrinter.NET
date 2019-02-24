@@ -378,11 +378,15 @@ Imports ConnectMyPrinterReportingLib
         End Try
     End Sub
 
-    Private Sub BackupRinterEnvironmentWorkerCompleted() Handles BackupPrinterEnvironmentWorker.RunWorkerCompleted
+    Private Sub BackupPrinterEnvironmentWorkerCompleted() Handles BackupPrinterEnvironmentWorker.RunWorkerCompleted
         If ReportPublishReq Then
             ReportPrinterEnvironmentWorker.RunWorkerAsync()
+        Else
+            Tray.Icon = My.Resources.connectmyprinter_tray
         End If
+    End Sub
 
+    Private Sub ReportPrinterEnvironmentWorkerCompleted() Handles ReportPrinterEnvironmentWorker.RunWorkerCompleted
         Tray.Icon = My.Resources.connectmyprinter_tray
     End Sub
 
