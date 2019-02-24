@@ -944,6 +944,10 @@ Please select the print server woud you like to connect to:</target>
           <source>True</source>
           <target state="needs-review-translation">True</target>
         </trans-unit>
+        <trans-unit id="$this.MaximumSize" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>402, 402</source>
+          <target state="needs-review-translation">402, 402</target>
+        </trans-unit>
       </group>
     </body>
   </file>
