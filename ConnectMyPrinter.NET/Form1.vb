@@ -22,6 +22,8 @@ Public Class Form1
 
     Public AppSettings As New AppSettingsClass
     Public AppSettingFile As String = "AppSettings.xml"
+    Public AppSettingDEFile As String = "AppSettings_de-DE.xml"
+    Public AppSettingENFile As String = "AppSettings_en-US.xml"
     Public ActionFileDir As String = "PrinterActionsElv"
 
     Public PrintQueues As New List(Of PrinterQueueInfo)
@@ -62,6 +64,19 @@ Public Class Form1
                 'Laden der Einstellungen (über AppData)
                 If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
                     AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
+                Else
+                    'Es liegen keine Einstellungen in den App-Data-Ordnern.
+                    'Prüfen, on lokalisierte Anwendungseinstellungen im Anwendungsordner liegen:
+                    If MCultureInf.IetfLanguageTag.Contains("de") Then
+                        If IO.File.Exists(AppSettingDEFile) Then
+                            AppSettingFile = AppSettingDEFile
+                        End If
+                    End If
+                    If MCultureInf.IetfLanguageTag.Contains("en") Then
+                        If IO.File.Exists(AppSettingDEFile) Then
+                            AppSettingFile = AppSettingENFile
+                        End If
+                    End If
                 End If
             End If
 

@@ -19,32 +19,75 @@ Module Module1
             Catch ex As Exception
                 Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyFileToProgramPathErrorStr", ""))
             End Try
+            Try
+                My.Computer.FileSystem.CopyFile("C:\Temp\AppSettings_de-DE.xml", "C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", True)
+            Catch ex As Exception
+            End Try
+            Try
+                My.Computer.FileSystem.CopyFile("C:\Temp\AppSettings_en-US.xml", "C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", True)
+            Catch ex As Exception
+            End Try
 
             Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "ChangeACLsAtAppSettingsFileStr", ""))
 
             Try
-                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "Everyone",
-                        FileSystemRights.FullControl, AccessControlType.Allow)
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "Everyone", FileSystemRights.FullControl, AccessControlType.Allow)
             Catch ex As Exception
             End Try
             Try
-                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "Jeder",
-                        FileSystemRights.FullControl, AccessControlType.Allow)
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "Jeder", FileSystemRights.FullControl, AccessControlType.Allow)
             Catch ex As Exception
             End Try
             Try
-                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "Benutzer",
-                        FileSystemRights.FullControl, AccessControlType.Allow)
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "Benutzer", FileSystemRights.FullControl, AccessControlType.Allow)
             Catch ex As Exception
             End Try
             Try
-                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "User",
-                        FileSystemRights.FullControl, AccessControlType.Allow)
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", "User", FileSystemRights.FullControl, AccessControlType.Allow)
             Catch ex As Exception
             End Try
             Try
-                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", My.User.Name,
-    FileSystemRights.FullControl, AccessControlType.Allow)
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", My.User.Name, FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", "Everyone", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", "Jeder", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", "Benutzer", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", "User", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", My.User.Name, FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", "Everyone", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", "Jeder", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", "Benutzer", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", "User", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", My.User.Name, FileSystemRights.FullControl, AccessControlType.Allow)
             Catch ex As Exception
             End Try
             Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathStr", ""))
@@ -61,6 +104,14 @@ Module Module1
                 Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyFileToProgramPathFinishedStr", ""))
             Catch ex As Exception
                 Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyFileToProgramPathErrorStr", ""))
+            End Try
+            Try
+                My.Computer.FileSystem.CopyFile("C:\Temp\AppSettings_de-DE.xml", "C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", True)
+            Catch ex As Exception
+            End Try
+            Try
+                My.Computer.FileSystem.CopyFile("C:\Temp\AppSettings_en-US.xml", "C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", True)
+            Catch ex As Exception
             End Try
 
             Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "ChangeACLsAtAppSettingsFileStr", ""))
@@ -88,6 +139,46 @@ Module Module1
             Try
                 AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings.xml", My.User.Name,
     FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", "Everyone", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", "Jeder", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", "Benutzer", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", "User", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_de-DE.xml", My.User.Name, FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", "Everyone", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", "Jeder", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", "Benutzer", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", "User", FileSystemRights.FullControl, AccessControlType.Allow)
+            Catch ex As Exception
+            End Try
+            Try
+                AddFileSecurity("C:\Program Files (x86)\Michael Kirgus\ConnectMyPrinter.NET\AppSettings_en-US.xml", My.User.Name, FileSystemRights.FullControl, AccessControlType.Allow)
             Catch ex As Exception
             End Try
             Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterAppSettingsSetup.TranslatedStrings", GetType(Module1), MCultureInf, "CopyPictureLogoToProgramPathStr", ""))

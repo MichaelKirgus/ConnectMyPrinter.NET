@@ -13,6 +13,8 @@ Public Class Form1
     Public MainApp As New ConnectMyPrinter.NET.Form1
     Public AppSettings As New AppSettingsClass
     Public AppSettingFile As String = "AppSettings.xml"
+    Public AppSettingDEFile As String = "AppSettings_de-DE.xml"
+    Public AppSettingENFile As String = "AppSettings_en-US.xml"
     Public AppSettingsHandler As ConnectMyPrinterAppSettingsHandler.AppSettingsClass
 
     Public Sub LoadNewRemoteFile()
@@ -54,6 +56,19 @@ Public Class Form1
             If IO.File.Exists(Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile) Then
                 AppSettingFile = Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile
                 Debug.WriteLine(Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile)
+            Else
+                'Es liegen keine Einstellungen in den App-Data-Ordnern.
+                'Prüfen, on lokalisierte Anwendungseinstellungen im Anwendungsordner liegen:
+                If MCultureInf.IetfLanguageTag.Contains("de") Then
+                    If IO.File.Exists(AppSettingDEFile) Then
+                        AppSettingFile = AppSettingDEFile
+                    End If
+                End If
+                If MCultureInf.IetfLanguageTag.Contains("en") Then
+                    If IO.File.Exists(AppSettingDEFile) Then
+                        AppSettingFile = AppSettingENFile
+                    End If
+                End If
             End If
         End If
 

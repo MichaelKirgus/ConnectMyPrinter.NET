@@ -118,6 +118,10 @@
       <Project>{74098DC4-697B-4692-81B7-088F300D2610}</Project>
       <Name>ConnectMyPrinterEnumerationLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterOutlookHelper\ConnectMyPrinterOutlookHelper.vbproj">
+      <Project>{6E7264C3-52A0-4C0F-8FFD-D56758D7D991}</Project>
+      <Name>ConnectMyPrinterOutlookHelper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
       <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
       <Name>ConnectMyPrinterPrinterManageLib</Name>

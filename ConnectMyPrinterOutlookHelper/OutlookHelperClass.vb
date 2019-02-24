@@ -1,4 +1,5 @@
 ﻿Imports System.Net.Mail
+Imports System.Security
 
 Public Class OutlookHelperClass
     Public Sub SendOutlookMail(ByVal Betreff As String,

@@ -2,6 +2,7 @@
 Imports ConnectMyPrinterAppSettingsHandler
 Imports ConnectMyPrinterDistributionLib
 Imports ConnectMyPrinterEnumerationLib
+Imports ConnectMyPrinterOutlookHelper
 Imports ConnectMyPrinterPrinterManageLib
 Imports ConnectMyPrinterRemoteFileHandler
 
@@ -19,6 +20,16 @@ Public Class CLIWrapper
     Public RestoreFilePath As String = ""
     Public Merge1FilePath As String = ""
     Public Merge2FilePath As String = ""
+    Public SMTPServer As String = ""
+    Public SMTPUseSSL As Boolean = True
+    Public SMTPUsername As String = ""
+    Public SMTPPassword As String = ""
+    Public SMTPServerPort As String = ""
+    Public FromMail As String = ""
+    Public ToMail As String = ""
+    Public MailSubject As String = ""
+    Public MailMessage As String = ""
+    Public MailProfilePath As String = ""
     Public Clientname As String = ""
     Public Verbose As Boolean = False
     Public PingClients As Boolean = False
@@ -56,6 +67,8 @@ Public Class CLIWrapper
         DisconnectRemotePrintersUNC = 25
         SetRemoteDefaultPrinterUNC = 26
         Merge2FilesToNewProfileFile = 27
+        SendProfileMailAuth = 28
+        SendProfileMail = 29
     End Enum
 
     Public Sub LoadSettingsFile()
@@ -373,8 +386,29 @@ Public Class CLIWrapper
                         Merge2FilePath = arglist(ind + 2)
                         BackupFilePath = arglist(ind + 3)
                     End If
-
-                    If arglist(ind).StartsWith("-S") Then
+                    If arglist(ind).StartsWith("-SAMTA") Then
+                        CLIAction = CLIActionEnum.SendProfileMailAuth
+                        SMTPServer = arglist(ind + 1)
+                        SMTPUsername = arglist(ind + 2)
+                        SMTPPassword = arglist(ind + 3)
+                        SMTPServerPort = arglist(ind + 4)
+                        FromMail = arglist(ind + 5)
+                        ToMail = arglist(ind + 6)
+                        MailSubject = arglist(ind + 7)
+                        MailMessage = arglist(ind + 8)
+                        MailProfilePath = arglist(ind + 9)
+                    End If
+                    If arglist(ind).StartsWith("-SMTA") Then
+                        CLIAction = CLIActionEnum.SendProfileMail
+                        SMTPServer = arglist(ind + 1)
+                        SMTPServerPort = arglist(ind + 2)
+                        FromMail = arglist(ind + 3)
+                        ToMail = arglist(ind + 4)
+                        MailSubject = arglist(ind + 5)
+                        MailMessage = arglist(ind + 6)
+                        MailProfilePath = arglist(ind + 7)
+                    End If
+                    If arglist(ind).StartsWith("-AS") Then
                         AppSettingFile = arglist(ind + 1)
                     End If
                     If arglist(ind).StartsWith("-V") Then
@@ -388,6 +422,9 @@ Public Class CLIWrapper
                     End If
                     If arglist(ind).StartsWith("-P") Then
                         PingClients = True
+                    End If
+                    If arglist(ind).StartsWith("-NSSL") Then
+                        SMTPUseSSL = False
                     End If
                     If arglist(ind).StartsWith("-W") Then
                         WaitForUserInput = True
@@ -710,6 +747,26 @@ Public Class CLIWrapper
                     Return False
                 End If
             End If
+            If CLIAction = CLIActionEnum.SendProfileMailAuth Then
+                PostVerboseText("Selected action: Send mail (auth) with profile file to e-mail-address")
+                Dim senderh As New OutlookHelperClass
+                PostVerboseText("Sending mail...")
+                If senderh.SendMailInternal(SMTPServer, SMTPUsername, SMTPPassword, SMTPServerPort, SMTPUseSSL, FromMail, ToMail, MailSubject, False, MailMessage, MailProfilePath) Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
+            If CLIAction = CLIActionEnum.SendProfileMail Then
+                PostVerboseText("Selected action: Send mail with profile file to e-mail-address")
+                Dim senderh As New OutlookHelperClass
+                PostVerboseText("Sending mail...")
+                If senderh.SendMailInternal(SMTPServer, "", "", SMTPServerPort, SMTPUseSSL, FromMail, ToMail, MailSubject, False, MailMessage, MailProfilePath) Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
 
             Return False
         Catch ex As Exception
@@ -864,11 +921,14 @@ Public Class CLIWrapper
             Console.WriteLine("-BCDPF" & vbTab & vbTab & "Build change default printer profile file: <Filename> <Printer share name> <Print server>")
             Console.WriteLine("-LPFC" & vbTab & vbTab & "List all items from profile file: <Filename>")
             Console.WriteLine("-CBPF" & vbTab & vbTab & "Merge 2 profile files to new profile file: <Filename 1> <Filename 2> <New filename>")
-            Console.WriteLine("[-S]" & vbTab & vbTab & "Load custom settings file <File>")
+            Console.WriteLine("-SAMTA" & vbTab & vbTab & "Send printer profile to e-mail-address (SMTP-Auth): <SMTP server> <SMTPUsername> <SMTPPassword> <SMTPPort> <FROMAdress> <TOAddress> <Subject> <Message> <Profile filename>")
+            Console.WriteLine("-SMTA" & vbTab & vbTab & "Send printer profile to e-mail-address: <SMTP server> <SMTPPort> <FROMAdress> <TOAddress> <Subject> <Message> <Profile filename>")
+            Console.WriteLine("[-AS]" & vbTab & vbTab & "Load custom settings file <File>")
             Console.WriteLine("[-CATP]" & vbTab & vbTab & "Set custom admin trace path <Tracing path>")
             Console.WriteLine("[-V]" & vbTab & vbTab & "Verbose output")
             Console.WriteLine("[-P]" & vbTab & vbTab & "Check if remote machine is up")
             Console.WriteLine("[-CTAP]" & vbTab & vbTab & "Check if admin-trace path is accessible")
+            Console.WriteLine("[-NSSL]" & vbTab & vbTab & "Do not use SSL for sending mails")
             Console.WriteLine("[-W]" & vbTab & vbTab & "Wait for user input after processing actions")
         End If
     End Sub
