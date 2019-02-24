@@ -228,7 +228,7 @@ Public Class CLIWrapper
                         QQ.PrinterName = uncprinterstr
                         QQ.Printserver = uncserverstr
                         Try
-                            If arglist(ind + 2) = "Default" Then
+                            If arglist(ind + 3) = "Default" Then
                                 QQ.SetDefaultPrinter = True
                             End If
                         Catch ex As Exception
