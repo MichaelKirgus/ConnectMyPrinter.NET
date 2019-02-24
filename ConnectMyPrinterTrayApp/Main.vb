@@ -46,6 +46,7 @@ Imports ConnectMyPrinterReportingLib
     Public AppSettingFile As String = "AppSettings.xml"
     Public AppSettingDEFile As String = "AppSettings_de-DE.xml"
     Public AppSettingENFile As String = "AppSettings_en-US.xml"
+    Public ReportPublishReq As Boolean = False
 
 
     Public Shared Sub Main()
@@ -149,8 +150,12 @@ Imports ConnectMyPrinterReportingLib
         End If
 
         'Prüfen, ob ein Report erstellt werden soll:
-        If MainApp.AppSettings.UseReportingFeature Then
-            ReportPrinterEnvironmentWorker.RunWorkerAsync()
+        If AppSettings.UseReportingFeature Then
+            If Not BackupPrinterEnvironmentWorker.IsBusy Then
+                ReportPrinterEnvironmentWorker.RunWorkerAsync()
+            Else
+                ReportPublishReq = True
+            End If
         End If
 
         mnuLogo = New ToolStripLabel
@@ -351,12 +356,15 @@ Imports ConnectMyPrinterReportingLib
         Try
             Dim domainstr As String
             domainstr = Environment.UserDomainName
+            Debug.WriteLine(domainstr)
 
             Dim usernamestr As String
             usernamestr = Environment.UserName
+            Debug.WriteLine(usernamestr)
 
             Dim hostnamestr As String
             hostnamestr = Environment.MachineName
+            Debug.WriteLine(hostnamestr)
 
             Dim ReportingHelper As New ReportingLib
 
@@ -371,6 +379,10 @@ Imports ConnectMyPrinterReportingLib
     End Sub
 
     Private Sub BackupRinterEnvironmentWorkerCompleted() Handles BackupPrinterEnvironmentWorker.RunWorkerCompleted
+        If ReportPublishReq Then
+            ReportPrinterEnvironmentWorker.RunWorkerAsync()
+        End If
+
         Tray.Icon = My.Resources.connectmyprinter_tray
     End Sub
 

@@ -114,6 +114,10 @@
 			<Name>ConnectMyPrinterRemoteFileHelper</Name>
 			<Project>{A899593B-26E7-4284-B395-4CD7D677A522}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterReportingLib\ConnectMyPrinterReportingLib.vbproj">
+			<Name>ConnectMyPrinterReportingLib</Name>
+			<Project>{46576F5C-F689-4EFB-9019-A5DE8AD8063C}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterRestartSpooler\ConnectMyPrinterRestartSpooler.vbproj">
 			<Name>ConnectMyPrinterRestartSpooler</Name>
 			<Project>{D3ED7BD7-4566-4489-A88D-D26C0680F78E}</Project>
