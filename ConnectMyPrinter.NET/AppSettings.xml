@@ -1,15 +1,26 @@
 <?xml version="1.0"?>
-<AppSettingsClass xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<AppSettingsClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EnableLogging>false</EnableLogging>
   <LogFile>Log.txt</LogFile>
   <WindowTitle>ConnectMyPrinter.NET (Ihr Text)</WindowTitle>
   <UserInformation>Bitte geben Sie einen Druckernamen ein. (Ihr Text)</UserInformation>
   <AdditionalUserInformation>Noch mehr Text</AdditionalUserInformation>
-  <CompanyLogoImagePath>demo.png</CompanyLogoImagePath>
-  <WindowStyle>Black</WindowStyle>
+  <AdditionalSupportBottomInformation />
+  <AdditionalAboutInformation />
+  <CompanyLogoImagePath>test.gif</CompanyLogoImagePath>
+  <CompanyLogoImageBase64 />
+  <CompanyLogoImageClickURL />
+  <WindowStyle>Green</WindowStyle>
+  <ComboxBoxStyle>Green</ComboxBoxStyle>
+  <TabControlStyle>Green</TabControlStyle>
+  <ButtonControlStyle>Green</ButtonControlStyle>
+  <SpinnerControlStyle>Default</SpinnerControlStyle>
+  <MainWindowAutoScaleMode>Font</MainWindowAutoScaleMode>
   <AdditionalUserHelpInformationRTF />
   <ShowAdditionalUserHelpOnWindowMouseEnter>false</ShowAdditionalUserHelpOnWindowMouseEnter>
   <ShowAdditionalUserHelpOnTextFieldClick>false</ShowAdditionalUserHelpOnTextFieldClick>
+  <FocusPrinternameFieldAtStart>true</FocusPrinternameFieldAtStart>
+  <AllowUserToEnterPrinternameBeforeSearchFinished>false</AllowUserToEnterPrinternameBeforeSearchFinished>
   <StartWindowPosition>CenterScreen</StartWindowPosition>
   <StartWindowHeight>650</StartWindowHeight>
   <StartInMinimalMode>false</StartInMinimalMode>
@@ -17,14 +28,8 @@
   <ShowTopMost>false</ShowTopMost>
   <PrintServers>
     <PrintServerItem>
-      <PrintServerName>Server1</PrintServerName>
+      <PrintServerName>VMPRINT01</PrintServerName>
       <Priority>2</Priority>
-      <RequestPing>true</RequestPing>
-      <PingTimeout>500</PingTimeout>
-    </PrintServerItem>
-    <PrintServerItem>
-      <PrintServerName>Server2</PrintServerName>
-      <Priority>1</Priority>
       <RequestPing>true</RequestPing>
       <PingTimeout>500</PingTimeout>
     </PrintServerItem>
@@ -41,6 +46,8 @@
   <AllowUserToSetPrinterToDefaultByConnecting>true</AllowUserToSetPrinterToDefaultByConnecting>
   <DefaultPrinterOptionActivated>false</DefaultPrinterOptionActivated>
   <UsePrinterSavingFeature>false</UsePrinterSavingFeature>
+  <CacheFoundPrintersFilepath>%TEMP%\PrinterCache.xml</CacheFoundPrintersFilepath>
+  <FirstLoadCachedPrinters>false</FirstLoadCachedPrinters>
   <FixedPrefix />
   <AutoCompleteCount>5</AutoCompleteCount>
   <AutoCompleteCountEnable>false</AutoCompleteCountEnable>
@@ -102,4 +109,23 @@
   <ShowChangeDefaultPrinterDriverSettingsEntryInTrayApp>true</ShowChangeDefaultPrinterDriverSettingsEntryInTrayApp>
   <ShowOpenPrinterWebsiteEntryInTrayApp>false</ShowOpenPrinterWebsiteEntryInTrayApp>
   <ShowRestartPrinterServiceEntryInTrayApp>false</ShowRestartPrinterServiceEntryInTrayApp>
+  <ShowBackupPrinterEnvironmentEntryInTrayApp>false</ShowBackupPrinterEnvironmentEntryInTrayApp>
+  <ShowTrayAppAfterInstall>true</ShowTrayAppAfterInstall>
+  <ShowTrayAppIcon>true</ShowTrayAppIcon>
+  <MaxPrinterAPIShellTimout>30000</MaxPrinterAPIShellTimout>
+  <UseTracePathFeature>true</UseTracePathFeature>
+  <ActionsTracePath>C:\PrinterActions</ActionsTracePath>
+  <ActionsTraceAdminPath>\c$\%TEMP%\PrinterActions</ActionsTraceAdminPath>
+  <ProcessActionsOnTrayStart>true</ProcessActionsOnTrayStart>
+  <AutoBackupPrinterEnvironmentAtStartup>false</AutoBackupPrinterEnvironmentAtStartup>
+  <AutoBackupPrinterEnvironmentAtLogout>false</AutoBackupPrinterEnvironmentAtLogout>
+  <AutoBackupPrinterEnvironmentPath />
+  <AutoBackupPrinterEnvironmentFilenameBegin />
+  <IgnoreLocalPrintersAtRemoteFetching>true</IgnoreLocalPrintersAtRemoteFetching>
+  <IgnoreLocalPrintersAtAutoBackup>true</IgnoreLocalPrintersAtAutoBackup>
+  <IgnoreLocalPrintersAtReporting>false</IgnoreLocalPrintersAtReporting>
+  <UseReportingFeature>true</UseReportingFeature>
+  <ReportingPath>\\VMPRINT01\Reports</ReportingPath>
+  <ReportingUserBlacklist />
+  <AllowExecuteCustomCommandFromProfileFile>true</AllowExecuteCustomCommandFromProfileFile>
 </AppSettingsClass>

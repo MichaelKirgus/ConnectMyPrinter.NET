@@ -367,11 +367,14 @@ Imports ConnectMyPrinterReportingLib
             Debug.WriteLine(hostnamestr)
 
             Dim ReportingHelper As New ReportingLib
+            Dim LocalPrinters As List(Of PrinterQueueInfo)
+            LocalPrinters = MainApp.LoadLocalPrinters()
+            MainApp.AppSettings.ShowLocalPrinters = AppSettings.ShowLocalPrinters
 
             If Not ReportingHelper.CheckIfUserIsBlacklisted(AppSettings, usernamestr) Then
                 If ReportingHelper.CheckForFolderStructure(AppSettings, hostnamestr, usernamestr, domainstr) Then
-                    ReportingHelper.SavePrinterProfileToReportingPath(AppSettings, hostnamestr, usernamestr, domainstr)
-                    ReportingHelper.SavePrinterEnvironmentToCSV(AppSettings, hostnamestr, usernamestr, domainstr)
+                    ReportingHelper.SavePrinterProfileToReportingPath(AppSettings, MainApp, LocalPrinters, hostnamestr, usernamestr, domainstr, True, True)
+                    ReportingHelper.SavePrinterEnvironmentToCSV(AppSettings, MainApp, LocalPrinters, hostnamestr, usernamestr, domainstr, True, True)
                 End If
             End If
         Catch ex As Exception

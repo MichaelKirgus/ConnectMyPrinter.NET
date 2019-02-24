@@ -3,8 +3,6 @@ Imports ConnectMyPrinterEnumerationLib
 Imports ConnectMyPrinterRemoteFileHandler
 
 Public Class ReportingLib
-    Public MainApp As New ConnectMyPrinter.NET.Form1
-
     Public Function CheckForFolderStructure(ByVal AppSettings As AppSettingsClass, ByVal Hostname As String, ByVal Username As String, ByVal Domain As String) As Boolean
         Try
             Dim reportpath As String
@@ -18,12 +16,18 @@ Public Class ReportingLib
                     If Not IO.Directory.Exists(reportpath & "\" & Domain.ToUpper & "\" & Hostname.ToUpper) Then
                         IO.Directory.CreateDirectory(reportpath & "\" & Domain.ToUpper & "\" & Hostname.ToUpper)
                     Else
-                        IO.Directory.SetLastWriteTime(reportpath & "\" & Domain.ToUpper & "\" & Hostname.ToUpper, DateAndTime.Now)
+                        Try
+                            IO.Directory.SetLastWriteTime(reportpath & "\" & Domain.ToUpper & "\" & Hostname.ToUpper, DateAndTime.Now)
+                        Catch ex As Exception
+                        End Try
                     End If
                     If Not IO.Directory.Exists(reportpath & "\" & Domain.ToUpper & "\" & Hostname.ToUpper & "\" & Username.ToUpper) Then
                         IO.Directory.CreateDirectory(reportpath & "\" & Domain.ToUpper & "\" & Hostname.ToUpper & "\" & Username.ToUpper)
                     Else
-                        IO.Directory.SetLastWriteTime(reportpath & "\" & Domain.ToUpper & "\" & Hostname.ToUpper & "\" & Username.ToUpper, DateAndTime.Now)
+                        Try
+                            IO.Directory.SetLastWriteTime(reportpath & "\" & Domain.ToUpper & "\" & Hostname.ToUpper & "\" & Username.ToUpper, DateAndTime.Now)
+                        Catch ex As Exception
+                        End Try
                     End If
 
                     Return True
@@ -69,27 +73,34 @@ Public Class ReportingLib
         End Try
     End Function
 
-    Public Function SavePrinterProfileToReportingPath(ByVal AppSettings As AppSettingsClass, ByVal Hostname As String, ByVal Username As String, ByVal Domain As String) As Boolean
+    Public Function SavePrinterProfileToReportingPath(ByVal AppSettings As AppSettingsClass, ByVal MainThread As ConnectMyPrinter.NET.Form1, ByVal PrinterCollection As List(Of PrinterQueueInfo), ByVal Hostname As String, ByVal Username As String, ByVal Domain As String, Optional ByVal UseOwnMainThreadInstance As Boolean = False, Optional ByVal UsePrinterCollection As Boolean = False) As Boolean
         Try
             Dim reportpath As String
             reportpath = Environment.ExpandEnvironmentVariables(AppSettings.ReportingPath)
 
-            MainApp.AppSettings = AppSettings
-
-            Dim LocalPrinters As List(Of PrinterQueueInfo)
-            LocalPrinters = MainApp.LoadLocalPrinters()
-
             Dim ConnectedPrinters As New List(Of PrinterQueueInfo)
+            If UsePrinterCollection = False Then
+                Dim LocalPrinters As List(Of PrinterQueueInfo)
+                If UseOwnMainThreadInstance Then
+                    LocalPrinters = MainThread.LoadLocalPrinters()
+                Else
+                    Dim MainApp As New ConnectMyPrinter.NET.Form1
+                    MainApp.AppSettings = AppSettings
+                    LocalPrinters = MainApp.LoadLocalPrinters()
+                End If
 
-            For Each item As PrinterQueueInfo In LocalPrinters
-                If AppSettings.IgnoreLocalPrintersAtReporting Then
-                    If (Not item.Server = "Lokal") And (Not item.Server = "Local") Then
+                For Each item As PrinterQueueInfo In LocalPrinters
+                    If AppSettings.IgnoreLocalPrintersAtReporting Then
+                        If (Not item.Server = "Lokal") And (Not item.Server = "Local") Then
+                            ConnectedPrinters.Add(item)
+                        End If
+                    Else
                         ConnectedPrinters.Add(item)
                     End If
-                Else
-                    ConnectedPrinters.Add(item)
-                End If
-            Next
+                Next
+            Else
+                ConnectedPrinters.AddRange(PrinterCollection)
+            End If
 
             Dim RemoteFileService As New RemoteFileCreator
             RemoteFileService.CreateMultiplePrinterRemoteFile(reportpath & "\" & Domain.ToUpper & "\" & Hostname.ToUpper & "\" & Username.ToUpper & "\Profile.prpr", ConnectedPrinters)
@@ -100,27 +111,34 @@ Public Class ReportingLib
         End Try
     End Function
 
-    Public Function SavePrinterEnvironmentToCSV(ByVal AppSettings As AppSettingsClass, ByVal Hostname As String, ByVal Username As String, ByVal Domain As String) As Boolean
+    Public Function SavePrinterEnvironmentToCSV(ByVal AppSettings As AppSettingsClass, ByVal MainThread As ConnectMyPrinter.NET.Form1, ByVal PrinterCollection As List(Of PrinterQueueInfo), ByVal Hostname As String, ByVal Username As String, ByVal Domain As String, Optional ByVal UseOwnMainThreadInstance As Boolean = False, Optional ByVal UsePrinterCollection As Boolean = False) As Boolean
         Try
             Dim reportpath As String
             reportpath = Environment.ExpandEnvironmentVariables(AppSettings.ReportingPath)
 
-            MainApp.AppSettings = AppSettings
-
-            Dim LocalPrinters As List(Of PrinterQueueInfo)
-            LocalPrinters = MainApp.LoadLocalPrinters()
-
             Dim ConnectedPrinters As New List(Of PrinterQueueInfo)
+            If UsePrinterCollection = False Then
+                Dim LocalPrinters As List(Of PrinterQueueInfo)
+                If UseOwnMainThreadInstance Then
+                    LocalPrinters = MainThread.LoadLocalPrinters()
+                Else
+                    Dim MainApp As New ConnectMyPrinter.NET.Form1
+                    MainApp.AppSettings = AppSettings
+                    LocalPrinters = MainApp.LoadLocalPrinters()
+                End If
 
-            For Each item As PrinterQueueInfo In LocalPrinters
-                If AppSettings.IgnoreLocalPrintersAtReporting Then
-                    If (Not item.Server = "Lokal") And (Not item.Server = "Local") Then
+                For Each item As PrinterQueueInfo In LocalPrinters
+                    If AppSettings.IgnoreLocalPrintersAtReporting Then
+                        If (Not item.Server = "Lokal") And (Not item.Server = "Local") Then
+                            ConnectedPrinters.Add(item)
+                        End If
+                    Else
                         ConnectedPrinters.Add(item)
                     End If
-                Else
-                    ConnectedPrinters.Add(item)
-                End If
-            Next
+                Next
+            Else
+                ConnectedPrinters.AddRange(PrinterCollection)
+            End If
 
             Dim strcoll As String = ""
             For index = 0 To ConnectedPrinters.Count - 1
