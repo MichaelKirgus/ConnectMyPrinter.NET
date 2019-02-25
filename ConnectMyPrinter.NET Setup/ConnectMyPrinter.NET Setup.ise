@@ -1165,25 +1165,25 @@
 		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
 		<row><td>KillACLHelperApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterACLHelper.exe</td><td/><td/></row>
-		<row><td>KillACLHelperApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterACLHelper.exe</td><td/><td/></row>
+		<row><td>KillACLHelperApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterACLHelper</td><td/><td/></row>
 		<row><td>KillCreateRestorePointApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterCreateRestorePoint.exe</td><td/><td/></row>
-		<row><td>KillCreateRestorePointApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterCreateRestorePoint.exe</td><td/><td/></row>
+		<row><td>KillCreateRestorePointApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterCreateRestorePoint</td><td/><td/></row>
 		<row><td>KillDeleteAllPrintersApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterDeleteAllPrinters.exe</td><td/><td/></row>
-		<row><td>KillDeleteAllPrintersApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterDeleteAllPrinters.exe</td><td/><td/></row>
+		<row><td>KillDeleteAllPrintersApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterDeleteAllPrinters</td><td/><td/></row>
 		<row><td>KillForcePrinterDeleteApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterForceDelete.exe</td><td/><td/></row>
-		<row><td>KillForcePrinterDeleteApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterForceDelete.exe</td><td/><td/></row>
+		<row><td>KillForcePrinterDeleteApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterForceDelete</td><td/><td/></row>
 		<row><td>KillMainApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinter.exe</td><td/><td/></row>
-		<row><td>KillMainApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinter.exe</td><td/><td/></row>
+		<row><td>KillMainApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinter.NET</td><td/><td/></row>
 		<row><td>KillPrinterCleanApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterClean.exe</td><td/><td/></row>
-		<row><td>KillPrinterCleanApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterClean.exe</td><td/><td/></row>
+		<row><td>KillPrinterCleanApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterClean</td><td/><td/></row>
 		<row><td>KillRestartSpoolerApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterRestartSpooler.exe</td><td/><td/></row>
-		<row><td>KillRestartSpoolerApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterRestartSpooler.exe</td><td/><td/></row>
+		<row><td>KillRestartSpoolerApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterRestartSpooler</td><td/><td/></row>
 		<row><td>KillSettingsConsoleApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterSettingsConsole.exe</td><td/><td/></row>
-		<row><td>KillSettingsConsoleApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterSettingsConsole.exe</td><td/><td/></row>
+		<row><td>KillSettingsConsoleApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterSettingsConsole</td><td/><td/></row>
 		<row><td>KillTrayApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
-		<row><td>KillTrayApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
+		<row><td>KillTrayApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterTrayApp</td><td/><td/></row>
 		<row><td>KillUACHelperApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterUACHelper.exe</td><td/><td/></row>
-		<row><td>KillUACHelperApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterUACHelper.exe</td><td/><td/></row>
+		<row><td>KillUACHelperApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterUACHelper</td><td/><td/></row>
 		<row><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>1</td><td>NewBinary20</td><td>LaunchProgram</td><td/><td/></row>
 		<row><td>RemoveLocalUnusedDriverPackets</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/RP "[INSTALLDIR]ConnectMyPrinterClean.exe"</td><td/><td/></row>
 		<row><td>RemoveUnusedDriverPackets</td><td>1106</td><td>connectmyprinterinstallerwor</td><td>/RP "[INSTALLDIR]ConnectMyPrinterClean.exe"</td><td/><td/></row>

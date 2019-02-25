@@ -1,38 +1,61 @@
 ﻿Imports System.Collections.Generic
 Imports System.Diagnostics
 Imports System.Linq
+Imports System.Windows.Forms
 
-Public Class Main
-    Sub Main(args As String())
+Class MyApplicationContext
+    Inherits ApplicationContext
+
+    Public Shared Sub Main(args() As String)
+        Application.EnableVisualStyles()
+        Application.Run(New MyApplicationContext)
+    End Sub
+
+    Public Sub New()
+        Console.WriteLine("Starting...")
+        If ProcessCMD() Then
+            Console.WriteLine("Success!")
+        Else
+            Console.WriteLine("Failed!")
+        End If
+        Console.WriteLine("Exit app...")
+        ExitApplication()
+    End Sub
+
+    Public Function ProcessCMD()
         Try
             Dim arglist As List(Of String)
-            arglist = args.ToList
+            arglist = Environment.GetCommandLineArgs().ToList
 
-            For ind = 0 To arglist.Count - 1
+            If arglist.Count = 0 Or arglist.Count = 1 Then
+                ExitApplication()
+            End If
+
+            For ind = 1 To arglist.Count - 1
                 Try
                     If arglist(ind).StartsWith("/KP") Then
-                        If KillProcess(arglist(ind) + 1) Then
+                        If KillProcess(arglist(ind + 1)) Then
                             Environment.ExitCode = 0
                         Else
                             Environment.ExitCode = 1
                         End If
                     End If
                     If arglist(ind).StartsWith("/CP") Then
-                        If CopyFile(arglist(ind) + 1, arglist(ind) + 2) Then
+                        If CopyFile(arglist(ind + 1), arglist(ind + 2)) Then
                             Environment.ExitCode = 0
                         Else
                             Environment.ExitCode = 1
                         End If
                     End If
                     If arglist(ind).StartsWith("/RP") Then
-                        If RunAppInBackground(arglist(ind) + 1, arglist(ind) + 2) Then
+                        If RunAppInBackground(arglist(ind + 1), arglist(ind + 2)) Then
                             Environment.ExitCode = 0
                         Else
                             Environment.ExitCode = 1
                         End If
                     End If
                     If arglist(ind).StartsWith("/RB") Then
-                        If RunBatchInBackground(arglist(ind) + 1) Then
+                        If RunBatchInBackground(arglist(ind + 1)) Then
                             Environment.ExitCode = 0
                         Else
                             Environment.ExitCode = 1
@@ -41,9 +64,12 @@ Public Class Main
                 Catch ex As Exception
                 End Try
             Next
+
+            Return True
         Catch ex As Exception
+            Return False
         End Try
-    End Sub
+    End Function
 
     Public Function KillProcess(ByVal AppName As String) As Boolean
         Try
@@ -54,13 +80,17 @@ Public Class Main
             proclist = zz.ToList
 
             For ind = 0 To proclist.Count - 1
-                proclist(ind).CloseMainWindow()
-                proclist(ind).WaitForExit(2000)
-                proclist(ind).Kill()
+                Try
+                    proclist(ind).CloseMainWindow()
+                    proclist(ind).WaitForExit(2000)
+                    proclist(ind).Kill()
+                Catch ex As Exception
+                End Try
             Next
 
             Return True
         Catch ex As Exception
+            Console.WriteLine(ex.Message)
             Return False
         End Try
     End Function
@@ -71,6 +101,7 @@ Public Class Main
 
             Return True
         Catch ex As Exception
+            Console.WriteLine(ex.Message)
             Return False
         End Try
     End Function
@@ -87,6 +118,7 @@ Public Class Main
 
             Return True
         Catch ex As Exception
+            Console.WriteLine(ex.Message)
             Return False
         End Try
     End Function
@@ -103,6 +135,7 @@ Public Class Main
 
             Return True
         Catch ex As Exception
+            Console.WriteLine(ex.Message)
             Return False
         End Try
     End Function
