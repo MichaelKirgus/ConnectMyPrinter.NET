@@ -126,10 +126,11 @@ Class MyApplicationContext
     Public Function RunBatchInBackground(ByVal Filename As String) As Boolean
         Try
             Dim ww As New Process
-            ww.StartInfo.FileName = "cmd.exe"
-            ww.StartInfo.Arguments = Filename
+            ww.StartInfo.FileName = Filename
             ww.StartInfo.WorkingDirectory = Environment.CurrentDirectory
             ww.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            ww.StartInfo.UseShellExecute = False
+            ww.StartInfo.CreateNoWindow = True
             ww.Start()
             ww.WaitForExit(60000)
 
