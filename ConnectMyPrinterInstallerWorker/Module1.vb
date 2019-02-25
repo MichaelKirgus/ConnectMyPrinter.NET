@@ -112,6 +112,7 @@ Class MyApplicationContext
             ww.StartInfo.FileName = Filename
             ww.StartInfo.Arguments = CMDArgs
             ww.StartInfo.WorkingDirectory = Environment.CurrentDirectory
+            ww.StartInfo.UseShellExecute = False
             ww.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
             ww.Start()
             ww.WaitForExit(60000)
