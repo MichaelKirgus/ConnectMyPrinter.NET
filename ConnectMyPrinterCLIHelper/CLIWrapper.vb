@@ -446,10 +446,10 @@ Public Class CLIWrapper
         Try
             Dim remotefileobj As New RemoteFileClass
 
-            If CLIAction = CLIActionEnum.ConnectRemotePrinters Or CLIAction = CLIActionEnum.SetRemoteDefaultPrinter Then
+            If CLIAction = CLIActionEnum.ConnectRemotePrinters Or CLIAction = CLIActionEnum.SetRemoteDefaultPrinter Or CLIAction = CLIActionEnum.ConnectRemotePrintersUNC Or CLIAction = CLIActionEnum.SetRemoteDefaultPrinterUNC Then
                 remotefileobj.ConnectPrinters.AddRange(ConnectPrinterCollection)
             End If
-            If CLIAction = CLIActionEnum.RemoveRemotePrinters Then
+            If CLIAction = CLIActionEnum.RemoveRemotePrinters Or CLIAction = CLIActionEnum.DisconnectRemotePrintersUNC Then
                 remotefileobj.DisconnectPrinters.AddRange(DisconnectPrinterCollection)
             End If
 
