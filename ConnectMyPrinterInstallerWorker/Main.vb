@@ -31,6 +31,13 @@ Public Class Main
                             Environment.ExitCode = 1
                         End If
                     End If
+                    If arglist(ind).StartsWith("/RB") Then
+                        If RunBatchInBackground(arglist(ind) + 1) Then
+                            Environment.ExitCode = 0
+                        Else
+                            Environment.ExitCode = 1
+                        End If
+                    End If
                 Catch ex As Exception
                 End Try
             Next
@@ -73,6 +80,23 @@ Public Class Main
             Dim ww As New Process
             ww.StartInfo.FileName = Filename
             ww.StartInfo.Arguments = CMDArgs
+            ww.StartInfo.WorkingDirectory = Environment.CurrentDirectory
+            ww.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            ww.Start()
+            ww.WaitForExit(60000)
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function RunBatchInBackground(ByVal Filename As String) As Boolean
+        Try
+            Dim ww As New Process
+            ww.StartInfo.FileName = "cmd.exe"
+            ww.StartInfo.Arguments = Filename
+            ww.StartInfo.WorkingDirectory = Environment.CurrentDirectory
             ww.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
             ww.Start()
             ww.WaitForExit(60000)

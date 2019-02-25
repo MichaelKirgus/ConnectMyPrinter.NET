@@ -86,6 +86,10 @@
 			<Name>ConnectMyPrinterForceDeleteManageLib</Name>
 			<Project>{6E73DDAC-FF46-4203-B5F1-CB3F94E9696B}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterInstallerWorker\ConnectMyPrinterInstallerWorker.vbproj">
+			<Name>ConnectMyPrinterInstallerWorker</Name>
+			<Project>{4AB1BE0B-F2EB-4A4C-B57C-1BCABB34F2CA}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterLog\ConnectMyPrinterLog.vbproj">
 			<Name>ConnectMyPrinterLog</Name>
 			<Project>{28D57EFE-E78A-4C8C-9D8C-45914E20D368}</Project>

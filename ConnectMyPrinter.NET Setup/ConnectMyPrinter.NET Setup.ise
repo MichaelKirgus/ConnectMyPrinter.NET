@@ -375,6 +375,7 @@
 		<row><td>ConnectMyPrinterForceDelete.Prim_re_Ausgabe1</td><td>{F1EF000F-2BCB-401B-8CA6-25D46A383390}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterforcedelete.1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterForceDeleteLib.Prim_re_Ausgabe1</td><td>{6F0F6E6F-FC10-4357-BF57-055A822F218B}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterforcedeletel1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe1</td><td>{3A395D9D-7D35-4367-A510-850C70B35ECE}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterforcedeletem1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ConnectMyPrinterInstallerWorker.Prim_re_Ausgabe</td><td>{6E42BB11-43C3-49B7-8B34-6EE750E6C7DB}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterinstallerwor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterLog.Prim_re_Ausgabe</td><td>{7A78085A-80BC-4189-9635-8B81F574D03B}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprinterlog.prim_re_</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterManagerConsole.Prim_re_Ausgabe</td><td>{D5DA5226-CE2F-44A6-82AC-EA87F28B2803}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprintermanagerconso</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ConnectMyPrinterManagerCoreConsole.Prim_re_Ausgabe</td><td>{AAD306F2-4C35-416B-8C99-0DF45EEC4E3E}</td><td>INSTALLDIR</td><td>258</td><td/><td>connectmyprintermanagercorec</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1146,15 +1147,15 @@
 		<col def="S0">Target</col>
 		<col def="I4">ExtendedType</col>
 		<col def="S255">ISComments</col>
-		<row><td>AllowNonPrivUserToControlPrintSpooler</td><td>1122</td><td>INSTALLDIR</td><td>[INSTALLDIR]SetACLs.bat</td><td/><td/></row>
-		<row><td>AllowUserToControlPrintSpooler</td><td>3170</td><td>INSTALLDIR</td><td>[INSTALLDIR]SetACLs.bat</td><td/><td/></row>
-		<row><td>ApplyCustomAppSettingsFile</td><td>3154</td><td>connectmyprinterappsettingss</td><td/><td/><td/></row>
-		<row><td>ApplyLogoFileFromMSIParam</td><td>3170</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c copy /Y "[LOGOFILE]" "[INSTALLDIR]logo.gif"</td><td/><td/></row>
-		<row><td>ApplyLogoFileFromMSIRootPath</td><td>3170</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c copy /Y "[SourceDir]\logo.gif" "[INSTALLDIR]logo.gif"</td><td/><td/></row>
-		<row><td>ApplySettingsDEFileFromMSIParam</td><td>3170</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c copy /Y "[APPSETTINGSFILE_DE]" "[INSTALLDIR]AppSettings_de-DE.xml"</td><td/><td/></row>
-		<row><td>ApplySettingsENFileFromMSIParam</td><td>3170</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c copy /Y "[APPSETTINGSFILE_EN]" "[INSTALLDIR]AppSettings_en-US.xml"</td><td/><td/></row>
-		<row><td>ApplySettingsFileFromMSIParam</td><td>3170</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c copy /Y "[APPSETTINGSFILE]" "[INSTALLDIR]AppSettings.xml"</td><td/><td/></row>
-		<row><td>ApplySettingsFileFromMSIRootPath</td><td>3170</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c copy /Y "[SourceDir]\AppSettings.xml" "[INSTALLDIR]AppSettings.xml"</td><td/><td/></row>
+		<row><td>AllowNonPrivUserToControlPrintSpooler</td><td>1106</td><td>connectmyprinterinstallerwor</td><td>/RB "[INSTALLDIR]SetACLs.bat"</td><td/><td/></row>
+		<row><td>AllowUserToControlPrintSpooler</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/RB "[INSTALLDIR]SetACLs.bat"</td><td/><td/></row>
+		<row><td>ApplyCustomAppSettingsFile</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/RP "[INSTALLDIR]\ConnectMyPrinterAppSettingsSetup.exe"</td><td/><td/></row>
+		<row><td>ApplyLogoFileFromMSIParam</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[LOGOFILE]" "[INSTALLDIR]logo.gif"</td><td/><td/></row>
+		<row><td>ApplyLogoFileFromMSIRootPath</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[SourceDir]\logo.gif" "[INSTALLDIR]logo.gif"</td><td/><td/></row>
+		<row><td>ApplySettingsDEFileFromMSIParam</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[APPSETTINGSFILE_DE]" "[INSTALLDIR]AppSettings_de-DE.xml"</td><td/><td/></row>
+		<row><td>ApplySettingsENFileFromMSIParam</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[APPSETTINGSFILE_EN]" "[INSTALLDIR]AppSettings_en-US.xml"</td><td/><td/></row>
+		<row><td>ApplySettingsFileFromMSIParam</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[APPSETTINGSFILE]" "[INSTALLDIR]AppSettings.xml"</td><td/><td/></row>
+		<row><td>ApplySettingsFileFromMSIRootPath</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[SourceDir]\AppSettings.xml" "[INSTALLDIR]AppSettings.xml"</td><td/><td/></row>
 		<row><td>ISPreventDowngrade</td><td>19</td><td/><td>[IS_PREVENT_DOWNGRADE_EXIT]</td><td/><td>Exits install when a newer version of this product is found</td></row>
 		<row><td>ISPrint</td><td>1</td><td>SetAllUsers.dll</td><td>PrintScrollableText</td><td/><td>Prints the contents of a ScrollableText control on a dialog.</td></row>
 		<row><td>ISRunSetupTypeAddLocalEvent</td><td>1</td><td>ISExpHlp.dll</td><td>RunSetupTypeAddLocalEvent</td><td/><td>Run the AddLocal events associated with the Next button on the Setup Type dialog.</td></row>
@@ -1164,28 +1165,28 @@
 		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
 		<row><td>KillACLHelperApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterACLHelper.exe</td><td/><td/></row>
-		<row><td>KillACLHelperApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterACLHelper.exe</td><td/><td/></row>
+		<row><td>KillACLHelperApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterACLHelper.exe</td><td/><td/></row>
 		<row><td>KillCreateRestorePointApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterCreateRestorePoint.exe</td><td/><td/></row>
-		<row><td>KillCreateRestorePointApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterCreateRestorePoint.exe</td><td/><td/></row>
+		<row><td>KillCreateRestorePointApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterCreateRestorePoint.exe</td><td/><td/></row>
 		<row><td>KillDeleteAllPrintersApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterDeleteAllPrinters.exe</td><td/><td/></row>
-		<row><td>KillDeleteAllPrintersApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterDeleteAllPrinters.exe</td><td/><td/></row>
+		<row><td>KillDeleteAllPrintersApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterDeleteAllPrinters.exe</td><td/><td/></row>
 		<row><td>KillForcePrinterDeleteApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterForceDelete.exe</td><td/><td/></row>
-		<row><td>KillForcePrinterDeleteApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterForceDelete.exe</td><td/><td/></row>
+		<row><td>KillForcePrinterDeleteApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterForceDelete.exe</td><td/><td/></row>
 		<row><td>KillMainApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinter.exe</td><td/><td/></row>
-		<row><td>KillMainApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinter.exe</td><td/><td/></row>
+		<row><td>KillMainApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinter.exe</td><td/><td/></row>
 		<row><td>KillPrinterCleanApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterClean.exe</td><td/><td/></row>
-		<row><td>KillPrinterCleanApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterClean.exe</td><td/><td/></row>
+		<row><td>KillPrinterCleanApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterClean.exe</td><td/><td/></row>
 		<row><td>KillRestartSpoolerApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterRestartSpooler.exe</td><td/><td/></row>
-		<row><td>KillRestartSpoolerApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterRestartSpooler.exe</td><td/><td/></row>
+		<row><td>KillRestartSpoolerApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterRestartSpooler.exe</td><td/><td/></row>
 		<row><td>KillSettingsConsoleApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterSettingsConsole.exe</td><td/><td/></row>
-		<row><td>KillSettingsConsoleApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterSettingsConsole.exe</td><td/><td/></row>
+		<row><td>KillSettingsConsoleApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterSettingsConsole.exe</td><td/><td/></row>
 		<row><td>KillTrayApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
-		<row><td>KillTrayApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
+		<row><td>KillTrayApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterTrayApp.exe</td><td/><td/></row>
 		<row><td>KillUACHelperApp</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterUACHelper.exe</td><td/><td/></row>
-		<row><td>KillUACHelperApp1</td><td>98</td><td>SystemFolder</td><td>[SystemFolder]cmd.exe /c taskkill /F /IM ConnectMyPrinterUACHelper.exe</td><td/><td/></row>
+		<row><td>KillUACHelperApp1</td><td>82</td><td>connectmyprinterinstallerwor</td><td>/KP ConnectMyPrinterUACHelper.exe</td><td/><td/></row>
 		<row><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>1</td><td>NewBinary20</td><td>LaunchProgram</td><td/><td/></row>
-		<row><td>RemoveLocalUnusedDriverPackets</td><td>3154</td><td>connectmyprinterclean.prim_r1</td><td/><td/><td/></row>
-		<row><td>RemoveUnusedDriverPackets</td><td>1106</td><td>connectmyprinterclean.prim_r1</td><td/><td/><td/></row>
+		<row><td>RemoveLocalUnusedDriverPackets</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/RP "[INSTALLDIR]ConnectMyPrinterClean.exe"</td><td/><td/></row>
+		<row><td>RemoveUnusedDriverPackets</td><td>1106</td><td>connectmyprinterinstallerwor</td><td>/RP "[INSTALLDIR]ConnectMyPrinterClean.exe"</td><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
 		<row><td>SetAllUsersProfileNT</td><td>51</td><td>ALLUSERSPROFILE</td><td>[%SystemRoot]\Profiles\All Users</td><td/><td/></row>
 		<row><td>ShowMsiLog</td><td>226</td><td>SystemFolder</td><td>[SystemFolder]notepad.exe "[MsiLogFileLocation]"</td><td/><td>Shows Property-driven MSI Log</td></row>
@@ -2044,6 +2045,7 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>AlwaysInstall</td><td>ConnectMyPrinterInstallerWorker.Prim_re_Ausgabe</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
@@ -2156,6 +2158,7 @@
 		<row><td>connectmyprinterforcedelete.1</td><td>ConnectMyPrinterForceDelete.Prim_re_Ausgabe1</td><td>ConnectMyPrinterForceDelete.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterForceDelete&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterforcedeletel1</td><td>ConnectMyPrinterForceDeleteLib.Prim_re_Ausgabe1</td><td>ConnectMyPrinterForceDeleteLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterForceDeleteLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterforcedeletem1</td><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe1</td><td>ConnectMyPrinterForceDeleteManageLib.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterForceDeleteManageLib&gt;|Built</td><td>3</td><td/></row>
+		<row><td>connectmyprinterinstallerwor</td><td>ConnectMyPrinterInstallerWorker.Prim_re_Ausgabe</td><td>ConnectMyPrinterInstallerWorker.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterInstallerWorker&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprinterlog.prim_re_</td><td>ConnectMyPrinterLog.Prim_re_Ausgabe</td><td>ConnectMyPrinterLog.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterLog&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprintermanagerconso</td><td>ConnectMyPrinterManagerConsole.Prim_re_Ausgabe</td><td>ConnectMyPrinterManagerConsole.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterManagerConsole&gt;|Built</td><td>3</td><td/></row>
 		<row><td>connectmyprintermanagercorec</td><td>ConnectMyPrinterManagerCoreConsole.Prim_re_Ausgabe</td><td>ConnectMyPrinterManagerCoreConsole.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterManagerCoreConsole&gt;|Built</td><td>3</td><td/></row>
@@ -2355,6 +2358,7 @@
 		<row><td>ConnectMyPrinterForceDelete.Prim_re_Ausgabe1</td><td/><td/><td>_4F8CB829_B72E_4A70_B92B_EDE0C5A86407_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterForceDeleteLib.Prim_re_Ausgabe1</td><td/><td/><td>_9EB7A705_7ED2_4F7F_B9F5_B5FC5C65ECEA_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterForceDeleteManageLib.Prim_re_Ausgabe1</td><td/><td/><td>_72FB3A5D_3EBF_4849_802B_306A6225473B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ConnectMyPrinterInstallerWorker.Prim_re_Ausgabe</td><td/><td/><td>_809CA139_7D24_4345_A45F_92EFC1153BF1_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterLog.Prim_re_Ausgabe</td><td/><td/><td>_1D9CD578_8A80_4FC0_92D8_07D34DDDBEDF_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterManagerConsole.Prim_re_Ausgabe</td><td/><td/><td>_79F68E51_7249_4D7F_886E_60AFEB3213BD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ConnectMyPrinterManagerCoreConsole.Prim_re_Ausgabe</td><td/><td/><td>_F3424671_2E50_45A7_8089_C7B7BB829751_FILTER</td><td/><td/><td/><td/></row>
@@ -2686,6 +2690,7 @@
 		<row><td>ConnectMyPrinterForceDelete</td><td>ConnectMyPrinterForceDelete\ConnectMyPrinterForceDelete.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterForceDeleteLib</td><td>ConnectMyPrinterForceDeleteLib\ConnectMyPrinterForceDeleteLib.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterForceDeleteManageLib</td><td>ConnectMyPrinterForceDeleteManageLib\ConnectMyPrinterForceDeleteManageLib.vbproj</td><td/><td>2</td></row>
+		<row><td>ConnectMyPrinterInstallerWorker</td><td>ConnectMyPrinterInstallerWorker\ConnectMyPrinterInstallerWorker.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterLog</td><td>ConnectMyPrinterLog\ConnectMyPrinterLog.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterManagerConsole</td><td>ConnectMyPrinterManagerConsole\ConnectMyPrinterManagerConsole.vbproj</td><td/><td>2</td></row>
 		<row><td>ConnectMyPrinterManagerCoreConsole</td><td>ConnectMyPrinterManagerCoreConsole\ConnectMyPrinterManagerCoreConsole.vbproj</td><td/><td>2</td></row>
