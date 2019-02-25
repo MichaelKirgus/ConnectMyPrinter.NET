@@ -1149,9 +1149,11 @@
 		<col def="S255">ISComments</col>
 		<row><td>AllowNonPrivUserToControlPrintSpooler</td><td>1106</td><td>connectmyprinterinstallerwor</td><td>/RB "[INSTALLDIR]SetACLs.bat"</td><td/><td/></row>
 		<row><td>AllowUserToControlPrintSpooler</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/RB "[INSTALLDIR]SetACLs.bat"</td><td/><td/></row>
+		<row><td>ApplyBMPLogoFileFromMSIRootPath</td><td>1106</td><td>connectmyprinterinstallerwor</td><td>/CP "[SourceDir]\logo.bmp" "[INSTALLDIR]logo.bmp"</td><td/><td/></row>
 		<row><td>ApplyCustomAppSettingsFile</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/RP "[INSTALLDIR]\ConnectMyPrinterAppSettingsSetup.exe"</td><td/><td/></row>
-		<row><td>ApplyLogoFileFromMSIParam</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[LOGOFILE]" "[INSTALLDIR]logo.gif"</td><td/><td/></row>
-		<row><td>ApplyLogoFileFromMSIRootPath</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[SourceDir]\logo.gif" "[INSTALLDIR]logo.gif"</td><td/><td/></row>
+		<row><td>ApplyGIFLogoFileFromMSIParam</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[LOGOFILE]" "[INSTALLDIR]logo.gif"</td><td/><td/></row>
+		<row><td>ApplyGIFLogoFileFromMSIRootPath</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[SourceDir]\logo.gif" "[INSTALLDIR]logo.gif"</td><td/><td/></row>
+		<row><td>ApplyPNGLogoPathFileFromMSIRootPath</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[SourceDir]\logo.png" "[INSTALLDIR]logo.png"</td><td/><td/></row>
 		<row><td>ApplySettingsDEFileFromMSIParam</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[APPSETTINGSFILE_DE]" "[INSTALLDIR]AppSettings_de-DE.xml"</td><td/><td/></row>
 		<row><td>ApplySettingsENFileFromMSIParam</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[APPSETTINGSFILE_EN]" "[INSTALLDIR]AppSettings_en-US.xml"</td><td/><td/></row>
 		<row><td>ApplySettingsFileFromMSIParam</td><td>3154</td><td>connectmyprinterinstallerwor</td><td>/CP "[APPSETTINGSFILE]" "[INSTALLDIR]AppSettings.xml"</td><td/><td/></row>
@@ -6494,9 +6496,11 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>AllowNonPrivUserToControlPrintSpooler</td><td>Not Installed And (&amp;NewFeature11&gt;2)</td><td>6402</td><td/><td/></row>
 		<row><td>AllowUserToControlPrintSpooler</td><td>Not Installed And (&amp;NewFeature11&gt;2)</td><td>6405</td><td/><td/></row>
 		<row><td>AppSearch</td><td/><td>400</td><td>AppSearch</td><td/></row>
+		<row><td>ApplyBMPLogoFileFromMSIRootPath</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6408</td><td/><td/></row>
 		<row><td>ApplyCustomAppSettingsFile</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6403</td><td/><td/></row>
-		<row><td>ApplyLogoFileFromMSIParam</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6403</td><td/><td/></row>
-		<row><td>ApplyLogoFileFromMSIRootPath</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6405</td><td/><td/></row>
+		<row><td>ApplyGIFLogoFileFromMSIParam</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6403</td><td/><td/></row>
+		<row><td>ApplyGIFLogoFileFromMSIRootPath</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6405</td><td/><td/></row>
+		<row><td>ApplyPNGLogoPathFileFromMSIRootPath</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6407</td><td/><td/></row>
 		<row><td>ApplySettingsDEFileFromMSIParam</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6403</td><td/><td/></row>
 		<row><td>ApplySettingsENFileFromMSIParam</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6404</td><td/><td/></row>
 		<row><td>ApplySettingsFileFromMSIParam</td><td>Not Installed And (&amp;NewFeature12&gt;2)</td><td>6402</td><td/><td/></row>
