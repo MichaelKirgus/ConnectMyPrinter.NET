@@ -368,6 +368,7 @@ Imports ConnectMyPrinterReportingLib
 
             Dim ReportingHelper As New ReportingLib
             Dim LocalPrinters As List(Of PrinterQueueInfo)
+            MainApp.AppSettings.ShowLocalPrinters = Not AppSettings.IgnoreLocalPrintersAtReporting
             LocalPrinters = MainApp.LoadLocalPrinters()
             MainApp.AppSettings.ShowLocalPrinters = AppSettings.ShowLocalPrinters
 
@@ -404,7 +405,7 @@ Imports ConnectMyPrinterReportingLib
             End If
 
             Dim LocalPrinters As List(Of PrinterQueueInfo)
-            LocalPrinters = MainApp.LoadLocalPrinters()
+            LocalPrinters = MainApp.LoadLocalPrinters(Not AppSettings.IgnoreLocalPrintersAtRemoteFetching)
 
             Dim ConnectedPrinters As New List(Of PrinterQueueInfo)
 
@@ -448,7 +449,8 @@ Imports ConnectMyPrinterReportingLib
 
     Public Function LoadPrintersAndAddToMenu()
         Try
-            LocalPrinters = MainApp.LoadLocalPrinters()
+            MainApp.AppSettings.ShowLocalPrinters = AppSettings.ShowLocalPrinters
+            LocalPrinters = MainApp.LoadLocalPrinters(AppSettings.ShowLocalPrintersInTrayApp)
 
             For index = 0 To LocalPrinters.Count - 1
                 Try

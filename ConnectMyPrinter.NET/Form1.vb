@@ -371,13 +371,18 @@ Public Class Form1
         End Try
     End Sub
 
-    Public Function LoadLocalPrinters() As List(Of PrinterQueueInfo)
+    Public Function LoadLocalPrinters(Optional ByVal GetLocalPrinters As Boolean = False) As List(Of PrinterQueueInfo)
         'Diese Funktion lädt alle auf dem Computer (bzw. im aktuellen Benutzerprofil) vorhandenen Drucker.
 
         _Log.Write(ConnectMyPrinterLog.Logging.LogType.Information, Me, "Lade alle Drucker von aktuellem Benutzer", Err)
         Try
             Dim hh As List(Of PrintQueueCollection)
-            hh = PrinterEnumerationService.InternalLocalPrinterCollector(AppSettings.ShowLocalPrinters)
+
+            If GetLocalPrinters = False Then
+                hh = PrinterEnumerationService.InternalLocalPrinterCollector(AppSettings.ShowLocalPrinters)
+            Else
+                hh = PrinterEnumerationService.InternalLocalPrinterCollector(True)
+            End If
 
             Dim result As New List(Of PrinterQueueInfo)
             Dim DefaultPrinter As String = ""

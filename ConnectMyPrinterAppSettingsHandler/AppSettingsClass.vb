@@ -400,6 +400,10 @@ Imports ConnectMyPrinterEnumerationLib
     ''' </summary>
     Property ShowTrayAppAfterInstall As Boolean = True
     ''' <summary>
+    ''' Legt fest, ob auch die lokalen Drucker in dem Kontextmenü der Trayanwendung aufgeführt werden sollen.
+    ''' </summary>
+    Property ShowLocalPrintersInTrayApp As Boolean = True
+    ''' <summary>
     ''' Legt fest, ob die Trayanwendung sichtbar im Infobereich der Taskleiste sein soll. (Sonst wird diese versteckt nur als Prozess ausgeführt)
     ''' </summary>
     Property ShowTrayAppIcon As Boolean = True
