@@ -63,7 +63,7 @@ Public Class Form1
                             End If
                         End If
                         If MCultureInf.IetfLanguageTag.Contains("en") Then
-                            If IO.File.Exists(AppSettingDEFile) Then
+                            If IO.File.Exists(AppSettingENFile) Then
                                 AppSettingFile = AppSettingENFile
                             End If
                         End If
