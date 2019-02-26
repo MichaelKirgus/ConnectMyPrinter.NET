@@ -1,6 +1,8 @@
 ﻿Imports System.Collections.Generic
 Imports System.Diagnostics
+Imports System.IO
 Imports System.Linq
+Imports System.Security.AccessControl
 Imports System.Windows.Forms
 
 Class MyApplicationContext
@@ -61,9 +63,52 @@ Class MyApplicationContext
                             Environment.ExitCode = 1
                         End If
                     End If
+                    If arglist(ind).StartsWith("/AR") Then
+                        If ApplyFileACLs(arglist(ind + 1)) Then
+                            Environment.ExitCode = 0
+                        Else
+                            Environment.ExitCode = 1
+                        End If
+                    End If
                 Catch ex As Exception
                 End Try
             Next
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function ApplyFileACLs(ByVal Filename As String) As Boolean
+        Try
+            AddFileSecurity(Filename, "Everyone", FileSystemRights.FullControl, AccessControlType.Allow)
+            AddFileSecurity(Filename, "Jeder", FileSystemRights.FullControl, AccessControlType.Allow)
+            AddFileSecurity(Filename, "Benutzer", FileSystemRights.FullControl, AccessControlType.Allow)
+            AddFileSecurity(Filename, "User", FileSystemRights.FullControl, AccessControlType.Allow)
+            AddFileSecurity(Filename, Environment.UserName, FileSystemRights.FullControl, AccessControlType.Allow)
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function AddFileSecurity(ByVal fileName As String, ByVal account As String,
+    ByVal rights As FileSystemRights, ByVal controlType As AccessControlType)
+        Try
+            ' Get a FileSecurity object that represents the 
+            ' current security settings.
+            Dim fSecurity As FileSecurity = File.GetAccessControl(fileName)
+
+            ' Add the FileSystemAccessRule to the security settings. 
+            Dim accessRule As FileSystemAccessRule =
+                New FileSystemAccessRule(account, rights, controlType)
+
+            fSecurity.AddAccessRule(accessRule)
+
+            ' Set the new access settings.
+            File.SetAccessControl(fileName, fSecurity)
 
             Return True
         Catch ex As Exception
