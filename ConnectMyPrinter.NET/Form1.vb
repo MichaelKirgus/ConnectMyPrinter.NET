@@ -1023,6 +1023,11 @@ Public Class Form1
     Public Sub ResetPrinterSearchField()
         Try
             MetroTextBox1.Text = AppSettings.FixedPrefix
+            If AppSettings.ShowPrinterCountAfterSearch Then
+                MetroLabel2.Text = PrintQueuesAutoComplete.Count & MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterCollectCountText", "")
+            Else
+                MetroLabel2.Text = PrintQueuesAutoComplete.Count & MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterCollectFinishedText", "")
+            End If
         Catch ex As Exception
             _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "ErrorLogStr", "Error"), Err)
         End Try
