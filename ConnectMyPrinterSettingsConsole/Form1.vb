@@ -9,6 +9,8 @@ Public Class Form1
     Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
 
     Public AppSettings As New AppSettingsClass
+    Public AppSettingDEFile As String = "AppSettings_de-DE.xml"
+    Public AppSettingENFile As String = "AppSettings_en-US.xml"
     Public AppSettingFile As String = "AppSettings.xml"
 
     Public Function LoadSettings(ByVal Filename As String) As AppSettingsClass
@@ -52,6 +54,19 @@ Public Class Form1
                     'Laden der Einstellungen (über AppData)
                     If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
                         AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
+                    Else
+                        'Es liegen keine Einstellungen in den App-Data-Ordnern.
+                        'Prüfen, on lokalisierte Anwendungseinstellungen im Anwendungsordner liegen:
+                        If MCultureInf.IetfLanguageTag.Contains("de") Then
+                            If IO.File.Exists(AppSettingDEFile) Then
+                                AppSettingFile = AppSettingDEFile
+                            End If
+                        End If
+                        If MCultureInf.IetfLanguageTag.Contains("en") Then
+                            If IO.File.Exists(AppSettingDEFile) Then
+                                AppSettingFile = AppSettingENFile
+                            End If
+                        End If
                     End If
                 End If
 
@@ -82,7 +97,10 @@ Public Class Form1
         Dim jj As MsgBoxResult
         jj = MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterSettingsConsole.TranslatedStrings", GetType(Form1), MCultureInf, "SaveSettingsStr", ""), MsgBoxStyle.YesNo)
         If jj = MsgBoxResult.Yes Then
-            SaveSettings(AppSettings, AppSettingFile)
+            If Not SaveSettings(AppSettings, AppSettingFile) Then
+                MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterSettingsConsole.TranslatedStrings", GetType(Form1), MCultureInf, "SaveSettingsErrorStr", ""), MsgBoxStyle.Exclamation)
+                e.Cancel = True
+            End If
         End If
     End Sub
 
@@ -97,7 +115,9 @@ Public Class Form1
     Private Sub DateiSpeichernToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DateiSpeichernToolStripMenuItem.Click
         SaveFileDialog1.ShowDialog()
         If Not SaveFileDialog1.FileName = "" Then
-            SaveSettings(AppSettings, SaveFileDialog1.FileName)
+            If Not SaveSettings(AppSettings, SaveFileDialog1.FileName) Then
+                MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterSettingsConsole.TranslatedStrings", GetType(Form1), MCultureInf, "SaveSettingsErrorStr", ""), MsgBoxStyle.Exclamation)
+            End If
         End If
     End Sub
 End Class

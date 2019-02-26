@@ -18,6 +18,10 @@
           <source>Möchten Sie die Änderungen speichern?</source>
           <target state="translated">Do you want to save the changes?</target>
         </trans-unit>
+        <trans-unit id="SaveSettingsErrorStr" translate="yes" xml:space="preserve">
+          <source>Die Datei konnte nicht gespeichert werden. Bitte verwenden Sie einen anderen Dateipfad.</source>
+          <target state="translated">The file could not be saved. Please use a different file path.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

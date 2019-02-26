@@ -65,6 +65,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Die Datei konnte nicht gespeichert werden. Bitte verwenden Sie einen anderen Dateipfad. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property SaveSettingsErrorStr() As String
+            Get
+                Return ResourceManager.GetString("SaveSettingsErrorStr", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Möchten Sie die Änderungen speichern? ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property SaveSettingsStr() As String
