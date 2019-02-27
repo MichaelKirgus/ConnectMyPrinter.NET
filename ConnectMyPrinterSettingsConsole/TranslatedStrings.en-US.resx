@@ -15,4 +15,7 @@
   <data name="SaveSettingsStr" xml:space="preserve">
     <value>Do you want to save the changes?</value>
   </data>
+  <data name="SaveSettingsErrorStr" xml:space="preserve">
+    <value>The file could not be saved. Please use a different file path.</value>
+  </data>
 </root>

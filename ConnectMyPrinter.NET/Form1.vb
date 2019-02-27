@@ -1020,13 +1020,15 @@ Public Class Form1
         End If
     End Sub
 
-    Public Sub ResetPrinterSearchField()
+    Public Sub ResetPrinterSearchField(Optional ByVal ShowPrintServerStats As Boolean = False)
         Try
             MetroTextBox1.Text = AppSettings.FixedPrefix
-            If AppSettings.ShowPrinterCountAfterSearch Then
-                MetroLabel2.Text = PrintQueuesAutoComplete.Count & MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterCollectCountText", "")
-            Else
-                MetroLabel2.Text = PrintQueuesAutoComplete.Count & MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterCollectFinishedText", "")
+            If ShowPrintServerStats Then
+                If AppSettings.ShowPrinterCountAfterSearch Then
+                    MetroLabel2.Text = PrintQueuesAutoComplete.Count & MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterCollectCountText", "")
+                Else
+                    MetroLabel2.Text = PrintQueuesAutoComplete.Count & MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "PrinterCollectFinishedText", "")
+                End If
             End If
         Catch ex As Exception
             _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "ErrorLogStr", "Error"), Err)
@@ -1059,7 +1061,7 @@ Public Class Form1
     End Sub
 
     Private Sub MetroTextBox1_Click(sender As Object, e As EventArgs) Handles MetroTextBox1.Click
-        ResetPrinterSearchField()
+        ResetPrinterSearchField(True)
         If AppSettings.ShowAdditionalUserHelpOnTextFieldClick Then
             HandleMouseEnterTextfield()
         End If
