@@ -47,6 +47,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		ConnectMyPrinterHelp.gui = ConnectMyPrinterHelp.gui
 		Hilfe.chm = Hilfe.chm
+		LICENSE = LICENSE
 		Lizenzbedingungen.rtf = Lizenzbedingungen.rtf
 		Lizenzbedingungen.txt = Lizenzbedingungen.txt
 		README.md = README.md
