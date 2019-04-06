@@ -240,3 +240,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/MMCSnapIn1
+
+#Exclude InstallShield projects
+*.isproj
