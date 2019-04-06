@@ -130,8 +130,8 @@ Tool to easily manage printers on Windows.</target>
           <target state="needs-review-translation">0</target>
         </trans-unit>
         <trans-unit id="MetroTabPage1.Text" translate="yes" xml:space="preserve">
-          <source>Programmlizenz</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Program license</target>
+          <source>Programmlizenz (GNU)</source>
+          <target state="translated">Application license (GPL)</target>
         </trans-unit>
         <trans-unit id="MetroTextBox3.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
           <source>3, 3</source>
