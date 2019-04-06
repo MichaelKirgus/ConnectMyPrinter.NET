@@ -57,3 +57,7 @@ Um die Anwendung unbeaufsichtigt zu installieren, kann der folgende Aufruf verwe
 Für eine unbeaufsichtigte Deinstallation folgender Aufruf:
 
 ```msiexec /x {D9F305BE-DA52-4B9B-BCD9-9CF4C34BBE07} /q /norestart```
+
+<h2>Download</h2>
+
+Die Installationsdateien können im MSI-Format unter dem Ordner [Setup](ConnectMyPrinterSetupRelease/Setup) in der jeweiligen Version heruntergeladen werden.
