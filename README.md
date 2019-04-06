@@ -51,7 +51,9 @@ Falls die Anwendung auf einem englischsprachigen Windows (en-US) ausgeführt wird
 <h2>Verteilung</h2>
 
 Um die Anwendung unbeaufsichtigt zu installieren, kann der folgende Aufruf verwendet werden:
+
 ```ConnectMyPrinter.NET.msi /q /norestart APPSETTINGSFILE=AppSettings.xml LOGOFILE=logo.gif```
 
 Für eine unbeaufsichtigte Deinstallation folgender Aufruf:
+
 ```msiexec /x {D9F305BE-DA52-4B9B-BCD9-9CF4C34BBE07} /q /norestart```
