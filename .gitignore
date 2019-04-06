@@ -245,3 +245,6 @@ ModelManifest.xml
 #Exclude InstallShield projects
 *.isproj
 *.ise
+
+#Exclude internal Batchfiles
+SignAllBinaryFiles.bat
