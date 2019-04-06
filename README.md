@@ -1,6 +1,6 @@
 <h1>ConnectMyPrinter.NET</h1>
 
-![Hauptanwendung](https://github.com/MichaelKirgus/ConnectMyPrinter.NET/ConnectMyPrinterImages/drex_hauptfenster_1_screen.png)
+![Hauptanwendung](ConnectMyPrinterImages/drex_hauptfenster_1_screen.png)
 
 **Wenn Netzwerkdrucker im Unternehmensnetzwerk eingesetzt werden, werden diese in der Regel über einen zentralen Printserver mit dem Client verbunden. 
 Leider kommt es in vielen Umgebungen vor, dass es nicht nur einen Printserver gibt. Das führt oft zu Verwirrungen bei den Endanwendern.
@@ -20,7 +20,7 @@ Der Standarddrucker kann mit 2 Klicks angepasst werden und wird dem Anwender dir
 Optional kann ein Drucker auch in einem Profil gespeichert und später wieder verbunden werden
 Für Support-Admins werden wichtige Informationen (Treiberversion, Treiberpfad) direkt beim Aufklappen eines Eintrags angezeigt:
 
-![Druckerdetails](https://github.com/MichaelKirgus/ConnectMyPrinter.NET/ConnectMyPrinterImages/drex_druckerdetails_screen.png)
+![Druckerdetails](ConnectMyPrinterImages/drex_druckerdetails_screen.png)
 
 Ein Drucker kann mit wenigen Klicks neu installiert (der Drucker, Treiber sowie das Treiberpaket wird hierbei entfernt) oder die Standardeinstellungen des Drucker zurückgesetzt werden.
 Dokumente, welche in der Druckerwarteschlange hängen, können einfach gelöscht werden
@@ -35,7 +35,7 @@ Einige Anzeigetexte können für die Anpassung an Firmenanforderungen geändert ode
 Trayanwendung, welche alle installierten Drucker anzeigt und der aktuelle Standarddrucker geändert werden kann:
 Bei jedem Drucker kann auch in die Standardeinstellungen gesprungen, sowie der Drucker gelöscht bzw. getrennt werden:
 
-![Trayanwendung (Untermenü)](https://github.com/MichaelKirgus/ConnectMyPrinter.NET/ConnectMyPrinterImages/drex_untermenu_eines_druckers_screen.png)
+![Trayanwendung (Untermenü)](ConnectMyPrinterImages/drex_untermenu_eines_druckers_screen.png)
 
 Profileditor für die Erstellung von "Druckerprofilen"
 Mit einem kleinen Tool können Druckerprofile erstellt werden, welche automatisch z.B. 2 Drucker verbinden, den Standarddrucker ändern sowie einen Drucker löschen. Hierzu wird eine Profildatei mit der Dateierweiterung *.prpr erstellt. Die Profildatei ist in einer XML-Struktur aufgebaut, kann also jederzeit auch ohne den Profileditor bearbeitet werden.
@@ -46,7 +46,7 @@ Drucker entfernen erzwingen
 Wenn sich ein Drucker nicht mehr mit Windows-Bordmitteln entfernen lässt:
 Diese Anwendung entfernt die Drucker sowie Treiber Low-Level direkt in der Windows Registry:
 
-![Druckertreiber entfernen](https://github.com/MichaelKirgus/ConnectMyPrinter.NET/ConnectMyPrinterImages/drex_hauptfenster_3_screen.png)
+![Druckertreiber entfernen](ConnectMyPrinterImages/drex_hauptfenster_3_screen.png)
 
 Falls die Anwendung auf einem englischsprachigen Windows (en-US) ausgeführt wird, ist die Oberfläche lokalisiert.
 
