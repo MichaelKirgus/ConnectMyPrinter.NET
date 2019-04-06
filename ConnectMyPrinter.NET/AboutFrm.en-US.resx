@@ -101,7 +101,7 @@ Tool to easily manage printers on Windows.</value>
     <value>0</value>
   </data>
   <data name="MetroTabPage1.Text" xml:space="preserve">
-    <value>Program license</value>
+    <value>Application license (GPL)</value>
   </data>
   <data name="MetroTextBox3.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
