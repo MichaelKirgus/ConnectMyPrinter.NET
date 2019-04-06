@@ -46,8 +46,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A7DA926-81B3-4DCA-BC97-0AA3F44CF879}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Zertifikate\ConnectMyPrinter_Cert.pfx = ..\..\..\Zertifikate\ConnectMyPrinter_Cert.pfx
+		Hilfe.chm = Hilfe.chm
 		Lizenzbedingungen.rtf = Lizenzbedingungen.rtf
-		SignAllBinaryFiles.bat = SignAllBinaryFiles.bat
+		Lizenzbedingungen.txt = Lizenzbedingungen.txt
 	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConnectMyPrinterDriverPackagesLib", "ConnectMyPrinterDriverPackagesLib\ConnectMyPrinterDriverPackagesLib.vbproj", "{BF9D7431-74EA-4CE1-A9D5-18868A0F42CF}"

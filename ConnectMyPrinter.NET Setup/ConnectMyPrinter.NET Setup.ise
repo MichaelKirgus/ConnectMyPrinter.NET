@@ -407,8 +407,8 @@
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{F15E028C-CFF0-4914-8C23-FEC3FFCE080C}</td><td>EN_US</td><td>258</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{38797112-785E-4944-AE64-B3249B61A6F6}</td><td>ProgramFiles64Folder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{800A3CDA-ACC0-4CB0-AFC8-64DAC4DF8B73}</td><td>MICHAEL_KIRGUS1</td><td>258</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{7FB5621E-5158-4793-9421-24384BE46D6D}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{0F8314BF-ACAA-4D65-9CA7-058E6B73EFF0}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{7FB5621E-5158-4793-9421-24384BE46D6D}</td><td>INSTALLDIR</td><td>258</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{0F8314BF-ACAA-4D65-9CA7-058E6B73EFF0}</td><td>INSTALLDIR</td><td>258</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{7143F330-F057-4BEB-AD6F-A16075F5595A}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{51B35D30-61F4-44E2-89C6-584F3285463E}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
@@ -1133,8 +1133,6 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT5</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT6</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT7</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT8</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>MICHAEL_KIRGUS1</td><td>ISX_DEFAULTCOMPONENT5</td></row>
@@ -2189,8 +2187,8 @@
 		<row><td>connectmyprinteruachelper.lo</td><td>ConnectMyPrinterUACHelper.Lokalisierte_Ressourcen</td><td>ConnectMyPrinterUACHelper.Lokalisierte Ressourcen</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterUACHelper&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
 		<row><td>connectmyprinteruachelper.pr1</td><td>ConnectMyPrinterUACHelper.Prim_re_Ausgabe1</td><td>ConnectMyPrinterUACHelper.Primäre Ausgabe</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConnectMyPrinterUACHelper&gt;|Built</td><td>3</td><td/></row>
 		<row><td>hilfe.chm</td><td>Hilfe.chm</td><td>Hilfe.chm</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;VSSolutionFolder&gt;\Hilfe.chm</td><td>1</td><td/></row>
-		<row><td>lizenzbedingungen.rtf</td><td>ISX_DEFAULTCOMPONENT1</td><td>LIZENZ~1.RTF|Lizenzbedingungen.rtf</td><td>0</td><td/><td/><td/><td>1</td><td>O:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Debug\Lizenzbedingungen.rtf</td><td>1</td><td/></row>
-		<row><td>lizenzbedingungen.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>LIZENZ~1.TXT|Lizenzbedingungen.txt</td><td>0</td><td/><td/><td/><td>1</td><td>O:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Debug\Lizenzbedingungen.txt</td><td>1</td><td/></row>
+		<row><td>lizenzbedingungen.rtf</td><td>ISX_DEFAULTCOMPONENT6</td><td>LIZENZ~1.RTF|Lizenzbedingungen.rtf</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;VSSolutionFolder&gt;\Lizenzbedingungen.rtf</td><td>1</td><td/></row>
+		<row><td>lizenzbedingungen.txt</td><td>ISX_DEFAULTCOMPONENT7</td><td>LIZENZ~1.TXT|Lizenzbedingungen.txt</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;VSSolutionFolder&gt;\Lizenzbedingungen.txt</td><td>1</td><td/></row>
 		<row><td>metroframework.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>METROF~1.TXT|MetroFramework.txt</td><td>0</td><td/><td/><td/><td>1</td><td>O:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Debug\MetroFramework.txt</td><td>1</td><td/></row>
 		<row><td>openiconlibrarylicense.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>OPENIC~1.TXT|OpenIconLibraryLicense.txt</td><td>0</td><td/><td/><td/><td>1</td><td>O:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Debug\OpenIconLibraryLicense.txt</td><td>1</td><td/></row>
 		<row><td>readme.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>ReadMe.txt</td><td>0</td><td/><td/><td/><td>1</td><td>O:\Eigene Dokumente\Visual Studio 2015\Projects\ConnectMyPrinter.NET\ConnectMyPrinter.NET\bin\Debug\ReadMe.txt</td><td>1</td><td/></row>
