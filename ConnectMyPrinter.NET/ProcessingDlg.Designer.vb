@@ -37,6 +37,7 @@ Partial Class ProcessingDlg
         Me.MetroProgressSpinner1.Size = New System.Drawing.Size(48, 48)
         Me.MetroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroProgressSpinner1.TabIndex = 0
+        Me.MetroProgressSpinner1.UseSelectable = True
         '
         'MetroLabel2
         '
@@ -52,7 +53,7 @@ Partial Class ProcessingDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BorderStyle = Forms.MetroFormBorderStyle.FixedSingle
+        Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(203, 151)
         Me.Controls.Add(Me.MetroLabel2)
         Me.Controls.Add(Me.MetroProgressSpinner1)
@@ -66,8 +67,7 @@ Partial Class ProcessingDlg
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Style = MetroFramework.MetroColorStyle.Black
         Me.Text = "Bitte warten..."
-        Me.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center
-        Me.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
