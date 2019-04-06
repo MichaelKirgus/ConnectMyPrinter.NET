@@ -33,17 +33,17 @@ Partial Class AboutFrm
         Me.MetroTabControl1 = New MetroFramework.Controls.MetroTabControl()
         Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
         Me.MetroTextBox1 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
-        Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
         Me.MetroTabPage3 = New MetroFramework.Controls.MetroTabPage()
         Me.MetroTextBox3 = New MetroFramework.Controls.MetroTextBox()
+        Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
+        Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
         Me.UserAboutInfoLbl = New MetroFramework.Controls.MetroLabel()
         Me.AppVersionLbl = New MetroFramework.Controls.MetroLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
-        Me.MetroTabPage2.SuspendLayout()
         Me.MetroTabPage3.SuspendLayout()
+        Me.MetroTabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -84,7 +84,7 @@ Partial Class AboutFrm
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
         resources.ApplyResources(Me.MetroTabControl1, "MetroTabControl1")
         Me.MetroTabControl1.Name = "MetroTabControl1"
-        Me.MetroTabControl1.SelectedIndex = 2
+        Me.MetroTabControl1.SelectedIndex = 0
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Black
         Me.MetroTabControl1.UseSelectable = True
         '
@@ -130,48 +130,6 @@ Partial Class AboutFrm
         Me.MetroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.MetroTextBox1.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'MetroTabPage2
-        '
-        Me.MetroTabPage2.Controls.Add(Me.MetroTextBox2)
-        Me.MetroTabPage2.HorizontalScrollbarBarColor = True
-        Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.HorizontalScrollbarSize = 10
-        resources.ApplyResources(Me.MetroTabPage2, "MetroTabPage2")
-        Me.MetroTabPage2.Name = "MetroTabPage2"
-        Me.MetroTabPage2.VerticalScrollbarBarColor = True
-        Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.VerticalScrollbarSize = 10
-        '
-        'MetroTextBox2
-        '
-        '
-        '
-        '
-        Me.MetroTextBox2.CustomButton.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
-        Me.MetroTextBox2.CustomButton.Location = CType(resources.GetObject("resource.Location2"), System.Drawing.Point)
-        Me.MetroTextBox2.CustomButton.Name = ""
-        Me.MetroTextBox2.CustomButton.Size = CType(resources.GetObject("resource.Size2"), System.Drawing.Size)
-        Me.MetroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox2.CustomButton.TabIndex = CType(resources.GetObject("resource.TabIndex2"), Integer)
-        Me.MetroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox2.CustomButton.UseSelectable = True
-        Me.MetroTextBox2.CustomButton.Visible = CType(resources.GetObject("resource.Visible2"), Boolean)
-        Me.MetroTextBox2.Lines = New String(-1) {}
-        resources.ApplyResources(Me.MetroTextBox2, "MetroTextBox2")
-        Me.MetroTextBox2.MaxLength = 32767
-        Me.MetroTextBox2.Multiline = True
-        Me.MetroTextBox2.Name = "MetroTextBox2"
-        Me.MetroTextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox2.ReadOnly = True
-        Me.MetroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.MetroTextBox2.SelectedText = ""
-        Me.MetroTextBox2.SelectionLength = 0
-        Me.MetroTextBox2.SelectionStart = 0
-        Me.MetroTextBox2.ShortcutsEnabled = True
-        Me.MetroTextBox2.UseSelectable = True
-        Me.MetroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox2.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
         'MetroTabPage3
         '
         Me.MetroTabPage3.Controls.Add(Me.MetroTextBox3)
@@ -214,6 +172,48 @@ Partial Class AboutFrm
         Me.MetroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.MetroTextBox3.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
+        'MetroTabPage2
+        '
+        Me.MetroTabPage2.Controls.Add(Me.MetroTextBox2)
+        Me.MetroTabPage2.HorizontalScrollbarBarColor = True
+        Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage2.HorizontalScrollbarSize = 10
+        resources.ApplyResources(Me.MetroTabPage2, "MetroTabPage2")
+        Me.MetroTabPage2.Name = "MetroTabPage2"
+        Me.MetroTabPage2.VerticalScrollbarBarColor = True
+        Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage2.VerticalScrollbarSize = 10
+        '
+        'MetroTextBox2
+        '
+        '
+        '
+        '
+        Me.MetroTextBox2.CustomButton.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
+        Me.MetroTextBox2.CustomButton.Location = CType(resources.GetObject("resource.Location2"), System.Drawing.Point)
+        Me.MetroTextBox2.CustomButton.Name = ""
+        Me.MetroTextBox2.CustomButton.Size = CType(resources.GetObject("resource.Size2"), System.Drawing.Size)
+        Me.MetroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.MetroTextBox2.CustomButton.TabIndex = CType(resources.GetObject("resource.TabIndex2"), Integer)
+        Me.MetroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroTextBox2.CustomButton.UseSelectable = True
+        Me.MetroTextBox2.CustomButton.Visible = CType(resources.GetObject("resource.Visible2"), Boolean)
+        Me.MetroTextBox2.Lines = New String(-1) {}
+        resources.ApplyResources(Me.MetroTextBox2, "MetroTextBox2")
+        Me.MetroTextBox2.MaxLength = 32767
+        Me.MetroTextBox2.Multiline = True
+        Me.MetroTextBox2.Name = "MetroTextBox2"
+        Me.MetroTextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox2.ReadOnly = True
+        Me.MetroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.MetroTextBox2.SelectedText = ""
+        Me.MetroTextBox2.SelectionLength = 0
+        Me.MetroTextBox2.SelectionStart = 0
+        Me.MetroTextBox2.ShortcutsEnabled = True
+        Me.MetroTextBox2.UseSelectable = True
+        Me.MetroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.MetroTextBox2.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
         'UserAboutInfoLbl
         '
         resources.ApplyResources(Me.UserAboutInfoLbl, "UserAboutInfoLbl")
@@ -251,8 +251,8 @@ Partial Class AboutFrm
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MetroTabControl1.ResumeLayout(False)
         Me.MetroTabPage1.ResumeLayout(False)
-        Me.MetroTabPage2.ResumeLayout(False)
         Me.MetroTabPage3.ResumeLayout(False)
+        Me.MetroTabPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
