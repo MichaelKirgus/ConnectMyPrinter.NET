@@ -41,7 +41,6 @@ Profileditor für die Erstellung von "Druckerprofilen":
 Mit einem kleinen Tool können Druckerprofile erstellt werden, welche automatisch z.B. 2 Drucker verbinden, den Standarddrucker ändern sowie einen Drucker löschen. Hierzu wird eine Profildatei mit der Dateierweiterung *.prpr erstellt. Die Profildatei ist in einer XML-Struktur aufgebaut, kann also jederzeit auch ohne den Profileditor bearbeitet werden.
 Es ist möglich, Druckerprofile über eine UNC-Freigabe auf einen anderen Client zu "pushen", die aktuell verbundenen Drucker abzurufen oder eine Konfiguration von einem Client auf einen anderen Client zu klonen.
 Falls ein Drucker bzw. Treiber sich nicht mit "normalen" Mitteln aus der Druckerwarteschlange entfernen lässt, stehen dem Administrator weitere Funktionen zur Verfügung.
-Wenn sich ein Drucker nicht mehr mit Windows-Bordmitteln entfernen lässt:
 
 ![Druckertreiber entfernen](ConnectMyPrinterImages/drex_hauptfenster_3_screen.png)
 
