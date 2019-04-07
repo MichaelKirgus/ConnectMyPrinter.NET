@@ -5261,13 +5261,13 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>ID_STRING15</td><td>1033</td><td>NEWSHO~1|NewShortcut12</td><td>0</td><td/><td>-1910144684</td></row>
 		<row><td>ID_STRING16</td><td>1031</td><td>Verbinden Sie neue Drucker oder Verwalten Sie die aktuellen Druckereinstellungen</td><td>0</td><td/><td>-1910150796</td></row>
 		<row><td>ID_STRING16</td><td>1033</td><td>Verbinden Sie neue Drucker oder Verwalten Sie die aktuellen Druckereinstellungen</td><td>0</td><td/><td>-1910150796</td></row>
-		<row><td>ID_STRING17</td><td>1031</td><td>https://www.kirgus.net</td><td>0</td><td/><td>-1910149964</td></row>
+		<row><td>ID_STRING17</td><td>1031</td><td>https://github.com/MichaelKirgus/ConnectMyPrinter.NET</td><td>0</td><td/><td>975648973</td></row>
 		<row><td>ID_STRING17</td><td>1033</td><td>https://www.kirgus.net</td><td>0</td><td/><td>-1910149964</td></row>
 		<row><td>ID_STRING18</td><td>1031</td><td>Verwaltet Drucker einfach und schnell</td><td>0</td><td/><td>-1910117196</td></row>
 		<row><td>ID_STRING18</td><td>1033</td><td>Verwaltet Drucker einfach und schnell</td><td>0</td><td/><td>-1910117196</td></row>
 		<row><td>ID_STRING19</td><td>1031</td><td>Hauptanwendung. Ohne diese Anwendung kann ein Endanwender keine Drucker hinzufügen oder entfernen.</td><td>0</td><td/><td>556177025</td></row>
 		<row><td>ID_STRING19</td><td>1033</td><td>Hauptanwendung. Ohne diese Anwendung kann ein Endanwender keine Drucker hinzufügen oder entfernen</td><td>0</td><td/><td>-2002376621</td></row>
-		<row><td>ID_STRING2</td><td>1031</td><td>https://www.kirgus.net</td><td>0</td><td/><td>1092982101</td></row>
+		<row><td>ID_STRING2</td><td>1031</td><td>https://github.com/MichaelKirgus/ConnectMyPrinter.NET</td><td>0</td><td/><td>975651021</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td>https://www.kirgus.net</td><td>0</td><td/><td>556199233</td></row>
 		<row><td>ID_STRING20</td><td>1031</td><td>Zusatztools</td><td>0</td><td/><td>-2002382252</td></row>
 		<row><td>ID_STRING20</td><td>1033</td><td>NewFeature2</td><td>0</td><td/><td>-2002358189</td></row>
@@ -5407,6 +5407,8 @@ KgAuAGQAbABsAA0ACgAqAC4AZQB4AGUADQAKACoALgBvAGMAeAA=
 		<row><td>ID_STRING81</td><td>1033</td><td>NewFeature18</td><td>0</td><td/><td>-1457014350</td></row>
 		<row><td>ID_STRING82</td><td>1031</td><td>Installiert eine .NET Core CLI, mit welchen das Verwalten von Druckern auf Windows (remote) von einem Linux bzw. Mac OS-Systems möglich ist.</td><td>0</td><td/><td>-1457049102</td></row>
 		<row><td>ID_STRING82</td><td>1033</td><td>Installiert eine .NET Core CLI, mit welchen das Verwalten von Druckern auf Windows (remote) von einem Linux bzw. Mac OS-Systems</td><td>0</td><td/><td>-1457053198</td></row>
+		<row><td>ID_STRING83</td><td>1031</td><td>https://github.com/MichaelKirgus/ConnectMyPrinter.NET</td><td>0</td><td/><td>975681709</td></row>
+		<row><td>ID_STRING83</td><td>1033</td><td>https://github.com/MichaelKirgus/ConnectMyPrinter.NET</td><td>0</td><td/><td>975681709</td></row>
 		<row><td>ID_STRING9</td><td>1031</td><td>DEINST~1|Deinstallieren</td><td>0</td><td/><td>-1910149677</td></row>
 		<row><td>ID_STRING9</td><td>1033</td><td>NEWSHO~1|NewShortcut6</td><td>0</td><td/><td>-1910157869</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1031</td><td>Dieses Feature wird nicht installiert.</td><td>0</td><td/><td>1092982101</td></row>
@@ -7019,6 +7021,7 @@ QwB1AHMAdABvAG0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>ARPPRODUCTICON</td><td>ARPPRODUCTICON.exe</td><td/></row>
 		<row><td>ARPSIZE</td><td/><td/></row>
 		<row><td>ARPURLINFOABOUT</td><td>##ID_STRING2##</td><td/></row>
+		<row><td>ARPURLUPDATEINFO</td><td>##ID_STRING83##</td><td/></row>
 		<row><td>AgreeToLicense</td><td>No</td><td/></row>
 		<row><td>ApplicationUsers</td><td>AllUsers</td><td/></row>
 		<row><td>CMDLINEFORPROGRAMFILE</td><td>/RUNFROMSETUP</td><td/></row>
@@ -7090,7 +7093,7 @@ QwB1AHMAdABvAG0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConnectMyPrinter.NET.Primäre Ausgabe</td><td/></row>
 		<row><td>ProductCode</td><td>{D9F305BE-DA52-4B9B-BCD9-9CF4C34BBE07}</td><td/></row>
 		<row><td>ProductName</td><td>ConnectMyPrinter.NET</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0029</td><td/></row>
+		<row><td>ProductVersion</td><td>1.1.0.29</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
