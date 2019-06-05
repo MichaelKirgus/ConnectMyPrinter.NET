@@ -15,6 +15,7 @@ Public Class Form1
 
     Public AppSettings As New AppSettingsClass
     Public AppSettingFile As String = "AppSettings.xml"
+    Public AllowStart As Boolean = True
 
     Public Function LoadSettings(ByVal Filename As String) As AppSettingsClass
         'Diese Funktion lädt die Einstellungen der Anwendung
@@ -71,16 +72,20 @@ Public Class Form1
 
             If AppSettings.AllowUserToChangeSettingsOnlyWithElevatedRights Then
                 If Not HelperFunc.IsAdmin Then
+                    AllowStart = False
                     Dim ii As New Process
                     ii.StartInfo.FileName = My.Application.Info.DirectoryPath & "\" & My.Application.Info.AssemblyName & ".exe"
                     ii.StartInfo.Verb = "runas"
                     ii.Start()
-                    Application.Exit()
                 End If
             End If
 
-            ToolStripTextBox1.Text = AppSettingFile
-            PropertyGrid1.SelectedObject = AppSettings
+            If AllowStart Then
+                ToolStripTextBox1.Text = AppSettingFile
+                PropertyGrid1.SelectedObject = AppSettings
+            Else
+                Me.Enabled = False
+            End If
         Catch ex As Exception
         End Try
     End Sub
@@ -88,15 +93,20 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         XLoadSettings()
+        If AllowStart = False Then
+            Application.Exit()
+        End If
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Dim jj As MsgBoxResult
-        jj = MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterSettingsConsole.TranslatedStrings", GetType(Form1), MCultureInf, "SaveSettingsStr", ""), MsgBoxStyle.YesNo)
-        If jj = MsgBoxResult.Yes Then
-            If Not SaveSettings(AppSettings, AppSettingFile) Then
-                MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterSettingsConsole.TranslatedStrings", GetType(Form1), MCultureInf, "SaveSettingsErrorStr", ""), MsgBoxStyle.Exclamation)
-                e.Cancel = True
+        If AllowStart Then
+            Dim jj As MsgBoxResult
+            jj = MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterSettingsConsole.TranslatedStrings", GetType(Form1), MCultureInf, "SaveSettingsStr", ""), MsgBoxStyle.YesNo)
+            If jj = MsgBoxResult.Yes Then
+                If Not SaveSettings(AppSettings, AppSettingFile) Then
+                    MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterSettingsConsole.TranslatedStrings", GetType(Form1), MCultureInf, "SaveSettingsErrorStr", ""), MsgBoxStyle.Exclamation)
+                    e.Cancel = True
+                End If
             End If
         End If
     End Sub
