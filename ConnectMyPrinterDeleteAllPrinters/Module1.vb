@@ -24,15 +24,10 @@ Module Module1
     Sub Main()
         Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(Module1), MCultureInf, "LoadEnvStr", ""))
         Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterDeleteAllPrinters.TranslatedStrings", GetType(Module1), MCultureInf, "LoadSettingsFileStr", ""))
-        'Laden der Einstellungen für alle Benutzer
-        If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile) Then
-            AppSettingFile = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile
-        Else
-            'Laden der Einstellungen (über AppData)
-            If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
-                AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
-            End If
-        End If
+
+        'Korrekte AppSettings-Datei laden
+        Dim MUIHelper As New MUISettingsHandler
+        AppSettingFile = MUIHelper.GetAppSettingsFilePath(True)
 
         'Befehlszeilenparameter prüfen
         For Each argument In My.Application.CommandLineArgs

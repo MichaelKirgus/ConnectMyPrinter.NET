@@ -77,17 +77,9 @@ Public Class CLIWrapper
 
     Public Sub LoadSettingsFile()
         'Lade Anwendungseinstellungen
-        'Laden der Einstellungen für alle Benutzer
-        If IO.File.Exists(Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile) Then
-            AppSettingFile = Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile
-            Debug.WriteLine(Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile)
-        Else
-            'Laden der Einstellungen (über AppData)
-            If IO.File.Exists(Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile) Then
-                AppSettingFile = Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile
-                Debug.WriteLine(Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile)
-            End If
-        End If
+        'Korrekte AppSettings-Datei laden
+        Dim MUIHelper As New MUISettingsHandler
+        AppSettingFile = MUIHelper.GetAppSettingsFilePath(True)
 
         LoadAppSettingsInternal()
     End Sub

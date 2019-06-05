@@ -25,15 +25,9 @@ Module Module1
         Dim FormModule As Form1 = New Form1
 
         Console.WriteLine(MLangHelper.GetCultureString("ConnectMyPrinterClean.TranslatedStrings", GetType(Module1), MCultureInf, "LoadSettingsStr", ""))
-        'Laden der Einstellungen für alle Benutzer
-        If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile) Then
-            AppSettingFile = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile
-        Else
-            'Laden der Einstellungen (über AppData)
-            If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
-                AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
-            End If
-        End If
+        'Korrekte AppSettings-Datei laden
+        Dim MUIHelper As New MUISettingsHandler
+        AppSettingFile = MUIHelper.GetAppSettingsFilePath(True)
 
         'Befehlszeilenparameter prüfen
         For Each argument In My.Application.CommandLineArgs

@@ -30,15 +30,9 @@ Public Class BackupFrm
     Dim ShowNotifys As Boolean = False
 
     Private Sub BackupFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Laden der Einstellungen für alle Benutzer
-        If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile) Then
-            AppSettingFile = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData & "\" & AppSettingFile
-        Else
-            'Laden der Einstellungen (über AppData)
-            If IO.File.Exists(My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile) Then
-                AppSettingFile = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData & "\" & AppSettingFile
-            End If
-        End If
+        'Korrekte AppSettings-Datei laden
+        Dim MUIHelper As New MUISettingsHandler
+        AppSettingFile = MUIHelper.GetAppSettingsFilePath(True)
 
         'Befehlszeilenparameter prüfen
         For Each argument In My.Application.CommandLineArgs

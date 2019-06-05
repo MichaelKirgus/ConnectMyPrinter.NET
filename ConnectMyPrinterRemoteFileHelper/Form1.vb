@@ -51,30 +51,9 @@ Public Class Form1
 
     Public Sub LoadSettingsFile()
         'Lade Anwendungseinstellungen
-        'Laden der Einstellungen für alle Benutzer
-        If IO.File.Exists(Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile) Then
-            AppSettingFile = Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile
-            Debug.WriteLine(Environment.SpecialFolder.LocalApplicationData & "\" & AppSettingFile)
-        Else
-            'Laden der Einstellungen (über AppData)
-            If IO.File.Exists(Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile) Then
-                AppSettingFile = Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile
-                Debug.WriteLine(Environment.SpecialFolder.ApplicationData & "\" & AppSettingFile)
-            Else
-                'Es liegen keine Einstellungen in den App-Data-Ordnern.
-                'Prüfen, on lokalisierte Anwendungseinstellungen im Anwendungsordner liegen:
-                If MCultureInf.IetfLanguageTag.Contains("de") Then
-                    If IO.File.Exists(AppSettingDEFile) Then
-                        AppSettingFile = AppSettingDEFile
-                    End If
-                End If
-                If MCultureInf.IetfLanguageTag.Contains("en") Then
-                    If IO.File.Exists(AppSettingDEFile) Then
-                        AppSettingFile = AppSettingENFile
-                    End If
-                End If
-            End If
-        End If
+        'Korrekte AppSettings-Datei laden
+        Dim MUIHelper As New MUISettingsHandler
+        AppSettingFile = MUIHelper.GetAppSettingsFilePath(True)
 
         'Laden der Einstellungen (im Programmverzeichnis oder über Befehlszeile)
         AppSettings = MainApp.LoadSettings(AppSettingFile)
