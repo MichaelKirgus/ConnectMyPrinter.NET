@@ -1128,4 +1128,7 @@
   <metadata name="$this.Localizable" xml:space="preserve" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.MinimumSize" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>800, 688</value>
+  </data>
 </root>

@@ -2105,6 +2105,10 @@
           <source>True</source>
           <target state="needs-review-translation">True</target>
         </trans-unit>
+        <trans-unit id="$this.MinimumSize" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>800, 688</source>
+          <target state="needs-review-translation">800, 688</target>
+        </trans-unit>
       </group>
     </body>
   </file>
