@@ -4,6 +4,7 @@
 'You should have received a copy of the GNU General Public License along with this program; if not, see <https://www.gnu.org/licenses>.
 Imports System.Management
 Imports System.Printing
+Imports System.ServiceProcess
 Imports ConnectMyPrinterEnumerationLib
 Imports Microsoft.Win32
 
@@ -50,6 +51,25 @@ Public Class ManagePrinter
             Return True
         Catch ex As Exception
             Return False
+        End Try
+    End Function
+
+    Public Function GetPrinterServiceState() As Integer
+        Try
+            Dim hh As New ServiceController("Spooler")
+            If hh.Status = ServiceControllerStatus.Running Then
+                Return 1
+            End If
+            If hh.Status = ServiceControllerStatus.Stopped Then
+                Return 0
+            End If
+            If hh.Status = ServiceControllerStatus.Paused Then
+                Return -1
+            End If
+
+            Return -1
+        Catch ex As Exception
+            Return -1
         End Try
     End Function
 
