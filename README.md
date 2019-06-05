@@ -60,4 +60,4 @@ Für eine unbeaufsichtigte Deinstallation folgender Aufruf:
 
 <h2>Download</h2>
 
-Die Installationsdateien können im MSI-Format unter dem Ordner [Setup](ConnectMyPrinterSetupRelease/Setup) in der jeweiligen Version heruntergeladen werden.
+Die Installationsdateien können unter Releases heruntergeladen werden.
