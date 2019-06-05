@@ -13,8 +13,6 @@ Public Class Form1
     Public MCultureInf As CultureInfo = CultureInfo.CurrentUICulture
 
     Public AppSettings As New AppSettingsClass
-    Public AppSettingDEFile As String = "AppSettings_de-DE.xml"
-    Public AppSettingENFile As String = "AppSettings_en-US.xml"
     Public AppSettingFile As String = "AppSettings.xml"
 
     Public Function LoadSettings(ByVal Filename As String) As AppSettingsClass
