@@ -43,6 +43,7 @@ Partial Class AboutFrm
         Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
         Me.UserAboutInfoLbl = New MetroFramework.Controls.MetroLabel()
         Me.AppVersionLbl = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLink1 = New MetroFramework.Controls.MetroLink()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
@@ -130,6 +131,7 @@ Partial Class AboutFrm
         Me.MetroTextBox1.SelectionLength = 0
         Me.MetroTextBox1.SelectionStart = 0
         Me.MetroTextBox1.ShortcutsEnabled = True
+        Me.MetroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.MetroTextBox1.UseSelectable = True
         Me.MetroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.MetroTextBox1.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -229,12 +231,20 @@ Partial Class AboutFrm
         resources.ApplyResources(Me.AppVersionLbl, "AppVersionLbl")
         Me.AppVersionLbl.Name = "AppVersionLbl"
         '
+        'MetroLink1
+        '
+        resources.ApplyResources(Me.MetroLink1, "MetroLink1")
+        Me.MetroLink1.Name = "MetroLink1"
+        Me.MetroLink1.Style = MetroFramework.MetroColorStyle.Black
+        Me.MetroLink1.UseSelectable = True
+        '
         'AboutFrm
         '
         Me.AcceptButton = Me.MetroButton1
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
+        Me.Controls.Add(Me.MetroLink1)
         Me.Controls.Add(Me.AppVersionLbl)
         Me.Controls.Add(Me.UserAboutInfoLbl)
         Me.Controls.Add(Me.MetroTabControl1)
@@ -276,4 +286,5 @@ Partial Class AboutFrm
     Friend WithEvents MetroTextBox3 As Controls.MetroTextBox
     Friend WithEvents UserAboutInfoLbl As Controls.MetroLabel
     Friend WithEvents AppVersionLbl As Controls.MetroLabel
+    Friend WithEvents MetroLink1 As Controls.MetroLink
 End Class

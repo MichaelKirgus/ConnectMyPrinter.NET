@@ -31,4 +31,11 @@ Public Class AboutFrm
         Catch ex As Exception
         End Try
     End Sub
+
+    Private Sub MetroLink1_Click(sender As Object, e As EventArgs) Handles MetroLink1.Click
+        Try
+            Shell("https://github.com/MichaelKirgus/ConnectMyPrinter.NET")
+        Catch ex As Exception
+        End Try
+    End Sub
 End Class

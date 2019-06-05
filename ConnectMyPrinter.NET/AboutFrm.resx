@@ -142,13 +142,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="MetroLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="MetroLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 67</value>
+    <value>179, 63</value>
   </data>
   <data name="MetroLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 25</value>
@@ -169,13 +169,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MetroLabel1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="MetroLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="MetroLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 92</value>
+    <value>182, 88</value>
   </data>
   <data name="MetroLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>357, 38</value>
@@ -197,13 +197,13 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MetroLabel2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="MetroLabel3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="MetroLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 142</value>
+    <value>182, 150</value>
   </data>
   <data name="MetroLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>321, 15</value>
@@ -224,7 +224,7 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MetroLabel3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="MetroButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>438, 491</value>
@@ -248,7 +248,7 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MetroButton1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="resource.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -310,30 +310,6 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
   <data name="&gt;&gt;MetroTabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="resource.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Location1" type="System.Drawing.Point, System.Drawing">
-    <value>275, 1</value>
-  </data>
-  <data name="resource.Size1" type="System.Drawing.Size, System.Drawing">
-    <value>221, 221</value>
-  </data>
-  <data name="resource.TabIndex1" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="resource.Visible1" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="MetroTextBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="MetroTextBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>497, 223</value>
-  </data>
-  <data name="MetroTextBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
   <data name="&gt;&gt;MetroTextBox3.Name" xml:space="preserve">
     <value>MetroTextBox3</value>
   </data>
@@ -369,30 +345,6 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
   </data>
   <data name="&gt;&gt;MetroTabPage3.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="resource.Image2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Location2" type="System.Drawing.Point, System.Drawing">
-    <value>275, 1</value>
-  </data>
-  <data name="resource.Size2" type="System.Drawing.Size, System.Drawing">
-    <value>221, 221</value>
-  </data>
-  <data name="resource.TabIndex2" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="resource.Visible2" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="MetroTextBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="MetroTextBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>497, 223</value>
-  </data>
-  <data name="MetroTextBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;MetroTextBox2.Name" xml:space="preserve">
     <value>MetroTextBox2</value>
@@ -449,13 +401,85 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MetroTabControl1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="resource.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="resource.Location1" type="System.Drawing.Point, System.Drawing">
+    <value>275, 1</value>
+  </data>
+  <data name="resource.Size1" type="System.Drawing.Size, System.Drawing">
+    <value>221, 221</value>
+  </data>
+  <data name="resource.TabIndex1" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible1" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MetroTextBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="MetroTextBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>497, 223</value>
+  </data>
+  <data name="MetroTextBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox3.Name" xml:space="preserve">
+    <value>MetroTextBox3</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox3.Parent" xml:space="preserve">
+    <value>MetroTabPage3</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="resource.Image2" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="resource.Location2" type="System.Drawing.Point, System.Drawing">
+    <value>275, 1</value>
+  </data>
+  <data name="resource.Size2" type="System.Drawing.Size, System.Drawing">
+    <value>221, 221</value>
+  </data>
+  <data name="resource.TabIndex2" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible2" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MetroTextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="MetroTextBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>497, 223</value>
+  </data>
+  <data name="MetroTextBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox2.Name" xml:space="preserve">
+    <value>MetroTextBox2</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox2.Parent" xml:space="preserve">
+    <value>MetroTabPage2</value>
+  </data>
+  <data name="&gt;&gt;MetroTextBox2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="UserAboutInfoLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 173</value>
+    <value>182, 178</value>
   </data>
   <data name="UserAboutInfoLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 38</value>
+    <value>357, 33</value>
   </data>
   <data name="UserAboutInfoLbl.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -470,10 +494,10 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UserAboutInfoLbl.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="AppVersionLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 74</value>
+    <value>391, 70</value>
   </data>
   <data name="AppVersionLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 15</value>
@@ -495,6 +519,33 @@ Tool zum einfachen Verwalten von Druckern unter Windows.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AppVersionLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MetroLink1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 126</value>
+  </data>
+  <data name="MetroLink1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>357, 21</value>
+  </data>
+  <data name="MetroLink1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="MetroLink1.Text" xml:space="preserve">
+    <value>https://github.com/MichaelKirgus/ConnectMyPrinter.NET</value>
+  </data>
+  <data name="MetroLink1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;MetroLink1.Name" xml:space="preserve">
+    <value>MetroLink1</value>
+  </data>
+  <data name="&gt;&gt;MetroLink1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;MetroLink1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MetroLink1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
