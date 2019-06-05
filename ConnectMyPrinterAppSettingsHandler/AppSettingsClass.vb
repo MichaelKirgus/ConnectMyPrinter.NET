@@ -208,6 +208,10 @@ Imports ConnectMyPrinterEnumerationLib
     ''' </summary>
     Property AllowUserToChangeSettings As Boolean = True
     ''' <summary>
+    ''' Der Endanwender ist nur dann in der Lage, die Anwendungseinstellungs-Konsole aufzurufen, wenn er administrative Berechtigungen besitzt.
+    ''' </summary>
+    Property AllowUserToChangeSettingsOnlyWithElevatedRights As Boolean = False
+    ''' <summary>
     ''' Die Anwendungseinstellungen können dauerhaft gespeichert werden.
     ''' </summary>
     Property AllowUserToSaveSettings As Boolean = True
