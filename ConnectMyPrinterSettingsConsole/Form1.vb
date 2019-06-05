@@ -5,6 +5,7 @@
 Imports System.Globalization
 Imports System.IO
 Imports System.Xml.Serialization
+Imports ConnectMyPrinterACLHelperLib
 Imports ConnectMyPrinterAppSettingsHandler
 Imports ConnectMyPrinterLanguageHelper
 
@@ -63,6 +64,19 @@ Public Class Form1
                 AppSettings = LoadSettings(AppSettingFile)
             Else
                 AppSettings = LoadSettings(AppSettingFile)
+            End If
+
+            'Prüfen, ob Anwender ohne administrative Rechte Konsole öffnen darf:
+            Dim HelperFunc As New HelperFunctions
+
+            If AppSettings.AllowUserToChangeSettingsOnlyWithElevatedRights Then
+                If Not HelperFunc.IsAdmin Then
+                    Dim ii As New Process
+                    ii.StartInfo.FileName = My.Application.Info.DirectoryPath & "\" & My.Application.Info.AssemblyName & ".exe"
+                    ii.StartInfo.Verb = "runas"
+                    ii.Start()
+                    Application.Exit()
+                End If
             End If
 
             ToolStripTextBox1.Text = AppSettingFile
