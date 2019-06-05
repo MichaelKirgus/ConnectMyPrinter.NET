@@ -155,6 +155,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConnectMyPrinterACLHelperLib\ConnectMyPrinterACLHelperLib.vbproj">
+      <Project>{95C18515-2072-4961-A0EF-8FBDB893810F}</Project>
+      <Name>ConnectMyPrinterACLHelperLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConnectMyPrinterAppSettingsHandler\ConnectMyPrinterAppSettingsHandler.vbproj">
       <Project>{AE01B7FF-C216-4752-B4FF-D6956A772D44}</Project>
       <Name>ConnectMyPrinterAppSettingsHandler</Name>
