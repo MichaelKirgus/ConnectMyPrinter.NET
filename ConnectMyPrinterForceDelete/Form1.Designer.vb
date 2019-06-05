@@ -63,6 +63,7 @@ Partial Class Form1
         resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.ListView1.FullRowSelect = True
+        Me.ListView1.HideSelection = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -90,6 +91,7 @@ Partial Class Form1
         resources.ApplyResources(Me.ListView2, "ListView2")
         Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
         Me.ListView2.FullRowSelect = True
+        Me.ListView2.HideSelection = False
         Me.ListView2.Name = "ListView2"
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Details
