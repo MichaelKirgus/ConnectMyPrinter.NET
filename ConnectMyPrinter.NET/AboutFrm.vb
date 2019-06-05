@@ -34,7 +34,9 @@ Public Class AboutFrm
 
     Private Sub MetroLink1_Click(sender As Object, e As EventArgs) Handles MetroLink1.Click
         Try
-            Shell("https://github.com/MichaelKirgus/ConnectMyPrinter.NET")
+            Dim kk As New Process
+            kk.StartInfo.FileName = "https://github.com/MichaelKirgus/ConnectMyPrinter.NET"
+            kk.Start()
         Catch ex As Exception
         End Try
     End Sub
