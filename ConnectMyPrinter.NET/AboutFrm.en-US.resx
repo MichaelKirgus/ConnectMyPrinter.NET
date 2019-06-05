@@ -229,4 +229,16 @@ Tool to easily manage printers on Windows.</value>
   <data name="AppVersionLbl.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
+  <data name="MetroLink1.Location" xml:space="preserve" type="System.Drawing.Point, System.Drawing">
+    <value>182, 126</value>
+  </data>
+  <data name="MetroLink1.Size" xml:space="preserve" type="System.Drawing.Size, System.Drawing">
+    <value>357, 21</value>
+  </data>
+  <data name="MetroLink1.TabIndex" xml:space="preserve" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="MetroLink1.TextAlign" xml:space="preserve" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
 </root>

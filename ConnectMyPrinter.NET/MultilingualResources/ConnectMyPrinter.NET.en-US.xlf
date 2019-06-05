@@ -27,8 +27,9 @@
           <target state="needs-review-translation">True</target>
         </trans-unit>
         <trans-unit id="MetroLabel1.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>179, 67</source>
+          <source>179, 63</source>
           <target state="needs-review-translation">179, 67</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroLabel1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>206, 25</source>
@@ -47,8 +48,9 @@
           <target state="needs-review-translation">True</target>
         </trans-unit>
         <trans-unit id="MetroLabel2.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>182, 92</source>
+          <source>182, 88</source>
           <target state="needs-review-translation">182, 92</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="MetroLabel2.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>357, 38</source>
@@ -69,7 +71,7 @@ Tool to easily manage printers on Windows.</target>
           <target state="needs-review-translation">True</target>
         </trans-unit>
         <trans-unit id="MetroLabel3.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>182, 142</source>
+          <source>182, 150</source>
           <target state="needs-review-translation">182, 145</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -282,20 +284,23 @@ Tool to easily manage printers on Windows.</target>
           <target state="needs-review-translation">False</target>
         </trans-unit>
         <trans-unit id="UserAboutInfoLbl.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>182, 173</source>
+          <source>182, 178</source>
           <target state="needs-review-translation">182, 173</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="UserAboutInfoLbl.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
-          <source>357, 38</source>
+          <source>357, 33</source>
           <target state="needs-review-translation">357, 38</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="UserAboutInfoLbl.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
           <source>6</source>
           <target state="needs-review-translation">6</target>
         </trans-unit>
         <trans-unit id="AppVersionLbl.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
-          <source>391, 74</source>
+          <source>391, 70</source>
           <target state="needs-review-translation">391, 74</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="AppVersionLbl.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
           <source>148, 15</source>
@@ -310,6 +315,26 @@ Tool to easily manage printers on Windows.</target>
 </source>
           <target state="new">
 </target>
+        </trans-unit>
+        <trans-unit id="MetroLink1.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>182, 126</source>
+          <target state="needs-review-translation">182, 126</target>
+        </trans-unit>
+        <trans-unit id="MetroLink1.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>357, 21</source>
+          <target state="needs-review-translation">357, 21</target>
+        </trans-unit>
+        <trans-unit id="MetroLink1.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>8</source>
+          <target state="needs-review-translation">8</target>
+        </trans-unit>
+        <trans-unit id="MetroLink1.Text" translate="yes" xml:space="preserve">
+          <source>https://github.com/MichaelKirgus/ConnectMyPrinter.NET</source>
+          <target state="new">https://github.com/MichaelKirgus/ConnectMyPrinter.NET</target>
+        </trans-unit>
+        <trans-unit id="MetroLink1.TextAlign" translate="yes" xml:space="preserve" extype="System.Drawing.ContentAlignment, System.Drawing">
+          <source>MiddleLeft</source>
+          <target state="needs-review-translation">MiddleLeft</target>
         </trans-unit>
       </group>
     </body>
