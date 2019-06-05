@@ -64,7 +64,21 @@ Public Class Form1
         Else
         End If
 
+        SetSpoolerStateGUI()
         LoadAllItems()
+    End Sub
+
+    Public Sub SetSpoolerStateGUI()
+        Try
+            Dim ss As New ConnectMyPrinterPrinterManageLib.ManagePrinter
+
+            If ss.GetPrinterServiceState = 1 Then
+                Button5.BackColor = Color.LightGreen
+            Else
+                Button6.BackColor = Color.LightGreen
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 
     Public Sub LoadAllItems()
@@ -231,18 +245,39 @@ Public Class Form1
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Try
+            Me.UseWaitCursor = True
+            Button6.BackColor = Color.LightYellow
+
             Dim ss As New ConnectMyPrinterPrinterManageLib.ManagePrinter
             ss.StopPrinterService()
+
+            If ss.GetPrinterServiceState = 0 Then
+                Button6.BackColor = Color.LightGreen
+                Button5.BackColor = Me.BackColor
+            Else
+                Button6.BackColor = Me.BackColor
+            End If
         Catch ex As Exception
         End Try
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Try
+            Me.UseWaitCursor = True
+            Button5.BackColor = Color.LightYellow
+
             Dim ss As New ConnectMyPrinterPrinterManageLib.ManagePrinter
             ss.StartPrinterService()
+
+            If ss.GetPrinterServiceState = 1 Then
+                Button5.BackColor = Color.LightGreen
+                Button6.BackColor = Me.BackColor
+            Else
+                Button5.BackColor = Me.BackColor
+            End If
         Catch ex As Exception
         End Try
+        Me.UseWaitCursor = False
     End Sub
 
     Private Sub SpoolerStoppenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SpoolerStoppenToolStripMenuItem.Click
