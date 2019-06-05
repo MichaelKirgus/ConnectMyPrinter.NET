@@ -259,6 +259,7 @@ Public Class Form1
             End If
         Catch ex As Exception
         End Try
+        Me.UseWaitCursor = False
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
