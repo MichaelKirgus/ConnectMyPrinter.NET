@@ -6,6 +6,7 @@ Imports ConnectMyPrinter.NET
 Imports ConnectMyPrinterAppSettingsHandler
 Imports ConnectMyPrinterDistributionLib
 Imports ConnectMyPrinterEnumerationLib
+Imports ConnectMyPrinterMigrationHelper
 Imports ConnectMyPrinterOutlookHelper
 Imports ConnectMyPrinterPrinterManageLib
 Imports ConnectMyPrinterRemoteFileHandler
@@ -35,6 +36,8 @@ Public Class CLIWrapper
     Public MailMessage As String = ""
     Public MailProfilePath As String = ""
     Public Clientname As String = ""
+    Public NewPrintserver As String = ""
+    Public TempFolder As String = ""
     Public Verbose As Boolean = False
     Public PingClients As Boolean = False
     Public CheckForAdminTracePath As Boolean = False
@@ -73,6 +76,9 @@ Public Class CLIWrapper
         Merge2FilesToNewProfileFile = 27
         SendProfileMailAuth = 28
         SendProfileMail = 29
+        MigratePrintersSimulate = 30
+        MigratePrinters = 31
+        MigratePrintersAndSettings = 32
     End Enum
 
     Public Sub LoadSettingsFile()
@@ -403,6 +409,23 @@ Public Class CLIWrapper
                         MailSubject = arglist(ind + 5)
                         MailMessage = arglist(ind + 6)
                         MailProfilePath = arglist(ind + 7)
+                    End If
+                    If arglist(ind).StartsWith("-MIGSIM") Then
+                        CLIAction = CLIActionEnum.MigratePrintersSimulate
+                        NewPrintserver = arglist(ind + 1)
+                        Try
+                            TempFolder = arglist(ind + 2)
+                        Catch ex As Exception
+                        End Try
+                    End If
+                    If arglist(ind).StartsWith("-MIGPRT") Then
+                        CLIAction = CLIActionEnum.MigratePrinters
+                        NewPrintserver = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-MIGPRS") Then
+                        CLIAction = CLIActionEnum.MigratePrintersAndSettings
+                        NewPrintserver = arglist(ind + 1)
+                        TempFolder = arglist(ind + 2)
                     End If
                     If arglist(ind).StartsWith("-AS") Then
                         AppSettingFile = arglist(ind + 1)
@@ -763,6 +786,33 @@ Public Class CLIWrapper
                     Return False
                 End If
             End If
+            If CLIAction = CLIActionEnum.MigratePrintersSimulate Then
+                PostVerboseText("Selected action: Migrate printers and settings (without actions)")
+                Dim zz As New MigrationHelper
+                If zz.MigratePrinters(NewPrintserver, True, True, True, False, True, TempFolder, True) Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
+            If CLIAction = CLIActionEnum.MigratePrinters Then
+                PostVerboseText("Selected action: Migrate printers")
+                Dim zz As New MigrationHelper
+                If zz.MigratePrinters(NewPrintserver, False, True, True, False, True, "", False) Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
+            If CLIAction = CLIActionEnum.MigratePrintersAndSettings Then
+                PostVerboseText("Selected action: Migrate printers and settings")
+                Dim zz As New MigrationHelper
+                If zz.MigratePrinters(NewPrintserver, True, True, True, False, False, TempFolder, False) Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
 
             Return False
         Catch ex As Exception
@@ -919,6 +969,9 @@ Public Class CLIWrapper
             Console.WriteLine("-CBPF" & vbTab & vbTab & "Merge 2 profile files to new profile file: <Filename 1> <Filename 2> <New filename>")
             Console.WriteLine("-SAMTA" & vbTab & vbTab & "Send printer profile to e-mail-address (SMTP-Auth): <SMTP server> <SMTPUsername> <SMTPPassword> <SMTPPort> <FROMAdress> <TOAddress> <Subject> <Message> <Profile filename>")
             Console.WriteLine("-SMTA" & vbTab & vbTab & "Send printer profile to e-mail-address: <SMTP server> <SMTPPort> <FROMAdress> <TOAddress> <Subject> <Message> <Profile filename>")
+            Console.WriteLine("-MIGSIM" & vbTab & vbTab & "Migrate printers on local machine (simulate): <New Printserver>")
+            Console.WriteLine("-MIGPRT" & vbTab & vbTab & "Migrate printers on local machine: <New Printserver>")
+            Console.WriteLine("-MIGPRS" & vbTab & vbTab & "Migrate printers and settings on local machine: <New Printserver> <Settings TempPath>")
             Console.WriteLine("[-AS]" & vbTab & vbTab & "Load custom settings file <File>")
             Console.WriteLine("[-CATP]" & vbTab & vbTab & "Set custom admin trace path <Tracing path>")
             Console.WriteLine("[-V]" & vbTab & vbTab & "Verbose output")
