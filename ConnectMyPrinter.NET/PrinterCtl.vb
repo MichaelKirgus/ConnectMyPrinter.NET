@@ -598,4 +598,8 @@ Public Class PrinterCtl
         Dim kk As New ConnectMyPrinterOutlookHelper.OutlookHelperClass
         kk.SendOutlookMail("Druckerprofil", "", tmpfilename)
     End Sub
+
+    Private Sub PrinterCtl_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDoubleClick
+        DefaultDoublecklickAction()
+    End Sub
 End Class
