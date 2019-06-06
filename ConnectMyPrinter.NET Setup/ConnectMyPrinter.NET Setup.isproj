@@ -102,6 +102,10 @@
 			<Name>ConnectMyPrinterManagerCoreConsole</Name>
 			<Project>{136CDEC0-24C6-4EAC-A1AF-E9AF08745AED}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\ConnectMyPrinterMigrationHelper\ConnectMyPrinterMigrationHelper.vbproj">
+			<Name>ConnectMyPrinterMigrationHelper</Name>
+			<Project>{EEEE59C0-60A5-4C2A-9520-C8C5D513DE7B}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\ConnectMyPrinterPrinterManageLib\ConnectMyPrinterPrinterManageLib.vbproj">
 			<Name>ConnectMyPrinterPrinterManageLib</Name>
 			<Project>{BE968C84-9AE3-4F63-8466-FA21F66386B0}</Project>
