@@ -925,13 +925,15 @@ Public Class Form1
                     Dim printserver As PrintServerItem
                     printserver = resultx(resultx.Count - 1)
 
-                    matchprinters.Clear()
-
+                    Dim bestprinter As New List(Of PrinterQueueInfo)
                     For Each item As PrinterQueueInfo In matchprinters
                         If item.Server.ToLower = printserver.PrintServerName.ToLower Then
-                            matchprinters.Add(item)
+                            bestprinter.Add(item)
                         End If
                     Next
+
+                    matchprinters.Clear()
+                    matchprinters.Add(bestprinter(0))
                 End If
             End If
 
