@@ -450,6 +450,12 @@ Public Class Form1
         Try
             PrintQueuesAutoComplete.Clear()
 
+            'Auf Duplikate in der Liste prüfen und ggf. entfernen
+            If AppSettings.PrintServers.Count > 1 Then
+                Obj = RemoveDupItems(Obj)
+            End If
+
+            'Liste generieren
             For index = 0 To Obj.Count - 1
                 PrintQueuesAutoComplete.Add(Obj(index).ShareName)
             Next
@@ -458,6 +464,30 @@ Public Class Form1
         Catch ex As Exception
             _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "ErrorLogStr", "Error"), Err)
             Return False
+        End Try
+    End Function
+
+    Public Function RemoveDupItems(ByVal Obj As List(Of PrinterQueueInfo)) As List(Of PrinterQueueInfo)
+        Try
+            Dim nodupcollection As New List(Of PrinterQueueInfo)
+
+            For ind1 = 0 To Obj.Count - 1
+                Dim additm As Boolean = True
+                For ind2 = 0 To nodupcollection.Count - 1
+                    If Obj(ind1).ShareName.ToLower = nodupcollection(ind2).ShareName.ToLower Then
+                        additm = False
+                    End If
+                Next
+
+                If additm Then
+                    nodupcollection.Add(Obj(ind1))
+                End If
+            Next
+
+            Return nodupcollection
+        Catch ex As Exception
+            _Log.Write(ConnectMyPrinterLog.Logging.LogType._Error, Me, MLangHelper.GetCultureString("ConnectMyPrinter.NET.TranslatedStrings", GetType(Form1), MCultureInf, "ErrorLogStr", "Error"), Err)
+            Return Obj
         End Try
     End Function
 
