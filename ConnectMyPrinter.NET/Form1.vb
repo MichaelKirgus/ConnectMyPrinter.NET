@@ -877,7 +877,7 @@ Public Class Form1
                     matchprinters.Clear()
                     matchprinters.Add(correctprinter)
                 Else
-                    'Der Drucker ist auf mehrern Printservern angelegt. Der Server muss automatisch ermittelt werden.
+                    'Der Drucker ist auf mehreren Printservern angelegt. Der Server muss automatisch ermittelt werden.
 
                     Dim bestsrvindex As Integer = 0
                     Dim resultx As New List(Of PrintServerItem)
@@ -923,8 +923,10 @@ Public Class Form1
             End If
 
             If qq = MsgBoxResult.Yes Then
-                Shell("rundll32 printui.dll PrintUIEntry /dn /n" & matchprinters(0).Server & "\" & matchprinters(0).ShareName & " /q", AppWinStyle.Hide, True, AppSettings.MaxPrinterAPIShellTimout)
-                Shell("rundll32 printui.dll PrintUIEntry /in /n" & matchprinters(0).Server & "\" & matchprinters(0).ShareName, AppWinStyle.Hide, True, AppSettings.MaxPrinterAPIShellTimout)
+
+                'Drucker verbinden
+                Shell("rundll32 printui.dll PrintUIEntry /dn /n " & matchprinters(0).Server & "\" & matchprinters(0).ShareName & " /q", AppWinStyle.Hide, True, AppSettings.MaxPrinterAPIShellTimout)
+                Shell("rundll32 printui.dll PrintUIEntry /in /n " & matchprinters(0).Server & "\" & matchprinters(0).ShareName, AppWinStyle.Hide, True, AppSettings.MaxPrinterAPIShellTimout)
 
                 If SetDefaultPrinter Then
                     PrinterManageService.SetDefaultPrinter(matchprinters(0))
