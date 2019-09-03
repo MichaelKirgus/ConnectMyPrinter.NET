@@ -155,7 +155,8 @@ Public Class MigrationHelper
                 Try
                     Dim uu As New ConnectMyPrinterPrinterManageLib.ManagePrinter
 
-                    Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Server & "\" & item.ShareName, AppWinStyle.Hide, True, 120)
+                    'Drucker verbinden
+                    Shell("rundll32 printui.dll PrintUIEntry /in /n " & item.Server & "\" & item.ShareName, AppWinStyle.Hide, True, 120)
                 Catch ex As Exception
                     Return False
                 End Try
