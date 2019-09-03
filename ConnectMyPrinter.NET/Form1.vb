@@ -558,6 +558,21 @@ Public Class Form1
                         If My.Computer.Network.Ping(item.PrintServerName, item.PingTimeout) Then
                             result.AddRange(GetPrinterQueries(item.PrintServerName))
                         Else
+                            'Falls der Server nicht optional ist, muss ein Fehler zurückgegeben werden
+                            If item.OptionalServer = False Then
+                                PrinterCollectReturnState = 2
+                                If AppSettings.CancelCollectionOnPrintServerNotAvailable Then
+                                    If timeout.IsRunning Then
+                                        timeout.Stop()
+                                    End If
+                                    Exit For
+                                End If
+                            End If
+                        End If
+                    Catch ex As Exception
+                        'Eine Ping Exception ist aufgetreten, Host oder Netzwerk nicht erreichbar...
+                        'Falls der Server nicht optional ist, muss ein Fehler zurückgegeben werden
+                        If item.OptionalServer = False Then
                             PrinterCollectReturnState = 2
                             If AppSettings.CancelCollectionOnPrintServerNotAvailable Then
                                 If timeout.IsRunning Then
@@ -566,17 +581,7 @@ Public Class Form1
                                 Exit For
                             End If
                         End If
-                    Catch ex As Exception
-                        'Eine Ping Exception ist aufgetreten, Host oder Netzwerk nicht erreichbar...
-                        PrinterCollectReturnState = 2
-                        If AppSettings.CancelCollectionOnPrintServerNotAvailable Then
-                            If timeout.IsRunning Then
-                                timeout.Stop()
-                            End If
-                            Exit For
-                        End If
                     End Try
-
                 Else
                     result.AddRange(GetPrinterQueries(item.PrintServerName))
                 End If
