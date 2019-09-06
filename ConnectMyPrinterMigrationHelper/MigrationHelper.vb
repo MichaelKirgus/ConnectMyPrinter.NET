@@ -149,14 +149,15 @@ Public Class MigrationHelper
         End Try
     End Function
 
-    Public Function ConnectPrinterCollectionFunc(ByVal ConnectPrinterCollectionObj As List(Of PrinterQueueInfo)) As Boolean
+    Public Function ConnectPrinterCollectionFunc(ByVal ConnectPrinterCollectionObj As List(Of PrinterQueueInfo), Optional ByVal ProcessTimeout As Integer = 60000, Optional ByVal ConnectLambda As Integer = 0) As Boolean
         Try
             For Each item As PrinterQueueInfo In ConnectPrinterCollectionObj
+                Threading.Thread.Sleep(ConnectLambda)
                 Try
                     Dim uu As New ConnectMyPrinterPrinterManageLib.ManagePrinter
 
                     'Drucker verbinden
-                    Shell("rundll32 printui.dll PrintUIEntry /in /n " & item.Server & "\" & item.ShareName, AppWinStyle.Hide, True, 120)
+                    Shell("rundll32 printui.dll PrintUIEntry /in /n " & item.Server & "\" & item.ShareName, AppWinStyle.Hide, True, ProcessTimeout)
                 Catch ex As Exception
                     Return False
                 End Try
@@ -167,7 +168,11 @@ Public Class MigrationHelper
             Return False
         End Try
     End Function
-    Public Function MigratePrinters(ByVal NewPrintserver As String, ByVal MigrateSettings As Boolean, ByVal DisconnectOldPrinter As Boolean, PurgeOldPrinter As Boolean, ByVal RestartSpooler As Boolean, ByVal DeleteTempFolder As Boolean, ByVal TempPath As String, ByVal Simulate As Boolean) As Boolean
+    Public Function MigratePrinters(ByVal NewPrintserver As String, ByVal MigrateSettings As Boolean, ByVal DisconnectOldPrinter As Boolean, PurgeOldPrinter As Boolean, ByVal RestartSpooler As Boolean,
+                                    ByVal DeleteTempFolder As Boolean, ByVal TempPath As String, ByVal Simulate As Boolean,
+                                    Optional ByVal ShellTimeout As Integer = 60000, Optional ByVal ConnectLambda As Integer = 500,
+                                    Optional ByVal DisconnectLambda As Integer = 100, Optional ByVal SetDefaultPrinterLambda As Integer = 500, Optional ByVal ExportPrinterSettingsLambda As Integer = 100,
+                                    Optional ByVal ImportPrinterSettingsLambda As Integer = 100, Optional ByVal RestartSpoolerLambda As Integer = 2000) As Boolean
         Try
             'Drucker von neuem Printserver abrufen
             Console.WriteLine("Get printers from server " & NewPrintserver & " ...")
@@ -217,8 +222,9 @@ Public Class MigrationHelper
 
                             For index = 0 To oldprinters.Count - 1
                                 Console.WriteLine("Saving printer settings for " & oldprinters(index).ShareName & " to " & TempPath & "\" & oldprinters(index).ShareName & ".dat")
+                                Threading.Thread.Sleep(ExportPrinterSettingsLambda)
                                 If Not Simulate Then
-                                    SHelper.ExportPrinterSettings(oldprinters(index), TempPath & "\" & oldprinters(index).ShareName.ToUpper & ".dat")
+                                    SHelper.ExportPrinterSettings(oldprinters(index), TempPath & "\" & oldprinters(index).ShareName.ToUpper & ".dat", ShellTimeout, True)
                                 End If
                             Next
                         End If
@@ -231,6 +237,7 @@ Public Class MigrationHelper
                             For index = 0 To oldprinters.Count - 1
                                 Console.WriteLine("Disconnect printer " & oldprinters(index).ShareName & " ...")
                                 If Not Simulate Then
+                                    Threading.Thread.Sleep(DisconnectLambda)
                                     ManagePrinterHelper.DeletePrinter(oldprinters(index))
                                     If PurgeOldPrinter Then
                                         'Hier werden die Einstellungen, Treiber sowie der Port gelöscht
@@ -243,6 +250,7 @@ Public Class MigrationHelper
                                         gg.DeleteDriver(dummydrv)
                                     End If
                                 Else
+                                    Threading.Thread.Sleep(DisconnectLambda)
                                     If PurgeOldPrinter Then
                                         Console.WriteLine("Purge printer " & oldprinters(index).ShareName & " ...")
                                     End If
@@ -257,30 +265,38 @@ Public Class MigrationHelper
                                 ManagePrinterHelper.RestartPrinterService()
                             End If
 
-                            '2 Sek. warten
-                            Threading.Thread.Sleep(2000)
+                            'Benutzerdefinierte Zeit warten (Standard 2 Sekunden)
+                            Threading.Thread.Sleep(RestartSpoolerLambda)
                         End If
 
                         'Verbinden der neuen Drucker
                         Console.WriteLine("Connect new printers...")
                         If Not Simulate Then
-                            ConnectPrinterCollectionFunc(newmatchedprinters)
+                            ConnectPrinterCollectionFunc(newmatchedprinters, ShellTimeout, ConnectLambda)
                         Else
                             For index = 0 To newmatchedprinters.Count - 1
+                                Threading.Thread.Sleep(ConnectLambda)
                                 Console.WriteLine("Connect printer " & newmatchedprinters(index).ShareName)
                             Next
                         End If
 
                         'Setzen des Standarddruckers
                         Console.WriteLine("Set default printer...")
-                        Dim dummyitm As New PrinterQueueInfo
-                        dummyitm.Name = olddefprinter.Name
-                        dummyitm.ShareName = olddefprinter.ShareName
-                        dummyitm.Server = NewPrintserver
 
-                        Console.WriteLine("Set printer " & dummyitm.ShareName & " as new default printer...")
-                        If Not Simulate Then
-                            ManagePrinterHelper.SetDefaultPrinter(dummyitm)
+                        'Prüfen, ob überhaupt ein Standarddrucker gesetzt wurde
+                        If olddefprinter IsNot Nothing Then
+                            Console.WriteLine("Default printer was set to " & olddefprinter.Name & " ...")
+                            Dim dummyitm As New PrinterQueueInfo
+                            dummyitm.Name = olddefprinter.Name
+                            dummyitm.ShareName = olddefprinter.ShareName
+                            dummyitm.Server = NewPrintserver
+                            Threading.Thread.Sleep(SetDefaultPrinterLambda)
+                            Console.WriteLine("Set printer " & dummyitm.ShareName & " as new default printer...")
+                            If Not Simulate Then
+                                ManagePrinterHelper.SetDefaultPrinter(dummyitm)
+                            End If
+                        Else
+                            Console.WriteLine("Default printer was not set at the system, skipping setting default printer...")
                         End If
 
                         'Müssen Einstellungen zurückgesichert werden?
@@ -289,8 +305,9 @@ Public Class MigrationHelper
 
                             For index = 0 To newmatchedprinters.Count - 1
                                 Console.WriteLine("Apply printer settings for " & newmatchedprinters(index).ShareName & " to " & TempPath & "\" & newmatchedprinters(index).ShareName & ".dat")
+                                Threading.Thread.Sleep(ImportPrinterSettingsLambda)
                                 If Not Simulate Then
-                                    SHelper.ImportPrinterSettings(newmatchedprinters(index), TempPath & "\" & newmatchedprinters(index).ShareName.ToUpper & ".dat")
+                                    SHelper.ImportPrinterSettings(newmatchedprinters(index), TempPath & "\" & newmatchedprinters(index).ShareName.ToUpper & ".dat", ShellTimeout, True)
                                 End If
                             Next
                         End If
@@ -301,8 +318,8 @@ Public Class MigrationHelper
                                 ManagePrinterHelper.RestartPrinterService()
                             End If
 
-                            '2 Sek. warten
-                            Threading.Thread.Sleep(2000)
+                            'Benutzerdefinierte Zeit warten (Standard 2 Sekunden)
+                            Threading.Thread.Sleep(RestartSpoolerLambda)
                         End If
 
                         'Temp-Verzeichnis löschen
