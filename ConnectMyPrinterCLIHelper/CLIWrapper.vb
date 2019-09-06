@@ -45,6 +45,8 @@ Public Class CLIWrapper
     Public ImportPrinterSettingsLambda As Integer = 100
     Public RestartSpoolerLambda As Integer = 2000
     Public RestartSpooler As Boolean = False
+    Public BackupPrinterEnv As Boolean = False
+    Public BackupPrinterEnvProfileFilepath = ""
     Public TempFolder As String = ""
     Public Verbose As Boolean = False
     Public PingClients As Boolean = False
@@ -480,6 +482,12 @@ Public Class CLIWrapper
                     If arglist(ind).StartsWith("-OERS") Then
                         RestartSpooler = True
                     End If
+                    If arglist(ind).StartsWith("-OBPE") Then
+                        BackupPrinterEnv = True
+                    End If
+                    If arglist(ind).StartsWith("-OBPATH") Then
+                        BackupPrinterEnvProfileFilepath = arglist(ind + 1)
+                    End If
                 Catch ex As Exception
                     ShowHelp(ex.Message, "Unknown cli parameter or parameter list is not complete.")
                     Return False
@@ -821,7 +829,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.MigratePrintersSimulate Then
                 PostVerboseText("Selected action: Migrate printers and settings (without actions)")
                 Dim zz As New MigrationHelper
-                If zz.MigratePrinters(NewPrintserver, True, True, True, RestartSpooler, True, TempFolder, True, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda) Then
+                If zz.MigratePrinters(NewPrintserver, True, True, True, RestartSpooler, True, TempFolder, True, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda, BackupPrinterEnv, BackupPrinterEnvProfileFilepath) Then
                     Return True
                 Else
                     Return False
@@ -830,7 +838,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.MigratePrinters Then
                 PostVerboseText("Selected action: Migrate printers")
                 Dim zz As New MigrationHelper
-                If zz.MigratePrinters(NewPrintserver, False, True, True, RestartSpooler, True, "", False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda) Then
+                If zz.MigratePrinters(NewPrintserver, False, True, True, RestartSpooler, True, "", False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda, BackupPrinterEnv, BackupPrinterEnvProfileFilepath) Then
                     Return True
                 Else
                     Return False
@@ -839,7 +847,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.MigratePrintersAndSettings Then
                 PostVerboseText("Selected action: Migrate printers and settings")
                 Dim zz As New MigrationHelper
-                If zz.MigratePrinters(NewPrintserver, True, True, True, RestartSpooler, False, TempFolder, False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda) Then
+                If zz.MigratePrinters(NewPrintserver, True, True, True, RestartSpooler, False, TempFolder, False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda, BackupPrinterEnv, BackupPrinterEnvProfileFilepath) Then
                     Return True
                 Else
                     Return False
@@ -1006,11 +1014,9 @@ Public Class CLIWrapper
             Console.WriteLine("-MIGPRS" & vbTab & vbTab & "Migrate printers and settings on local machine: <New Printserver> <Settings TempPath>")
             Console.WriteLine("[-AS]" & vbTab & vbTab & "Load custom settings file <File>")
             Console.WriteLine("[-CATP]" & vbTab & vbTab & "Set custom admin trace path <Tracing path>")
-            Console.WriteLine("[-V]" & vbTab & vbTab & "Verbose output")
             Console.WriteLine("[-P]" & vbTab & vbTab & "Check if remote machine is up")
             Console.WriteLine("[-CTAP]" & vbTab & vbTab & "Check if admin-trace path is accessible")
             Console.WriteLine("[-NSSL]" & vbTab & vbTab & "Do not use SSL for sending mails")
-            Console.WriteLine("[-W]" & vbTab & vbTab & "Wait for user input after processing actions")
             Console.WriteLine("[-OST]" & vbTab & vbTab & "Set shell timeout (ms) [60000]")
             Console.WriteLine("[-OCL]" & vbTab & vbTab & "PrinterMigration: Connect lambda (ms) [500]")
             Console.WriteLine("[-ODL]" & vbTab & vbTab & "PrinterMigration: Disconnect lambda (ms) [100]")
@@ -1019,6 +1025,10 @@ Public Class CLIWrapper
             Console.WriteLine("[-OIPSL]" & vbTab & vbTab & "PrinterMigration: Set import printer settings lambda (ms) [100]")
             Console.WriteLine("[-ORSL]" & vbTab & vbTab & "PrinterMigration: Set restart spooler lambda (ms) [2000]")
             Console.WriteLine("[-OERS]" & vbTab & vbTab & "PrinterMigration: Enable restart spooler")
+            Console.WriteLine("[-OBPE]" & vbTab & vbTab & "PrinterMigration: Enable backup old printer environment")
+            Console.WriteLine("[-OBPATH]" & vbTab & vbTab & "PrinterMigration: Set backup printer environment path <Backup profile filename>")
+            Console.WriteLine("[-V]" & vbTab & vbTab & "Verbose output")
+            Console.WriteLine("[-W]" & vbTab & vbTab & "Wait for user input after processing actions")
         End If
     End Sub
 End Class
