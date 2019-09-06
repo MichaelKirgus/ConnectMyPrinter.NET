@@ -37,6 +37,14 @@ Public Class CLIWrapper
     Public MailProfilePath As String = ""
     Public Clientname As String = ""
     Public NewPrintserver As String = ""
+    Public ShellTimeout As Integer = 60000
+    Public ConnectLambda As Integer = 500
+    Public DisconnectLambda As Integer = 100
+    Public SetDefaultPrinterLambda As Integer = 500
+    Public ExportPrinterSettingsLambda As Integer = 100
+    Public ImportPrinterSettingsLambda As Integer = 100
+    Public RestartSpoolerLambda As Integer = 2000
+    Public RestartSpooler As Boolean = False
     Public TempFolder As String = ""
     Public Verbose As Boolean = False
     Public PingClients As Boolean = False
@@ -448,6 +456,30 @@ Public Class CLIWrapper
                     If arglist(ind).StartsWith("-W") Then
                         WaitForUserInput = True
                     End If
+                    If arglist(ind).StartsWith("-OST") Then
+                        ShellTimeout = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-OCL") Then
+                        ConnectLambda = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-ODL") Then
+                        DisconnectLambda = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-OSDPL") Then
+                        SetDefaultPrinterLambda = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-OEPSL") Then
+                        ExportPrinterSettingsLambda = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-OIPSL") Then
+                        ImportPrinterSettingsLambda = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-ORSL") Then
+                        RestartSpoolerLambda = arglist(ind + 1)
+                    End If
+                    If arglist(ind).StartsWith("-OERS") Then
+                        RestartSpooler = True
+                    End If
                 Catch ex As Exception
                     ShowHelp(ex.Message, "Unknown cli parameter or parameter list is not complete.")
                     Return False
@@ -603,7 +635,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.RestorePrintersToLocalMachine Then
                 PostVerboseText("Selected action: Restore printers to local machine")
                 Dim jj As New RemoteFileSerializer
-                If ConnectPrinterCollectionFunc(jj.LoadRemoteFile(RestoreFilePath).ConnectPrinters) Then
+                If ConnectPrinterCollectionFunc(jj.LoadRemoteFile(RestoreFilePath).ConnectPrinters, ShellTimeout) Then
                     PostVerboseText("Success: Restore local printers")
                     Return True
                 Else
@@ -639,7 +671,7 @@ Public Class CLIWrapper
             End If
             If CLIAction = CLIActionEnum.ConnectLocalPrinters Then
                 PostVerboseText("Selected action: Connect local printer")
-                If ConnectPrinterCollectionFunc(ConnectPrinterCollection) Then
+                If ConnectPrinterCollectionFunc(ConnectPrinterCollection, ShellTimeout) Then
                     PostVerboseText("Success: Connect local printer")
                     Return True
                 Else
@@ -673,12 +705,12 @@ Public Class CLIWrapper
             End If
             If CLIAction = CLIActionEnum.ListLocalPrinters Then
                 PostVerboseText("Selected action: List all local printers")
-                ListPrinterToOutput(MainForm.LoadLocalPrinters)
+                ListPrinterToOutput(MainForm.LoadLocalPrinters(True), False)
                 Return True
             End If
             If CLIAction = CLIActionEnum.ListConnectedLocalPrinters Then
                 PostVerboseText("Selected action: List all connected local printers")
-                ListPrinterToOutput(MainForm.LoadLocalPrinters, True)
+                ListPrinterToOutput(MainForm.LoadLocalPrinters(True), True)
                 Return True
             End If
             If CLIAction = CLIActionEnum.CreateConnectPrinterProfileFile Then
@@ -789,7 +821,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.MigratePrintersSimulate Then
                 PostVerboseText("Selected action: Migrate printers and settings (without actions)")
                 Dim zz As New MigrationHelper
-                If zz.MigratePrinters(NewPrintserver, True, True, True, False, True, TempFolder, True) Then
+                If zz.MigratePrinters(NewPrintserver, True, True, True, RestartSpooler, True, TempFolder, True, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda) Then
                     Return True
                 Else
                     Return False
@@ -798,7 +830,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.MigratePrinters Then
                 PostVerboseText("Selected action: Migrate printers")
                 Dim zz As New MigrationHelper
-                If zz.MigratePrinters(NewPrintserver, False, True, True, False, True, "", False) Then
+                If zz.MigratePrinters(NewPrintserver, False, True, True, RestartSpooler, True, "", False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda) Then
                     Return True
                 Else
                     Return False
@@ -807,7 +839,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.MigratePrintersAndSettings Then
                 PostVerboseText("Selected action: Migrate printers and settings")
                 Dim zz As New MigrationHelper
-                If zz.MigratePrinters(NewPrintserver, True, True, True, False, False, TempFolder, False) Then
+                If zz.MigratePrinters(NewPrintserver, True, True, True, RestartSpooler, False, TempFolder, False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda) Then
                     Return True
                 Else
                     Return False
@@ -820,7 +852,7 @@ Public Class CLIWrapper
         End Try
     End Function
 
-    Public Function ConnectPrinterCollectionFunc(ByVal ConnectPrinterCollectionObj As List(Of RemoteFilePrinterConnectItem)) As Boolean
+    Public Function ConnectPrinterCollectionFunc(ByVal ConnectPrinterCollectionObj As List(Of RemoteFilePrinterConnectItem), Optional ByVal ProcessTimeout As Integer = 60000, Optional ByVal Wait As Boolean = True) As Boolean
         Try
             For Each item As RemoteFilePrinterConnectItem In ConnectPrinterCollectionObj
                 Try
@@ -831,7 +863,7 @@ Public Class CLIWrapper
                     qq.Name = item.PrinterName
 
                     If (Not item.Printserver = "Lokal") And (Not item.Printserver = "Local") Then
-                        Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Printserver & "\" & item.PrinterName, AppWinStyle.Hide, True, 120)
+                        Shell("rundll32 printui.dll PrintUIEntry /in /n \\" & item.Printserver & "\" & item.PrinterName, AppWinStyle.Hide, Wait, ProcessTimeout)
                     End If
 
                     If item.SetDefaultPrinter Then
@@ -979,6 +1011,14 @@ Public Class CLIWrapper
             Console.WriteLine("[-CTAP]" & vbTab & vbTab & "Check if admin-trace path is accessible")
             Console.WriteLine("[-NSSL]" & vbTab & vbTab & "Do not use SSL for sending mails")
             Console.WriteLine("[-W]" & vbTab & vbTab & "Wait for user input after processing actions")
+            Console.WriteLine("[-OST]" & vbTab & vbTab & "Set shell timeout (ms) [60000]")
+            Console.WriteLine("[-OCL]" & vbTab & vbTab & "PrinterMigration: Connect lambda (ms) [500]")
+            Console.WriteLine("[-ODL]" & vbTab & vbTab & "PrinterMigration: Disconnect lambda (ms) [100]")
+            Console.WriteLine("[-OSDPL]" & vbTab & vbTab & "PrinterMigration: Set default printer lambda (ms) [500]")
+            Console.WriteLine("[-OEPSL]" & vbTab & vbTab & "PrinterMigration: Set export printer settings lambda (ms) [100]")
+            Console.WriteLine("[-OIPSL]" & vbTab & vbTab & "PrinterMigration: Set import printer settings lambda (ms) [100]")
+            Console.WriteLine("[-ORSL]" & vbTab & vbTab & "PrinterMigration: Set restart spooler lambda (ms) [2000]")
+            Console.WriteLine("[-OERS]" & vbTab & vbTab & "PrinterMigration: Enable restart spooler")
         End If
     End Sub
 End Class
