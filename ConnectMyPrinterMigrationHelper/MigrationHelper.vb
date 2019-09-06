@@ -6,6 +6,7 @@
 Imports System.Printing
 Imports ConnectMyPrinterEnumerationLib
 Imports ConnectMyPrinterPrinterManageLib
+Imports ConnectMyPrinterRemoteFileHandler
 
 Public Class MigrationHelper
     Public PrinterEnumerationService As New EnumeratePrinters
@@ -172,7 +173,8 @@ Public Class MigrationHelper
                                     ByVal DeleteTempFolder As Boolean, ByVal TempPath As String, ByVal Simulate As Boolean,
                                     Optional ByVal ShellTimeout As Integer = 60000, Optional ByVal ConnectLambda As Integer = 500,
                                     Optional ByVal DisconnectLambda As Integer = 100, Optional ByVal SetDefaultPrinterLambda As Integer = 500, Optional ByVal ExportPrinterSettingsLambda As Integer = 100,
-                                    Optional ByVal ImportPrinterSettingsLambda As Integer = 100, Optional ByVal RestartSpoolerLambda As Integer = 2000) As Boolean
+                                    Optional ByVal ImportPrinterSettingsLambda As Integer = 100, Optional ByVal RestartSpoolerLambda As Integer = 2000, Optional ByVal BackupPrinterEnv As Boolean = False,
+                                    Optional ByVal BackupPrinterEnvProfileFilepath As String = "") As Boolean
         Try
             'Drucker von neuem Printserver abrufen
             Console.WriteLine("Get printers from server " & NewPrintserver & " ...")
@@ -213,6 +215,22 @@ Public Class MigrationHelper
 
                     'Wurden passende Drucker auf dem neuen Printserver gefunden?
                     If Not newmatchedprinters.Count = 0 Then
+                        'Muss die gesamte Druckumgebung in eine Profildatei gesichert werden?
+                        If BackupPrinterEnv Then
+                            Console.WriteLine("Backup printer environment...")
+                            Dim RemoteFileService As New RemoteFileCreator
+                            If Not Simulate Then
+                                If RemoteFileService.CreateMultiplePrinterRemoteFile(BackupPrinterEnvProfileFilepath, LoadLocalPrintersLite(False)) Then
+                                    Console.WriteLine("Success: Backup local connected printers")
+                                Else
+                                    Console.WriteLine("Failed: Backup local connected printers")
+                                    Return False
+                                End If
+                            End If
+                        Else
+                            Console.WriteLine("Skipping backup printer environment...")
+                        End If
+
                         'Müssen die Einstellungen der alten Drucker gesichert werden?
                         If MigrateSettings Then
                             Console.WriteLine("Create folder " & TempPath & " ...")

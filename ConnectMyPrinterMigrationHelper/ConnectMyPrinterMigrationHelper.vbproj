@@ -119,6 +119,10 @@
       <Project>{be968c84-9ae3-4f63-8466-fa21f66386b0}</Project>
       <Name>ConnectMyPrinterPrinterManageLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConnectMyPrinterRemoteFileHandler\ConnectMyPrinterRemoteFileHandler.vbproj">
+      <Project>{0D65D86F-F312-411C-93FA-879C49F0797F}</Project>
+      <Name>ConnectMyPrinterRemoteFileHandler</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
