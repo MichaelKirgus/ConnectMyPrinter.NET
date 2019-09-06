@@ -7,12 +7,12 @@ Imports System.Printing
 Imports ConnectMyPrinterEnumerationLib
 Imports Microsoft.Win32
 Public Class ExportImportPrinterSettings
-    Public Function ExportPrinterSettings(ByVal PrinterEntry As PrinterQueueInfo, ByVal Filename As String) As Boolean
+    Public Function ExportPrinterSettings(ByVal PrinterEntry As PrinterQueueInfo, ByVal Filename As String, Optional ByVal ShellTimeout As Integer = 60000, Optional ByVal Wait As Boolean = False) As Boolean
         Try
-            If PrinterEntry.Server = "Lokal" Then
-                Shell("rundll32 printui.dll,PrintUIEntry /Ss /n " & My.Resources.trenn & PrinterEntry.Name & My.Resources.trenn & " /a " & My.Resources.trenn & Filename & My.Resources.trenn)
+            If PrinterEntry.Server = "Lokal" Or PrinterEntry.Server = "Local" Then
+                Shell("rundll32 printui.dll,PrintUIEntry /Ss /n " & My.Resources.trenn & PrinterEntry.Name & My.Resources.trenn & " /a " & My.Resources.trenn & Filename & My.Resources.trenn, AppWinStyle.Hide, Wait, ShellTimeout)
             Else
-                Shell("rundll32 printui.dll,PrintUIEntry /Ss /n " & PrinterEntry.Server & "\" & PrinterEntry.ShareName & " /a " & My.Resources.trenn & Filename & My.Resources.trenn)
+                Shell("rundll32 printui.dll,PrintUIEntry /Ss /n " & PrinterEntry.Server & "\" & PrinterEntry.ShareName & " /a " & My.Resources.trenn & Filename & My.Resources.trenn, AppWinStyle.Hide, Wait, ShellTimeout)
             End If
 
             Return True
@@ -21,12 +21,12 @@ Public Class ExportImportPrinterSettings
         End Try
     End Function
 
-    Public Function ImportPrinterSettings(ByVal PrinterEntry As PrinterQueueInfo, ByVal Filename As String) As Boolean
+    Public Function ImportPrinterSettings(ByVal PrinterEntry As PrinterQueueInfo, ByVal Filename As String, Optional ByVal ShellTimeout As Integer = 60000, Optional ByVal Wait As Boolean = False) As Boolean
         Try
-            If PrinterEntry.Server = "Lokal" Then
-                Shell("rundll32 printui.dll,PrintUIEntry /Sr /n " & My.Resources.trenn & PrinterEntry.Name & My.Resources.trenn & " /a " & My.Resources.trenn & Filename & My.Resources.trenn)
+            If PrinterEntry.Server = "Lokal" Or PrinterEntry.Server = "Local" Then
+                Shell("rundll32 printui.dll,PrintUIEntry /Sr /n " & My.Resources.trenn & PrinterEntry.Name & My.Resources.trenn & " /a " & My.Resources.trenn & Filename & My.Resources.trenn, AppWinStyle.Hide, Wait, ShellTimeout)
             Else
-                Shell("rundll32 printui.dll,PrintUIEntry /Sr /n " & PrinterEntry.Server & "\" & PrinterEntry.ShareName & " /a " & My.Resources.trenn & Filename & My.Resources.trenn)
+                Shell("rundll32 printui.dll,PrintUIEntry /Sr /n " & PrinterEntry.Server & "\" & PrinterEntry.ShareName & " /a " & My.Resources.trenn & Filename & My.Resources.trenn, AppWinStyle.Hide, Wait, ShellTimeout)
             End If
 
             Return True
