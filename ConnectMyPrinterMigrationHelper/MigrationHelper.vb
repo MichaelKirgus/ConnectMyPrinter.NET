@@ -174,7 +174,7 @@ Public Class MigrationHelper
                                     Optional ByVal ShellTimeout As Integer = 60000, Optional ByVal ConnectLambda As Integer = 500,
                                     Optional ByVal DisconnectLambda As Integer = 100, Optional ByVal SetDefaultPrinterLambda As Integer = 500, Optional ByVal ExportPrinterSettingsLambda As Integer = 100,
                                     Optional ByVal ImportPrinterSettingsLambda As Integer = 100, Optional ByVal RestartSpoolerLambda As Integer = 2000, Optional ByVal BackupPrinterEnv As Boolean = False,
-                                    Optional ByVal BackupPrinterEnvProfileFilepath As String = "") As Boolean
+                                    Optional ByVal BackupPrinterEnvProfileFilepath As String = "", Optional ByVal DeleteBackupPrinterEnvProfileAfterSuccess As Boolean = False) As Boolean
         Try
             'Drucker von neuem Printserver abrufen
             Console.WriteLine("Get printers from server " & NewPrintserver & " ...")
@@ -332,6 +332,7 @@ Public Class MigrationHelper
 
                         If RestartSpooler Then
                             'Neustart der Druckerwarteschlange...
+                            Console.WriteLine("Restart spooler...")
                             If Not Simulate Then
                                 ManagePrinterHelper.RestartPrinterService()
                             End If
@@ -347,6 +348,19 @@ Public Class MigrationHelper
                                 Try
                                     My.Computer.FileSystem.DeleteDirectory(TempPath, FileIO.DeleteDirectoryOption.DeleteAllContents, FileIO.RecycleOption.DeletePermanently)
                                 Catch ex As Exception
+                                    Console.WriteLine("Warning: Unable to delete temp folder " & TempPath & " !")
+                                End Try
+                            End If
+                        End If
+
+                        'Muss das Backup-Druckerprofil gelöscht werden?
+                        If DeleteBackupPrinterEnvProfileAfterSuccess Then
+                            Console.WriteLine("Delete backup profile file " & BackupPrinterEnvProfileFilepath & " ...")
+                            If Not Simulate Then
+                                Try
+                                    My.Computer.FileSystem.DeleteFile(TempPath, FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.DeletePermanently)
+                                Catch ex As Exception
+                                    Console.WriteLine("Warning: Unable to delete backup profile file " & BackupPrinterEnvProfileFilepath & " !")
                                 End Try
                             End If
                         End If
@@ -354,8 +368,17 @@ Public Class MigrationHelper
                         Console.WriteLine("Migration successful.")
 
                         Return True
+                    Else
+                        Console.WriteLine("No printers to migrate found, exiting.")
+                        Return True
                     End If
+                Else
+                    Console.WriteLine("No printers in local spool environment found, exiting.")
+                    Return True
                 End If
+            Else
+                Console.WriteLine("No printers hosted at printserver, exiting.")
+                Return False
             End If
 
             Return False
