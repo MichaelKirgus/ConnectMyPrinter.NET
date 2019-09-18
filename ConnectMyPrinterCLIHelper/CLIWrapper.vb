@@ -49,6 +49,7 @@ Public Class CLIWrapper
     Public BackupPrinterEnv As Boolean = False
     Public BackupPrinterEnvProfileFilepath = ""
     Public DeleteBackupPrinterEnvProfileAfterSuccess = False
+    Public DisconnectOldPrinters As Boolean = True
     Public TempFolder As String = ""
     Public Verbose As Boolean = False
     Public PingClients As Boolean = False
@@ -490,6 +491,9 @@ Public Class CLIWrapper
                     If arglist(ind).StartsWith("-OBPE") Then
                         BackupPrinterEnv = True
                     End If
+                    If arglist(ind).StartsWith("-ODNDP") Then
+                        DisconnectOldPrinters = False
+                    End If
                     If arglist(ind).StartsWith("-OBPATH") Then
                         BackupPrinterEnvProfileFilepath = arglist(ind + 1)
                     End If
@@ -837,7 +841,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.MigratePrintersSimulate Then
                 PostVerboseText("Selected action: Migrate printers and settings (without actions)")
                 Dim zz As New MigrationHelper
-                If zz.MigratePrinters(NewPrintserver, True, True, PurgeOldPrinter, RestartSpooler, True, TempFolder, True, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda, BackupPrinterEnv, BackupPrinterEnvProfileFilepath, DeleteBackupPrinterEnvProfileAfterSuccess) Then
+                If zz.MigratePrinters(NewPrintserver, True, DisconnectOldPrinters, PurgeOldPrinter, RestartSpooler, True, TempFolder, True, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda, BackupPrinterEnv, BackupPrinterEnvProfileFilepath, DeleteBackupPrinterEnvProfileAfterSuccess) Then
                     Return True
                 Else
                     Return False
@@ -846,7 +850,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.MigratePrinters Then
                 PostVerboseText("Selected action: Migrate printers")
                 Dim zz As New MigrationHelper
-                If zz.MigratePrinters(NewPrintserver, False, True, PurgeOldPrinter, RestartSpooler, True, "", False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda, BackupPrinterEnv, BackupPrinterEnvProfileFilepath, DeleteBackupPrinterEnvProfileAfterSuccess) Then
+                If zz.MigratePrinters(NewPrintserver, False, DisconnectOldPrinters, PurgeOldPrinter, RestartSpooler, True, "", False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda, BackupPrinterEnv, BackupPrinterEnvProfileFilepath, DeleteBackupPrinterEnvProfileAfterSuccess) Then
                     Return True
                 Else
                     Return False
@@ -855,7 +859,7 @@ Public Class CLIWrapper
             If CLIAction = CLIActionEnum.MigratePrintersAndSettings Then
                 PostVerboseText("Selected action: Migrate printers and settings")
                 Dim zz As New MigrationHelper
-                If zz.MigratePrinters(NewPrintserver, True, True, PurgeOldPrinter, RestartSpooler, False, TempFolder, False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda, BackupPrinterEnv, BackupPrinterEnvProfileFilepath, DeleteBackupPrinterEnvProfileAfterSuccess) Then
+                If zz.MigratePrinters(NewPrintserver, True, DisconnectOldPrinters, PurgeOldPrinter, RestartSpooler, False, TempFolder, False, ShellTimeout, ConnectLambda, DisconnectLambda, SetDefaultPrinterLambda, ExportPrinterSettingsLambda, ImportPrinterSettingsLambda, RestartSpoolerLambda, BackupPrinterEnv, BackupPrinterEnvProfileFilepath, DeleteBackupPrinterEnvProfileAfterSuccess) Then
                     Return True
                 Else
                     Return False
@@ -1028,14 +1032,15 @@ Public Class CLIWrapper
             Console.WriteLine("[-OST]" & vbTab & vbTab & "Set shell timeout (ms) [60000]")
             Console.WriteLine("[-OCL]" & vbTab & vbTab & "PrinterMigration: Connect lambda (ms) [500]")
             Console.WriteLine("[-ODL]" & vbTab & vbTab & "PrinterMigration: Disconnect lambda (ms) [100]")
-            Console.WriteLine("[-OSDPL]" & vbTab & vbTab & "PrinterMigration: Set default printer lambda (ms) [500]")
-            Console.WriteLine("[-OEPSL]" & vbTab & vbTab & "PrinterMigration: Set export printer settings lambda (ms) [100]")
-            Console.WriteLine("[-OIPSL]" & vbTab & vbTab & "PrinterMigration: Set import printer settings lambda (ms) [100]")
+            Console.WriteLine("[-OSDPL]" & vbTab & "PrinterMigration: Set default printer lambda (ms) [500]")
+            Console.WriteLine("[-OEPSL]" & vbTab & "PrinterMigration: Set export printer settings lambda (ms) [100]")
+            Console.WriteLine("[-OIPSL]" & vbTab & "PrinterMigration: Set import printer settings lambda (ms) [100]")
             Console.WriteLine("[-ORSL]" & vbTab & vbTab & "PrinterMigration: Set restart spooler lambda (ms) [2000]")
-            Console.WriteLine("[-ODPOP]" & vbTab & vbTab & "PrinterMigration: Disable deleting printer driver after printer disconnect")
+            Console.WriteLine("[-ODPOP]" & vbTab & "PrinterMigration: Disable deleting printer driver after printer disconnect")
             Console.WriteLine("[-OERS]" & vbTab & vbTab & "PrinterMigration: Enable restart spooler")
             Console.WriteLine("[-OBPE]" & vbTab & vbTab & "PrinterMigration: Enable backup old printer environment")
-            Console.WriteLine("[-OBPATH]" & vbTab & vbTab & "PrinterMigration: Set backup printer environment path <Backup profile filename>")
+            Console.WriteLine("[-OBPATH]" & vbTab & "PrinterMigration: Set backup printer environment path <Backup profile filename>")
+            Console.WriteLine("[-ODNDP]" & vbTab & vbTab & "PrinterMigration: Disable disconnecting old printers")
             Console.WriteLine("[-ODBPE]" & vbTab & vbTab & "PrinterMigration: Delete printer environment backup profile file after successful migration")
             Console.WriteLine("[-V]" & vbTab & vbTab & "Verbose output")
             Console.WriteLine("[-W]" & vbTab & vbTab & "Wait for user input after processing actions")
