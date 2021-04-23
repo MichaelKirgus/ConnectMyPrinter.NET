@@ -444,6 +444,22 @@ Imports ConnectMyPrinterEnumerationLib
     ''' </summary>
     Property AutoBackupPrinterEnvironmentAtLogout As Boolean = False
     ''' <summary>
+    ''' Legt fest, ob die Trayanwendung die Cache-Datei für die Offline-Funktionalität (z.B. über VPN) erstellen soll.
+    ''' </summary>
+    Property AutoGeneratePrinterCacheIfServerIsReachable As Boolean = False
+    ''' <summary>
+    ''' Legt fest, welchen Hostname bzw. IP die Trayanwendung pingt, um zu prüfen, ob die Cache-Datei aktualisiert werden soll. Wird nur genutzt, wenn "AutoGeneratePrinterCacheIfServerIsReachable" gesetzt ist. Bei einer leeren Zeichnfolge wird der Cache in jedem Fall aktualisiert.
+    ''' </summary>
+    Property AutoGeneratePrinterCacheProbeServer As String = ""
+    ''' <summary>
+    ''' Legt den Timeout fest, wie lange auf eine Antwort des Servers für die Hintergrund-Aktualisierung gewartet wird. Wird nur genutzt, wenn "AutoGeneratePrinterCacheIfServerIsReachable" gesetzt ist.
+    ''' </summary>
+    Property AutoGeneratePrinterCacheProbeServerTimeout As Integer = 1000
+    ''' <summary>
+    ''' Legt fest, wie lange nach dem Start der Tray-Anwendung gewartet wird, bis die Prüfung des Pings ausgeführt wird und ggf. der Cache aktualisiert wird.
+    ''' </summary>
+    Property AutoGeneratePrinterCacheDelay As Integer = 60000
+    ''' <summary>
     ''' Legt den Pfad fest, in welcher die Trayanwendung die Druckerumgebung sichert.
     ''' </summary>
     Property AutoBackupPrinterEnvironmentPath As String = ""
