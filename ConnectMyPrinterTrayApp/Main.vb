@@ -8,6 +8,7 @@ Imports System.Diagnostics
 Imports System.Drawing
 Imports System.Globalization
 Imports System.IO
+Imports System.Net
 Imports System.Security.Permissions
 Imports System.Windows.Forms
 Imports System.Xml.Serialization
@@ -45,6 +46,7 @@ Imports ConnectMyPrinterReportingLib
     Public WithEvents BackupPrinterEnvironmentWorker As New BackgroundWorker
     Public WithEvents ReportPrinterEnvironmentWorker As New BackgroundWorker
     Public WithEvents FetchPrinterEnvironmentWorker As New BackgroundWorker
+    Public WithEvents FetchPrinterCacheWorker As New BackgroundWorker
 
     Public AppSettings As New AppSettingsClass
     Public AppSettingFile As String = "AppSettings.xml"
@@ -141,6 +143,11 @@ Imports ConnectMyPrinterReportingLib
             End If
         End If
 
+        'Prüfen, ob ggf. der Drucker-Cache aktualisiert werden soll:
+        If AppSettings.AutoGeneratePrinterCacheIfServerIsReachable Then
+            FetchPrinterCacheWorker.RunWorkerAsync()
+        End If
+
         mnuLogo = New ToolStripLabel
         mnuLogo.BackgroundImageLayout = ImageLayout.Center
         mnuLogo.AutoSize = False
@@ -235,6 +242,20 @@ Imports ConnectMyPrinterReportingLib
         End Try
     End Function
 
+    Public Function PingHostOrIP(ByVal HostOrIPStr As String, Optional ByVal Timeout As Integer = 1000) As Boolean
+        Try
+            Dim PingHelper As New NetworkInformation.Ping
+            If PingHelper.Send(HostOrIPStr, Timeout).Status = NetworkInformation.IPStatus.Success Then
+                Return True
+            Else
+                Return False
+            End If
+
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
     Private Sub TracePrinterProfileWatcherChanged(source As Object, e As FileSystemEventArgs) Handles TracePrinterProfileWatcher.Created
         Try
             Debug.WriteLine("File " & e.FullPath & " detected.")
@@ -267,6 +288,39 @@ Imports ConnectMyPrinterReportingLib
                 If Not FetchPrinterEnvironmentWorker.IsBusy Then
                     IO.File.Delete(filename)
                     FetchPrinterEnvironmentWorker.RunWorkerAsync()
+                End If
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub FetchPrinterCacheWorkerDoWork(source As Object, e As DoWorkEventArgs) Handles FetchPrinterCacheWorker.DoWork
+        Try
+            'Prüfe auf Server-Erreichbarkeit
+            Dim isok As Boolean = False
+            If AppSettings.AutoGeneratePrinterCacheProbeServer = "" Then
+                isok = True
+            Else
+                If PingHostOrIP(AppSettings.AutoGeneratePrinterCacheProbeServer, AppSettings.AutoGeneratePrinterCacheProbeServerTimeout) Then
+                    isok = True
+                End If
+            End If
+
+            'Warte, bis Cache aktualisiert werden soll
+            If isok Then
+                Threading.Thread.Sleep(AppSettings.AutoGeneratePrinterCacheDelay)
+
+                'Nun wird der Cache aktualisiert (wenn der Cache aktiviert ist):
+                If Not Environment.ExpandEnvironmentVariables(AppSettings.CacheFoundPrintersFilepath) = "" Then
+                    Dim cacheprinters As List(Of PrinterQueueInfo)
+                    cacheprinters = MainApp.LoadAllNetworkPrinters
+
+                    'Wurden Drucker gefunden?
+                    If Not cacheprinters.Count = 0 Then
+                        'Gefundene Drucker in Cache-Datei speichern:
+                        Dim CacheFileHandler As New SavedPrinterEnumerationSerializer
+                        CacheFileHandler.SaveMyPrinterCollectionFile(cacheprinters, Environment.ExpandEnvironmentVariables(AppSettings.CacheFoundPrintersFilepath))
+                    End If
                 End If
             End If
         Catch ex As Exception
