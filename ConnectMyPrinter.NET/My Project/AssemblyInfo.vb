@@ -17,7 +17,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Tool zum Verwalten von Netzwerkdruckern")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinter.NET")>
-<Assembly: AssemblyCopyright("Copyright ©  2016-2019 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2016-2021 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>
@@ -36,6 +36,6 @@ Imports System.Runtime.InteropServices
 ' übernehmen, indem Sie "*" eingeben:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.1.0.34")>
-<Assembly: AssemblyFileVersion("1.1.0.34")>
+<Assembly: AssemblyVersion("1.2.0.0")>
+<Assembly: AssemblyFileVersion("1.2.0.0")>
 <Assembly: NeutralResourcesLanguage("de-DE")>

@@ -17,7 +17,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Trayapplikation für das Verwalten von Druckern unter Windows")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinter.NET")>
-<Assembly: AssemblyCopyright("Copyright 2018 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright 2018 - 2021 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>
@@ -35,6 +35,6 @@ Imports System.Runtime.InteropServices
 ' Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
 ' übernehmen, indem Sie "*" eingeben:
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.2.0.0")>
+<Assembly: AssemblyFileVersion("1.2.0.0")>
 <Assembly: NeutralResourcesLanguage("de-DE")>
