@@ -535,6 +535,19 @@ Imports ConnectMyPrinterReportingLib
                 End Try
             Next
 
+            If MainApp.AppSettings.ShowAdditionalCustomMenuEntryInTrayApp Then
+                Dim custitmsep As New ToolStripSeparator
+                MainMenu.Items.Add(custitmsep)
+                Dim ii As Image
+                Dim custitm As New ToolStripMenuItem(MainApp.AppSettings.AdditionalCustomMenuEntryText)
+                custitm.Tag = MainApp.AppSettings.AdditionalCustomMenuEntryShellCommand
+                Dim ByteArray = ConvertBase64ToByteArray(MainApp.AppSettings.AdditionalCustomMenuEntryIconBase64)
+                ii = convertbytetoimage(ByteArray)
+                custitm.Image = ii
+                AddHandler custitm.Click, AddressOf ClickOnCustomContextMenuEntry
+                MainMenu.Items.Add(custitm)
+            End If
+
             Return True
         Catch ex As Exception
             Return False
@@ -611,6 +624,22 @@ Imports ConnectMyPrinterReportingLib
             Dim qq As ToolStripMenuItem
             qq = sender
             PrinterManageService.DeletePrinter(qq.Tag)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub ClickOnCustomContextMenuEntry(ByVal sender As Object, ByVal e As System.EventArgs)
+        Try
+            Dim qq As ToolStripMenuItem
+            qq = sender
+
+            If MainApp.AppSettings.AdditionalCustomMenuEntryUseAlternativeShellExecMode Then
+                Dim shellexec As New Process
+                shellexec.StartInfo.FileName = Environment.ExpandEnvironmentVariables(qq.Tag)
+                shellexec.Start()
+            Else
+                Shell(Environment.ExpandEnvironmentVariables(qq.Tag))
+            End If
         Catch ex As Exception
         End Try
     End Sub

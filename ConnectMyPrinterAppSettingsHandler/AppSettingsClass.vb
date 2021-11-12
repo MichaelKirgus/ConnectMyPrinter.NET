@@ -460,6 +460,26 @@ Imports ConnectMyPrinterEnumerationLib
     ''' </summary>
     Property AutoGeneratePrinterCacheDelay As Integer = 60000
     ''' <summary>
+    ''' Legt fest, ob im Kontextmenü der Trayanwendung ein zusätzlicher benutzerdefinierter Menüeintrag angezeigt werden soll, welcher einen benutzerdefinierten Shell-Befehl mit Benutzerrechten ausführt.
+    ''' </summary>
+    Property ShowAdditionalCustomMenuEntryInTrayApp As Boolean = False
+    ''' <summary>
+    ''' Legt den Text bzw. die Bezeichnung fest, welcher für den zusätzlichen benutzerdefinierter Menüeintrag im Kontextmenü eingezeigt werden soll.
+    ''' </summary>
+    Property AdditionalCustomMenuEntryText As String = ""
+    ''' <summary>
+    ''' Legt das Icon/Symbol fest, welcher für den zusätzlichen benutzerdefinierter Menüeintrag im Kontextmenü eingezeigt werden soll. Als Text wird eine Base64-Codierte Zeichenfolge erwartet.
+    ''' </summary>
+    Property AdditionalCustomMenuEntryIconBase64 As String = ""
+    ''' <summary>
+    ''' Legt den Befehl fest, welcher für den zusätzlichen benutzerdefinierter Menüeintrag im Kontextmenü bei einm Klick ausgeführt werden soll.
+    ''' </summary>
+    Property AdditionalCustomMenuEntryShellCommand As String = ""
+    ''' <summary>
+    ''' Legt fest, ob der generische Shell-Befehl zum Ausführen des Befehls verwendet werden soll (False) oder ob eine alternative Methode zum Start verwendet wird (True).
+    ''' </summary>
+    Property AdditionalCustomMenuEntryUseAlternativeShellExecMode As Boolean = False
+    ''' <summary>
     ''' Legt den Pfad fest, in welcher die Trayanwendung die Druckerumgebung sichert.
     ''' </summary>
     Property AutoBackupPrinterEnvironmentPath As String = ""
