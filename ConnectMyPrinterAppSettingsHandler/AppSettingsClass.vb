@@ -416,6 +416,18 @@ Imports ConnectMyPrinterEnumerationLib
     ''' </summary>
     Property ShowTrayAppIcon As Boolean = True
     ''' <summary>
+    ''' Legt fest, ob die Trayanwendung mittels eines Icon-Overlays im Tray den aktuellen Status des Standard-Druckers anzeigt.
+    ''' </summary>
+    Property ShowDefaultPrinterStateInTrayAppOverlay As Boolean = False
+    ''' <summary>
+    ''' Legt fest, in welchem Intervall die Trayanwendung den Status des Standard-Druckers ausliest und mittels Overlay in Tray-Icon anzeigt (ms).
+    ''' </summary>
+    Property DefaultPrinterStateInTrayAppOverlayPollInterval As Integer = 10000
+    ''' <summary>
+    ''' Legt fest, wie lange gewartet wird, bis nach dem Start der Trayanwendung der Status des Standarddruckers das erste Mal ausgelesen wird (ms).
+    ''' </summary>
+    Property DefaultPrinterStateInTrayAppOverlayPollDelay As Integer = 20000
+    ''' <summary>
     ''' Legt fest, wie lange auf einen Shell bzw. API-Befehl gewartet werden soll.
     ''' </summary>
     Property MaxPrinterAPIShellTimout As Integer = 30000

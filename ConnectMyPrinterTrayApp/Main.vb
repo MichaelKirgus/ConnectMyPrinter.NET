@@ -47,6 +47,7 @@ Imports ConnectMyPrinterReportingLib
     Public WithEvents ReportPrinterEnvironmentWorker As New BackgroundWorker
     Public WithEvents FetchPrinterEnvironmentWorker As New BackgroundWorker
     Public WithEvents FetchPrinterCacheWorker As New BackgroundWorker
+    Public WithEvents MonitorDefaultPrinterState As New BackgroundWorker
 
     Public AppSettings As New AppSettingsClass
     Public AppSettingFile As String = "AppSettings.xml"
@@ -201,6 +202,11 @@ Imports ConnectMyPrinterReportingLib
 
         If Not MainApp.AppSettings.AutoBackupPrinterEnvironmentAtStartup = True Then
             Tray.Icon = My.Resources.connectmyprinter_tray
+        End If
+
+        'Prüfen, ob ggf. periodisch der Status des Standard-Druckers im Tray angezeigt werden soll:
+        If AppSettings.ShowDefaultPrinterStateInTrayAppOverlay Then
+            MonitorDefaultPrinterState.RunWorkerAsync(True)
         End If
     End Sub
 
@@ -417,6 +423,47 @@ Imports ConnectMyPrinterReportingLib
             End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub MonitorDefaultPrinterStateWorkerDoWork(ByVal sender As Object, e As DoWorkEventArgs) Handles ReportPrinterEnvironmentWorker.DoWork
+        Try
+            Dim runfirst As Boolean
+            runfirst = e.Argument
+
+            If runfirst Then
+                Threading.Thread.Sleep(MainApp.AppSettings.DefaultPrinterStateInTrayAppOverlayPollDelay)
+            Else
+                Threading.Thread.Sleep(MainApp.AppSettings.DefaultPrinterStateInTrayAppOverlayPollInterval)
+            End If
+
+            Dim TmpLocalPrinters As List(Of PrinterQueueInfo)
+            TmpLocalPrinters = MainApp.LoadLocalPrinters()
+
+            For index = 0 To TmpLocalPrinters.Count - 1
+                If TmpLocalPrinters(index).DefaultPrinter Then
+                    If TmpLocalPrinters(index).State.Contains("Error") Or LocalPrinters(index).State.Contains("PaperJam") Or TmpLocalPrinters(index).State.Contains("Offline") Or LocalPrinters(index).State.Contains("Paused") Then
+                        e.Result = False
+                    Else
+                        e.Result = True
+                    End If
+                    Exit For
+                End If
+            Next
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub MonitorDefaultPrinterStateWorkerCompleted(ByVal sender As Object, e As RunWorkerCompletedEventArgs) Handles ReportPrinterEnvironmentWorker.RunWorkerCompleted
+        Dim result As Boolean
+        result = e.Result
+
+        If result Then
+            Tray.Icon = My.Resources.connectmyprinter_tray_printerok_0001
+        Else
+            Tray.Icon = My.Resources.connectmyprinter_tray_printererror_0001
+        End If
+
+        MonitorDefaultPrinterState.RunWorkerAsync(False)
     End Sub
 
     Private Sub BackupPrinterEnvironmentWorkerCompleted() Handles BackupPrinterEnvironmentWorker.RunWorkerCompleted
