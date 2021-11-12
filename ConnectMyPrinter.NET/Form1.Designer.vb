@@ -130,7 +130,7 @@ Partial Class Form1
         Me.MetroTextBox1.MaxLength = 32767
         Me.MetroTextBox1.Name = "MetroTextBox1"
         Me.MetroTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox1.PromptText = "Druckernamen hier suchen..."
+        Me.MetroTextBox1.WaterMark = "Druckernamen hier suchen..."
         Me.MetroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox1.SelectedText = ""
         Me.MetroTextBox1.SelectionLength = 0
