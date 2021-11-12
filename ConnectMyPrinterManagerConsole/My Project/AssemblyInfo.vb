@@ -16,7 +16,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Verwaltungstool für Befehlszeilen-Automatisierung")>
 <Assembly: AssemblyCompany("Michael Kirgus")>
 <Assembly: AssemblyProduct("ConnectMyPrinterManagerConsole")>
-<Assembly: AssemblyCopyright("Copyright ©  2019 Michael Kirgus")>
+<Assembly: AssemblyCopyright("Copyright ©  2019-2021 Michael Kirgus")>
 <Assembly: AssemblyTrademark("ConnectMyPrinter.NET")>
 
 <Assembly: ComVisible(False)>
@@ -35,5 +35,5 @@ Imports System.Runtime.InteropServices
 ' übernehmen, indem Sie "*" eingeben:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.2.1.0")>
+<Assembly: AssemblyFileVersion("1.2.1.0")>

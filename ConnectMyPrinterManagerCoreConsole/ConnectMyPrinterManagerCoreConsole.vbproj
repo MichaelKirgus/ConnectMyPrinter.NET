@@ -10,7 +10,8 @@
     <Company>Michael Kirgus</Company>
     <Authors>Michael Kirgus</Authors>
     <Product>ConnectMyPrinter.NET Management Core Console</Product>
-    <Copyright>2019 Michael Kirgus</Copyright>
+    <Copyright>2019-2021 Michael Kirgus</Copyright>
+    <Version>1.2.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
