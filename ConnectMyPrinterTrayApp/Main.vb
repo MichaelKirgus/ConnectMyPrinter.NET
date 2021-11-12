@@ -102,7 +102,7 @@ Imports ConnectMyPrinterReportingLib
 
         'Display
         If AppSettings.ShowTrayAppIcon Then
-            Tray.Icon = My.Resources.connectmyprinter_tray_processing_0000
+            Tray.Icon = My.Resources.connectmyprinter_tray_processing_0001
             Tray.Visible = True
         End If
 

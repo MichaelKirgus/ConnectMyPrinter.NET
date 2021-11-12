@@ -143,9 +143,39 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
         '''</summary>
+        Friend ReadOnly Property connectmyprinter_tray_printererror_0001() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("connectmyprinter_tray_printererror_0001", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        '''</summary>
+        Friend ReadOnly Property connectmyprinter_tray_printerok_0001() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("connectmyprinter_tray_printerok_0001", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        '''</summary>
         Friend ReadOnly Property connectmyprinter_tray_processing_0000() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("connectmyprinter_tray_processing_0000", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        '''</summary>
+        Friend ReadOnly Property connectmyprinter_tray_processing_0001() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("connectmyprinter_tray_processing_0001", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property

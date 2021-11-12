@@ -71,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1472877498_BT_printer.ico" />
+    <None Include="Resources\connectmyprinter_tray_printerok_0001.ico" />
+    <None Include="Resources\connectmyprinter_tray_printererror_0001.ico" />
+    <None Include="Resources\connectmyprinter_tray_processing_0001.ico" />
     <None Include="Resources\connectmyprinter_tray_processing_0000.ico" />
     <None Include="Resources\cmp_green.ico" />
     <None Include="Resources\cmp_red.ico" />
