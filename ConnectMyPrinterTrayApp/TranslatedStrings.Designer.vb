@@ -119,7 +119,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Die Anweudng kann die aktuell installierten Drucker nicht ermitteln, da die Windows-Druckerwarteschlange nicht gestartet ist. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Die Anwendung kann die aktuell installierten Drucker nicht ermitteln, da die Windows-Druckerwarteschlange nicht gestartet ist. ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property PrintSpoolerServiceNotRunningMsgBoxMessage() As String
             Get

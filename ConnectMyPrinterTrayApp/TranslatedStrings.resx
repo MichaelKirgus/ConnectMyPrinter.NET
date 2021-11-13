@@ -136,7 +136,7 @@
     <value>Gerätewebseite öffnen...</value>
   </data>
   <data name="PrintSpoolerServiceNotRunningMsgBoxMessage" xml:space="preserve">
-    <value>Die Anweudng kann die aktuell installierten Drucker nicht ermitteln, da die Windows-Druckerwarteschlange nicht gestartet ist.</value>
+    <value>Die Anwendung kann die aktuell installierten Drucker nicht ermitteln, da die Windows-Druckerwarteschlange nicht gestartet ist.</value>
   </data>
   <data name="RefreshView" xml:space="preserve">
     <value>Ansicht aktualisieren</value>
