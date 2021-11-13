@@ -74,8 +74,15 @@ Class MyApplicationContext
                             Environment.ExitCode = 1
                         End If
                     End If
-                    If arglist(ind).StartsWith("/NGEN") Then
-                        If InstallAllAssemblysToNGEN() Then
+                    If arglist(ind).StartsWith("/NGEN_INSTALL") Then
+                        If InstallAllAssemblysToNGEN(arglist(ind + 1)) Then
+                            Environment.ExitCode = 0
+                        Else
+                            Environment.ExitCode = 1
+                        End If
+                    End If
+                    If arglist(ind).StartsWith("/NGEN_UNINSTALL") Then
+                        If RemoveAllAssemblysFromNGEN(arglist(ind + 1)) Then
                             Environment.ExitCode = 0
                         Else
                             Environment.ExitCode = 1
@@ -198,12 +205,12 @@ Class MyApplicationContext
         End Try
     End Function
 
-    Public Function InstallAllAssemblysToNGEN() As Boolean
+    Public Function InstallAllAssemblysToNGEN(ByVal AppPath As String) As Boolean
         Try
             Dim assemblylist1 As IEnumerable(Of String)
-            assemblylist1 = IO.Directory.EnumerateFiles(Environment.CurrentDirectory, "*.exe")
+            assemblylist1 = IO.Directory.EnumerateFiles(AppPath, "*.exe", SearchOption.TopDirectoryOnly)
             Dim assemblylist2 As IEnumerable(Of String)
-            assemblylist2 = IO.Directory.EnumerateFiles(Environment.CurrentDirectory, "*.dll")
+            assemblylist2 = IO.Directory.EnumerateFiles(AppPath, "*.dll", SearchOption.TopDirectoryOnly)
 
             For index = 0 To assemblylist1.Count - 1
                 RunAppInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "install " & My.Resources.trenn & assemblylist1(index) & My.Resources.trenn)
@@ -211,6 +218,27 @@ Class MyApplicationContext
 
             For index = 0 To assemblylist2.Count - 1
                 RunAppInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "install " & My.Resources.trenn & assemblylist2(index) & My.Resources.trenn)
+            Next
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function RemoveAllAssemblysFromNGEN(ByVal AppPath As String) As Boolean
+        Try
+            Dim assemblylist1 As IEnumerable(Of String)
+            assemblylist1 = IO.Directory.EnumerateFiles(AppPath, "*.exe", SearchOption.TopDirectoryOnly)
+            Dim assemblylist2 As IEnumerable(Of String)
+            assemblylist2 = IO.Directory.EnumerateFiles(AppPath, "*.dll", SearchOption.TopDirectoryOnly)
+
+            For index = 0 To assemblylist1.Count - 1
+                RunAppInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "uninstall " & My.Resources.trenn & assemblylist1(index) & My.Resources.trenn)
+            Next
+
+            For index = 0 To assemblylist2.Count - 1
+                RunAppInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "uninstall " & My.Resources.trenn & assemblylist2(index) & My.Resources.trenn)
             Next
 
             Return True
