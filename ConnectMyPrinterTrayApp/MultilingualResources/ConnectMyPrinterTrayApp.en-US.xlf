@@ -62,6 +62,10 @@
           <source>ConnectMyPrinter.NET - Drucker</source>
           <target state="translated">ConnectMyPrinter.NET - Printers</target>
         </trans-unit>
+        <trans-unit id="PrintSpoolerServiceNotRunningMsgBoxMessage" translate="yes" xml:space="preserve">
+          <source>Die Anweudng kann die aktuell installierten Drucker nicht ermitteln, da die Windows-Druckerwarteschlange nicht gestartet ist.</source>
+          <target state="new">Die Anweudng kann die aktuell installierten Drucker nicht ermitteln, da die Windows-Druckerwarteschlange nicht gestartet ist.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

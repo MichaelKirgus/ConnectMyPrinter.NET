@@ -420,6 +420,10 @@ Imports ConnectMyPrinterEnumerationLib
     ''' </summary>
     Property ShowDefaultPrinterStateInTrayAppOverlay As Boolean = False
     ''' <summary>
+    ''' Legt fest, ob die Trayanwendung vor dem Anzeigen des Kontextmenüs prüft, ob die Windows-Druckerwarteschlange gestartet ist. Falls nicht, wird eine Warnmeldung angezeigt.
+    ''' </summary>
+    Property ShowWarningMessageIfPrintSpoolerIsNotRunningInTrayApp As Boolean = False
+    ''' <summary>
     ''' Legt fest, in welchem Intervall die Trayanwendung den Status des Standard-Druckers ausliest und mittels Overlay in Tray-Icon anzeigt (ms).
     ''' </summary>
     Property DefaultPrinterStateInTrayAppOverlayPollInterval As Integer = 10000

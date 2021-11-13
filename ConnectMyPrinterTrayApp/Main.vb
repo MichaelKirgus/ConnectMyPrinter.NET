@@ -425,7 +425,7 @@ Imports ConnectMyPrinterReportingLib
         End Try
     End Sub
 
-    Private Sub MonitorDefaultPrinterStateWorkerDoWork(ByVal sender As Object, e As DoWorkEventArgs) Handles ReportPrinterEnvironmentWorker.DoWork
+    Private Sub MonitorDefaultPrinterStateWorkerDoWork(ByVal sender As Object, e As DoWorkEventArgs) Handles MonitorDefaultPrinterState.DoWork
         Try
             Dim runfirst As Boolean
             runfirst = e.Argument
@@ -437,11 +437,11 @@ Imports ConnectMyPrinterReportingLib
             End If
 
             Dim TmpLocalPrinters As List(Of PrinterQueueInfo)
-            TmpLocalPrinters = MainApp.LoadLocalPrinters()
+            TmpLocalPrinters = MainApp.LoadLocalPrinters(True)
 
             For index = 0 To TmpLocalPrinters.Count - 1
                 If TmpLocalPrinters(index).DefaultPrinter Then
-                    If TmpLocalPrinters(index).State.Contains("Error") Or LocalPrinters(index).State.Contains("PaperJam") Or TmpLocalPrinters(index).State.Contains("Offline") Or LocalPrinters(index).State.Contains("Paused") Then
+                    If TmpLocalPrinters(index).State.Contains("Error") Or TmpLocalPrinters(index).State.Contains("PaperJam") Or TmpLocalPrinters(index).State.Contains("Offline") Or TmpLocalPrinters(index).State.Contains("Paused") Then
                         e.Result = False
                     Else
                         e.Result = True
@@ -453,7 +453,7 @@ Imports ConnectMyPrinterReportingLib
         End Try
     End Sub
 
-    Private Sub MonitorDefaultPrinterStateWorkerCompleted(ByVal sender As Object, e As RunWorkerCompletedEventArgs) Handles ReportPrinterEnvironmentWorker.RunWorkerCompleted
+    Private Sub MonitorDefaultPrinterStateWorkerCompleted(ByVal sender As Object, e As RunWorkerCompletedEventArgs) Handles MonitorDefaultPrinterState.RunWorkerCompleted
         Dim result As Boolean
         result = e.Result
 
@@ -507,7 +507,7 @@ Imports ConnectMyPrinterReportingLib
 
     Public Function DeleteOldEntries() As Boolean
         Try
-            For index = 6 To MainMenu.Items.Count - 1
+            For index = 7 To MainMenu.Items.Count - 1
                 Try
                     If index >= MainMenu.Items.Count Then
                         DeleteOldEntries()
@@ -523,6 +523,11 @@ Imports ConnectMyPrinterReportingLib
                     Console.WriteLine(ex.Message)
                 End Try
             Next
+
+            If MainApp.AppSettings.ShowAdditionalCustomMenuEntryInTrayApp Then
+                MainMenu.Items.RemoveAt(8)
+                MainMenu.Items.RemoveAt(9)
+            End If
 
             Return True
         Catch ex As Exception
@@ -585,12 +590,16 @@ Imports ConnectMyPrinterReportingLib
             If MainApp.AppSettings.ShowAdditionalCustomMenuEntryInTrayApp Then
                 Dim custitmsep As New ToolStripSeparator
                 MainMenu.Items.Add(custitmsep)
-                Dim ii As Image
                 Dim custitm As New ToolStripMenuItem(MainApp.AppSettings.AdditionalCustomMenuEntryText)
                 custitm.Tag = MainApp.AppSettings.AdditionalCustomMenuEntryShellCommand
-                Dim ByteArray = ConvertBase64ToByteArray(MainApp.AppSettings.AdditionalCustomMenuEntryIconBase64)
-                ii = convertbytetoimage(ByteArray)
-                custitm.Image = ii
+
+                If Not MainApp.AppSettings.AdditionalCustomMenuEntryIconBase64 = "" Then
+                    Dim ii As Image
+                    Dim ByteArray = ConvertBase64ToByteArray(MainApp.AppSettings.AdditionalCustomMenuEntryIconBase64)
+                    ii = convertbytetoimage(ByteArray)
+                    custitm.Image = ii
+                End If
+
                 AddHandler custitm.Click, AddressOf ClickOnCustomContextMenuEntry
                 MainMenu.Items.Add(custitm)
             End If
@@ -607,6 +616,12 @@ Imports ConnectMyPrinterReportingLib
     End Sub
 
     Public Sub MenuOpening(ByVal sender As Object, ByVal e As System.EventArgs) Handles MainMenu.Opening
+        If MainApp.AppSettings.ShowWarningMessageIfPrintSpoolerIsNotRunningInTrayApp Then
+            If Not PrinterManageService.GetPrinterServiceState = 1 Then
+                MsgBox(MLangHelper.GetCultureString("ConnectMyPrinterTrayApp.TranslatedStrings", GetType(AppContext), MCultureInf, "PrintSpoolerServiceNotRunningMsgBoxMessage", ""), MsgBoxStyle.Exclamation)
+            End If
+        End If
+
         DeleteOldEntries()
         LocalPrinters.Clear()
         LoadPrintersAndAddToMenu()
