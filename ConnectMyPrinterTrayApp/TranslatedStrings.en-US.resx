@@ -42,4 +42,7 @@
   <data name="TrayIconText" xml:space="preserve">
     <value>ConnectMyPrinter.NET - Printers</value>
   </data>
+  <data name="PrintSpoolerServiceNotRunningMsgBoxMessage" xml:space="preserve">
+    <value>This application is unable to load the installed printers. The Windows print spooler is not running.</value>
+  </data>
 </root>
