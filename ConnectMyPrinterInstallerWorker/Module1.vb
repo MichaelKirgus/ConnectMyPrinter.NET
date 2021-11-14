@@ -75,14 +75,24 @@ Class MyApplicationContext
                         End If
                     End If
                     If arglist(ind).StartsWith("/NGEN_INSTALL") Then
-                        If InstallAllAssemblysToNGEN(arglist(ind + 1)) Then
+                        'MSI sets app path with \ at the end!
+                        Dim trimstr As String
+                        trimstr = arglist(ind + 1)
+                        trimstr = trimstr.Remove(trimstr.Count - 1, 1)
+
+                        If InstallAllAssemblysToNGEN(trimstr) Then
                             Environment.ExitCode = 0
                         Else
                             Environment.ExitCode = 1
                         End If
                     End If
                     If arglist(ind).StartsWith("/NGEN_UNINSTALL") Then
-                        If RemoveAllAssemblysFromNGEN(arglist(ind + 1)) Then
+                        'MSI sets app path with \ at the end!
+                        Dim trimstr As String
+                        trimstr = arglist(ind + 1)
+                        trimstr = trimstr.Remove(trimstr.Count - 1, 1)
+
+                        If RemoveAllAssemblysFromNGEN(trimstr) Then
                             Environment.ExitCode = 0
                         Else
                             Environment.ExitCode = 1
@@ -94,6 +104,7 @@ Class MyApplicationContext
 
             Return True
         Catch ex As Exception
+            MsgBox(Err.Description)
             Return False
         End Try
     End Function
@@ -187,6 +198,17 @@ Class MyApplicationContext
         End Try
     End Function
 
+    Public Function RunNGENInBackground(ByVal Filename As String, ByVal CMDArgs As String) As Boolean
+        Try
+            Shell(Filename & " " & CMDArgs, AppWinStyle.Hide, True, 10000)
+
+            Return True
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            Return False
+        End Try
+    End Function
+
     Public Function RunBatchInBackground(ByVal Filename As String) As Boolean
         Try
             Dim ww As New Process
@@ -213,11 +235,11 @@ Class MyApplicationContext
             assemblylist2 = IO.Directory.EnumerateFiles(AppPath, "*.dll", SearchOption.TopDirectoryOnly)
 
             For index = 0 To assemblylist1.Count - 1
-                RunAppInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "install " & My.Resources.trenn & assemblylist1(index) & My.Resources.trenn)
+                RunNGENInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "install " & My.Resources.trenn & assemblylist1(index) & My.Resources.trenn)
             Next
 
             For index = 0 To assemblylist2.Count - 1
-                RunAppInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "install " & My.Resources.trenn & assemblylist2(index) & My.Resources.trenn)
+                RunNGENInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "install " & My.Resources.trenn & assemblylist2(index) & My.Resources.trenn)
             Next
 
             Return True
@@ -234,11 +256,11 @@ Class MyApplicationContext
             assemblylist2 = IO.Directory.EnumerateFiles(AppPath, "*.dll", SearchOption.TopDirectoryOnly)
 
             For index = 0 To assemblylist1.Count - 1
-                RunAppInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "uninstall " & My.Resources.trenn & assemblylist1(index) & My.Resources.trenn)
+                RunNGENInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "uninstall " & My.Resources.trenn & assemblylist1(index) & My.Resources.trenn)
             Next
 
             For index = 0 To assemblylist2.Count - 1
-                RunAppInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "uninstall " & My.Resources.trenn & assemblylist2(index) & My.Resources.trenn)
+                RunNGENInBackground("C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe", "uninstall " & My.Resources.trenn & assemblylist2(index) & My.Resources.trenn)
             Next
 
             Return True
